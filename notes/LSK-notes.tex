@@ -23,28 +23,9 @@
 
 \usepackage[color={1 1 0}]{pdfcomment}
 
-\usepackage[notref, notcite]{showkeys}
-
 \usepackage{unicode-math}
 \setmainfont{XITS}
 \setmathfont{XITS Math}
-
-\newcommand{\D}{\mathrm{d}}
-\DeclareMathOperator{\vect}{vect}
-
-\AtBeginDocument{
-  % See http://tex.stackexchange.com/questions/117990/
-  \newcommand{\tens}[1]{\symbfsf{#1}}
-  \renewcommand{\vec}[1]{\symbf{#1}}
-  \let\div\undefined
-  \DeclareMathOperator{\div}{div}
-  \DeclareMathOperator{\vdiv}{\symbf{div}}
-  \DeclareMathOperator{\grad}{\symbf{grad}}
-  \DeclareMathOperator{\tgrad}{\symbfsf{grad}}
-  \DeclareMathOperator{\sym}{\symbfsf{sym}}
-  \DeclareMathOperator{\tr}{tr}
-}
-
 
 \begin{document}
 \title{\mytitle}

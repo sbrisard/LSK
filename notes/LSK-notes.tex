@@ -192,16 +192,16 @@ Soit \(u^\ast(λ)\) la branche fondamentale. Par définition
 Il sera commode d'introduire les notations suivantes
 \begin{align}
   ℋ(λ)&=ℰ_{,uu}[u^\ast(λ), λ],\\
-  \mathcal T(λ)&=ℰ_{,uuu}[u^\ast(λ), λ],\\
-  \mathcal Q(λ)&=ℰ_{,uuuu}[u^\ast(λ), λ].
+  𝒯(λ)&=ℰ_{,uuu}[u^\ast(λ), λ],\\
+  𝒬(λ)&=ℰ_{,uuuu}[u^\ast(λ), λ].
 \end{align}
 
-Noter que \(ℋ\), \(\mathcal T\) et \(\mathcal Q\) sont des formes bi-,
+Noter que \(ℋ\), \(𝒯\) et \(𝒬\) sont des formes bi-,
 tri- et quadri-linéaires, respectivement. L'application de ces formes à des
 éléments de \(U\) sera notée \(ℋ(λ; u, v)\),
-\(\mathcal T(λ; u, v, w)\), etc\dots. La dérivée de ces formes par
+\(𝒯(λ; u, v, w)\), etc\dots. La dérivée de ces formes par
 rapport à \(λ\) sera notée à l'aide d'un point supérieur
-(\(\dot{ℋ}\), \(\dot{\mathcal T}\), \dots).
+(\(\dot{ℋ}\), \(\dot{𝒯}\), \dots).
 
 On suppose que l'équilibre est stable pour des valeurs suffisamment petites de
 \(λ\). Plus précisément, on suppose que \(ℋ(λ)\) est
@@ -212,7 +212,7 @@ critique \(λ_0\) du paramètre de chargement \(λ\), on s'intéresse à
 toutes les courbes d'équilibre qui passent par le point \((u₀, λ_0)\).
 
 Noter que dans ce qui suit, on convient que les formes \(ℋ\),
-\(\mathcal T\) et \(\mathcal Q\) sont implicitement évaluées en \(λ_0\)
+\(𝒯\) et \(𝒬\) sont implicitement évaluées en \(λ_0\)
 lorsque \(λ\) n'est pas rappelé : ainsi, on notera
 \(ℋ(•, •)\) plutôt que
 \(ℋ(λ_0, •, •)\).
@@ -241,13 +241,13 @@ on trouve successivement, pour tout \(\hat{u}∈ U\)
   \label{eq:20211112182917}
   ℋ(u₁, \hat{u})=0,\\
   \label{eq:20211112183220}
-  \mathcal T(u₁, u₁, \hat{u})
+  𝒯(u₁, u₁, \hat{u})
   +2λ₁\dot{ℋ}(u₁, \hat{u})
   +2ℋ(u₂, \hat{u})=0,\\
   \begin{aligned}[b]
-    \mathcal Q(u₁, u₁, u₁, \hat{u})
-    +6\mathcal T(u₁, u₂, \hat{u})+6ℋ(u₃, \hat{u})&\\
-    +3λ₁\bigl[\dot{\mathcal T}(u₁, u₁, \hat{u})
+    𝒬(u₁, u₁, u₁, \hat{u})
+    +6𝒯(u₁, u₂, \hat{u})+6ℋ(u₃, \hat{u})&\\
+    +3λ₁\bigl[\dot{𝒯}(u₁, u₁, \hat{u})
     +2\dot{ℋ}(u₂, \hat{u})\bigr]
     +3λ₁²\ddot{ℋ}(u₁, \hat{u})&\\
     +6λ₂\dot{ℋ}(u₁, \hat{u})&=0.
@@ -258,7 +258,7 @@ On déduit de l'équation~\eqref{eq:20211112182917} que \(u₁∈ V\). On pose
 alors \(u₁=ξ₁^i vᵢ\). En prenant \(\hat{u}=vᵢ\),
 l'équation~\eqref{eq:20211112183220} s'écrit
 \begin{equation}
-  \mathcal T_{ijk}ξ₁^jξ₁^k+2λ₁\dot{ℋ}_{ij}ξ₁^j=0.
+  𝒯_{ijk}ξ₁^jξ₁^k+2λ₁\dot{ℋ}_{ij}ξ₁^j=0.
 \end{equation}
 
 Pour le terme d'ordre 2, on introduit la décomposition~:
@@ -266,7 +266,7 @@ Pour le terme d'ordre 2, on introduit la décomposition~:
 \(ℋ(u₂, \hat{u})=ℋ(w₂, \hat{u})\) et
 l'équation~\eqref{eq:20211112183220} s'écrit
 \begin{equation}
-  \mathcal T(u₁, u₁, \hat{u})+2λ₁\dot{ℋ}(u₁, \hat{u})
+  𝒯(u₁, u₁, \hat{u})+2λ₁\dot{ℋ}(u₁, \hat{u})
   +2ℋ(w₂, \hat{u})=0,
 \end{equation}
 pour tout \(\hat{u}∈ V\). En prenant la fonction test dans l'espace \(W\), on
@@ -274,7 +274,7 @@ obtient le problème variationnel suivant~: trouver \(w₂∈ W\) tel
 que\pdfmargincomment{Conflit de notations}
 \begin{equation}
   \label{eq:20211210131623}
-  ξ₁^iξ₁^j\mathcal T(vᵢ, vⱼ, \hat{w})
+  ξ₁^iξ₁^j𝒯(vᵢ, vⱼ, \hat{w})
   +2λ₁ξ₁^i\dot{ℋ}(vᵢ, \hat{w})
   +2ℋ(w₂, \hat{w})=0,
 \end{equation}
@@ -298,12 +298,12 @@ branche bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
   \begin{aligned}[b]
     ℰ_{,uu}[u(η), λ(η)](\hat{u}, \hat{v})
     ={}&ℋ^\ast(\hat{u}, \hat{v})
-    +η\bigl[\mathcal T^\ast(u₁, \hat{u}, \hat{v})
+    +η\bigl[𝒯^\ast(u₁, \hat{u}, \hat{v})
     +λ₁\dot{ℋ}^\ast(\hat{u}, \hat{v})\bigr]\\
-    &+\tfrac12η²\bigl[\mathcal Q^\ast(u₁, u₁, \hat{u}, \hat{v})
-    +2λ₁\dot{\mathcal T}^\ast(u₁, \hat{u}, \hat{v})\\
+    &+\tfrac12η²\bigl[𝒬^\ast(u₁, u₁, \hat{u}, \hat{v})
+    +2λ₁\dot{𝒯}^\ast(u₁, \hat{u}, \hat{v})\\
     &+λ₁²\ddot{ℋ}^\ast(\hat{u}, \hat{v})
-    +\mathcal T^\ast(u₂, \hat{u}, \hat{v})
+    +𝒯^\ast(u₂, \hat{u}, \hat{v})
     +λ₂\dot{ℋ}^\ast(\hat{u}, \hat{v})\bigr]+o(η²).
   \end{aligned}
 \end{equation}
@@ -336,8 +336,8 @@ Il faut alors distinguer deux cas. Si la branche trouvée est telle que
 
 Si \(λ₁=0\), alors on doit calculer \(λ₂\)
 \begin{equation}
-  \mathcal Q^\ast(u₁, u₁, u₁, \hat{u})
-  +3\mathcal T^\ast(u₁, u₂, \hat{u})+ℋ^\ast(u₃, \hat{u})
+  𝒬^\ast(u₁, u₁, u₁, \hat{u})
+  +3𝒯^\ast(u₁, u₂, \hat{u})+ℋ^\ast(u₃, \hat{u})
   +3λ₂\dot{ℋ}^\ast(u₁, \hat{u})=0.
 \end{equation}
 
@@ -525,7 +525,7 @@ l'expression~\eqref{eq:20211112164354} par rapport à \(η\)
 soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211112165830}
-  \partial_{ηη}²F(0, λ)=\mathcal T(u₁, u₁, \hat{u})
+  \partial_{ηη}²F(0, λ)=𝒯(u₁, u₁, \hat{u})
   +2ℋ(u₂, \hat{u}).
 \end{equation}
 
@@ -541,7 +541,7 @@ En rassemblant les expressions~\eqref{eq:20211112165810},
 de la dérivée seconde de \(f\) en 0
 \begin{equation}
   \label{eq:20211112182333}
-  f''(0)=\mathcal T(u₁, u₁, \hat{u})
+  f''(0)=𝒯(u₁, u₁, \hat{u})
   +2λ₁\dot{ℋ}(u₁, \hat{u})
   +2ℋ(u₂, \hat{u}).
 \end{equation}
@@ -556,7 +556,7 @@ et \eqref{eq:20211112165843}, on trouve par ailleurs
 \begin{equation}
   \label{eq:20211112173247}
   \partial_{ηηλ}³F(0, λ)
-  =\dot{\mathcal T}(u₁, u₁, \hat{u})+2\dot{ℋ}(u₂, \hat{u})
+  =\dot{𝒯}(u₁, u₁, \hat{u})+2\dot{ℋ}(u₂, \hat{u})
   \quad\text{et}\quad
   \partial_{ηλλ}³F(0, λ)
   =\ddot{ℋ}(u₁, \hat{u}).
@@ -576,8 +576,8 @@ soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211112173300}
   \partial_{ηηη}³F(0, λ)=
-  \mathcal Q(u₁, u₁, u₁, \hat{u})
-  +6\mathcal T(u₁, u₂, \hat{u})
+  𝒬(u₁, u₁, u₁, \hat{u})
+  +6𝒯(u₁, u₂, \hat{u})
   +6ℋ(u₃, \hat{u}).
 \end{equation}
 
@@ -587,9 +587,9 @@ l'expression de la dérivée troisième de \(f\) en \(η=0\)
 \begin{equation}
 \label{eq:20211112182402}
   \begin{aligned}[b]
-    f'''(0)={}&\mathcal Q(u₁, u₁, u₁, \hat{u})
-    +6\mathcal T(u₁, u₂, \hat{u})+6ℋ(u₃, \hat{u})\\
-    &+3λ₁\bigl[\dot{\mathcal T}(u₁, u₁, \hat{u})
+    f'''(0)={}&𝒬(u₁, u₁, u₁, \hat{u})
+    +6𝒯(u₁, u₂, \hat{u})+6ℋ(u₃, \hat{u})\\
+    &+3λ₁\bigl[\dot{𝒯}(u₁, u₁, \hat{u})
     +2\dot{ℋ}(u₂, \hat{u})\bigr]
     +3λ₁²\ddot{ℋ}(u₁, \hat{u})\\
     &+6λ₂\dot{ℋ}(u₁, \hat{u}).
@@ -634,7 +634,7 @@ avec
 soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211114110230}
-  \partial_η H(0, λ)=\mathcal T(u₁, \hat{u}, \hat{v}).
+  \partial_η H(0, λ)=𝒯(u₁, \hat{u}, \hat{v}).
 \end{equation}
 
 Par ailleurs
@@ -649,7 +649,7 @@ En regroupant les expressions~\eqref{eq:20211114110210},
 \eqref{eq:20211114110230} et \eqref{eq:20211114110245}, on trouve la dérivée de
 \(h\) en 0
 \begin{equation}
-  h'(0)=\mathcal T^\ast(u₁, \hat{u}, \hat{v})
+  h'(0)=𝒯^\ast(u₁, \hat{u}, \hat{v})
   +λ₁\dot{ℋ}^\ast(\hat{u}, \hat{v}).
 \end{equation}
 
@@ -675,15 +675,15 @@ dérivant~\eqref{eq:20211114110852}
 soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211114111716}
-  \partial_{ηη}²H(0, λ)=\mathcal Q(u₁, u₁, \hat{u}, \hat{v})
-  +2\mathcal T(u₂, \hat{u}, \hat{v}).
+  \partial_{ηη}²H(0, λ)=𝒬(u₁, u₁, \hat{u}, \hat{v})
+  +2𝒯(u₂, \hat{u}, \hat{v}).
 \end{equation}
 
 Ensuite, en dérivant~\eqref{eq:20211114110230} et \eqref{eq:20211114110245} par
 rapport à \(λ\), on obtient
 \begin{equation}
   \label{eq:20211114111740}
-  \partial_{ηλ}²H(0, λ)=\dot{\mathcal T}(u₁, \hat{u}, \hat{v})
+  \partial_{ηλ}²H(0, λ)=\dot{𝒯}(u₁, \hat{u}, \hat{v})
   \quad\text{et}\quad
   \partial_{λλ}²H(0, λ)=\ddot{ℋ}(\hat{u}, \hat{v}).
 \end{equation}
@@ -693,10 +693,10 @@ et \eqref{eq:20211114111740} dans \eqref{eq:20211114111822}, on obtient
 l'expression de la dérivée seconde de h en \(η=0\)
 \begin{equation}
   \begin{aligned}[b]
-    h''(0)={}&\mathcal Q^\ast(u₁, u₁, \hat{u}, \hat{v})
-    +2λ₁\dot{\mathcal T}^\ast(u₁, \hat{u}, \hat{v})
+    h''(0)={}&𝒬^\ast(u₁, u₁, \hat{u}, \hat{v})
+    +2λ₁\dot{𝒯}^\ast(u₁, \hat{u}, \hat{v})
     +λ₁²\ddot{ℋ}^\ast(\hat{u}, \hat{v})\\
-    &+2\mathcal T^\ast(u₂, \hat{u}, \hat{v})
+    &+2𝒯^\ast(u₂, \hat{u}, \hat{v})
     +2λ₂\dot{ℋ}^\ast(\hat{u}, \hat{v}).
   \end{aligned}
 \end{equation}
@@ -727,7 +727,7 @@ problème~\eqref{eq:20211115082122}
   \begin{aligned}[b]
     ℰ_{,uu}[u(η), λ(η)](v, \hat{w})={}
     &ℋ^\ast(v_0, \hat{w})
-    +η\bigl[\mathcal T^\ast(u₁, v_0, \hat{w})
+    +η\bigl[𝒯^\ast(u₁, v_0, \hat{w})
     +λ₁\dot{ℋ}^\ast(v_0, \hat{w})\\
     &+ℋ^\ast(v₁, \hat{w})\bigr]+o(η)
   \end{aligned}
@@ -753,7 +753,7 @@ On considère maintenant le cas où \(\alpha_0\), c'est-à-dire que
 \(v_0∈\kerℋ^\ast\). En prenant \(\hat{w}∈\kerℋ^\ast\), on
 obtient alors le problème variationnel d'ordre 1
 \begin{equation}
-  \mathcal T^\ast(u₁, v_0, \hat{w})
+  𝒯^\ast(u₁, v_0, \hat{w})
   +λ₁\dot{ℋ}^\ast(v_0, \hat{w})
   =\alpha₁〈v_0, \hat{w}〉
   \quad\text{pour tout}\quad
@@ -762,11 +762,11 @@ obtient alors le problème variationnel d'ordre 1
 
 En posant \(u₁=ξᵢaᵢ\) et \(v_0=\chi ⱼ aⱼ\), on obtient l'équation
 \begin{equation}
-  \bigl(\mathcal T_{ijk}^\astξₖ+λ₁\dot{ℋ}_{ij}^\ast\bigr)\chi ⱼ
+  \bigl(𝒯_{ijk}^\astξₖ+λ₁\dot{ℋ}_{ij}^\ast\bigr)\chi ⱼ
   =\alpha₁\chi ᵢ,
 \end{equation}
 qui est un problème aux valeurs propres pour la matrice symétrique
-\((\mathcal T_{ijk}^\astξₖ+λ₁\dot{ℋ}_{ij}^\ast)_{1≤i,
+\((𝒯_{ijk}^\astξₖ+λ₁\dot{ℋ}_{ij}^\ast)_{1≤i,
   j≤m}\)
 
 

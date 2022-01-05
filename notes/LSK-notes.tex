@@ -205,29 +205,29 @@ rapport à \(λ\) sera notée à l'aide d'un point supérieur
 
 On suppose que l'équilibre est stable pour des valeurs suffisamment petites de
 \(λ\). Plus précisément, on suppose que \(ℋ(λ)\) est
-définie positive pour tout \(λ<λ_0\). Pour \(λ=λ_0\),
-la forme quadratique \(ℋ(λ_0)\) n'est plus que positive. En
-notant \(u₀=u^\ast(λ_0)\) la position d'équilibre obtenue pour la valeur
-critique \(λ_0\) du paramètre de chargement \(λ\), on s'intéresse à
-toutes les courbes d'équilibre qui passent par le point \((u₀, λ_0)\).
+définie positive pour tout \(λ<λ₀\). Pour \(λ=λ₀\),
+la forme quadratique \(ℋ(λ₀)\) n'est plus que positive. En
+notant \(u₀=u^\ast(λ₀)\) la position d'équilibre obtenue pour la valeur
+critique \(λ₀\) du paramètre de chargement \(λ\), on s'intéresse à
+toutes les courbes d'équilibre qui passent par le point \((u₀, λ₀)\).
 
 Noter que dans ce qui suit, on convient que les formes \(ℋ\),
-\(𝒯\) et \(𝒬\) sont implicitement évaluées en \(λ_0\)
+\(𝒯\) et \(𝒬\) sont implicitement évaluées en \(λ₀\)
 lorsque \(λ\) n'est pas rappelé : ainsi, on notera
 \(ℋ(•, •)\) plutôt que
-\(ℋ(λ_0, •, •)\).
+\(ℋ(λ₀, •, •)\).
 
-On écrit toute courbe d'équilibre passant par le point \((u₀, λ_0)\)
+On écrit toute courbe d'équilibre passant par le point \((u₀, λ₀)\)
 sous la forme paramétrique suivante
 \begin{align}
   \label{eq:20211115075817}
-  λ&=λ_0+ηλ₁+η²λ₂+η³λ₃+\cdots,\\
+  λ&=λ₀+ηλ₁+η²λ₂+η³λ₃+\cdots,\\
   \label{eq:20211115075835}
   u&=u^\ast(λ)+η u₁+η² u₂+η³u₃+\cdots,
 \end{align}
 où \(η\) est un paramètre, non précisé pour le moment. Noter que, dans la
 représentation paramétrique de \(u\), \(u^\ast\) est évalué en \(λ\) et
-pas en \(λ_0\).
+pas en \(λ₀\).
 
 Les coefficients \(λ ₖ\) et \(uₖ\) des
 développements~\eqref{eq:20211115075817} et \eqref{eq:20211115075835} sont
@@ -395,7 +395,7 @@ Soit \(u∈ V\). Alors
 
 \subsection{Principe du calcul}
 
-On pose dans ce qui suit \(λ(η)=λ(η)-λ_0\) et
+On pose dans ce qui suit \(λ(η)=λ(η)-λ₀\) et
 \(U(η)=u(η)-u₀[λ(η)]\), de sorte que\pdfmargincomment{À
   compléter}
 \begin{align}
@@ -409,8 +409,8 @@ On considère une quantité \(\mathcal F\), fonction de \(u\) et \(λ\)~:
 \(\mathcal F(u, λ)\). Cette fonctionnelle est évaluée le long de la
 branche bifurquée. En d'autres termes, on considère
 \begin{equation}
-  f(η)=F\bigl(u₀[λ_0+λ(η)]+U(η),
-  λ_0+λ(η)\bigr).
+  f(η)=F\bigl(u₀[λ₀+λ(η)]+U(η),
+  λ₀+λ(η)\bigr).
 \end{equation}
 
 On souhaite établir un développement limité de \(f\) au voisinage de
@@ -428,34 +428,34 @@ Pour calculer ces dérivées, il sera commode d'introduire la fonction auxiliair
 dans laquelle les variables \(λ\) et \(η\) sont provisoirement
 considérées comme indépendantes. On a
 \begin{equation}
-  f(η)=F[η, λ_0+λ(η)],
+  f(η)=F[η, λ₀+λ(η)],
 \end{equation}
 d'où l'on déduit successivement que
 \begin{equation}
   \label{eq:20211112162417}
-  f'(η)=\partial_η F[η, λ_0+λ(η)]
-  +λ'(η)\,\partial_λ F[η, λ_0+λ(η)],
+  f'(η)=\partial_η F[η, λ₀+λ(η)]
+  +λ'(η)\,\partial_λ F[η, λ₀+λ(η)],
 \end{equation}
 \begin{equation}
   \begin{aligned}[b]
     \label{eq:20211112165810}
-    f''(η)={}&\partial_{ηη}²F[η, λ_0+λ(η)]
-    +2λ'(η)\,\partial_{ηλ}²F[η, λ_0+λ(η)]\\
-    &+λ''(η)\,\partial_λ F[η, λ_0+λ(η)]
-    +λ'(η)²\partial_{λλ}²F[η, λ_0+λ(η)]
+    f''(η)={}&\partial_{ηη}²F[η, λ₀+λ(η)]
+    +2λ'(η)\,\partial_{ηλ}²F[η, λ₀+λ(η)]\\
+    &+λ''(η)\,\partial_λ F[η, λ₀+λ(η)]
+    +λ'(η)²\partial_{λλ}²F[η, λ₀+λ(η)]
   \end{aligned}
 \end{equation}
 et
 \begin{equation}
   \label{eq:20211112173223}
   \begin{aligned}[b]
-    f'''(η)={}&\partial_{ηηη}³F[η, λ_0+λ(η)]\\
-    &+3λ'(η)\,\partial_{ηηλ}³F[η, λ_0+λ(η)]\\
-    &+3λ'(η)²\partial_{ηλλ}³F[η, λ_0+λ(η)]\\
-    &+3λ''(η)\,\partial_{ηλ}²F[η, λ_0+λ(η)]\\
-    &+λ'''(η)\,\partial_λ F[η, λ_0+λ(η)]\\
-    &+3λ'(η)\,λ''(η)\,\partial_{λλ}²F[η, λ_0+λ(η)]\\
-    &+λ'(η)³\partial_{λλλ}³F[η, λ_0+λ(η)].
+    f'''(η)={}&\partial_{ηηη}³F[η, λ₀+λ(η)]\\
+    &+3λ'(η)\,\partial_{ηηλ}³F[η, λ₀+λ(η)]\\
+    &+3λ'(η)²\partial_{ηλλ}³F[η, λ₀+λ(η)]\\
+    &+3λ''(η)\,\partial_{ηλ}²F[η, λ₀+λ(η)]\\
+    &+λ'''(η)\,\partial_λ F[η, λ₀+λ(η)]\\
+    &+3λ'(η)\,λ''(η)\,\partial_{λλ}²F[η, λ₀+λ(η)]\\
+    &+λ'(η)³\partial_{λλλ}³F[η, λ₀+λ(η)].
   \end{aligned}
 \end{equation}
 
@@ -715,9 +715,9 @@ On cherche les vecteurs propres \(v∈ V\) et valeurs propres
 On cherche les développements limités à l'ordre 1 en \(η\) de \(v\) et \(\alpha\)
 \begin{equation}
   \label{eq:20211115082037}
-  v = v_0+η v₁+o(η)
+  v = v₀+η v₁+o(η)
   \quad\text{et}\quad
-  \alpha=\alpha_0+η\alpha₁+o(η)
+  \alpha=\alpha₀+η\alpha₁+o(η)
 \end{equation}
 
 Les développements limités~\eqref{eq:20211115082025} et
@@ -726,41 +726,41 @@ problème~\eqref{eq:20211115082122}
 \begin{equation}
   \begin{aligned}[b]
     ℰ_{,uu}[u(η), λ(η)](v, \hat{w})={}
-    &ℋ^\ast(v_0, \hat{w})
-    +η\bigl[𝒯^\ast(u₁, v_0, \hat{w})
-    +λ₁\dot{ℋ}^\ast(v_0, \hat{w})\\
+    &ℋ^\ast(v₀, \hat{w})
+    +η\bigl[𝒯^\ast(u₁, v₀, \hat{w})
+    +λ₁\dot{ℋ}^\ast(v₀, \hat{w})\\
     &+ℋ^\ast(v₁, \hat{w})\bigr]+o(η)
   \end{aligned}
 \end{equation}
 
 \begin{equation}
-  \alpha〈 v, \hat{w}〉=\alpha_0〈 v_0, \hat{w}〉
-  +η\bigl(\alpha₁〈 v_0, \hat{w}〉+\alpha_0〈 v₁, \hat{w}〉\bigr)
+  \alpha〈 v, \hat{w}〉=\alpha₀〈 v₀, \hat{w}〉
+  +η\bigl(\alpha₁〈 v₀, \hat{w}〉+\alpha₀〈 v₁, \hat{w}〉\bigr)
   +o(η).
 \end{equation}
 
 On obtient le problème variationnel d'ordre 0
 \begin{equation}
-  ℋ^\ast(v_0, \hat{w})=\alpha_0〈 v_0, \hat{w}〉
+  ℋ^\ast(v₀, \hat{w})=\alpha₀〈 v₀, \hat{w}〉
   \quad\text{pour tout}\quad\hat{w}∈ V,
 \end{equation}
-qui montre que \(v_0\) est le vecteur propre de \(ℋ^\ast\) associé à
-la valeur propre \(\alpha_0\). Si \(\alpha_0≠ 0\), \(ℋ^\ast\) étant
-positive par hypothèse, on a nécessairement \(\alpha_0>0\), et la valeur propre
+qui montre que \(v₀\) est le vecteur propre de \(ℋ^\ast\) associé à
+la valeur propre \(\alpha₀\). Si \(\alpha₀≠ 0\), \(ℋ^\ast\) étant
+positive par hypothèse, on a nécessairement \(\alpha₀>0\), et la valeur propre
 de la hessienne est positive.
 
-On considère maintenant le cas où \(\alpha_0\), c'est-à-dire que
-\(v_0∈\kerℋ^\ast\). En prenant \(\hat{w}∈\kerℋ^\ast\), on
+On considère maintenant le cas où \(\alpha₀\), c'est-à-dire que
+\(v₀∈\kerℋ^\ast\). En prenant \(\hat{w}∈\kerℋ^\ast\), on
 obtient alors le problème variationnel d'ordre 1
 \begin{equation}
-  𝒯^\ast(u₁, v_0, \hat{w})
-  +λ₁\dot{ℋ}^\ast(v_0, \hat{w})
-  =\alpha₁〈v_0, \hat{w}〉
+  𝒯^\ast(u₁, v₀, \hat{w})
+  +λ₁\dot{ℋ}^\ast(v₀, \hat{w})
+  =\alpha₁〈v₀, \hat{w}〉
   \quad\text{pour tout}\quad
   \hat{w}∈\kerℋ^\ast.
 \end{equation}
 
-En posant \(u₁=ξᵢaᵢ\) et \(v_0=\chi ⱼ aⱼ\), on obtient l'équation
+En posant \(u₁=ξᵢaᵢ\) et \(v₀=\chi ⱼ aⱼ\), on obtient l'équation
 \begin{equation}
   \bigl(𝒯_{ijk}^\astξₖ+λ₁\dot{ℋ}_{ij}^\ast\bigr)\chi ⱼ
   =\alpha₁\chi ᵢ,

@@ -30,7 +30,6 @@
 \setmathfont{XITS Math}
 
 \newcommand{\D}{\mathrm{d}}
-\newcommand{\reals}{\mathbb{R}}
 \DeclareMathOperator{\vect}{vect}
 
 \AtBeginDocument{
@@ -69,7 +68,7 @@ qu'il a la structure d'espace vectoriel. L'énergie du système est noté
 
 \section{Analyse de la branche fondamentale}
 
-Soit \(u₀\in U\) un point d'équilibre du système~: l'énergie \(ℰ\)
+Soit \(u₀∈ U\) un point d'équilibre du système~: l'énergie \(ℰ\)
 est stationnaire en \(u₀\). On s'intéresse à la stabilité de cet
 équilibre. L'équilibre est stable si \(ℰ\) est minimale en ce
 point. On sait que \(ℰ_{,uu}(u₀)≥0\) est une condition
@@ -89,7 +88,7 @@ le moment). On introduit le sous-espace supplémentaire orthogonal \(W\) de
 
 Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
 \(u₀+ξ v+η w\) voisin du point d'équilibre \(u₀\), avec
-\(ξ, η∈\reals\) \guillemotleft{}petits\guillemotright{}, \(v∈ V\) and
+\(ξ, η∈ℝ\) \guillemotleft{}petits\guillemotright{}, \(v∈ V\) and
 \(w∈ W\). On obtient alors, à l'ordre 4 en \(ξ\) et \(η\)
 \begin{equation}
   \begin{aligned}[b]
@@ -178,7 +177,7 @@ valeur de \(v\), la condition~\eqref{eq:20211109145356} s'écrit
   -ℰ_{,uu}(w_{ij}, w_{kl})\bigr]
   ξ^iξ^jξ^kξ^l≥ 0,
 \end{equation}
-pour tous \(ξᵢ, ξⱼ, ξₖ, ξ_l∈\reals\). On peut montrer que
+pour tous \(ξᵢ, ξⱼ, ξₖ, ξ_l∈ℝ\). On peut montrer que
 l'inégalité stricte est une condition \emph{suffisante} de stabilité.
 
 \section{Bifurcations}
@@ -357,7 +356,7 @@ Soit \(\mathcal B\) une forme bilinéaire symétrique, positive sur l'espace vec
   \(V\).
 \end{theorem}
 \begin{proof}
-  Soient \(u, v∈\ker\mathcal B\), \(\alpha∈\reals\) et \(w=u+\alpha
+  Soient \(u, v∈\ker\mathcal B\), \(\alpha∈ℝ\) et \(w=u+\alpha
   v\). Montrons que \(w∈\ker\mathcal B\). Il suffit d'évaluer
   \(\mathcal B(w, w)\)
   \begin{equation}
@@ -368,7 +367,7 @@ Soit \(\mathcal B\) une forme bilinéaire symétrique, positive sur l'espace vec
   premier et le dernier terme sont nuls, soit
   \(\mathcal B(w, w)=2\alpha\mathcal B(u, v)\). La forme bilinéaire étant
   positive, cette grandeur est positive, \emph{quelle que soit la valeur de
-    \(\alpha∈\reals\)}. On en déduit donc que \(\mathcal B(u, v)=0\), puis
+    \(\alpha∈ℝ\)}. On en déduit donc que \(\mathcal B(u, v)=0\), puis
   que \(\mathcal B(w, w)=0\).
 \end{proof}
 
@@ -377,7 +376,7 @@ Soit \(u∈ V\). Alors
   u∈\ker\mathcal B\quad\text{ssi}\quad\text{pour tout }v∈ V, \mathcal B(u, v)=0.
 \end{equation}
 \begin{proof}
-  Soient \(u∈\ker\mathcal B\), \(v∈ V\) et \(\alpha∈\reals\). Comme
+  Soient \(u∈\ker\mathcal B\), \(v∈ V\) et \(\alpha∈ℝ\). Comme
   précédemment, on écrit que \(\mathcal B(w, w)≥0\), avec \(w=\alpha u+v\)
   \begin{equation}
     \mathcal B(w, w)=2\alpha\mathcal B(u, v)+\mathcal B(v, v)≥0,
@@ -704,7 +703,7 @@ l'expression de la dérivée seconde de h en \(η=0\)
 \subsection{Développement limité des valeurs propres et vecteurs propres de la Hessienne}
 
 On cherche les vecteurs propres \(v∈ V\) et valeurs propres
-\(\alpha∈\reals\) de la Hessienne
+\(\alpha∈ℝ\) de la Hessienne
 \begin{equation}
   \label{eq:20211115082122}
   ℰ_{,uu}[u(η), λ(η)](v, \hat{u})

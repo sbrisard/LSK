@@ -70,14 +70,14 @@ qu'il a la structure d'espace vectoriel. L'énergie du système est noté
 
 \section{Analyse de la branche fondamentale}
 
-Soit \(u_0\in U\) un point d'équilibre du système~: l'énergie \(\mathcal E\)
-est stationnaire en \(u_0\). On s'intéresse à la stabilité de cet
+Soit \(u₀\in U\) un point d'équilibre du système~: l'énergie \(\mathcal E\)
+est stationnaire en \(u₀\). On s'intéresse à la stabilité de cet
 équilibre. L'équilibre est stable si \(\mathcal E\) est minimale en ce
-point. On sait que \(\mathcal E_{,uu}(u_0)\geq0\) est une condition
-\emph{nécessaire} de stabilité. De plus, \(\mathcal E_{,uu}(u_0)>0\) est une
+point. On sait que \(\mathcal E_{,uu}(u₀)\geq0\) est une condition
+\emph{nécessaire} de stabilité. De plus, \(\mathcal E_{,uu}(u₀)>0\) est une
 condition \emph{suffisante} de stabilité.
 
-On s'intéresse ici au cas où \(\mathcal E_{,uu}(u_0)\) est positive, sans être
+On s'intéresse ici au cas où \(\mathcal E_{,uu}(u₀)\) est positive, sans être
 définie positive~; soit \(V\) son noyau, qui forme un sous-espace vectoriel de
 \(U\). On suppose que \(V\) est de dimension finie \(m=\dim V\). Soit
 \(\bigl(v_1, \ldots, v_m\bigr)\) une base orthonormée de ce noyau pour le
@@ -89,16 +89,16 @@ le moment). On introduit le sous-espace supplémentaire orthogonal \(W\) de
 \end{equation}
 
 Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
-\(u_0+\xi v+\eta w\) voisin du point d'équilibre \(u_0\), avec
+\(u₀+\xi v+\eta w\) voisin du point d'équilibre \(u₀\), avec
 \(\xi, \eta\in\reals\) \guillemotleft{}petits\guillemotright{}, \(v\in V\) and
 \(w\in W\). On obtient alors, à l'ordre 4 en \(\xi\) et \(\eta\)
 \begin{equation}
   \begin{aligned}[b]
     \Delta\mathcal E ={}&
-    \mathcal E(u_0+\xi v+\eta w)-\mathcal E(u_0)\\
-    ={}&\tfrac12\mathcal E_{,uu}(u_0;\xi v+\eta w, \xi v+\eta w)
-    +\tfrac16\mathcal E_{,uuu}(u_0;\xi v+\eta w, \xi v+\eta w, \xi v+\eta w)\\
-    &+\tfrac1{24}\mathcal E_{,uuuu}(u_0;\xi v+\eta w, \xi v+\eta w, \xi v+\eta w,
+    \mathcal E(u₀+\xi v+\eta w)-\mathcal E(u₀)\\
+    ={}&\tfrac12\mathcal E_{,uu}(u₀;\xi v+\eta w, \xi v+\eta w)
+    +\tfrac16\mathcal E_{,uuu}(u₀;\xi v+\eta w, \xi v+\eta w, \xi v+\eta w)\\
+    &+\tfrac1{24}\mathcal E_{,uuuu}(u₀;\xi v+\eta w, \xi v+\eta w, \xi v+\eta w,
     \xi v+\eta w)+\LandauO\bigl(\bigl(\xi^2+\eta^2\bigr)^2\bigr),
   \end{aligned}
 \end{equation}
@@ -123,7 +123,7 @@ différentielles successives de l'énergie \(\mathcal E\), ainsi que du fait que
   \end{aligned}
 \end{equation}
 où l'on convient que toutes les différentielles de \(\mathcal E\) sont évaluées
-au point d'équilibre \(u_0\).
+au point d'équilibre \(u₀\).
 
 Pour que l'équilibre soit stable, il faut que expression soit positive ou nulle
 pour tous \(\xi\) et \(\eta\) suffisamment petits. En prenant tout d'abord
@@ -208,9 +208,9 @@ On suppose que l'équilibre est stable pour des valeurs suffisamment petites de
 \(\lambda\). Plus précisément, on suppose que \(\mathcal H(\lambda)\) est
 définie positive pour tout \(\lambda<\lambda_0\). Pour \(\lambda=\lambda_0\),
 la forme quadratique \(\mathcal H(\lambda_0)\) n'est plus que positive. En
-notant \(u_0=u^\ast(\lambda_0)\) la position d'équilibre obtenue pour la valeur
+notant \(u₀=u^\ast(\lambda_0)\) la position d'équilibre obtenue pour la valeur
 critique \(\lambda_0\) du paramètre de chargement \(\lambda\), on s'intéresse à
-toutes les courbes d'équilibre qui passent par le point \((u_0, \lambda_0)\).
+toutes les courbes d'équilibre qui passent par le point \((u₀, \lambda_0)\).
 
 Noter que dans ce qui suit, on convient que les formes \(\mathcal H\),
 \(\mathcal T\) et \(\mathcal Q\) sont implicitement évaluées en \(\lambda_0\)
@@ -218,7 +218,7 @@ lorsque \(\lambda\) n'est pas rappelé : ainsi, on notera
 \(\mathcal H(\bullet, \bullet)\) plutôt que
 \(\mathcal H(\lambda_0, \bullet, \bullet)\).
 
-On écrit toute courbe d'équilibre passant par le point \((u_0, \lambda_0)\)
+On écrit toute courbe d'équilibre passant par le point \((u₀, \lambda_0)\)
 sous la forme paramétrique suivante
 \begin{align}
   \label{eq:20211115075817}
@@ -313,7 +313,7 @@ On peut d'ores et déjà remarquer que, sur la branche fondamentale
 (\(u_1=u_2=0\)), en prenant \(\eta=\lambda-\lambda^\ast\) (\(\lambda_1=1\))
 \begin{equation}
   \mathcal H(\hat{u}, \hat{v})
-  =\mathcal E_{,uu}[u_0(\lambda), \lambda](\hat{u}, \hat{v})
+  =\mathcal E_{,uu}[u₀(\lambda), \lambda](\hat{u}, \hat{v})
   =\mathcal H^\ast(\hat{u}, \hat{v})
   +\bigl(\lambda-\lambda^\ast\bigr)\dot{\mathcal H}^\ast(\hat{u}, \hat{v})
   +o(\lambda-\lambda^\ast).
@@ -397,7 +397,7 @@ Soit \(u\in V\). Alors
 \subsection{Principe du calcul}
 
 On pose dans ce qui suit \(\Lambda(\eta)=\lambda(\eta)-\lambda_0\) et
-\(U(\eta)=u(\eta)-u_0[\lambda(\eta)]\), de sorte que\pdfmargincomment{À
+\(U(\eta)=u(\eta)-u₀[\lambda(\eta)]\), de sorte que\pdfmargincomment{À
   compléter}
 \begin{align}
   \label{eq:20211112155446}
@@ -410,7 +410,7 @@ On considère une quantité \(\mathcal F\), fonction de \(u\) et \(\lambda\)~:
 \(\mathcal F(u, \lambda)\). Cette fonctionnelle est évaluée le long de la
 branche bifurquée. En d'autres termes, on considère
 \begin{equation}
-  f(\eta)=F\bigl(u_0[\lambda_0+\Lambda(\eta)]+U(\eta),
+  f(\eta)=F\bigl(u₀[\lambda_0+\Lambda(\eta)]+U(\eta),
   \lambda_0+\Lambda(\eta)\bigr).
 \end{equation}
 
@@ -424,7 +424,7 @@ On souhaite établir un développement limité de \(f\) au voisinage de
 Pour calculer ces dérivées, il sera commode d'introduire la fonction auxiliaire
 \(F\)
 \begin{equation}
-  F(\eta, \lambda)=\mathcal F[u_0(\lambda)+U(\eta), \lambda],
+  F(\eta, \lambda)=\mathcal F[u₀(\lambda)+U(\eta), \lambda],
 \end{equation}
 dans laquelle les variables \(\lambda\) et \(\eta\) sont provisoirement
 considérées comme indépendantes. On a
@@ -478,7 +478,7 @@ coefficients des développements~\eqref{eq:20211112155446} et
 sont nulles en \(\eta=0\). En considérant temporairement \(\eta\) et
 \(\lambda\) comme des variables indépendantes, on introduit
 \begin{equation}
-  F(\eta, \lambda)=\mathcal E_{,u}[u_0(\lambda)+U(\eta), \lambda](\hat{u})
+  F(\eta, \lambda)=\mathcal E_{,u}[u₀(\lambda)+U(\eta), \lambda](\hat{u})
 \end{equation}
 et on doit exprimer la nullité de
 \(f(\eta)=F[\eta, \lambda^\ast+\Lambda(\eta)]\) au voisinage de \(\eta=0\). En
@@ -488,7 +488,7 @@ avec
 \begin{equation}
   \label{eq:20211112164354}
   \partial_\eta F(\eta, \lambda)
-  =\mathcal E_{,uu}[u_0(\lambda)+U, \lambda](U', \hat{u}),
+  =\mathcal E_{,uu}[u₀(\lambda)+U, \lambda](U', \hat{u}),
 \end{equation}
 soit, en \(\eta=0\)
 \begin{equation}
@@ -496,10 +496,10 @@ soit, en \(\eta=0\)
   \partial_\eta F(0, \lambda)=\mathcal H(u_1, \hat{u}).
 \end{equation}
 
-Par ailleurs, puisque \(\lambda\mapsto u_0(\lambda)\) est une courbe d'équilibre, on a
+Par ailleurs, puisque \(\lambda\mapsto u₀(\lambda)\) est une courbe d'équilibre, on a
 \begin{equation}
   \label{eq:20211112164240}
-  F(0, \lambda)=\mathcal E_{,u}[u_0(\lambda), \lambda]=0
+  F(0, \lambda)=\mathcal E_{,u}[u₀(\lambda), \lambda]=0
   \quad\text{donc}\quad
   \frac{\partial^kF}{\partial\lambda^k}(0, \lambda)=0.
 \end{equation}
@@ -519,8 +519,8 @@ l'expression~\eqref{eq:20211112164354} par rapport à \(\eta\)
   \label{eq:20211112172446}
   \begin{aligned}[b]
     \partial_{\eta\eta}^2F(\eta, \lambda)={}&
-    \mathcal E_{,uuu}[u_0(\lambda)+U, \lambda](U', U', \hat{u})\\
-    &+\mathcal E_{,uu}[u_0(\lambda)+U, \lambda](U'', \hat{u}),
+    \mathcal E_{,uuu}[u₀(\lambda)+U, \lambda](U', U', \hat{u})\\
+    &+\mathcal E_{,uu}[u₀(\lambda)+U, \lambda](U'', \hat{u}),
   \end{aligned}
 \end{equation}
 soit, en \(\eta=0\)
@@ -568,9 +568,9 @@ Finalement, en dérivant l'expression~\eqref{eq:20211112172446} par rapport à
 \begin{equation}
   \begin{aligned}[b]
     \partial_{\eta\eta\eta}^3F(\eta, \lambda)={}&
-    \mathcal E_{,uuuu}[u_0(\lambda)+U, \lambda](U', U', U', \hat{u})\\
-    &+3\mathcal E_{,uuu}[u_0(\lambda)+U, \lambda](U', U'', \hat{u})\\
-    &+\mathcal E_{,uu}[u_0(\lambda)+U, \lambda](U''', \hat{u}),
+    \mathcal E_{,uuuu}[u₀(\lambda)+U, \lambda](U', U', U', \hat{u})\\
+    &+3\mathcal E_{,uuu}[u₀(\lambda)+U, \lambda](U', U'', \hat{u})\\
+    &+\mathcal E_{,uu}[u₀(\lambda)+U, \lambda](U''', \hat{u}),
   \end{aligned}
 \end{equation}
 soit, en \(\eta=0\)
@@ -612,7 +612,7 @@ diagramme d'équilibre. Elle permet d'étudier la stabilité de l'équilibre. On
 en \(\eta=0\). \`A cet effet, considérant une nouvelle fois \(\eta\) et
 \(\lambda\) comme des variables indépendantes, on introduit la fonction
 \begin{equation}
-  H(\eta, \lambda)=\mathcal E_{,uu}[u_0(\lambda)+U(\eta), \lambda],
+  H(\eta, \lambda)=\mathcal E_{,uu}[u₀(\lambda)+U(\eta), \lambda],
 \end{equation}
 de sorte que
 \begin{equation}
@@ -630,7 +630,7 @@ l'expression~\eqref{eq:20211114104326} par rapport à \(\eta\)
 avec
 \begin{equation}
   \label{eq:20211114110852}
-  \partial_\eta H(\eta, \lambda)=\mathcal E_{,uuu}(u_0+U, \lambda)(U', \hat{u}, \hat{v}),
+  \partial_\eta H(\eta, \lambda)=\mathcal E_{,uuu}(u₀+U, \lambda)(U', \hat{u}, \hat{v}),
 \end{equation}
 soit, en \(\eta=0\)
 \begin{equation}
@@ -670,7 +670,7 @@ L'expression de \(\partial_{\eta\eta}^2H\) est obtenue en
 dérivant~\eqref{eq:20211114110852}
 \begin{equation}
   \partial_{\eta\eta}^2H(\eta, \lambda)
-  =\mathcal E_{,uuuu}(u_0+U, \lambda)(U', U', \hat{u}, \hat{v})
+  =\mathcal E_{,uuuu}(u₀+U, \lambda)(U', U', \hat{u}, \hat{v})
   +\mathcal E_{,uuu}(U'', \hat{u}, \hat{v}),
 \end{equation}
 soit, en \(\eta=0\)

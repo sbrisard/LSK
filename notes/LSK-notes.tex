@@ -89,17 +89,17 @@ le moment). On introduit le sous-espace supplémentaire orthogonal \(W\) de
 \end{equation}
 
 Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
-\(u₀+ξ v+\eta w\) voisin du point d'équilibre \(u₀\), avec
-\(ξ, \eta\in\reals\) \guillemotleft{}petits\guillemotright{}, \(v\in V\) and
-\(w\in W\). On obtient alors, à l'ordre 4 en \(ξ\) et \(\eta\)
+\(u₀+ξ v+η w\) voisin du point d'équilibre \(u₀\), avec
+\(ξ, η\in\reals\) \guillemotleft{}petits\guillemotright{}, \(v\in V\) and
+\(w\in W\). On obtient alors, à l'ordre 4 en \(ξ\) et \(η\)
 \begin{equation}
   \begin{aligned}[b]
     \Deltaℰ ={}&
-    ℰ(u₀+ξ v+\eta w)-ℰ(u₀)\\
-    ={}&\tfrac12ℰ_{,uu}(u₀;ξ v+\eta w, ξ v+\eta w)
-    +\tfrac16ℰ_{,uuu}(u₀;ξ v+\eta w, ξ v+\eta w, ξ v+\eta w)\\
-    &+\tfrac1{24}ℰ_{,uuuu}(u₀;ξ v+\eta w, ξ v+\eta w, ξ v+\eta w,
-    ξ v+\eta w)+\LandauO\bigl(\bigl(ξ^2+\eta^2\bigr)^2\bigr),
+    ℰ(u₀+ξ v+η w)-ℰ(u₀)\\
+    ={}&\tfrac12ℰ_{,uu}(u₀;ξ v+η w, ξ v+η w)
+    +\tfrac16ℰ_{,uuu}(u₀;ξ v+η w, ξ v+η w, ξ v+η w)\\
+    &+\tfrac1{24}ℰ_{,uuuu}(u₀;ξ v+η w, ξ v+η w, ξ v+η w,
+    ξ v+η w)+\LandauO\bigl(\bigl(ξ^2+η^2\bigr)^2\bigr),
   \end{aligned}
 \end{equation}
 où le terme linéaire a été omis puisque \(u\) est un point critique de
@@ -109,25 +109,25 @@ différentielles successives de l'énergie \(ℰ\), ainsi que du fait que
 \begin{equation}
   \begin{aligned}[b]
     \Deltaℰ
-    ={}&\tfrac12\eta^2ℰ_{,uu}(w, w)
+    ={}&\tfrac12η^2ℰ_{,uu}(w, w)
     +\tfrac16ξ^3ℰ_{,uuu}(v, v, v)
-    +\tfrac12ξ^2\etaℰ_{,uuu}(v, v, w)\\
-    &+\tfrac12ξ\eta^2ℰ_{,uuu}(v, w, w)
-    +\tfrac16\eta^3ℰ_{,uuu}(w, w, w)\\
+    +\tfrac12ξ^2ηℰ_{,uuu}(v, v, w)\\
+    &+\tfrac12ξη^2ℰ_{,uuu}(v, w, w)
+    +\tfrac16η^3ℰ_{,uuu}(w, w, w)\\
     &+\tfrac1{24}ξ^4ℰ_{,uuuu}(v, v, v, v)
     +\tfrac16ξ^3ℰ_{,uuuu}(v, v, v, w)\\
-    &+\tfrac14ξ^2\eta^2ℰ_{,uuuu}(v, v, w, w)
-    +\tfrac16ξ\eta^3ℰ_{,uuuu}(v, w, w, w)\\
-    &+\tfrac1{24}\eta^4ℰ_{,uuuu}(w, w, w, w)
-    +\LandauO\bigl(\bigl(ξ^2+\eta^2\bigr)^2\bigr),
+    &+\tfrac14ξ^2η^2ℰ_{,uuuu}(v, v, w, w)
+    +\tfrac16ξη^3ℰ_{,uuuu}(v, w, w, w)\\
+    &+\tfrac1{24}η^4ℰ_{,uuuu}(w, w, w, w)
+    +\LandauO\bigl(\bigl(ξ^2+η^2\bigr)^2\bigr),
   \end{aligned}
 \end{equation}
 où l'on convient que toutes les différentielles de \(ℰ\) sont évaluées
 au point d'équilibre \(u₀\).
 
 Pour que l'équilibre soit stable, il faut que expression soit positive ou nulle
-pour tous \(ξ\) et \(\eta\) suffisamment petits. En prenant tout d'abord
-\(\eta=0\), on obtient les conditions nécessaires
+pour tous \(ξ\) et \(η\) suffisamment petits. En prenant tout d'abord
+\(η=0\), on obtient les conditions nécessaires
 \begin{equation}
   \label{eq:20211108164416}
   ℰ_{,uuu}(v, v, v)=0
@@ -141,7 +141,7 @@ En d'autres termes, s'il existe \(v\in V\) tel que
 \(ℰ_{,uuuu}(v, v, v, v)<0\), alors l'équilibre est
 \emph{instable}. Les conditions précédentes ne sont pas suffisantes pour
 assurer la stabilité. En effet, supposant ces conditions remplies, on prend
-maintenant \(\eta=ξ^2\)
+maintenant \(η=ξ^2\)
 \begin{equation}
   \Deltaℰ
   =\tfrac12ξ^4\bigl[ℰ_{,uu}(w, w)+ℰ_{,uuu}(v, v, w)
@@ -222,11 +222,11 @@ On écrit toute courbe d'équilibre passant par le point \((u₀, \lambda_0)\)
 sous la forme paramétrique suivante
 \begin{align}
   \label{eq:20211115075817}
-  \lambda&=\lambda_0+\eta\lambda_1+\eta^2\lambda_2+\eta^3\lambda_3+\cdots,\\
+  \lambda&=\lambda_0+η\lambda_1+η^2\lambda_2+η^3\lambda_3+\cdots,\\
   \label{eq:20211115075835}
-  u&=u^\ast(\lambda)+\eta u_1+\eta^2 u_2+\eta^3u_3+\cdots,
+  u&=u^\ast(\lambda)+η u_1+η^2 u_2+η^3u_3+\cdots,
 \end{align}
-où \(\eta\) est un paramètre, non précisé pour le moment. Noter que, dans la
+où \(η\) est un paramètre, non précisé pour le moment. Noter que, dans la
 représentation paramétrique de \(u\), \(u^\ast\) est évalué en \(\lambda\) et
 pas en \(\lambda_0\).
 
@@ -234,8 +234,8 @@ Les coefficients \(\lambda_k\) et \(u_k\) des
 développements~\eqref{eq:20211115075817} et \eqref{eq:20211115075835} sont
 identifiés en écrivant que l'énergie est stationnaire le long de la courbe
 d'équilibre, c'est-à-dire que le résidu
-\(ℰ_{,u}[u(\eta), \lambda(\eta)]\) est nul. Le développement limité du
-résidu est établi au voisinage de \(\eta=0\) dans
+\(ℰ_{,u}[u(η), \lambda(η)]\) est nul. Le développement limité du
+résidu est établi au voisinage de \(η=0\) dans
 l'annexe~\ref{sec:20211112182000}. En écrivant que tous ses termes s'annulent,
 on trouve successivement, pour tout \(\hat{u}\in U\)
 \begin{gather}
@@ -297,20 +297,20 @@ branche bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
 \begin{equation}
   \label{eq:20211115082025}
   \begin{aligned}[b]
-    ℰ_{,uu}[u(\eta), \lambda(\eta)](\hat{u}, \hat{v})
+    ℰ_{,uu}[u(η), \lambda(η)](\hat{u}, \hat{v})
     ={}&\mathcal H^\ast(\hat{u}, \hat{v})
-    +\eta\bigl[\mathcal T^\ast(u_1, \hat{u}, \hat{v})
+    +η\bigl[\mathcal T^\ast(u_1, \hat{u}, \hat{v})
     +\lambda_1\dot{\mathcal H}^\ast(\hat{u}, \hat{v})\bigr]\\
-    &+\tfrac12\eta^2\bigl[\mathcal Q^\ast(u_1, u_1, \hat{u}, \hat{v})
+    &+\tfrac12η^2\bigl[\mathcal Q^\ast(u_1, u_1, \hat{u}, \hat{v})
     +2\lambda_1\dot{\mathcal T}^\ast(u_1, \hat{u}, \hat{v})\\
     &+\lambda_1^2\ddot{\mathcal H}^\ast(\hat{u}, \hat{v})
     +\mathcal T^\ast(u_2, \hat{u}, \hat{v})
-    +\lambda_2\dot{\mathcal H}^\ast(\hat{u}, \hat{v})\bigr]+o(\eta^2).
+    +\lambda_2\dot{\mathcal H}^\ast(\hat{u}, \hat{v})\bigr]+o(η^2).
   \end{aligned}
 \end{equation}
 
 On peut d'ores et déjà remarquer que, sur la branche fondamentale
-(\(u_1=u_2=0\)), en prenant \(\eta=\lambda-\lambda^\ast\) (\(\lambda_1=1\))
+(\(u_1=u_2=0\)), en prenant \(η=\lambda-\lambda^\ast\) (\(\lambda_1=1\))
 \begin{equation}
   \mathcal H(\hat{u}, \hat{v})
   =ℰ_{,uu}[u₀(\lambda), \lambda](\hat{u}, \hat{v})
@@ -396,74 +396,74 @@ Soit \(u\in V\). Alors
 
 \subsection{Principe du calcul}
 
-On pose dans ce qui suit \(\Lambda(\eta)=\lambda(\eta)-\lambda_0\) et
-\(U(\eta)=u(\eta)-u₀[\lambda(\eta)]\), de sorte que\pdfmargincomment{À
+On pose dans ce qui suit \(\Lambda(η)=\lambda(η)-\lambda_0\) et
+\(U(η)=u(η)-u₀[\lambda(η)]\), de sorte que\pdfmargincomment{À
   compléter}
 \begin{align}
   \label{eq:20211112155446}
-  \Lambda(\eta)&=\eta\lambda_1+\eta^2\lambda_2+\eta^3\lambda_3+\cdots,\\
+  \Lambda(η)&=η\lambda_1+η^2\lambda_2+η^3\lambda_3+\cdots,\\
   \label{eq:20211112113028}
-  U(\eta)&=\eta u_1+\eta^2 u_2+\eta^3u_3+\cdots.
+  U(η)&=η u_1+η^2 u_2+η^3u_3+\cdots.
 \end{align}
 
 On considère une quantité \(\mathcal F\), fonction de \(u\) et \(\lambda\)~:
 \(\mathcal F(u, \lambda)\). Cette fonctionnelle est évaluée le long de la
 branche bifurquée. En d'autres termes, on considère
 \begin{equation}
-  f(\eta)=F\bigl(u₀[\lambda_0+\Lambda(\eta)]+U(\eta),
-  \lambda_0+\Lambda(\eta)\bigr).
+  f(η)=F\bigl(u₀[\lambda_0+\Lambda(η)]+U(η),
+  \lambda_0+\Lambda(η)\bigr).
 \end{equation}
 
 On souhaite établir un développement limité de \(f\) au voisinage de
-\(\eta=0\), ce qui conduit à calculer les dérivées successives de \(f\) en
-\(\eta=0\), puisque
+\(η=0\), ce qui conduit à calculer les dérivées successives de \(f\) en
+\(η=0\), puisque
 \begin{equation}
-  f(\eta)=f(0)+\eta f'(0)+\tfrac12\eta^2f''(0)+\cdots
+  f(η)=f(0)+η f'(0)+\tfrac12η^2f''(0)+\cdots
 \end{equation}
 
 Pour calculer ces dérivées, il sera commode d'introduire la fonction auxiliaire
 \(F\)
 \begin{equation}
-  F(\eta, \lambda)=\mathcal F[u₀(\lambda)+U(\eta), \lambda],
+  F(η, \lambda)=\mathcal F[u₀(\lambda)+U(η), \lambda],
 \end{equation}
-dans laquelle les variables \(\lambda\) et \(\eta\) sont provisoirement
+dans laquelle les variables \(\lambda\) et \(η\) sont provisoirement
 considérées comme indépendantes. On a
 \begin{equation}
-  f(\eta)=F[\eta, \lambda_0+\Lambda(\eta)],
+  f(η)=F[η, \lambda_0+\Lambda(η)],
 \end{equation}
 d'où l'on déduit successivement que
 \begin{equation}
   \label{eq:20211112162417}
-  f'(\eta)=\partial_\eta F[\eta, \lambda_0+\Lambda(\eta)]
-  +\Lambda'(\eta)\,\partial_\lambda F[\eta, \lambda_0+\Lambda(\eta)],
+  f'(η)=\partial_η F[η, \lambda_0+\Lambda(η)]
+  +\Lambda'(η)\,\partial_\lambda F[η, \lambda_0+\Lambda(η)],
 \end{equation}
 \begin{equation}
   \begin{aligned}[b]
     \label{eq:20211112165810}
-    f''(\eta)={}&\partial_{\eta\eta}^2F[\eta, \lambda_0+\Lambda(\eta)]
-    +2\Lambda'(\eta)\,\partial_{\eta\lambda}^2F[\eta, \lambda_0+\Lambda(\eta)]\\
-    &+\Lambda''(\eta)\,\partial_\lambda F[\eta, \lambda_0+\Lambda(\eta)]
-    +\Lambda'(\eta)^2\partial_{\lambda\lambda}^2F[\eta, \lambda_0+\Lambda(\eta)]
+    f''(η)={}&\partial_{ηη}^2F[η, \lambda_0+\Lambda(η)]
+    +2\Lambda'(η)\,\partial_{η\lambda}^2F[η, \lambda_0+\Lambda(η)]\\
+    &+\Lambda''(η)\,\partial_\lambda F[η, \lambda_0+\Lambda(η)]
+    +\Lambda'(η)^2\partial_{\lambda\lambda}^2F[η, \lambda_0+\Lambda(η)]
   \end{aligned}
 \end{equation}
 et
 \begin{equation}
   \label{eq:20211112173223}
   \begin{aligned}[b]
-    f'''(\eta)={}&\partial_{\eta\eta\eta}^3F[\eta, \lambda_0+\Lambda(\eta)]\\
-    &+3\Lambda'(\eta)\,\partial_{\eta\eta\lambda}^3F[\eta, \lambda_0+\Lambda(\eta)]\\
-    &+3\Lambda'(\eta)^2\partial_{\eta\lambda\lambda}^3F[\eta, \lambda_0+\Lambda(\eta)]\\
-    &+3\Lambda''(\eta)\,\partial_{\eta\lambda}^2F[\eta, \lambda_0+\Lambda(\eta)]\\
-    &+\Lambda'''(\eta)\,\partial_\lambda F[\eta, \lambda_0+\Lambda(\eta)]\\
-    &+3\Lambda'(\eta)\,\Lambda''(\eta)\,\partial_{\lambda\lambda}^2F[\eta, \lambda_0+\Lambda(\eta)]\\
-    &+\Lambda'(\eta)^3\partial_{\lambda\lambda\lambda}^3F[\eta, \lambda_0+\Lambda(\eta)].
+    f'''(η)={}&\partial_{ηηη}^3F[η, \lambda_0+\Lambda(η)]\\
+    &+3\Lambda'(η)\,\partial_{ηη\lambda}^3F[η, \lambda_0+\Lambda(η)]\\
+    &+3\Lambda'(η)^2\partial_{η\lambda\lambda}^3F[η, \lambda_0+\Lambda(η)]\\
+    &+3\Lambda''(η)\,\partial_{η\lambda}^2F[η, \lambda_0+\Lambda(η)]\\
+    &+\Lambda'''(η)\,\partial_\lambda F[η, \lambda_0+\Lambda(η)]\\
+    &+3\Lambda'(η)\,\Lambda''(η)\,\partial_{\lambda\lambda}^2F[η, \lambda_0+\Lambda(η)]\\
+    &+\Lambda'(η)^3\partial_{\lambda\lambda\lambda}^3F[η, \lambda_0+\Lambda(η)].
   \end{aligned}
 \end{equation}
 
-En \(\eta=0\), les relations précédentes s'écrivent
+En \(η=0\), les relations précédentes s'écrivent
 \begin{align}
-  f'(0)={}&\partial_\eta F+\lambda_1\partial_\lambda F\\
-  f''(0)={}&\partial_{\eta\eta}^2F+2\lambda_1\partial_{\eta\lambda}^2F
+  f'(0)={}&\partial_η F+\lambda_1\partial_\lambda F\\
+  f''(0)={}&\partial_{ηη}^2F+2\lambda_1\partial_{η\lambda}^2F
              +2\lambda_2\partial_\lambda F+\lambda_1^2\partial_{\lambda\lambda}^2F
 \end{align}
 où \(F\) et ses dérivées sont évaluées en \((0, λ₀)\).
@@ -471,29 +471,29 @@ où \(F\) et ses dérivées sont évaluées en \((0, λ₀)\).
 \subsection{Développement limité du résidu}
 \label{sec:20211112182000}
 
-Soit \(f(\eta)=ℰ_{,u}(u, \lambda)(\hat{u})\) le \emph{résidu}
+Soit \(f(η)=ℰ_{,u}(u, \lambda)(\hat{u})\) le \emph{résidu}
 (\(\hat{u}\in V\) est arbitraire). Les équations permettant de déterminer les
 coefficients des développements~\eqref{eq:20211112155446} et
 \eqref{eq:20211112113028} sont obtenues en écrivant que \(f\) et ses dérivées
-sont nulles en \(\eta=0\). En considérant temporairement \(\eta\) et
+sont nulles en \(η=0\). En considérant temporairement \(η\) et
 \(\lambda\) comme des variables indépendantes, on introduit
 \begin{equation}
-  F(\eta, \lambda)=ℰ_{,u}[u₀(\lambda)+U(\eta), \lambda](\hat{u})
+  F(η, \lambda)=ℰ_{,u}[u₀(\lambda)+U(η), \lambda](\hat{u})
 \end{equation}
 et on doit exprimer la nullité de
-\(f(\eta)=F[\eta, \lambda^\ast+\Lambda(\eta)]\) au voisinage de \(\eta=0\). En
+\(f(η)=F[η, \lambda^\ast+\Lambda(η)]\) au voisinage de \(η=0\). En
 convenant dans ce qui suit que \(U\), \(\Lambda\) et leurs dérivées sont
-implicitement évaluées en \(\eta\), on trouve tout d'abord
+implicitement évaluées en \(η\), on trouve tout d'abord
 avec
 \begin{equation}
   \label{eq:20211112164354}
-  \partial_\eta F(\eta, \lambda)
+  \partial_η F(η, \lambda)
   =ℰ_{,uu}[u₀(\lambda)+U, \lambda](U', \hat{u}),
 \end{equation}
-soit, en \(\eta=0\)
+soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211112165323}
-  \partial_\eta F(0, \lambda)=\mathcal H(u_1, \hat{u}).
+  \partial_η F(0, \lambda)=\mathcal H(u_1, \hat{u}).
 \end{equation}
 
 Par ailleurs, puisque \(\lambda\mapsto u₀(\lambda)\) est une courbe d'équilibre, on a
@@ -513,28 +513,28 @@ On déduit de ce qui précède que
 En dérivant la relation~\eqref{eq:20211112162417}, on obtient maintenant l'expression de la dérivée seconde de \(f\)
 
 La relation~\eqref{eq:20211112164240} montre que les deux derniers termes
-s'annulent en \(\eta=0\). Par ailleurs, en dérivant
-l'expression~\eqref{eq:20211112164354} par rapport à \(\eta\)
+s'annulent en \(η=0\). Par ailleurs, en dérivant
+l'expression~\eqref{eq:20211112164354} par rapport à \(η\)
 \begin{equation}
   \label{eq:20211112172446}
   \begin{aligned}[b]
-    \partial_{\eta\eta}^2F(\eta, \lambda)={}&
+    \partial_{ηη}^2F(η, \lambda)={}&
     ℰ_{,uuu}[u₀(\lambda)+U, \lambda](U', U', \hat{u})\\
     &+ℰ_{,uu}[u₀(\lambda)+U, \lambda](U'', \hat{u}),
   \end{aligned}
 \end{equation}
-soit, en \(\eta=0\)
+soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211112165830}
-  \partial_{\eta\eta}^2F(0, \lambda)=\mathcal T(u_1, u_1, \hat{u})
+  \partial_{ηη}^2F(0, \lambda)=\mathcal T(u_1, u_1, \hat{u})
   +2\mathcal H(u_2, \hat{u}).
 \end{equation}
 
-Par ailleurs, \(\partial_{\eta\lambda}^2F(0, \lambda)\) s'obtient par simple
+Par ailleurs, \(\partial_{η\lambda}^2F(0, \lambda)\) s'obtient par simple
 dérivation de la relation~\eqref{eq:20211112165323}
 \begin{equation}
   \label{eq:20211112165843}
-  \partial_{\eta\lambda}^2F(0, \lambda)=\dot{\mathcal H}(u_1, \hat{u}).
+  \partial_{η\lambda}^2F(0, \lambda)=\dot{\mathcal H}(u_1, \hat{u}).
 \end{equation}
 
 En rassemblant les expressions~\eqref{eq:20211112165810},
@@ -547,36 +547,36 @@ de la dérivée seconde de \(f\) en 0
   +2\mathcal H(u_2, \hat{u}).
 \end{equation}
 
-On obtient finalement l'expression de \(f'''(\eta)\) en dérivant la
+On obtient finalement l'expression de \(f'''(η)\) en dérivant la
 relation~\eqref{eq:20211112165810}
 
 La relation~\eqref{eq:20211112164240} montre une nouvelle fois que les trois
-derniers termes de l'expression ci-dessus s'annulent en \(\eta=0\). Par simple
+derniers termes de l'expression ci-dessus s'annulent en \(η=0\). Par simple
 dérivation par rapport à \(\lambda\) des expressions~\eqref{eq:20211112165830}
 et \eqref{eq:20211112165843}, on trouve par ailleurs
 \begin{equation}
   \label{eq:20211112173247}
-  \partial_{\eta\eta\lambda}^3F(0, \lambda)
+  \partial_{ηη\lambda}^3F(0, \lambda)
   =\dot{\mathcal T}(u_1, u_1, \hat{u})+2\dot{\mathcal H}(u_2, \hat{u})
   \quad\text{et}\quad
-  \partial_{\eta\lambda\lambda}^3F(0, \lambda)
+  \partial_{η\lambda\lambda}^3F(0, \lambda)
   =\ddot{\mathcal H}(u_1, \hat{u}).
 \end{equation}
 
 Finalement, en dérivant l'expression~\eqref{eq:20211112172446} par rapport à
-\(\eta\), on trouve
+\(η\), on trouve
 \begin{equation}
   \begin{aligned}[b]
-    \partial_{\eta\eta\eta}^3F(\eta, \lambda)={}&
+    \partial_{ηηη}^3F(η, \lambda)={}&
     ℰ_{,uuuu}[u₀(\lambda)+U, \lambda](U', U', U', \hat{u})\\
     &+3ℰ_{,uuu}[u₀(\lambda)+U, \lambda](U', U'', \hat{u})\\
     &+ℰ_{,uu}[u₀(\lambda)+U, \lambda](U''', \hat{u}),
   \end{aligned}
 \end{equation}
-soit, en \(\eta=0\)
+soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211112173300}
-  \partial_{\eta\eta\eta}^3F(0, \lambda)=
+  \partial_{ηηη}^3F(0, \lambda)=
   \mathcal Q(u_1, u_1, u_1, \hat{u})
   +6\mathcal T(u_1, u_2, \hat{u})
   +6\mathcal H(u_3, \hat{u}).
@@ -584,7 +584,7 @@ soit, en \(\eta=0\)
 
 En regroupant les relations~\eqref{eq:20211112173223},
 \eqref{eq:20211112173247} et \eqref{eq:20211112173300}, on trouve finalement
-l'expression de la dérivée troisième de \(f\) en \(\eta=0\)
+l'expression de la dérivée troisième de \(f\) en \(η=0\)
 \begin{equation}
 \label{eq:20211112182402}
   \begin{aligned}[b]
@@ -602,40 +602,40 @@ l'expression de la dérivée troisième de \(f\) en \(\eta=0\)
 
 Le principe du calcul est le même que dans
 l'annexe~\ref{sec:20211112182000}. Pour \(\hat{u}, \hat{v}\in V\), on introduit
-\(h(\eta)=ℰ_{,uu}(u, \lambda)(\hat{u}, \hat{v})\), où \(\lambda\) et
-\(u\) sont données en fonction de \(\eta\) par les
+\(h(η)=ℰ_{,uu}(u, \lambda)(\hat{u}, \hat{v})\), où \(\lambda\) et
+\(u\) sont données en fonction de \(η\) par les
 expressions~\eqref{eq:20211115075817} et \eqref{eq:20211115075835}.
 
-La fonction \(h(\eta)\) est la hessienne de l'énergie le long d'une branche du
+La fonction \(h(η)\) est la hessienne de l'énergie le long d'une branche du
 diagramme d'équilibre. Elle permet d'étudier la stabilité de l'équilibre. On
 établit un développement limité de \(h\) en calculant ses dérivées successives
-en \(\eta=0\). \`A cet effet, considérant une nouvelle fois \(\eta\) et
+en \(η=0\). \`A cet effet, considérant une nouvelle fois \(η\) et
 \(\lambda\) comme des variables indépendantes, on introduit la fonction
 \begin{equation}
-  H(\eta, \lambda)=ℰ_{,uu}[u₀(\lambda)+U(\eta), \lambda],
+  H(η, \lambda)=ℰ_{,uu}[u₀(\lambda)+U(η), \lambda],
 \end{equation}
 de sorte que
 \begin{equation}
   \label{eq:20211114104326}
-  h(\eta)=H[\eta, \lambda^\ast+\Lambda(\eta)].
+  h(η)=H[η, \lambda^\ast+\Lambda(η)].
 \end{equation}
 
 On observe tout d'abord que \(h(0)=\mathcal H^\ast\). Par ailleurs, en dérivant
-l'expression~\eqref{eq:20211114104326} par rapport à \(\eta\)
+l'expression~\eqref{eq:20211114104326} par rapport à \(η\)
 \begin{equation}
   \label{eq:20211114110210}
-  h'(\eta)=\partial_\eta H(\eta, \lambda^\ast+\Lambda)
-  +\Lambda'\partial_\lambda H(\eta, \lambda^\ast+\Lambda),
+  h'(η)=\partial_η H(η, \lambda^\ast+\Lambda)
+  +\Lambda'\partial_\lambda H(η, \lambda^\ast+\Lambda),
 \end{equation}
 avec
 \begin{equation}
   \label{eq:20211114110852}
-  \partial_\eta H(\eta, \lambda)=ℰ_{,uuu}(u₀+U, \lambda)(U', \hat{u}, \hat{v}),
+  \partial_η H(η, \lambda)=ℰ_{,uuu}(u₀+U, \lambda)(U', \hat{u}, \hat{v}),
 \end{equation}
-soit, en \(\eta=0\)
+soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211114110230}
-  \partial_\eta H(0, \lambda)=\mathcal T(u_1, \hat{u}, \hat{v}).
+  \partial_η H(0, \lambda)=\mathcal T(u_1, \hat{u}, \hat{v}).
 \end{equation}
 
 Par ailleurs
@@ -654,29 +654,29 @@ En regroupant les expressions~\eqref{eq:20211114110210},
   +\lambda_1\dot{\mathcal H}^\ast(\hat{u}, \hat{v}).
 \end{equation}
 
-La dérivation de l'expression~\eqref{eq:20211114110210} par rapport à \(\eta\)
+La dérivation de l'expression~\eqref{eq:20211114110210} par rapport à \(η\)
 donne maintenant
 \begin{equation}
   \label{eq:20211114111822}
   \begin{aligned}[b]
-    h''(\eta)={}&\partial_{\eta\eta}^2 H(\eta, \lambda^\ast+\Lambda)
-    +2\Lambda'\partial_{\eta\lambda}^2 H(\eta, \lambda^\ast+\Lambda)\\
-    &+\Lambda''\partial_{\lambda}H(\eta, \lambda^\ast+\Lambda)
-    +\Lambda'^2\partial_{\lambda\lambda}^2H(\eta, \lambda^\ast+\Lambda).
+    h''(η)={}&\partial_{ηη}^2 H(η, \lambda^\ast+\Lambda)
+    +2\Lambda'\partial_{η\lambda}^2 H(η, \lambda^\ast+\Lambda)\\
+    &+\Lambda''\partial_{\lambda}H(η, \lambda^\ast+\Lambda)
+    +\Lambda'^2\partial_{\lambda\lambda}^2H(η, \lambda^\ast+\Lambda).
   \end{aligned}
 \end{equation}
 
-L'expression de \(\partial_{\eta\eta}^2H\) est obtenue en
+L'expression de \(\partial_{ηη}^2H\) est obtenue en
 dérivant~\eqref{eq:20211114110852}
 \begin{equation}
-  \partial_{\eta\eta}^2H(\eta, \lambda)
+  \partial_{ηη}^2H(η, \lambda)
   =ℰ_{,uuuu}(u₀+U, \lambda)(U', U', \hat{u}, \hat{v})
   +ℰ_{,uuu}(U'', \hat{u}, \hat{v}),
 \end{equation}
-soit, en \(\eta=0\)
+soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211114111716}
-  \partial_{\eta\eta}^2H(0, \lambda)=\mathcal Q(u_1, u_1, \hat{u}, \hat{v})
+  \partial_{ηη}^2H(0, \lambda)=\mathcal Q(u_1, u_1, \hat{u}, \hat{v})
   +2\mathcal T(u_2, \hat{u}, \hat{v}).
 \end{equation}
 
@@ -684,14 +684,14 @@ Ensuite, en dérivant~\eqref{eq:20211114110230} et \eqref{eq:20211114110245} par
 rapport à \(\lambda\), on obtient
 \begin{equation}
   \label{eq:20211114111740}
-  \partial_{\eta\lambda}^2H(0, \lambda)=\dot{\mathcal T}(u_1, \hat{u}, \hat{v})
+  \partial_{η\lambda}^2H(0, \lambda)=\dot{\mathcal T}(u_1, \hat{u}, \hat{v})
   \quad\text{et}\quad
   \partial_{\lambda\lambda}^2H(0, \lambda)=\ddot{\mathcal H}(\hat{u}, \hat{v}).
 \end{equation}
 
 Finalement, en substituant \eqref{eq:20211114110245}, \eqref{eq:20211114111716}
 et \eqref{eq:20211114111740} dans \eqref{eq:20211114111822}, on obtient
-l'expression de la dérivée seconde de h en \(\eta=0\)
+l'expression de la dérivée seconde de h en \(η=0\)
 \begin{equation}
   \begin{aligned}[b]
     h''(0)={}&\mathcal Q^\ast(u_1, u_1, \hat{u}, \hat{v})
@@ -708,17 +708,17 @@ On cherche les vecteurs propres \(v\in V\) et valeurs propres
 \(\alpha\in\reals\) de la Hessienne
 \begin{equation}
   \label{eq:20211115082122}
-  ℰ_{,uu}[u(\eta), \lambda(\eta)](v, \hat{u})
+  ℰ_{,uu}[u(η), \lambda(η)](v, \hat{u})
   =\alpha〈 v, \hat{u}〉
   \quad\text{pour tout}\quad\hat{u}\in V.
 \end{equation}
 
-On cherche les développements limités à l'ordre 1 en \(\eta\) de \(v\) et \(\alpha\)
+On cherche les développements limités à l'ordre 1 en \(η\) de \(v\) et \(\alpha\)
 \begin{equation}
   \label{eq:20211115082037}
-  v = v_0+\eta v_1+o(\eta)
+  v = v_0+η v_1+o(η)
   \quad\text{et}\quad
-  \alpha=\alpha_0+\eta\alpha_1+o(\eta)
+  \alpha=\alpha_0+η\alpha_1+o(η)
 \end{equation}
 
 Les développements limités~\eqref{eq:20211115082025} et
@@ -726,18 +726,18 @@ Les développements limités~\eqref{eq:20211115082025} et
 problème~\eqref{eq:20211115082122}
 \begin{equation}
   \begin{aligned}[b]
-    ℰ_{,uu}[u(\eta), \lambda(\eta)](v, \hat{w})={}
+    ℰ_{,uu}[u(η), \lambda(η)](v, \hat{w})={}
     &\mathcal H^\ast(v_0, \hat{w})
-    +\eta\bigl[\mathcal T^\ast(u_1, v_0, \hat{w})
+    +η\bigl[\mathcal T^\ast(u_1, v_0, \hat{w})
     +\lambda_1\dot{\mathcal H}^\ast(v_0, \hat{w})\\
-    &+\mathcal H^\ast(v_1, \hat{w})\bigr]+o(\eta)
+    &+\mathcal H^\ast(v_1, \hat{w})\bigr]+o(η)
   \end{aligned}
 \end{equation}
 
 \begin{equation}
   \alpha〈 v, \hat{w}〉=\alpha_0〈 v_0, \hat{w}〉
-  +\eta\bigl(\alpha_1〈 v_0, \hat{w}〉+\alpha_0〈 v_1, \hat{w}〉\bigr)
-  +o(\eta).
+  +η\bigl(\alpha_1〈 v_0, \hat{w}〉+\alpha_0〈 v_1, \hat{w}〉\bigr)
+  +o(η).
 \end{equation}
 
 On obtient le problème variationnel d'ordre 0

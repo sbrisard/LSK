@@ -44,41 +44,37 @@
 \section{Notations}
 
 L'espace des champs cinématiquement admissibles est noté \(U\). On suppose
-qu'il a la structure d'espace vectoriel. L'énergie du système est noté
-\(ℰ\).
+qu'il a la structure d'espace vectoriel. L'énergie du système est noté \(ℰ\).
 
 \section{Analyse de la branche fondamentale}
 
-Soit \(u₀∈ U\) un point d'équilibre du système~: l'énergie \(ℰ\)
-est stationnaire en \(u₀\). On s'intéresse à la stabilité de cet
-équilibre. L'équilibre est stable si \(ℰ\) est minimale en ce
-point. On sait que \(ℰ_{,uu}(u₀)≥0\) est une condition
-\emph{nécessaire} de stabilité. De plus, \(ℰ_{,uu}(u₀)>0\) est une
-condition \emph{suffisante} de stabilité.
+Soit \(u₀∈ U\) un point d'équilibre du système~: l'énergie \(ℰ\) est
+stationnaire en \(u₀\). On s'intéresse à la stabilité de cet
+équilibre. L'équilibre est stable si \(ℰ\) est minimale en ce point. On sait
+que \(ℰ_{,uu}(u₀)≥0\) est une condition \emph{nécessaire} de stabilité. De
+plus, \(ℰ_{,uu}(u₀)>0\) est une condition \emph{suffisante} de stabilité.
 
-On s'intéresse ici au cas où \(ℰ_{,uu}(u₀)\) est positive, sans être
-définie positive~; soit \(V\) son noyau, qui forme un sous-espace vectoriel de
+On s'intéresse ici au cas où \(ℰ_{,uu}(u₀)\) est positive, sans être définie
+positive~; soit \(V\) son noyau, qui forme un sous-espace vectoriel de
 \(U\). On suppose que \(V\) est de dimension finie \(m=\dim V\). Soit
-\(\bigl(v₁, \ldots, vₘ\bigr)\) une base orthonormée de ce noyau pour le
-produit scalaire \(〈•,•〉\) (qui n'est pas précisé pour
-le moment). On introduit le sous-espace supplémentaire orthogonal \(W\) de
-\(V\) dans \(U\)
+\(\bigl(v₁, \ldots, vₘ\bigr)\) une base orthonormée de ce noyau pour le produit
+scalaire \(〈•,•〉\) (qui n'est pas précisé pour le moment). On introduit le
+sous-espace supplémentaire orthogonal \(W\) de \(V\) dans \(U\)
 \begin{equation}
   U=V\stackrel⟂⊕W.
 \end{equation}
 
 Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
-\(u₀+ξ v+η w\) voisin du point d'équilibre \(u₀\), avec
-\(ξ, η∈ℝ\) \guillemotleft{}petits\guillemotright{}, \(v∈ V\) and
-\(w∈ W\). On obtient alors, à l'ordre 4 en \(ξ\) et \(η\)
+\(u₀+ξv+ηw\) voisin du point d'équilibre \(u₀\), avec \(ξ, η∈ℝ\)
+\guillemotleft{}petits\guillemotright{}, \(v∈V\) and \(w∈W\). On obtient alors,
+à l'ordre 4 en \(ξ\) et \(η\)
 \begin{equation}
   \begin{aligned}[b]
-    Δℰ ={}&
-    ℰ(u₀+ξ v+η w)-ℰ(u₀)\\
-    ={}&\tfrac12ℰ_{,uu}(u₀;ξ v+η w, ξ v+η w)
-    +\tfrac16ℰ_{,uuu}(u₀;ξ v+η w, ξ v+η w, ξ v+η w)\\
-    &+\tfrac1{24}ℰ_{,uuuu}(u₀;ξ v+η w, ξ v+η w, ξ v+η w,
-    ξ v+η w)+𝒪\bigl(\bigl(ξ²+η²\bigr)²\bigr),
+    Δℰ ={}&ℰ(u₀+ξv+ηw)-ℰ(u₀)\\
+    ={}&\tfrac12ℰ_{,uu}(u₀;ξv+ηw, ξv+ηw)
+    +\tfrac16ℰ_{,uuu}(u₀;ξv+ηw, ξv+ηw, ξv+ηw)\\
+    &+\tfrac1{24}ℰ_{,uuuu}(u₀;ξv+ηw, ξv+ηw, ξv+ηw, ξv+ηw)
+    +𝒪\bigl(\bigl(ξ²+η²\bigr)²\bigr),
   \end{aligned}
 \end{equation}
 où le terme linéaire a été omis puisque \(u\) est un point critique de
@@ -87,86 +83,66 @@ différentielles successives de l'énergie \(ℰ\), ainsi que du fait que
 \(ℰ_{,uu}(v, •)=0\), l'expression précédente s'écrit
 \begin{equation}
   \begin{aligned}[b]
-    Δℰ
-    ={}&\tfrac12η²ℰ_{,uu}(w, w)
-    +\tfrac16ξ³ℰ_{,uuu}(v, v, v)
+    Δℰ={}&\tfrac12η²ℰ_{,uu}(w, w)+\tfrac16ξ³ℰ_{,uuu}(v, v, v)
     +\tfrac12ξ²ηℰ_{,uuu}(v, v, w)\\
-    &+\tfrac12ξη²ℰ_{,uuu}(v, w, w)
-    +\tfrac16η³ℰ_{,uuu}(w, w, w)\\
-    &+\tfrac1{24}ξ⁴ℰ_{,uuuu}(v, v, v, v)
-    +\tfrac16ξ³ℰ_{,uuuu}(v, v, v, w)\\
-    &+\tfrac14ξ²η²ℰ_{,uuuu}(v, v, w, w)
-    +\tfrac16ξη³ℰ_{,uuuu}(v, w, w, w)\\
-    &+\tfrac1{24}η⁴ℰ_{,uuuu}(w, w, w, w)
-    +𝒪\bigl(\bigl(ξ²+η²\bigr)²\bigr),
+    &+\tfrac12ξη²ℰ_{,uuu}(v, w, w)+\tfrac16η³ℰ_{,uuu}(w, w, w)\\
+    &+\tfrac1{24}ξ⁴ℰ_{,uuuu}(v, v, v, v)+\tfrac16ξ³ℰ_{,uuuu}(v, v, v, w)\\
+    &+\tfrac14ξ²η²ℰ_{,uuuu}(v, v, w, w)+\tfrac16ξη³ℰ_{,uuuu}(v, w, w, w)\\
+    &+\tfrac1{24}η⁴ℰ_{,uuuu}(w, w, w, w)+𝒪\bigl(\bigl(ξ²+η²\bigr)²\bigr),
   \end{aligned}
 \end{equation}
-où l'on convient que toutes les différentielles de \(ℰ\) sont évaluées
-au point d'équilibre \(u₀\).
+où l'on convient que toutes les différentielles de \(ℰ\) sont évaluées au point
+d'équilibre \(u₀\).
 
 Pour que l'équilibre soit stable, il faut que expression soit positive ou nulle
-pour tous \(ξ\) et \(η\) suffisamment petits. En prenant tout d'abord
-\(η=0\), on obtient les conditions nécessaires
+pour tous \(ξ\) et \(η\) suffisamment petits. En prenant tout d'abord \(η=0\),
+on obtient les conditions nécessaires
 \begin{equation}
   \label{eq:20211108164416}
-  ℰ_{,uuu}(v, v, v)=0
-  \quad\text{et}\quad
-  ℰ_{,uuuu}(v, v, v, v)≥0
-  \quad\text{pour tout}\quad v∈ V.
+  ℰ_{,uuu}(v, v, v)=0\quad\text{et}\quadℰ_{,uuuu}(v, v, v, v)≥0
+  \quad\text{pour tout}\quad v∈V.
 \end{equation}
 
-En d'autres termes, s'il existe \(v∈ V\) tel que
-\(ℰ_{,uuu}(v, v, v)≠0\) ou
-\(ℰ_{,uuuu}(v, v, v, v)<0\), alors l'équilibre est
-\emph{instable}. Les conditions précédentes ne sont pas suffisantes pour
-assurer la stabilité. En effet, supposant ces conditions remplies, on prend
-maintenant \(η=ξ²\)
+En d'autres termes, s'il existe \(v∈ V\) tel que \(ℰ_{,uuu}(v, v, v)≠0\) ou
+\(ℰ_{,uuuu}(v, v, v, v)<0\), alors l'équilibre est \emph{instable}. Les
+conditions précédentes ne sont pas suffisantes pour assurer la stabilité. En
+effet, supposant ces conditions remplies, on prend maintenant \(η=ξ²\)
 \begin{equation}
-  Δℰ
-  =\tfrac12ξ⁴\bigl[ℰ_{,uu}(w, w)+ℰ_{,uuu}(v, v, w)
+  Δℰ=\tfrac12ξ⁴\bigl[ℰ_{,uu}(w, w)+ℰ_{,uuu}(v, v, w)
   +\tfrac1{12}ℰ_{,uuuu}(v, v, v, v)\bigr]+o(ξ⁴)
 \end{equation}
 et on obtient la condition nécessaire supplémentaire
 \begin{equation}
   \label{eq:20211109145356}
-  ℰ_{,uu}(v, v)+ℰ_{,uuu}(v, v, w)
-  +\tfrac1{12}ℰ_{,uuuu}(v, v, v, v)≥0,
+  ℰ_{,uu}(v, v)+ℰ_{,uuu}(v, v, w)+\tfrac1{12}ℰ_{,uuuu}(v, v, v, v)≥0,
 \end{equation}
-pour tous \(v∈ V\) et \(w∈ W\). Pour \(v∈\kerℋ\) fixé,
-l'expression précédente est minimale lorsque \(w\) satisfait le problème
-variationnel
+pour tous \(v∈V\) et \(w∈W\). Pour \(v∈\kerℋ\) fixé, l'expression précédente
+est minimale lorsque \(w\) satisfait le problème variationnel
 \begin{equation}
   \label{eq:20211109145224}
-  2ℰ_{,uu}(w, \hat{w})+ℰ_{,uuu}(v, v, \hat{w})=0
-  \quad\text{pour tout}\quad
-  \hat{w}∈ W.
+  2ℰ_{,uu}(w, \hat{w})+ℰ_{,uuu}(v, v, \hat{w})=0\quad\text{pour tout}\quad\hat{w}∈W.
 \end{equation}
 
 Soit \(w_{ij}∈ W\) l'unique solution du problème variationnel suivant
 \begin{equation}
   \label{eq:20211221155859}
-  2ℰ_{,uu}(w_{ij}, \hat{w})
-  +ℰ_{,uuu}(vᵢ, vⱼ, \hat{w})=0
-  \quad\text{pour tout}\quad\hat{w}∈ W.
+  2ℰ_{,uu}(w_{ij}, \hat{w})+ℰ_{,uuu}(vᵢ, vⱼ, \hat{w})=0\quad\text{pour tout}\quad\hat{w}∈W.
 \end{equation}
 
 Alors, pour \(v=ξ^i vᵢ\), la solution du problème
 variationnel~\eqref{eq:20211109145224} est \(w=ξ^iξ^jw_{ij}\). Pour cette
 valeur de \(v\), la condition~\eqref{eq:20211109145356} s'écrit
 \begin{equation}
-  \bigl[\tfrac1{12}ℰ_{,uuuu}(vᵢ, vⱼ, vₖ, v_l)
-  -ℰ_{,uu}(w_{ij}, w_{kl})\bigr]
-  ξ^iξ^jξ^kξ^l≥ 0,
+  \bigl[\tfrac1{12}ℰ_{,uuuu}(vᵢ, vⱼ, vₖ, v_l)-ℰ_{,uu}(w_{ij}, w_{kl})\bigr]ξ^iξ^jξ^kξ^l≥0,
 \end{equation}
-pour tous \(ξᵢ, ξⱼ, ξₖ, ξ_l∈ℝ\). On peut montrer que
-l'inégalité stricte est une condition \emph{suffisante} de stabilité.
+pour tous \(ξᵢ, ξⱼ, ξₖ, ξ_l∈ℝ\). On peut montrer que l'inégalité stricte est
+une condition \emph{suffisante} de stabilité.
 
 \section{Bifurcations}
 
 Soit \(u^*(λ)\) la branche fondamentale. Par définition
 \begin{equation}
-  ℰ_{,u}[u^*(λ), λ;\hat{u}]=0
-  \quad\text{pour tout}\quad\hat{u}∈ U.
+  ℰ_{,u}[u^*(λ), λ;\hat{u}]=0\quad\text{pour tout}\quad\hat{u}∈ U.
 \end{equation}
 
 Il sera commode d'introduire les notations suivantes
@@ -176,29 +152,25 @@ Il sera commode d'introduire les notations suivantes
   𝒬(λ)&=ℰ_{,uuuu}[u^*(λ), λ].
 \end{align}
 
-Noter que \(ℋ\), \(𝒯\) et \(𝒬\) sont des formes bi-,
-tri- et quadri-linéaires, respectivement. L'application de ces formes à des
-éléments de \(U\) sera notée \(ℋ(λ; u, v)\),
-\(𝒯(λ; u, v, w)\), etc\dots. La dérivée de ces formes par
-rapport à \(λ\) sera notée à l'aide d'un point supérieur
-(\(\dot{ℋ}\), \(\dot{𝒯}\), \dots).
+Noter que \(ℋ\), \(𝒯\) et \(𝒬\) sont des formes bi-, tri- et quadri-linéaires,
+respectivement. L'application de ces formes à des éléments de \(U\) sera notée
+\(ℋ(λ; u, v)\), \(𝒯(λ; u, v, w)\), etc\dots. La dérivée de ces formes par
+rapport à \(λ\) sera notée à l'aide d'un point supérieur (\(\dot{ℋ}\),
+\(\dot{𝒯}\), \dots).
 
 On suppose que l'équilibre est stable pour des valeurs suffisamment petites de
-\(λ\). Plus précisément, on suppose que \(ℋ(λ)\) est
-définie positive pour tout \(λ<λ₀\). Pour \(λ=λ₀\),
-la forme quadratique \(ℋ(λ₀)\) n'est plus que positive. En
-notant \(u₀=u^*(λ₀)\) la position d'équilibre obtenue pour la valeur
-critique \(λ₀\) du paramètre de chargement \(λ\), on s'intéresse à
+\(λ\). Plus précisément, on suppose que \(ℋ(λ)\) est définie positive pour tout
+\(λ<λ₀\). Pour \(λ=λ₀\), la forme quadratique \(ℋ(λ₀)\) n'est plus que
+positive. En notant \(u₀=u^*(λ₀)\) la position d'équilibre obtenue pour la
+valeur critique \(λ₀\) du paramètre de chargement \(λ\), on s'intéresse à
 toutes les courbes d'équilibre qui passent par le point \((u₀, λ₀)\).
 
-Noter que dans ce qui suit, on convient que les formes \(ℋ\),
-\(𝒯\) et \(𝒬\) sont implicitement évaluées en \(λ₀\)
-lorsque \(λ\) n'est pas rappelé : ainsi, on notera
-\(ℋ(•, •)\) plutôt que
-\(ℋ(λ₀, •, •)\).
+Noter que dans ce qui suit, on convient que les formes \(ℋ\), \(𝒯\) et \(𝒬\)
+sont implicitement évaluées en \(λ₀\) lorsque \(λ\) n'est pas rappelé : ainsi,
+on notera \(ℋ(•, •)\) plutôt que \(ℋ(λ₀, •, •)\).
 
-On écrit toute courbe d'équilibre passant par le point \((u₀, λ₀)\)
-sous la forme paramétrique suivante
+On écrit toute courbe d'équilibre passant par le point \((u₀, λ₀)\) sous la
+forme paramétrique suivante
 \begin{align}
   \label{eq:20211115075817}
   λ&=λ₀+ηλ₁+η²λ₂+η³λ₃+\cdots,\\
@@ -206,51 +178,44 @@ sous la forme paramétrique suivante
   u&=u^*(λ)+η u₁+η² u₂+η³u₃+\cdots,
 \end{align}
 où \(η\) est un paramètre, non précisé pour le moment. Noter que, dans la
-représentation paramétrique de \(u\), \(u^*\) est évalué en \(λ\) et
-pas en \(λ₀\).
+représentation paramétrique de \(u\), \(u^*\) est évalué en \(λ\) et pas en
+\(λ₀\).
 
-Les coefficients \(λ ₖ\) et \(uₖ\) des
-développements~\eqref{eq:20211115075817} et \eqref{eq:20211115075835} sont
-identifiés en écrivant que l'énergie est stationnaire le long de la courbe
-d'équilibre, c'est-à-dire que le résidu
-\(ℰ_{,u}[u(η), λ(η)]\) est nul. Le développement limité du
-résidu est établi au voisinage de \(η=0\) dans
-l'annexe~\ref{sec:20211112182000}. En écrivant que tous ses termes s'annulent,
-on trouve successivement, pour tout \(\hat{u}∈ U\)
+Les coefficients \(λ ₖ\) et \(uₖ\) des développements~\eqref{eq:20211115075817}
+et \eqref{eq:20211115075835} sont identifiés en écrivant que l'énergie est
+stationnaire le long de la courbe d'équilibre, c'est-à-dire que le résidu
+\(ℰ_{,u}[u(η), λ(η)]\) est nul. Le développement limité du résidu est établi au
+voisinage de \(η=0\) dans l'annexe~\ref{sec:20211112182000}. En écrivant que
+tous ses termes s'annulent, on trouve successivement, pour tout \(\hat{u}∈ U\)
 \begin{gather}
   \label{eq:20211112182917}
   ℋ(u₁, \hat{u})=0,\\
   \label{eq:20211112183220}
-  𝒯(u₁, u₁, \hat{u})
-  +2λ₁\dot{ℋ}(u₁, \hat{u})
-  +2ℋ(u₂, \hat{u})=0,\\
+  𝒯(u₁, u₁, \hat{u})+2λ₁\dot{ℋ}(u₁, \hat{u})+2ℋ(u₂, \hat{u})=0,\\
   \begin{aligned}[b]
-    𝒬(u₁, u₁, u₁, \hat{u})
-    +6𝒯(u₁, u₂, \hat{u})+6ℋ(u₃, \hat{u})&\\
-    +3λ₁\bigl[\dot{𝒯}(u₁, u₁, \hat{u})
-    +2\dot{ℋ}(u₂, \hat{u})\bigr]
+    𝒬(u₁, u₁, u₁, \hat{u})+6𝒯(u₁, u₂, \hat{u})+6ℋ(u₃, \hat{u})&\\
+    +3λ₁\bigl[\dot{𝒯}(u₁, u₁, \hat{u})+2\dot{ℋ}(u₂, \hat{u})\bigr]
     +3λ₁²\ddot{ℋ}(u₁, \hat{u})&\\
     +6λ₂\dot{ℋ}(u₁, \hat{u})&=0.
   \end{aligned}
 \end{gather}
 
-On déduit de l'équation~\eqref{eq:20211112182917} que \(u₁∈ V\). On pose
-alors \(u₁=ξ₁^i vᵢ\). En prenant \(\hat{u}=vᵢ\),
-l'équation~\eqref{eq:20211112183220} s'écrit
+On déduit de l'équation~\eqref{eq:20211112182917} que \(u₁∈V\). On pose alors
+\(u₁=ξ₁^i vᵢ\). En prenant \(\hat{u}=vᵢ\), l'équation~\eqref{eq:20211112183220}
+s'écrit
 \begin{equation}
   𝒯_{ijk}ξ₁^jξ₁^k+2λ₁\dot{ℋ}_{ij}ξ₁^j=0.
 \end{equation}
 
-Pour le terme d'ordre 2, on introduit la décomposition~:
-\(u₂=ξ₂^ivᵢ+w₂\), où \(w₂∈ W\). On a alors
-\(ℋ(u₂, \hat{u})=ℋ(w₂, \hat{u})\) et
+Pour le terme d'ordre 2, on introduit la décomposition~: \(u₂=ξ₂^ivᵢ+w₂\), où
+\(w₂∈W\). On a alors \(ℋ(u₂, \hat{u})=ℋ(w₂, \hat{u})\) et
 l'équation~\eqref{eq:20211112183220} s'écrit
 \begin{equation}
   𝒯(u₁, u₁, \hat{u})+2λ₁\dot{ℋ}(u₁, \hat{u})
   +2ℋ(w₂, \hat{u})=0,
 \end{equation}
-pour tout \(\hat{u}∈ V\). En prenant la fonction test dans l'espace \(W\), on
-obtient le problème variationnel suivant~: trouver \(w₂∈ W\) tel
+pour tout \(\hat{u}∈V\). En prenant la fonction test dans l'espace \(W\), on
+obtient le problème variationnel suivant~: trouver \(w₂∈W\) tel
 que\pdfmargincomment{Conflit de notations}
 \begin{equation}
   \label{eq:20211210131623}
@@ -258,12 +223,12 @@ que\pdfmargincomment{Conflit de notations}
   +2λ₁ξ₁^i\dot{ℋ}(vᵢ, \hat{w})
   +2ℋ(w₂, \hat{w})=0,
 \end{equation}
-pour tout \(\hat{w}∈ W\). Soient \(wᵢ∈ W\) les solutions des problèmes
+pour tout \(\hat{w}∈W\). Soient \(wᵢ∈W\) les solutions des problèmes
 variationnels suivants
 \begin{equation}
   ℋ(wᵢ, \hat{w})+\dot{ℋ}(vᵢ, \hat{w})=0,
 \end{equation}
-pour tout \(\hat{w}∈ W\). La solution du problème~\eqref{eq:20211210131623}
+pour tout \(\hat{w}∈W\). La solution du problème~\eqref{eq:20211210131623}
 s'obtient par simple combinaison linéaire des \(wᵢ\) et \(w_{ij}\) introduits
 précédemment par le problème variationnel~\eqref{eq:20211221155859}, de sorte
 que
@@ -271,19 +236,17 @@ que
   w₂=ξ₁^iξ₁^jw_{ij}+λ₁ξ₁^i wᵢ.
 \end{equation}
 
-Le développement limité de la hessienne de l'énergie le long de la
-branche bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
+Le développement limité de la hessienne de l'énergie le long de la branche
+bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
 \begin{equation}
   \label{eq:20211115082025}
   \begin{aligned}[b]
     ℰ_{,uu}[u(η), λ(η)](\hat{u}, \hat{v})
-    ={}&ℋ^*(\hat{u}, \hat{v})
-    +η\bigl[𝒯^*(u₁, \hat{u}, \hat{v})
+    ={}&ℋ^*(\hat{u}, \hat{v})+η\bigl[𝒯^*(u₁, \hat{u}, \hat{v})
     +λ₁\dot{ℋ}^*(\hat{u}, \hat{v})\bigr]\\
     &+\tfrac12η²\bigl[𝒬^*(u₁, u₁, \hat{u}, \hat{v})
     +2λ₁\dot{𝒯}^*(u₁, \hat{u}, \hat{v})\\
-    &+λ₁²\ddot{ℋ}^*(\hat{u}, \hat{v})
-    +𝒯^*(u₂, \hat{u}, \hat{v})
+    &+λ₁²\ddot{ℋ}^*(\hat{u}, \hat{v})+𝒯^*(u₂, \hat{u}, \hat{v})
     +λ₂\dot{ℋ}^*(\hat{u}, \hat{v})\bigr]+o(η²).
   \end{aligned}
 \end{equation}
@@ -291,33 +254,26 @@ branche bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
 On peut d'ores et déjà remarquer que, sur la branche fondamentale
 (\(u₁=u₂=0\)), en prenant \(η=λ-λ^*\) (\(λ₁=1\))
 \begin{equation}
-  ℋ(\hat{u}, \hat{v})
-  =ℰ_{,uu}[u₀(λ), λ](\hat{u}, \hat{v})
-  =ℋ^*(\hat{u}, \hat{v})
-  +\bigl(λ-λ^*\bigr)\dot{ℋ}^*(\hat{u}, \hat{v})
-  +o(λ-λ^*).
+  ℋ(\hat{u}, \hat{v})=ℰ_{,uu}[u₀(λ), λ](\hat{u}, \hat{v})
+  =ℋ^*(\hat{u}, \hat{v})+\bigl(λ-λ^*\bigr)\dot{ℋ}^*(\hat{u}, \hat{v})+o(λ-λ^*).
 \end{equation}
 
-Dans ce qui suit, on supposera que \(\dot{ℋ}^*≠ 0\). Pour
-\(\hat{u}∈\kerℋ^*\), l'égalité précédente s'écrit
+Dans ce qui suit, on supposera que \(\dot{ℋ}^*≠0\). Pour \(\hat{u}∈\kerℋ^*\),
+l'égalité précédente s'écrit
 \begin{equation}
-  ℋ(\hat{u}, \hat{u})
-  =\bigl(λ-λ^*\bigr)\dot{ℋ}^*(\hat{u}, \hat{u})
-  +o(λ-λ^*).
+  ℋ(\hat{u}, \hat{u})=\bigl(λ-λ^*\bigr)\dot{ℋ}^*(\hat{u}, \hat{u})+o(λ-λ^*).
 \end{equation}
 
-Comme la branche fondamentale est stable pour \(λ<λ^*\), on doit
-avoir \(\dot{ℋ}^*(\hat{u}, \hat{u})<0\). La forme quadratique
-\(\dot{ℋ}^*\) est définie négative sur \(\kerℋ^*\).
-
+Comme la branche fondamentale est stable pour \(λ<λ^*\), on doit avoir
+\(\dot{ℋ}^*(\hat{u}, \hat{u})<0\). La forme quadratique \(\dot{ℋ}^*\) est
+définie négative sur \(\kerℋ^*\).
 
 Il faut alors distinguer deux cas. Si la branche trouvée est telle que
 \(λ₁≠0\), alors...
 
 Si \(λ₁=0\), alors on doit calculer \(λ₂\)
 \begin{equation}
-  𝒬^*(u₁, u₁, u₁, \hat{u})
-  +3𝒯^*(u₁, u₂, \hat{u})+ℋ^*(u₃, \hat{u})
+  𝒬^*(u₁, u₁, u₁, \hat{u})+3𝒯^*(u₁, u₂, \hat{u})+ℋ^*(u₃, \hat{u})
   +3λ₂\dot{ℋ}^*(u₁, \hat{u})=0.
 \end{equation}
 
@@ -328,46 +284,42 @@ Si \(λ₁=0\), alors on doit calculer \(λ₂\)
 Soit \(ℬ\) une forme bilinéaire symétrique, positive sur l'espace vectoriel
 \(V\). On définit son noyau \(\kerℬ\) de la façon suivante
 \begin{equation}
-  \kerℬ=\{u∈ V|ℬ(u, u)=0\}.
+  \kerℬ=\{u∈V|ℬ(u, u)=0\}.
 \end{equation}
 
 \begin{theorem}
-  Le noyau \(\kerℬ\) d'une forme bilinéaire, symétrique, positive
-  \(ℬ\) sur l'espace vectoriel \(V\) est un sous-espace vectoriel de
-  \(V\).
+  Le noyau \(\kerℬ\) d'une forme bilinéaire, symétrique, positive \(ℬ\) sur
+  l'espace vectoriel \(V\) est un sous-espace vectoriel de \(V\).
 \end{theorem}
 \begin{proof}
-  Soient \(u, v∈\kerℬ\), \(α∈ℝ\) et \(w=u+α
-  v\). Montrons que \(w∈\kerℬ\). Il suffit d'évaluer
-  \(ℬ(w, w)\)
+  Soient \(u, v∈\kerℬ\), \(α∈ℝ\) et \(w=u+α v\). Montrons que \(w∈\kerℬ\). Il
+  suffit d'évaluer \(ℬ(w, w)\)
   \begin{equation}
     ℬ(w, w)=ℬ(u+α v, u+α v)=ℬ(u, u)+2αℬ(u, v)+α²ℬ(v, v),
   \end{equation}
   où l'on a tenu compte de la symétrie de \(ℬ\) pour écrire que
-  \(ℬ(u, v)=ℬ(v, u)\). Comme \(u, v∈\kerℬ\), le
-  premier et le dernier terme sont nuls, soit
-  \(ℬ(w, w)=2αℬ(u, v)\). La forme bilinéaire étant
-  positive, cette grandeur est positive, \emph{quelle que soit la valeur de
-    \(α∈ℝ\)}. On en déduit donc que \(ℬ(u, v)=0\), puis
-  que \(ℬ(w, w)=0\).
+  \(ℬ(u, v)=ℬ(v, u)\). Comme \(u, v∈\kerℬ\), le premier et le dernier terme
+  sont nuls, soit \(ℬ(w, w)=2αℬ(u, v)\). La forme bilinéaire étant positive,
+  cette grandeur est positive, \emph{quelle que soit la valeur de \(α∈ℝ\)}. On
+  en déduit donc que \(ℬ(u, v)=0\), puis que \(ℬ(w, w)=0\).
 \end{proof}
 
-Soit \(u∈ V\). Alors
+Soit \(u∈V\). Alors
 \begin{equation}
-  u∈\kerℬ\quad\text{ssi}\quad\text{pour tout }v∈ V, ℬ(u, v)=0.
+  u∈\kerℬ\quad\text{ssi}\quad\text{pour tout }v∈V, ℬ(u, v)=0.
 \end{equation}
 \begin{proof}
-  Soient \(u∈\kerℬ\), \(v∈ V\) et \(α∈ℝ\). Comme
-  précédemment, on écrit que \(ℬ(w, w)≥0\), avec \(w=α u+v\)
+  Soient \(u∈\kerℬ\), \(v∈V\) et \(α∈ℝ\). Comme précédemment, on écrit que
+  \(ℬ(w, w)≥0\), avec \(w=α u+v\)
   \begin{equation}
     ℬ(w, w)=2αℬ(u, v)+ℬ(v, v)≥0,
   \end{equation}
-  où l'on a tenu compte de ce que \(ℬ(u, u)=0\). L'expression
-  précédente, affine en \(α\), a un signe constant. Le terme linéaire en
-  \(α\) est donc nul, soit \(ℬ(u, v)=0\).
+  où l'on a tenu compte de ce que \(ℬ(u, u)=0\). L'expression précédente,
+  affine en \(α\), a un signe constant. Le terme linéaire en \(α\) est donc
+  nul, soit \(ℬ(u, v)=0\).
 
-  Réciproquement, si \(ℬ(u, v)=0\) pour tout \(v∈ V\), alors
-  \(ℬ(u, u)=0\) (en prenant \(v=u\)).
+  Réciproquement, si \(ℬ(u, v)=0\) pour tout \(v∈V\), alors \(ℬ(u, u)=0\) (en
+  prenant \(v=u\)).
 \end{proof}
 
 \section{Développements limités le long d'une branche bifurquée du diagramme
@@ -375,9 +327,8 @@ Soit \(u∈ V\). Alors
 
 \subsection{Principe du calcul}
 
-On pose dans ce qui suit \(λ(η)=λ(η)-λ₀\) et
-\(U(η)=u(η)-u₀[λ(η)]\), de sorte que\pdfmargincomment{À
-  compléter}
+On pose dans ce qui suit \(λ(η)=λ(η)-λ₀\) et \(U(η)=u(η)-u₀[λ(η)]\), de sorte
+que\pdfmargincomment{À compléter}
 \begin{align}
   \label{eq:20211112155446}
   λ(η)&=ηλ₁+η²λ₂+η³λ₃+\cdots,\\
@@ -385,17 +336,15 @@ On pose dans ce qui suit \(λ(η)=λ(η)-λ₀\) et
   U(η)&=η u₁+η² u₂+η³u₃+\cdots.
 \end{align}
 
-On considère une quantité \(ℱ\), fonction de \(u\) et \(λ\)~:
-\(ℱ(u, λ)\). Cette fonctionnelle est évaluée le long de la
-branche bifurquée. En d'autres termes, on considère
+On considère une quantité \(ℱ\), fonction de \(u\) et \(λ\)~: \(ℱ(u,
+λ)\). Cette fonctionnelle est évaluée le long de la branche bifurquée. En
+d'autres termes, on considère
 \begin{equation}
-  f(η)=F\bigl(u₀[λ₀+λ(η)]+U(η),
-  λ₀+λ(η)\bigr).
+  f(η)=F\bigl(u₀[λ₀+λ(η)]+U(η), λ₀+λ(η)\bigr).
 \end{equation}
 
-On souhaite établir un développement limité de \(f\) au voisinage de
-\(η=0\), ce qui conduit à calculer les dérivées successives de \(f\) en
-\(η=0\), puisque
+On souhaite établir un développement limité de \(f\) au voisinage de \(η=0\),
+ce qui conduit à calculer les dérivées successives de \(f\) en \(η=0\), puisque
 \begin{equation}
   f(η)=f(0)+η f'(0)+\tfrac12η²f''(0)+\cdots
 \end{equation}
@@ -405,24 +354,21 @@ Pour calculer ces dérivées, il sera commode d'introduire la fonction auxiliair
 \begin{equation}
   F(η, λ)=ℱ[u₀(λ)+U(η), λ],
 \end{equation}
-dans laquelle les variables \(λ\) et \(η\) sont provisoirement
-considérées comme indépendantes. On a
+dans laquelle les variables \(λ\) et \(η\) sont provisoirement considérées
+comme indépendantes. On a
 \begin{equation}
   f(η)=F[η, λ₀+λ(η)],
 \end{equation}
 d'où l'on déduit successivement que
 \begin{equation}
   \label{eq:20211112162417}
-  f'(η)=∂_η F[η, λ₀+λ(η)]
-  +λ'(η)\,∂_λ F[η, λ₀+λ(η)],
+  f'(η)=∂_η F[η, λ₀+λ(η)]+λ'(η)\,∂_λ F[η, λ₀+λ(η)],
 \end{equation}
 \begin{equation}
   \begin{aligned}[b]
     \label{eq:20211112165810}
-    f''(η)={}&∂_{ηη}²F[η, λ₀+λ(η)]
-    +2λ'(η)\,∂_{ηλ}²F[η, λ₀+λ(η)]\\
-    &+λ''(η)\,∂_λ F[η, λ₀+λ(η)]
-    +λ'(η)²∂_{λλ}²F[η, λ₀+λ(η)]
+    f''(η)={}&∂_{ηη}²F[η, λ₀+λ(η)]+2λ'(η)\,∂_{ηλ}²F[η, λ₀+λ(η)]\\
+    &+λ''(η)\,∂_λ F[η, λ₀+λ(η)]+λ'(η)²∂_{λλ}²F[η, λ₀+λ(η)]
   \end{aligned}
 \end{equation}
 et
@@ -442,32 +388,28 @@ et
 En \(η=0\), les relations précédentes s'écrivent
 \begin{align}
   f'(0)={}&∂_η F+λ₁∂_λ F\\
-  f''(0)={}&∂_{ηη}²F+2λ₁∂_{ηλ}²F
-             +2λ₂∂_λ F+λ₁²∂_{λλ}²F
+  f''(0)={}&∂_{ηη}²F+2λ₁∂_{ηλ}²F+2λ₂∂_λ F+λ₁²∂_{λλ}²F
 \end{align}
 où \(F\) et ses dérivées sont évaluées en \((0, λ₀)\).
 
 \subsection{Développement limité du résidu}
 \label{sec:20211112182000}
 
-Soit \(f(η)=ℰ_{,u}(u, λ)(\hat{u})\) le \emph{résidu}
-(\(\hat{u}∈ V\) est arbitraire). Les équations permettant de déterminer les
-coefficients des développements~\eqref{eq:20211112155446} et
-\eqref{eq:20211112113028} sont obtenues en écrivant que \(f\) et ses dérivées
-sont nulles en \(η=0\). En considérant temporairement \(η\) et
-\(λ\) comme des variables indépendantes, on introduit
+Soit \(f(η)=ℰ_{,u}(u, λ)(\hat{u})\) le \emph{résidu} (\(\hat{u}∈V\) est
+arbitraire). Les équations permettant de déterminer les coefficients des
+développements~\eqref{eq:20211112155446} et \eqref{eq:20211112113028} sont
+obtenues en écrivant que \(f\) et ses dérivées sont nulles en \(η=0\). En
+considérant temporairement \(η\) et \(λ\) comme des variables indépendantes, on
+introduit
 \begin{equation}
   F(η, λ)=ℰ_{,u}[u₀(λ)+U(η), λ](\hat{u})
 \end{equation}
-et on doit exprimer la nullité de
-\(f(η)=F[η, λ^*+λ(η)]\) au voisinage de \(η=0\). En
-convenant dans ce qui suit que \(U\), \(λ\) et leurs dérivées sont
-implicitement évaluées en \(η\), on trouve tout d'abord
-avec
+et on doit exprimer la nullité de \(f(η)=F[η, λ^*+λ(η)]\) au voisinage de
+\(η=0\). En convenant dans ce qui suit que \(U\), \(λ\) et leurs dérivées sont
+implicitement évaluées en \(η\), on trouve tout d'abord avec
 \begin{equation}
   \label{eq:20211112164354}
-  ∂_η F(η, λ)
-  =ℰ_{,uu}[u₀(λ)+U, λ](U', \hat{u}),
+  ∂_η F(η, λ)=ℰ_{,uu}[u₀(λ)+U, λ](U', \hat{u}),
 \end{equation}
 soit, en \(η=0\)
 \begin{equation}
@@ -478,9 +420,7 @@ soit, en \(η=0\)
 Par ailleurs, puisque \(λ\mapsto u₀(λ)\) est une courbe d'équilibre, on a
 \begin{equation}
   \label{eq:20211112164240}
-  F(0, λ)=ℰ_{,u}[u₀(λ), λ]=0
-  \quad\text{donc}\quad
-  \frac{∂^kF}{∂λ^k}(0, λ)=0.
+  F(0, λ)=ℰ_{,u}[u₀(λ), λ]=0\quad\text{donc}\quad\frac{∂^kF}{∂λ^k}(0, λ)=0.
 \end{equation}
 
 On déduit de ce qui précède que
@@ -489,7 +429,8 @@ On déduit de ce qui précède que
   f'(0)=ℋ(u₁, \hat{u}).
 \end{equation}
 
-En dérivant la relation~\eqref{eq:20211112162417}, on obtient maintenant l'expression de la dérivée seconde de \(f\)
+En dérivant la relation~\eqref{eq:20211112162417}, on obtient maintenant
+l'expression de la dérivée seconde de \(f\)
 
 La relation~\eqref{eq:20211112164240} montre que les deux derniers termes
 s'annulent en \(η=0\). Par ailleurs, en dérivant
@@ -497,20 +438,18 @@ l'expression~\eqref{eq:20211112164354} par rapport à \(η\)
 \begin{equation}
   \label{eq:20211112172446}
   \begin{aligned}[b]
-    ∂_{ηη}²F(η, λ)={}&
-    ℰ_{,uuu}[u₀(λ)+U, λ](U', U', \hat{u})\\
+    ∂_{ηη}²F(η, λ)={}&ℰ_{,uuu}[u₀(λ)+U, λ](U', U', \hat{u})\\
     &+ℰ_{,uu}[u₀(λ)+U, λ](U'', \hat{u}),
   \end{aligned}
 \end{equation}
 soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211112165830}
-  ∂_{ηη}²F(0, λ)=𝒯(u₁, u₁, \hat{u})
-  +2ℋ(u₂, \hat{u}).
+  ∂_{ηη}²F(0, λ)=𝒯(u₁, u₁, \hat{u})+2ℋ(u₂, \hat{u}).
 \end{equation}
 
-Par ailleurs, \(∂_{ηλ}²F(0, λ)\) s'obtient par simple
-dérivation de la relation~\eqref{eq:20211112165323}
+Par ailleurs, \(∂_{ηλ}²F(0, λ)\) s'obtient par simple dérivation de la
+relation~\eqref{eq:20211112165323}
 \begin{equation}
   \label{eq:20211112165843}
   ∂_{ηλ}²F(0, λ)=\dot{ℋ}(u₁, \hat{u}).
@@ -521,9 +460,7 @@ En rassemblant les expressions~\eqref{eq:20211112165810},
 de la dérivée seconde de \(f\) en 0
 \begin{equation}
   \label{eq:20211112182333}
-  f''(0)=𝒯(u₁, u₁, \hat{u})
-  +2λ₁\dot{ℋ}(u₁, \hat{u})
-  +2ℋ(u₂, \hat{u}).
+  f''(0)=𝒯(u₁, u₁, \hat{u})+2λ₁\dot{ℋ}(u₁, \hat{u})+2ℋ(u₂, \hat{u}).
 \end{equation}
 
 On obtient finalement l'expression de \(f'''(η)\) en dérivant la
@@ -531,15 +468,13 @@ relation~\eqref{eq:20211112165810}
 
 La relation~\eqref{eq:20211112164240} montre une nouvelle fois que les trois
 derniers termes de l'expression ci-dessus s'annulent en \(η=0\). Par simple
-dérivation par rapport à \(λ\) des expressions~\eqref{eq:20211112165830}
-et \eqref{eq:20211112165843}, on trouve par ailleurs
+dérivation par rapport à \(λ\) des expressions~\eqref{eq:20211112165830} et
+\eqref{eq:20211112165843}, on trouve par ailleurs
 \begin{equation}
   \label{eq:20211112173247}
-  ∂_{ηηλ}³F(0, λ)
-  =\dot{𝒯}(u₁, u₁, \hat{u})+2\dot{ℋ}(u₂, \hat{u})
+  ∂_{ηηλ}³F(0, λ)=\dot{𝒯}(u₁, u₁, \hat{u})+2\dot{ℋ}(u₂, \hat{u})
   \quad\text{et}\quad
-  ∂_{ηλλ}³F(0, λ)
-  =\ddot{ℋ}(u₁, \hat{u}).
+  ∂_{ηλλ}³F(0, λ)=\ddot{ℋ}(u₁, \hat{u}).
 \end{equation}
 
 Finalement, en dérivant l'expression~\eqref{eq:20211112172446} par rapport à
@@ -555,10 +490,7 @@ Finalement, en dérivant l'expression~\eqref{eq:20211112172446} par rapport à
 soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211112173300}
-  ∂_{ηηη}³F(0, λ)=
-  𝒬(u₁, u₁, u₁, \hat{u})
-  +6𝒯(u₁, u₂, \hat{u})
-  +6ℋ(u₃, \hat{u}).
+  ∂_{ηηη}³F(0, λ)=𝒬(u₁, u₁, u₁, \hat{u})+6𝒯(u₁, u₂, \hat{u})+6ℋ(u₃, \hat{u}).
 \end{equation}
 
 En regroupant les relations~\eqref{eq:20211112173223},
@@ -567,10 +499,8 @@ l'expression de la dérivée troisième de \(f\) en \(η=0\)
 \begin{equation}
 \label{eq:20211112182402}
   \begin{aligned}[b]
-    f'''(0)={}&𝒬(u₁, u₁, u₁, \hat{u})
-    +6𝒯(u₁, u₂, \hat{u})+6ℋ(u₃, \hat{u})\\
-    &+3λ₁\bigl[\dot{𝒯}(u₁, u₁, \hat{u})
-    +2\dot{ℋ}(u₂, \hat{u})\bigr]
+    f'''(0)={}&𝒬(u₁, u₁, u₁, \hat{u})+6𝒯(u₁, u₂, \hat{u})+6ℋ(u₃, \hat{u})\\
+    &+3λ₁\bigl[\dot{𝒯}(u₁, u₁, \hat{u})+2\dot{ℋ}(u₂, \hat{u})\bigr]
     +3λ₁²\ddot{ℋ}(u₁, \hat{u})\\
     &+6λ₂\dot{ℋ}(u₁, \hat{u}).
   \end{aligned}
@@ -580,16 +510,16 @@ l'expression de la dérivée troisième de \(f\) en \(η=0\)
 \label{sec:20211115081016}
 
 Le principe du calcul est le même que dans
-l'annexe~\ref{sec:20211112182000}. Pour \(\hat{u}, \hat{v}∈ V\), on introduit
-\(h(η)=ℰ_{,uu}(u, λ)(\hat{u}, \hat{v})\), où \(λ\) et
-\(u\) sont données en fonction de \(η\) par les
-expressions~\eqref{eq:20211115075817} et \eqref{eq:20211115075835}.
+l'annexe~\ref{sec:20211112182000}. Pour \(\hat{u}, \hat{v}∈V\), on introduit
+\(h(η)=ℰ_{,uu}(u, λ)(\hat{u}, \hat{v})\), où \(λ\) et \(u\) sont données en
+fonction de \(η\) par les expressions~\eqref{eq:20211115075817} et
+\eqref{eq:20211115075835}.
 
 La fonction \(h(η)\) est la hessienne de l'énergie le long d'une branche du
 diagramme d'équilibre. Elle permet d'étudier la stabilité de l'équilibre. On
 établit un développement limité de \(h\) en calculant ses dérivées successives
-en \(η=0\). \`A cet effet, considérant une nouvelle fois \(η\) et
-\(λ\) comme des variables indépendantes, on introduit la fonction
+en \(η=0\). \`A cet effet, considérant une nouvelle fois \(η\) et \(λ\) comme
+des variables indépendantes, on introduit la fonction
 \begin{equation}
   H(η, λ)=ℰ_{,uu}[u₀(λ)+U(η), λ],
 \end{equation}
@@ -603,8 +533,7 @@ On observe tout d'abord que \(h(0)=ℋ^*\). Par ailleurs, en dérivant
 l'expression~\eqref{eq:20211114104326} par rapport à \(η\)
 \begin{equation}
   \label{eq:20211114110210}
-  h'(η)=∂_η H(η, λ^*+λ)
-  +λ'∂_λ H(η, λ^*+λ),
+  h'(η)=∂_η H(η, λ^*+λ)+λ'∂_λ H(η, λ^*+λ),
 \end{equation}
 avec
 \begin{equation}
@@ -620,17 +549,14 @@ soit, en \(η=0\)
 Par ailleurs
 \begin{equation}
   \label{eq:20211114110245}
-  H(0, λ)=ℋ(\hat{u}, \hat{v})
-  \quad\text{donc}\quad
-  ∂_λ H(0, λ)=\dot{ℋ}(\hat{u}, \hat{v}).
+  H(0, λ)=ℋ(\hat{u}, \hat{v})\quad\text{donc}\quad∂_λ H(0, λ)=\dot{ℋ}(\hat{u}, \hat{v}).
 \end{equation}
 
 En regroupant les expressions~\eqref{eq:20211114110210},
 \eqref{eq:20211114110230} et \eqref{eq:20211114110245}, on trouve la dérivée de
 \(h\) en 0
 \begin{equation}
-  h'(0)=𝒯^*(u₁, \hat{u}, \hat{v})
-  +λ₁\dot{ℋ}^*(\hat{u}, \hat{v}).
+  h'(0)=𝒯^*(u₁, \hat{u}, \hat{v})+λ₁\dot{ℋ}^*(\hat{u}, \hat{v}).
 \end{equation}
 
 La dérivation de l'expression~\eqref{eq:20211114110210} par rapport à \(η\)
@@ -638,25 +564,21 @@ donne maintenant
 \begin{equation}
   \label{eq:20211114111822}
   \begin{aligned}[b]
-    h''(η)={}&∂_{ηη}² H(η, λ^*+λ)
-    +2λ'∂_{ηλ}² H(η, λ^*+λ)\\
-    &+λ''∂_{λ}H(η, λ^*+λ)
-    +λ'^2∂_{λλ}²H(η, λ^*+λ).
+    h''(η)={}&∂_{ηη}² H(η, λ^*+λ)+2λ'∂_{ηλ}² H(η, λ^*+λ)\\
+    &+λ''∂_{λ}H(η, λ^*+λ)+λ'^2∂_{λλ}²H(η, λ^*+λ).
   \end{aligned}
 \end{equation}
 
 L'expression de \(∂_{ηη}²H\) est obtenue en
 dérivant~\eqref{eq:20211114110852}
 \begin{equation}
-  ∂_{ηη}²H(η, λ)
-  =ℰ_{,uuuu}(u₀+U, λ)(U', U', \hat{u}, \hat{v})
+  ∂_{ηη}²H(η, λ)=ℰ_{,uuuu}(u₀+U, λ)(U', U', \hat{u}, \hat{v})
   +ℰ_{,uuu}(U'', \hat{u}, \hat{v}),
 \end{equation}
 soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211114111716}
-  ∂_{ηη}²H(0, λ)=𝒬(u₁, u₁, \hat{u}, \hat{v})
-  +2𝒯(u₂, \hat{u}, \hat{v}).
+  ∂_{ηη}²H(0, λ)=𝒬(u₁, u₁, \hat{u}, \hat{v})+2𝒯(u₂, \hat{u}, \hat{v}).
 \end{equation}
 
 Ensuite, en dérivant~\eqref{eq:20211114110230} et \eqref{eq:20211114110245} par
@@ -673,31 +595,25 @@ et \eqref{eq:20211114111740} dans \eqref{eq:20211114111822}, on obtient
 l'expression de la dérivée seconde de h en \(η=0\)
 \begin{equation}
   \begin{aligned}[b]
-    h''(0)={}&𝒬^*(u₁, u₁, \hat{u}, \hat{v})
-    +2λ₁\dot{𝒯}^*(u₁, \hat{u}, \hat{v})
+    h''(0)={}&𝒬^*(u₁, u₁, \hat{u}, \hat{v})+2λ₁\dot{𝒯}^*(u₁, \hat{u}, \hat{v})
     +λ₁²\ddot{ℋ}^*(\hat{u}, \hat{v})\\
-    &+2𝒯^*(u₂, \hat{u}, \hat{v})
-    +2λ₂\dot{ℋ}^*(\hat{u}, \hat{v}).
+    &+2𝒯^*(u₂, \hat{u}, \hat{v})+2λ₂\dot{ℋ}^*(\hat{u}, \hat{v}).
   \end{aligned}
 \end{equation}
 
 \subsection{Développement limité des valeurs propres et vecteurs propres de la Hessienne}
 
-On cherche les vecteurs propres \(v∈ V\) et valeurs propres
-\(α∈ℝ\) de la Hessienne
+On cherche les vecteurs propres \(v∈V\) et valeurs propres \(α∈ℝ\) de la
+Hessienne
 \begin{equation}
   \label{eq:20211115082122}
-  ℰ_{,uu}[u(η), λ(η)](v, \hat{u})
-  =α〈 v, \hat{u}〉
-  \quad\text{pour tout}\quad\hat{u}∈ V.
+  ℰ_{,uu}[u(η), λ(η)](v, \hat{u})=α〈v, \hat{u}〉\quad\text{pour tout}\quad\hat{u}∈V.
 \end{equation}
 
 On cherche les développements limités à l'ordre 1 en \(η\) de \(v\) et \(α\)
 \begin{equation}
   \label{eq:20211115082037}
-  v = v₀+η v₁+o(η)
-  \quad\text{et}\quad
-  α=α₀+ηα₁+o(η)
+  v = v₀+η v₁+o(η)\quad\text{et}\quadα=α₀+ηα₁+o(η)
 \end{equation}
 
 Les développements limités~\eqref{eq:20211115082025} et
@@ -706,49 +622,37 @@ problème~\eqref{eq:20211115082122}
 \begin{equation}
   \begin{aligned}[b]
     ℰ_{,uu}[u(η), λ(η)](v, \hat{w})={}
-    &ℋ^*(v₀, \hat{w})
-    +η\bigl[𝒯^*(u₁, v₀, \hat{w})
-    +λ₁\dot{ℋ}^*(v₀, \hat{w})\\
+    &ℋ^*(v₀, \hat{w})+η\bigl[𝒯^*(u₁, v₀, \hat{w})+λ₁\dot{ℋ}^*(v₀, \hat{w})\\
     &+ℋ^*(v₁, \hat{w})\bigr]+o(η)
   \end{aligned}
 \end{equation}
 
 \begin{equation}
-  α〈 v, \hat{w}〉=α₀〈 v₀, \hat{w}〉
-  +η\bigl(α₁〈 v₀, \hat{w}〉+α₀〈 v₁, \hat{w}〉\bigr)
-  +o(η).
+  α〈 v, \hat{w}〉=α₀〈v₀, \hat{w}〉+η\bigl(α₁〈 v₀, \hat{w}〉+α₀〈 v₁, \hat{w}〉\bigr)+o(η).
 \end{equation}
 
 On obtient le problème variationnel d'ordre 0
 \begin{equation}
-  ℋ^*(v₀, \hat{w})=α₀〈 v₀, \hat{w}〉
-  \quad\text{pour tout}\quad\hat{w}∈ V,
+  ℋ^*(v₀, \hat{w})=α₀〈v₀, \hat{w}〉\quad\text{pour tout}\quad\hat{w}∈V,
 \end{equation}
-qui montre que \(v₀\) est le vecteur propre de \(ℋ^*\) associé à
-la valeur propre \(α₀\). Si \(α₀≠ 0\), \(ℋ^*\) étant
-positive par hypothèse, on a nécessairement \(α₀>0\), et la valeur propre
-de la hessienne est positive.
+qui montre que \(v₀\) est le vecteur propre de \(ℋ^*\) associé à la valeur
+propre \(α₀\). Si \(α₀≠ 0\), \(ℋ^*\) étant positive par hypothèse, on a
+nécessairement \(α₀>0\), et la valeur propre de la hessienne est positive.
 
-On considère maintenant le cas où \(α₀\), c'est-à-dire que
-\(v₀∈\kerℋ^*\). En prenant \(\hat{w}∈\kerℋ^*\), on
-obtient alors le problème variationnel d'ordre 1
+On considère maintenant le cas où \(α₀\), c'est-à-dire que \(v₀∈\kerℋ^*\). En
+prenant \(\hat{w}∈\kerℋ^*\), on obtient alors le problème variationnel d'ordre
+1
 \begin{equation}
-  𝒯^*(u₁, v₀, \hat{w})
-  +λ₁\dot{ℋ}^*(v₀, \hat{w})
-  =α₁〈v₀, \hat{w}〉
-  \quad\text{pour tout}\quad
-  \hat{w}∈\kerℋ^*.
+  𝒯^*(u₁, v₀, \hat{w})+λ₁\dot{ℋ}^*(v₀, \hat{w})=α₁〈v₀, \hat{w}〉
+  \quad\text{pour tout}\quad\hat{w}∈\kerℋ^*.
 \end{equation}
 
-En posant \(u₁=ξᵢaᵢ\) et \(v₀=χ ⱼ aⱼ\), on obtient l'équation
+En posant \(u₁=ξᵢaᵢ\) et \(v₀=χⱼaⱼ\), on obtient l'équation
 \begin{equation}
-  \bigl(𝒯_{ijk}^*ξₖ+λ₁\dot{ℋ}_{ij}^*\bigr)χ ⱼ
-  =α₁χ ᵢ,
+  \bigl(𝒯_{ijk}^*ξₖ+λ₁\dot{ℋ}_{ij}^*\bigr)χⱼ=α₁χᵢ,
 \end{equation}
 qui est un problème aux valeurs propres pour la matrice symétrique
-\((𝒯_{ijk}^*ξₖ+λ₁\dot{ℋ}_{ij}^*)_{1≤i,
-  j≤m}\)
-
+\((𝒯_{ijk}^*ξₖ+λ₁\dot{ℋ}_{ij}^*)_{1≤i, j≤m}\)
 
 % \printbibliography
 \end{document}

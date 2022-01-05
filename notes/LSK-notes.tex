@@ -89,17 +89,17 @@ le moment). On introduit le sous-espace supplémentaire orthogonal \(W\) de
 \end{equation}
 
 Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
-\(u₀+\xi v+\eta w\) voisin du point d'équilibre \(u₀\), avec
-\(\xi, \eta\in\reals\) \guillemotleft{}petits\guillemotright{}, \(v\in V\) and
-\(w\in W\). On obtient alors, à l'ordre 4 en \(\xi\) et \(\eta\)
+\(u₀+ξ v+\eta w\) voisin du point d'équilibre \(u₀\), avec
+\(ξ, \eta\in\reals\) \guillemotleft{}petits\guillemotright{}, \(v\in V\) and
+\(w\in W\). On obtient alors, à l'ordre 4 en \(ξ\) et \(\eta\)
 \begin{equation}
   \begin{aligned}[b]
     \Delta\mathcal E ={}&
-    \mathcal E(u₀+\xi v+\eta w)-\mathcal E(u₀)\\
-    ={}&\tfrac12\mathcal E_{,uu}(u₀;\xi v+\eta w, \xi v+\eta w)
-    +\tfrac16\mathcal E_{,uuu}(u₀;\xi v+\eta w, \xi v+\eta w, \xi v+\eta w)\\
-    &+\tfrac1{24}\mathcal E_{,uuuu}(u₀;\xi v+\eta w, \xi v+\eta w, \xi v+\eta w,
-    \xi v+\eta w)+\LandauO\bigl(\bigl(\xi^2+\eta^2\bigr)^2\bigr),
+    \mathcal E(u₀+ξ v+\eta w)-\mathcal E(u₀)\\
+    ={}&\tfrac12\mathcal E_{,uu}(u₀;ξ v+\eta w, ξ v+\eta w)
+    +\tfrac16\mathcal E_{,uuu}(u₀;ξ v+\eta w, ξ v+\eta w, ξ v+\eta w)\\
+    &+\tfrac1{24}\mathcal E_{,uuuu}(u₀;ξ v+\eta w, ξ v+\eta w, ξ v+\eta w,
+    ξ v+\eta w)+\LandauO\bigl(\bigl(ξ^2+\eta^2\bigr)^2\bigr),
   \end{aligned}
 \end{equation}
 où le terme linéaire a été omis puisque \(u\) est un point critique de
@@ -110,23 +110,23 @@ différentielles successives de l'énergie \(\mathcal E\), ainsi que du fait que
   \begin{aligned}[b]
     \Delta\mathcal E
     ={}&\tfrac12\eta^2\mathcal E_{,uu}(w, w)
-    +\tfrac16\xi^3\mathcal E_{,uuu}(v, v, v)
-    +\tfrac12\xi^2\eta\mathcal E_{,uuu}(v, v, w)\\
-    &+\tfrac12\xi\eta^2\mathcal E_{,uuu}(v, w, w)
+    +\tfrac16ξ^3\mathcal E_{,uuu}(v, v, v)
+    +\tfrac12ξ^2\eta\mathcal E_{,uuu}(v, v, w)\\
+    &+\tfrac12ξ\eta^2\mathcal E_{,uuu}(v, w, w)
     +\tfrac16\eta^3\mathcal E_{,uuu}(w, w, w)\\
-    &+\tfrac1{24}\xi^4\mathcal E_{,uuuu}(v, v, v, v)
-    +\tfrac16\xi^3\mathcal E_{,uuuu}(v, v, v, w)\\
-    &+\tfrac14\xi^2\eta^2\mathcal E_{,uuuu}(v, v, w, w)
-    +\tfrac16\xi\eta^3\mathcal E_{,uuuu}(v, w, w, w)\\
+    &+\tfrac1{24}ξ^4\mathcal E_{,uuuu}(v, v, v, v)
+    +\tfrac16ξ^3\mathcal E_{,uuuu}(v, v, v, w)\\
+    &+\tfrac14ξ^2\eta^2\mathcal E_{,uuuu}(v, v, w, w)
+    +\tfrac16ξ\eta^3\mathcal E_{,uuuu}(v, w, w, w)\\
     &+\tfrac1{24}\eta^4\mathcal E_{,uuuu}(w, w, w, w)
-    +\LandauO\bigl(\bigl(\xi^2+\eta^2\bigr)^2\bigr),
+    +\LandauO\bigl(\bigl(ξ^2+\eta^2\bigr)^2\bigr),
   \end{aligned}
 \end{equation}
 où l'on convient que toutes les différentielles de \(\mathcal E\) sont évaluées
 au point d'équilibre \(u₀\).
 
 Pour que l'équilibre soit stable, il faut que expression soit positive ou nulle
-pour tous \(\xi\) et \(\eta\) suffisamment petits. En prenant tout d'abord
+pour tous \(ξ\) et \(\eta\) suffisamment petits. En prenant tout d'abord
 \(\eta=0\), on obtient les conditions nécessaires
 \begin{equation}
   \label{eq:20211108164416}
@@ -141,11 +141,11 @@ En d'autres termes, s'il existe \(v\in V\) tel que
 \(\mathcal E_{,uuuu}(v, v, v, v)<0\), alors l'équilibre est
 \emph{instable}. Les conditions précédentes ne sont pas suffisantes pour
 assurer la stabilité. En effet, supposant ces conditions remplies, on prend
-maintenant \(\eta=\xi^2\)
+maintenant \(\eta=ξ^2\)
 \begin{equation}
   \Delta\mathcal E
-  =\tfrac12\xi^4\bigl[\mathcal E_{,uu}(w, w)+\mathcal E_{,uuu}(v, v, w)
-  +\tfrac1{12}\mathcal E_{,uuuu}(v, v, v, v)\bigr]+o(\xi^4)
+  =\tfrac12ξ^4\bigl[\mathcal E_{,uu}(w, w)+\mathcal E_{,uuu}(v, v, w)
+  +\tfrac1{12}\mathcal E_{,uuuu}(v, v, v, v)\bigr]+o(ξ^4)
 \end{equation}
 et on obtient la condition nécessaire supplémentaire
 \begin{equation}
@@ -171,15 +171,15 @@ Soit \(w_{ij}\in W\) l'unique solution du problème variationnel suivant
   \quad\text{pour tout}\quad\hat{w}\in W.
 \end{equation}
 
-Alors, pour \(v=\xi^i v_i\), la solution du problème
-variationnel~\eqref{eq:20211109145224} est \(w=\xi^i\xi^jw_{ij}\). Pour cette
+Alors, pour \(v=ξ^i v_i\), la solution du problème
+variationnel~\eqref{eq:20211109145224} est \(w=ξ^iξ^jw_{ij}\). Pour cette
 valeur de \(v\), la condition~\eqref{eq:20211109145356} s'écrit
 \begin{equation}
   \bigl[\tfrac1{12}\mathcal E_{,uuuu}(v_i, v_j, v_k, v_l)
   -\mathcal E_{,uu}(w_{ij}, w_{kl})\bigr]
-  \xi^i\xi^j\xi^k\xi^l\geq 0,
+  ξ^iξ^jξ^kξ^l\geq 0,
 \end{equation}
-pour tous \(\xi_i, \xi_j, \xi_k, \xi_l\in\reals\). On peut montrer que
+pour tous \(ξ_i, ξ_j, ξ_k, ξ_l\in\reals\). On peut montrer que
 l'inégalité stricte est une condition \emph{suffisante} de stabilité.
 
 \section{Bifurcations}
@@ -256,14 +256,14 @@ on trouve successivement, pour tout \(\hat{u}\in U\)
 \end{gather}
 
 On déduit de l'équation~\eqref{eq:20211112182917} que \(u_1\in V\). On pose
-alors \(u_1=\xi_1^i v_i\). En prenant \(\hat{u}=v_i\),
+alors \(u_1=ξ_1^i v_i\). En prenant \(\hat{u}=v_i\),
 l'équation~\eqref{eq:20211112183220} s'écrit
 \begin{equation}
-  \mathcal T_{ijk}\xi_1^j\xi_1^k+2\lambda_1\dot{\mathcal H}_{ij}\xi_1^j=0.
+  \mathcal T_{ijk}ξ_1^jξ_1^k+2\lambda_1\dot{\mathcal H}_{ij}ξ_1^j=0.
 \end{equation}
 
 Pour le terme d'ordre 2, on introduit la décomposition~:
-\(u_2=\xi_2^iv_i+w_2\), où \(w_2\in W\). On a alors
+\(u_2=ξ_2^iv_i+w_2\), où \(w_2\in W\). On a alors
 \(\mathcal H(u_2, \hat{u})=\mathcal H(w_2, \hat{u})\) et
 l'équation~\eqref{eq:20211112183220} s'écrit
 \begin{equation}
@@ -275,8 +275,8 @@ obtient le problème variationnel suivant~: trouver \(w_2\in W\) tel
 que\pdfmargincomment{Conflit de notations}
 \begin{equation}
   \label{eq:20211210131623}
-  \xi_1^i\xi_1^j\mathcal T(v_i, v_j, \hat{w})
-  +2\lambda_1\xi_1^i\dot{\mathcal H}(v_i, \hat{w})
+  ξ_1^iξ_1^j\mathcal T(v_i, v_j, \hat{w})
+  +2\lambda_1ξ_1^i\dot{\mathcal H}(v_i, \hat{w})
   +2\mathcal H(w_2, \hat{w})=0,
 \end{equation}
 pour tout \(\hat{w}\in W\). Soient \(w_i\in W\) les solutions des problèmes
@@ -289,7 +289,7 @@ s'obtient par simple combinaison linéaire des \(w_i\) et \(w_{ij}\) introduits
 précédemment par le problème variationnel~\eqref{eq:20211221155859}, de sorte
 que
 \begin{equation}
-  w_2=\xi_1^i\xi_1^jw_{ij}+\lambda_1\xi_1^i w_i.
+  w_2=ξ_1^iξ_1^jw_{ij}+\lambda_1ξ_1^i w_i.
 \end{equation}
 
 Le développement limité de la hessienne de l'énergie le long de la
@@ -761,13 +761,13 @@ obtient alors le problème variationnel d'ordre 1
   \hat{w}\in\ker\mathcal H^\ast.
 \end{equation}
 
-En posant \(u_1=\xi_ia_i\) et \(v_0=\chi_j a_j\), on obtient l'équation
+En posant \(u_1=ξ_ia_i\) et \(v_0=\chi_j a_j\), on obtient l'équation
 \begin{equation}
-  \bigl(\mathcal T_{ijk}^\ast\xi_k+\lambda_1\dot{\mathcal H}_{ij}^\ast\bigr)\chi_j
+  \bigl(\mathcal T_{ijk}^\astξ_k+\lambda_1\dot{\mathcal H}_{ij}^\ast\bigr)\chi_j
   =\alpha_1\chi_i,
 \end{equation}
 qui est un problème aux valeurs propres pour la matrice symétrique
-\((\mathcal T_{ijk}^\ast\xi_k+\lambda_1\dot{\mathcal H}_{ij}^\ast)_{1\leq i,
+\((\mathcal T_{ijk}^\astξ_k+\lambda_1\dot{\mathcal H}_{ij}^\ast)_{1\leq i,
   j\leq m}\)
 
 

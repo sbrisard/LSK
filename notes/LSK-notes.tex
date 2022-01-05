@@ -344,49 +344,49 @@ Si \(λ₁=0\), alors on doit calculer \(λ₂\)
 
 \section{Propriétés des formes bilinéaires symétriques, positives}
 
-Soit \(\mathcal B\) une forme bilinéaire symétrique, positive sur l'espace vectoriel
-\(V\). On définit son noyau \(\ker\mathcal B\) de la façon suivante
+Soit \(ℬ\) une forme bilinéaire symétrique, positive sur l'espace vectoriel
+\(V\). On définit son noyau \(\kerℬ\) de la façon suivante
 \begin{equation}
-  \ker\mathcal B=\{u∈ V|\mathcal B(u, u)=0\}.
+  \kerℬ=\{u∈ V|ℬ(u, u)=0\}.
 \end{equation}
 
 \begin{theorem}
-  Le noyau \(\ker\mathcal B\) d'une forme bilinéaire, symétrique, positive
-  \(\mathcal B\) sur l'espace vectoriel \(V\) est un sous-espace vectoriel de
+  Le noyau \(\kerℬ\) d'une forme bilinéaire, symétrique, positive
+  \(ℬ\) sur l'espace vectoriel \(V\) est un sous-espace vectoriel de
   \(V\).
 \end{theorem}
 \begin{proof}
-  Soient \(u, v∈\ker\mathcal B\), \(\alpha∈ℝ\) et \(w=u+\alpha
-  v\). Montrons que \(w∈\ker\mathcal B\). Il suffit d'évaluer
-  \(\mathcal B(w, w)\)
+  Soient \(u, v∈\kerℬ\), \(\alpha∈ℝ\) et \(w=u+\alpha
+  v\). Montrons que \(w∈\kerℬ\). Il suffit d'évaluer
+  \(ℬ(w, w)\)
   \begin{equation}
-    \mathcal B(w, w)=\mathcal B(u+\alpha v, u+\alpha v)=\mathcal B(u, u)+2\alpha\mathcal B(u, v)+\alpha²\mathcal B(v, v),
+    ℬ(w, w)=ℬ(u+\alpha v, u+\alpha v)=ℬ(u, u)+2\alphaℬ(u, v)+\alpha²ℬ(v, v),
   \end{equation}
-  où l'on a tenu compte de la symétrie de \(\mathcal B\) pour écrire que
-  \(\mathcal B(u, v)=\mathcal B(v, u)\). Comme \(u, v∈\ker\mathcal B\), le
+  où l'on a tenu compte de la symétrie de \(ℬ\) pour écrire que
+  \(ℬ(u, v)=ℬ(v, u)\). Comme \(u, v∈\kerℬ\), le
   premier et le dernier terme sont nuls, soit
-  \(\mathcal B(w, w)=2\alpha\mathcal B(u, v)\). La forme bilinéaire étant
+  \(ℬ(w, w)=2\alphaℬ(u, v)\). La forme bilinéaire étant
   positive, cette grandeur est positive, \emph{quelle que soit la valeur de
-    \(\alpha∈ℝ\)}. On en déduit donc que \(\mathcal B(u, v)=0\), puis
-  que \(\mathcal B(w, w)=0\).
+    \(\alpha∈ℝ\)}. On en déduit donc que \(ℬ(u, v)=0\), puis
+  que \(ℬ(w, w)=0\).
 \end{proof}
 
 Soit \(u∈ V\). Alors
 \begin{equation}
-  u∈\ker\mathcal B\quad\text{ssi}\quad\text{pour tout }v∈ V, \mathcal B(u, v)=0.
+  u∈\kerℬ\quad\text{ssi}\quad\text{pour tout }v∈ V, ℬ(u, v)=0.
 \end{equation}
 \begin{proof}
-  Soient \(u∈\ker\mathcal B\), \(v∈ V\) et \(\alpha∈ℝ\). Comme
-  précédemment, on écrit que \(\mathcal B(w, w)≥0\), avec \(w=\alpha u+v\)
+  Soient \(u∈\kerℬ\), \(v∈ V\) et \(\alpha∈ℝ\). Comme
+  précédemment, on écrit que \(ℬ(w, w)≥0\), avec \(w=\alpha u+v\)
   \begin{equation}
-    \mathcal B(w, w)=2\alpha\mathcal B(u, v)+\mathcal B(v, v)≥0,
+    ℬ(w, w)=2\alphaℬ(u, v)+ℬ(v, v)≥0,
   \end{equation}
-  où l'on a tenu compte de ce que \(\mathcal B(u, u)=0\). L'expression
+  où l'on a tenu compte de ce que \(ℬ(u, u)=0\). L'expression
   précédente, affine en \(\alpha\), a un signe constant. Le terme linéaire en
-  \(\alpha\) est donc nul, soit \(\mathcal B(u, v)=0\).
+  \(\alpha\) est donc nul, soit \(ℬ(u, v)=0\).
 
-  Réciproquement, si \(\mathcal B(u, v)=0\) pour tout \(v∈ V\), alors
-  \(\mathcal B(u, u)=0\) (en prenant \(v=u\)).
+  Réciproquement, si \(ℬ(u, v)=0\) pour tout \(v∈ V\), alors
+  \(ℬ(u, u)=0\) (en prenant \(v=u\)).
 \end{proof}
 
 \section{Développements limités le long d'une branche bifurquée du diagramme

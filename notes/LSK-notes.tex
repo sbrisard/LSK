@@ -166,19 +166,19 @@ Soit \(w_{ij}∈ W\) l'unique solution du problème variationnel suivant
 \begin{equation}
   \label{eq:20211221155859}
   2ℰ_{,uu}(w_{ij}, \hat{w})
-  +ℰ_{,uuu}(v_i, v_j, \hat{w})=0
+  +ℰ_{,uuu}(vᵢ, vⱼ, \hat{w})=0
   \quad\text{pour tout}\quad\hat{w}∈ W.
 \end{equation}
 
-Alors, pour \(v=ξ^i v_i\), la solution du problème
+Alors, pour \(v=ξ^i vᵢ\), la solution du problème
 variationnel~\eqref{eq:20211109145224} est \(w=ξ^iξ^jw_{ij}\). Pour cette
 valeur de \(v\), la condition~\eqref{eq:20211109145356} s'écrit
 \begin{equation}
-  \bigl[\tfrac1{12}ℰ_{,uuuu}(v_i, v_j, v_k, v_l)
+  \bigl[\tfrac1{12}ℰ_{,uuuu}(vᵢ, vⱼ, vₖ, v_l)
   -ℰ_{,uu}(w_{ij}, w_{kl})\bigr]
   ξ^iξ^jξ^kξ^l≥ 0,
 \end{equation}
-pour tous \(ξ_i, ξ_j, ξ_k, ξ_l∈\reals\). On peut montrer que
+pour tous \(ξᵢ, ξⱼ, ξₖ, ξ_l∈\reals\). On peut montrer que
 l'inégalité stricte est une condition \emph{suffisante} de stabilité.
 
 \section{Bifurcations}
@@ -229,7 +229,7 @@ où \(η\) est un paramètre, non précisé pour le moment. Noter que, dans la
 représentation paramétrique de \(u\), \(u^\ast\) est évalué en \(\lambda\) et
 pas en \(\lambda_0\).
 
-Les coefficients \(\lambda_k\) et \(u_k\) des
+Les coefficients \(\lambda ₖ\) et \(uₖ\) des
 développements~\eqref{eq:20211115075817} et \eqref{eq:20211115075835} sont
 identifiés en écrivant que l'énergie est stationnaire le long de la courbe
 d'équilibre, c'est-à-dire que le résidu
@@ -255,14 +255,14 @@ on trouve successivement, pour tout \(\hat{u}∈ U\)
 \end{gather}
 
 On déduit de l'équation~\eqref{eq:20211112182917} que \(u₁∈ V\). On pose
-alors \(u₁=ξ₁^i v_i\). En prenant \(\hat{u}=v_i\),
+alors \(u₁=ξ₁^i vᵢ\). En prenant \(\hat{u}=vᵢ\),
 l'équation~\eqref{eq:20211112183220} s'écrit
 \begin{equation}
   \mathcal T_{ijk}ξ₁^jξ₁^k+2\lambda₁\dot{ℋ}_{ij}ξ₁^j=0.
 \end{equation}
 
 Pour le terme d'ordre 2, on introduit la décomposition~:
-\(u₂=ξ₂^iv_i+w₂\), où \(w₂∈ W\). On a alors
+\(u₂=ξ₂^ivᵢ+w₂\), où \(w₂∈ W\). On a alors
 \(ℋ(u₂, \hat{u})=ℋ(w₂, \hat{u})\) et
 l'équation~\eqref{eq:20211112183220} s'écrit
 \begin{equation}
@@ -274,21 +274,21 @@ obtient le problème variationnel suivant~: trouver \(w₂∈ W\) tel
 que\pdfmargincomment{Conflit de notations}
 \begin{equation}
   \label{eq:20211210131623}
-  ξ₁^iξ₁^j\mathcal T(v_i, v_j, \hat{w})
-  +2\lambda₁ξ₁^i\dot{ℋ}(v_i, \hat{w})
+  ξ₁^iξ₁^j\mathcal T(vᵢ, vⱼ, \hat{w})
+  +2\lambda₁ξ₁^i\dot{ℋ}(vᵢ, \hat{w})
   +2ℋ(w₂, \hat{w})=0,
 \end{equation}
-pour tout \(\hat{w}∈ W\). Soient \(w_i∈ W\) les solutions des problèmes
+pour tout \(\hat{w}∈ W\). Soient \(wᵢ∈ W\) les solutions des problèmes
 variationnels suivants
 \begin{equation}
-  ℋ(w_i, \hat{w})+\dot{ℋ}(v_i, \hat{w})=0,
+  ℋ(wᵢ, \hat{w})+\dot{ℋ}(vᵢ, \hat{w})=0,
 \end{equation}
 pour tout \(\hat{w}∈ W\). La solution du problème~\eqref{eq:20211210131623}
-s'obtient par simple combinaison linéaire des \(w_i\) et \(w_{ij}\) introduits
+s'obtient par simple combinaison linéaire des \(wᵢ\) et \(w_{ij}\) introduits
 précédemment par le problème variationnel~\eqref{eq:20211221155859}, de sorte
 que
 \begin{equation}
-  w₂=ξ₁^iξ₁^jw_{ij}+\lambda₁ξ₁^i w_i.
+  w₂=ξ₁^iξ₁^jw_{ij}+\lambda₁ξ₁^i wᵢ.
 \end{equation}
 
 Le développement limité de la hessienne de l'énergie le long de la
@@ -760,13 +760,13 @@ obtient alors le problème variationnel d'ordre 1
   \hat{w}∈\kerℋ^\ast.
 \end{equation}
 
-En posant \(u₁=ξ_ia_i\) et \(v_0=\chi_j a_j\), on obtient l'équation
+En posant \(u₁=ξᵢaᵢ\) et \(v_0=\chi ⱼ aⱼ\), on obtient l'équation
 \begin{equation}
-  \bigl(\mathcal T_{ijk}^\astξ_k+\lambda₁\dot{ℋ}_{ij}^\ast\bigr)\chi_j
-  =\alpha₁\chi_i,
+  \bigl(\mathcal T_{ijk}^\astξₖ+\lambda₁\dot{ℋ}_{ij}^\ast\bigr)\chi ⱼ
+  =\alpha₁\chi ᵢ,
 \end{equation}
 qui est un problème aux valeurs propres pour la matrice symétrique
-\((\mathcal T_{ijk}^\astξ_k+\lambda₁\dot{ℋ}_{ij}^\ast)_{1≤i,
+\((\mathcal T_{ijk}^\astξₖ+\lambda₁\dot{ℋ}_{ij}^\ast)_{1≤i,
   j≤m}\)
 
 

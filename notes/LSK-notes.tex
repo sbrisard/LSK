@@ -432,37 +432,37 @@ considérées comme indépendantes. On a
 d'où l'on déduit successivement que
 \begin{equation}
   \label{eq:20211112162417}
-  f'(η)=\partial_η F[η, λ₀+λ(η)]
-  +λ'(η)\,\partial_λ F[η, λ₀+λ(η)],
+  f'(η)=∂_η F[η, λ₀+λ(η)]
+  +λ'(η)\,∂_λ F[η, λ₀+λ(η)],
 \end{equation}
 \begin{equation}
   \begin{aligned}[b]
     \label{eq:20211112165810}
-    f''(η)={}&\partial_{ηη}²F[η, λ₀+λ(η)]
-    +2λ'(η)\,\partial_{ηλ}²F[η, λ₀+λ(η)]\\
-    &+λ''(η)\,\partial_λ F[η, λ₀+λ(η)]
-    +λ'(η)²\partial_{λλ}²F[η, λ₀+λ(η)]
+    f''(η)={}&∂_{ηη}²F[η, λ₀+λ(η)]
+    +2λ'(η)\,∂_{ηλ}²F[η, λ₀+λ(η)]\\
+    &+λ''(η)\,∂_λ F[η, λ₀+λ(η)]
+    +λ'(η)²∂_{λλ}²F[η, λ₀+λ(η)]
   \end{aligned}
 \end{equation}
 et
 \begin{equation}
   \label{eq:20211112173223}
   \begin{aligned}[b]
-    f'''(η)={}&\partial_{ηηη}³F[η, λ₀+λ(η)]\\
-    &+3λ'(η)\,\partial_{ηηλ}³F[η, λ₀+λ(η)]\\
-    &+3λ'(η)²\partial_{ηλλ}³F[η, λ₀+λ(η)]\\
-    &+3λ''(η)\,\partial_{ηλ}²F[η, λ₀+λ(η)]\\
-    &+λ'''(η)\,\partial_λ F[η, λ₀+λ(η)]\\
-    &+3λ'(η)\,λ''(η)\,\partial_{λλ}²F[η, λ₀+λ(η)]\\
-    &+λ'(η)³\partial_{λλλ}³F[η, λ₀+λ(η)].
+    f'''(η)={}&∂_{ηηη}³F[η, λ₀+λ(η)]\\
+    &+3λ'(η)\,∂_{ηηλ}³F[η, λ₀+λ(η)]\\
+    &+3λ'(η)²∂_{ηλλ}³F[η, λ₀+λ(η)]\\
+    &+3λ''(η)\,∂_{ηλ}²F[η, λ₀+λ(η)]\\
+    &+λ'''(η)\,∂_λ F[η, λ₀+λ(η)]\\
+    &+3λ'(η)\,λ''(η)\,∂_{λλ}²F[η, λ₀+λ(η)]\\
+    &+λ'(η)³∂_{λλλ}³F[η, λ₀+λ(η)].
   \end{aligned}
 \end{equation}
 
 En \(η=0\), les relations précédentes s'écrivent
 \begin{align}
-  f'(0)={}&\partial_η F+λ₁\partial_λ F\\
-  f''(0)={}&\partial_{ηη}²F+2λ₁\partial_{ηλ}²F
-             +2λ₂\partial_λ F+λ₁²\partial_{λλ}²F
+  f'(0)={}&∂_η F+λ₁∂_λ F\\
+  f''(0)={}&∂_{ηη}²F+2λ₁∂_{ηλ}²F
+             +2λ₂∂_λ F+λ₁²∂_{λλ}²F
 \end{align}
 où \(F\) et ses dérivées sont évaluées en \((0, λ₀)\).
 
@@ -485,13 +485,13 @@ implicitement évaluées en \(η\), on trouve tout d'abord
 avec
 \begin{equation}
   \label{eq:20211112164354}
-  \partial_η F(η, λ)
+  ∂_η F(η, λ)
   =ℰ_{,uu}[u₀(λ)+U, λ](U', \hat{u}),
 \end{equation}
 soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211112165323}
-  \partial_η F(0, λ)=ℋ(u₁, \hat{u}).
+  ∂_η F(0, λ)=ℋ(u₁, \hat{u}).
 \end{equation}
 
 Par ailleurs, puisque \(λ\mapsto u₀(λ)\) est une courbe d'équilibre, on a
@@ -499,7 +499,7 @@ Par ailleurs, puisque \(λ\mapsto u₀(λ)\) est une courbe d'équilibre, on a
   \label{eq:20211112164240}
   F(0, λ)=ℰ_{,u}[u₀(λ), λ]=0
   \quad\text{donc}\quad
-  \frac{\partial^kF}{\partialλ^k}(0, λ)=0.
+  \frac{∂^kF}{∂λ^k}(0, λ)=0.
 \end{equation}
 
 On déduit de ce qui précède que
@@ -516,7 +516,7 @@ l'expression~\eqref{eq:20211112164354} par rapport à \(η\)
 \begin{equation}
   \label{eq:20211112172446}
   \begin{aligned}[b]
-    \partial_{ηη}²F(η, λ)={}&
+    ∂_{ηη}²F(η, λ)={}&
     ℰ_{,uuu}[u₀(λ)+U, λ](U', U', \hat{u})\\
     &+ℰ_{,uu}[u₀(λ)+U, λ](U'', \hat{u}),
   \end{aligned}
@@ -524,15 +524,15 @@ l'expression~\eqref{eq:20211112164354} par rapport à \(η\)
 soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211112165830}
-  \partial_{ηη}²F(0, λ)=𝒯(u₁, u₁, \hat{u})
+  ∂_{ηη}²F(0, λ)=𝒯(u₁, u₁, \hat{u})
   +2ℋ(u₂, \hat{u}).
 \end{equation}
 
-Par ailleurs, \(\partial_{ηλ}²F(0, λ)\) s'obtient par simple
+Par ailleurs, \(∂_{ηλ}²F(0, λ)\) s'obtient par simple
 dérivation de la relation~\eqref{eq:20211112165323}
 \begin{equation}
   \label{eq:20211112165843}
-  \partial_{ηλ}²F(0, λ)=\dot{ℋ}(u₁, \hat{u}).
+  ∂_{ηλ}²F(0, λ)=\dot{ℋ}(u₁, \hat{u}).
 \end{equation}
 
 En rassemblant les expressions~\eqref{eq:20211112165810},
@@ -554,10 +554,10 @@ dérivation par rapport à \(λ\) des expressions~\eqref{eq:20211112165830}
 et \eqref{eq:20211112165843}, on trouve par ailleurs
 \begin{equation}
   \label{eq:20211112173247}
-  \partial_{ηηλ}³F(0, λ)
+  ∂_{ηηλ}³F(0, λ)
   =\dot{𝒯}(u₁, u₁, \hat{u})+2\dot{ℋ}(u₂, \hat{u})
   \quad\text{et}\quad
-  \partial_{ηλλ}³F(0, λ)
+  ∂_{ηλλ}³F(0, λ)
   =\ddot{ℋ}(u₁, \hat{u}).
 \end{equation}
 
@@ -565,7 +565,7 @@ Finalement, en dérivant l'expression~\eqref{eq:20211112172446} par rapport à
 \(η\), on trouve
 \begin{equation}
   \begin{aligned}[b]
-    \partial_{ηηη}³F(η, λ)={}&
+    ∂_{ηηη}³F(η, λ)={}&
     ℰ_{,uuuu}[u₀(λ)+U, λ](U', U', U', \hat{u})\\
     &+3ℰ_{,uuu}[u₀(λ)+U, λ](U', U'', \hat{u})\\
     &+ℰ_{,uu}[u₀(λ)+U, λ](U''', \hat{u}),
@@ -574,7 +574,7 @@ Finalement, en dérivant l'expression~\eqref{eq:20211112172446} par rapport à
 soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211112173300}
-  \partial_{ηηη}³F(0, λ)=
+  ∂_{ηηη}³F(0, λ)=
   𝒬(u₁, u₁, u₁, \hat{u})
   +6𝒯(u₁, u₂, \hat{u})
   +6ℋ(u₃, \hat{u}).
@@ -622,18 +622,18 @@ On observe tout d'abord que \(h(0)=ℋ^*\). Par ailleurs, en dérivant
 l'expression~\eqref{eq:20211114104326} par rapport à \(η\)
 \begin{equation}
   \label{eq:20211114110210}
-  h'(η)=\partial_η H(η, λ^*+λ)
-  +λ'\partial_λ H(η, λ^*+λ),
+  h'(η)=∂_η H(η, λ^*+λ)
+  +λ'∂_λ H(η, λ^*+λ),
 \end{equation}
 avec
 \begin{equation}
   \label{eq:20211114110852}
-  \partial_η H(η, λ)=ℰ_{,uuu}(u₀+U, λ)(U', \hat{u}, \hat{v}),
+  ∂_η H(η, λ)=ℰ_{,uuu}(u₀+U, λ)(U', \hat{u}, \hat{v}),
 \end{equation}
 soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211114110230}
-  \partial_η H(0, λ)=𝒯(u₁, \hat{u}, \hat{v}).
+  ∂_η H(0, λ)=𝒯(u₁, \hat{u}, \hat{v}).
 \end{equation}
 
 Par ailleurs
@@ -641,7 +641,7 @@ Par ailleurs
   \label{eq:20211114110245}
   H(0, λ)=ℋ(\hat{u}, \hat{v})
   \quad\text{donc}\quad
-  \partial_λ H(0, λ)=\dot{ℋ}(\hat{u}, \hat{v}).
+  ∂_λ H(0, λ)=\dot{ℋ}(\hat{u}, \hat{v}).
 \end{equation}
 
 En regroupant les expressions~\eqref{eq:20211114110210},
@@ -657,24 +657,24 @@ donne maintenant
 \begin{equation}
   \label{eq:20211114111822}
   \begin{aligned}[b]
-    h''(η)={}&\partial_{ηη}² H(η, λ^*+λ)
-    +2λ'\partial_{ηλ}² H(η, λ^*+λ)\\
-    &+λ''\partial_{λ}H(η, λ^*+λ)
-    +λ'^2\partial_{λλ}²H(η, λ^*+λ).
+    h''(η)={}&∂_{ηη}² H(η, λ^*+λ)
+    +2λ'∂_{ηλ}² H(η, λ^*+λ)\\
+    &+λ''∂_{λ}H(η, λ^*+λ)
+    +λ'^2∂_{λλ}²H(η, λ^*+λ).
   \end{aligned}
 \end{equation}
 
-L'expression de \(\partial_{ηη}²H\) est obtenue en
+L'expression de \(∂_{ηη}²H\) est obtenue en
 dérivant~\eqref{eq:20211114110852}
 \begin{equation}
-  \partial_{ηη}²H(η, λ)
+  ∂_{ηη}²H(η, λ)
   =ℰ_{,uuuu}(u₀+U, λ)(U', U', \hat{u}, \hat{v})
   +ℰ_{,uuu}(U'', \hat{u}, \hat{v}),
 \end{equation}
 soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211114111716}
-  \partial_{ηη}²H(0, λ)=𝒬(u₁, u₁, \hat{u}, \hat{v})
+  ∂_{ηη}²H(0, λ)=𝒬(u₁, u₁, \hat{u}, \hat{v})
   +2𝒯(u₂, \hat{u}, \hat{v}).
 \end{equation}
 
@@ -682,9 +682,9 @@ Ensuite, en dérivant~\eqref{eq:20211114110230} et \eqref{eq:20211114110245} par
 rapport à \(λ\), on obtient
 \begin{equation}
   \label{eq:20211114111740}
-  \partial_{ηλ}²H(0, λ)=\dot{𝒯}(u₁, \hat{u}, \hat{v})
+  ∂_{ηλ}²H(0, λ)=\dot{𝒯}(u₁, \hat{u}, \hat{v})
   \quad\text{et}\quad
-  \partial_{λλ}²H(0, λ)=\ddot{ℋ}(\hat{u}, \hat{v}).
+  ∂_{λλ}²H(0, λ)=\ddot{ℋ}(\hat{u}, \hat{v}).
 \end{equation}
 
 Finalement, en substituant \eqref{eq:20211114110245}, \eqref{eq:20211114111716}

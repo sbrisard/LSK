@@ -70,14 +70,14 @@ qu'il a la structure d'espace vectoriel. L'énergie du système est noté
 
 \section{Analyse de la branche fondamentale}
 
-Soit \(u₀\in U\) un point d'équilibre du système~: l'énergie \(\mathcal E\)
+Soit \(u₀\in U\) un point d'équilibre du système~: l'énergie \(ℰ\)
 est stationnaire en \(u₀\). On s'intéresse à la stabilité de cet
-équilibre. L'équilibre est stable si \(\mathcal E\) est minimale en ce
-point. On sait que \(\mathcal E_{,uu}(u₀)\geq0\) est une condition
-\emph{nécessaire} de stabilité. De plus, \(\mathcal E_{,uu}(u₀)>0\) est une
+équilibre. L'équilibre est stable si \(ℰ\) est minimale en ce
+point. On sait que \(ℰ_{,uu}(u₀)\geq0\) est une condition
+\emph{nécessaire} de stabilité. De plus, \(ℰ_{,uu}(u₀)>0\) est une
 condition \emph{suffisante} de stabilité.
 
-On s'intéresse ici au cas où \(\mathcal E_{,uu}(u₀)\) est positive, sans être
+On s'intéresse ici au cas où \(ℰ_{,uu}(u₀)\) est positive, sans être
 définie positive~; soit \(V\) son noyau, qui forme un sous-espace vectoriel de
 \(U\). On suppose que \(V\) est de dimension finie \(m=\dim V\). Soit
 \(\bigl(v_1, \ldots, v_m\bigr)\) une base orthonormée de ce noyau pour le
@@ -94,35 +94,35 @@ Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
 \(w\in W\). On obtient alors, à l'ordre 4 en \(ξ\) et \(\eta\)
 \begin{equation}
   \begin{aligned}[b]
-    \Delta\mathcal E ={}&
-    \mathcal E(u₀+ξ v+\eta w)-\mathcal E(u₀)\\
-    ={}&\tfrac12\mathcal E_{,uu}(u₀;ξ v+\eta w, ξ v+\eta w)
-    +\tfrac16\mathcal E_{,uuu}(u₀;ξ v+\eta w, ξ v+\eta w, ξ v+\eta w)\\
-    &+\tfrac1{24}\mathcal E_{,uuuu}(u₀;ξ v+\eta w, ξ v+\eta w, ξ v+\eta w,
+    \Deltaℰ ={}&
+    ℰ(u₀+ξ v+\eta w)-ℰ(u₀)\\
+    ={}&\tfrac12ℰ_{,uu}(u₀;ξ v+\eta w, ξ v+\eta w)
+    +\tfrac16ℰ_{,uuu}(u₀;ξ v+\eta w, ξ v+\eta w, ξ v+\eta w)\\
+    &+\tfrac1{24}ℰ_{,uuuu}(u₀;ξ v+\eta w, ξ v+\eta w, ξ v+\eta w,
     ξ v+\eta w)+\LandauO\bigl(\bigl(ξ^2+\eta^2\bigr)^2\bigr),
   \end{aligned}
 \end{equation}
 où le terme linéaire a été omis puisque \(u\) est un point critique de
 l'énergie. En tenant compte de la multilinéarité et de la symétrie des
-différentielles successives de l'énergie \(\mathcal E\), ainsi que du fait que
-\(\mathcal E_{,uu}(v, •)=0\), l'expression précédente s'écrit
+différentielles successives de l'énergie \(ℰ\), ainsi que du fait que
+\(ℰ_{,uu}(v, •)=0\), l'expression précédente s'écrit
 \begin{equation}
   \begin{aligned}[b]
-    \Delta\mathcal E
-    ={}&\tfrac12\eta^2\mathcal E_{,uu}(w, w)
-    +\tfrac16ξ^3\mathcal E_{,uuu}(v, v, v)
-    +\tfrac12ξ^2\eta\mathcal E_{,uuu}(v, v, w)\\
-    &+\tfrac12ξ\eta^2\mathcal E_{,uuu}(v, w, w)
-    +\tfrac16\eta^3\mathcal E_{,uuu}(w, w, w)\\
-    &+\tfrac1{24}ξ^4\mathcal E_{,uuuu}(v, v, v, v)
-    +\tfrac16ξ^3\mathcal E_{,uuuu}(v, v, v, w)\\
-    &+\tfrac14ξ^2\eta^2\mathcal E_{,uuuu}(v, v, w, w)
-    +\tfrac16ξ\eta^3\mathcal E_{,uuuu}(v, w, w, w)\\
-    &+\tfrac1{24}\eta^4\mathcal E_{,uuuu}(w, w, w, w)
+    \Deltaℰ
+    ={}&\tfrac12\eta^2ℰ_{,uu}(w, w)
+    +\tfrac16ξ^3ℰ_{,uuu}(v, v, v)
+    +\tfrac12ξ^2\etaℰ_{,uuu}(v, v, w)\\
+    &+\tfrac12ξ\eta^2ℰ_{,uuu}(v, w, w)
+    +\tfrac16\eta^3ℰ_{,uuu}(w, w, w)\\
+    &+\tfrac1{24}ξ^4ℰ_{,uuuu}(v, v, v, v)
+    +\tfrac16ξ^3ℰ_{,uuuu}(v, v, v, w)\\
+    &+\tfrac14ξ^2\eta^2ℰ_{,uuuu}(v, v, w, w)
+    +\tfrac16ξ\eta^3ℰ_{,uuuu}(v, w, w, w)\\
+    &+\tfrac1{24}\eta^4ℰ_{,uuuu}(w, w, w, w)
     +\LandauO\bigl(\bigl(ξ^2+\eta^2\bigr)^2\bigr),
   \end{aligned}
 \end{equation}
-où l'on convient que toutes les différentielles de \(\mathcal E\) sont évaluées
+où l'on convient que toutes les différentielles de \(ℰ\) sont évaluées
 au point d'équilibre \(u₀\).
 
 Pour que l'équilibre soit stable, il faut que expression soit positive ou nulle
@@ -130,35 +130,35 @@ pour tous \(ξ\) et \(\eta\) suffisamment petits. En prenant tout d'abord
 \(\eta=0\), on obtient les conditions nécessaires
 \begin{equation}
   \label{eq:20211108164416}
-  \mathcal E_{,uuu}(v, v, v)=0
+  ℰ_{,uuu}(v, v, v)=0
   \quad\text{et}\quad
-  \mathcal E_{,uuuu}(v, v, v, v)\geq0
+  ℰ_{,uuuu}(v, v, v, v)\geq0
   \quad\text{pour tout}\quad v\in V.
 \end{equation}
 
 En d'autres termes, s'il existe \(v\in V\) tel que
-\(\mathcal E_{,uuu}(v, v, v)\neq0\) ou
-\(\mathcal E_{,uuuu}(v, v, v, v)<0\), alors l'équilibre est
+\(ℰ_{,uuu}(v, v, v)\neq0\) ou
+\(ℰ_{,uuuu}(v, v, v, v)<0\), alors l'équilibre est
 \emph{instable}. Les conditions précédentes ne sont pas suffisantes pour
 assurer la stabilité. En effet, supposant ces conditions remplies, on prend
 maintenant \(\eta=ξ^2\)
 \begin{equation}
-  \Delta\mathcal E
-  =\tfrac12ξ^4\bigl[\mathcal E_{,uu}(w, w)+\mathcal E_{,uuu}(v, v, w)
-  +\tfrac1{12}\mathcal E_{,uuuu}(v, v, v, v)\bigr]+o(ξ^4)
+  \Deltaℰ
+  =\tfrac12ξ^4\bigl[ℰ_{,uu}(w, w)+ℰ_{,uuu}(v, v, w)
+  +\tfrac1{12}ℰ_{,uuuu}(v, v, v, v)\bigr]+o(ξ^4)
 \end{equation}
 et on obtient la condition nécessaire supplémentaire
 \begin{equation}
   \label{eq:20211109145356}
-  \mathcal E_{,uu}(v, v)+\mathcal E_{,uuu}(v, v, w)
-  +\tfrac1{12}\mathcal E_{,uuuu}(v, v, v, v)\geq0,
+  ℰ_{,uu}(v, v)+ℰ_{,uuu}(v, v, w)
+  +\tfrac1{12}ℰ_{,uuuu}(v, v, v, v)\geq0,
 \end{equation}
 pour tous \(v\in V\) et \(w\in W\). Pour \(v\in\ker\mathcal H\) fixé,
 l'expression précédente est minimale lorsque \(w\) satisfait le problème
 variationnel
 \begin{equation}
   \label{eq:20211109145224}
-  2\mathcal E_{,uu}(w, \hat{w})+\mathcal E_{,uuu}(v, v, \hat{w})=0
+  2ℰ_{,uu}(w, \hat{w})+ℰ_{,uuu}(v, v, \hat{w})=0
   \quad\text{pour tout}\quad
   \hat{w}\in W.
 \end{equation}
@@ -166,8 +166,8 @@ variationnel
 Soit \(w_{ij}\in W\) l'unique solution du problème variationnel suivant
 \begin{equation}
   \label{eq:20211221155859}
-  2\mathcal E_{,uu}(w_{ij}, \hat{w})
-  +\mathcal E_{,uuu}(v_i, v_j, \hat{w})=0
+  2ℰ_{,uu}(w_{ij}, \hat{w})
+  +ℰ_{,uuu}(v_i, v_j, \hat{w})=0
   \quad\text{pour tout}\quad\hat{w}\in W.
 \end{equation}
 
@@ -175,8 +175,8 @@ Alors, pour \(v=ξ^i v_i\), la solution du problème
 variationnel~\eqref{eq:20211109145224} est \(w=ξ^iξ^jw_{ij}\). Pour cette
 valeur de \(v\), la condition~\eqref{eq:20211109145356} s'écrit
 \begin{equation}
-  \bigl[\tfrac1{12}\mathcal E_{,uuuu}(v_i, v_j, v_k, v_l)
-  -\mathcal E_{,uu}(w_{ij}, w_{kl})\bigr]
+  \bigl[\tfrac1{12}ℰ_{,uuuu}(v_i, v_j, v_k, v_l)
+  -ℰ_{,uu}(w_{ij}, w_{kl})\bigr]
   ξ^iξ^jξ^kξ^l\geq 0,
 \end{equation}
 pour tous \(ξ_i, ξ_j, ξ_k, ξ_l\in\reals\). On peut montrer que
@@ -186,15 +186,15 @@ l'inégalité stricte est une condition \emph{suffisante} de stabilité.
 
 Soit \(u^\ast(\lambda)\) la branche fondamentale. Par définition
 \begin{equation}
-  \mathcal E_{,u}[u^\ast(\lambda), \lambda;\hat{u}]=0
+  ℰ_{,u}[u^\ast(\lambda), \lambda;\hat{u}]=0
   \quad\text{pour tout}\quad\hat{u}\in U.
 \end{equation}
 
 Il sera commode d'introduire les notations suivantes
 \begin{align}
-  \mathcal H(\lambda)&=\mathcal E_{,uu}[u^\ast(\lambda), \lambda],\\
-  \mathcal T(\lambda)&=\mathcal E_{,uuu}[u^\ast(\lambda), \lambda],\\
-  \mathcal Q(\lambda)&=\mathcal E_{,uuuu}[u^\ast(\lambda), \lambda].
+  \mathcal H(\lambda)&=ℰ_{,uu}[u^\ast(\lambda), \lambda],\\
+  \mathcal T(\lambda)&=ℰ_{,uuu}[u^\ast(\lambda), \lambda],\\
+  \mathcal Q(\lambda)&=ℰ_{,uuuu}[u^\ast(\lambda), \lambda].
 \end{align}
 
 Noter que \(\mathcal H\), \(\mathcal T\) et \(\mathcal Q\) sont des formes bi-,
@@ -234,7 +234,7 @@ Les coefficients \(\lambda_k\) et \(u_k\) des
 développements~\eqref{eq:20211115075817} et \eqref{eq:20211115075835} sont
 identifiés en écrivant que l'énergie est stationnaire le long de la courbe
 d'équilibre, c'est-à-dire que le résidu
-\(\mathcal E_{,u}[u(\eta), \lambda(\eta)]\) est nul. Le développement limité du
+\(ℰ_{,u}[u(\eta), \lambda(\eta)]\) est nul. Le développement limité du
 résidu est établi au voisinage de \(\eta=0\) dans
 l'annexe~\ref{sec:20211112182000}. En écrivant que tous ses termes s'annulent,
 on trouve successivement, pour tout \(\hat{u}\in U\)
@@ -297,7 +297,7 @@ branche bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
 \begin{equation}
   \label{eq:20211115082025}
   \begin{aligned}[b]
-    \mathcal E_{,uu}[u(\eta), \lambda(\eta)](\hat{u}, \hat{v})
+    ℰ_{,uu}[u(\eta), \lambda(\eta)](\hat{u}, \hat{v})
     ={}&\mathcal H^\ast(\hat{u}, \hat{v})
     +\eta\bigl[\mathcal T^\ast(u_1, \hat{u}, \hat{v})
     +\lambda_1\dot{\mathcal H}^\ast(\hat{u}, \hat{v})\bigr]\\
@@ -313,7 +313,7 @@ On peut d'ores et déjà remarquer que, sur la branche fondamentale
 (\(u_1=u_2=0\)), en prenant \(\eta=\lambda-\lambda^\ast\) (\(\lambda_1=1\))
 \begin{equation}
   \mathcal H(\hat{u}, \hat{v})
-  =\mathcal E_{,uu}[u₀(\lambda), \lambda](\hat{u}, \hat{v})
+  =ℰ_{,uu}[u₀(\lambda), \lambda](\hat{u}, \hat{v})
   =\mathcal H^\ast(\hat{u}, \hat{v})
   +\bigl(\lambda-\lambda^\ast\bigr)\dot{\mathcal H}^\ast(\hat{u}, \hat{v})
   +o(\lambda-\lambda^\ast).
@@ -471,14 +471,14 @@ où \(F\) et ses dérivées sont évaluées en \((0, λ₀)\).
 \subsection{Développement limité du résidu}
 \label{sec:20211112182000}
 
-Soit \(f(\eta)=\mathcal E_{,u}(u, \lambda)(\hat{u})\) le \emph{résidu}
+Soit \(f(\eta)=ℰ_{,u}(u, \lambda)(\hat{u})\) le \emph{résidu}
 (\(\hat{u}\in V\) est arbitraire). Les équations permettant de déterminer les
 coefficients des développements~\eqref{eq:20211112155446} et
 \eqref{eq:20211112113028} sont obtenues en écrivant que \(f\) et ses dérivées
 sont nulles en \(\eta=0\). En considérant temporairement \(\eta\) et
 \(\lambda\) comme des variables indépendantes, on introduit
 \begin{equation}
-  F(\eta, \lambda)=\mathcal E_{,u}[u₀(\lambda)+U(\eta), \lambda](\hat{u})
+  F(\eta, \lambda)=ℰ_{,u}[u₀(\lambda)+U(\eta), \lambda](\hat{u})
 \end{equation}
 et on doit exprimer la nullité de
 \(f(\eta)=F[\eta, \lambda^\ast+\Lambda(\eta)]\) au voisinage de \(\eta=0\). En
@@ -488,7 +488,7 @@ avec
 \begin{equation}
   \label{eq:20211112164354}
   \partial_\eta F(\eta, \lambda)
-  =\mathcal E_{,uu}[u₀(\lambda)+U, \lambda](U', \hat{u}),
+  =ℰ_{,uu}[u₀(\lambda)+U, \lambda](U', \hat{u}),
 \end{equation}
 soit, en \(\eta=0\)
 \begin{equation}
@@ -499,7 +499,7 @@ soit, en \(\eta=0\)
 Par ailleurs, puisque \(\lambda\mapsto u₀(\lambda)\) est une courbe d'équilibre, on a
 \begin{equation}
   \label{eq:20211112164240}
-  F(0, \lambda)=\mathcal E_{,u}[u₀(\lambda), \lambda]=0
+  F(0, \lambda)=ℰ_{,u}[u₀(\lambda), \lambda]=0
   \quad\text{donc}\quad
   \frac{\partial^kF}{\partial\lambda^k}(0, \lambda)=0.
 \end{equation}
@@ -519,8 +519,8 @@ l'expression~\eqref{eq:20211112164354} par rapport à \(\eta\)
   \label{eq:20211112172446}
   \begin{aligned}[b]
     \partial_{\eta\eta}^2F(\eta, \lambda)={}&
-    \mathcal E_{,uuu}[u₀(\lambda)+U, \lambda](U', U', \hat{u})\\
-    &+\mathcal E_{,uu}[u₀(\lambda)+U, \lambda](U'', \hat{u}),
+    ℰ_{,uuu}[u₀(\lambda)+U, \lambda](U', U', \hat{u})\\
+    &+ℰ_{,uu}[u₀(\lambda)+U, \lambda](U'', \hat{u}),
   \end{aligned}
 \end{equation}
 soit, en \(\eta=0\)
@@ -568,9 +568,9 @@ Finalement, en dérivant l'expression~\eqref{eq:20211112172446} par rapport à
 \begin{equation}
   \begin{aligned}[b]
     \partial_{\eta\eta\eta}^3F(\eta, \lambda)={}&
-    \mathcal E_{,uuuu}[u₀(\lambda)+U, \lambda](U', U', U', \hat{u})\\
-    &+3\mathcal E_{,uuu}[u₀(\lambda)+U, \lambda](U', U'', \hat{u})\\
-    &+\mathcal E_{,uu}[u₀(\lambda)+U, \lambda](U''', \hat{u}),
+    ℰ_{,uuuu}[u₀(\lambda)+U, \lambda](U', U', U', \hat{u})\\
+    &+3ℰ_{,uuu}[u₀(\lambda)+U, \lambda](U', U'', \hat{u})\\
+    &+ℰ_{,uu}[u₀(\lambda)+U, \lambda](U''', \hat{u}),
   \end{aligned}
 \end{equation}
 soit, en \(\eta=0\)
@@ -602,7 +602,7 @@ l'expression de la dérivée troisième de \(f\) en \(\eta=0\)
 
 Le principe du calcul est le même que dans
 l'annexe~\ref{sec:20211112182000}. Pour \(\hat{u}, \hat{v}\in V\), on introduit
-\(h(\eta)=\mathcal E_{,uu}(u, \lambda)(\hat{u}, \hat{v})\), où \(\lambda\) et
+\(h(\eta)=ℰ_{,uu}(u, \lambda)(\hat{u}, \hat{v})\), où \(\lambda\) et
 \(u\) sont données en fonction de \(\eta\) par les
 expressions~\eqref{eq:20211115075817} et \eqref{eq:20211115075835}.
 
@@ -612,7 +612,7 @@ diagramme d'équilibre. Elle permet d'étudier la stabilité de l'équilibre. On
 en \(\eta=0\). \`A cet effet, considérant une nouvelle fois \(\eta\) et
 \(\lambda\) comme des variables indépendantes, on introduit la fonction
 \begin{equation}
-  H(\eta, \lambda)=\mathcal E_{,uu}[u₀(\lambda)+U(\eta), \lambda],
+  H(\eta, \lambda)=ℰ_{,uu}[u₀(\lambda)+U(\eta), \lambda],
 \end{equation}
 de sorte que
 \begin{equation}
@@ -630,7 +630,7 @@ l'expression~\eqref{eq:20211114104326} par rapport à \(\eta\)
 avec
 \begin{equation}
   \label{eq:20211114110852}
-  \partial_\eta H(\eta, \lambda)=\mathcal E_{,uuu}(u₀+U, \lambda)(U', \hat{u}, \hat{v}),
+  \partial_\eta H(\eta, \lambda)=ℰ_{,uuu}(u₀+U, \lambda)(U', \hat{u}, \hat{v}),
 \end{equation}
 soit, en \(\eta=0\)
 \begin{equation}
@@ -670,8 +670,8 @@ L'expression de \(\partial_{\eta\eta}^2H\) est obtenue en
 dérivant~\eqref{eq:20211114110852}
 \begin{equation}
   \partial_{\eta\eta}^2H(\eta, \lambda)
-  =\mathcal E_{,uuuu}(u₀+U, \lambda)(U', U', \hat{u}, \hat{v})
-  +\mathcal E_{,uuu}(U'', \hat{u}, \hat{v}),
+  =ℰ_{,uuuu}(u₀+U, \lambda)(U', U', \hat{u}, \hat{v})
+  +ℰ_{,uuu}(U'', \hat{u}, \hat{v}),
 \end{equation}
 soit, en \(\eta=0\)
 \begin{equation}
@@ -708,7 +708,7 @@ On cherche les vecteurs propres \(v\in V\) et valeurs propres
 \(\alpha\in\reals\) de la Hessienne
 \begin{equation}
   \label{eq:20211115082122}
-  \mathcal E_{,uu}[u(\eta), \lambda(\eta)](v, \hat{u})
+  ℰ_{,uu}[u(\eta), \lambda(\eta)](v, \hat{u})
   =\alpha〈 v, \hat{u}〉
   \quad\text{pour tout}\quad\hat{u}\in V.
 \end{equation}
@@ -726,7 +726,7 @@ Les développements limités~\eqref{eq:20211115082025} et
 problème~\eqref{eq:20211115082122}
 \begin{equation}
   \begin{aligned}[b]
-    \mathcal E_{,uu}[u(\eta), \lambda(\eta)](v, \hat{w})={}
+    ℰ_{,uu}[u(\eta), \lambda(\eta)](v, \hat{w})={}
     &\mathcal H^\ast(v_0, \hat{w})
     +\eta\bigl[\mathcal T^\ast(u_1, v_0, \hat{w})
     +\lambda_1\dot{\mathcal H}^\ast(v_0, \hat{w})\\

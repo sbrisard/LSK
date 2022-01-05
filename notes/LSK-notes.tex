@@ -182,17 +182,17 @@ l'inégalité stricte est une condition \emph{suffisante} de stabilité.
 
 \section{Bifurcations}
 
-Soit \(u^\ast(λ)\) la branche fondamentale. Par définition
+Soit \(u^*(λ)\) la branche fondamentale. Par définition
 \begin{equation}
-  ℰ_{,u}[u^\ast(λ), λ;\hat{u}]=0
+  ℰ_{,u}[u^*(λ), λ;\hat{u}]=0
   \quad\text{pour tout}\quad\hat{u}∈ U.
 \end{equation}
 
 Il sera commode d'introduire les notations suivantes
 \begin{align}
-  ℋ(λ)&=ℰ_{,uu}[u^\ast(λ), λ],\\
-  𝒯(λ)&=ℰ_{,uuu}[u^\ast(λ), λ],\\
-  𝒬(λ)&=ℰ_{,uuuu}[u^\ast(λ), λ].
+  ℋ(λ)&=ℰ_{,uu}[u^*(λ), λ],\\
+  𝒯(λ)&=ℰ_{,uuu}[u^*(λ), λ],\\
+  𝒬(λ)&=ℰ_{,uuuu}[u^*(λ), λ].
 \end{align}
 
 Noter que \(ℋ\), \(𝒯\) et \(𝒬\) sont des formes bi-,
@@ -206,7 +206,7 @@ On suppose que l'équilibre est stable pour des valeurs suffisamment petites de
 \(λ\). Plus précisément, on suppose que \(ℋ(λ)\) est
 définie positive pour tout \(λ<λ₀\). Pour \(λ=λ₀\),
 la forme quadratique \(ℋ(λ₀)\) n'est plus que positive. En
-notant \(u₀=u^\ast(λ₀)\) la position d'équilibre obtenue pour la valeur
+notant \(u₀=u^*(λ₀)\) la position d'équilibre obtenue pour la valeur
 critique \(λ₀\) du paramètre de chargement \(λ\), on s'intéresse à
 toutes les courbes d'équilibre qui passent par le point \((u₀, λ₀)\).
 
@@ -222,10 +222,10 @@ sous la forme paramétrique suivante
   \label{eq:20211115075817}
   λ&=λ₀+ηλ₁+η²λ₂+η³λ₃+\cdots,\\
   \label{eq:20211115075835}
-  u&=u^\ast(λ)+η u₁+η² u₂+η³u₃+\cdots,
+  u&=u^*(λ)+η u₁+η² u₂+η³u₃+\cdots,
 \end{align}
 où \(η\) est un paramètre, non précisé pour le moment. Noter que, dans la
-représentation paramétrique de \(u\), \(u^\ast\) est évalué en \(λ\) et
+représentation paramétrique de \(u\), \(u^*\) est évalué en \(λ\) et
 pas en \(λ₀\).
 
 Les coefficients \(λ ₖ\) et \(uₖ\) des
@@ -296,38 +296,38 @@ branche bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
   \label{eq:20211115082025}
   \begin{aligned}[b]
     ℰ_{,uu}[u(η), λ(η)](\hat{u}, \hat{v})
-    ={}&ℋ^\ast(\hat{u}, \hat{v})
-    +η\bigl[𝒯^\ast(u₁, \hat{u}, \hat{v})
-    +λ₁\dot{ℋ}^\ast(\hat{u}, \hat{v})\bigr]\\
-    &+\tfrac12η²\bigl[𝒬^\ast(u₁, u₁, \hat{u}, \hat{v})
-    +2λ₁\dot{𝒯}^\ast(u₁, \hat{u}, \hat{v})\\
-    &+λ₁²\ddot{ℋ}^\ast(\hat{u}, \hat{v})
-    +𝒯^\ast(u₂, \hat{u}, \hat{v})
-    +λ₂\dot{ℋ}^\ast(\hat{u}, \hat{v})\bigr]+o(η²).
+    ={}&ℋ^*(\hat{u}, \hat{v})
+    +η\bigl[𝒯^*(u₁, \hat{u}, \hat{v})
+    +λ₁\dot{ℋ}^*(\hat{u}, \hat{v})\bigr]\\
+    &+\tfrac12η²\bigl[𝒬^*(u₁, u₁, \hat{u}, \hat{v})
+    +2λ₁\dot{𝒯}^*(u₁, \hat{u}, \hat{v})\\
+    &+λ₁²\ddot{ℋ}^*(\hat{u}, \hat{v})
+    +𝒯^*(u₂, \hat{u}, \hat{v})
+    +λ₂\dot{ℋ}^*(\hat{u}, \hat{v})\bigr]+o(η²).
   \end{aligned}
 \end{equation}
 
 On peut d'ores et déjà remarquer que, sur la branche fondamentale
-(\(u₁=u₂=0\)), en prenant \(η=λ-λ^\ast\) (\(λ₁=1\))
+(\(u₁=u₂=0\)), en prenant \(η=λ-λ^*\) (\(λ₁=1\))
 \begin{equation}
   ℋ(\hat{u}, \hat{v})
   =ℰ_{,uu}[u₀(λ), λ](\hat{u}, \hat{v})
-  =ℋ^\ast(\hat{u}, \hat{v})
-  +\bigl(λ-λ^\ast\bigr)\dot{ℋ}^\ast(\hat{u}, \hat{v})
-  +o(λ-λ^\ast).
+  =ℋ^*(\hat{u}, \hat{v})
+  +\bigl(λ-λ^*\bigr)\dot{ℋ}^*(\hat{u}, \hat{v})
+  +o(λ-λ^*).
 \end{equation}
 
-Dans ce qui suit, on supposera que \(\dot{ℋ}^\ast≠ 0\). Pour
-\(\hat{u}∈\kerℋ^\ast\), l'égalité précédente s'écrit
+Dans ce qui suit, on supposera que \(\dot{ℋ}^*≠ 0\). Pour
+\(\hat{u}∈\kerℋ^*\), l'égalité précédente s'écrit
 \begin{equation}
   ℋ(\hat{u}, \hat{u})
-  =\bigl(λ-λ^\ast\bigr)\dot{ℋ}^\ast(\hat{u}, \hat{u})
-  +o(λ-λ^\ast).
+  =\bigl(λ-λ^*\bigr)\dot{ℋ}^*(\hat{u}, \hat{u})
+  +o(λ-λ^*).
 \end{equation}
 
-Comme la branche fondamentale est stable pour \(λ<λ^\ast\), on doit
-avoir \(\dot{ℋ}^\ast(\hat{u}, \hat{u})<0\). La forme quadratique
-\(\dot{ℋ}^\ast\) est définie négative sur \(\kerℋ^\ast\).
+Comme la branche fondamentale est stable pour \(λ<λ^*\), on doit
+avoir \(\dot{ℋ}^*(\hat{u}, \hat{u})<0\). La forme quadratique
+\(\dot{ℋ}^*\) est définie négative sur \(\kerℋ^*\).
 
 
 Il faut alors distinguer deux cas. Si la branche trouvée est telle que
@@ -335,9 +335,9 @@ Il faut alors distinguer deux cas. Si la branche trouvée est telle que
 
 Si \(λ₁=0\), alors on doit calculer \(λ₂\)
 \begin{equation}
-  𝒬^\ast(u₁, u₁, u₁, \hat{u})
-  +3𝒯^\ast(u₁, u₂, \hat{u})+ℋ^\ast(u₃, \hat{u})
-  +3λ₂\dot{ℋ}^\ast(u₁, \hat{u})=0.
+  𝒬^*(u₁, u₁, u₁, \hat{u})
+  +3𝒯^*(u₁, u₂, \hat{u})+ℋ^*(u₃, \hat{u})
+  +3λ₂\dot{ℋ}^*(u₁, \hat{u})=0.
 \end{equation}
 
 \appendix
@@ -479,7 +479,7 @@ sont nulles en \(η=0\). En considérant temporairement \(η\) et
   F(η, λ)=ℰ_{,u}[u₀(λ)+U(η), λ](\hat{u})
 \end{equation}
 et on doit exprimer la nullité de
-\(f(η)=F[η, λ^\ast+λ(η)]\) au voisinage de \(η=0\). En
+\(f(η)=F[η, λ^*+λ(η)]\) au voisinage de \(η=0\). En
 convenant dans ce qui suit que \(U\), \(λ\) et leurs dérivées sont
 implicitement évaluées en \(η\), on trouve tout d'abord
 avec
@@ -615,15 +615,15 @@ en \(η=0\). \`A cet effet, considérant une nouvelle fois \(η\) et
 de sorte que
 \begin{equation}
   \label{eq:20211114104326}
-  h(η)=H[η, λ^\ast+λ(η)].
+  h(η)=H[η, λ^*+λ(η)].
 \end{equation}
 
-On observe tout d'abord que \(h(0)=ℋ^\ast\). Par ailleurs, en dérivant
+On observe tout d'abord que \(h(0)=ℋ^*\). Par ailleurs, en dérivant
 l'expression~\eqref{eq:20211114104326} par rapport à \(η\)
 \begin{equation}
   \label{eq:20211114110210}
-  h'(η)=\partial_η H(η, λ^\ast+λ)
-  +λ'\partial_λ H(η, λ^\ast+λ),
+  h'(η)=\partial_η H(η, λ^*+λ)
+  +λ'\partial_λ H(η, λ^*+λ),
 \end{equation}
 avec
 \begin{equation}
@@ -648,8 +648,8 @@ En regroupant les expressions~\eqref{eq:20211114110210},
 \eqref{eq:20211114110230} et \eqref{eq:20211114110245}, on trouve la dérivée de
 \(h\) en 0
 \begin{equation}
-  h'(0)=𝒯^\ast(u₁, \hat{u}, \hat{v})
-  +λ₁\dot{ℋ}^\ast(\hat{u}, \hat{v}).
+  h'(0)=𝒯^*(u₁, \hat{u}, \hat{v})
+  +λ₁\dot{ℋ}^*(\hat{u}, \hat{v}).
 \end{equation}
 
 La dérivation de l'expression~\eqref{eq:20211114110210} par rapport à \(η\)
@@ -657,10 +657,10 @@ donne maintenant
 \begin{equation}
   \label{eq:20211114111822}
   \begin{aligned}[b]
-    h''(η)={}&\partial_{ηη}² H(η, λ^\ast+λ)
-    +2λ'\partial_{ηλ}² H(η, λ^\ast+λ)\\
-    &+λ''\partial_{λ}H(η, λ^\ast+λ)
-    +λ'^2\partial_{λλ}²H(η, λ^\ast+λ).
+    h''(η)={}&\partial_{ηη}² H(η, λ^*+λ)
+    +2λ'\partial_{ηλ}² H(η, λ^*+λ)\\
+    &+λ''\partial_{λ}H(η, λ^*+λ)
+    +λ'^2\partial_{λλ}²H(η, λ^*+λ).
   \end{aligned}
 \end{equation}
 
@@ -692,11 +692,11 @@ et \eqref{eq:20211114111740} dans \eqref{eq:20211114111822}, on obtient
 l'expression de la dérivée seconde de h en \(η=0\)
 \begin{equation}
   \begin{aligned}[b]
-    h''(0)={}&𝒬^\ast(u₁, u₁, \hat{u}, \hat{v})
-    +2λ₁\dot{𝒯}^\ast(u₁, \hat{u}, \hat{v})
-    +λ₁²\ddot{ℋ}^\ast(\hat{u}, \hat{v})\\
-    &+2𝒯^\ast(u₂, \hat{u}, \hat{v})
-    +2λ₂\dot{ℋ}^\ast(\hat{u}, \hat{v}).
+    h''(0)={}&𝒬^*(u₁, u₁, \hat{u}, \hat{v})
+    +2λ₁\dot{𝒯}^*(u₁, \hat{u}, \hat{v})
+    +λ₁²\ddot{ℋ}^*(\hat{u}, \hat{v})\\
+    &+2𝒯^*(u₂, \hat{u}, \hat{v})
+    +2λ₂\dot{ℋ}^*(\hat{u}, \hat{v}).
   \end{aligned}
 \end{equation}
 
@@ -725,10 +725,10 @@ problème~\eqref{eq:20211115082122}
 \begin{equation}
   \begin{aligned}[b]
     ℰ_{,uu}[u(η), λ(η)](v, \hat{w})={}
-    &ℋ^\ast(v₀, \hat{w})
-    +η\bigl[𝒯^\ast(u₁, v₀, \hat{w})
-    +λ₁\dot{ℋ}^\ast(v₀, \hat{w})\\
-    &+ℋ^\ast(v₁, \hat{w})\bigr]+o(η)
+    &ℋ^*(v₀, \hat{w})
+    +η\bigl[𝒯^*(u₁, v₀, \hat{w})
+    +λ₁\dot{ℋ}^*(v₀, \hat{w})\\
+    &+ℋ^*(v₁, \hat{w})\bigr]+o(η)
   \end{aligned}
 \end{equation}
 
@@ -740,32 +740,32 @@ problème~\eqref{eq:20211115082122}
 
 On obtient le problème variationnel d'ordre 0
 \begin{equation}
-  ℋ^\ast(v₀, \hat{w})=\alpha₀〈 v₀, \hat{w}〉
+  ℋ^*(v₀, \hat{w})=\alpha₀〈 v₀, \hat{w}〉
   \quad\text{pour tout}\quad\hat{w}∈ V,
 \end{equation}
-qui montre que \(v₀\) est le vecteur propre de \(ℋ^\ast\) associé à
-la valeur propre \(\alpha₀\). Si \(\alpha₀≠ 0\), \(ℋ^\ast\) étant
+qui montre que \(v₀\) est le vecteur propre de \(ℋ^*\) associé à
+la valeur propre \(\alpha₀\). Si \(\alpha₀≠ 0\), \(ℋ^*\) étant
 positive par hypothèse, on a nécessairement \(\alpha₀>0\), et la valeur propre
 de la hessienne est positive.
 
 On considère maintenant le cas où \(\alpha₀\), c'est-à-dire que
-\(v₀∈\kerℋ^\ast\). En prenant \(\hat{w}∈\kerℋ^\ast\), on
+\(v₀∈\kerℋ^*\). En prenant \(\hat{w}∈\kerℋ^*\), on
 obtient alors le problème variationnel d'ordre 1
 \begin{equation}
-  𝒯^\ast(u₁, v₀, \hat{w})
-  +λ₁\dot{ℋ}^\ast(v₀, \hat{w})
+  𝒯^*(u₁, v₀, \hat{w})
+  +λ₁\dot{ℋ}^*(v₀, \hat{w})
   =\alpha₁〈v₀, \hat{w}〉
   \quad\text{pour tout}\quad
-  \hat{w}∈\kerℋ^\ast.
+  \hat{w}∈\kerℋ^*.
 \end{equation}
 
 En posant \(u₁=ξᵢaᵢ\) et \(v₀=\chi ⱼ aⱼ\), on obtient l'équation
 \begin{equation}
-  \bigl(𝒯_{ijk}^\astξₖ+λ₁\dot{ℋ}_{ij}^\ast\bigr)\chi ⱼ
+  \bigl(𝒯_{ijk}^*ξₖ+λ₁\dot{ℋ}_{ij}^*\bigr)\chi ⱼ
   =\alpha₁\chi ᵢ,
 \end{equation}
 qui est un problème aux valeurs propres pour la matrice symétrique
-\((𝒯_{ijk}^\astξₖ+λ₁\dot{ℋ}_{ij}^\ast)_{1≤i,
+\((𝒯_{ijk}^*ξₖ+λ₁\dot{ℋ}_{ij}^*)_{1≤i,
   j≤m}\)
 
 

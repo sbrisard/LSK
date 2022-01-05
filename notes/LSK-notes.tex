@@ -1,0 +1,783 @@
+\newcommand{\mytitle}{Notes relatives à la méthode asymptotique de Lyapunov–Schmidt–Koiter}
+\newcommand{\myauthor}{Sébastien Brisard}
+\newcommand{\myaddress}{Navier, Ecole des Ponts, Univ Gustave Eiffel, IFSTTAR, CNRS, Marne-la-Vall\'ee, France}
+\newcommand{\mysubject}{Note bibliographique}
+
+\documentclass[12pt, final]{amsart}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{amsthm}
+\newtheorem{remark}{Remarque}
+\newtheorem{theorem}{Théorème}
+
+\usepackage[backend=biber,bibencoding=utf8,doi=false,giveninits=true,isbn=false,maxnames=10,minnames=5,sortcites=true,style=authoryear,texencoding=utf8,url=false]{biblatex}
+\addbibresource{stab.bib}
+
+\usepackage[breaklinks=true, colorlinks=true, pdftitle={\mytitle}, pdfauthor={\myauthor}, pdfsubject={\mysubject}, urlcolor=blue]{hyperref}
+
+\usepackage[color={1 1 0}]{pdfcomment}
+
+\usepackage[notref, notcite]{showkeys}
+
+\usepackage{unicode-math}
+\setmainfont{XITS}
+\setmathfont{XITS Math}
+
+\newcommand{\D}{\mathrm{d}}
+\newcommand{\LandauO}{\mathcal{O}}
+\newcommand{\reals}{\mathbb{R}}
+\DeclareMathOperator{\vect}{vect}
+
+\AtBeginDocument{
+  % See http://tex.stackexchange.com/questions/117990/
+  \newcommand{\tens}[1]{\symbfsf{#1}}
+  \renewcommand{\vec}[1]{\symbf{#1}}
+  \let\div\undefined
+  \DeclareMathOperator{\div}{div}
+  \DeclareMathOperator{\vdiv}{\symbf{div}}
+  \DeclareMathOperator{\grad}{\symbf{grad}}
+  \DeclareMathOperator{\tgrad}{\symbfsf{grad}}
+  \DeclareMathOperator{\sym}{\symbfsf{sym}}
+  \DeclareMathOperator{\tr}{tr}
+}
+
+
+\begin{document}
+\title{\mytitle}
+\author{\myauthor}
+\address{\myaddress}
+\email{sebastien.brisard@univ-eiffel}
+
+\begin{abstract}
+  blabla
+\end{abstract}
+
+
+\maketitle
+
+
+\section{Notations}
+
+L'espace des champs cinématiquement admissibles est noté \(U\). On suppose
+qu'il a la structure d'espace vectoriel. L'énergie du système est noté
+\(\mathcal E\).
+
+\section{Analyse de la branche fondamentale}
+
+Soit \(u_0\in U\) un point d'équilibre du système~: l'énergie \(\mathcal E\)
+est stationnaire en \(u_0\). On s'intéresse à la stabilité de cet
+équilibre. L'équilibre est stable si \(\mathcal E\) est minimale en ce
+point. On sait que \(\mathcal E_{,uu}(u_0)\geq0\) est une condition
+\emph{nécessaire} de stabilité. De plus, \(\mathcal E_{,uu}(u_0)>0\) est une
+condition \emph{suffisante} de stabilité.
+
+On s'intéresse ici au cas où \(\mathcal E_{,uu}(u_0)\) est positive, sans être
+définie positive~; soit \(V\) son noyau, qui forme un sous-espace vectoriel de
+\(U\). On suppose que \(V\) est de dimension finie \(m=\dim V\). Soit
+\(\bigl(v_1, \ldots, v_m\bigr)\) une base orthonormée de ce noyau pour le
+produit scalaire \(\langle\bullet,\bullet\rangle\) (qui n'est pas précisé pour
+le moment). On introduit le sous-espace supplémentaire orthogonal \(W\) de
+\(V\) dans \(U\)
+\begin{equation}
+  U=V\stackrel{\perp}{\oplus} W.
+\end{equation}
+
+Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
+\(u_0+\xi v+\eta w\) voisin du point d'équilibre \(u_0\), avec
+\(\xi, \eta\in\reals\) \guillemotleft{}petits\guillemotright{}, \(v\in V\) and
+\(w\in W\). On obtient alors, à l'ordre 4 en \(\xi\) et \(\eta\)
+\begin{equation}
+  \begin{aligned}[b]
+    \Delta\mathcal E ={}&
+    \mathcal E(u_0+\xi v+\eta w)-\mathcal E(u_0)\\
+    ={}&\tfrac12\mathcal E_{,uu}(u_0;\xi v+\eta w, \xi v+\eta w)
+    +\tfrac16\mathcal E_{,uuu}(u_0;\xi v+\eta w, \xi v+\eta w, \xi v+\eta w)\\
+    &+\tfrac1{24}\mathcal E_{,uuuu}(u_0;\xi v+\eta w, \xi v+\eta w, \xi v+\eta w,
+    \xi v+\eta w)+\LandauO\bigl(\bigl(\xi^2+\eta^2\bigr)^2\bigr),
+  \end{aligned}
+\end{equation}
+où le terme linéaire a été omis puisque \(u\) est un point critique de
+l'énergie. En tenant compte de la multilinéarité et de la symétrie des
+différentielles successives de l'énergie \(\mathcal E\), ainsi que du fait que
+\(\mathcal E_{,uu}(v, \bullet)=0\), l'expression précédente s'écrit
+\begin{equation}
+  \begin{aligned}[b]
+    \Delta\mathcal E
+    ={}&\tfrac12\eta^2\mathcal E_{,uu}(w, w)
+    +\tfrac16\xi^3\mathcal E_{,uuu}(v, v, v)
+    +\tfrac12\xi^2\eta\mathcal E_{,uuu}(v, v, w)\\
+    &+\tfrac12\xi\eta^2\mathcal E_{,uuu}(v, w, w)
+    +\tfrac16\eta^3\mathcal E_{,uuu}(w, w, w)\\
+    &+\tfrac1{24}\xi^4\mathcal E_{,uuuu}(v, v, v, v)
+    +\tfrac16\xi^3\mathcal E_{,uuuu}(v, v, v, w)\\
+    &+\tfrac14\xi^2\eta^2\mathcal E_{,uuuu}(v, v, w, w)
+    +\tfrac16\xi\eta^3\mathcal E_{,uuuu}(v, w, w, w)\\
+    &+\tfrac1{24}\eta^4\mathcal E_{,uuuu}(w, w, w, w)
+    +\LandauO\bigl(\bigl(\xi^2+\eta^2\bigr)^2\bigr),
+  \end{aligned}
+\end{equation}
+où l'on convient que toutes les différentielles de \(\mathcal E\) sont évaluées
+au point d'équilibre \(u_0\).
+
+Pour que l'équilibre soit stable, il faut que expression soit positive ou nulle
+pour tous \(\xi\) et \(\eta\) suffisamment petits. En prenant tout d'abord
+\(\eta=0\), on obtient les conditions nécessaires
+\begin{equation}
+  \label{eq:20211108164416}
+  \mathcal E_{,uuu}(v, v, v)=0
+  \quad\text{et}\quad
+  \mathcal E_{,uuuu}(v, v, v, v)\geq0
+  \quad\text{pour tout}\quad v\in V.
+\end{equation}
+
+En d'autres termes, s'il existe \(v\in V\) tel que
+\(\mathcal E_{,uuu}(v, v, v)\neq0\) ou
+\(\mathcal E_{,uuuu}(v, v, v, v)<0\), alors l'équilibre est
+\emph{instable}. Les conditions précédentes ne sont pas suffisantes pour
+assurer la stabilité. En effet, supposant ces conditions remplies, on prend
+maintenant \(\eta=\xi^2\)
+\begin{equation}
+  \Delta\mathcal E
+  =\tfrac12\xi^4\bigl[\mathcal E_{,uu}(w, w)+\mathcal E_{,uuu}(v, v, w)
+  +\tfrac1{12}\mathcal E_{,uuuu}(v, v, v, v)\bigr]+o(\xi^4)
+\end{equation}
+et on obtient la condition nécessaire supplémentaire
+\begin{equation}
+  \label{eq:20211109145356}
+  \mathcal E_{,uu}(v, v)+\mathcal E_{,uuu}(v, v, w)
+  +\tfrac1{12}\mathcal E_{,uuuu}(v, v, v, v)\geq0,
+\end{equation}
+pour tous \(v\in V\) et \(w\in W\). Pour \(v\in\ker\mathcal H\) fixé,
+l'expression précédente est minimale lorsque \(w\) satisfait le problème
+variationnel
+\begin{equation}
+  \label{eq:20211109145224}
+  2\mathcal E_{,uu}(w, \hat{w})+\mathcal E_{,uuu}(v, v, \hat{w})=0
+  \quad\text{pour tout}\quad
+  \hat{w}\in W.
+\end{equation}
+
+Soit \(w_{ij}\in W\) l'unique solution du problème variationnel suivant
+\begin{equation}
+  \label{eq:20211221155859}
+  2\mathcal E_{,uu}(w_{ij}, \hat{w})
+  +\mathcal E_{,uuu}(v_i, v_j, \hat{w})=0
+  \quad\text{pour tout}\quad\hat{w}\in W.
+\end{equation}
+
+Alors, pour \(v=\xi^i v_i\), la solution du problème
+variationnel~\eqref{eq:20211109145224} est \(w=\xi^i\xi^jw_{ij}\). Pour cette
+valeur de \(v\), la condition~\eqref{eq:20211109145356} s'écrit
+\begin{equation}
+  \bigl[\tfrac1{12}\mathcal E_{,uuuu}(v_i, v_j, v_k, v_l)
+  -\mathcal E_{,uu}(w_{ij}, w_{kl})\bigr]
+  \xi^i\xi^j\xi^k\xi^l\geq 0,
+\end{equation}
+pour tous \(\xi_i, \xi_j, \xi_k, \xi_l\in\reals\). On peut montrer que
+l'inégalité stricte est une condition \emph{suffisante} de stabilité.
+
+\section{Bifurcations}
+
+Soit \(u^\ast(\lambda)\) la branche fondamentale. Par définition
+\begin{equation}
+  \mathcal E_{,u}[u^\ast(\lambda), \lambda;\hat{u}]=0
+  \quad\text{pour tout}\quad\hat{u}\in U.
+\end{equation}
+
+Il sera commode d'introduire les notations suivantes
+\begin{align}
+  \mathcal H(\lambda)&=\mathcal E_{,uu}[u^\ast(\lambda), \lambda],\\
+  \mathcal T(\lambda)&=\mathcal E_{,uuu}[u^\ast(\lambda), \lambda],\\
+  \mathcal Q(\lambda)&=\mathcal E_{,uuuu}[u^\ast(\lambda), \lambda].
+\end{align}
+
+Noter que \(\mathcal H\), \(\mathcal T\) et \(\mathcal Q\) sont des formes bi-,
+tri- et quadri-linéaires, respectivement. L'application de ces formes à des
+éléments de \(U\) sera notée \(\mathcal H(\lambda; u, v)\),
+\(\mathcal T(\lambda; u, v, w)\), etc\dots. La dérivée de ces formes par
+rapport à \(\lambda\) sera notée à l'aide d'un point supérieur
+(\(\dot{\mathcal H}\), \(\dot{\mathcal T}\), \dots).
+
+On suppose que l'équilibre est stable pour des valeurs suffisamment petites de
+\(\lambda\). Plus précisément, on suppose que \(\mathcal H(\lambda)\) est
+définie positive pour tout \(\lambda<\lambda_0\). Pour \(\lambda=\lambda_0\),
+la forme quadratique \(\mathcal H(\lambda_0)\) n'est plus que positive. En
+notant \(u_0=u^\ast(\lambda_0)\) la position d'équilibre obtenue pour la valeur
+critique \(\lambda_0\) du paramètre de chargement \(\lambda\), on s'intéresse à
+toutes les courbes d'équilibre qui passent par le point \((u_0, \lambda_0)\).
+
+Noter que dans ce qui suit, on convient que les formes \(\mathcal H\),
+\(\mathcal T\) et \(\mathcal Q\) sont implicitement évaluées en \(\lambda_0\)
+lorsque \(\lambda\) n'est pas rappelé : ainsi, on notera
+\(\mathcal H(\bullet, \bullet)\) plutôt que
+\(\mathcal H(\lambda_0, \bullet, \bullet)\).
+
+On écrit toute courbe d'équilibre passant par le point \((u_0, \lambda_0)\)
+sous la forme paramétrique suivante
+\begin{align}
+  \label{eq:20211115075817}
+  \lambda&=\lambda_0+\eta\lambda_1+\eta^2\lambda_2+\eta^3\lambda_3+\cdots,\\
+  \label{eq:20211115075835}
+  u&=u^\ast(\lambda)+\eta u_1+\eta^2 u_2+\eta^3u_3+\cdots,
+\end{align}
+où \(\eta\) est un paramètre, non précisé pour le moment. Noter que, dans la
+représentation paramétrique de \(u\), \(u^\ast\) est évalué en \(\lambda\) et
+pas en \(\lambda_0\).
+
+Les coefficients \(\lambda_k\) et \(u_k\) des
+développements~\eqref{eq:20211115075817} et \eqref{eq:20211115075835} sont
+identifiés en écrivant que l'énergie est stationnaire le long de la courbe
+d'équilibre, c'est-à-dire que le résidu
+\(\mathcal E_{,u}[u(\eta), \lambda(\eta)]\) est nul. Le développement limité du
+résidu est établi au voisinage de \(\eta=0\) dans
+l'annexe~\ref{sec:20211112182000}. En écrivant que tous ses termes s'annulent,
+on trouve successivement, pour tout \(\hat{u}\in U\)
+\begin{gather}
+  \label{eq:20211112182917}
+  \mathcal H(u_1, \hat{u})=0,\\
+  \label{eq:20211112183220}
+  \mathcal T(u_1, u_1, \hat{u})
+  +2\lambda_1\dot{\mathcal H}(u_1, \hat{u})
+  +2\mathcal H(u_2, \hat{u})=0,\\
+  \begin{aligned}[b]
+    \mathcal Q(u_1, u_1, u_1, \hat{u})
+    +6\mathcal T(u_1, u_2, \hat{u})+6\mathcal H(u_3, \hat{u})&\\
+    +3\lambda_1\bigl[\dot{\mathcal T}(u_1, u_1, \hat{u})
+    +2\dot{\mathcal H}(u_2, \hat{u})\bigr]
+    +3\lambda_1^2\ddot{\mathcal H}(u_1, \hat{u})&\\
+    +6\lambda_2\dot{\mathcal H}(u_1, \hat{u})&=0.
+  \end{aligned}
+\end{gather}
+
+On déduit de l'équation~\eqref{eq:20211112182917} que \(u_1\in V\). On pose
+alors \(u_1=\xi_1^i v_i\). En prenant \(\hat{u}=v_i\),
+l'équation~\eqref{eq:20211112183220} s'écrit
+\begin{equation}
+  \mathcal T_{ijk}\xi_1^j\xi_1^k+2\lambda_1\dot{\mathcal H}_{ij}\xi_1^j=0.
+\end{equation}
+
+Pour le terme d'ordre 2, on introduit la décomposition~:
+\(u_2=\xi_2^iv_i+w_2\), où \(w_2\in W\). On a alors
+\(\mathcal H(u_2, \hat{u})=\mathcal H(w_2, \hat{u})\) et
+l'équation~\eqref{eq:20211112183220} s'écrit
+\begin{equation}
+  \mathcal T(u_1, u_1, \hat{u})+2\lambda_1\dot{\mathcal H}(u_1, \hat{u})
+  +2\mathcal H(w_2, \hat{u})=0,
+\end{equation}
+pour tout \(\hat{u}\in V\). En prenant la fonction test dans l'espace \(W\), on
+obtient le problème variationnel suivant~: trouver \(w_2\in W\) tel
+que\pdfmargincomment{Conflit de notations}
+\begin{equation}
+  \label{eq:20211210131623}
+  \xi_1^i\xi_1^j\mathcal T(v_i, v_j, \hat{w})
+  +2\lambda_1\xi_1^i\dot{\mathcal H}(v_i, \hat{w})
+  +2\mathcal H(w_2, \hat{w})=0,
+\end{equation}
+pour tout \(\hat{w}\in W\). Soient \(w_i\in W\) les solutions des problèmes
+variationnels suivants
+\begin{equation}
+  \mathcal H(w_i, \hat{w})+\dot{\mathcal H}(v_i, \hat{w})=0,
+\end{equation}
+pour tout \(\hat{w}\in W\). La solution du problème~\eqref{eq:20211210131623}
+s'obtient par simple combinaison linéaire des \(w_i\) et \(w_{ij}\) introduits
+précédemment par le problème variationnel~\eqref{eq:20211221155859}, de sorte
+que
+\begin{equation}
+  w_2=\xi_1^i\xi_1^jw_{ij}+\lambda_1\xi_1^i w_i.
+\end{equation}
+
+Le développement limité de la hessienne de l'énergie le long de la
+branche bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
+\begin{equation}
+  \label{eq:20211115082025}
+  \begin{aligned}[b]
+    \mathcal E_{,uu}[u(\eta), \lambda(\eta)](\hat{u}, \hat{v})
+    ={}&\mathcal H^\ast(\hat{u}, \hat{v})
+    +\eta\bigl[\mathcal T^\ast(u_1, \hat{u}, \hat{v})
+    +\lambda_1\dot{\mathcal H}^\ast(\hat{u}, \hat{v})\bigr]\\
+    &+\tfrac12\eta^2\bigl[\mathcal Q^\ast(u_1, u_1, \hat{u}, \hat{v})
+    +2\lambda_1\dot{\mathcal T}^\ast(u_1, \hat{u}, \hat{v})\\
+    &+\lambda_1^2\ddot{\mathcal H}^\ast(\hat{u}, \hat{v})
+    +\mathcal T^\ast(u_2, \hat{u}, \hat{v})
+    +\lambda_2\dot{\mathcal H}^\ast(\hat{u}, \hat{v})\bigr]+o(\eta^2).
+  \end{aligned}
+\end{equation}
+
+On peut d'ores et déjà remarquer que, sur la branche fondamentale
+(\(u_1=u_2=0\)), en prenant \(\eta=\lambda-\lambda^\ast\) (\(\lambda_1=1\))
+\begin{equation}
+  \mathcal H(\hat{u}, \hat{v})
+  =\mathcal E_{,uu}[u_0(\lambda), \lambda](\hat{u}, \hat{v})
+  =\mathcal H^\ast(\hat{u}, \hat{v})
+  +\bigl(\lambda-\lambda^\ast\bigr)\dot{\mathcal H}^\ast(\hat{u}, \hat{v})
+  +o(\lambda-\lambda^\ast).
+\end{equation}
+
+Dans ce qui suit, on supposera que \(\dot{\mathcal H}^\ast\neq 0\). Pour
+\(\hat{u}\in\ker\mathcal H^\ast\), l'égalité précédente s'écrit
+\begin{equation}
+  \mathcal H(\hat{u}, \hat{u})
+  =\bigl(\lambda-\lambda^\ast\bigr)\dot{\mathcal H}^\ast(\hat{u}, \hat{u})
+  +o(\lambda-\lambda^\ast).
+\end{equation}
+
+Comme la branche fondamentale est stable pour \(\lambda<\lambda^\ast\), on doit
+avoir \(\dot{\mathcal H}^\ast(\hat{u}, \hat{u})<0\). La forme quadratique
+\(\dot{\mathcal H}^\ast\) est définie négative sur \(\ker\mathcal H^\ast\).
+
+
+Il faut alors distinguer deux cas. Si la branche trouvée est telle que
+\(\lambda_1\neq0\), alors...
+
+Si \(\lambda_1=0\), alors on doit calculer \(\lambda_2\)
+\begin{equation}
+  \mathcal Q^\ast(u_1, u_1, u_1, \hat{u})
+  +3\mathcal T^\ast(u_1, u_2, \hat{u})+\mathcal H^\ast(u_3, \hat{u})
+  +3\lambda_2\dot{\mathcal H}^\ast(u_1, \hat{u})=0.
+\end{equation}
+
+\appendix
+
+\section{Propriétés des formes bilinéaires symétriques, positives}
+
+Soit \(\mathcal B\) une forme bilinéaire symétrique, positive sur l'espace vectoriel
+\(V\). On définit son noyau \(\ker\mathcal B\) de la façon suivante
+\begin{equation}
+  \ker\mathcal B=\{u\in V|\mathcal B(u, u)=0\}.
+\end{equation}
+
+\begin{theorem}
+  Le noyau \(\ker\mathcal B\) d'une forme bilinéaire, symétrique, positive
+  \(\mathcal B\) sur l'espace vectoriel \(V\) est un sous-espace vectoriel de
+  \(V\).
+\end{theorem}
+\begin{proof}
+  Soient \(u, v\in\ker\mathcal B\), \(\alpha\in\reals\) et \(w=u+\alpha
+  v\). Montrons que \(w\in\ker\mathcal B\). Il suffit d'évaluer
+  \(\mathcal B(w, w)\)
+  \begin{equation}
+    \mathcal B(w, w)=\mathcal B(u+\alpha v, u+\alpha v)=\mathcal B(u, u)+2\alpha\mathcal B(u, v)+\alpha^2\mathcal B(v, v),
+  \end{equation}
+  où l'on a tenu compte de la symétrie de \(\mathcal B\) pour écrire que
+  \(\mathcal B(u, v)=\mathcal B(v, u)\). Comme \(u, v\in\ker\mathcal B\), le
+  premier et le dernier terme sont nuls, soit
+  \(\mathcal B(w, w)=2\alpha\mathcal B(u, v)\). La forme bilinéaire étant
+  positive, cette grandeur est positive, \emph{quelle que soit la valeur de
+    \(\alpha\in\reals\)}. On en déduit donc que \(\mathcal B(u, v)=0\), puis
+  que \(\mathcal B(w, w)=0\).
+\end{proof}
+
+Soit \(u\in V\). Alors
+\begin{equation}
+  u\in\ker\mathcal B\quad\text{ssi}\quad\text{pour tout }v\in V, \mathcal B(u, v)=0.
+\end{equation}
+\begin{proof}
+  Soient \(u\in\ker\mathcal B\), \(v\in V\) et \(\alpha\in\reals\). Comme
+  précédemment, on écrit que \(\mathcal B(w, w)\geq0\), avec \(w=\alpha u+v\)
+  \begin{equation}
+    \mathcal B(w, w)=2\alpha\mathcal B(u, v)+\mathcal B(v, v)\geq0,
+  \end{equation}
+  où l'on a tenu compte de ce que \(\mathcal B(u, u)=0\). L'expression
+  précédente, affine en \(\alpha\), a un signe constant. Le terme linéaire en
+  \(\alpha\) est donc nul, soit \(\mathcal B(u, v)=0\).
+
+  Réciproquement, si \(\mathcal B(u, v)=0\) pour tout \(v\in V\), alors
+  \(\mathcal B(u, u)=0\) (en prenant \(v=u\)).
+\end{proof}
+
+\section{Développements limités le long d'une branche bifurquée du diagramme
+  d'équilibre}
+
+\subsection{Principe du calcul}
+
+On pose dans ce qui suit \(\Lambda(\eta)=\lambda(\eta)-\lambda_0\) et
+\(U(\eta)=u(\eta)-u_0[\lambda(\eta)]\), de sorte que\pdfmargincomment{À
+  compléter}
+\begin{align}
+  \label{eq:20211112155446}
+  \Lambda(\eta)&=\eta\lambda_1+\eta^2\lambda_2+\eta^3\lambda_3+\cdots,\\
+  \label{eq:20211112113028}
+  U(\eta)&=\eta u_1+\eta^2 u_2+\eta^3u_3+\cdots.
+\end{align}
+
+On considère une quantité \(\mathcal F\), fonction de \(u\) et \(\lambda\)~:
+\(\mathcal F(u, \lambda)\). Cette fonctionnelle est évaluée le long de la
+branche bifurquée. En d'autres termes, on considère
+\begin{equation}
+  f(\eta)=F\bigl(u_0[\lambda_0+\Lambda(\eta)]+U(\eta),
+  \lambda_0+\Lambda(\eta)\bigr).
+\end{equation}
+
+On souhaite établir un développement limité de \(f\) au voisinage de
+\(\eta=0\), ce qui conduit à calculer les dérivées successives de \(f\) en
+\(\eta=0\), puisque
+\begin{equation}
+  f(\eta)=f(0)+\eta f'(0)+\tfrac12\eta^2f''(0)+\cdots
+\end{equation}
+
+Pour calculer ces dérivées, il sera commode d'introduire la fonction auxiliaire
+\(F\)
+\begin{equation}
+  F(\eta, \lambda)=\mathcal F[u_0(\lambda)+U(\eta), \lambda],
+\end{equation}
+dans laquelle les variables \(\lambda\) et \(\eta\) sont provisoirement
+considérées comme indépendantes. On a
+\begin{equation}
+  f(\eta)=F[\eta, \lambda_0+\Lambda(\eta)],
+\end{equation}
+d'où l'on déduit successivement que
+\begin{equation}
+  \label{eq:20211112162417}
+  f'(\eta)=\partial_\eta F[\eta, \lambda_0+\Lambda(\eta)]
+  +\Lambda'(\eta)\,\partial_\lambda F[\eta, \lambda_0+\Lambda(\eta)],
+\end{equation}
+\begin{equation}
+  \begin{aligned}[b]
+    \label{eq:20211112165810}
+    f''(\eta)={}&\partial_{\eta\eta}^2F[\eta, \lambda_0+\Lambda(\eta)]
+    +2\Lambda'(\eta)\,\partial_{\eta\lambda}^2F[\eta, \lambda_0+\Lambda(\eta)]\\
+    &+\Lambda''(\eta)\,\partial_\lambda F[\eta, \lambda_0+\Lambda(\eta)]
+    +\Lambda'(\eta)^2\partial_{\lambda\lambda}^2F[\eta, \lambda_0+\Lambda(\eta)]
+  \end{aligned}
+\end{equation}
+et
+\begin{equation}
+  \label{eq:20211112173223}
+  \begin{aligned}[b]
+    f'''(\eta)={}&\partial_{\eta\eta\eta}^3F[\eta, \lambda_0+\Lambda(\eta)]\\
+    &+3\Lambda'(\eta)\,\partial_{\eta\eta\lambda}^3F[\eta, \lambda_0+\Lambda(\eta)]\\
+    &+3\Lambda'(\eta)^2\partial_{\eta\lambda\lambda}^3F[\eta, \lambda_0+\Lambda(\eta)]\\
+    &+3\Lambda''(\eta)\,\partial_{\eta\lambda}^2F[\eta, \lambda_0+\Lambda(\eta)]\\
+    &+\Lambda'''(\eta)\,\partial_\lambda F[\eta, \lambda_0+\Lambda(\eta)]\\
+    &+3\Lambda'(\eta)\,\Lambda''(\eta)\,\partial_{\lambda\lambda}^2F[\eta, \lambda_0+\Lambda(\eta)]\\
+    &+\Lambda'(\eta)^3\partial_{\lambda\lambda\lambda}^3F[\eta, \lambda_0+\Lambda(\eta)].
+  \end{aligned}
+\end{equation}
+
+En \(\eta=0\), les relations précédentes s'écrivent
+\begin{align}
+  f'(0)={}&\partial_\eta F+\lambda_1\partial_\lambda F\\
+  f''(0)={}&\partial_{\eta\eta}^2F+2\lambda_1\partial_{\eta\lambda}^2F
+             +2\lambda_2\partial_\lambda F+\lambda_1^2\partial_{\lambda\lambda}^2F
+\end{align}
+où \(F\) et ses dérivées sont évaluées en \((0, λ₀)\).
+
+\subsection{Développement limité du résidu}
+\label{sec:20211112182000}
+
+Soit \(f(\eta)=\mathcal E_{,u}(u, \lambda)(\hat{u})\) le \emph{résidu}
+(\(\hat{u}\in V\) est arbitraire). Les équations permettant de déterminer les
+coefficients des développements~\eqref{eq:20211112155446} et
+\eqref{eq:20211112113028} sont obtenues en écrivant que \(f\) et ses dérivées
+sont nulles en \(\eta=0\). En considérant temporairement \(\eta\) et
+\(\lambda\) comme des variables indépendantes, on introduit
+\begin{equation}
+  F(\eta, \lambda)=\mathcal E_{,u}[u_0(\lambda)+U(\eta), \lambda](\hat{u})
+\end{equation}
+et on doit exprimer la nullité de
+\(f(\eta)=F[\eta, \lambda^\ast+\Lambda(\eta)]\) au voisinage de \(\eta=0\). En
+convenant dans ce qui suit que \(U\), \(\Lambda\) et leurs dérivées sont
+implicitement évaluées en \(\eta\), on trouve tout d'abord
+avec
+\begin{equation}
+  \label{eq:20211112164354}
+  \partial_\eta F(\eta, \lambda)
+  =\mathcal E_{,uu}[u_0(\lambda)+U, \lambda](U', \hat{u}),
+\end{equation}
+soit, en \(\eta=0\)
+\begin{equation}
+  \label{eq:20211112165323}
+  \partial_\eta F(0, \lambda)=\mathcal H(u_1, \hat{u}).
+\end{equation}
+
+Par ailleurs, puisque \(\lambda\mapsto u_0(\lambda)\) est une courbe d'équilibre, on a
+\begin{equation}
+  \label{eq:20211112164240}
+  F(0, \lambda)=\mathcal E_{,u}[u_0(\lambda), \lambda]=0
+  \quad\text{donc}\quad
+  \frac{\partial^kF}{\partial\lambda^k}(0, \lambda)=0.
+\end{equation}
+
+On déduit de ce qui précède que
+\begin{equation}
+  \label{eq:20211112182300}
+  f'(0)=\mathcal H(u_1, \hat{u}).
+\end{equation}
+
+En dérivant la relation~\eqref{eq:20211112162417}, on obtient maintenant l'expression de la dérivée seconde de \(f\)
+
+La relation~\eqref{eq:20211112164240} montre que les deux derniers termes
+s'annulent en \(\eta=0\). Par ailleurs, en dérivant
+l'expression~\eqref{eq:20211112164354} par rapport à \(\eta\)
+\begin{equation}
+  \label{eq:20211112172446}
+  \begin{aligned}[b]
+    \partial_{\eta\eta}^2F(\eta, \lambda)={}&
+    \mathcal E_{,uuu}[u_0(\lambda)+U, \lambda](U', U', \hat{u})\\
+    &+\mathcal E_{,uu}[u_0(\lambda)+U, \lambda](U'', \hat{u}),
+  \end{aligned}
+\end{equation}
+soit, en \(\eta=0\)
+\begin{equation}
+  \label{eq:20211112165830}
+  \partial_{\eta\eta}^2F(0, \lambda)=\mathcal T(u_1, u_1, \hat{u})
+  +2\mathcal H(u_2, \hat{u}).
+\end{equation}
+
+Par ailleurs, \(\partial_{\eta\lambda}^2F(0, \lambda)\) s'obtient par simple
+dérivation de la relation~\eqref{eq:20211112165323}
+\begin{equation}
+  \label{eq:20211112165843}
+  \partial_{\eta\lambda}^2F(0, \lambda)=\dot{\mathcal H}(u_1, \hat{u}).
+\end{equation}
+
+En rassemblant les expressions~\eqref{eq:20211112165810},
+\eqref{eq:20211112165830} et \eqref{eq:20211112165843}, on trouve l'expression
+de la dérivée seconde de \(f\) en 0
+\begin{equation}
+  \label{eq:20211112182333}
+  f''(0)=\mathcal T(u_1, u_1, \hat{u})
+  +2\lambda_1\dot{\mathcal H}(u_1, \hat{u})
+  +2\mathcal H(u_2, \hat{u}).
+\end{equation}
+
+On obtient finalement l'expression de \(f'''(\eta)\) en dérivant la
+relation~\eqref{eq:20211112165810}
+
+La relation~\eqref{eq:20211112164240} montre une nouvelle fois que les trois
+derniers termes de l'expression ci-dessus s'annulent en \(\eta=0\). Par simple
+dérivation par rapport à \(\lambda\) des expressions~\eqref{eq:20211112165830}
+et \eqref{eq:20211112165843}, on trouve par ailleurs
+\begin{equation}
+  \label{eq:20211112173247}
+  \partial_{\eta\eta\lambda}^3F(0, \lambda)
+  =\dot{\mathcal T}(u_1, u_1, \hat{u})+2\dot{\mathcal H}(u_2, \hat{u})
+  \quad\text{et}\quad
+  \partial_{\eta\lambda\lambda}^3F(0, \lambda)
+  =\ddot{\mathcal H}(u_1, \hat{u}).
+\end{equation}
+
+Finalement, en dérivant l'expression~\eqref{eq:20211112172446} par rapport à
+\(\eta\), on trouve
+\begin{equation}
+  \begin{aligned}[b]
+    \partial_{\eta\eta\eta}^3F(\eta, \lambda)={}&
+    \mathcal E_{,uuuu}[u_0(\lambda)+U, \lambda](U', U', U', \hat{u})\\
+    &+3\mathcal E_{,uuu}[u_0(\lambda)+U, \lambda](U', U'', \hat{u})\\
+    &+\mathcal E_{,uu}[u_0(\lambda)+U, \lambda](U''', \hat{u}),
+  \end{aligned}
+\end{equation}
+soit, en \(\eta=0\)
+\begin{equation}
+  \label{eq:20211112173300}
+  \partial_{\eta\eta\eta}^3F(0, \lambda)=
+  \mathcal Q(u_1, u_1, u_1, \hat{u})
+  +6\mathcal T(u_1, u_2, \hat{u})
+  +6\mathcal H(u_3, \hat{u}).
+\end{equation}
+
+En regroupant les relations~\eqref{eq:20211112173223},
+\eqref{eq:20211112173247} et \eqref{eq:20211112173300}, on trouve finalement
+l'expression de la dérivée troisième de \(f\) en \(\eta=0\)
+\begin{equation}
+\label{eq:20211112182402}
+  \begin{aligned}[b]
+    f'''(0)={}&\mathcal Q(u_1, u_1, u_1, \hat{u})
+    +6\mathcal T(u_1, u_2, \hat{u})+6\mathcal H(u_3, \hat{u})\\
+    &+3\lambda_1\bigl[\dot{\mathcal T}(u_1, u_1, \hat{u})
+    +2\dot{\mathcal H}(u_2, \hat{u})\bigr]
+    +3\lambda_1^2\ddot{\mathcal H}(u_1, \hat{u})\\
+    &+6\lambda_2\dot{\mathcal H}(u_1, \hat{u}).
+  \end{aligned}
+\end{equation}
+
+\section{Développement limité de la hessienne}
+\label{sec:20211115081016}
+
+Le principe du calcul est le même que dans
+l'annexe~\ref{sec:20211112182000}. Pour \(\hat{u}, \hat{v}\in V\), on introduit
+\(h(\eta)=\mathcal E_{,uu}(u, \lambda)(\hat{u}, \hat{v})\), où \(\lambda\) et
+\(u\) sont données en fonction de \(\eta\) par les
+expressions~\eqref{eq:20211115075817} et \eqref{eq:20211115075835}.
+
+La fonction \(h(\eta)\) est la hessienne de l'énergie le long d'une branche du
+diagramme d'équilibre. Elle permet d'étudier la stabilité de l'équilibre. On
+établit un développement limité de \(h\) en calculant ses dérivées successives
+en \(\eta=0\). \`A cet effet, considérant une nouvelle fois \(\eta\) et
+\(\lambda\) comme des variables indépendantes, on introduit la fonction
+\begin{equation}
+  H(\eta, \lambda)=\mathcal E_{,uu}[u_0(\lambda)+U(\eta), \lambda],
+\end{equation}
+de sorte que
+\begin{equation}
+  \label{eq:20211114104326}
+  h(\eta)=H[\eta, \lambda^\ast+\Lambda(\eta)].
+\end{equation}
+
+On observe tout d'abord que \(h(0)=\mathcal H^\ast\). Par ailleurs, en dérivant
+l'expression~\eqref{eq:20211114104326} par rapport à \(\eta\)
+\begin{equation}
+  \label{eq:20211114110210}
+  h'(\eta)=\partial_\eta H(\eta, \lambda^\ast+\Lambda)
+  +\Lambda'\partial_\lambda H(\eta, \lambda^\ast+\Lambda),
+\end{equation}
+avec
+\begin{equation}
+  \label{eq:20211114110852}
+  \partial_\eta H(\eta, \lambda)=\mathcal E_{,uuu}(u_0+U, \lambda)(U', \hat{u}, \hat{v}),
+\end{equation}
+soit, en \(\eta=0\)
+\begin{equation}
+  \label{eq:20211114110230}
+  \partial_\eta H(0, \lambda)=\mathcal T(u_1, \hat{u}, \hat{v}).
+\end{equation}
+
+Par ailleurs
+\begin{equation}
+  \label{eq:20211114110245}
+  H(0, \lambda)=\mathcal H(\hat{u}, \hat{v})
+  \quad\text{donc}\quad
+  \partial_\lambda H(0, \lambda)=\dot{\mathcal H}(\hat{u}, \hat{v}).
+\end{equation}
+
+En regroupant les expressions~\eqref{eq:20211114110210},
+\eqref{eq:20211114110230} et \eqref{eq:20211114110245}, on trouve la dérivée de
+\(h\) en 0
+\begin{equation}
+  h'(0)=\mathcal T^\ast(u_1, \hat{u}, \hat{v})
+  +\lambda_1\dot{\mathcal H}^\ast(\hat{u}, \hat{v}).
+\end{equation}
+
+La dérivation de l'expression~\eqref{eq:20211114110210} par rapport à \(\eta\)
+donne maintenant
+\begin{equation}
+  \label{eq:20211114111822}
+  \begin{aligned}[b]
+    h''(\eta)={}&\partial_{\eta\eta}^2 H(\eta, \lambda^\ast+\Lambda)
+    +2\Lambda'\partial_{\eta\lambda}^2 H(\eta, \lambda^\ast+\Lambda)\\
+    &+\Lambda''\partial_{\lambda}H(\eta, \lambda^\ast+\Lambda)
+    +\Lambda'^2\partial_{\lambda\lambda}^2H(\eta, \lambda^\ast+\Lambda).
+  \end{aligned}
+\end{equation}
+
+L'expression de \(\partial_{\eta\eta}^2H\) est obtenue en
+dérivant~\eqref{eq:20211114110852}
+\begin{equation}
+  \partial_{\eta\eta}^2H(\eta, \lambda)
+  =\mathcal E_{,uuuu}(u_0+U, \lambda)(U', U', \hat{u}, \hat{v})
+  +\mathcal E_{,uuu}(U'', \hat{u}, \hat{v}),
+\end{equation}
+soit, en \(\eta=0\)
+\begin{equation}
+  \label{eq:20211114111716}
+  \partial_{\eta\eta}^2H(0, \lambda)=\mathcal Q(u_1, u_1, \hat{u}, \hat{v})
+  +2\mathcal T(u_2, \hat{u}, \hat{v}).
+\end{equation}
+
+Ensuite, en dérivant~\eqref{eq:20211114110230} et \eqref{eq:20211114110245} par
+rapport à \(\lambda\), on obtient
+\begin{equation}
+  \label{eq:20211114111740}
+  \partial_{\eta\lambda}^2H(0, \lambda)=\dot{\mathcal T}(u_1, \hat{u}, \hat{v})
+  \quad\text{et}\quad
+  \partial_{\lambda\lambda}^2H(0, \lambda)=\ddot{\mathcal H}(\hat{u}, \hat{v}).
+\end{equation}
+
+Finalement, en substituant \eqref{eq:20211114110245}, \eqref{eq:20211114111716}
+et \eqref{eq:20211114111740} dans \eqref{eq:20211114111822}, on obtient
+l'expression de la dérivée seconde de h en \(\eta=0\)
+\begin{equation}
+  \begin{aligned}[b]
+    h''(0)={}&\mathcal Q^\ast(u_1, u_1, \hat{u}, \hat{v})
+    +2\lambda_1\dot{\mathcal T}^\ast(u_1, \hat{u}, \hat{v})
+    +\lambda_1^2\ddot{\mathcal H}^\ast(\hat{u}, \hat{v})\\
+    &+2\mathcal T^\ast(u_2, \hat{u}, \hat{v})
+    +2\lambda_2\dot{\mathcal H}^\ast(\hat{u}, \hat{v}).
+  \end{aligned}
+\end{equation}
+
+\subsection{Développement limité des valeurs propres et vecteurs propres de la Hessienne}
+
+On cherche les vecteurs propres \(v\in V\) et valeurs propres
+\(\alpha\in\reals\) de la Hessienne
+\begin{equation}
+  \label{eq:20211115082122}
+  \mathcal E_{,uu}[u(\eta), \lambda(\eta)](v, \hat{u})
+  =\alpha\langle v, \hat{u}\rangle
+  \quad\text{pour tout}\quad\hat{u}\in V.
+\end{equation}
+
+On cherche les développements limités à l'ordre 1 en \(\eta\) de \(v\) et \(\alpha\)
+\begin{equation}
+  \label{eq:20211115082037}
+  v = v_0+\eta v_1+o(\eta)
+  \quad\text{et}\quad
+  \alpha=\alpha_0+\eta\alpha_1+o(\eta)
+\end{equation}
+
+Les développements limités~\eqref{eq:20211115082025} et
+\eqref{eq:20211115082037} sont insérés dans le
+problème~\eqref{eq:20211115082122}
+\begin{equation}
+  \begin{aligned}[b]
+    \mathcal E_{,uu}[u(\eta), \lambda(\eta)](v, \hat{w})={}
+    &\mathcal H^\ast(v_0, \hat{w})
+    +\eta\bigl[\mathcal T^\ast(u_1, v_0, \hat{w})
+    +\lambda_1\dot{\mathcal H}^\ast(v_0, \hat{w})\\
+    &+\mathcal H^\ast(v_1, \hat{w})\bigr]+o(\eta)
+  \end{aligned}
+\end{equation}
+
+\begin{equation}
+  \alpha\langle v, \hat{w}\rangle=\alpha_0\langle v_0, \hat{w}\rangle
+  +\eta\bigl(\alpha_1\langle v_0, \hat{w}\rangle+\alpha_0\langle v_1, \hat{w}\rangle\bigr)
+  +o(\eta).
+\end{equation}
+
+On obtient le problème variationnel d'ordre 0
+\begin{equation}
+  \mathcal H^\ast(v_0, \hat{w})=\alpha_0\langle v_0, \hat{w}\rangle
+  \quad\text{pour tout}\quad\hat{w}\in V,
+\end{equation}
+qui montre que \(v_0\) est le vecteur propre de \(\mathcal H^\ast\) associé à
+la valeur propre \(\alpha_0\). Si \(\alpha_0\neq 0\), \(\mathcal H^\ast\) étant
+positive par hypothèse, on a nécessairement \(\alpha_0>0\), et la valeur propre
+de la hessienne est positive.
+
+On considère maintenant le cas où \(\alpha_0\), c'est-à-dire que
+\(v_0\in\ker\mathcal H^\ast\). En prenant \(\hat{w}\in\ker\mathcal H^\ast\), on
+obtient alors le problème variationnel d'ordre 1
+\begin{equation}
+  \mathcal T^\ast(u_1, v_0, \hat{w})
+  +\lambda_1\dot{\mathcal H}^\ast(v_0, \hat{w})
+  =\alpha_1\langle v_0, \hat{w}\rangle
+  \quad\text{pour tout}\quad
+  \hat{w}\in\ker\mathcal H^\ast.
+\end{equation}
+
+En posant \(u_1=\xi_ia_i\) et \(v_0=\chi_j a_j\), on obtient l'équation
+\begin{equation}
+  \bigl(\mathcal T_{ijk}^\ast\xi_k+\lambda_1\dot{\mathcal H}_{ij}^\ast\bigr)\chi_j
+  =\alpha_1\chi_i,
+\end{equation}
+qui est un problème aux valeurs propres pour la matrice symétrique
+\((\mathcal T_{ijk}^\ast\xi_k+\lambda_1\dot{\mathcal H}_{ij}^\ast)_{1\leq i,
+  j\leq m}\)
+
+
+% \printbibliography
+\end{document}
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% fill-column: 79
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-master: t
+%%% End:

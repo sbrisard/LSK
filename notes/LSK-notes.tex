@@ -66,7 +66,7 @@
 
 L'espace des champs cinématiquement admissibles est noté \(U\). On suppose
 qu'il a la structure d'espace vectoriel. L'énergie du système est noté
-\(\mathcal E\).
+\(ℰ\).
 
 \section{Analyse de la branche fondamentale}
 
@@ -90,8 +90,8 @@ le moment). On introduit le sous-espace supplémentaire orthogonal \(W\) de
 
 Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
 \(u₀+ξ v+η w\) voisin du point d'équilibre \(u₀\), avec
-\(ξ, η\in\reals\) \guillemotleft{}petits\guillemotright{}, \(v\in V\) and
-\(w\in W\). On obtient alors, à l'ordre 4 en \(ξ\) et \(η\)
+\(ξ, η∈\reals\) \guillemotleft{}petits\guillemotright{}, \(v∈ V\) and
+\(w∈ W\). On obtient alors, à l'ordre 4 en \(ξ\) et \(η\)
 \begin{equation}
   \begin{aligned}[b]
     Δℰ ={}&
@@ -133,10 +133,10 @@ pour tous \(ξ\) et \(η\) suffisamment petits. En prenant tout d'abord
   ℰ_{,uuu}(v, v, v)=0
   \quad\text{et}\quad
   ℰ_{,uuuu}(v, v, v, v)≥0
-  \quad\text{pour tout}\quad v\in V.
+  \quad\text{pour tout}\quad v∈ V.
 \end{equation}
 
-En d'autres termes, s'il existe \(v\in V\) tel que
+En d'autres termes, s'il existe \(v∈ V\) tel que
 \(ℰ_{,uuu}(v, v, v)\neq0\) ou
 \(ℰ_{,uuuu}(v, v, v, v)<0\), alors l'équilibre est
 \emph{instable}. Les conditions précédentes ne sont pas suffisantes pour
@@ -153,22 +153,22 @@ et on obtient la condition nécessaire supplémentaire
   ℰ_{,uu}(v, v)+ℰ_{,uuu}(v, v, w)
   +\tfrac1{12}ℰ_{,uuuu}(v, v, v, v)≥0,
 \end{equation}
-pour tous \(v\in V\) et \(w\in W\). Pour \(v\in\ker\mathcal H\) fixé,
+pour tous \(v∈ V\) et \(w∈ W\). Pour \(v∈\ker\mathcal H\) fixé,
 l'expression précédente est minimale lorsque \(w\) satisfait le problème
 variationnel
 \begin{equation}
   \label{eq:20211109145224}
   2ℰ_{,uu}(w, \hat{w})+ℰ_{,uuu}(v, v, \hat{w})=0
   \quad\text{pour tout}\quad
-  \hat{w}\in W.
+  \hat{w}∈ W.
 \end{equation}
 
-Soit \(w_{ij}\in W\) l'unique solution du problème variationnel suivant
+Soit \(w_{ij}∈ W\) l'unique solution du problème variationnel suivant
 \begin{equation}
   \label{eq:20211221155859}
   2ℰ_{,uu}(w_{ij}, \hat{w})
   +ℰ_{,uuu}(v_i, v_j, \hat{w})=0
-  \quad\text{pour tout}\quad\hat{w}\in W.
+  \quad\text{pour tout}\quad\hat{w}∈ W.
 \end{equation}
 
 Alors, pour \(v=ξ^i v_i\), la solution du problème
@@ -179,7 +179,7 @@ valeur de \(v\), la condition~\eqref{eq:20211109145356} s'écrit
   -ℰ_{,uu}(w_{ij}, w_{kl})\bigr]
   ξ^iξ^jξ^kξ^l≥ 0,
 \end{equation}
-pour tous \(ξ_i, ξ_j, ξ_k, ξ_l\in\reals\). On peut montrer que
+pour tous \(ξ_i, ξ_j, ξ_k, ξ_l∈\reals\). On peut montrer que
 l'inégalité stricte est une condition \emph{suffisante} de stabilité.
 
 \section{Bifurcations}
@@ -187,7 +187,7 @@ l'inégalité stricte est une condition \emph{suffisante} de stabilité.
 Soit \(u^\ast(\lambda)\) la branche fondamentale. Par définition
 \begin{equation}
   ℰ_{,u}[u^\ast(\lambda), \lambda;\hat{u}]=0
-  \quad\text{pour tout}\quad\hat{u}\in U.
+  \quad\text{pour tout}\quad\hat{u}∈ U.
 \end{equation}
 
 Il sera commode d'introduire les notations suivantes
@@ -237,7 +237,7 @@ d'équilibre, c'est-à-dire que le résidu
 \(ℰ_{,u}[u(η), \lambda(η)]\) est nul. Le développement limité du
 résidu est établi au voisinage de \(η=0\) dans
 l'annexe~\ref{sec:20211112182000}. En écrivant que tous ses termes s'annulent,
-on trouve successivement, pour tout \(\hat{u}\in U\)
+on trouve successivement, pour tout \(\hat{u}∈ U\)
 \begin{gather}
   \label{eq:20211112182917}
   \mathcal H(u_1, \hat{u})=0,\\
@@ -255,7 +255,7 @@ on trouve successivement, pour tout \(\hat{u}\in U\)
   \end{aligned}
 \end{gather}
 
-On déduit de l'équation~\eqref{eq:20211112182917} que \(u_1\in V\). On pose
+On déduit de l'équation~\eqref{eq:20211112182917} que \(u_1∈ V\). On pose
 alors \(u_1=ξ_1^i v_i\). En prenant \(\hat{u}=v_i\),
 l'équation~\eqref{eq:20211112183220} s'écrit
 \begin{equation}
@@ -263,15 +263,15 @@ l'équation~\eqref{eq:20211112183220} s'écrit
 \end{equation}
 
 Pour le terme d'ordre 2, on introduit la décomposition~:
-\(u_2=ξ_2^iv_i+w_2\), où \(w_2\in W\). On a alors
+\(u_2=ξ_2^iv_i+w_2\), où \(w_2∈ W\). On a alors
 \(\mathcal H(u_2, \hat{u})=\mathcal H(w_2, \hat{u})\) et
 l'équation~\eqref{eq:20211112183220} s'écrit
 \begin{equation}
   \mathcal T(u_1, u_1, \hat{u})+2\lambda_1\dot{\mathcal H}(u_1, \hat{u})
   +2\mathcal H(w_2, \hat{u})=0,
 \end{equation}
-pour tout \(\hat{u}\in V\). En prenant la fonction test dans l'espace \(W\), on
-obtient le problème variationnel suivant~: trouver \(w_2\in W\) tel
+pour tout \(\hat{u}∈ V\). En prenant la fonction test dans l'espace \(W\), on
+obtient le problème variationnel suivant~: trouver \(w_2∈ W\) tel
 que\pdfmargincomment{Conflit de notations}
 \begin{equation}
   \label{eq:20211210131623}
@@ -279,12 +279,12 @@ que\pdfmargincomment{Conflit de notations}
   +2\lambda_1ξ_1^i\dot{\mathcal H}(v_i, \hat{w})
   +2\mathcal H(w_2, \hat{w})=0,
 \end{equation}
-pour tout \(\hat{w}\in W\). Soient \(w_i\in W\) les solutions des problèmes
+pour tout \(\hat{w}∈ W\). Soient \(w_i∈ W\) les solutions des problèmes
 variationnels suivants
 \begin{equation}
   \mathcal H(w_i, \hat{w})+\dot{\mathcal H}(v_i, \hat{w})=0,
 \end{equation}
-pour tout \(\hat{w}\in W\). La solution du problème~\eqref{eq:20211210131623}
+pour tout \(\hat{w}∈ W\). La solution du problème~\eqref{eq:20211210131623}
 s'obtient par simple combinaison linéaire des \(w_i\) et \(w_{ij}\) introduits
 précédemment par le problème variationnel~\eqref{eq:20211221155859}, de sorte
 que
@@ -320,7 +320,7 @@ On peut d'ores et déjà remarquer que, sur la branche fondamentale
 \end{equation}
 
 Dans ce qui suit, on supposera que \(\dot{\mathcal H}^\ast\neq 0\). Pour
-\(\hat{u}\in\ker\mathcal H^\ast\), l'égalité précédente s'écrit
+\(\hat{u}∈\ker\mathcal H^\ast\), l'égalité précédente s'écrit
 \begin{equation}
   \mathcal H(\hat{u}, \hat{u})
   =\bigl(\lambda-\lambda^\ast\bigr)\dot{\mathcal H}^\ast(\hat{u}, \hat{u})
@@ -349,7 +349,7 @@ Si \(\lambda_1=0\), alors on doit calculer \(\lambda_2\)
 Soit \(\mathcal B\) une forme bilinéaire symétrique, positive sur l'espace vectoriel
 \(V\). On définit son noyau \(\ker\mathcal B\) de la façon suivante
 \begin{equation}
-  \ker\mathcal B=\{u\in V|\mathcal B(u, u)=0\}.
+  \ker\mathcal B=\{u∈ V|\mathcal B(u, u)=0\}.
 \end{equation}
 
 \begin{theorem}
@@ -358,27 +358,27 @@ Soit \(\mathcal B\) une forme bilinéaire symétrique, positive sur l'espace vec
   \(V\).
 \end{theorem}
 \begin{proof}
-  Soient \(u, v\in\ker\mathcal B\), \(\alpha\in\reals\) et \(w=u+\alpha
-  v\). Montrons que \(w\in\ker\mathcal B\). Il suffit d'évaluer
+  Soient \(u, v∈\ker\mathcal B\), \(\alpha∈\reals\) et \(w=u+\alpha
+  v\). Montrons que \(w∈\ker\mathcal B\). Il suffit d'évaluer
   \(\mathcal B(w, w)\)
   \begin{equation}
     \mathcal B(w, w)=\mathcal B(u+\alpha v, u+\alpha v)=\mathcal B(u, u)+2\alpha\mathcal B(u, v)+\alpha^2\mathcal B(v, v),
   \end{equation}
   où l'on a tenu compte de la symétrie de \(\mathcal B\) pour écrire que
-  \(\mathcal B(u, v)=\mathcal B(v, u)\). Comme \(u, v\in\ker\mathcal B\), le
+  \(\mathcal B(u, v)=\mathcal B(v, u)\). Comme \(u, v∈\ker\mathcal B\), le
   premier et le dernier terme sont nuls, soit
   \(\mathcal B(w, w)=2\alpha\mathcal B(u, v)\). La forme bilinéaire étant
   positive, cette grandeur est positive, \emph{quelle que soit la valeur de
-    \(\alpha\in\reals\)}. On en déduit donc que \(\mathcal B(u, v)=0\), puis
+    \(\alpha∈\reals\)}. On en déduit donc que \(\mathcal B(u, v)=0\), puis
   que \(\mathcal B(w, w)=0\).
 \end{proof}
 
-Soit \(u\in V\). Alors
+Soit \(u∈ V\). Alors
 \begin{equation}
-  u\in\ker\mathcal B\quad\text{ssi}\quad\text{pour tout }v\in V, \mathcal B(u, v)=0.
+  u∈\ker\mathcal B\quad\text{ssi}\quad\text{pour tout }v∈ V, \mathcal B(u, v)=0.
 \end{equation}
 \begin{proof}
-  Soient \(u\in\ker\mathcal B\), \(v\in V\) et \(\alpha\in\reals\). Comme
+  Soient \(u∈\ker\mathcal B\), \(v∈ V\) et \(\alpha∈\reals\). Comme
   précédemment, on écrit que \(\mathcal B(w, w)≥0\), avec \(w=\alpha u+v\)
   \begin{equation}
     \mathcal B(w, w)=2\alpha\mathcal B(u, v)+\mathcal B(v, v)≥0,
@@ -387,7 +387,7 @@ Soit \(u\in V\). Alors
   précédente, affine en \(\alpha\), a un signe constant. Le terme linéaire en
   \(\alpha\) est donc nul, soit \(\mathcal B(u, v)=0\).
 
-  Réciproquement, si \(\mathcal B(u, v)=0\) pour tout \(v\in V\), alors
+  Réciproquement, si \(\mathcal B(u, v)=0\) pour tout \(v∈ V\), alors
   \(\mathcal B(u, u)=0\) (en prenant \(v=u\)).
 \end{proof}
 
@@ -472,7 +472,7 @@ où \(F\) et ses dérivées sont évaluées en \((0, λ₀)\).
 \label{sec:20211112182000}
 
 Soit \(f(η)=ℰ_{,u}(u, \lambda)(\hat{u})\) le \emph{résidu}
-(\(\hat{u}\in V\) est arbitraire). Les équations permettant de déterminer les
+(\(\hat{u}∈ V\) est arbitraire). Les équations permettant de déterminer les
 coefficients des développements~\eqref{eq:20211112155446} et
 \eqref{eq:20211112113028} sont obtenues en écrivant que \(f\) et ses dérivées
 sont nulles en \(η=0\). En considérant temporairement \(η\) et
@@ -601,7 +601,7 @@ l'expression de la dérivée troisième de \(f\) en \(η=0\)
 \label{sec:20211115081016}
 
 Le principe du calcul est le même que dans
-l'annexe~\ref{sec:20211112182000}. Pour \(\hat{u}, \hat{v}\in V\), on introduit
+l'annexe~\ref{sec:20211112182000}. Pour \(\hat{u}, \hat{v}∈ V\), on introduit
 \(h(η)=ℰ_{,uu}(u, \lambda)(\hat{u}, \hat{v})\), où \(\lambda\) et
 \(u\) sont données en fonction de \(η\) par les
 expressions~\eqref{eq:20211115075817} et \eqref{eq:20211115075835}.
@@ -704,13 +704,13 @@ l'expression de la dérivée seconde de h en \(η=0\)
 
 \subsection{Développement limité des valeurs propres et vecteurs propres de la Hessienne}
 
-On cherche les vecteurs propres \(v\in V\) et valeurs propres
-\(\alpha\in\reals\) de la Hessienne
+On cherche les vecteurs propres \(v∈ V\) et valeurs propres
+\(\alpha∈\reals\) de la Hessienne
 \begin{equation}
   \label{eq:20211115082122}
   ℰ_{,uu}[u(η), \lambda(η)](v, \hat{u})
   =\alpha〈 v, \hat{u}〉
-  \quad\text{pour tout}\quad\hat{u}\in V.
+  \quad\text{pour tout}\quad\hat{u}∈ V.
 \end{equation}
 
 On cherche les développements limités à l'ordre 1 en \(η\) de \(v\) et \(\alpha\)
@@ -743,7 +743,7 @@ problème~\eqref{eq:20211115082122}
 On obtient le problème variationnel d'ordre 0
 \begin{equation}
   \mathcal H^\ast(v_0, \hat{w})=\alpha_0〈 v_0, \hat{w}〉
-  \quad\text{pour tout}\quad\hat{w}\in V,
+  \quad\text{pour tout}\quad\hat{w}∈ V,
 \end{equation}
 qui montre que \(v_0\) est le vecteur propre de \(\mathcal H^\ast\) associé à
 la valeur propre \(\alpha_0\). Si \(\alpha_0\neq 0\), \(\mathcal H^\ast\) étant
@@ -751,14 +751,14 @@ positive par hypothèse, on a nécessairement \(\alpha_0>0\), et la valeur propr
 de la hessienne est positive.
 
 On considère maintenant le cas où \(\alpha_0\), c'est-à-dire que
-\(v_0\in\ker\mathcal H^\ast\). En prenant \(\hat{w}\in\ker\mathcal H^\ast\), on
+\(v_0∈\ker\mathcal H^\ast\). En prenant \(\hat{w}∈\ker\mathcal H^\ast\), on
 obtient alors le problème variationnel d'ordre 1
 \begin{equation}
   \mathcal T^\ast(u_1, v_0, \hat{w})
   +\lambda_1\dot{\mathcal H}^\ast(v_0, \hat{w})
   =\alpha_1〈v_0, \hat{w}〉
   \quad\text{pour tout}\quad
-  \hat{w}\in\ker\mathcal H^\ast.
+  \hat{w}∈\ker\mathcal H^\ast.
 \end{equation}
 
 En posant \(u_1=ξ_ia_i\) et \(v_0=\chi_j a_j\), on obtient l'équation

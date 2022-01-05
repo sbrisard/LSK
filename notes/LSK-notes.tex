@@ -79,7 +79,7 @@ condition \emph{suffisante} de stabilité.
 On s'intéresse ici au cas où \(ℰ_{,uu}(u₀)\) est positive, sans être
 définie positive~; soit \(V\) son noyau, qui forme un sous-espace vectoriel de
 \(U\). On suppose que \(V\) est de dimension finie \(m=\dim V\). Soit
-\(\bigl(v₁, \ldots, v_m\bigr)\) une base orthonormée de ce noyau pour le
+\(\bigl(v₁, \ldots, vₘ\bigr)\) une base orthonormée de ce noyau pour le
 produit scalaire \(〈•,•〉\) (qui n'est pas précisé pour
 le moment). On introduit le sous-espace supplémentaire orthogonal \(W\) de
 \(V\) dans \(U\)
@@ -152,7 +152,7 @@ et on obtient la condition nécessaire supplémentaire
   ℰ_{,uu}(v, v)+ℰ_{,uuu}(v, v, w)
   +\tfrac1{12}ℰ_{,uuuu}(v, v, v, v)≥0,
 \end{equation}
-pour tous \(v∈ V\) et \(w∈ W\). Pour \(v∈\ker\mathcal H\) fixé,
+pour tous \(v∈ V\) et \(w∈ W\). Pour \(v∈\kerℋ\) fixé,
 l'expression précédente est minimale lorsque \(w\) satisfait le problème
 variationnel
 \begin{equation}
@@ -191,31 +191,31 @@ Soit \(u^\ast(\lambda)\) la branche fondamentale. Par définition
 
 Il sera commode d'introduire les notations suivantes
 \begin{align}
-  \mathcal H(\lambda)&=ℰ_{,uu}[u^\ast(\lambda), \lambda],\\
+  ℋ(\lambda)&=ℰ_{,uu}[u^\ast(\lambda), \lambda],\\
   \mathcal T(\lambda)&=ℰ_{,uuu}[u^\ast(\lambda), \lambda],\\
   \mathcal Q(\lambda)&=ℰ_{,uuuu}[u^\ast(\lambda), \lambda].
 \end{align}
 
-Noter que \(\mathcal H\), \(\mathcal T\) et \(\mathcal Q\) sont des formes bi-,
+Noter que \(ℋ\), \(\mathcal T\) et \(\mathcal Q\) sont des formes bi-,
 tri- et quadri-linéaires, respectivement. L'application de ces formes à des
-éléments de \(U\) sera notée \(\mathcal H(\lambda; u, v)\),
+éléments de \(U\) sera notée \(ℋ(\lambda; u, v)\),
 \(\mathcal T(\lambda; u, v, w)\), etc\dots. La dérivée de ces formes par
 rapport à \(\lambda\) sera notée à l'aide d'un point supérieur
-(\(\dot{\mathcal H}\), \(\dot{\mathcal T}\), \dots).
+(\(\dot{ℋ}\), \(\dot{\mathcal T}\), \dots).
 
 On suppose que l'équilibre est stable pour des valeurs suffisamment petites de
-\(\lambda\). Plus précisément, on suppose que \(\mathcal H(\lambda)\) est
+\(\lambda\). Plus précisément, on suppose que \(ℋ(\lambda)\) est
 définie positive pour tout \(\lambda<\lambda_0\). Pour \(\lambda=\lambda_0\),
-la forme quadratique \(\mathcal H(\lambda_0)\) n'est plus que positive. En
+la forme quadratique \(ℋ(\lambda_0)\) n'est plus que positive. En
 notant \(u₀=u^\ast(\lambda_0)\) la position d'équilibre obtenue pour la valeur
 critique \(\lambda_0\) du paramètre de chargement \(\lambda\), on s'intéresse à
 toutes les courbes d'équilibre qui passent par le point \((u₀, \lambda_0)\).
 
-Noter que dans ce qui suit, on convient que les formes \(\mathcal H\),
+Noter que dans ce qui suit, on convient que les formes \(ℋ\),
 \(\mathcal T\) et \(\mathcal Q\) sont implicitement évaluées en \(\lambda_0\)
 lorsque \(\lambda\) n'est pas rappelé : ainsi, on notera
-\(\mathcal H(•, •)\) plutôt que
-\(\mathcal H(\lambda_0, •, •)\).
+\(ℋ(•, •)\) plutôt que
+\(ℋ(\lambda_0, •, •)\).
 
 On écrit toute courbe d'équilibre passant par le point \((u₀, \lambda_0)\)
 sous la forme paramétrique suivante
@@ -239,18 +239,18 @@ l'annexe~\ref{sec:20211112182000}. En écrivant que tous ses termes s'annulent,
 on trouve successivement, pour tout \(\hat{u}∈ U\)
 \begin{gather}
   \label{eq:20211112182917}
-  \mathcal H(u₁, \hat{u})=0,\\
+  ℋ(u₁, \hat{u})=0,\\
   \label{eq:20211112183220}
   \mathcal T(u₁, u₁, \hat{u})
-  +2\lambda₁\dot{\mathcal H}(u₁, \hat{u})
-  +2\mathcal H(u₂, \hat{u})=0,\\
+  +2\lambda₁\dot{ℋ}(u₁, \hat{u})
+  +2ℋ(u₂, \hat{u})=0,\\
   \begin{aligned}[b]
     \mathcal Q(u₁, u₁, u₁, \hat{u})
-    +6\mathcal T(u₁, u₂, \hat{u})+6\mathcal H(u₃, \hat{u})&\\
+    +6\mathcal T(u₁, u₂, \hat{u})+6ℋ(u₃, \hat{u})&\\
     +3\lambda₁\bigl[\dot{\mathcal T}(u₁, u₁, \hat{u})
-    +2\dot{\mathcal H}(u₂, \hat{u})\bigr]
-    +3\lambda₁²\ddot{\mathcal H}(u₁, \hat{u})&\\
-    +6\lambda₂\dot{\mathcal H}(u₁, \hat{u})&=0.
+    +2\dot{ℋ}(u₂, \hat{u})\bigr]
+    +3\lambda₁²\ddot{ℋ}(u₁, \hat{u})&\\
+    +6\lambda₂\dot{ℋ}(u₁, \hat{u})&=0.
   \end{aligned}
 \end{gather}
 
@@ -258,16 +258,16 @@ On déduit de l'équation~\eqref{eq:20211112182917} que \(u₁∈ V\). On pose
 alors \(u₁=ξ₁^i v_i\). En prenant \(\hat{u}=v_i\),
 l'équation~\eqref{eq:20211112183220} s'écrit
 \begin{equation}
-  \mathcal T_{ijk}ξ₁^jξ₁^k+2\lambda₁\dot{\mathcal H}_{ij}ξ₁^j=0.
+  \mathcal T_{ijk}ξ₁^jξ₁^k+2\lambda₁\dot{ℋ}_{ij}ξ₁^j=0.
 \end{equation}
 
 Pour le terme d'ordre 2, on introduit la décomposition~:
 \(u₂=ξ₂^iv_i+w₂\), où \(w₂∈ W\). On a alors
-\(\mathcal H(u₂, \hat{u})=\mathcal H(w₂, \hat{u})\) et
+\(ℋ(u₂, \hat{u})=ℋ(w₂, \hat{u})\) et
 l'équation~\eqref{eq:20211112183220} s'écrit
 \begin{equation}
-  \mathcal T(u₁, u₁, \hat{u})+2\lambda₁\dot{\mathcal H}(u₁, \hat{u})
-  +2\mathcal H(w₂, \hat{u})=0,
+  \mathcal T(u₁, u₁, \hat{u})+2\lambda₁\dot{ℋ}(u₁, \hat{u})
+  +2ℋ(w₂, \hat{u})=0,
 \end{equation}
 pour tout \(\hat{u}∈ V\). En prenant la fonction test dans l'espace \(W\), on
 obtient le problème variationnel suivant~: trouver \(w₂∈ W\) tel
@@ -275,13 +275,13 @@ que\pdfmargincomment{Conflit de notations}
 \begin{equation}
   \label{eq:20211210131623}
   ξ₁^iξ₁^j\mathcal T(v_i, v_j, \hat{w})
-  +2\lambda₁ξ₁^i\dot{\mathcal H}(v_i, \hat{w})
-  +2\mathcal H(w₂, \hat{w})=0,
+  +2\lambda₁ξ₁^i\dot{ℋ}(v_i, \hat{w})
+  +2ℋ(w₂, \hat{w})=0,
 \end{equation}
 pour tout \(\hat{w}∈ W\). Soient \(w_i∈ W\) les solutions des problèmes
 variationnels suivants
 \begin{equation}
-  \mathcal H(w_i, \hat{w})+\dot{\mathcal H}(v_i, \hat{w})=0,
+  ℋ(w_i, \hat{w})+\dot{ℋ}(v_i, \hat{w})=0,
 \end{equation}
 pour tout \(\hat{w}∈ W\). La solution du problème~\eqref{eq:20211210131623}
 s'obtient par simple combinaison linéaire des \(w_i\) et \(w_{ij}\) introduits
@@ -297,38 +297,38 @@ branche bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
   \label{eq:20211115082025}
   \begin{aligned}[b]
     ℰ_{,uu}[u(η), \lambda(η)](\hat{u}, \hat{v})
-    ={}&\mathcal H^\ast(\hat{u}, \hat{v})
+    ={}&ℋ^\ast(\hat{u}, \hat{v})
     +η\bigl[\mathcal T^\ast(u₁, \hat{u}, \hat{v})
-    +\lambda₁\dot{\mathcal H}^\ast(\hat{u}, \hat{v})\bigr]\\
+    +\lambda₁\dot{ℋ}^\ast(\hat{u}, \hat{v})\bigr]\\
     &+\tfrac12η²\bigl[\mathcal Q^\ast(u₁, u₁, \hat{u}, \hat{v})
     +2\lambda₁\dot{\mathcal T}^\ast(u₁, \hat{u}, \hat{v})\\
-    &+\lambda₁²\ddot{\mathcal H}^\ast(\hat{u}, \hat{v})
+    &+\lambda₁²\ddot{ℋ}^\ast(\hat{u}, \hat{v})
     +\mathcal T^\ast(u₂, \hat{u}, \hat{v})
-    +\lambda₂\dot{\mathcal H}^\ast(\hat{u}, \hat{v})\bigr]+o(η²).
+    +\lambda₂\dot{ℋ}^\ast(\hat{u}, \hat{v})\bigr]+o(η²).
   \end{aligned}
 \end{equation}
 
 On peut d'ores et déjà remarquer que, sur la branche fondamentale
 (\(u₁=u₂=0\)), en prenant \(η=\lambda-\lambda^\ast\) (\(\lambda₁=1\))
 \begin{equation}
-  \mathcal H(\hat{u}, \hat{v})
+  ℋ(\hat{u}, \hat{v})
   =ℰ_{,uu}[u₀(\lambda), \lambda](\hat{u}, \hat{v})
-  =\mathcal H^\ast(\hat{u}, \hat{v})
-  +\bigl(\lambda-\lambda^\ast\bigr)\dot{\mathcal H}^\ast(\hat{u}, \hat{v})
+  =ℋ^\ast(\hat{u}, \hat{v})
+  +\bigl(\lambda-\lambda^\ast\bigr)\dot{ℋ}^\ast(\hat{u}, \hat{v})
   +o(\lambda-\lambda^\ast).
 \end{equation}
 
-Dans ce qui suit, on supposera que \(\dot{\mathcal H}^\ast≠ 0\). Pour
-\(\hat{u}∈\ker\mathcal H^\ast\), l'égalité précédente s'écrit
+Dans ce qui suit, on supposera que \(\dot{ℋ}^\ast≠ 0\). Pour
+\(\hat{u}∈\kerℋ^\ast\), l'égalité précédente s'écrit
 \begin{equation}
-  \mathcal H(\hat{u}, \hat{u})
-  =\bigl(\lambda-\lambda^\ast\bigr)\dot{\mathcal H}^\ast(\hat{u}, \hat{u})
+  ℋ(\hat{u}, \hat{u})
+  =\bigl(\lambda-\lambda^\ast\bigr)\dot{ℋ}^\ast(\hat{u}, \hat{u})
   +o(\lambda-\lambda^\ast).
 \end{equation}
 
 Comme la branche fondamentale est stable pour \(\lambda<\lambda^\ast\), on doit
-avoir \(\dot{\mathcal H}^\ast(\hat{u}, \hat{u})<0\). La forme quadratique
-\(\dot{\mathcal H}^\ast\) est définie négative sur \(\ker\mathcal H^\ast\).
+avoir \(\dot{ℋ}^\ast(\hat{u}, \hat{u})<0\). La forme quadratique
+\(\dot{ℋ}^\ast\) est définie négative sur \(\kerℋ^\ast\).
 
 
 Il faut alors distinguer deux cas. Si la branche trouvée est telle que
@@ -337,8 +337,8 @@ Il faut alors distinguer deux cas. Si la branche trouvée est telle que
 Si \(\lambda₁=0\), alors on doit calculer \(\lambda₂\)
 \begin{equation}
   \mathcal Q^\ast(u₁, u₁, u₁, \hat{u})
-  +3\mathcal T^\ast(u₁, u₂, \hat{u})+\mathcal H^\ast(u₃, \hat{u})
-  +3\lambda₂\dot{\mathcal H}^\ast(u₁, \hat{u})=0.
+  +3\mathcal T^\ast(u₁, u₂, \hat{u})+ℋ^\ast(u₃, \hat{u})
+  +3\lambda₂\dot{ℋ}^\ast(u₁, \hat{u})=0.
 \end{equation}
 
 \appendix
@@ -492,7 +492,7 @@ avec
 soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211112165323}
-  \partial_η F(0, \lambda)=\mathcal H(u₁, \hat{u}).
+  \partial_η F(0, \lambda)=ℋ(u₁, \hat{u}).
 \end{equation}
 
 Par ailleurs, puisque \(\lambda\mapsto u₀(\lambda)\) est une courbe d'équilibre, on a
@@ -506,7 +506,7 @@ Par ailleurs, puisque \(\lambda\mapsto u₀(\lambda)\) est une courbe d'équilib
 On déduit de ce qui précède que
 \begin{equation}
   \label{eq:20211112182300}
-  f'(0)=\mathcal H(u₁, \hat{u}).
+  f'(0)=ℋ(u₁, \hat{u}).
 \end{equation}
 
 En dérivant la relation~\eqref{eq:20211112162417}, on obtient maintenant l'expression de la dérivée seconde de \(f\)
@@ -526,14 +526,14 @@ soit, en \(η=0\)
 \begin{equation}
   \label{eq:20211112165830}
   \partial_{ηη}²F(0, \lambda)=\mathcal T(u₁, u₁, \hat{u})
-  +2\mathcal H(u₂, \hat{u}).
+  +2ℋ(u₂, \hat{u}).
 \end{equation}
 
 Par ailleurs, \(\partial_{η\lambda}²F(0, \lambda)\) s'obtient par simple
 dérivation de la relation~\eqref{eq:20211112165323}
 \begin{equation}
   \label{eq:20211112165843}
-  \partial_{η\lambda}²F(0, \lambda)=\dot{\mathcal H}(u₁, \hat{u}).
+  \partial_{η\lambda}²F(0, \lambda)=\dot{ℋ}(u₁, \hat{u}).
 \end{equation}
 
 En rassemblant les expressions~\eqref{eq:20211112165810},
@@ -542,8 +542,8 @@ de la dérivée seconde de \(f\) en 0
 \begin{equation}
   \label{eq:20211112182333}
   f''(0)=\mathcal T(u₁, u₁, \hat{u})
-  +2\lambda₁\dot{\mathcal H}(u₁, \hat{u})
-  +2\mathcal H(u₂, \hat{u}).
+  +2\lambda₁\dot{ℋ}(u₁, \hat{u})
+  +2ℋ(u₂, \hat{u}).
 \end{equation}
 
 On obtient finalement l'expression de \(f'''(η)\) en dérivant la
@@ -556,10 +556,10 @@ et \eqref{eq:20211112165843}, on trouve par ailleurs
 \begin{equation}
   \label{eq:20211112173247}
   \partial_{ηη\lambda}³F(0, \lambda)
-  =\dot{\mathcal T}(u₁, u₁, \hat{u})+2\dot{\mathcal H}(u₂, \hat{u})
+  =\dot{\mathcal T}(u₁, u₁, \hat{u})+2\dot{ℋ}(u₂, \hat{u})
   \quad\text{et}\quad
   \partial_{η\lambda\lambda}³F(0, \lambda)
-  =\ddot{\mathcal H}(u₁, \hat{u}).
+  =\ddot{ℋ}(u₁, \hat{u}).
 \end{equation}
 
 Finalement, en dérivant l'expression~\eqref{eq:20211112172446} par rapport à
@@ -578,7 +578,7 @@ soit, en \(η=0\)
   \partial_{ηηη}³F(0, \lambda)=
   \mathcal Q(u₁, u₁, u₁, \hat{u})
   +6\mathcal T(u₁, u₂, \hat{u})
-  +6\mathcal H(u₃, \hat{u}).
+  +6ℋ(u₃, \hat{u}).
 \end{equation}
 
 En regroupant les relations~\eqref{eq:20211112173223},
@@ -588,11 +588,11 @@ l'expression de la dérivée troisième de \(f\) en \(η=0\)
 \label{eq:20211112182402}
   \begin{aligned}[b]
     f'''(0)={}&\mathcal Q(u₁, u₁, u₁, \hat{u})
-    +6\mathcal T(u₁, u₂, \hat{u})+6\mathcal H(u₃, \hat{u})\\
+    +6\mathcal T(u₁, u₂, \hat{u})+6ℋ(u₃, \hat{u})\\
     &+3\lambda₁\bigl[\dot{\mathcal T}(u₁, u₁, \hat{u})
-    +2\dot{\mathcal H}(u₂, \hat{u})\bigr]
-    +3\lambda₁²\ddot{\mathcal H}(u₁, \hat{u})\\
-    &+6\lambda₂\dot{\mathcal H}(u₁, \hat{u}).
+    +2\dot{ℋ}(u₂, \hat{u})\bigr]
+    +3\lambda₁²\ddot{ℋ}(u₁, \hat{u})\\
+    &+6\lambda₂\dot{ℋ}(u₁, \hat{u}).
   \end{aligned}
 \end{equation}
 
@@ -619,7 +619,7 @@ de sorte que
   h(η)=H[η, \lambda^\ast+\Lambda(η)].
 \end{equation}
 
-On observe tout d'abord que \(h(0)=\mathcal H^\ast\). Par ailleurs, en dérivant
+On observe tout d'abord que \(h(0)=ℋ^\ast\). Par ailleurs, en dérivant
 l'expression~\eqref{eq:20211114104326} par rapport à \(η\)
 \begin{equation}
   \label{eq:20211114110210}
@@ -640,9 +640,9 @@ soit, en \(η=0\)
 Par ailleurs
 \begin{equation}
   \label{eq:20211114110245}
-  H(0, \lambda)=\mathcal H(\hat{u}, \hat{v})
+  H(0, \lambda)=ℋ(\hat{u}, \hat{v})
   \quad\text{donc}\quad
-  \partial_\lambda H(0, \lambda)=\dot{\mathcal H}(\hat{u}, \hat{v}).
+  \partial_\lambda H(0, \lambda)=\dot{ℋ}(\hat{u}, \hat{v}).
 \end{equation}
 
 En regroupant les expressions~\eqref{eq:20211114110210},
@@ -650,7 +650,7 @@ En regroupant les expressions~\eqref{eq:20211114110210},
 \(h\) en 0
 \begin{equation}
   h'(0)=\mathcal T^\ast(u₁, \hat{u}, \hat{v})
-  +\lambda₁\dot{\mathcal H}^\ast(\hat{u}, \hat{v}).
+  +\lambda₁\dot{ℋ}^\ast(\hat{u}, \hat{v}).
 \end{equation}
 
 La dérivation de l'expression~\eqref{eq:20211114110210} par rapport à \(η\)
@@ -685,7 +685,7 @@ rapport à \(\lambda\), on obtient
   \label{eq:20211114111740}
   \partial_{η\lambda}²H(0, \lambda)=\dot{\mathcal T}(u₁, \hat{u}, \hat{v})
   \quad\text{et}\quad
-  \partial_{\lambda\lambda}²H(0, \lambda)=\ddot{\mathcal H}(\hat{u}, \hat{v}).
+  \partial_{\lambda\lambda}²H(0, \lambda)=\ddot{ℋ}(\hat{u}, \hat{v}).
 \end{equation}
 
 Finalement, en substituant \eqref{eq:20211114110245}, \eqref{eq:20211114111716}
@@ -695,9 +695,9 @@ l'expression de la dérivée seconde de h en \(η=0\)
   \begin{aligned}[b]
     h''(0)={}&\mathcal Q^\ast(u₁, u₁, \hat{u}, \hat{v})
     +2\lambda₁\dot{\mathcal T}^\ast(u₁, \hat{u}, \hat{v})
-    +\lambda₁²\ddot{\mathcal H}^\ast(\hat{u}, \hat{v})\\
+    +\lambda₁²\ddot{ℋ}^\ast(\hat{u}, \hat{v})\\
     &+2\mathcal T^\ast(u₂, \hat{u}, \hat{v})
-    +2\lambda₂\dot{\mathcal H}^\ast(\hat{u}, \hat{v}).
+    +2\lambda₂\dot{ℋ}^\ast(\hat{u}, \hat{v}).
   \end{aligned}
 \end{equation}
 
@@ -726,10 +726,10 @@ problème~\eqref{eq:20211115082122}
 \begin{equation}
   \begin{aligned}[b]
     ℰ_{,uu}[u(η), \lambda(η)](v, \hat{w})={}
-    &\mathcal H^\ast(v_0, \hat{w})
+    &ℋ^\ast(v_0, \hat{w})
     +η\bigl[\mathcal T^\ast(u₁, v_0, \hat{w})
-    +\lambda₁\dot{\mathcal H}^\ast(v_0, \hat{w})\\
-    &+\mathcal H^\ast(v₁, \hat{w})\bigr]+o(η)
+    +\lambda₁\dot{ℋ}^\ast(v_0, \hat{w})\\
+    &+ℋ^\ast(v₁, \hat{w})\bigr]+o(η)
   \end{aligned}
 \end{equation}
 
@@ -741,32 +741,32 @@ problème~\eqref{eq:20211115082122}
 
 On obtient le problème variationnel d'ordre 0
 \begin{equation}
-  \mathcal H^\ast(v_0, \hat{w})=\alpha_0〈 v_0, \hat{w}〉
+  ℋ^\ast(v_0, \hat{w})=\alpha_0〈 v_0, \hat{w}〉
   \quad\text{pour tout}\quad\hat{w}∈ V,
 \end{equation}
-qui montre que \(v_0\) est le vecteur propre de \(\mathcal H^\ast\) associé à
-la valeur propre \(\alpha_0\). Si \(\alpha_0≠ 0\), \(\mathcal H^\ast\) étant
+qui montre que \(v_0\) est le vecteur propre de \(ℋ^\ast\) associé à
+la valeur propre \(\alpha_0\). Si \(\alpha_0≠ 0\), \(ℋ^\ast\) étant
 positive par hypothèse, on a nécessairement \(\alpha_0>0\), et la valeur propre
 de la hessienne est positive.
 
 On considère maintenant le cas où \(\alpha_0\), c'est-à-dire que
-\(v_0∈\ker\mathcal H^\ast\). En prenant \(\hat{w}∈\ker\mathcal H^\ast\), on
+\(v_0∈\kerℋ^\ast\). En prenant \(\hat{w}∈\kerℋ^\ast\), on
 obtient alors le problème variationnel d'ordre 1
 \begin{equation}
   \mathcal T^\ast(u₁, v_0, \hat{w})
-  +\lambda₁\dot{\mathcal H}^\ast(v_0, \hat{w})
+  +\lambda₁\dot{ℋ}^\ast(v_0, \hat{w})
   =\alpha₁〈v_0, \hat{w}〉
   \quad\text{pour tout}\quad
-  \hat{w}∈\ker\mathcal H^\ast.
+  \hat{w}∈\kerℋ^\ast.
 \end{equation}
 
 En posant \(u₁=ξ_ia_i\) et \(v_0=\chi_j a_j\), on obtient l'équation
 \begin{equation}
-  \bigl(\mathcal T_{ijk}^\astξ_k+\lambda₁\dot{\mathcal H}_{ij}^\ast\bigr)\chi_j
+  \bigl(\mathcal T_{ijk}^\astξ_k+\lambda₁\dot{ℋ}_{ij}^\ast\bigr)\chi_j
   =\alpha₁\chi_i,
 \end{equation}
 qui est un problème aux valeurs propres pour la matrice symétrique
-\((\mathcal T_{ijk}^\astξ_k+\lambda₁\dot{\mathcal H}_{ij}^\ast)_{1≤i,
+\((\mathcal T_{ijk}^\astξ_k+\lambda₁\dot{ℋ}_{ij}^\ast)_{1≤i,
   j≤m}\)
 
 

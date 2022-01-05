@@ -30,7 +30,6 @@
 \setmathfont{XITS Math}
 
 \newcommand{\D}{\mathrm{d}}
-\newcommand{\LandauO}{\mathcal{O}}
 \newcommand{\reals}{\mathbb{R}}
 \DeclareMathOperator{\vect}{vect}
 
@@ -99,7 +98,7 @@ Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
     ={}&\tfrac12ℰ_{,uu}(u₀;ξ v+η w, ξ v+η w)
     +\tfrac16ℰ_{,uuu}(u₀;ξ v+η w, ξ v+η w, ξ v+η w)\\
     &+\tfrac1{24}ℰ_{,uuuu}(u₀;ξ v+η w, ξ v+η w, ξ v+η w,
-    ξ v+η w)+\LandauO\bigl(\bigl(ξ^2+η^2\bigr)^2\bigr),
+    ξ v+η w)+𝒪\bigl(\bigl(ξ^2+η^2\bigr)^2\bigr),
   \end{aligned}
 \end{equation}
 où le terme linéaire a été omis puisque \(u\) est un point critique de
@@ -119,7 +118,7 @@ différentielles successives de l'énergie \(ℰ\), ainsi que du fait que
     &+\tfrac14ξ^2η^2ℰ_{,uuuu}(v, v, w, w)
     +\tfrac16ξη^3ℰ_{,uuuu}(v, w, w, w)\\
     &+\tfrac1{24}η^4ℰ_{,uuuu}(w, w, w, w)
-    +\LandauO\bigl(\bigl(ξ^2+η^2\bigr)^2\bigr),
+    +𝒪\bigl(\bigl(ξ^2+η^2\bigr)^2\bigr),
   \end{aligned}
 \end{equation}
 où l'on convient que toutes les différentielles de \(ℰ\) sont évaluées

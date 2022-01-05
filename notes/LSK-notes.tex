@@ -356,18 +356,18 @@ Soit \(ℬ\) une forme bilinéaire symétrique, positive sur l'espace vectoriel
   \(V\).
 \end{theorem}
 \begin{proof}
-  Soient \(u, v∈\kerℬ\), \(\alpha∈ℝ\) et \(w=u+\alpha
+  Soient \(u, v∈\kerℬ\), \(α∈ℝ\) et \(w=u+α
   v\). Montrons que \(w∈\kerℬ\). Il suffit d'évaluer
   \(ℬ(w, w)\)
   \begin{equation}
-    ℬ(w, w)=ℬ(u+\alpha v, u+\alpha v)=ℬ(u, u)+2\alphaℬ(u, v)+\alpha²ℬ(v, v),
+    ℬ(w, w)=ℬ(u+α v, u+α v)=ℬ(u, u)+2αℬ(u, v)+α²ℬ(v, v),
   \end{equation}
   où l'on a tenu compte de la symétrie de \(ℬ\) pour écrire que
   \(ℬ(u, v)=ℬ(v, u)\). Comme \(u, v∈\kerℬ\), le
   premier et le dernier terme sont nuls, soit
-  \(ℬ(w, w)=2\alphaℬ(u, v)\). La forme bilinéaire étant
+  \(ℬ(w, w)=2αℬ(u, v)\). La forme bilinéaire étant
   positive, cette grandeur est positive, \emph{quelle que soit la valeur de
-    \(\alpha∈ℝ\)}. On en déduit donc que \(ℬ(u, v)=0\), puis
+    \(α∈ℝ\)}. On en déduit donc que \(ℬ(u, v)=0\), puis
   que \(ℬ(w, w)=0\).
 \end{proof}
 
@@ -376,14 +376,14 @@ Soit \(u∈ V\). Alors
   u∈\kerℬ\quad\text{ssi}\quad\text{pour tout }v∈ V, ℬ(u, v)=0.
 \end{equation}
 \begin{proof}
-  Soient \(u∈\kerℬ\), \(v∈ V\) et \(\alpha∈ℝ\). Comme
-  précédemment, on écrit que \(ℬ(w, w)≥0\), avec \(w=\alpha u+v\)
+  Soient \(u∈\kerℬ\), \(v∈ V\) et \(α∈ℝ\). Comme
+  précédemment, on écrit que \(ℬ(w, w)≥0\), avec \(w=α u+v\)
   \begin{equation}
-    ℬ(w, w)=2\alphaℬ(u, v)+ℬ(v, v)≥0,
+    ℬ(w, w)=2αℬ(u, v)+ℬ(v, v)≥0,
   \end{equation}
   où l'on a tenu compte de ce que \(ℬ(u, u)=0\). L'expression
-  précédente, affine en \(\alpha\), a un signe constant. Le terme linéaire en
-  \(\alpha\) est donc nul, soit \(ℬ(u, v)=0\).
+  précédente, affine en \(α\), a un signe constant. Le terme linéaire en
+  \(α\) est donc nul, soit \(ℬ(u, v)=0\).
 
   Réciproquement, si \(ℬ(u, v)=0\) pour tout \(v∈ V\), alors
   \(ℬ(u, u)=0\) (en prenant \(v=u\)).
@@ -703,20 +703,20 @@ l'expression de la dérivée seconde de h en \(η=0\)
 \subsection{Développement limité des valeurs propres et vecteurs propres de la Hessienne}
 
 On cherche les vecteurs propres \(v∈ V\) et valeurs propres
-\(\alpha∈ℝ\) de la Hessienne
+\(α∈ℝ\) de la Hessienne
 \begin{equation}
   \label{eq:20211115082122}
   ℰ_{,uu}[u(η), λ(η)](v, \hat{u})
-  =\alpha〈 v, \hat{u}〉
+  =α〈 v, \hat{u}〉
   \quad\text{pour tout}\quad\hat{u}∈ V.
 \end{equation}
 
-On cherche les développements limités à l'ordre 1 en \(η\) de \(v\) et \(\alpha\)
+On cherche les développements limités à l'ordre 1 en \(η\) de \(v\) et \(α\)
 \begin{equation}
   \label{eq:20211115082037}
   v = v₀+η v₁+o(η)
   \quad\text{et}\quad
-  \alpha=\alpha₀+η\alpha₁+o(η)
+  α=α₀+ηα₁+o(η)
 \end{equation}
 
 Les développements limités~\eqref{eq:20211115082025} et
@@ -733,28 +733,28 @@ problème~\eqref{eq:20211115082122}
 \end{equation}
 
 \begin{equation}
-  \alpha〈 v, \hat{w}〉=\alpha₀〈 v₀, \hat{w}〉
-  +η\bigl(\alpha₁〈 v₀, \hat{w}〉+\alpha₀〈 v₁, \hat{w}〉\bigr)
+  α〈 v, \hat{w}〉=α₀〈 v₀, \hat{w}〉
+  +η\bigl(α₁〈 v₀, \hat{w}〉+α₀〈 v₁, \hat{w}〉\bigr)
   +o(η).
 \end{equation}
 
 On obtient le problème variationnel d'ordre 0
 \begin{equation}
-  ℋ^*(v₀, \hat{w})=\alpha₀〈 v₀, \hat{w}〉
+  ℋ^*(v₀, \hat{w})=α₀〈 v₀, \hat{w}〉
   \quad\text{pour tout}\quad\hat{w}∈ V,
 \end{equation}
 qui montre que \(v₀\) est le vecteur propre de \(ℋ^*\) associé à
-la valeur propre \(\alpha₀\). Si \(\alpha₀≠ 0\), \(ℋ^*\) étant
-positive par hypothèse, on a nécessairement \(\alpha₀>0\), et la valeur propre
+la valeur propre \(α₀\). Si \(α₀≠ 0\), \(ℋ^*\) étant
+positive par hypothèse, on a nécessairement \(α₀>0\), et la valeur propre
 de la hessienne est positive.
 
-On considère maintenant le cas où \(\alpha₀\), c'est-à-dire que
+On considère maintenant le cas où \(α₀\), c'est-à-dire que
 \(v₀∈\kerℋ^*\). En prenant \(\hat{w}∈\kerℋ^*\), on
 obtient alors le problème variationnel d'ordre 1
 \begin{equation}
   𝒯^*(u₁, v₀, \hat{w})
   +λ₁\dot{ℋ}^*(v₀, \hat{w})
-  =\alpha₁〈v₀, \hat{w}〉
+  =α₁〈v₀, \hat{w}〉
   \quad\text{pour tout}\quad
   \hat{w}∈\kerℋ^*.
 \end{equation}
@@ -762,7 +762,7 @@ obtient alors le problème variationnel d'ordre 1
 En posant \(u₁=ξᵢaᵢ\) et \(v₀=\chi ⱼ aⱼ\), on obtient l'équation
 \begin{equation}
   \bigl(𝒯_{ijk}^*ξₖ+λ₁\dot{ℋ}_{ij}^*\bigr)\chi ⱼ
-  =\alpha₁\chi ᵢ,
+  =α₁\chi ᵢ,
 \end{equation}
 qui est un problème aux valeurs propres pour la matrice symétrique
 \((𝒯_{ijk}^*ξₖ+λ₁\dot{ℋ}_{ij}^*)_{1≤i,

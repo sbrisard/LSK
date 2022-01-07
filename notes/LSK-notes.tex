@@ -327,20 +327,19 @@ Soit \(u∈V\). Alors
 
 \subsection{Principe du calcul}
 
-On pose dans ce qui suit \(λ(η)=λ(η)-λ₀\) et \(U(η)=u(η)-u₀[λ(η)]\), de sorte
-que\pdfmargincomment{À compléter}
+On pose dans ce qui suit
 \begin{align}
   \label{eq:20211112155446}
-  λ(η)&=ηλ₁+η²λ₂+η³λ₃+\cdots,\\
+  Λ(η)&=λ(η)-λ₀=ηλ₁+η²λ₂+η³λ₃+\cdots,\\
   \label{eq:20211112113028}
-  U(η)&=η u₁+η² u₂+η³u₃+\cdots.
+  U(η)&=u(η)-u₀[λ(η)]=ηu₁+η²u₂+η³u₃+\cdots.
 \end{align}
 
 On considère une quantité \(ℱ\), fonction de \(u\) et \(λ\)~: \(ℱ(u,
 λ)\). Cette fonctionnelle est évaluée le long de la branche bifurquée. En
 d'autres termes, on considère
 \begin{equation}
-  f(η)=F\bigl(u₀[λ₀+λ(η)]+U(η), λ₀+λ(η)\bigr).
+  f(η)=F\bigl(u₀[λ₀+Λ(η)]+U(η), λ₀+Λ(η)\bigr).
 \end{equation}
 
 On souhaite établir un développement limité de \(f\) au voisinage de \(η=0\),
@@ -357,38 +356,28 @@ Pour calculer ces dérivées, il sera commode d'introduire la fonction auxiliair
 dans laquelle les variables \(λ\) et \(η\) sont provisoirement considérées
 comme indépendantes. On a
 \begin{equation}
-  f(η)=F[η, λ₀+λ(η)],
+  f(η)=F[η, λ₀+Λ(η)],
 \end{equation}
 d'où l'on déduit successivement que
-\begin{equation}
-  \label{eq:20211112162417}
-  f'(η)=∂_η F[η, λ₀+λ(η)]+λ'(η)\,∂_λ F[η, λ₀+λ(η)],
-\end{equation}
-\begin{equation}
-  \begin{aligned}[b]
-    \label{eq:20211112165810}
-    f''(η)={}&∂_{ηη}²F[η, λ₀+λ(η)]+2λ'(η)\,∂_{ηλ}²F[η, λ₀+λ(η)]\\
-    &+λ''(η)\,∂_λ F[η, λ₀+λ(η)]+λ'(η)²∂_{λλ}²F[η, λ₀+λ(η)]
-  \end{aligned}
-\end{equation}
-et
-\begin{equation}
-  \label{eq:20211112173223}
-  \begin{aligned}[b]
-    f'''(η)={}&∂_{ηηη}³F[η, λ₀+λ(η)]\\
-    &+3λ'(η)\,∂_{ηηλ}³F[η, λ₀+λ(η)]\\
-    &+3λ'(η)²∂_{ηλλ}³F[η, λ₀+λ(η)]\\
-    &+3λ''(η)\,∂_{ηλ}²F[η, λ₀+λ(η)]\\
-    &+λ'''(η)\,∂_λ F[η, λ₀+λ(η)]\\
-    &+3λ'(η)\,λ''(η)\,∂_{λλ}²F[η, λ₀+λ(η)]\\
-    &+λ'(η)³∂_{λλλ}³F[η, λ₀+λ(η)].
-  \end{aligned}
-\end{equation}
-
-En \(η=0\), les relations précédentes s'écrivent
 \begin{align}
-  f'(0)={}&∂_η F+λ₁∂_λ F\\
-  f''(0)={}&∂_{ηη}²F+2λ₁∂_{ηλ}²F+2λ₂∂_λ F+λ₁²∂_{λλ}²F
+  \label{eq:20211112162417}
+  f'(η)={}&∂_ηF+Λ'∂_λ,\\
+  \label{eq:20211112165810}
+  f''(η)={}&∂_{ηη}²F+2Λ'∂_{ηλ}²F+Λ''∂_λ F+Λ'²∂_{λλ}²F,\\
+  \notag
+  f'''(η)={}&∂_{ηηη}³F+3Λ'∂_{ηηλ}³F+3Λ'²∂_{ηλλ}³F+3Λ''∂_{ηλ}²F\\
+  \label{eq:20211112173223}
+          &+Λ'''∂_λF+3Λ'Λ''∂_{λλ}²F+Λ'³∂_{λλλ}³F,
+\end{align}
+où \(Λ\) et ses dérivées sont évaluées en \(η\), tandis que \(F\) et ses
+dérivées partielles sont évaluées en \([η, λ₀(η)]\). En \(η=0\), les relations
+précédentes s'écrivent
+\begin{align}
+  f'(0)={}&∂_η F+λ₁∂_λ F,\\
+  f''(0)={}&∂_{ηη}²F+2λ₁∂_{ηλ}²F+2λ₂∂_λ F+λ₁²∂_{λλ}²F,\\
+  \notag
+  f'''(0)={}&∂_{ηηη}³F+3λ₁∂_{ηηλ}³F+3λ₁²∂_{ηλλ}³F+6λ₂∂_{ηλ}²F\\
+          &+6λ₃∂_λF+6λ₁λ₂∂_{λλ}²F+λ₁³∂_{λλλ}³F,
 \end{align}
 où \(F\) et ses dérivées sont évaluées en \((0, λ₀)\).
 
@@ -404,7 +393,7 @@ introduit
 \begin{equation}
   F(η, λ)=ℰ_{,u}[u₀(λ)+U(η), λ](\hat{u})
 \end{equation}
-et on doit exprimer la nullité de \(f(η)=F[η, λ^*+λ(η)]\) au voisinage de
+et on doit exprimer la nullité de \(f(η)=F[η, λ^*+Λ(η)]\) au voisinage de
 \(η=0\). En convenant dans ce qui suit que \(U\), \(λ\) et leurs dérivées sont
 implicitement évaluées en \(η\), on trouve tout d'abord avec
 \begin{equation}
@@ -526,7 +515,7 @@ des variables indépendantes, on introduit la fonction
 de sorte que
 \begin{equation}
   \label{eq:20211114104326}
-  h(η)=H[η, λ^*+λ(η)].
+  h(η)=H[η, λ^*+Λ(η)].
 \end{equation}
 
 On observe tout d'abord que \(h(0)=ℋ^*\). Par ailleurs, en dérivant

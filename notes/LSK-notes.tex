@@ -116,7 +116,7 @@ et on obtient la condition nécessaire supplémentaire
   \label{eq:20211109145356}
   ℰ_{,uu}(v, v)+ℰ_{,uuu}(v, v, w)+\tfrac1{12}ℰ_{,uuuu}(v, v, v, v)≥0,
 \end{equation}
-pour tous \(v∈V\) et \(w∈W\). Pour \(v∈\kerℋ\) fixé, l'expression précédente
+pour tous \(v∈V\) et \(w∈W\). Pour \(v∈\kerℰ₂\) fixé, l'expression précédente
 est minimale lorsque \(w\) satisfait le problème variationnel
 \begin{equation}
   \label{eq:20211109145224}
@@ -147,27 +147,27 @@ Soit \(u^*(λ)\) la branche fondamentale. Par définition
 
 Il sera commode d'introduire les notations suivantes
 \begin{align}
-  ℋ(λ)&=ℰ_{,uu}[u^*(λ), λ],\\
+  ℰ₂(λ)&=ℰ_{,uu}[u^*(λ), λ],\\
   𝒯(λ)&=ℰ_{,uuu}[u^*(λ), λ],\\
   𝒬(λ)&=ℰ_{,uuuu}[u^*(λ), λ].
 \end{align}
 
-Noter que \(ℋ\), \(𝒯\) et \(𝒬\) sont des formes bi-, tri- et quadri-linéaires,
+Noter que \(ℰ₂\), \(𝒯\) et \(𝒬\) sont des formes bi-, tri- et quadri-linéaires,
 respectivement. L'application de ces formes à des éléments de \(U\) sera notée
-\(ℋ(λ; u, v)\), \(𝒯(λ; u, v, w)\), etc\dots. La dérivée de ces formes par
-rapport à \(λ\) sera notée à l'aide d'un point supérieur (\(\dot{ℋ}\),
+\(ℰ₂(λ; u, v)\), \(𝒯(λ; u, v, w)\), etc\dots. La dérivée de ces formes par
+rapport à \(λ\) sera notée à l'aide d'un point supérieur (\(\dot{ℰ₂}\),
 \(\dot{𝒯}\), \dots).
 
 On suppose que l'équilibre est stable pour des valeurs suffisamment petites de
-\(λ\). Plus précisément, on suppose que \(ℋ(λ)\) est définie positive pour tout
-\(λ<λ₀\). Pour \(λ=λ₀\), la forme quadratique \(ℋ(λ₀)\) n'est plus que
+\(λ\). Plus précisément, on suppose que \(ℰ₂(λ)\) est définie positive pour tout
+\(λ<λ₀\). Pour \(λ=λ₀\), la forme quadratique \(ℰ₂(λ₀)\) n'est plus que
 positive. En notant \(u₀=u^*(λ₀)\) la position d'équilibre obtenue pour la
 valeur critique \(λ₀\) du paramètre de chargement \(λ\), on s'intéresse à
 toutes les courbes d'équilibre qui passent par le point \((u₀, λ₀)\).
 
-Noter que dans ce qui suit, on convient que les formes \(ℋ\), \(𝒯\) et \(𝒬\)
+Noter que dans ce qui suit, on convient que les formes \(ℰ₂\), \(𝒯\) et \(𝒬\)
 sont implicitement évaluées en \(λ₀\) lorsque \(λ\) n'est pas rappelé : ainsi,
-on notera \(ℋ(•, •)\) plutôt que \(ℋ(λ₀; •, •)\).
+on notera \(ℰ₂(•, •)\) plutôt que \(ℰ₂(λ₀; •, •)\).
 
 On écrit toute courbe d'équilibre passant par le point \((u₀, λ₀)\) sous la
 forme paramétrique suivante
@@ -190,14 +190,14 @@ voisinage de \(η=0\) dans l'annexe~\ref{sec:20211112182000} [voir
 trouve successivement, pour tout \(\hat{u}∈ U\)
 \begin{gather}
   \label{eq:20211112182917}
-  ℋ(u₁, \hat{u})=0,\\
+  ℰ₂(u₁, \hat{u})=0,\\
   \label{eq:20211112183220}
-  𝒯(u₁, u₁, \hat{u})+2λ₁\dot{ℋ}(u₁, \hat{u})+2ℋ(u₂, \hat{u})=0,\\
+  𝒯(u₁, u₁, \hat{u})+2λ₁\dot{ℰ₂}(u₁, \hat{u})+2ℰ₂(u₂, \hat{u})=0,\\
   \begin{aligned}[b]
-    𝒬(u₁, u₁, u₁, \hat{u})+6𝒯(u₁, u₂, \hat{u})+6ℋ(u₃, \hat{u})&\\
-    +3λ₁\bigl[\dot{𝒯}(u₁, u₁, \hat{u})+2\dot{ℋ}(u₂, \hat{u})\bigr]
-    +3λ₁²\ddot{ℋ}(u₁, \hat{u})&\\
-    +6λ₂\dot{ℋ}(u₁, \hat{u})&=0.
+    𝒬(u₁, u₁, u₁, \hat{u})+6𝒯(u₁, u₂, \hat{u})+6ℰ₂(u₃, \hat{u})&\\
+    +3λ₁\bigl[\dot{𝒯}(u₁, u₁, \hat{u})+2\dot{ℰ₂}(u₂, \hat{u})\bigr]
+    +3λ₁²\ddot{ℰ₂}(u₁, \hat{u})&\\
+    +6λ₂\dot{ℰ₂}(u₁, \hat{u})&=0.
   \end{aligned}
 \end{gather}
 
@@ -205,15 +205,15 @@ On déduit de l'équation~\eqref{eq:20211112182917} que \(u₁∈V\). On pose al
 \(u₁=ξ₁^i vᵢ\). En prenant \(\hat{u}=vᵢ\), l'équation~\eqref{eq:20211112183220}
 s'écrit
 \begin{equation}
-  𝒯_{ijk}ξ₁^jξ₁^k+2λ₁\dot{ℋ}_{ij}ξ₁^j=0.
+  𝒯_{ijk}ξ₁^jξ₁^k+2λ₁\dot{ℰ₂}_{ij}ξ₁^j=0.
 \end{equation}
 
 Pour le terme d'ordre 2, on introduit la décomposition~: \(u₂=ξ₂^ivᵢ+w₂\), où
-\(w₂∈W\). On a alors \(ℋ(u₂, \hat{u})=ℋ(w₂, \hat{u})\) et
+\(w₂∈W\). On a alors \(ℰ₂(u₂, \hat{u})=ℰ₂(w₂, \hat{u})\) et
 l'équation~\eqref{eq:20211112183220} s'écrit
 \begin{equation}
-  𝒯(u₁, u₁, \hat{u})+2λ₁\dot{ℋ}(u₁, \hat{u})
-  +2ℋ(w₂, \hat{u})=0,
+  𝒯(u₁, u₁, \hat{u})+2λ₁\dot{ℰ₂}(u₁, \hat{u})
+  +2ℰ₂(w₂, \hat{u})=0,
 \end{equation}
 pour tout \(\hat{u}∈V\). En prenant la fonction test dans l'espace \(W\), on
 obtient le problème variationnel suivant~: trouver \(w₂∈W\) tel
@@ -221,13 +221,13 @@ que\pdfmargincomment{Conflit de notations}
 \begin{equation}
   \label{eq:20211210131623}
   ξ₁^iξ₁^j𝒯(vᵢ, vⱼ, \hat{w})
-  +2λ₁ξ₁^i\dot{ℋ}(vᵢ, \hat{w})
-  +2ℋ(w₂, \hat{w})=0,
+  +2λ₁ξ₁^i\dot{ℰ₂}(vᵢ, \hat{w})
+  +2ℰ₂(w₂, \hat{w})=0,
 \end{equation}
 pour tout \(\hat{w}∈W\). Soient \(wᵢ∈W\) les solutions des problèmes
 variationnels suivants
 \begin{equation}
-  ℋ(wᵢ, \hat{w})+\dot{ℋ}(vᵢ, \hat{w})=0,
+  ℰ₂(wᵢ, \hat{w})+\dot{ℰ₂}(vᵢ, \hat{w})=0,
 \end{equation}
 pour tout \(\hat{w}∈W\). La solution du problème~\eqref{eq:20211210131623}
 s'obtient par simple combinaison linéaire des \(wᵢ\) et \(w_{ij}\) introduits
@@ -243,39 +243,39 @@ bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
   \label{eq:20211115082025}
   \begin{aligned}[b]
     ℰ_{,uu}[u(η), λ(η)](\hat{u}, \hat{v})
-    ={}&ℋ^*(\hat{u}, \hat{v})+η\bigl[𝒯^*(u₁, \hat{u}, \hat{v})
-    +λ₁\dot{ℋ}^*(\hat{u}, \hat{v})\bigr]\\
+    ={}&ℰ₂^*(\hat{u}, \hat{v})+η\bigl[𝒯^*(u₁, \hat{u}, \hat{v})
+    +λ₁\dot{ℰ₂}^*(\hat{u}, \hat{v})\bigr]\\
     &+\tfrac12η²\bigl[𝒬^*(u₁, u₁, \hat{u}, \hat{v})
     +2λ₁\dot{𝒯}^*(u₁, \hat{u}, \hat{v})\\
-    &+λ₁²\ddot{ℋ}^*(\hat{u}, \hat{v})+𝒯^*(u₂, \hat{u}, \hat{v})
-    +λ₂\dot{ℋ}^*(\hat{u}, \hat{v})\bigr]+o(η²).
+    &+λ₁²\ddot{ℰ₂}^*(\hat{u}, \hat{v})+𝒯^*(u₂, \hat{u}, \hat{v})
+    +λ₂\dot{ℰ₂}^*(\hat{u}, \hat{v})\bigr]+o(η²).
   \end{aligned}
 \end{equation}
 
 On peut d'ores et déjà remarquer que, sur la branche fondamentale
 (\(u₁=u₂=0\)), en prenant \(η=λ-λ^*\) (\(λ₁=1\))
 \begin{equation}
-  ℋ(\hat{u}, \hat{v})=ℰ_{,uu}[u₀(λ), λ](\hat{u}, \hat{v})
-  =ℋ^*(\hat{u}, \hat{v})+\bigl(λ-λ^*\bigr)\dot{ℋ}^*(\hat{u}, \hat{v})+o(λ-λ^*).
+  ℰ₂(\hat{u}, \hat{v})=ℰ_{,uu}[u₀(λ), λ](\hat{u}, \hat{v})
+  =ℰ₂^*(\hat{u}, \hat{v})+\bigl(λ-λ^*\bigr)\dot{ℰ₂}^*(\hat{u}, \hat{v})+o(λ-λ^*).
 \end{equation}
 
-Dans ce qui suit, on supposera que \(\dot{ℋ}^*≠0\). Pour \(\hat{u}∈\kerℋ^*\),
+Dans ce qui suit, on supposera que \(\dot{ℰ₂}^*≠0\). Pour \(\hat{u}∈\kerℰ₂^*\),
 l'égalité précédente s'écrit
 \begin{equation}
-  ℋ(\hat{u}, \hat{u})=\bigl(λ-λ^*\bigr)\dot{ℋ}^*(\hat{u}, \hat{u})+o(λ-λ^*).
+  ℰ₂(\hat{u}, \hat{u})=\bigl(λ-λ^*\bigr)\dot{ℰ₂}^*(\hat{u}, \hat{u})+o(λ-λ^*).
 \end{equation}
 
 Comme la branche fondamentale est stable pour \(λ<λ^*\), on doit avoir
-\(\dot{ℋ}^*(\hat{u}, \hat{u})<0\). La forme quadratique \(\dot{ℋ}^*\) est
-définie négative sur \(\kerℋ^*\).
+\(\dot{ℰ₂}^*(\hat{u}, \hat{u})<0\). La forme quadratique \(\dot{ℰ₂}^*\) est
+définie négative sur \(\kerℰ₂^*\).
 
 Il faut alors distinguer deux cas. Si la branche trouvée est telle que
 \(λ₁≠0\), alors...
 
 Si \(λ₁=0\), alors on doit calculer \(λ₂\)
 \begin{equation}
-  𝒬^*(u₁, u₁, u₁, \hat{u})+3𝒯^*(u₁, u₂, \hat{u})+ℋ^*(u₃, \hat{u})
-  +3λ₂\dot{ℋ}^*(u₁, \hat{u})=0.
+  𝒬^*(u₁, u₁, u₁, \hat{u})+3𝒯^*(u₁, u₂, \hat{u})+ℰ₂^*(u₃, \hat{u})
+  +3λ₂\dot{ℰ₂}^*(u₁, \hat{u})=0.
 \end{equation}
 
 \appendix
@@ -425,19 +425,19 @@ on obtient
 soit, en \(η=0\)
 \begin{align}
   ∂_η F(0, λ)={}
-  &ℋ(λ; u₁, \hat{u}),\\
+  &ℰ₂(λ; u₁, \hat{u}),\\
   ∂_{ηη}²F(0, λ)={}
-  &𝒯(λ; u₁, u₁, \hat{u})+2ℋ(λ; u₂, \hat{u}),\\
+  &𝒯(λ; u₁, u₁, \hat{u})+2ℰ₂(λ; u₂, \hat{u}),\\
   ∂_{ηηη}³F(0, λ)={}
-  &𝒬(λ; u₁, u₁, u₁, \hat{u})+6𝒯(λ; u₁, u₂, \hat{u})+6ℋ(λ; u₃, \hat{u}).
+  &𝒬(λ; u₁, u₁, u₁, \hat{u})+6𝒯(λ; u₁, u₂, \hat{u})+6ℰ₂(λ; u₃, \hat{u}).
 \end{align}
 
 Les dérivées croisées de \(F\) en \((0, λ)\) s'obtiennent par simple dérivation
 des relations précédentes par rapport à \(λ\)
 \begin{align}
-  ∂_{ηλ}²F(0, λ)={}&\dot{ℋ}(λ; u₁, \hat{u}),\\
-  ∂_{ηηλ}³F(0, λ)={}&\dot{𝒯}(λ; u₁, u₁, \hat{u})+2\dot{ℋ}(λ; u₂, \hat{u}),\\
-  ∂_{ηλλ}³F(0, λ)={}&\ddot{ℋ}(λ; u₁, \hat{u}).
+  ∂_{ηλ}²F(0, λ)={}&\dot{ℰ₂}(λ; u₁, \hat{u}),\\
+  ∂_{ηηλ}³F(0, λ)={}&\dot{𝒯}(λ; u₁, u₁, \hat{u})+2\dot{ℰ₂}(λ; u₂, \hat{u}),\\
+  ∂_{ηλλ}³F(0, λ)={}&\ddot{ℰ₂}(λ; u₁, \hat{u}).
 \end{align}
 
 En insérant les résultats précédentes dans les relations
@@ -446,21 +446,21 @@ finalement les expressions suivantes des dérivées successives de \(f\) en
 \(η=0\)
 \begin{align}
   f'(0)={}
-  &ℋ(λ₀; u₁, \hat{u}),\\
+  &ℰ₂(λ₀; u₁, \hat{u}),\\
   f''(0)={}
   &𝒯(λ₀; u₁, u₁, \hat{u})
-    +2λ₁\dot{ℋ}(λ₀; u₁, \hat{u})
-    +2ℋ(λ₀; u₂, \hat{u}),\\
+    +2λ₁\dot{ℰ₂}(λ₀; u₁, \hat{u})
+    +2ℰ₂(λ₀; u₂, \hat{u}),\\
   \notag
   f'''(0)={}
   &𝒬(λ₀; u₁, u₁, u₁, \hat{u})
     +6𝒯(λ₀; u₁, u₂, \hat{u})
-    +6ℋ(λ₀; u₃, \hat{u})\\
+    +6ℰ₂(λ₀; u₃, \hat{u})\\
   \notag
   &+3λ₁\bigl[\dot{𝒯}(λ₀; u₁, u₁, \hat{u})
-    +2\dot{ℋ}(λ₀; u₂, \hat{u})\bigr]
-    +3λ₁²\ddot{ℋ}(λ₀; u₁, \hat{u})\\
-  &+6λ₂\dot{ℋ}(λ₀; u₁, \hat{u}).
+    +2\dot{ℰ₂}(λ₀; u₂, \hat{u})\bigr]
+    +3λ₁²\ddot{ℰ₂}(λ₀; u₁, \hat{u})\\
+  &+6λ₂\dot{ℰ₂}(λ₀; u₁, \hat{u}).
 \end{align}
 
 On en déduit finalement le développement limité à l'ordre 3 en \(η\) du résidu
@@ -468,18 +468,18 @@ On en déduit finalement le développement limité à l'ordre 3 en \(η\) du ré
   \label{eq:20220107080901}
   \begin{aligned}[b]
     ℰ_{,u}[u(η), λ(η)]={}
-    &ηℋ(λ₀; u₁, \hat{u})
+    &ηℰ₂(λ₀; u₁, \hat{u})
     +\tfrac12η²\bigl[𝒯(λ₀; u₁, u₁, \hat{u})\\
-    &+2λ₁\dot{ℋ}(λ₀; u₁, \hat{u})
-    +2ℋ(λ₀; u₂, \hat{u})\bigr]\\
+    &+2λ₁\dot{ℰ₂}(λ₀; u₁, \hat{u})
+    +2ℰ₂(λ₀; u₂, \hat{u})\bigr]\\
     &+\tfrac16η³\bigl\{
     𝒬(λ₀; u₁, u₁, u₁, \hat{u})
     +6𝒯(λ₀; u₁, u₂, \hat{u})\\
-    &+6ℋ(λ₀; u₃, \hat{u})
+    &+6ℰ₂(λ₀; u₃, \hat{u})
     +3λ₁\bigl[\dot{𝒯}(λ₀; u₁, u₁, \hat{u})\\
-    &+2\dot{ℋ}(λ₀; u₂, \hat{u})\bigr]
-    +3λ₁²\ddot{ℋ}(λ₀; u₁, \hat{u})\\
-    &+6λ₂\dot{ℋ}(λ₀; u₁, \hat{u})\bigr\}
+    &+2\dot{ℰ₂}(λ₀; u₂, \hat{u})\bigr]
+    +3λ₁²\ddot{ℰ₂}(λ₀; u₁, \hat{u})\\
+    &+6λ₂\dot{ℰ₂}(λ₀; u₁, \hat{u})\bigr\}
     +o(η³).
   \end{aligned}
 \end{equation}
@@ -496,12 +496,12 @@ fonctions test \(\hat{u}, \hat{v}∈V\) étant fixées, on applique la méthode 
   F(η, λ)=ℰ_{,uu}[u^*(λ)+U(η), λ; \hat{u}, \hat{v}].
 \end{equation}
 
-On observe tout d'abord que \(F(0, λ)=ℋ(λ; \hat{u}, \hat{v})\), soit, en
+On observe tout d'abord que \(F(0, λ)=ℰ₂(λ; \hat{u}, \hat{v})\), soit, en
 dérivant par rapport à \(λ\)
 \begin{equation}
-  ∂_λ F(0, λ)=\dot{ℋ}(\hat{u}, \hat{v})
+  ∂_λ F(0, λ)=\dot{ℰ₂}(\hat{u}, \hat{v})
   \quad\text{et}\quad
-  ∂_{λλ}²F(0, λ)=\ddot{ℋ}(\hat{u}, \hat{v}).
+  ∂_{λλ}²F(0, λ)=\ddot{ℰ₂}(\hat{u}, \hat{v}).
 \end{equation}
 
 On trouve de même successivement
@@ -525,25 +525,25 @@ En insérant les résultats précédents dans les
 expressions~\eqref{eq:20220107060454} et \eqref{eq:20220107124311}, on trouve
 \begin{align}
   f'(0)={}&𝒯(λ₀; u₁, \hat{u}, \hat{v})
-            +λ₁\dot{ℋ}(λ₀; \hat{u}, \hat{v}),\\
+            +λ₁\dot{ℰ₂}(λ₀; \hat{u}, \hat{v}),\\
   \notag
   f''(0)={}&𝒬(λ₀; u₁, u₁, \hat{u}, \hat{v})
              +2λ₁\dot{𝒯}(λ₀; u₁, \hat{u}, \hat{v})
-             +λ₁²\ddot{ℋ}(λ₀; \hat{u}, \hat{v})\\
+             +λ₁²\ddot{ℰ₂}(λ₀; \hat{u}, \hat{v})\\
           &+2𝒯(λ₀; u₂, \hat{u}, \hat{v})
-            +2λ₂\dot{ℋ}^*(λ₀; \hat{u}, \hat{v}),
+            +2λ₂\dot{ℰ₂}^*(λ₀; \hat{u}, \hat{v}),
 \end{align}
 qui conduisent finalement au développement limité suivant, à l'ordre 2 en \(η\)
 \begin{equation}
   \begin{aligned}[b]
-    ℰ_{,uu}[u(η), λ(η); \hat{u}, \hat{v}]={}&ℋ(λ₀; \hat{u}, \hat{v})
+    ℰ_{,uu}[u(η), λ(η); \hat{u}, \hat{v}]={}&ℰ₂(λ₀; \hat{u}, \hat{v})
     +η\bigl[𝒯(λ₀; u₁, \hat{u}, \hat{v})\\
-    &+λ₁\dot{ℋ}(λ₀; \hat{u}, \hat{v})\bigr]
+    &+λ₁\dot{ℰ₂}(λ₀; \hat{u}, \hat{v})\bigr]
     +\tfrac12η²\bigl[𝒬(λ₀; u₁, u₁, \hat{u}, \hat{v})\\
     &+2λ₁\dot{𝒯}(λ₀; u₁, \hat{u}, \hat{v})
-    +λ₁²\ddot{ℋ}(λ₀; \hat{u}, \hat{v})\\
+    +λ₁²\ddot{ℰ₂}(λ₀; \hat{u}, \hat{v})\\
     &+2𝒯(λ₀; u₂, \hat{u}, \hat{v})
-    +2λ₂\dot{ℋ}^*(λ₀; \hat{u}, \hat{v})\bigr]
+    +2λ₂\dot{ℰ₂}^*(λ₀; \hat{u}, \hat{v})\bigr]
     +o(η²).
   \end{aligned}
 \end{equation}
@@ -569,8 +569,8 @@ problème~\eqref{eq:20211115082122}
 \begin{equation}
   \begin{aligned}[b]
     ℰ_{,uu}[u(η), λ(η)](v, \hat{w})={}
-    &ℋ^*(v₀, \hat{w})+η\bigl[𝒯^*(u₁, v₀, \hat{w})+λ₁\dot{ℋ}^*(v₀, \hat{w})\\
-    &+ℋ^*(v₁, \hat{w})\bigr]+o(η)
+    &ℰ₂^*(v₀, \hat{w})+η\bigl[𝒯^*(u₁, v₀, \hat{w})+λ₁\dot{ℰ₂}^*(v₀, \hat{w})\\
+    &+ℰ₂^*(v₁, \hat{w})\bigr]+o(η)
   \end{aligned}
 \end{equation}
 
@@ -580,26 +580,26 @@ problème~\eqref{eq:20211115082122}
 
 On obtient le problème variationnel d'ordre 0
 \begin{equation}
-  ℋ^*(v₀, \hat{w})=α₀〈v₀, \hat{w}〉\quad\text{pour tout}\quad\hat{w}∈V,
+  ℰ₂^*(v₀, \hat{w})=α₀〈v₀, \hat{w}〉\quad\text{pour tout}\quad\hat{w}∈V,
 \end{equation}
-qui montre que \(v₀\) est le vecteur propre de \(ℋ^*\) associé à la valeur
-propre \(α₀\). Si \(α₀≠ 0\), \(ℋ^*\) étant positive par hypothèse, on a
+qui montre que \(v₀\) est le vecteur propre de \(ℰ₂^*\) associé à la valeur
+propre \(α₀\). Si \(α₀≠ 0\), \(ℰ₂^*\) étant positive par hypothèse, on a
 nécessairement \(α₀>0\), et la valeur propre de la hessienne est positive.
 
-On considère maintenant le cas où \(α₀\), c'est-à-dire que \(v₀∈\kerℋ^*\). En
-prenant \(\hat{w}∈\kerℋ^*\), on obtient alors le problème variationnel d'ordre
+On considère maintenant le cas où \(α₀\), c'est-à-dire que \(v₀∈\kerℰ₂^*\). En
+prenant \(\hat{w}∈\kerℰ₂^*\), on obtient alors le problème variationnel d'ordre
 1
 \begin{equation}
-  𝒯^*(u₁, v₀, \hat{w})+λ₁\dot{ℋ}^*(v₀, \hat{w})=α₁〈v₀, \hat{w}〉
-  \quad\text{pour tout}\quad\hat{w}∈\kerℋ^*.
+  𝒯^*(u₁, v₀, \hat{w})+λ₁\dot{ℰ₂}^*(v₀, \hat{w})=α₁〈v₀, \hat{w}〉
+  \quad\text{pour tout}\quad\hat{w}∈\kerℰ₂^*.
 \end{equation}
 
 En posant \(u₁=ξᵢaᵢ\) et \(v₀=χⱼaⱼ\), on obtient l'équation
 \begin{equation}
-  \bigl(𝒯_{ijk}^*ξₖ+λ₁\dot{ℋ}_{ij}^*\bigr)χⱼ=α₁χᵢ,
+  \bigl(𝒯_{ijk}^*ξₖ+λ₁\dot{ℰ₂}_{ij}^*\bigr)χⱼ=α₁χᵢ,
 \end{equation}
 qui est un problème aux valeurs propres pour la matrice symétrique
-\((𝒯_{ijk}^*ξₖ+λ₁\dot{ℋ}_{ij}^*)_{1≤i, j≤m}\)
+\((𝒯_{ijk}^*ξₖ+λ₁\dot{ℰ₂}_{ij}^*)_{1≤i, j≤m}\)
 
 % \printbibliography
 \end{document}

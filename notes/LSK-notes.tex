@@ -167,7 +167,7 @@ toutes les courbes d'équilibre qui passent par le point \((u₀, λ₀)\).
 
 Noter que dans ce qui suit, on convient que les formes \(ℋ\), \(𝒯\) et \(𝒬\)
 sont implicitement évaluées en \(λ₀\) lorsque \(λ\) n'est pas rappelé : ainsi,
-on notera \(ℋ(•, •)\) plutôt que \(ℋ(λ₀, •, •)\).
+on notera \(ℋ(•, •)\) plutôt que \(ℋ(λ₀; •, •)\).
 
 On écrit toute courbe d'équilibre passant par le point \((u₀, λ₀)\) sous la
 forme paramétrique suivante
@@ -185,8 +185,9 @@ Les coefficients \(λ ₖ\) et \(uₖ\) des développements~\eqref{eq:2021111507
 et \eqref{eq:20211115075835} sont identifiés en écrivant que l'énergie est
 stationnaire le long de la courbe d'équilibre, c'est-à-dire que le résidu
 \(ℰ_{,u}[u(η), λ(η)]\) est nul. Le développement limité du résidu est établi au
-voisinage de \(η=0\) dans l'annexe~\ref{sec:20211112182000}. En écrivant que
-tous ses termes s'annulent, on trouve successivement, pour tout \(\hat{u}∈ U\)
+voisinage de \(η=0\) dans l'annexe~\ref{sec:20211112182000} [voir
+Éq.~\eqref{eq:20220107080901}]. En écrivant que tous ses termes s'annulent, on
+trouve successivement, pour tout \(\hat{u}∈ U\)
 \begin{gather}
   \label{eq:20211112182917}
   ℋ(u₁, \hat{u})=0,\\
@@ -332,14 +333,14 @@ On pose dans ce qui suit
   \label{eq:20211112155446}
   Λ(η)&=λ(η)-λ₀=ηλ₁+η²λ₂+η³λ₃+\cdots,\\
   \label{eq:20211112113028}
-  U(η)&=u(η)-u₀[λ(η)]=ηu₁+η²u₂+η³u₃+\cdots.
+  U(η)&=u(η)-u^*[λ(η)]=ηu₁+η²u₂+η³u₃+\cdots.
 \end{align}
 
 On considère une quantité \(ℱ\), fonction de \(u\) et \(λ\)~: \(ℱ(u,
 λ)\). Cette fonctionnelle est évaluée le long de la branche bifurquée. En
 d'autres termes, on considère
 \begin{equation}
-  f(η)=F\bigl(u₀[λ₀+Λ(η)]+U(η), λ₀+Λ(η)\bigr).
+  f(η)=F\bigl(u^*[λ₀+Λ(η)]+U(η), λ₀+Λ(η)\bigr).
 \end{equation}
 
 On souhaite établir un développement limité de \(f\) au voisinage de \(η=0\),
@@ -351,7 +352,7 @@ ce qui conduit à calculer les dérivées successives de \(f\) en \(η=0\), puis
 Pour calculer ces dérivées, il sera commode d'introduire la fonction auxiliaire
 \(F\)
 \begin{equation}
-  F(η, λ)=ℱ[u₀(λ)+U(η), λ],
+  F(η, λ)=ℱ[u^*(λ)+U(η), λ],
 \end{equation}
 dans laquelle les variables \(λ\) et \(η\) sont provisoirement considérées
 comme indépendantes. On a
@@ -373,10 +374,12 @@ où \(Λ\) et ses dérivées sont évaluées en \(η\), tandis que \(F\) et ses
 dérivées partielles sont évaluées en \([η, λ₀(η)]\). En \(η=0\), les relations
 précédentes s'écrivent
 \begin{align}
+  \label{eq:20220107060454}
   f'(0)={}&∂_η F+λ₁∂_λ F,\\
   f''(0)={}&∂_{ηη}²F+2λ₁∂_{ηλ}²F+2λ₂∂_λ F+λ₁²∂_{λλ}²F,\\
   \notag
   f'''(0)={}&∂_{ηηη}³F+3λ₁∂_{ηηλ}³F+3λ₁²∂_{ηλλ}³F+6λ₂∂_{ηλ}²F\\
+  \label{eq:20220107060500}
           &+6λ₃∂_λF+6λ₁λ₂∂_{λλ}²F+λ₁³∂_{λλλ}³F,
 \end{align}
 où \(F\) et ses dérivées sont évaluées en \((0, λ₀)\).
@@ -384,114 +387,98 @@ où \(F\) et ses dérivées sont évaluées en \((0, λ₀)\).
 \subsection{Développement limité du résidu}
 \label{sec:20211112182000}
 
-Soit \(f(η)=ℰ_{,u}(u, λ)(\hat{u})\) le \emph{résidu} (\(\hat{u}∈V\) est
-arbitraire). Les équations permettant de déterminer les coefficients des
-développements~\eqref{eq:20211112155446} et \eqref{eq:20211112113028} sont
-obtenues en écrivant que \(f\) et ses dérivées sont nulles en \(η=0\). En
-considérant temporairement \(η\) et \(λ\) comme des variables indépendantes, on
-introduit
+On cherche un développement limité du résidu (c'est-à-dire de la première
+variation de l'énergie). La fonction test (\(\hat{u}∈V\) étant fixée, la
+méthode précédente est donc appliquée avec
 \begin{equation}
-  F(η, λ)=ℰ_{,u}[u₀(λ)+U(η), λ](\hat{u})
-\end{equation}
-et on doit exprimer la nullité de \(f(η)=F[η, λ^*+Λ(η)]\) au voisinage de
-\(η=0\). En convenant dans ce qui suit que \(U\), \(λ\) et leurs dérivées sont
-implicitement évaluées en \(η\), on trouve tout d'abord avec
-\begin{equation}
-  \label{eq:20211112164354}
-  ∂_η F(η, λ)=ℰ_{,uu}[u₀(λ)+U, λ](U', \hat{u}),
-\end{equation}
-soit, en \(η=0\)
-\begin{equation}
-  \label{eq:20211112165323}
-  ∂_η F(0, λ)=ℋ(u₁, \hat{u}).
+  \label{eq:20220107054629}
+  f(η)=ℰ_{,u}(u, λ;\hat{u})
+  \quad\text{et}\quad
+  F(η, λ)=ℰ_{,u}[u^*(λ)+U(η), λ; \hat{u}].
 \end{equation}
 
-Par ailleurs, puisque \(λ\mapsto u₀(λ)\) est une courbe d'équilibre, on a
+On remarque tout d'abord que \(F(0, λ)=ℰ_{,u}[u^*(λ), λ; \hat{u}]=0\), puisque
+\(u^*(λ)\) est un point d'équilibre. En dérivant par rapport à \(λ\), on obtient
 \begin{equation}
   \label{eq:20211112164240}
-  F(0, λ)=ℰ_{,u}[u₀(λ), λ]=0\quad\text{donc}\quad\frac{∂^kF}{∂λ^k}(0, λ)=0.
+  \frac{∂^kF}{∂λ^k}(0, λ)=0.
 \end{equation}
 
-On déduit de ce qui précède que
-\begin{equation}
-  \label{eq:20211112182300}
-  f'(0)=ℋ(u₁, \hat{u}).
-\end{equation}
-
-En dérivant la relation~\eqref{eq:20211112162417}, on obtient maintenant
-l'expression de la dérivée seconde de \(f\)
-
-La relation~\eqref{eq:20211112164240} montre que les deux derniers termes
-s'annulent en \(η=0\). Par ailleurs, en dérivant
-l'expression~\eqref{eq:20211112164354} par rapport à \(η\)
-\begin{equation}
-  \label{eq:20211112172446}
-  \begin{aligned}[b]
-    ∂_{ηη}²F(η, λ)={}&ℰ_{,uuu}[u₀(λ)+U, λ](U', U', \hat{u})\\
-    &+ℰ_{,uu}[u₀(λ)+U, λ](U'', \hat{u}),
-  \end{aligned}
-\end{equation}
+En dérivant une première fois l'expression~\eqref{eq:20220107054629} de \(F\),
+on obtient
+\begin{align}
+  ∂_ηF(η, λ)={}
+  &ℰ_{,uu}[u^*(λ)+U(η), λ; U'(η), \hat{u}],\\
+  \notag
+  ∂_{ηη}²F(η, λ)={}
+  &ℰ_{,uuu}[u^*(λ)+U(η), λ; U'(η), U'(η), \hat{u}]\\
+  &+ℰ_{,uu}[u^*(λ)+U(η), λ; U''(η), \hat{u}],\\
+  \notag
+  ∂_{ηηη}³F(η, λ)={}
+  &ℰ_{,uuuu}[u^*(λ)+U(η), λ;U'(η), U'(η), U'(η), \hat{u}]\\
+  \notag
+  &+3ℰ_{,uuu}[u^*(λ)+U(η), λ;U'(η), U''(η), \hat{u}]\\
+  &+ℰ_{,uu}[u^*(λ)+U(η), λ;U'''(η), \hat{u}],
+\end{align}
 soit, en \(η=0\)
-\begin{equation}
-  \label{eq:20211112165830}
-  ∂_{ηη}²F(0, λ)=𝒯(u₁, u₁, \hat{u})+2ℋ(u₂, \hat{u}).
-\end{equation}
+\begin{align}
+  ∂_η F(0, λ)={}
+  &ℋ(λ; u₁, \hat{u}),\\
+  ∂_{ηη}²F(0, λ)={}
+  &𝒯(λ; u₁, u₁, \hat{u})+2ℋ(λ; u₂, \hat{u}),\\
+  ∂_{ηηη}³F(0, λ)={}
+  &𝒬(λ; u₁, u₁, u₁, \hat{u})+6𝒯(λ; u₁, u₂, \hat{u})+6ℋ(λ; u₃, \hat{u}).
+\end{align}
 
-Par ailleurs, \(∂_{ηλ}²F(0, λ)\) s'obtient par simple dérivation de la
-relation~\eqref{eq:20211112165323}
-\begin{equation}
-  \label{eq:20211112165843}
-  ∂_{ηλ}²F(0, λ)=\dot{ℋ}(u₁, \hat{u}).
-\end{equation}
+Les dérivées croisées de \(F\) en \((0, λ)\) s'obtiennent par simple dérivation
+des relations précédentes par rapport à \(λ\)
+\begin{align}
+  ∂_{ηλ}²F(0, λ)={}&\dot{ℋ}(λ; u₁, \hat{u}),\\
+  ∂_{ηηλ}³F(0, λ)={}&\dot{𝒯}(λ; u₁, u₁, \hat{u})+2\dot{ℋ}(λ; u₂, \hat{u}),\\
+  ∂_{ηλλ}³F(0, λ)={}&\ddot{ℋ}(λ; u₁, \hat{u}).
+\end{align}
 
-En rassemblant les expressions~\eqref{eq:20211112165810},
-\eqref{eq:20211112165830} et \eqref{eq:20211112165843}, on trouve l'expression
-de la dérivée seconde de \(f\) en 0
-\begin{equation}
-  \label{eq:20211112182333}
-  f''(0)=𝒯(u₁, u₁, \hat{u})+2λ₁\dot{ℋ}(u₁, \hat{u})+2ℋ(u₂, \hat{u}).
-\end{equation}
+En insérant les résultats précédentes dans les relations
+générales~\eqref{eq:20220107060454}–\eqref{eq:20220107060500}, on trouve
+finalement les expressions suivantes des dérivées successives de \(f\) en
+\(η=0\)
+\begin{align}
+  f'(0)={}
+  &ℋ(λ₀; u₁, \hat{u}),\\
+  f''(0)={}
+  &𝒯(λ₀; u₁, u₁, \hat{u})
+    +2λ₁\dot{ℋ}(λ₀; u₁, \hat{u})
+    +2ℋ(λ₀; u₂, \hat{u}),\\
+  \notag
+  f'''(0)={}
+  &𝒬(λ₀; u₁, u₁, u₁, \hat{u})
+    +6𝒯(λ₀; u₁, u₂, \hat{u})
+    +6ℋ(λ₀; u₃, \hat{u})\\
+  \notag
+  &+3λ₁\bigl[\dot{𝒯}(λ₀; u₁, u₁, \hat{u})
+    +2\dot{ℋ}(λ₀; u₂, \hat{u})\bigr]
+    +3λ₁²\ddot{ℋ}(λ₀; u₁, \hat{u})\\
+  &+6λ₂\dot{ℋ}(λ₀; u₁, \hat{u}).
+\end{align}
 
-On obtient finalement l'expression de \(f'''(η)\) en dérivant la
-relation~\eqref{eq:20211112165810}
-
-La relation~\eqref{eq:20211112164240} montre une nouvelle fois que les trois
-derniers termes de l'expression ci-dessus s'annulent en \(η=0\). Par simple
-dérivation par rapport à \(λ\) des expressions~\eqref{eq:20211112165830} et
-\eqref{eq:20211112165843}, on trouve par ailleurs
+On en déduit finalement le développement limité à l'ordre 3 en \(η\) du résidu
 \begin{equation}
-  \label{eq:20211112173247}
-  ∂_{ηηλ}³F(0, λ)=\dot{𝒯}(u₁, u₁, \hat{u})+2\dot{ℋ}(u₂, \hat{u})
-  \quad\text{et}\quad
-  ∂_{ηλλ}³F(0, λ)=\ddot{ℋ}(u₁, \hat{u}).
-\end{equation}
-
-Finalement, en dérivant l'expression~\eqref{eq:20211112172446} par rapport à
-\(η\), on trouve
-\begin{equation}
+  \label{eq:20220107080901}
   \begin{aligned}[b]
-    ∂_{ηηη}³F(η, λ)={}&
-    ℰ_{,uuuu}[u₀(λ)+U, λ](U', U', U', \hat{u})\\
-    &+3ℰ_{,uuu}[u₀(λ)+U, λ](U', U'', \hat{u})\\
-    &+ℰ_{,uu}[u₀(λ)+U, λ](U''', \hat{u}),
-  \end{aligned}
-\end{equation}
-soit, en \(η=0\)
-\begin{equation}
-  \label{eq:20211112173300}
-  ∂_{ηηη}³F(0, λ)=𝒬(u₁, u₁, u₁, \hat{u})+6𝒯(u₁, u₂, \hat{u})+6ℋ(u₃, \hat{u}).
-\end{equation}
-
-En regroupant les relations~\eqref{eq:20211112173223},
-\eqref{eq:20211112173247} et \eqref{eq:20211112173300}, on trouve finalement
-l'expression de la dérivée troisième de \(f\) en \(η=0\)
-\begin{equation}
-\label{eq:20211112182402}
-  \begin{aligned}[b]
-    f'''(0)={}&𝒬(u₁, u₁, u₁, \hat{u})+6𝒯(u₁, u₂, \hat{u})+6ℋ(u₃, \hat{u})\\
-    &+3λ₁\bigl[\dot{𝒯}(u₁, u₁, \hat{u})+2\dot{ℋ}(u₂, \hat{u})\bigr]
-    +3λ₁²\ddot{ℋ}(u₁, \hat{u})\\
-    &+6λ₂\dot{ℋ}(u₁, \hat{u}).
+    ℰ_{,u}[u(η), λ(η)]={}
+    &ηℋ(λ₀; u₁, \hat{u})
+    +\tfrac12η²\bigl[𝒯(λ₀; u₁, u₁, \hat{u})\\
+    &+2λ₁\dot{ℋ}(λ₀; u₁, \hat{u})
+    +2ℋ(λ₀; u₂, \hat{u})\bigr]\\
+    &+\tfrac16η³\bigl\{
+    𝒬(λ₀; u₁, u₁, u₁, \hat{u})
+    +6𝒯(λ₀; u₁, u₂, \hat{u})\\
+    &+6ℋ(λ₀; u₃, \hat{u})
+    +3λ₁\bigl[\dot{𝒯}(λ₀; u₁, u₁, \hat{u})\\
+    &+2\dot{ℋ}(λ₀; u₂, \hat{u})\bigr]
+    +3λ₁²\ddot{ℋ}(λ₀; u₁, \hat{u})\\
+    &+6λ₂\dot{ℋ}(λ₀; u₁, \hat{u})\bigr\}
+    +o(η³).
   \end{aligned}
 \end{equation}
 
@@ -510,7 +497,7 @@ diagramme d'équilibre. Elle permet d'étudier la stabilité de l'équilibre. On
 en \(η=0\). \`A cet effet, considérant une nouvelle fois \(η\) et \(λ\) comme
 des variables indépendantes, on introduit la fonction
 \begin{equation}
-  H(η, λ)=ℰ_{,uu}[u₀(λ)+U(η), λ],
+  H(η, λ)=ℰ_{,uu}[u^*(λ)+U(η), λ],
 \end{equation}
 de sorte que
 \begin{equation}

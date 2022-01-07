@@ -327,6 +327,7 @@ Soit \(u∈V\). Alors
   d'équilibre}
 
 \subsection{Principe du calcul}
+\label{sec:20220107121442}
 
 On pose dans ce qui suit
 \begin{align}
@@ -362,13 +363,13 @@ comme indépendantes. On a
 d'où l'on déduit successivement que
 \begin{align}
   \label{eq:20211112162417}
-  f'(η)={}&∂_ηF+Λ'∂_λ,\\
+  f'(η)={}&∂_ηF+Λ'∂_λF,\\
   \label{eq:20211112165810}
-  f''(η)={}&∂_{ηη}²F+2Λ'∂_{ηλ}²F+Λ''∂_λ F+Λ'²∂_{λλ}²F,\\
+  f''(η)={}&∂_{ηη}²F+2Λ'∂_{ηλ}²F+Λ''∂_λ F+Λ'^2∂_{λλ}²F,\\
   \notag
-  f'''(η)={}&∂_{ηηη}³F+3Λ'∂_{ηηλ}³F+3Λ'²∂_{ηλλ}³F+3Λ''∂_{ηλ}²F\\
+  f'''(η)={}&∂_{ηηη}³F+3Λ'∂_{ηηλ}³F+3Λ'^2∂_{ηλλ}³F+3Λ''∂_{ηλ}²F\\
   \label{eq:20211112173223}
-          &+Λ'''∂_λF+3Λ'Λ''∂_{λλ}²F+Λ'³∂_{λλλ}³F,
+          &+Λ'''∂_λF+3Λ'Λ''∂_{λλ}²F+Λ'^3∂_{λλλ}³F,
 \end{align}
 où \(Λ\) et ses dérivées sont évaluées en \(η\), tandis que \(F\) et ses
 dérivées partielles sont évaluées en \([η, λ₀(η)]\). En \(η=0\), les relations
@@ -376,6 +377,7 @@ précédentes s'écrivent
 \begin{align}
   \label{eq:20220107060454}
   f'(0)={}&∂_η F+λ₁∂_λ F,\\
+  \label{eq:20220107124311}
   f''(0)={}&∂_{ηη}²F+2λ₁∂_{ηλ}²F+2λ₂∂_λ F+λ₁²∂_{λλ}²F,\\
   \notag
   f'''(0)={}&∂_{ηηη}³F+3λ₁∂_{ηηλ}³F+3λ₁²∂_{ηλλ}³F+6λ₂∂_{ηλ}²F\\
@@ -392,7 +394,7 @@ variation de l'énergie). La fonction test (\(\hat{u}∈V\) étant fixée, la
 méthode précédente est donc appliquée avec
 \begin{equation}
   \label{eq:20220107054629}
-  f(η)=ℰ_{,u}(u, λ;\hat{u})
+  f(η)=ℰ_{,u}[u(η), λ(η);\hat{u}]
   \quad\text{et}\quad
   F(η, λ)=ℰ_{,u}[u^*(λ)+U(η), λ; \hat{u}].
 \end{equation}
@@ -482,98 +484,67 @@ On en déduit finalement le développement limité à l'ordre 3 en \(η\) du ré
   \end{aligned}
 \end{equation}
 
-\section{Développement limité de la hessienne}
+\subsection{Développement limité de la hessienne}
 \label{sec:20211115081016}
 
-Le principe du calcul est le même que dans
-l'annexe~\ref{sec:20211112182000}. Pour \(\hat{u}, \hat{v}∈V\), on introduit
-\(h(η)=ℰ_{,uu}(u, λ)(\hat{u}, \hat{v})\), où \(λ\) et \(u\) sont données en
-fonction de \(η\) par les expressions~\eqref{eq:20211115075817} et
-\eqref{eq:20211115075835}.
-
-La fonction \(h(η)\) est la hessienne de l'énergie le long d'une branche du
-diagramme d'équilibre. Elle permet d'étudier la stabilité de l'équilibre. On
-établit un développement limité de \(h\) en calculant ses dérivées successives
-en \(η=0\). \`A cet effet, considérant une nouvelle fois \(η\) et \(λ\) comme
-des variables indépendantes, on introduit la fonction
+On cherche maintenant un développement limité de la hessienne de l'énergie. Les
+fonctions test \(\hat{u}, \hat{v}∈V\) étant fixées, on applique la méthode du
+§\ref{sec:20220107121442} aux fonctions suivantes
 \begin{equation}
-  H(η, λ)=ℰ_{,uu}[u^*(λ)+U(η), λ],
-\end{equation}
-de sorte que
-\begin{equation}
-  \label{eq:20211114104326}
-  h(η)=H[η, λ^*+Λ(η)].
-\end{equation}
-
-On observe tout d'abord que \(h(0)=ℋ^*\). Par ailleurs, en dérivant
-l'expression~\eqref{eq:20211114104326} par rapport à \(η\)
-\begin{equation}
-  \label{eq:20211114110210}
-  h'(η)=∂_η H(η, λ^*+λ)+λ'∂_λ H(η, λ^*+λ),
-\end{equation}
-avec
-\begin{equation}
-  \label{eq:20211114110852}
-  ∂_η H(η, λ)=ℰ_{,uuu}(u₀+U, λ)(U', \hat{u}, \hat{v}),
-\end{equation}
-soit, en \(η=0\)
-\begin{equation}
-  \label{eq:20211114110230}
-  ∂_η H(0, λ)=𝒯(u₁, \hat{u}, \hat{v}).
-\end{equation}
-
-Par ailleurs
-\begin{equation}
-  \label{eq:20211114110245}
-  H(0, λ)=ℋ(\hat{u}, \hat{v})\quad\text{donc}\quad∂_λ H(0, λ)=\dot{ℋ}(\hat{u}, \hat{v}).
-\end{equation}
-
-En regroupant les expressions~\eqref{eq:20211114110210},
-\eqref{eq:20211114110230} et \eqref{eq:20211114110245}, on trouve la dérivée de
-\(h\) en 0
-\begin{equation}
-  h'(0)=𝒯^*(u₁, \hat{u}, \hat{v})+λ₁\dot{ℋ}^*(\hat{u}, \hat{v}).
-\end{equation}
-
-La dérivation de l'expression~\eqref{eq:20211114110210} par rapport à \(η\)
-donne maintenant
-\begin{equation}
-  \label{eq:20211114111822}
-  \begin{aligned}[b]
-    h''(η)={}&∂_{ηη}² H(η, λ^*+λ)+2λ'∂_{ηλ}² H(η, λ^*+λ)\\
-    &+λ''∂_{λ}H(η, λ^*+λ)+λ'^2∂_{λλ}²H(η, λ^*+λ).
-  \end{aligned}
-\end{equation}
-
-L'expression de \(∂_{ηη}²H\) est obtenue en
-dérivant~\eqref{eq:20211114110852}
-\begin{equation}
-  ∂_{ηη}²H(η, λ)=ℰ_{,uuuu}(u₀+U, λ)(U', U', \hat{u}, \hat{v})
-  +ℰ_{,uuu}(U'', \hat{u}, \hat{v}),
-\end{equation}
-soit, en \(η=0\)
-\begin{equation}
-  \label{eq:20211114111716}
-  ∂_{ηη}²H(0, λ)=𝒬(u₁, u₁, \hat{u}, \hat{v})+2𝒯(u₂, \hat{u}, \hat{v}).
-\end{equation}
-
-Ensuite, en dérivant~\eqref{eq:20211114110230} et \eqref{eq:20211114110245} par
-rapport à \(λ\), on obtient
-\begin{equation}
-  \label{eq:20211114111740}
-  ∂_{ηλ}²H(0, λ)=\dot{𝒯}(u₁, \hat{u}, \hat{v})
+  f(η)=ℰ_{,uu}[u(η), λ(η); \hat{u}, \hat{v}]
   \quad\text{et}\quad
-  ∂_{λλ}²H(0, λ)=\ddot{ℋ}(\hat{u}, \hat{v}).
+  F(η, λ)=ℰ_{,uu}[u^*(λ)+U(η), λ; \hat{u}, \hat{v}].
 \end{equation}
 
-Finalement, en substituant \eqref{eq:20211114110245}, \eqref{eq:20211114111716}
-et \eqref{eq:20211114111740} dans \eqref{eq:20211114111822}, on obtient
-l'expression de la dérivée seconde de h en \(η=0\)
+On observe tout d'abord que \(F(0, λ)=ℋ(λ; \hat{u}, \hat{v})\), soit, en
+dérivant par rapport à \(λ\)
+\begin{equation}
+  ∂_λ F(0, λ)=\dot{ℋ}(\hat{u}, \hat{v})
+  \quad\text{et}\quad
+  ∂_{λλ}²F(0, λ)=\ddot{ℋ}(\hat{u}, \hat{v}).
+\end{equation}
+
+On trouve de même successivement
+\begin{align}
+  ∂_ηF(η, λ)={}&ℰ_{,uuu}[u^\ast(λ)+U(η), λ; U'(η), \hat{u}, \hat{v}],\\
+  \notag
+  ∂_{ηη}²F(η, λ)={}&ℰ_{,uuuu}[u^\ast(λ)+U(η), λ; U'(η), U'(η), \hat{u}, \hat{v}]\\
+               &+ℰ_{,uuu}[u^\ast(λ)+U(η), λ; U''(η), \hat{u}, \hat{v}],
+\end{align}
+soit, en \(η=0\)
+\begin{align}
+  ∂_ηF(0, λ)&=𝒯(λ; u₁, \hat{u}, \hat{v}),\\
+  ∂_{ηη}²F(0, λ)&=𝒬(λ; u₁, u₁, \hat{u}, \hat{v})+2𝒯(λ; u₂, \hat{u}, \hat{v}),
+\end{align}
+et en dérivant cette fois par rapport à \(λ\)
+\begin{equation}
+  ∂_{ηλ}²F(0, λ)=\dot{𝒯}(λ; u₁, \hat{u}, \hat{v}).
+\end{equation}
+
+En insérant les résultats précédents dans les
+expressions~\eqref{eq:20220107060454} et \eqref{eq:20220107124311}, on trouve
+\begin{align}
+  f'(0)={}&𝒯(λ₀; u₁, \hat{u}, \hat{v})
+            +λ₁\dot{ℋ}(λ₀; \hat{u}, \hat{v}),\\
+  \notag
+  f''(0)={}&𝒬(λ₀; u₁, u₁, \hat{u}, \hat{v})
+             +2λ₁\dot{𝒯}(λ₀; u₁, \hat{u}, \hat{v})
+             +λ₁²\ddot{ℋ}(λ₀; \hat{u}, \hat{v})\\
+          &+2𝒯(λ₀; u₂, \hat{u}, \hat{v})
+            +2λ₂\dot{ℋ}^*(λ₀; \hat{u}, \hat{v}),
+\end{align}
+qui conduisent finalement au développement limité suivant, à l'ordre 2 en \(η\)
 \begin{equation}
   \begin{aligned}[b]
-    h''(0)={}&𝒬^*(u₁, u₁, \hat{u}, \hat{v})+2λ₁\dot{𝒯}^*(u₁, \hat{u}, \hat{v})
-    +λ₁²\ddot{ℋ}^*(\hat{u}, \hat{v})\\
-    &+2𝒯^*(u₂, \hat{u}, \hat{v})+2λ₂\dot{ℋ}^*(\hat{u}, \hat{v}).
+    ℰ_{,uu}[u(η), λ(η); \hat{u}, \hat{v}]={}&ℋ(λ₀; \hat{u}, \hat{v})
+    +η\bigl[𝒯(λ₀; u₁, \hat{u}, \hat{v})\\
+    &+λ₁\dot{ℋ}(λ₀; \hat{u}, \hat{v})\bigr]
+    +\tfrac12η²\bigl[𝒬(λ₀; u₁, u₁, \hat{u}, \hat{v})\\
+    &+2λ₁\dot{𝒯}(λ₀; u₁, \hat{u}, \hat{v})
+    +λ₁²\ddot{ℋ}(λ₀; \hat{u}, \hat{v})\\
+    &+2𝒯(λ₀; u₂, \hat{u}, \hat{v})
+    +2λ₂\dot{ℋ}^*(λ₀; \hat{u}, \hat{v})\bigr]
+    +o(η²).
   \end{aligned}
 \end{equation}
 

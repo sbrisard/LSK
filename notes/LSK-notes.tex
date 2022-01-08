@@ -149,10 +149,10 @@ Il sera commode d'introduire les notations suivantes
 \begin{align}
   ℰ₂(λ)&=ℰ_{,uu}[u^*(λ), λ],\\
   ℰ₃(λ)&=ℰ_{,uuu}[u^*(λ), λ],\\
-  𝒬(λ)&=ℰ_{,uuuu}[u^*(λ), λ].
+  ℰ₄(λ)&=ℰ_{,uuuu}[u^*(λ), λ].
 \end{align}
 
-Noter que \(ℰ₂\), \(ℰ₃\) et \(𝒬\) sont des formes bi-, tri- et quadri-linéaires,
+Noter que \(ℰ₂\), \(ℰ₃\) et \(ℰ₄\) sont des formes bi-, tri- et quadri-linéaires,
 respectivement. L'application de ces formes à des éléments de \(U\) sera notée
 \(ℰ₂(λ; u, v)\), \(ℰ₃(λ; u, v, w)\), etc\dots. La dérivée de ces formes par
 rapport à \(λ\) sera notée à l'aide d'un point supérieur (\(\dot{ℰ₂}\),
@@ -165,7 +165,7 @@ positive. En notant \(u₀=u^*(λ₀)\) la position d'équilibre obtenue pour la
 valeur critique \(λ₀\) du paramètre de chargement \(λ\), on s'intéresse à
 toutes les courbes d'équilibre qui passent par le point \((u₀, λ₀)\).
 
-Noter que dans ce qui suit, on convient que les formes \(ℰ₂\), \(ℰ₃\) et \(𝒬\)
+Noter que dans ce qui suit, on convient que les formes \(ℰ₂\), \(ℰ₃\) et \(ℰ₄\)
 sont implicitement évaluées en \(λ₀\) lorsque \(λ\) n'est pas rappelé : ainsi,
 on notera \(ℰ₂(•, •)\) plutôt que \(ℰ₂(λ₀; •, •)\).
 
@@ -194,7 +194,7 @@ trouve successivement, pour tout \(\hat{u}∈ U\)
   \label{eq:20211112183220}
   ℰ₃(u₁, u₁, \hat{u})+2λ₁\dot{ℰ₂}(u₁, \hat{u})+2ℰ₂(u₂, \hat{u})=0,\\
   \begin{aligned}[b]
-    𝒬(u₁, u₁, u₁, \hat{u})+6ℰ₃(u₁, u₂, \hat{u})+6ℰ₂(u₃, \hat{u})&\\
+    ℰ₄(u₁, u₁, u₁, \hat{u})+6ℰ₃(u₁, u₂, \hat{u})+6ℰ₂(u₃, \hat{u})&\\
     +3λ₁\bigl[\dot{ℰ₃}(u₁, u₁, \hat{u})+2\dot{ℰ₂}(u₂, \hat{u})\bigr]
     +3λ₁²\ddot{ℰ₂}(u₁, \hat{u})&\\
     +6λ₂\dot{ℰ₂}(u₁, \hat{u})&=0.
@@ -245,7 +245,7 @@ bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
     ℰ_{,uu}[u(η), λ(η)](\hat{u}, \hat{v})
     ={}&ℰ₂^*(\hat{u}, \hat{v})+η\bigl[ℰ₃^*(u₁, \hat{u}, \hat{v})
     +λ₁\dot{ℰ₂}^*(\hat{u}, \hat{v})\bigr]\\
-    &+\tfrac12η²\bigl[𝒬^*(u₁, u₁, \hat{u}, \hat{v})
+    &+\tfrac12η²\bigl[ℰ₄^*(u₁, u₁, \hat{u}, \hat{v})
     +2λ₁\dot{ℰ₃}^*(u₁, \hat{u}, \hat{v})\\
     &+λ₁²\ddot{ℰ₂}^*(\hat{u}, \hat{v})+ℰ₃^*(u₂, \hat{u}, \hat{v})
     +λ₂\dot{ℰ₂}^*(\hat{u}, \hat{v})\bigr]+o(η²).
@@ -274,7 +274,7 @@ Il faut alors distinguer deux cas. Si la branche trouvée est telle que
 
 Si \(λ₁=0\), alors on doit calculer \(λ₂\)
 \begin{equation}
-  𝒬^*(u₁, u₁, u₁, \hat{u})+3ℰ₃^*(u₁, u₂, \hat{u})+ℰ₂^*(u₃, \hat{u})
+  ℰ₄^*(u₁, u₁, u₁, \hat{u})+3ℰ₃^*(u₁, u₂, \hat{u})+ℰ₂^*(u₃, \hat{u})
   +3λ₂\dot{ℰ₂}^*(u₁, \hat{u})=0.
 \end{equation}
 
@@ -429,7 +429,7 @@ soit, en \(η=0\)
   ∂_{ηη}²F(0, λ)={}
   &ℰ₃(λ; u₁, u₁, \hat{u})+2ℰ₂(λ; u₂, \hat{u}),\\
   ∂_{ηηη}³F(0, λ)={}
-  &𝒬(λ; u₁, u₁, u₁, \hat{u})+6ℰ₃(λ; u₁, u₂, \hat{u})+6ℰ₂(λ; u₃, \hat{u}).
+  &ℰ₄(λ; u₁, u₁, u₁, \hat{u})+6ℰ₃(λ; u₁, u₂, \hat{u})+6ℰ₂(λ; u₃, \hat{u}).
 \end{align}
 
 Les dérivées croisées de \(F\) en \((0, λ)\) s'obtiennent par simple dérivation
@@ -453,7 +453,7 @@ finalement les expressions suivantes des dérivées successives de \(f\) en
     +2ℰ₂(λ₀; u₂, \hat{u}),\\
   \notag
   f'''(0)={}
-  &𝒬(λ₀; u₁, u₁, u₁, \hat{u})
+  &ℰ₄(λ₀; u₁, u₁, u₁, \hat{u})
     +6ℰ₃(λ₀; u₁, u₂, \hat{u})
     +6ℰ₂(λ₀; u₃, \hat{u})\\
   \notag
@@ -473,7 +473,7 @@ On en déduit finalement le développement limité à l'ordre 3 en \(η\) du ré
     &+2λ₁\dot{ℰ₂}(λ₀; u₁, \hat{u})
     +2ℰ₂(λ₀; u₂, \hat{u})\bigr]\\
     &+\tfrac16η³\bigl\{
-    𝒬(λ₀; u₁, u₁, u₁, \hat{u})
+    ℰ₄(λ₀; u₁, u₁, u₁, \hat{u})
     +6ℰ₃(λ₀; u₁, u₂, \hat{u})\\
     &+6ℰ₂(λ₀; u₃, \hat{u})
     +3λ₁\bigl[\dot{ℰ₃}(λ₀; u₁, u₁, \hat{u})\\
@@ -514,7 +514,7 @@ On trouve de même successivement
 soit, en \(η=0\)
 \begin{align}
   ∂_ηF(0, λ)&=ℰ₃(λ; u₁, \hat{u}, \hat{v}),\\
-  ∂_{ηη}²F(0, λ)&=𝒬(λ; u₁, u₁, \hat{u}, \hat{v})+2ℰ₃(λ; u₂, \hat{u}, \hat{v}),
+  ∂_{ηη}²F(0, λ)&=ℰ₄(λ; u₁, u₁, \hat{u}, \hat{v})+2ℰ₃(λ; u₂, \hat{u}, \hat{v}),
 \end{align}
 et en dérivant cette fois par rapport à \(λ\)
 \begin{equation}
@@ -527,7 +527,7 @@ expressions~\eqref{eq:20220107060454} et \eqref{eq:20220107124311}, on trouve
   f'(0)={}&ℰ₃(λ₀; u₁, \hat{u}, \hat{v})
             +λ₁\dot{ℰ₂}(λ₀; \hat{u}, \hat{v}),\\
   \notag
-  f''(0)={}&𝒬(λ₀; u₁, u₁, \hat{u}, \hat{v})
+  f''(0)={}&ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v})
              +2λ₁\dot{ℰ₃}(λ₀; u₁, \hat{u}, \hat{v})
              +λ₁²\ddot{ℰ₂}(λ₀; \hat{u}, \hat{v})\\
           &+2ℰ₃(λ₀; u₂, \hat{u}, \hat{v})
@@ -539,7 +539,7 @@ qui conduisent finalement au développement limité suivant, à l'ordre 2 en \(�
     ℰ_{,uu}[u(η), λ(η); \hat{u}, \hat{v}]={}&ℰ₂(λ₀; \hat{u}, \hat{v})
     +η\bigl[ℰ₃(λ₀; u₁, \hat{u}, \hat{v})\\
     &+λ₁\dot{ℰ₂}(λ₀; \hat{u}, \hat{v})\bigr]
-    +\tfrac12η²\bigl[𝒬(λ₀; u₁, u₁, \hat{u}, \hat{v})\\
+    +\tfrac12η²\bigl[ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v})\\
     &+2λ₁\dot{ℰ₃}(λ₀; u₁, \hat{u}, \hat{v})
     +λ₁²\ddot{ℰ₂}(λ₀; \hat{u}, \hat{v})\\
     &+2ℰ₃(λ₀; u₂, \hat{u}, \hat{v})

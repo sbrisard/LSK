@@ -27,6 +27,8 @@
 \setmainfont{XITS}
 \setmathfont{XITS Math}
 
+\newcommand{\order}[2]{#1_{[#2]}}
+
 \begin{document}
 \title{\mytitle}
 \author{\myauthor}
@@ -193,6 +195,7 @@ trouve successivement, pour tout \(\hat{u}∈ U\)
   ℰ₂(u₁, \hat{u})=0,\\
   \label{eq:20211112183220}
   ℰ₃(u₁, u₁, \hat{u})+2λ₁\dot{ℰ₂}(u₁, \hat{u})+2ℰ₂(u₂, \hat{u})=0,\\
+  \label{eq:20220114135717}
   \begin{aligned}[b]
     ℰ₄(u₁, u₁, u₁, \hat{u})+6ℰ₃(u₁, u₂, \hat{u})+6ℰ₂(u₃, \hat{u})&\\
     +3λ₁\bigl[\dot{ℰ₃}(u₁, u₁, \hat{u})+2\dot{ℰ₂}(u₂, \hat{u})\bigr]
@@ -205,24 +208,24 @@ On déduit de l'équation~\eqref{eq:20211112182917} que \(u₁∈V\). On pose al
 \(u₁=ξ₁^i vᵢ\). En prenant \(\hat{u}=vᵢ\), l'équation~\eqref{eq:20211112183220}
 s'écrit
 \begin{equation}
-  ℰ₃_{ijk}ξ₁^jξ₁^k+2λ₁\dot{ℰ₂}_{ij}ξ₁^j=0.
+  ℰ_{3,ijk}ξ₁^jξ₁^k+2λ₁\dot{ℰ}_{2,ij}ξ₁^j=0.
 \end{equation}
 
-Pour le terme d'ordre 2, on introduit la décomposition~: \(u₂=ξ₂^ivᵢ+w₂\), où
-\(w₂∈W\). On a alors \(ℰ₂(u₂, \hat{u})=ℰ₂(w₂, \hat{u})\) et
-l'équation~\eqref{eq:20211112183220} s'écrit
+Pour le terme d'ordre 2, on introduit la décomposition~:
+\(u_2=ξ_2^iv_i+u_2^W\), où \(u_2^W∈W\). On a alors
+\(ℰ₂(u_2, \hat{u})=ℰ₂(u_2^W, \hat{u})\) et l'équation~\eqref{eq:20211112183220}
+s'écrit
 \begin{equation}
   ℰ₃(u₁, u₁, \hat{u})+2λ₁\dot{ℰ₂}(u₁, \hat{u})
-  +2ℰ₂(w₂, \hat{u})=0,
+  +2ℰ₂(u_2^W, \hat{u})=0,
 \end{equation}
 pour tout \(\hat{u}∈V\). En prenant la fonction test dans l'espace \(W\), on
-obtient le problème variationnel suivant~: trouver \(w₂∈W\) tel
-que\pdfmargincomment{Conflit de notations}
+obtient le problème variationnel suivant~: trouver \(u_2^W∈W\) tel que
 \begin{equation}
   \label{eq:20211210131623}
   ξ₁^iξ₁^jℰ₃(vᵢ, vⱼ, \hat{w})
   +2λ₁ξ₁^i\dot{ℰ₂}(vᵢ, \hat{w})
-  +2ℰ₂(w₂, \hat{w})=0,
+  +2ℰ₂(u_2^W, \hat{w})=0,
 \end{equation}
 pour tout \(\hat{w}∈W\). Soient \(wᵢ∈W\) les solutions des problèmes
 variationnels suivants
@@ -234,8 +237,31 @@ s'obtient par simple combinaison linéaire des \(wᵢ\) et \(w_{ij}\) introduits
 précédemment par le problème variationnel~\eqref{eq:20211221155859}, de sorte
 que
 \begin{equation}
-  w₂=ξ₁^iξ₁^jw_{ij}+λ₁ξ₁^i wᵢ.
+  u_2^W=ξ_1^iξ_1^jw_{ij}+λ_1ξ_1^i w_i
+  \quad\text{et}\quad
+  u_2=ξ_2^iv_i+ξ_1^iξ_1^jw_{ij}+λ_1ξ_1^i w_i.
 \end{equation}
+
+En prenant \(\hat{u}=v_i\) dans l'équation~\eqref{eq:20220114135717}, on
+obtient le système linéaire suivant, dont les inconnues sont les \(ξ₂^i\) (en
+supposant connu \(λ₂\))
+\begin{equation}
+  \begin{aligned}[b]
+    6ξ₂^j\bigl[ξ₁^kℰ₃(v_i, v_j, v_k)+λ₁\dot{ℰ₂}(v_i, v_j)\bigr]&\\
+    +ξ₁^jξ₁^kξ₁^l\bigl[ℰ₄(v_i, v_j, v_k, v_l)+6ℰ₃(v_i, v_j, w_{kl})\bigr]&\\
+    +3λ₁ξ₁^jξ₁^k\bigl[\dot{ℰ₃}(v_i, v_j, v_k)+2ℰ₃(v_i, v_j, w_k)+2\dot{ℰ₂}(v_i, w_{jk})\bigr]&\\
+    +3ξ₁^j\bigl[λ₁²\ddot{ℰ₂}(v_i, v_j)+2λ₁²\dot{ℰ₂}(v_i, w_j)+2λ₂\dot{ℰ₂}(v_i, v_j)\bigr]
+    &=0.
+  \end{aligned}
+\end{equation}
+
+On supposera satisfaite la condition suivante, qui assure que ce système est régulier
+\begin{equation}
+  \det\bigl[ξ₁^kℰ₃(v_i, v_j, v_k)+λ₁\dot{ℰ₂}(v_i, v_j)\bigr]_{i,j}\neq0.
+\end{equation}
+
+Les \(ξ₂^i\) sont donc déterminés de façon unique si \(λ₁\), \(λ₂\) et \(ξ₁^i\)
+sont connus.
 
 Le développement limité de la hessienne de l'énergie le long de la branche
 bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
@@ -244,30 +270,30 @@ bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
   \begin{aligned}[b]
     ℰ_{,uu}[u(η), λ(η)](\hat{u}, \hat{v})
     ={}&ℰ₂^*(\hat{u}, \hat{v})+η\bigl[ℰ₃^*(u₁, \hat{u}, \hat{v})
-    +λ₁\dot{ℰ₂}^*(\hat{u}, \hat{v})\bigr]\\
+    +λ₁\dot{ℰ}_2^*(\hat{u}, \hat{v})\bigr]\\
     &+\tfrac12η²\bigl[ℰ₄^*(u₁, u₁, \hat{u}, \hat{v})
-    +2λ₁\dot{ℰ₃}^*(u₁, \hat{u}, \hat{v})\\
-    &+λ₁²\ddot{ℰ₂}^*(\hat{u}, \hat{v})+ℰ₃^*(u₂, \hat{u}, \hat{v})
-    +λ₂\dot{ℰ₂}^*(\hat{u}, \hat{v})\bigr]+o(η²).
+    +2λ₁\dot{ℰ}_3^*(u₁, \hat{u}, \hat{v})\\
+    &+λ₁²\ddot{ℰ}_2^*(\hat{u}, \hat{v})+ℰ_3^*(u₂, \hat{u}, \hat{v})
+    +λ₂\dot{ℰ}_2^*(\hat{u}, \hat{v})\bigr]+o(η²).
   \end{aligned}
 \end{equation}
 
 On peut d'ores et déjà remarquer que, sur la branche fondamentale
 (\(u₁=u₂=0\)), en prenant \(η=λ-λ^*\) (\(λ₁=1\))
 \begin{equation}
-  ℰ₂(\hat{u}, \hat{v})=ℰ_{,uu}[u₀(λ), λ](\hat{u}, \hat{v})
+  ℰ₂(λ; \hat{u}, \hat{v})
   =ℰ₂^*(\hat{u}, \hat{v})+\bigl(λ-λ^*\bigr)\dot{ℰ₂}^*(\hat{u}, \hat{v})+o(λ-λ^*).
 \end{equation}
 
-Dans ce qui suit, on supposera que \(\dot{ℰ₂}^*≠0\). Pour \(\hat{u}∈\kerℰ₂^*\),
+Dans ce qui suit, on supposera que \(\dot{ℰ}_2^*≠0\). Pour \(\hat{u}∈V\),
 l'égalité précédente s'écrit
 \begin{equation}
   ℰ₂(\hat{u}, \hat{u})=\bigl(λ-λ^*\bigr)\dot{ℰ₂}^*(\hat{u}, \hat{u})+o(λ-λ^*).
 \end{equation}
 
 Comme la branche fondamentale est stable pour \(λ<λ^*\), on doit avoir
-\(\dot{ℰ₂}^*(\hat{u}, \hat{u})<0\). La forme quadratique \(\dot{ℰ₂}^*\) est
-définie négative sur \(\kerℰ₂^*\).
+\(\dot{ℰ}_2^*(\hat{u}, \hat{u})<0\). La forme quadratique \(\dot{ℰ}_2^*\) est
+donc définie négative sur \(V\).
 
 Il faut alors distinguer deux cas. Si la branche trouvée est telle que
 \(λ₁≠0\), alors...
@@ -596,10 +622,10 @@ prenant \(\hat{w}∈\kerℰ₂^*\), on obtient alors le problème variationnel d
 
 En posant \(u₁=ξᵢaᵢ\) et \(v₀=χⱼaⱼ\), on obtient l'équation
 \begin{equation}
-  \bigl(ℰ₃_{ijk}^*ξₖ+λ₁\dot{ℰ₂}_{ij}^*\bigr)χⱼ=α₁χᵢ,
+  \bigl(ℰ_{3,ijk}^*ξₖ+λ₁\dot{ℰ}_{2, ij}^*\bigr)χⱼ=α₁χᵢ,
 \end{equation}
 qui est un problème aux valeurs propres pour la matrice symétrique
-\((ℰ₃_{ijk}^*ξₖ+λ₁\dot{ℰ₂}_{ij}^*)_{1≤i, j≤m}\)
+\((ℰ_{3, ijk}^*ξₖ+λ₁\dot{ℰ}_{2,ij}^*)_{1≤i, j≤m}\)
 
 % \printbibliography
 \end{document}

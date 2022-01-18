@@ -208,7 +208,7 @@ On déduit de l'équation~\eqref{eq:20211112182917} que \(u₁∈V\). On pose al
 \(u₁=ξ₁^i vᵢ\). En prenant \(\hat{u}=vᵢ\), l'équation~\eqref{eq:20211112183220}
 s'écrit
 \begin{equation}
-  ℰ_{3,ijk}ξ₁^jξ₁^k+2λ₁\dot{ℰ}_{2,ij}ξ₁^j=0.
+  ℰ_{ijk}ξ₁^jξ₁^k+2λ₁\dot{ℰ}_{ij}ξ₁^j=0.
 \end{equation}
 
 Pour le terme d'ordre 2, on introduit la décomposition~:
@@ -257,7 +257,7 @@ supposant connu \(λ₂\))
 
 On supposera satisfaite la condition suivante, qui assure que ce système est régulier
 \begin{equation}
-  \det\bigl[ξ₁^kℰ₃(v_i, v_j, v_k)+λ₁\dot{ℰ₂}(v_i, v_j)\bigr]_{i,j}\neq0.
+  \det\bigl(ξ₁^kℰ_{ijk}+λ₁\dot{ℰ}_{ij}\bigr)_{i,j}\neq0.
 \end{equation}
 
 Les \(ξ₂^i\) sont donc déterminés de façon unique si \(λ₁\), \(λ₂\) et \(ξ₁^i\)
@@ -398,8 +398,8 @@ d'où l'on déduit successivement que
           &+Λ'''∂_λF+3Λ'Λ''∂_{λλ}²F+Λ'^3∂_{λλλ}³F,
 \end{align}
 où \(Λ\) et ses dérivées sont évaluées en \(η\), tandis que \(F\) et ses
-dérivées partielles sont évaluées en \([η, λ₀(η)]\). En \(η=0\), les relations
-précédentes s'écrivent
+dérivées partielles sont évaluées en \([η, λ₀+Λ(η)]\). En \(η=0\), les
+relations précédentes s'écrivent
 \begin{align}
   \label{eq:20220107060454}
   f'(0)={}&∂_η F+λ₁∂_λ F,\\

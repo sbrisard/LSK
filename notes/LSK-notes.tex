@@ -263,6 +263,32 @@ On supposera satisfaite la condition suivante, qui assure que ce système est r�
 Les \(ξ₂^i\) sont donc déterminés de façon unique si \(λ₁\), \(λ₂\) et \(ξ₁^i\)
 sont connus.
 
+Le développement limité suivant de l'énergie le long de la branche bifurquée
+est établi dans l'annexe~\ref{sec:20220121172919}
+\begin{equation}
+  \label{eq:20220121172753}
+  \begin{aligned}[b]
+    ℰ[u(η), λ(η)]={}&ℰ\bigl(u^*[λ(η)], λ(η)\bigr)
+    +\tfrac12η²ℰ₂(λ₀; u₁, u₁)\\
+    &+\tfrac16η³\bigl[ℰ₃(λ₀;u₁, u₁, u₁)+6ℰ₂(λ₀; u₁, u₂)\\
+    &+3λ₁\dot{ℰ}₂(λ₀; u₁, u₁)\bigr]+\tfrac1{24}η⁴\bigl\{ℰ₄(λ₀;u₁, u₁, u₁, u₁)\\
+    &+12ℰ₃(λ₀; u₁, u₁, u₂)+12ℰ₂(λ₀; u₂, u₂)\\
+    &+18ℰ₂(λ₀; u₁, u₃)+4λ₁\bigl[\dot{ℰ}₃(λ₀; u₁, u₁, u₁)\\
+    &+6\dot{ℰ}₂(λ₀; u₁, u₂)\bigr]+6λ₁²\ddot{ℰ}₂(λ₀; u₁, u₁)\\
+    &+12λ₂\dot{ℰ}₂(λ₀; u₁, u₁)\bigr\}+o(η⁴).
+  \end{aligned}
+\end{equation}
+
+En utilisant les relations~\eqref{eq:20211112182917}, \eqref{eq:20211112183220}
+et \eqref{eq:20220114135717} l'expression précédente se simplifie
+\begin{equation}
+  \begin{aligned}[b]
+    ℰ[u(η), λ(η)]={}&ℰ\bigl(u^*[λ(η)], λ(η)\bigr)-\tfrac1{12}η³ℰ₃(λ₀;u₁, u₁, u₁)\\
+    &-\tfrac1{24}η⁴\bigl\{ℰ₄(λ₀;u₁, u₁, u₁, u₁)-12ℰ₂(λ₀; u₂, u₂)\\
+    &+2λ₁\bigl[\dot{ℰ}₃(λ₀; u₁, u₁, u₁)-6\dot{ℰ}₂(λ₀; u₁, u₂)\bigr]\bigr\}+o(η⁴).
+  \end{aligned}
+\end{equation}
+
 Le développement limité de la hessienne de l'énergie le long de la branche
 bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
 \begin{equation}
@@ -494,9 +520,9 @@ finalement les expressions suivantes des dérivées successives de \(f\) en
     +6ℰ₂(λ₀; u₃, \hat{u})\\
   \notag
   &+3λ₁\bigl[\dot{ℰ₃}(λ₀; u₁, u₁, \hat{u})
-    +2\dot{ℰ₂}(λ₀; u₂, \hat{u})\bigr]
-    +3λ₁²\ddot{ℰ₂}(λ₀; u₁, \hat{u})\\
-  &+6λ₂\dot{ℰ₂}(λ₀; u₁, \hat{u}).
+    +2\dot{ℰ₂}(λ₀; u₂, \hat{u})\bigr]\\
+  &+3λ₁²\ddot{ℰ₂}(λ₀; u₁, \hat{u})
+    +6λ₂\dot{ℰ₂}(λ₀; u₁, \hat{u}).
 \end{align}
 
 On en déduit finalement le développement limité à l'ordre 3 en \(η\) du résidu
@@ -519,6 +545,79 @@ On en déduit finalement le développement limité à l'ordre 3 en \(η\) du ré
     +o(η³).
   \end{aligned}
 \end{equation}
+
+\subsection{Développement limité de l'énergie}
+\label{sec:20220121172919}
+
+On s'intéresse ici à l'écart d'énergie, pour un chargement \(λ\) donné, entre
+la branche bifurquée et la branche fondamentale, soit
+\begin{equation}
+  F(η, λ) = ℰ[u^*(λ)+U(η), λ]-ℰ[u^*(λ), λ]
+\end{equation}
+et
+\begin{equation}
+  f(η) = F[η, λ₀+Λ(η)].
+\end{equation}
+
+On observe tout d'abord que \(F(0, λ)=0\) pour tout \(λ\), donc
+\begin{equation}
+  \frac{∂^kF}{∂λ^k}(0, λ)=0\quad(k≥0),
+\end{equation}
+tandis que les dérivées de \(F\) par rapport à \(η\) s'écrivent
+\begin{align}
+  ∂_ηF(η, λ)={}&ℰ_{,u}[u^*(λ)+U(η), λ; U'(η)],\\
+  \notag
+  ∂_{ηη}²F(η, λ)={}&ℰ_{,uu}[u^*(λ)+U(η), λ; U'(η), U'(η)]\\
+               &+ℰ_{,u}[u^*(λ)+U(η), λ; U''(η)],\\
+  \notag
+  ∂_{ηηη}³F(η, λ)={}&ℰ_{,uuu}[u^*(λ)+U(η), λ; U'(η), U'(η), U'(η)]\\
+  \notag
+               &+3ℰ_{,uu}[u^*(λ)+U(η), λ; U'(η), U''(η)]\\
+               &+ℰ_{,u}[u^*(λ)+U(η), λ; U'''(η)],\\
+  ∂_{ηηηη}⁴F(η, λ)={}&ℰ_{,uuuu}[u^*(λ)+U(η), λ; U'(η), U'(η), U'(η), U'(η)]\\
+  \notag
+               &+6ℰ_{,uuu}[u^*(λ)+U(η), λ; U'(η), U'(η), U''(η)]\\
+  \notag
+               &+3ℰ_{,uu}[u^*(λ)+U(η), λ; U''(η), U''(η)]\\
+  \notag
+               &+3ℰ_{,uu}[u^*(λ)+U(η), λ; U'(η), U'''(η)]\\
+  \notag
+               &+ℰ_{,u}[u^*(λ)+U(η), λ; U''''(η)],
+\end{align}
+soit, en \(η=0\), en observant que \(ℰ_{,u}[u^*(λ), λ]=0\)
+\begin{align}
+  ∂_ηF(0, λ)={}&0,\\
+  ∂_{ηη}²F(0, λ)={}&ℰ₂(λ; u₁, u₁),\\
+  ∂_{ηηη}³F(0, λ)={}&ℰ₃(λ;u₁, u₁, u₁)+6ℰ₂(λ; u₁, u₂),\\
+  \notag
+  ∂_{ηηηη}⁴F(η, λ)={}&ℰ₄(λ;u₁, u₁, u₁, u₁)+12ℰ₃(λ; u₁, u₁, u₂)\\
+               &+12ℰ₂(λ; u₂, u₂)+18ℰ₂(λ; u₁, u₃).
+\end{align}
+
+On en déduit que
+\begin{align}
+  ∂_{ηλ}²F(0, λ)={}&0,\\
+  ∂_{ηηλ}³F(0, λ)={}&\dot{ℰ}₂(λ; u₁, u₁),\\
+  ∂_{ηλλ}³F(0, λ)={}&0,\\
+  ∂_{ηηηλ}⁴F(0, λ)={}&\dot{ℰ}₃(λ; u₁, u₁, u₁)+6\dot{ℰ}₂(λ; u₁, u₂),\\
+  ∂_{ηηλλ}⁴F(0, λ)={}&\ddot{ℰ}₂(λ; u₁, u₁),\\
+  ∂_{ηλλλ}⁴F(0, λ)={}&0
+\end{align}
+et finalement
+\begin{align}
+  f'(0)={}&0,\\
+  f''(0)={}&ℰ₂(λ₀; u₁, u₁),\\
+  f'''(0)={}&ℰ₃(λ₀;u₁, u₁, u₁)+6ℰ₂(λ₀; u₁, u₂)+3λ₁\dot{ℰ}₂(λ₀; u₁, u₁),\\
+  \notag
+  f''''(0)={}&ℰ₄(λ₀;u₁, u₁, u₁, u₁)+12ℰ₃(λ₀; u₁, u₁, u₂)\\
+  \notag
+          &+12ℰ₂(λ₀; u₂, u₂)+18ℰ₂(λ₀; u₁, u₃)\\
+  \notag
+          &+4λ₁\bigl[\dot{ℰ}₃(λ₀; u₁, u₁, u₁)+6\dot{ℰ}₂(λ₀; u₁, u₂)\bigr]\\
+          &+6λ₁²\ddot{ℰ}₂(λ₀; u₁, u₁)+12λ₂\dot{ℰ}₂(λ₀; u₁, u₁)
+\end{align}
+
+On en déduit finalement le développement limité de l'énergie~\eqref{eq:20220121172753}.
 
 \subsection{Développement limité de la hessienne}
 \label{sec:20211115081016}

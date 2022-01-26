@@ -205,8 +205,12 @@ trouve successivement, pour tout \(\hat{u}∈ U\)
 \end{gather}
 
 On déduit de l'équation~\eqref{eq:20211112182917} que \(u₁∈V\). On pose alors
-\(u₁=ξ₁^i vᵢ\). En prenant \(\hat{u}=vᵢ\), l'équation~\eqref{eq:20211112183220}
-s'écrit
+\begin{equation}
+  \label{eq:20220124135236}
+  u₁=ξ₁^i vᵢ.
+\end{equation}
+
+En prenant \(\hat{u}=vᵢ\), l'équation~\eqref{eq:20211112183220} s'écrit
 \begin{equation}
   ℰ_{ijk}ξ₁^jξ₁^k+2λ₁\dot{ℰ}_{ij}ξ₁^j=0.
 \end{equation}
@@ -237,6 +241,7 @@ s'obtient par simple combinaison linéaire des \(wᵢ\) et \(w_{ij}\) introduits
 précédemment par le problème variationnel~\eqref{eq:20211221155859}, de sorte
 que
 \begin{equation}
+  \label{eq:20220124135324}
   u_2^W=ξ_1^iξ_1^jw_{ij}+λ_1ξ_1^i w_i
   \quad\text{et}\quad
   u_2=ξ_2^iv_i+ξ_1^iξ_1^jw_{ij}+λ_1ξ_1^i w_i.
@@ -279,15 +284,30 @@ est établi dans l'annexe~\ref{sec:20220121172919}
   \end{aligned}
 \end{equation}
 
-En utilisant les relations~\eqref{eq:20211112182917}, \eqref{eq:20211112183220}
-et \eqref{eq:20220114135717} l'expression précédente se simplifie
+La relation~\eqref{eq:20211112182917} montre tout d'abord que les termes en
+\(ℰ₂(λ₀; u₁, u₁)\), \(ℰ₂(λ₀; u₁, u₂)\) et \(ℰ₂(λ₀; u₁, u₃)\) sont nuls. Le
+premier terme non-nul du développement limité~\eqref{eq:20220121172753} est
+donc le terme d'ordre 3. En prenant de plus \(\hat{u}=u₁\) dans la
+relation~\eqref{eq:20211112183220}, on trouve
+finalement\pdfmargincomment[avatar=SB]{Cette expression coïncide avec
+  l'Éq. (AC-5.29) de Tryantafyllidis.}
 \begin{equation}
-  \begin{aligned}[b]
-    ℰ[u(η), λ(η)]={}&ℰ\bigl(u^*[λ(η)], λ(η)\bigr)-\tfrac1{12}η³ℰ₃(λ₀;u₁, u₁, u₁)\\
-    &-\tfrac1{24}η⁴\bigl\{ℰ₄(λ₀;u₁, u₁, u₁, u₁)-12ℰ₂(λ₀; u₂, u₂)\\
-    &+2λ₁\bigl[\dot{ℰ}₃(λ₀; u₁, u₁, u₁)-6\dot{ℰ}₂(λ₀; u₁, u₂)\bigr]\bigr\}+o(η⁴).
-  \end{aligned}
+  ℰ[u(η), λ(η)]=ℰ\bigl(u^*[λ(η)], λ(η)\bigr)+\tfrac16λ₁η³\dot{ℰ}₂(u₁, u₁)+o(η³).
 \end{equation}
+
+Si \(λ₁=0\), le premier terme non-nul du développement
+limité~\eqref{eq:20220121172753} est d'ordre 4. En prenant cette fois
+\(\hat{u}=u₂\) dans la relation~\eqref{eq:20211112183220} et \(\hat{u}=u₁\)
+dans la relation~\eqref{eq:20220114135717}, on
+obtient\pdfmargincomment[avatar=SB]{Cette expression coïncide avec
+  l'Éq. (AC-5.30) de Tryantafyllidis.}
+\begin{equation}
+  ℰ[u(η), λ(η)]=ℰ\bigl(u^*[λ(η)], λ(η)\bigr)+\tfrac1{4}λ₂η⁴\dot{ℰ}₂(λ₀; u₁, u₁)+o(η⁴).
+\end{equation}
+
+\begin{center}
+  ***
+\end{center}
 
 Le développement limité de la hessienne de l'énergie le long de la branche
 bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
@@ -452,7 +472,7 @@ où \(F\) et ses dérivées sont évaluées en \((0, λ₀)\).
 \label{sec:20211112182000}
 
 On cherche un développement limité du résidu (c'est-à-dire de la première
-variation de l'énergie). La fonction test (\(\hat{u}∈V\) étant fixée, la
+variation de l'énergie). La fonction test \(\hat{u}∈U\) étant fixée, la
 méthode précédente est donc appliquée avec
 \begin{equation}
   \label{eq:20220107054629}
@@ -624,10 +644,8 @@ On en déduit finalement le développement limité de l'énergie~\eqref{eq:20220
 
 On cherche maintenant un développement limité de la hessienne de l'énergie. Les
 fonctions test \(\hat{u}, \hat{v}∈V\) étant fixées, on applique la méthode du
-§\ref{sec:20220107121442} aux fonctions suivantes
+§\ref{sec:20220107121442} à la fonction \(f(η)=F[η, λ₀+Λ(η)]\), avec
 \begin{equation}
-  f(η)=ℰ_{,uu}[u(η), λ(η); \hat{u}, \hat{v}]
-  \quad\text{et}\quad
   F(η, λ)=ℰ_{,uu}[u^*(λ)+U(η), λ; \hat{u}, \hat{v}].
 \end{equation}
 

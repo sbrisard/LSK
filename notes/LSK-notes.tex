@@ -309,46 +309,68 @@ obtient\pdfmargincomment[avatar=SB]{Cette expression coïncide avec
   ***
 \end{center}
 
-Le développement limité de la hessienne de l'énergie le long de la branche
-bifurquée est établi dans l'annexe~\ref{sec:20211115081016}
+Pour analyser la stabilité de la branche bifurquée ainsi trouvée, il faut
+déterminer le signe de la hessienne de l'énergie. On peut d'ores et déjà
+remarquer que, sur la branche fondamentale (\(u₁=u₂=0\)), en prenant \(η=λ-λ₀\)
+(\(λ₁=1\))
+\begin{equation}
+  ℰ₂(λ; \hat{u}, \hat{v})
+  =ℰ₂(λ₀; \hat{u}, \hat{v})+\bigl(λ-λ₀\bigr)\dot{ℰ}₂(λ₀; \hat{u}, \hat{v})+o(λ-λ₀).
+\end{equation}
+
+Dans ce qui suit, on supposera que \(\dot{ℰ}_2(λ₀)≠0\). Pour \(\hat{v}∈V\),
+l'égalité précédente s'écrit
+\begin{equation}
+  ℰ₂(λ₀; \hat{v}, \hat{v})=\bigl(λ-λ₀\bigr)\dot{ℰ}₂(\hat{v}, \hat{v})+o(λ-λ₀).
+\end{equation}
+
+Comme la branche fondamentale est stable pour \(λ<λ₀\), on doit avoir
+\(\dot{ℰ}₂(λ₀; \hat{v}, \hat{v})<0\). La forme quadratique \(\dot{ℰ}₂(λ₀)\) est
+donc définie négative sur \(V\). Le développement limité de la hessienne de
+l'énergie le long de la branche bifurquée est établi dans
+l'annexe~\ref{sec:20211115081016}. Pour tout \(\hat{u}∈U\), on trouve
 \begin{equation}
   \label{eq:20211115082025}
   \begin{aligned}[b]
-    ℰ_{,uu}[u(η), λ(η)](\hat{u}, \hat{v})
-    ={}&ℰ₂^*(\hat{u}, \hat{v})+η\bigl[ℰ₃^*(u₁, \hat{u}, \hat{v})
-    +λ₁\dot{ℰ}_2^*(\hat{u}, \hat{v})\bigr]\\
-    &+\tfrac12η²\bigl[ℰ₄^*(u₁, u₁, \hat{u}, \hat{v})
-    +2λ₁\dot{ℰ}_3^*(u₁, \hat{u}, \hat{v})\\
-    &+λ₁²\ddot{ℰ}_2^*(\hat{u}, \hat{v})+ℰ_3^*(u₂, \hat{u}, \hat{v})
-    +λ₂\dot{ℰ}_2^*(\hat{u}, \hat{v})\bigr]+o(η²).
+    ℰ_{,uu}[u(η), λ(η); \hat{u}, \hat{u}]
+    ={}&ℰ₂(λ₀; \hat{u}, \hat{u})+η\bigl[ℰ₃(λ₀; u₁, \hat{u}, \hat{u})
+    +λ₁\dot{ℰ}₂(λ₀; \hat{u}, \hat{u})\bigr]\\
+    &+\tfrac12η²\bigl[ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{u})
+    +2λ₁\dot{ℰ}₃(λ₀; u₁, \hat{u}, \hat{u})\\
+    &+λ₁²\ddot{ℰ}₂(λ₀; \hat{u}, \hat{u})
+    +ℰ₃(λ₀; u₂, \hat{u}, \hat{u})\\
+    &+λ₂\dot{ℰ}₂(λ₀; \hat{u}, \hat{u})\bigr]
+    +o(η²).
   \end{aligned}
 \end{equation}
 
-On peut d'ores et déjà remarquer que, sur la branche fondamentale
-(\(u₁=u₂=0\)), en prenant \(η=λ-λ^*\) (\(λ₁=1\))
+On peut décomposer le vecteur \(\hat{u}∈U\) de façon unique sous la forme
+\(\hat{u}=\hat{v}+\hat{w}\), avec \(\hat{v}∈V\) et \(\hat{w}∈W\). Le terme
+constant du développement précédent vaut alors \(ℰ₂(λ₀; \hat{w}, \hat{w})\). Si
+\(\hat{w}≠0\), alors ce terme constant est strictement positif, puisque la
+hessienne est définie positive sur \(W\) en \(λ=λ₀\). La hessienne sur la
+branche bifurquée est donc positive pour tout \(\hat{u}∈U\) ayant une
+composante dans \(W\). Il suffit donc d'étudier le signe de la hessienne sur la
+branche bifurquée pour \(\hat{u}=\hat{v}∈V\). Dans ce cas
 \begin{equation}
-  ℰ₂(λ; \hat{u}, \hat{v})
-  =ℰ₂^*(\hat{u}, \hat{v})+\bigl(λ-λ^*\bigr)\dot{ℰ₂}^*(\hat{u}, \hat{v})+o(λ-λ^*).
+  ℰ_{,uu}[u(η), λ(η); \hat{v}, \hat{v}]
+  =η\bigl[ℰ₃(λ₀; u₁, \hat{v}, \hat{v})
+  +λ₁\dot{ℰ}₂(λ₀; \hat{v}, \hat{v})\bigr]+o(η).
 \end{equation}
 
-Dans ce qui suit, on supposera que \(\dot{ℰ}_2^*≠0\). Pour \(\hat{u}∈V\),
-l'égalité précédente s'écrit
+Compte-tenu de la relation~\eqref{eq:20211112183220}, on trouve pour
+\(\hat{v}=u₁\)
 \begin{equation}
-  ℰ₂(\hat{u}, \hat{u})=\bigl(λ-λ^*\bigr)\dot{ℰ₂}^*(\hat{u}, \hat{u})+o(λ-λ^*).
+  ℰ_{,uu}[u(η), λ(η); u₁, u₁]=-λ₁η\dot{ℰ}₂(λ₀; u₁, u₁)+o(η).
 \end{equation}
 
-Comme la branche fondamentale est stable pour \(λ<λ^*\), on doit avoir
-\(\dot{ℰ}_2^*(\hat{u}, \hat{u})<0\). La forme quadratique \(\dot{ℰ}_2^*\) est
-donc définie négative sur \(V\).
-
-Il faut alors distinguer deux cas. Si la branche trouvée est telle que
-\(λ₁≠0\), alors...
-
-Si \(λ₁=0\), alors on doit calculer \(λ₂\)
+Si \(λ₁≠0\), l'expression précédente peut également s'écrire
 \begin{equation}
-  ℰ₄^*(u₁, u₁, u₁, \hat{u})+3ℰ₃^*(u₁, u₂, \hat{u})+ℰ₂^*(u₃, \hat{u})
-  +3λ₂\dot{ℰ₂}^*(u₁, \hat{u})=0.
+  ℰ_{,uu}[u(η), λ(η); u₁, u₁]=-\bigl(λ-λ₀\bigr)\dot{ℰ}₂(λ₀; u₁, u₁)+o(λ-λ₀),
 \end{equation}
+qui est négative pour \(λ<λ₀\): la branche bifurquée est instable sous la
+charge critique. Il reste alors à étudier le signe de la hessienne de la
+branche bifurquée au-delà de la charge critique (\(λ>λ₀\)).
 
 \appendix
 
@@ -643,7 +665,7 @@ On en déduit finalement le développement limité de l'énergie~\eqref{eq:20220
 \label{sec:20211115081016}
 
 On cherche maintenant un développement limité de la hessienne de l'énergie. Les
-fonctions test \(\hat{u}, \hat{v}∈V\) étant fixées, on applique la méthode du
+fonctions test \(\hat{u}, \hat{v}∈U\) étant fixées, on applique la méthode du
 §\ref{sec:20220107121442} à la fonction \(f(η)=F[η, λ₀+Λ(η)]\), avec
 \begin{equation}
   F(η, λ)=ℰ_{,uu}[u^*(λ)+U(η), λ; \hat{u}, \hat{v}].
@@ -652,9 +674,9 @@ fonctions test \(\hat{u}, \hat{v}∈V\) étant fixées, on applique la méthode 
 On observe tout d'abord que \(F(0, λ)=ℰ₂(λ; \hat{u}, \hat{v})\), soit, en
 dérivant par rapport à \(λ\)
 \begin{equation}
-  ∂_λ F(0, λ)=\dot{ℰ₂}(\hat{u}, \hat{v})
+  ∂_λ F(0, λ)=\dot{ℰ₂}(λ; \hat{u}, \hat{v})
   \quad\text{et}\quad
-  ∂_{λλ}²F(0, λ)=\ddot{ℰ₂}(\hat{u}, \hat{v}).
+  ∂_{λλ}²F(0, λ)=\ddot{ℰ₂}(λ; \hat{u}, \hat{v}).
 \end{equation}
 
 On trouve de même successivement
@@ -684,8 +706,11 @@ expressions~\eqref{eq:20220107060454} et \eqref{eq:20220107124311}, on trouve
              +2λ₁\dot{ℰ₃}(λ₀; u₁, \hat{u}, \hat{v})
              +λ₁²\ddot{ℰ₂}(λ₀; \hat{u}, \hat{v})\\
           &+2ℰ₃(λ₀; u₂, \hat{u}, \hat{v})
-            +2λ₂\dot{ℰ₂}^*(λ₀; \hat{u}, \hat{v}),
+            +2λ₂\dot{ℰ₂}(λ₀; \hat{u}, \hat{v}).
 \end{align}
+
+
+
 qui conduisent finalement au développement limité suivant, à l'ordre 2 en \(η\)
 \begin{equation}
   \begin{aligned}[b]

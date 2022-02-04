@@ -351,11 +351,41 @@ constant du développement précédent vaut alors \(ℰ₂(λ₀; \hat{w}, \hat{
 hessienne est définie positive sur \(W\) en \(λ=λ₀\). La hessienne sur la
 branche bifurquée est donc positive pour tout \(\hat{u}∈U\) ayant une
 composante dans \(W\). Il suffit donc d'étudier le signe de la hessienne sur la
-branche bifurquée pour \(\hat{u}=\hat{v}∈V\). Dans ce cas
+branche bifurquée pour \(\hat{u}∈V\), soit \(\hat{u}=\hat{ξ}^iv_i\). Dans ce
+cas, compte-tenu de l'expression~\eqref{eq:20220124135324} de \(u₂\)
 \begin{equation}
-  ℰ_{,uu}[u(η), λ(η); \hat{v}, \hat{v}]
-  =η\bigl[ℰ₃(λ₀; u₁, \hat{v}, \hat{v})
-  +λ₁\dot{ℰ}₂(λ₀; \hat{v}, \hat{v})\bigr]+o(η).
+  \begin{aligned}[b]
+    ℰ₃(λ₀; u₂, \hat{u}, \hat{u})={}&
+    ξ₁^iξ₁^j\hat{ξ}^k\hat{ξ}^lℰ₃(λ₀; w_{ij}, v_k, v_l)
+    +ξ₂^i\hat{ξ}^j\hat{ξ}^kℰ₃(λ₀; v_i, v_j, v_k)\\
+    &+λ₁ξ₁^i\hat{ξ}^j\hat{ξ}^kℰ₃(λ₀; w_i, v_j, v_k),
+  \end{aligned}
+\end{equation}
+et, en utilisant la définition~\eqref{eq:20211221155859} de \(w_{kl}\), avec
+\(\hat{w}=w_{ij}\)
+\begin{equation}
+  ℰ₃(λ₀; w_{ij}, v_k, v_l)=-2ℰ₂(λ₀; w_{ij}, w_{kl}),
+\end{equation}
+soit
+\begin{equation}
+  \begin{aligned}[b]
+    ℰ₃(λ₀; u₂, \hat{u}, \hat{u})={}&
+    -2ξ₁^iξ₁^j\hat{ξ}^k\hat{ξ}^lℰ₂(λ₀; w_{ij}, w_{kl})
+    +ξ₂^i\hat{ξ}^j\hat{ξ}^kℰ_{ijk}(λ₀)\\
+    &+λ₁ξ₁^i\hat{ξ}^j\hat{ξ}^kℰ₃(λ₀; w_i, v_j, v_k).
+  \end{aligned}
+\end{equation}
+
+\begin{equation}
+  \label{eq:20220203144500}
+  \begin{aligned}[b]
+    ℰ_{,uu}[u(η), λ(η); \hat{u}, \hat{u}]
+    ={}&η\hat{ξ}^i\hat{ξ}^j\bigl[ξ₁^kℰ_{ijk}(λ₀)+λ₁\dot{ℰ}_{ij}(λ₀)\bigr]\\
+    &+\tfrac12η²\hat{ξ}^i\hat{ξ}^j\bigl\{ξ₁^kξ₁^l\bigl[ℰ_{ijkl}(λ₀)
+    -2ℰ₂(λ₀; w_{ij}, w_{kl})\bigr]\\
+    &+λ₁ξ₁^k\bigl[ℰ₃(λ₀; v_i, v_j, w_k)+\dot{ℰ}_{ijk}(λ₀)\bigr]\\
+    &+λ₁²\ddot{ℰ}_{ij}(λ₀)+ξ₂^kℰ_{ijk}(λ₀)+λ₂\dot{ℰ}_{ij}\bigr\}+o(η²).
+  \end{aligned}
 \end{equation}
 
 Compte-tenu de la relation~\eqref{eq:20211112183220}, on trouve pour

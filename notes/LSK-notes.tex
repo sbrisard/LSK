@@ -372,6 +372,67 @@ qui est négative pour \(λ<λ₀\): la branche bifurquée est instable sous la
 charge critique. Il reste alors à étudier le signe de la hessienne de la
 branche bifurquée au-delà de la charge critique (\(λ>λ₀\)).
 
+\section{Cas d'un mode de flambement simple (\(m=1\))}
+
+Soit alors \(v∈V\), tel que \(\lVert v\rVert=1\). Le premier terme \(u₁\) du
+développement asymptotique de \(u\) sur la branche bifurquée se met alors sous
+la forme \(u₁=ξ₁v\) et l'équation de bifurcation~\eqref{eq:20211112183220}
+s'écrit alors
+\begin{equation}
+  \label{eq:20220203144712}
+  ξ₁² ℰ₃(λ₀;v, v, v)+2λ₁ξ₁\dot{ℰ₂}(λ₀;v, v)=0.
+\end{equation}
+
+Supposons dans un premier temps que \(ξ₁≠0\). Alors \(λ₁\) est donné par
+l'expression suivante
+\begin{equation}
+  λ₁=-\frac{ξ₁ℰ₃(λ₀;v, v, v)}{2\dot{ℰ₂}(λ₀;v, v)},
+\end{equation}
+où on remarque que le quotient a un sens, puisque \(\dot{ℰ₂}(λ₀)\) est définie
+négative sur \(V\). On en déduit donc que \(λ₁≠0\) ssi \(ℰ₃(λ₀;v, v,
+v)≠0\). Supposant cette condition remplie, on trouve les développements limités
+\begin{equation}
+  λ=λ₀+λ₁η+o(η)
+  \quad\text{et}\quad
+  u=u^*(λ)+ξ₁ηv
+\end{equation}
+soit finalement, en éliminant \(η\)
+\begin{equation}
+  λ=λ₀-\frac{ξℰ₃(λ₀;v, v, v)}{2\dot{ℰ₂}(λ₀;v, v)}+o(ξ),
+  \quad\text{avec}\quad
+  ξ=〈u(λ)-u^*(λ), v〉.
+\end{equation}
+
+Pour déterminer la stabilité de la branche bifurquée, on calcule la hessienne
+en \((v, v)\). L'équation~\eqref{eq:20220203144500} s'écrit alors
+\begin{equation}
+  ℰ_{,uu}[u(η), λ(η); v, v]
+  =η\bigl[ξ₁ℰ₃(λ₀; v, v, v)+λ₁\dot{ℰ}₂(λ₀; v, v)\bigr]+o(η),
+\end{equation}
+soit, en substituant l'équation~\eqref{eq:20220203144712}
+\begin{equation}
+  \begin{aligned}[b]
+    ℰ_{,uu}[u(η), λ(η); v, v]
+    &=-λ₁η\dot{ℰ}₂(λ₀; v, v)+o(η)\\
+    &=-\bigl(λ-λ₀\bigr)\dot{ℰ}₂(λ₀; v, v)+o(λ-λ₀).
+  \end{aligned}
+\end{equation}
+
+On peut donc conclure si \(\dot{ℰ}₂(λ₀; v, v)<0\)~: la branche bifurquée est
+\emph{instable} pour \(λ<λ₀\) et \emph{stable} pour \(λ>λ₀\).
+
+Supposons maintenant que \(ℰ₃(λ₀;v, v, v)=0\)~; alors \(λ₁=0\), et l'équation
+de bifurcation\eqref{eq:20220114135717} s'écrit
+\begin{equation}
+  \begin{aligned}[b]
+    ξ₁³ℰ₄(v, v, v, v)+6ℰ₃(u₁, u₂, \hat{u})+6ℰ₂(u₃, \hat{u})&\\
+    +3λ₁\bigl[\dot{ℰ₃}(u₁, u₁, \hat{u})+2\dot{ℰ₂}(u₂, \hat{u})\bigr]
+    +3λ₁²\ddot{ℰ₂}(u₁, \hat{u})&\\
+    +6λ₂\dot{ℰ₂}(u₁, \hat{u})&=0.
+  \end{aligned}
+
+\end{equation}
+
 \appendix
 
 \section{Propriétés des formes bilinéaires symétriques, positives}

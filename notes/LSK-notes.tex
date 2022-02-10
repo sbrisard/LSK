@@ -192,15 +192,15 @@ voisinage de \(η=0\) dans l'annexe~\ref{sec:20211112182000} [voir
 trouve successivement, pour tout \(\hat{u}∈ U\)
 \begin{gather}
   \label{eq:20211112182917}
-  ℰ₂(u₁, \hat{u})=0,\\
+  ℰ₂(λ₀; u₁, \hat{u})=0,\\
   \label{eq:20211112183220}
-  ℰ₃(u₁, u₁, \hat{u})+2λ₁\dot{ℰ₂}(u₁, \hat{u})+2ℰ₂(u₂, \hat{u})=0,\\
+  ℰ₃(λ₀; u₁, u₁, \hat{u})+2λ₁\dot{ℰ₂}(λ₀; u₁, \hat{u})+2ℰ₂(λ₀; u₂, \hat{u})=0,\\
   \label{eq:20220114135717}
   \begin{aligned}[b]
-    ℰ₄(u₁, u₁, u₁, \hat{u})+6ℰ₃(u₁, u₂, \hat{u})+6ℰ₂(u₃, \hat{u})&\\
-    +3λ₁\bigl[\dot{ℰ₃}(u₁, u₁, \hat{u})+2\dot{ℰ₂}(u₂, \hat{u})\bigr]
-    +3λ₁²\ddot{ℰ₂}(u₁, \hat{u})&\\
-    +6λ₂\dot{ℰ₂}(u₁, \hat{u})&=0.
+    ℰ₄(λ₀; u₁, u₁, u₁, \hat{u})+6ℰ₃(λ₀; u₁, u₂, \hat{u})+6ℰ₂(λ₀; u₃, \hat{u})&\\
+    +3λ₁\bigl[\dot{ℰ₃}(λ₀; u₁, u₁, \hat{u})+2\dot{ℰ₂}(λ₀; u₂, \hat{u})\bigr]&\\
+    +3λ₁²\ddot{ℰ₂}(λ₀; u₁, \hat{u})
+    +6λ₂\dot{ℰ₂}(λ₀; u₁, \hat{u})&=0.
   \end{aligned}
 \end{gather}
 
@@ -212,7 +212,7 @@ On déduit de l'équation~\eqref{eq:20211112182917} que \(u₁∈V\). On pose al
 
 En prenant \(\hat{u}=vᵢ\), l'équation~\eqref{eq:20211112183220} s'écrit
 \begin{equation}
-  ℰ_{ijk}ξ₁^jξ₁^k+2λ₁\dot{ℰ}_{ij}ξ₁^j=0.
+  ℰ_{ijk}(λ₀)\,ξ₁^jξ₁^k+2λ₁\dot{ℰ}_{ij}(λ₀)\,ξ₁^j=0.
 \end{equation}
 
 Pour le terme d'ordre 2, on introduit la décomposition~:
@@ -220,21 +220,22 @@ Pour le terme d'ordre 2, on introduit la décomposition~:
 \(ℰ₂(u_2, \hat{u})=ℰ₂(u_2^W, \hat{u})\) et l'équation~\eqref{eq:20211112183220}
 s'écrit
 \begin{equation}
-  ℰ₃(u₁, u₁, \hat{u})+2λ₁\dot{ℰ₂}(u₁, \hat{u})
-  +2ℰ₂(u_2^W, \hat{u})=0,
+  ℰ₃(λ₀; u₁, u₁, \hat{u})+2λ₁\dot{ℰ₂}(λ₀; u₁, \hat{u})
+  +2ℰ₂(λ₀; u_2^W, \hat{u})=0,
 \end{equation}
 pour tout \(\hat{u}∈V\). En prenant la fonction test dans l'espace \(W\), on
 obtient le problème variationnel suivant~: trouver \(u_2^W∈W\) tel que
 \begin{equation}
   \label{eq:20211210131623}
-  ξ₁^iξ₁^jℰ₃(vᵢ, vⱼ, \hat{w})
-  +2λ₁ξ₁^i\dot{ℰ₂}(vᵢ, \hat{w})
-  +2ℰ₂(u_2^W, \hat{w})=0,
+  ξ₁^iξ₁^jℰ₃(λ₀; vᵢ, vⱼ, \hat{w})
+  +2λ₁ξ₁^i\dot{ℰ₂}(λ₀; vᵢ, \hat{w})
+  +2ℰ₂(λ₀; u_2^W, \hat{w})=0,
 \end{equation}
 pour tout \(\hat{w}∈W\). Soient \(wᵢ∈W\) les solutions des problèmes
 variationnels suivants
 \begin{equation}
-  ℰ₂(wᵢ, \hat{w})+\dot{ℰ₂}(vᵢ, \hat{w})=0,
+  \label{eq:20220208143055}
+  ℰ₂(λ₀; wᵢ, \hat{w})+\dot{ℰ₂}(λ₀; vᵢ, \hat{w})=0,
 \end{equation}
 pour tout \(\hat{w}∈W\). La solution du problème~\eqref{eq:20211210131623}
 s'obtient par simple combinaison linéaire des \(wᵢ\) et \(w_{ij}\) introduits
@@ -248,16 +249,59 @@ que
 \end{equation}
 
 En prenant \(\hat{u}=v_i\) dans l'équation~\eqref{eq:20220114135717}, on
-obtient le système linéaire suivant, dont les inconnues sont les \(ξ₂^i\) (en
-supposant connu \(λ₂\))
+obtient l'équation de bifurcation suivante
 \begin{equation}
+  \label{eq:20220210143805}
   \begin{aligned}[b]
-    6ξ₂^j\bigl[ξ₁^kℰ₃(v_i, v_j, v_k)+λ₁\dot{ℰ₂}(v_i, v_j)\bigr]&\\
-    +ξ₁^jξ₁^kξ₁^l\bigl[ℰ₄(v_i, v_j, v_k, v_l)+6ℰ₃(v_i, v_j, w_{kl})\bigr]&\\
-    +3λ₁ξ₁^jξ₁^k\bigl[\dot{ℰ₃}(v_i, v_j, v_k)+2ℰ₃(v_i, v_j, w_k)+2\dot{ℰ₂}(v_i, w_{jk})\bigr]&\\
-    +3ξ₁^j\bigl[λ₁²\ddot{ℰ₂}(v_i, v_j)+2λ₁²\dot{ℰ₂}(v_i, w_j)+2λ₂\dot{ℰ₂}(v_i, v_j)\bigr]
+    6ξ₂^j\bigl[ξ₁^kℰ_{ijk}(λ₀)+λ₁\dot{ℰ}_{ij}(λ₀)\bigr]&\\
+    +ξ₁^jξ₁^kξ₁^l\bigl[ℰ_{ijkl}(λ₀)+6ℰ₃(λ₀; v_i, v_j, w_{kl})\bigr]&\\
+    +3λ₁ξ₁^jξ₁^k\bigl[\dot{ℰ}_{ijk}(λ₀)+2ℰ₃(λ₀; v_i, v_j, w_k)
+    +2\dot{ℰ₂}(λ₀; v_i, w_{jk})\bigr]&\\
+    +3λ₁²ξ₁^j\bigl[\ddot{ℰ}_{ij}(λ₀)+2\dot{ℰ₂}(v_i, w_j)\bigr]
+    +6λ₂ξ₁^j\dot{ℰ}_{ij}(λ₀)
     &=0.
   \end{aligned}
+\end{equation}
+
+On remarque que certains termes peuvent être symétrisés. Ainsi
+\begin{equation}
+  \begin{aligned}[b]
+    ξ₁^jξ₁^kξ₁^lℰ₃(λ₀; v_i, v_j, w_{kl})={}&\tfrac13ξ₁^jξ₁^kξ₁^l\bigl[
+    ℰ₃(λ₀; v_i, v_j, w_{kl})\\
+    &+ℰ₃(λ₀; v_i, v_k, w_{lj})+ℰ₃(λ₀; v_i, v_l, w_{jk})\bigr],
+  \end{aligned}
+\end{equation}
+de même
+\begin{equation}
+  2ξ₁^jξ₁^kℰ₃(λ₀; v_i, v_j, w_k)=ξ₁^jξ₁^k\bigl[ℰ₃(λ₀; v_i, v_j, w_k)
+  +ℰ₃(λ₀; v_i, w_j, v_k)\bigr]
+\end{equation}
+et l'équation~\eqref{eq:20220210143805} s'écrit
+\begin{equation}
+  6A_{ij}ξ₂^j+E_{ijkl}\,ξ₁^jξ₁^kξ₁^l+3λ₁F_{ijk}ξ₁^jξ₁^k+3λ₁²G_{ij}ξ₁^j
+  +6λ₂\mathring{E}_{ij}ξ₁^j=0,
+\end{equation}
+en posant\pdfmargincomment{C'est l'expression de Bᵢⱼ de Nick, voir
+  Éq. (AC-5.14) p. 74}
+\begin{equation}
+  A_{ij}=ξ₁^kℰ_{ijk}(λ₀)+λ₁\dot{ℰ}_{ij}(λ₀)
+\end{equation}
+\pdfmargincomment{Cette expression coïncide avec l'expression
+  (AC-5.11), page 71, de ℰ\_ijkl de Nick. Le facteur 2 provient du fait que
+  dans le problème variationnel (AC-5.9) qui définit les \(v_{ij}\) de Nick, le
+  facteur 2 du problème~\eqref{eq:20211221155859} n'est pas présent.}
+\begin{equation}
+  E_{ijkl}=ℰ₄(λ₀; v_i, v_j, v_k, v_l)+2\bigl[ℰ₃(λ₀; v_i, v_j, w_{kl})
+  +ℰ₃(λ₀; v_i, v_k, w_{lj})+ℰ₃(λ₀; v_i, v_l, w_{jk})\bigr].
+\end{equation}
+
+\begin{equation}
+  F_{ijk}=\dot{ℰ}₃(λ₀; v_i, v_j, v_k)+ℰ₃(λ₀; v_i, v_j, w_k)
+  +ℰ₃(λ₀; v_i, w_j, v_k)+2\dot{ℰ₂}(λ₀; v_i, w_{jk})
+\end{equation}
+
+\begin{equation}
+  G_{ij}=\ddot{ℰ}_{ij}(λ₀)+2\dot{ℰ₂}(v_i, w_j)
 \end{equation}
 
 On supposera satisfaite la condition suivante, qui assure que ce système est régulier
@@ -288,9 +332,8 @@ La relation~\eqref{eq:20211112182917} montre tout d'abord que les termes en
 \(ℰ₂(λ₀; u₁, u₁)\), \(ℰ₂(λ₀; u₁, u₂)\) et \(ℰ₂(λ₀; u₁, u₃)\) sont nuls. Le
 premier terme non-nul du développement limité~\eqref{eq:20220121172753} est
 donc le terme d'ordre 3. En prenant de plus \(\hat{u}=u₁\) dans la
-relation~\eqref{eq:20211112183220}, on trouve
-finalement\pdfmargincomment[avatar=SB]{Cette expression coïncide avec
-  l'Éq. (AC-5.29) de Tryantafyllidis.}
+relation~\eqref{eq:20211112183220}, on trouve finalement\pdfmargincomment{Cette
+  expression coïncide avec l'Éq. (AC-5.29) de Tryantafyllidis.}
 \begin{equation}
   ℰ[u(η), λ(η)]=ℰ\bigl(u^*[λ(η)], λ(η)\bigr)+\tfrac16λ₁η³\dot{ℰ}₂(u₁, u₁)+o(η³).
 \end{equation}
@@ -298,9 +341,8 @@ finalement\pdfmargincomment[avatar=SB]{Cette expression coïncide avec
 Si \(λ₁=0\), le premier terme non-nul du développement
 limité~\eqref{eq:20220121172753} est d'ordre 4. En prenant cette fois
 \(\hat{u}=u₂\) dans la relation~\eqref{eq:20211112183220} et \(\hat{u}=u₁\)
-dans la relation~\eqref{eq:20220114135717}, on
-obtient\pdfmargincomment[avatar=SB]{Cette expression coïncide avec
-  l'Éq. (AC-5.30) de Tryantafyllidis.}
+dans la relation~\eqref{eq:20220114135717}, on obtient\pdfmargincomment{Cette
+  expression coïncide avec l'Éq. (AC-5.30) de Tryantafyllidis.}
 \begin{equation}
   ℰ[u(η), λ(η)]=ℰ\bigl(u^*[λ(η)], λ(η)\bigr)+\tfrac1{4}λ₂η⁴\dot{ℰ}₂(λ₀; u₁, u₁)+o(η⁴).
 \end{equation}
@@ -358,22 +400,16 @@ cas, compte-tenu de l'expression~\eqref{eq:20220124135324} de \(u₂\)
     ℰ₃(λ₀; u₂, \hat{u}, \hat{u})={}&
     ξ₁^iξ₁^j\hat{ξ}^k\hat{ξ}^lℰ₃(λ₀; w_{ij}, v_k, v_l)
     +ξ₂^i\hat{ξ}^j\hat{ξ}^kℰ₃(λ₀; v_i, v_j, v_k)\\
-    &+λ₁ξ₁^i\hat{ξ}^j\hat{ξ}^kℰ₃(λ₀; w_i, v_j, v_k),
-  \end{aligned}
-\end{equation}
-et, en utilisant la définition~\eqref{eq:20211221155859} de \(w_{kl}\), avec
-\(\hat{w}=w_{ij}\)
-\begin{equation}
-  ℰ₃(λ₀; w_{ij}, v_k, v_l)=-2ℰ₂(λ₀; w_{ij}, w_{kl}),
-\end{equation}
-soit
-\begin{equation}
-  \begin{aligned}[b]
-    ℰ₃(λ₀; u₂, \hat{u}, \hat{u})={}&
-    -2ξ₁^iξ₁^j\hat{ξ}^k\hat{ξ}^lℰ₂(λ₀; w_{ij}, w_{kl})
-    +ξ₂^i\hat{ξ}^j\hat{ξ}^kℰ_{ijk}(λ₀)\\
     &+λ₁ξ₁^i\hat{ξ}^j\hat{ξ}^kℰ₃(λ₀; w_i, v_j, v_k).
   \end{aligned}
+\end{equation}
+
+On peut complètement symétriser le premier terme
+\begin{equation}
+  ξ₁^iξ₁^j\hat{ξ}^k\hat{ξ}^lℰ₃(λ₀; w_{ij}, v_k, v_l)
+  =\tfrac13\bigl[ξ₁^iξ₁^j\hat{ξ}^k\hat{ξ}^lℰ₃(λ₀; w_{ij}, v_k, v_l)
+  +ξ₁^iξ₁^j\hat{ξ}^k\hat{ξ}^lℰ₃(λ₀; w_{ij}, v_k, v_l)
+  +ξ₁^iξ₁^j\hat{ξ}^k\hat{ξ}^lℰ₃(λ₀; w_{ij}, v_k, v_l)\bigr]
 \end{equation}
 
 \begin{equation}
@@ -389,7 +425,7 @@ soit
 \end{equation}
 
 Compte-tenu de la relation~\eqref{eq:20211112183220}, on trouve pour
-\(\hat{v}=u₁\)
+\(\hat{v}=u₁\) (\(\hat{ξ}^i=ξ₁^i\))
 \begin{equation}
   ℰ_{,uu}[u(η), λ(η); u₁, u₁]=-λ₁η\dot{ℰ}₂(λ₀; u₁, u₁)+o(η).
 \end{equation}
@@ -460,7 +496,6 @@ de bifurcation\eqref{eq:20220114135717} s'écrit
     +3λ₁²\ddot{ℰ₂}(u₁, \hat{u})&\\
     +6λ₂\dot{ℰ₂}(u₁, \hat{u})&=0.
   \end{aligned}
-
 \end{equation}
 
 \appendix

@@ -502,20 +502,9 @@ Supposons maintenant que \(ℰ₁₁₁(λ₀)=0\)~; alors \(λ₁=0\) et il fau
 moins un terme supplémentaire dans le développement limité de la
 Hessienne. L'équation de bifurcation~\eqref{eq:20220216141706} s'écrit
 \begin{equation}
-  ℰ₁₁₁₁(λ₀)+6λ₂\dot{ℰ}₁₁(λ₀)=0,
-  \quad\text{soit}\quad
-  λ₂=-\frac{ℰ₁₁₁₁(λ₀)}{6\dot{ℰ}₁₁(λ₀)},
+  \label{eq:20220217164528}
+  ℰ₁₁₁₁(λ₀)+6ℰ₃(λ₀; v₁, v₁, u₂)+6λ₂\dot{ℰ}₁₁(λ₀)=0.
 \end{equation}
-et on supposera cette fois-ci que \(ℰ₁₁₁₁≠0\). Le développement
-asymptotique~\eqref{eq:20211115082025} de la Hessienne s'écrit alors
-\begin{equation}
-  \begin{aligned}[b]
-    ℰ_{,uu}[u(η), λ(η); v₁, v₁]
-    ={}&\tfrac12η²\bigl[ℰ₁₁₁₁(λ₀)+λ₂\dot{ℰ}₁₁(λ₀)\\
-    &+ℰ₃(λ₀; v₁, v₁, u₂)\bigr]+o(η²).
-  \end{aligned}
-\end{equation}
-
 En introduisant le développement~\eqref{eq:20220124135324} de \(u₂\) et en
 utilisant le problème variationnel~\eqref{eq:20211221155859}
 \begin{equation}
@@ -526,11 +515,17 @@ utilisant le problème variationnel~\eqref{eq:20211221155859}
   \end{aligned}
 \end{equation}
 soit finalement
+\begin{equation*}
+  λ₂=-\frac{ℰ₁₁₁₁(λ₀)-12ℰ₂(λ₀;w₁₁, w₁₁)}{6\dot{ℰ}₁₁(λ₀)},
+\end{equation*}
+le quotient ayant une nouvelle fois un sens. Le développement
+asymptotique~\eqref{eq:20211115082025} de la Hessienne s'écrit alors, en tenant
+compte de l'Éq.~\eqref{eq:20220217164528}
 \begin{equation}
   \begin{aligned}[b]
     ℰ_{,uu}[u(η), λ(η); v₁, v₁]
-    ={}&+\tfrac12η²\bigl[\tfrac 56ℰ₁₁₁₁(λ₀)-2ℰ₂(λ₀;w₁₁, w₁₁)\bigr]
-    +o(η²).
+    ={}&\tfrac12η²\bigl[ℰ₁₁₁₁(λ₀)+2ℰ₃(λ₀; v₁, v₁, u₂)+2λ₂\dot{ℰ}₁₁(λ₀)\bigr]+o(η²)\\
+    ={}&\tfrac5{12}η²ℰ₁₁₁₁(λ₀)+o(η²).
   \end{aligned}
 \end{equation}
 

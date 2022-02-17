@@ -177,11 +177,22 @@ forme paramétrique suivante
   \label{eq:20211115075817}
   λ&=λ₀+ηλ₁+η²λ₂+η³λ₃+\cdots,\\
   \label{eq:20211115075835}
-  u&=u^*(λ)+η u₁+η² u₂+η³u₃+\cdots,
+  u&=u^*(λ)+ηu₁+η²u₂+η³u₃+\cdots,
 \end{align}
 où \(η\) est un paramètre, non précisé pour le moment. Noter que, dans la
 représentation paramétrique de \(u\), \(u^*\) est évalué en \(λ\) et pas en
 \(λ₀\).
+
+On se restreindra dans ce qui suit au cas non-dégénéré \(u₁≠0\). On peut alors
+toujours supposer que \(〈u₁, u₁〉=1\). \pdfmargincomment{Que se passe-t-il si
+  u₁=u₂=…=0 ?} En effet, en posant \(θ=\lVert u₁\rVert η\), les développements
+précédents s'écrivent
+\begin{align}
+  λ&=λ₀+θ\lVert u₁\rVert⁻¹λ₁+θ²\lVert u₁\rVert⁻²λ₂+θ³\lVert u₁\rVert⁻³λ₃+\cdots,\\
+  u&=u^*(λ)+θ\lVert u₁\rVert⁻¹u₁+θ²\lVert u₁\rVert⁻²u₂+θ³\lVert u₁\rVert⁻³u₃+
+\end{align}
+et le terme linéaire en \(θ\) du développement asymptotique de \(u\) est bien
+de norme 1.
 
 Les coefficients \(λ ₖ\) et \(uₖ\) des développements~\eqref{eq:20211115075817}
 et \eqref{eq:20211115075835} sont identifiés en écrivant que l'énergie est
@@ -212,6 +223,7 @@ On déduit de l'équation~\eqref{eq:20211112182917} que \(u₁∈V\). On pose al
 
 En prenant \(\hat{u}=vᵢ\), l'équation~\eqref{eq:20211112183220} s'écrit
 \begin{equation}
+  \label{eq:20220216140121}
   ℰ_{ijk}(λ₀)\,ξ₁^jξ₁^k+2λ₁\dot{ℰ}_{ij}(λ₀)\,ξ₁^j=0.
 \end{equation}
 
@@ -278,6 +290,7 @@ de même
 \end{equation}
 et l'équation~\eqref{eq:20220210143805} s'écrit
 \begin{equation}
+\label{eq:20220216141706}
   6A_{ij}ξ₂^j+E_{ijkl}\,ξ₁^jξ₁^kξ₁^l+3λ₁F_{ijk}ξ₁^jξ₁^k+3λ₁²G_{ij}ξ₁^j
   +6λ₂\mathring{E}_{ij}ξ₁^j=0,
 \end{equation}
@@ -440,61 +453,84 @@ branche bifurquée au-delà de la charge critique (\(λ>λ₀\)).
 
 \section{Cas d'un mode de flambement simple (\(m=1\))}
 
-Soit alors \(v∈V\), tel que \(\lVert v\rVert=1\). Le premier terme \(u₁\) du
-développement asymptotique de \(u\) sur la branche bifurquée se met alors sous
-la forme \(u₁=ξ₁v\) et l'équation de bifurcation~\eqref{eq:20211112183220}
-s'écrit alors
+Lorsque \(m=\dim V=1\), la base \(v₁, …, vₘ\) est réduite au seul vecteur
+\(v₁\) et \(u₁\) est parallèle à ce vecteur. Comme \(\lVert u₁\rVert=1\), on a
+donc nécessairement \(u₁=v₁\) (quitte à changer \(η\) en \(-η\)). L'équation de
+bifurcation~\eqref{eq:20220216140121} s'écrit alors
 \begin{equation}
   \label{eq:20220203144712}
-  ξ₁² ℰ₃(λ₀;v, v, v)+2λ₁ξ₁\dot{ℰ₂}(λ₀;v, v)=0.
-\end{equation}
-
-Supposons dans un premier temps que \(ξ₁≠0\). Alors \(λ₁\) est donné par
-l'expression suivante
-\begin{equation}
-  λ₁=-\frac{ξ₁ℰ₃(λ₀;v, v, v)}{2\dot{ℰ₂}(λ₀;v, v)},
+  ℰ₁₁₁(λ₀)+2λ₁\dot{ℰ}₁₁(λ₀)=0,
+  \quad\text{soit}\quad
+  λ₁=-\frac{ℰ₁₁₁(λ₀)}{2\dot{ℰ}₁₁(λ₀)},
 \end{equation}
 où on remarque que le quotient a un sens, puisque \(\dot{ℰ₂}(λ₀)\) est définie
-négative sur \(V\). On en déduit donc que \(λ₁≠0\) ssi \(ℰ₃(λ₀;v, v,
-v)≠0\). Supposant cette condition remplie, on trouve les développements limités
+négative sur \(V\). On trouve donc les développements limités
 \begin{equation}
   λ=λ₀+λ₁η+o(η)
   \quad\text{et}\quad
-  u=u^*(λ)+ξ₁ηv
+  u=u^*(λ)+ηv₁+o(η),
 \end{equation}
 soit finalement, en éliminant \(η\)
 \begin{equation}
-  λ=λ₀-\frac{ξℰ₃(λ₀;v, v, v)}{2\dot{ℰ₂}(λ₀;v, v)}+o(ξ),
+  λ=λ₀-\frac{ξℰ₁₁₁(λ₀)}{2\dot{ℰ}₁₁(λ₀)}+o(ξ),
   \quad\text{avec}\quad
-  ξ=〈u(λ)-u^*(λ), v〉.
+  ξ=〈u(λ)-u^*(λ), v₁〉.
 \end{equation}
 
 Pour déterminer la stabilité de la branche bifurquée, on calcule la hessienne
-en \((v, v)\). L'équation~\eqref{eq:20220203144500} s'écrit alors
+en \((v₁, v₁)\). L'équation~\eqref{eq:20220203144500} s'écrit
 \begin{equation}
-  ℰ_{,uu}[u(η), λ(η); v, v]
-  =η\bigl[ξ₁ℰ₃(λ₀; v, v, v)+λ₁\dot{ℰ}₂(λ₀; v, v)\bigr]+o(η),
+  ℰ_{,uu}[u(η), λ(η); v₁, v₁]=η\bigl[ℰ₁₁₁(λ₀)+λ₁\dot{ℰ}₁₁(λ₀)\bigr]+o(η),
 \end{equation}
 soit, en substituant l'équation~\eqref{eq:20220203144712}
 \begin{equation}
+  ℰ_{,uu}[u(η), λ(η); v₁, v₁]=-λ₁η\dot{ℰ}₁₁(λ₀)+o(η).
+\end{equation}
+
+Ce développement ne permet de conclure que si le terme linéaire est non-nul,
+soit \(ℰ₁₁₁(λ₀)≠0\) [voir Éq.~\eqref{eq:20220203144712}]. Dans ce cas, le
+développement asymptotique précédent s'écrit également
+\begin{equation}
+  ℰ_{,uu}[u(η), λ(η); v₁, v₁]=-\bigl(λ-λ₀\bigr)\dot{ℰ}₁₁(λ₀)+o(λ-λ₀).
+\end{equation}
+
+Comme \(\dot{ℰ}₂(λ₀)\) est définie négative, la branche bifurquée est
+\emph{instable} pour \(λ<λ₀\) et \emph{stable} pour \(λ>λ₀\) lorsque
+\(ℰ₁₁₁(λ₀)≠0\).
+
+Supposons maintenant que \(ℰ₁₁₁(λ₀)=0\)~; alors \(λ₁=0\) et il faut calculer au
+moins un terme supplémentaire dans le développement limité de la
+Hessienne. L'équation de bifurcation~\eqref{eq:20220216141706} s'écrit
+\begin{equation}
+  ℰ₁₁₁₁(λ₀)+6λ₂\dot{ℰ}₁₁(λ₀)=0,
+  \quad\text{soit}\quad
+  λ₂=-\frac{ℰ₁₁₁₁(λ₀)}{6\dot{ℰ}₁₁(λ₀)},
+\end{equation}
+et on supposera cette fois-ci que \(ℰ₁₁₁₁≠0\). Le développement
+asymptotique~\eqref{eq:20211115082025} de la Hessienne s'écrit alors
+\begin{equation}
   \begin{aligned}[b]
-    ℰ_{,uu}[u(η), λ(η); v, v]
-    &=-λ₁η\dot{ℰ}₂(λ₀; v, v)+o(η)\\
-    &=-\bigl(λ-λ₀\bigr)\dot{ℰ}₂(λ₀; v, v)+o(λ-λ₀).
+    ℰ_{,uu}[u(η), λ(η); v₁, v₁]
+    ={}&\tfrac12η²\bigl[ℰ₁₁₁₁(λ₀)+λ₂\dot{ℰ}₁₁(λ₀)\\
+    &+ℰ₃(λ₀; v₁, v₁, u₂)\bigr]+o(η²).
   \end{aligned}
 \end{equation}
 
-On peut donc conclure si \(\dot{ℰ}₂(λ₀; v, v)<0\)~: la branche bifurquée est
-\emph{instable} pour \(λ<λ₀\) et \emph{stable} pour \(λ>λ₀\).
-
-Supposons maintenant que \(ℰ₃(λ₀;v, v, v)=0\)~; alors \(λ₁=0\), et l'équation
-de bifurcation\eqref{eq:20220114135717} s'écrit
+En introduisant le développement~\eqref{eq:20220124135324} de \(u₂\) et en
+utilisant le problème variationnel~\eqref{eq:20211221155859}
+\begin{equation}
+  u₂=ξ₂v₁+w₁₁+λ₁w₁,
+  \quad\text{donc}\quad
+  \begin{aligned}[t]
+    ℰ₃(λ₀;v₁, v₁, u₂)&=ℰ₃(λ₀;v₁, v₁, w₁₁)\\&=-2ℰ₂(λ₀;w₁₁, w₁₁)
+  \end{aligned}
+\end{equation}
+soit finalement
 \begin{equation}
   \begin{aligned}[b]
-    ξ₁³ℰ₄(v, v, v, v)+6ℰ₃(u₁, u₂, \hat{u})+6ℰ₂(u₃, \hat{u})&\\
-    +3λ₁\bigl[\dot{ℰ₃}(u₁, u₁, \hat{u})+2\dot{ℰ₂}(u₂, \hat{u})\bigr]
-    +3λ₁²\ddot{ℰ₂}(u₁, \hat{u})&\\
-    +6λ₂\dot{ℰ₂}(u₁, \hat{u})&=0.
+    ℰ_{,uu}[u(η), λ(η); v₁, v₁]
+    ={}&+\tfrac12η²\bigl[\tfrac 56ℰ₁₁₁₁(λ₀)-2ℰ₂(λ₀;w₁₁, w₁₁)\bigr]
+    +o(η²).
   \end{aligned}
 \end{equation}
 

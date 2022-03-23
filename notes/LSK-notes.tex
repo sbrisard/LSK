@@ -70,29 +70,31 @@ Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
 \(u₀+ξv+ηw\) voisin du point d'équilibre \(u₀\), avec \(ξ, η∈ℝ\)
 \guillemotleft{}petits\guillemotright{}, \(v∈V\) and \(w∈W\). On obtient alors,
 à l'ordre 4 en \(ξ\) et \(η\)
-\begin{equation}
-  \begin{aligned}[b]
-    Δℰ ={}&ℰ(u₀+ξv+ηw)-ℰ(u₀)\\
-    ={}&\tfrac12ℰ_{,uu}(u₀;ξv+ηw, ξv+ηw)
+\begin{eqnarray}
+  \notag
+  Δℰ&=&ℰ(u₀+ξv+ηw)-ℰ(u₀)\\
+  \notag
+    &=&\tfrac12ℰ_{,uu}(u₀;ξv+ηw, ξv+ηw)
     +\tfrac16ℰ_{,uuu}(u₀;ξv+ηw, ξv+ηw, ξv+ηw)\\
-    &+\tfrac1{24}ℰ_{,uuuu}(u₀;ξv+ηw, ξv+ηw, ξv+ηw, ξv+ηw)
+    &&+\tfrac1{24}ℰ_{,uuuu}(u₀;ξv+ηw, ξv+ηw, ξv+ηw, ξv+ηw)
     +𝒪\bigl(\bigl(ξ²+η²\bigr)²\bigr),
-  \end{aligned}
-\end{equation}
+\end{eqnarray}
 où le terme linéaire a été omis puisque \(u\) est un point critique de
 l'énergie. En tenant compte de la multilinéarité et de la symétrie des
 différentielles successives de l'énergie \(ℰ\), ainsi que du fait que
 \(ℰ_{,uu}(v, •)=0\), l'expression précédente s'écrit
-\begin{equation}
-  \begin{aligned}[b]
-    Δℰ={}&\tfrac12η²ℰ_{,uu}(w, w)+\tfrac16ξ³ℰ_{,uuu}(v, v, v)
-    +\tfrac12ξ²ηℰ_{,uuu}(v, v, w)\\
-    &+\tfrac12ξη²ℰ_{,uuu}(v, w, w)+\tfrac16η³ℰ_{,uuu}(w, w, w)\\
-    &+\tfrac1{24}ξ⁴ℰ_{,uuuu}(v, v, v, v)+\tfrac16ξ³ℰ_{,uuuu}(v, v, v, w)\\
-    &+\tfrac14ξ²η²ℰ_{,uuuu}(v, v, w, w)+\tfrac16ξη³ℰ_{,uuuu}(v, w, w, w)\\
-    &+\tfrac1{24}η⁴ℰ_{,uuuu}(w, w, w, w)+𝒪\bigl(\bigl(ξ²+η²\bigr)²\bigr),
-  \end{aligned}
-\end{equation}
+\begin{eqnarray}
+  \notag
+    Δℰ&=&\tfrac12η²ℰ_{,uu}(w, w)+\tfrac16ξ³ℰ_{,uuu}(v, v, v)
+          +\tfrac12ξ²ηℰ_{,uuu}(v, v, w)\\
+  \notag
+      &&+\tfrac12ξη²ℰ_{,uuu}(v, w, w)+\tfrac16η³ℰ_{,uuu}(w, w, w)\\
+  \notag
+      &&+\tfrac1{24}ξ⁴ℰ_{,uuuu}(v, v, v, v)+\tfrac16ξ³ℰ_{,uuuu}(v, v, v, w)\\
+  \notag
+      &&+\tfrac14ξ²η²ℰ_{,uuuu}(v, v, w, w)+\tfrac16ξη³ℰ_{,uuuu}(v, w, w, w)\\
+    &&+\tfrac1{24}η⁴ℰ_{,uuuu}(w, w, w, w)+𝒪\bigl(\bigl(ξ²+η²\bigr)²\bigr),
+\end{eqnarray}
 où l'on convient que toutes les différentielles de \(ℰ\) sont évaluées au point
 d'équilibre \(u₀\).
 

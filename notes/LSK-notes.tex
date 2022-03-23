@@ -1,5 +1,5 @@
-\newcommand{\mytitle}{Notes relatives à la méthode asymptotique de Lyapunov–Schmidt–Koiter}
-\newcommand{\myauthor}{Sébastien Brisard}
+\newcommand{\mytitle}{Notes relatives � la m�thode asymptotique de Lyapunov--Schmidt--Koiter}
+\newcommand{\myauthor}{S�bastien Brisard}
 \newcommand{\myaddress}{Navier, Ecole des Ponts, Univ Gustave Eiffel, IFSTTAR, CNRS, Marne-la-Vall\'ee, France}
 \newcommand{\mysubject}{Note bibliographique}
 
@@ -14,7 +14,7 @@
 
 \usepackage{amsthm}
 \newtheorem{remark}{Remarque}
-\newtheorem{theorem}{Théorème}
+\newtheorem{theorem}{Th�or�me}
 
 \usepackage[backend=biber,bibencoding=utf8,doi=false,giveninits=true,isbn=false,maxnames=10,minnames=5,sortcites=true,style=authoryear,texencoding=utf8,url=false]{biblatex}
 \addbibresource{stab.bib}
@@ -45,548 +45,548 @@
 
 \section{Notations}
 
-L'espace des champs cinématiquement admissibles est noté \(U\). On suppose
-qu'il a la structure d'espace vectoriel. L'énergie du système est noté \(ℰ\).
+L'espace des champs cin�matiquement admissibles est not� \(U\). On suppose
+qu'il a la structure d'espace vectoriel. L'�nergie du syst�me est not� \(\mathcal E\).
 
 \section{Analyse de la branche fondamentale}
 
-Soit \(u₀∈ U\) un point d'équilibre du système~: l'énergie \(ℰ\) est
-stationnaire en \(u₀\). On s'intéresse à la stabilité de cet
-équilibre. L'équilibre est stable si \(ℰ\) est minimale en ce point. On sait
-que \(ℰ_{,uu}(u₀)≥0\) est une condition \emph{nécessaire} de stabilité. De
-plus, \(ℰ_{,uu}(u₀)>0\) est une condition \emph{suffisante} de stabilité.
+Soit \(u_0\in U\) un point d'�quilibre du syst�me~: l'�nergie \(\mathcal E\) est
+stationnaire en \(u_0\). On s'int�resse � la stabilit� de cet
+�quilibre. L'�quilibre est stable si \(\mathcal E\) est minimale en ce point. On sait
+que \(\mathcal E_{,uu}(u_0)\geq0\) est une condition \emph{n�cessaire} de stabilit�. De
+plus, \(\mathcal E_{,uu}(u_0)>0\) est une condition \emph{suffisante} de stabilit�.
 
-On s'intéresse ici au cas où \(ℰ_{,uu}(u₀)\) est positive, sans être définie
+On s'int�resse ici au cas o� \(\mathcal E_{,uu}(u_0)\) est positive, sans �tre d�finie
 positive~; soit \(V\) son noyau, qui forme un sous-espace vectoriel de
 \(U\). On suppose que \(V\) est de dimension finie \(m=\dim V\). Soit
-\(\bigl(v₁, \ldots, vₘ\bigr)\) une base orthonormée de ce noyau pour le produit
-scalaire \(〈•,•〉\) (qui n'est pas précisé pour le moment). On introduit le
-sous-espace supplémentaire orthogonal \(W\) de \(V\) dans \(U\)
+\(\bigl(v_1, \ldots, v_m\bigr)\) une base orthonorm�e de ce noyau pour le produit
+scalaire \(\langle \bullet ,\bullet \rangle \) (qui n'est pas pr�cis� pour le moment). On introduit le
+sous-espace suppl�mentaire orthogonal \(W\) de \(V\) dans \(U\)
 \begin{equation}
-  U=V\stackrel⟂⊕W.
+  U=V\stackrel{\perp}{\otimes}W.
 \end{equation}
 
-Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
-\(u₀+ξv+ηw\) voisin du point d'équilibre \(u₀\), avec \(ξ, η∈ℝ\)
-\guillemotleft{}petits\guillemotright{}, \(v∈V\) and \(w∈W\). On obtient alors,
-à l'ordre 4 en \(ξ\) et \(η\)
+Pour �tudier la stabilit� de l'�quilibre, on calcule l'�nergie dans un �tat
+\(u_0+\xi v+\eta w\) voisin du point d'�quilibre \(u_0\), avec \(\xi , \eta \in\mathbb R \)
+\guillemotleft{}petits\guillemotright{}, \(v\in V\) and \(w\in W\). On obtient alors,
+� l'ordre 4 en \(\xi \) et \(\eta \)
 \begin{eqnarray}
   \notag
-  Δℰ&=&ℰ(u₀+ξv+ηw)-ℰ(u₀)\\
+  \Delta \mathcal E&=&\mathcal E(u_0+\xi v+\eta w)-\mathcal E(u_0)\\
   \notag
-    &=&\tfrac12ℰ_{,uu}(u₀;ξv+ηw, ξv+ηw)
-    +\tfrac16ℰ_{,uuu}(u₀;ξv+ηw, ξv+ηw, ξv+ηw)\\
-    &&+\tfrac1{24}ℰ_{,uuuu}(u₀;ξv+ηw, ξv+ηw, ξv+ηw, ξv+ηw)
-    +𝒪\bigl(\bigl(ξ²+η²\bigr)²\bigr),
+    &=&\tfrac12\mathcal E_{,uu}(u_0;\xi v+\eta w, \xi v+\eta w)
+    +\tfrac16\mathcal E_{,uuu}(u_0;\xi v+\eta w, \xi v+\eta w, \xi v+\eta w)\\
+    &&+\tfrac1{24}\mathcal E_{,uuuu}(u_0;\xi v+\eta w, \xi v+\eta w, \xi v+\eta w, \xi v+\eta w)
+    +\mathcal{O}\bigl(\bigl(\xi �+\eta �\bigr)�\bigr),
 \end{eqnarray}
-où le terme linéaire a été omis puisque \(u\) est un point critique de
-l'énergie. En tenant compte de la multilinéarité et de la symétrie des
-différentielles successives de l'énergie \(ℰ\), ainsi que du fait que
-\(ℰ_{,uu}(v, •)=0\), l'expression précédente s'écrit
+o� le terme lin�aire a �t� omis puisque \(u\) est un point critique de
+l'�nergie. En tenant compte de la multilin�arit� et de la sym�trie des
+diff�rentielles successives de l'�nergie \(\mathcal E\), ainsi que du fait que
+\(\mathcal E_{,uu}(v, \bullet )=0\), l'expression pr�c�dente s'�crit
 \begin{eqnarray}
   \notag
-    Δℰ&=&\tfrac12η²ℰ_{,uu}(w, w)+\tfrac16ξ³ℰ_{,uuu}(v, v, v)
-          +\tfrac12ξ²ηℰ_{,uuu}(v, v, w)\\
+    \Delta \mathcal E&=&\tfrac12\eta �\mathcal E_{,uu}(w, w)+\tfrac16\xi ^3\mathcal E_{,uuu}(v, v, v)
+          +\tfrac12\xi �\eta \mathcal E_{,uuu}(v, v, w)\\
   \notag
-      &&+\tfrac12ξη²ℰ_{,uuu}(v, w, w)+\tfrac16η³ℰ_{,uuu}(w, w, w)\\
+      &&+\tfrac12\xi \eta �\mathcal E_{,uuu}(v, w, w)+\tfrac16\eta ^3\mathcal E_{,uuu}(w, w, w)\\
   \notag
-      &&+\tfrac1{24}ξ⁴ℰ_{,uuuu}(v, v, v, v)+\tfrac16ξ³ℰ_{,uuuu}(v, v, v, w)\\
+      &&+\tfrac1{24}\xi ^4\mathcal E_{,uuuu}(v, v, v, v)+\tfrac16\xi ^3\mathcal E_{,uuuu}(v, v, v, w)\\
   \notag
-      &&+\tfrac14ξ²η²ℰ_{,uuuu}(v, v, w, w)+\tfrac16ξη³ℰ_{,uuuu}(v, w, w, w)\\
-    &&+\tfrac1{24}η⁴ℰ_{,uuuu}(w, w, w, w)+𝒪\bigl(\bigl(ξ²+η²\bigr)²\bigr),
+      &&+\tfrac14\xi �\eta �\mathcal E_{,uuuu}(v, v, w, w)+\tfrac16\xi \eta ^3\mathcal E_{,uuuu}(v, w, w, w)\\
+    &&+\tfrac1{24}\eta ^4\mathcal E_{,uuuu}(w, w, w, w)+\mathcal{O}\bigl(\bigl(\xi �+\eta �\bigr)�\bigr),
 \end{eqnarray}
-où l'on convient que toutes les différentielles de \(ℰ\) sont évaluées au point
-d'équilibre \(u₀\).
+o� l'on convient que toutes les diff�rentielles de \(\mathcal E\) sont �valu�es au point
+d'�quilibre \(u_0\).
 
-Pour que l'équilibre soit stable, il faut que expression soit positive ou nulle
-pour tous \(ξ\) et \(η\) suffisamment petits. En prenant tout d'abord \(η=0\),
-on obtient les conditions nécessaires
+Pour que l'�quilibre soit stable, il faut que expression soit positive ou nulle
+pour tous \(\xi \) et \(\eta \) suffisamment petits. En prenant tout d'abord \(\eta =0\),
+on obtient les conditions n�cessaires
 \begin{equation}
   \label{eq:20211108164416}
-  ℰ_{,uuu}(v, v, v)=0\quad\text{et}\quadℰ_{,uuuu}(v, v, v, v)≥0
-  \quad\text{pour tout}\quad v∈V.
+  \mathcal E_{,uuu}(v, v, v)=0\quad\text{et}\quad\mathcal E_{,uuuu}(v, v, v, v)\geq0
+  \quad\text{pour tout}\quad v\in V.
 \end{equation}
 
-En d'autres termes, s'il existe \(v∈ V\) tel que \(ℰ_{,uuu}(v, v, v)≠0\) ou
-\(ℰ_{,uuuu}(v, v, v, v)<0\), alors l'équilibre est \emph{instable}. Les
-conditions précédentes ne sont pas suffisantes pour assurer la stabilité. En
-effet, supposant ces conditions remplies, on prend maintenant \(η=ξ²\)
+En d'autres termes, s'il existe \(v\in V\) tel que \(\mathcal E_{,uuu}(v, v, v)\neq0\) ou
+\(\mathcal E_{,uuuu}(v, v, v, v)<0\), alors l'�quilibre est \emph{instable}. Les
+conditions pr�c�dentes ne sont pas suffisantes pour assurer la stabilit�. En
+effet, supposant ces conditions remplies, on prend maintenant \(\eta =\xi �\)
 \begin{equation}
-  Δℰ=\tfrac12ξ⁴\bigl[ℰ_{,uu}(w, w)+ℰ_{,uuu}(v, v, w)
-  +\tfrac1{12}ℰ_{,uuuu}(v, v, v, v)\bigr]+o(ξ⁴)
+  \Delta \mathcal E=\tfrac12\xi ^4\bigl[\mathcal E_{,uu}(w, w)+\mathcal E_{,uuu}(v, v, w)
+  +\tfrac1{12}\mathcal E_{,uuuu}(v, v, v, v)\bigr]+o(\xi ^4)
 \end{equation}
-et on obtient la condition nécessaire supplémentaire
+et on obtient la condition n�cessaire suppl�mentaire
 \begin{equation}
   \label{eq:20211109145356}
-  ℰ_{,uu}(v, v)+ℰ_{,uuu}(v, v, w)+\tfrac1{12}ℰ_{,uuuu}(v, v, v, v)≥0,
+  \mathcal E_{,uu}(v, v)+\mathcal E_{,uuu}(v, v, w)+\tfrac1{12}\mathcal E_{,uuuu}(v, v, v, v)\geq0,
 \end{equation}
-pour tous \(v∈V\) et \(w∈W\). Pour \(v∈\kerℰ₂\) fixé, l'expression précédente
-est minimale lorsque \(w\) satisfait le problème variationnel
+pour tous \(v\in V\) et \(w\in W\). Pour \(v\in\ker\mathcal E_2\) fix�, l'expression pr�c�dente
+est minimale lorsque \(w\) satisfait le probl�me variationnel
 \begin{equation}
   \label{eq:20211109145224}
-  2ℰ_{,uu}(w, \hat{w})+ℰ_{,uuu}(v, v, \hat{w})=0\quad\text{pour tout}\quad\hat{w}∈W.
+  2\mathcal E_{,uu}(w, \hat{w})+\mathcal E_{,uuu}(v, v, \hat{w})=0\quad\text{pour tout}\quad\hat{w}\in W.
 \end{equation}
 
-Soit \(w_{ij}∈ W\) l'unique solution du problème variationnel suivant
+Soit \(w_{ij}\in W\) l'unique solution du probl�me variationnel suivant
 \begin{equation}
   \label{eq:20211221155859}
-  2ℰ_{,uu}(w_{ij}, \hat{w})+ℰ_{,uuu}(vᵢ, vⱼ, \hat{w})=0\quad\text{pour tout}\quad\hat{w}∈W.
+  2\mathcal E_{,uu}(w_{ij}, \hat{w})+\mathcal E_{,uuu}(v_i, v_j, \hat{w})=0\quad\text{pour tout}\quad\hat{w}\in W.
 \end{equation}
 
-Alors, pour \(v=ξ^i vᵢ\), la solution du problème
-variationnel~\eqref{eq:20211109145224} est \(w=ξ^iξ^jw_{ij}\). Pour cette
-valeur de \(v\), la condition~\eqref{eq:20211109145356} s'écrit
+Alors, pour \(v=\xi ^i v_i\), la solution du probl�me
+variationnel~\eqref{eq:20211109145224} est \(w=\xi ^i\xi ^jw_{ij}\). Pour cette
+valeur de \(v\), la condition~\eqref{eq:20211109145356} s'�crit
 \begin{equation}
-  \bigl[\tfrac1{12}ℰ_{,uuuu}(vᵢ, vⱼ, vₖ, v_l)-ℰ_{,uu}(w_{ij}, w_{kl})\bigr]ξ^iξ^jξ^kξ^l≥0,
+  \bigl[\tfrac1{12}\mathcal E_{,uuuu}(v_i, v_j, v_k, v_l)-\mathcal E_{,uu}(w_{ij}, w_{kl})\bigr]\xi ^i\xi ^j\xi ^k\xi ^l\geq0,
 \end{equation}
-pour tous \(ξᵢ, ξⱼ, ξₖ, ξ_l∈ℝ\). On peut montrer que l'inégalité stricte est
-une condition \emph{suffisante} de stabilité.
+pour tous \(\xi _i, \xi _j, \xi _k, \xi _l\in\mathbb R \). On peut montrer que l'in�galit� stricte est
+une condition \emph{suffisante} de stabilit�.
 
 \section{Bifurcations}
 
-Soit \(u^*(λ)\) la branche fondamentale. Par définition
+Soit \(u^*(\lambda )\) la branche fondamentale. Par d�finition
 \begin{equation}
-  ℰ_{,u}[u^*(λ), λ;\hat{u}]=0\quad\text{pour tout}\quad\hat{u}∈ U.
+  \mathcal E_{,u}[u^*(\lambda ), \lambda ;\hat{u}]=0\quad\text{pour tout}\quad\hat{u}\in U.
 \end{equation}
 
 Il sera commode d'introduire les notations suivantes
 \begin{eqnarray}
-  ℰ₂(λ)&=&ℰ_{,uu}[u^*(λ), λ],\\
-  ℰ₃(λ)&=&ℰ_{,uuu}[u^*(λ), λ],\\
-  ℰ₄(λ)&=&ℰ_{,uuuu}[u^*(λ), λ].
+  \mathcal E_2(\lambda )&=&\mathcal E_{,uu}[u^*(\lambda ), \lambda ],\\
+  \mathcal E_3(\lambda )&=&\mathcal E_{,uuu}[u^*(\lambda ), \lambda ],\\
+  \mathcal E_4(\lambda )&=&\mathcal E_{,uuuu}[u^*(\lambda ), \lambda ].
 \end{eqnarray}
 
-Noter que \(ℰ₂\), \(ℰ₃\) et \(ℰ₄\) sont des formes bi-, tri- et quadri-linéaires,
-respectivement. L'application de ces formes à des éléments de \(U\) sera notée
-\(ℰ₂(λ; u, v)\), \(ℰ₃(λ; u, v, w)\), etc\dots. La dérivée de ces formes par
-rapport à \(λ\) sera notée à l'aide d'un point supérieur (\(\dot{ℰ₂}\),
-\(\dot{ℰ₃}\), \dots).
+Noter que \(\mathcal E_2\), \(\mathcal E_3\) et \(\mathcal E_4\) sont des formes bi-, tri- et quadri-lin�aires,
+respectivement. L'application de ces formes � des �l�ments de \(U\) sera not�e
+\(\mathcal E_2(\lambda ; u, v)\), \(\mathcal E_3(\lambda ; u, v, w)\), etc\dots. La d�riv�e de ces formes par
+rapport � \(\lambda \) sera not�e � l'aide d'un point sup�rieur (\(\dot{\mathcal E_2}\),
+\(\dot{\mathcal E_3}\), \dots).
 
-On suppose que l'équilibre est stable pour des valeurs suffisamment petites de
-\(λ\). Plus précisément, on suppose que \(ℰ₂(λ)\) est définie positive pour tout
-\(λ<λ₀\). Pour \(λ=λ₀\), la forme quadratique \(ℰ₂(λ₀)\) n'est plus que
-positive. En notant \(u₀=u^*(λ₀)\) la position d'équilibre obtenue pour la
-valeur critique \(λ₀\) du paramètre de chargement \(λ\), on s'intéresse à
-toutes les courbes d'équilibre qui passent par le point \((u₀, λ₀)\).
+On suppose que l'�quilibre est stable pour des valeurs suffisamment petites de
+\(\lambda \). Plus pr�cis�ment, on suppose que \(\mathcal E_2(\lambda )\) est d�finie positive pour tout
+\(\lambda <\lambda _0\). Pour \(\lambda =\lambda _0\), la forme quadratique \(\mathcal E_2(\lambda _0)\) n'est plus que
+positive. En notant \(u_0=u^*(\lambda _0)\) la position d'�quilibre obtenue pour la
+valeur critique \(\lambda _0\) du param�tre de chargement \(\lambda \), on s'int�resse �
+toutes les courbes d'�quilibre qui passent par le point \((u_0, \lambda _0)\).
 
-Noter que dans ce qui suit, on convient que les formes \(ℰ₂\), \(ℰ₃\) et \(ℰ₄\)
-sont implicitement évaluées en \(λ₀\) lorsque \(λ\) n'est pas rappelé : ainsi,
-on notera \(ℰ₂(•, •)\) plutôt que \(ℰ₂(λ₀; •, •)\).
+Noter que dans ce qui suit, on convient que les formes \(\mathcal E_2\), \(\mathcal E_3\) et \(\mathcal E_4\)
+sont implicitement �valu�es en \(\lambda _0\) lorsque \(\lambda \) n'est pas rappel� : ainsi,
+on notera \(\mathcal E_2(\bullet , \bullet )\) plut�t que \(\mathcal E_2(\lambda _0; \bullet , \bullet )\).
 
-On écrit toute courbe d'équilibre passant par le point \((u₀, λ₀)\) sous la
-forme paramétrique suivante
+On �crit toute courbe d'�quilibre passant par le point \((u_0, \lambda _0)\) sous la
+forme param�trique suivante
 \begin{eqnarray}
   \label{eq:20211115075817}
-  λ&=&λ₀+ηλ₁+η²λ₂+η³λ₃+\cdots,\\
+  \lambda &=&\lambda _0+\eta \lambda _1+\eta �\lambda _2+\eta ^3\lambda _3+\cdots,\\
   \label{eq:20211115075835}
-  u&=&u^*(λ)+ηu₁+η²u₂+η³u₃+\cdots,
+  u&=&u^*(\lambda )+\eta u_1+\eta �u_2+\eta ^3u_3+\cdots,
 \end{eqnarray}
-où \(η\) est un paramètre, non précisé pour le moment. Noter que, dans la
-représentation paramétrique de \(u\), \(u^*\) est évalué en \(λ\) et pas en
-\(λ₀\).
+o� \(\eta \) est un param�tre, non pr�cis� pour le moment. Noter que, dans la
+repr�sentation param�trique de \(u\), \(u^*\) est �valu� en \(\lambda \) et pas en
+\(\lambda _0\).
 
-On se restreindra dans ce qui suit au cas non-dégénéré \(u₁≠0\). On peut alors
-toujours supposer que \(〈u₁, u₁〉=1\). \pdfmargincomment{Que se passe-t-il si
-  u₁=u₂=…=0 ?} En effet, en posant \(θ=\lVert u₁\rVert η\), les développements
-précédents s'écrivent
+On se restreindra dans ce qui suit au cas non-d�g�n�r� \(u_1\neq0\). On peut alors
+toujours supposer que \(\langle u_1, u_1\rangle =1\). \pdfmargincomment{Que se passe-t-il si
+  u_1=u_2=\ldots=0 ?} En effet, en posant \(\theta=\lVert u_1\rVert \eta \), les d�veloppements
+pr�c�dents s'�crivent
 \begin{eqnarray}
-  λ&=&λ₀+θ\lVert u₁\rVert⁻¹λ₁+θ²\lVert u₁\rVert⁻²λ₂+θ³\lVert u₁\rVert⁻³λ₃+\cdots,\\
-  u&=&u^*(λ)+θ\lVert u₁\rVert⁻¹u₁+θ²\lVert u₁\rVert⁻²u₂+θ³\lVert u₁\rVert⁻³u₃+
+  \lambda &=&\lambda _0+\theta\lVert u_1\rVert^{-1}\lambda _1+\theta�\lVert u_1\rVert^{-2}\lambda _2+\theta^3\lVert u_1\rVert^{-3}\lambda _3+\cdots,\\
+  u&=&u^*(\lambda )+\theta\lVert u_1\rVert^{-1}u_1+\theta�\lVert u_1\rVert^{-2}u_2+\theta^3\lVert u_1\rVert^{-3}u_3+
 \end{eqnarray}
-et le terme linéaire en \(θ\) du développement asymptotique de \(u\) est bien
+et le terme lin�aire en \(\theta\) du d�veloppement asymptotique de \(u\) est bien
 de norme 1.
 
-Les coefficients \(λ ₖ\) et \(uₖ\) des développements~\eqref{eq:20211115075817}
-et \eqref{eq:20211115075835} sont identifiés en écrivant que l'énergie est
-stationnaire le long de la courbe d'équilibre, c'est-à-dire que le résidu
-\(ℰ_{,u}[u(η), λ(η)]\) est nul. Le développement limité du résidu est établi au
-voisinage de \(η=0\) dans l'annexe~\ref{sec:20211112182000} [voir
-Éq.~\eqref{eq:20220107080901}]. En écrivant que tous ses termes s'annulent, on
-trouve successivement, pour tout \(\hat{u}∈ U\)
+Les coefficients \(\lambda  _k\) et \(u_k\) des d�veloppements~\eqref{eq:20211115075817}
+et \eqref{eq:20211115075835} sont identifi�s en �crivant que l'�nergie est
+stationnaire le long de la courbe d'�quilibre, c'est-�-dire que le r�sidu
+\(\mathcal E_{,u}[u(\eta ), \lambda (\eta )]\) est nul. Le d�veloppement limit� du r�sidu est �tabli au
+voisinage de \(\eta =0\) dans l'annexe~\ref{sec:20211112182000} [voir
+�q.~\eqref{eq:20220107080901}]. En �crivant que tous ses termes s'annulent, on
+trouve successivement, pour tout \(\hat{u}\in U\)
 \begin{equation}
   \label{eq:20211112182917}
-  ℰ₂(λ₀; u₁, \hat{u})=0,
+  \mathcal E_2(\lambda _0; u_1, \hat{u})=0,
 \end{equation}
 \begin{equation}
   \label{eq:20211112183220}
-  ℰ₃(λ₀; u₁, u₁, \hat{u})+2λ₁\dot{ℰ₂}(λ₀; u₁, \hat{u})+2ℰ₂(λ₀; u₂, \hat{u})=0,
+  \mathcal E_3(\lambda _0; u_1, u_1, \hat{u})+2\lambda _1\dot{\mathcal E_2}(\lambda _0; u_1, \hat{u})+2\mathcal E_2(\lambda _0; u_2, \hat{u})=0,
 \end{equation}
 \begin{eqnarray}
   \notag
-  ℰ₄(λ₀; u₁, u₁, u₁, \hat{u})+6ℰ₃(λ₀; u₁, u₂, \hat{u})+6ℰ₂(λ₀; u₃, \hat{u})&&\\
+  \mathcal E_4(\lambda _0; u_1, u_1, u_1, \hat{u})+6\mathcal E_3(\lambda _0; u_1, u_2, \hat{u})+6\mathcal E_2(\lambda _0; u_3, \hat{u})&&\\
   \notag
-  +3λ₁\bigl[\dot{ℰ₃}(λ₀; u₁, u₁, \hat{u})+2\dot{ℰ₂}(λ₀; u₂, \hat{u})\bigr]&&\\
+  +3\lambda _1\bigl[\dot{\mathcal E_3}(\lambda _0; u_1, u_1, \hat{u})+2\dot{\mathcal E_2}(\lambda _0; u_2, \hat{u})\bigr]&&\\
   \label{eq:20220114135717}
-  +3λ₁²\ddot{ℰ₂}(λ₀; u₁, \hat{u})
-  +6λ₂\dot{ℰ₂}(λ₀; u₁, \hat{u})&=&0.
+  +3\lambda _1�\ddot{\mathcal E_2}(\lambda _0; u_1, \hat{u})
+  +6\lambda _2\dot{\mathcal E_2}(\lambda _0; u_1, \hat{u})&=&0.
 \end{eqnarray}
 
-On déduit de l'équation~\eqref{eq:20211112182917} que \(u₁∈V\). On pose alors
+On d�duit de l'�quation~\eqref{eq:20211112182917} que \(u_1\in V\). On pose alors
 \begin{equation}
   \label{eq:20220124135236}
-  u₁=ξ₁^i vᵢ.
+  u_1=\xi _1^i v_i.
 \end{equation}
 
-En prenant \(\hat{u}=vᵢ\), l'équation~\eqref{eq:20211112183220} s'écrit
+En prenant \(\hat{u}=v_i\), l'�quation~\eqref{eq:20211112183220} s'�crit
 \begin{equation}
   \label{eq:20220216140121}
-  ℰ_{ijk}(λ₀)\,ξ₁^jξ₁^k+2λ₁\dot{ℰ}_{ij}(λ₀)\,ξ₁^j=0.
+  \mathcal E_{ijk}(\lambda _0)\,\xi _1^j\xi _1^k+2\lambda _1\dot{\mathcal E}_{ij}(\lambda _0)\,\xi _1^j=0.
 \end{equation}
 
-Pour le terme d'ordre 2, on introduit la décomposition~:
-\(u_2=ξ_2^iv_i+u_2^W\), où \(u_2^W∈W\). On a alors
-\(ℰ₂(u_2, \hat{u})=ℰ₂(u_2^W, \hat{u})\) et l'équation~\eqref{eq:20211112183220}
-s'écrit
+Pour le terme d'ordre 2, on introduit la d�composition~:
+\(u_2=\xi _2^iv_i+u_2^W\), o� \(u_2^W\in W\). On a alors
+\(\mathcal E_2(u_2, \hat{u})=\mathcal E_2(u_2^W, \hat{u})\) et l'�quation~\eqref{eq:20211112183220}
+s'�crit
 \begin{equation}
-  ℰ₃(λ₀; u₁, u₁, \hat{u})+2λ₁\dot{ℰ₂}(λ₀; u₁, \hat{u})
-  +2ℰ₂(λ₀; u_2^W, \hat{u})=0,
+  \mathcal E_3(\lambda _0; u_1, u_1, \hat{u})+2\lambda _1\dot{\mathcal E_2}(\lambda _0; u_1, \hat{u})
+  +2\mathcal E_2(\lambda _0; u_2^W, \hat{u})=0,
 \end{equation}
-pour tout \(\hat{u}∈V\). En prenant la fonction test dans l'espace \(W\), on
-obtient le problème variationnel suivant~: trouver \(u_2^W∈W\) tel que
+pour tout \(\hat{u}\in V\). En prenant la fonction test dans l'espace \(W\), on
+obtient le probl�me variationnel suivant~: trouver \(u_2^W\in W\) tel que
 \begin{equation}
   \label{eq:20211210131623}
-  ξ₁^iξ₁^jℰ₃(λ₀; vᵢ, vⱼ, \hat{w})
-  +2λ₁ξ₁^i\dot{ℰ₂}(λ₀; vᵢ, \hat{w})
-  +2ℰ₂(λ₀; u_2^W, \hat{w})=0,
+  \xi _1^i\xi _1^j\mathcal E_3(\lambda _0; v_i, v_j, \hat{w})
+  +2\lambda _1\xi _1^i\dot{\mathcal E_2}(\lambda _0; v_i, \hat{w})
+  +2\mathcal E_2(\lambda _0; u_2^W, \hat{w})=0,
 \end{equation}
-pour tout \(\hat{w}∈W\). Soient \(wᵢ∈W\) les solutions des problèmes
+pour tout \(\hat{w}\in W\). Soient \(w_i\in W\) les solutions des probl�mes
 variationnels suivants
 \begin{equation}
   \label{eq:20220208143055}
-  ℰ₂(λ₀; wᵢ, \hat{w})+\dot{ℰ₂}(λ₀; vᵢ, \hat{w})=0,
+  \mathcal E_2(\lambda _0; w_i, \hat{w})+\dot{\mathcal E_2}(\lambda _0; v_i, \hat{w})=0,
 \end{equation}
-pour tout \(\hat{w}∈W\). La solution du problème~\eqref{eq:20211210131623}
-s'obtient par simple combinaison linéaire des \(wᵢ\) et \(w_{ij}\) introduits
-précédemment par le problème variationnel~\eqref{eq:20211221155859}, de sorte
+pour tout \(\hat{w}\in W\). La solution du probl�me~\eqref{eq:20211210131623}
+s'obtient par simple combinaison lin�aire des \(w_i\) et \(w_{ij}\) introduits
+pr�c�demment par le probl�me variationnel~\eqref{eq:20211221155859}, de sorte
 que
 \begin{equation}
   \label{eq:20220124135324}
-  u_2^W=ξ_1^iξ_1^jw_{ij}+λ_1ξ_1^i w_i
+  u_2^W=\xi _1^i\xi _1^jw_{ij}+\lambda _1\xi _1^i w_i
   \quad\text{et}\quad
-  u_2=ξ_2^iv_i+ξ_1^iξ_1^jw_{ij}+λ_1ξ_1^i w_i.
+  u_2=\xi _2^iv_i+\xi _1^i\xi _1^jw_{ij}+\lambda _1\xi _1^i w_i.
 \end{equation}
 
-En prenant \(\hat{u}=v_i\) dans l'équation~\eqref{eq:20220114135717}, on
-obtient l'équation de bifurcation suivante
+En prenant \(\hat{u}=v_i\) dans l'�quation~\eqref{eq:20220114135717}, on
+obtient l'�quation de bifurcation suivante
 \begin{eqnarray}
   \notag
-  6ξ₂^j\bigl[ξ₁^kℰ_{ijk}(λ₀)+λ₁\dot{ℰ}_{ij}(λ₀)\bigr]&&\\
+  6\xi _2^j\bigl[\xi _1^k\mathcal E_{ijk}(\lambda _0)+\lambda _1\dot{\mathcal E}_{ij}(\lambda _0)\bigr]&&\\
   \notag
-  +ξ₁^jξ₁^kξ₁^l\bigl[ℰ_{ijkl}(λ₀)+6ℰ₃(λ₀; v_i, v_j, w_{kl})\bigr]&&\\
+  +\xi _1^j\xi _1^k\xi _1^l\bigl[\mathcal E_{ijkl}(\lambda _0)+6\mathcal E_3(\lambda _0; v_i, v_j, w_{kl})\bigr]&&\\
   \notag
-    +3λ₁ξ₁^jξ₁^k\bigl[\dot{ℰ}_{ijk}(λ₀)+2ℰ₃(λ₀; v_i, v_j, w_k)
-    +2\dot{ℰ₂}(λ₀; v_i, w_{jk})\bigr]&&\\
+    +3\lambda _1\xi _1^j\xi _1^k\bigl[\dot{\mathcal E}_{ijk}(\lambda _0)+2\mathcal E_3(\lambda _0; v_i, v_j, w_k)
+    +2\dot{\mathcal E_2}(\lambda _0; v_i, w_{jk})\bigr]&&\\
     \label{eq:20220210143805}
-    +3λ₁²ξ₁^j\bigl[\ddot{ℰ}_{ij}(λ₀)+2\dot{ℰ₂}(v_i, w_j)\bigr]
-    +6λ₂ξ₁^j\dot{ℰ}_{ij}(λ₀)
+    +3\lambda _1�\xi _1^j\bigl[\ddot{\mathcal E}_{ij}(\lambda _0)+2\dot{\mathcal E_2}(v_i, w_j)\bigr]
+    +6\lambda _2\xi _1^j\dot{\mathcal E}_{ij}(\lambda _0)
     &=&0.
 \end{eqnarray}
 
-On remarque que certains termes peuvent être symétrisés. Ainsi
+On remarque que certains termes peuvent �tre sym�tris�s. Ainsi
 \begin{eqnarray}
   \notag
-  ξ₁^jξ₁^kξ₁^lℰ₃(λ₀; v_i, v_j, w_{kl})
-  &=&\tfrac13ξ₁^jξ₁^kξ₁^l\bigl[ℰ₃(λ₀; v_i, v_j, w_{kl})\\
-  &&+ℰ₃(λ₀; v_i, v_k, w_{lj})+ℰ₃(λ₀; v_i, v_l, w_{jk})\bigr],
+  \xi _1^j\xi _1^k\xi _1^l\mathcal E_3(\lambda _0; v_i, v_j, w_{kl})
+  &=&\tfrac13\xi _1^j\xi _1^k\xi _1^l\bigl[\mathcal E_3(\lambda _0; v_i, v_j, w_{kl})\\
+  &&+\mathcal E_3(\lambda _0; v_i, v_k, w_{lj})+\mathcal E_3(\lambda _0; v_i, v_l, w_{jk})\bigr],
 \end{eqnarray}
-de même
+de m�me
 \begin{equation}
-  2ξ₁^jξ₁^kℰ₃(λ₀; v_i, v_j, w_k)=ξ₁^jξ₁^k\bigl[ℰ₃(λ₀; v_i, v_j, w_k)
-  +ℰ₃(λ₀; v_i, w_j, v_k)\bigr]
+  2\xi _1^j\xi _1^k\mathcal E_3(\lambda _0; v_i, v_j, w_k)=\xi _1^j\xi _1^k\bigl[\mathcal E_3(\lambda _0; v_i, v_j, w_k)
+  +\mathcal E_3(\lambda _0; v_i, w_j, v_k)\bigr]
 \end{equation}
-et l'équation~\eqref{eq:20220210143805} s'écrit
+et l'�quation~\eqref{eq:20220210143805} s'�crit
 \begin{equation}
 \label{eq:20220216141706}
-  6A_{ij}ξ₂^j+E_{ijkl}\,ξ₁^jξ₁^kξ₁^l+3λ₁F_{ijk}ξ₁^jξ₁^k+3λ₁²G_{ij}ξ₁^j
-  +6λ₂\mathring{E}_{ij}ξ₁^j=0,
+  6A_{ij}\xi _2^j+E_{ijkl}\,\xi _1^j\xi _1^k\xi _1^l+3\lambda _1F_{ijk}\xi _1^j\xi _1^k+3\lambda _1�G_{ij}\xi _1^j
+  +6\lambda _2\mathring{E}_{ij}\xi _1^j=0,
 \end{equation}
-en posant\pdfmargincomment{C'est l'expression de Bᵢⱼ de Nick, voir
-  Éq. (AC-5.14) p. 74}
+en posant\pdfmargincomment{C'est l'expression de B_i_j de Nick, voir
+  �q. (AC-5.14) p. 74}
 \begin{equation}
-  A_{ij}=ξ₁^kℰ_{ijk}(λ₀)+λ₁\dot{ℰ}_{ij}(λ₀)
+  A_{ij}=\xi _1^k\mathcal E_{ijk}(\lambda _0)+\lambda _1\dot{\mathcal E}_{ij}(\lambda _0)
 \end{equation}
-\pdfmargincomment{Cette expression coïncide avec l'expression
-  (AC-5.11), page 71, de ℰ\_ijkl de Nick. Le facteur 2 provient du fait que
-  dans le problème variationnel (AC-5.9) qui définit les \(v_{ij}\) de Nick, le
-  facteur 2 du problème~\eqref{eq:20211221155859} n'est pas présent.}
+\pdfmargincomment{Cette expression co�ncide avec l'expression
+  (AC-5.11), page 71, de \mathcal E\_ijkl de Nick. Le facteur 2 provient du fait que
+  dans le probl�me variationnel (AC-5.9) qui d�finit les \(v_{ij}\) de Nick, le
+  facteur 2 du probl�me~\eqref{eq:20211221155859} n'est pas pr�sent.}
 \begin{equation}
-  E_{ijkl}=ℰ₄(λ₀; v_i, v_j, v_k, v_l)+2\bigl[ℰ₃(λ₀; v_i, v_j, w_{kl})
-  +ℰ₃(λ₀; v_i, v_k, w_{lj})+ℰ₃(λ₀; v_i, v_l, w_{jk})\bigr].
+  E_{ijkl}=\mathcal E_4(\lambda _0; v_i, v_j, v_k, v_l)+2\bigl[\mathcal E_3(\lambda _0; v_i, v_j, w_{kl})
+  +\mathcal E_3(\lambda _0; v_i, v_k, w_{lj})+\mathcal E_3(\lambda _0; v_i, v_l, w_{jk})\bigr].
 \end{equation}
 
 \begin{equation}
-  F_{ijk}=\dot{ℰ}₃(λ₀; v_i, v_j, v_k)+ℰ₃(λ₀; v_i, v_j, w_k)
-  +ℰ₃(λ₀; v_i, w_j, v_k)+2\dot{ℰ₂}(λ₀; v_i, w_{jk})
+  F_{ijk}=\dot{\mathcal E}_3(\lambda _0; v_i, v_j, v_k)+\mathcal E_3(\lambda _0; v_i, v_j, w_k)
+  +\mathcal E_3(\lambda _0; v_i, w_j, v_k)+2\dot{\mathcal E_2}(\lambda _0; v_i, w_{jk})
 \end{equation}
 
 \begin{equation}
-  G_{ij}=\ddot{ℰ}_{ij}(λ₀)+2\dot{ℰ₂}(v_i, w_j)
+  G_{ij}=\ddot{\mathcal E}_{ij}(\lambda _0)+2\dot{\mathcal E_2}(v_i, w_j)
 \end{equation}
 
-On supposera satisfaite la condition suivante, qui assure que ce système est régulier
+On supposera satisfaite la condition suivante, qui assure que ce syst�me est r�gulier
 \begin{equation}
-  \det\bigl(ξ₁^kℰ_{ijk}+λ₁\dot{ℰ}_{ij}\bigr)_{i,j}\neq0.
+  \det\bigl(\xi _1^k\mathcal E_{ijk}+\lambda _1\dot{\mathcal E}_{ij}\bigr)_{i,j}\neq0.
 \end{equation}
 
-Les \(ξ₂^i\) sont donc déterminés de façon unique si \(λ₁\), \(λ₂\) et \(ξ₁^i\)
+Les \(\xi _2^i\) sont donc d�termin�s de fa�on unique si \(\lambda _1\), \(\lambda _2\) et \(\xi _1^i\)
 sont connus.
 
-Le développement limité suivant de l'énergie le long de la branche bifurquée
-est établi dans l'annexe~\ref{sec:20220121172919}
+Le d�veloppement limit� suivant de l'�nergie le long de la branche bifurqu�e
+est �tabli dans l'annexe~\ref{sec:20220121172919}
 \begin{eqnarray}
   \notag
-  ℰ[u(η), λ(η)]
-  &=&ℰ\bigl(u^*[λ(η)], λ(η)\bigr)+\tfrac12η²ℰ₂(λ₀; u₁, u₁)\\
+  \mathcal E[u(\eta ), \lambda (\eta )]
+  &=&\mathcal E\bigl(u^*[\lambda (\eta )], \lambda (\eta )\bigr)+\tfrac12\eta �\mathcal E_2(\lambda _0; u_1, u_1)\\
   \notag
-  &&+\tfrac16η³\bigl[ℰ₃(λ₀;u₁, u₁, u₁)+6ℰ₂(λ₀; u₁, u₂)\\
+  &&+\tfrac16\eta ^3\bigl[\mathcal E_3(\lambda _0;u_1, u_1, u_1)+6\mathcal E_2(\lambda _0; u_1, u_2)\\
   \notag
-  &&+3λ₁\dot{ℰ}₂(λ₀; u₁, u₁)\bigr]+\tfrac1{24}η⁴\bigl\{ℰ₄(λ₀;u₁, u₁, u₁, u₁)\\
+  &&+3\lambda _1\dot{\mathcal E}_2(\lambda _0; u_1, u_1)\bigr]+\tfrac1{24}\eta ^4\bigl\{\mathcal E_4(\lambda _0;u_1, u_1, u_1, u_1)\\
   \notag
-  &&+12ℰ₃(λ₀; u₁, u₁, u₂)+12ℰ₂(λ₀; u₂, u₂)\\
+  &&+12\mathcal E_3(\lambda _0; u_1, u_1, u_2)+12\mathcal E_2(\lambda _0; u_2, u_2)\\
   \notag
-  &&+18ℰ₂(λ₀; u₁, u₃)+4λ₁\bigl[\dot{ℰ}₃(λ₀; u₁, u₁, u₁)\\
+  &&+18\mathcal E_2(\lambda _0; u_1, u_3)+4\lambda _1\bigl[\dot{\mathcal E}_3(\lambda _0; u_1, u_1, u_1)\\
   \notag
-  &&+6\dot{ℰ}₂(λ₀; u₁, u₂)\bigr]+6λ₁²\ddot{ℰ}₂(λ₀; u₁, u₁)\\
+  &&+6\dot{\mathcal E}_2(\lambda _0; u_1, u_2)\bigr]+6\lambda _1�\ddot{\mathcal E}_2(\lambda _0; u_1, u_1)\\
   \label{eq:20220121172753}
-  &&+12λ₂\dot{ℰ}₂(λ₀; u₁, u₁)\bigr\}+o(η⁴).
+  &&+12\lambda _2\dot{\mathcal E}_2(\lambda _0; u_1, u_1)\bigr\}+o(\eta ^4).
 \end{eqnarray}
 
 La relation~\eqref{eq:20211112182917} montre tout d'abord que les termes en
-\(ℰ₂(λ₀; u₁, u₁)\), \(ℰ₂(λ₀; u₁, u₂)\) et \(ℰ₂(λ₀; u₁, u₃)\) sont nuls. Le
-premier terme non-nul du développement limité~\eqref{eq:20220121172753} est
-donc le terme d'ordre 3. En prenant de plus \(\hat{u}=u₁\) dans la
+\(\mathcal E_2(\lambda _0; u_1, u_1)\), \(\mathcal E_2(\lambda _0; u_1, u_2)\) et \(\mathcal E_2(\lambda _0; u_1, u_3)\) sont nuls. Le
+premier terme non-nul du d�veloppement limit�~\eqref{eq:20220121172753} est
+donc le terme d'ordre 3. En prenant de plus \(\hat{u}=u_1\) dans la
 relation~\eqref{eq:20211112183220}, on trouve finalement\pdfmargincomment{Cette
-  expression coïncide avec l'Éq. (AC-5.29) de Tryantafyllidis.}
+  expression co�ncide avec l'�q. (AC-5.29) de Tryantafyllidis.}
 \begin{equation}
-  ℰ[u(η), λ(η)]=ℰ\bigl(u^*[λ(η)], λ(η)\bigr)+\tfrac16λ₁η³\dot{ℰ}₂(u₁, u₁)+o(η³).
+  \mathcal E[u(\eta ), \lambda (\eta )]=\mathcal E\bigl(u^*[\lambda (\eta )], \lambda (\eta )\bigr)+\tfrac16\lambda _1\eta ^3\dot{\mathcal E}_2(u_1, u_1)+o(\eta ^3).
 \end{equation}
 
-Si \(λ₁=0\), le premier terme non-nul du développement
-limité~\eqref{eq:20220121172753} est d'ordre 4. En prenant cette fois
-\(\hat{u}=u₂\) dans la relation~\eqref{eq:20211112183220} et \(\hat{u}=u₁\)
+Si \(\lambda _1=0\), le premier terme non-nul du d�veloppement
+limit�~\eqref{eq:20220121172753} est d'ordre 4. En prenant cette fois
+\(\hat{u}=u_2\) dans la relation~\eqref{eq:20211112183220} et \(\hat{u}=u_1\)
 dans la relation~\eqref{eq:20220114135717}, on obtient\pdfmargincomment{Cette
-  expression coïncide avec l'Éq. (AC-5.30) de Tryantafyllidis.}
+  expression co�ncide avec l'�q. (AC-5.30) de Tryantafyllidis.}
 \begin{equation}
-  ℰ[u(η), λ(η)]=ℰ\bigl(u^*[λ(η)], λ(η)\bigr)+\tfrac1{4}λ₂η⁴\dot{ℰ}₂(λ₀; u₁, u₁)+o(η⁴).
+  \mathcal E[u(\eta ), \lambda (\eta )]=\mathcal E\bigl(u^*[\lambda (\eta )], \lambda (\eta )\bigr)+\tfrac1{4}\lambda _2\eta ^4\dot{\mathcal E}_2(\lambda _0; u_1, u_1)+o(\eta ^4).
 \end{equation}
 
 \begin{center}
   ***
 \end{center}
 
-Pour analyser la stabilité de la branche bifurquée ainsi trouvée, il faut
-déterminer le signe de la hessienne de l'énergie. On peut d'ores et déjà
-remarquer que, sur la branche fondamentale (\(u₁=u₂=0\)), en prenant \(η=λ-λ₀\)
-(\(λ₁=1\))
+Pour analyser la stabilit� de la branche bifurqu�e ainsi trouv�e, il faut
+d�terminer le signe de la hessienne de l'�nergie. On peut d'ores et d�j�
+remarquer que, sur la branche fondamentale (\(u_1=u_2=0\)), en prenant \(\eta =\lambda -\lambda _0\)
+(\(\lambda _1=1\))
 \begin{equation}
-  ℰ₂(λ; \hat{u}, \hat{v})
-  =ℰ₂(λ₀; \hat{u}, \hat{v})+\bigl(λ-λ₀\bigr)\dot{ℰ}₂(λ₀; \hat{u}, \hat{v})+o(λ-λ₀).
+  \mathcal E_2(\lambda ; \hat{u}, \hat{v})
+  =\mathcal E_2(\lambda _0; \hat{u}, \hat{v})+\bigl(\lambda -\lambda _0\bigr)\dot{\mathcal E}_2(\lambda _0; \hat{u}, \hat{v})+o(\lambda -\lambda _0).
 \end{equation}
 
-Dans ce qui suit, on supposera que \(\dot{ℰ}_2(λ₀)≠0\). Pour \(\hat{v}∈V\),
-l'égalité précédente s'écrit
+Dans ce qui suit, on supposera que \(\dot{\mathcal E}_2(\lambda _0)\neq0\). Pour \(\hat{v}\in V\),
+l'�galit� pr�c�dente s'�crit
 \begin{equation}
-  ℰ₂(λ₀; \hat{v}, \hat{v})=\bigl(λ-λ₀\bigr)\dot{ℰ}₂(\hat{v}, \hat{v})+o(λ-λ₀).
+  \mathcal E_2(\lambda _0; \hat{v}, \hat{v})=\bigl(\lambda -\lambda _0\bigr)\dot{\mathcal E}_2(\hat{v}, \hat{v})+o(\lambda -\lambda _0).
 \end{equation}
 
-Comme la branche fondamentale est stable pour \(λ<λ₀\), on doit avoir
-\(\dot{ℰ}₂(λ₀; \hat{v}, \hat{v})<0\). La forme quadratique \(\dot{ℰ}₂(λ₀)\) est
-donc définie négative sur \(V\). Le développement limité de la hessienne de
-l'énergie le long de la branche bifurquée est établi dans
-l'annexe~\ref{sec:20211115081016}. Pour tout \(\hat{u}∈U\), on trouve
+Comme la branche fondamentale est stable pour \(\lambda <\lambda _0\), on doit avoir
+\(\dot{\mathcal E}_2(\lambda _0; \hat{v}, \hat{v})<0\). La forme quadratique \(\dot{\mathcal E}_2(\lambda _0)\) est
+donc d�finie n�gative sur \(V\). Le d�veloppement limit� de la hessienne de
+l'�nergie le long de la branche bifurqu�e est �tabli dans
+l'annexe~\ref{sec:20211115081016}. Pour tout \(\hat{u}\in U\), on trouve
 \begin{eqnarray}
   \notag
-  ℰ_{,uu}[u(η), λ(η); \hat{u}, \hat{u}]
-  &=&ℰ₂(λ₀; \hat{u}, \hat{u})+η\bigl[ℰ₃(λ₀; u₁, \hat{u}, \hat{u})
-      +λ₁\dot{ℰ}₂(λ₀; \hat{u}, \hat{u})\bigr]\\
+  \mathcal E_{,uu}[u(\eta ), \lambda (\eta ); \hat{u}, \hat{u}]
+  &=&\mathcal E_2(\lambda _0; \hat{u}, \hat{u})+\eta \bigl[\mathcal E_3(\lambda _0; u_1, \hat{u}, \hat{u})
+      +\lambda _1\dot{\mathcal E}_2(\lambda _0; \hat{u}, \hat{u})\bigr]\\
   \notag
-  &&+\tfrac12η²\bigl[ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{u})
-     +2λ₁\dot{ℰ}₃(λ₀; u₁, \hat{u}, \hat{u})\\
+  &&+\tfrac12\eta �\bigl[\mathcal E_4(\lambda _0; u_1, u_1, \hat{u}, \hat{u})
+     +2\lambda _1\dot{\mathcal E}_3(\lambda _0; u_1, \hat{u}, \hat{u})\\
   \notag
-  &&+λ₁²\ddot{ℰ}₂(λ₀; \hat{u}, \hat{u})
-     +ℰ₃(λ₀; u₂, \hat{u}, \hat{u})\\
+  &&+\lambda _1�\ddot{\mathcal E}_2(\lambda _0; \hat{u}, \hat{u})
+     +\mathcal E_3(\lambda _0; u_2, \hat{u}, \hat{u})\\
   \label{eq:20211115082025}
-  &&+λ₂\dot{ℰ}₂(λ₀; \hat{u}, \hat{u})\bigr]+o(η²).
+  &&+\lambda _2\dot{\mathcal E}_2(\lambda _0; \hat{u}, \hat{u})\bigr]+o(\eta �).
 \end{eqnarray}
 
-On peut décomposer le vecteur \(\hat{u}∈U\) de façon unique sous la forme
-\(\hat{u}=\hat{v}+\hat{w}\), avec \(\hat{v}∈V\) et \(\hat{w}∈W\). Le terme
-constant du développement précédent vaut alors \(ℰ₂(λ₀; \hat{w}, \hat{w})\). Si
-\(\hat{w}≠0\), alors ce terme constant est strictement positif, puisque la
-hessienne est définie positive sur \(W\) en \(λ=λ₀\). La hessienne sur la
-branche bifurquée est donc positive pour tout \(\hat{u}∈U\) ayant une
-composante dans \(W\). Il suffit donc d'étudier le signe de la hessienne sur la
-branche bifurquée pour \(\hat{u}∈V\), soit \(\hat{u}=\hat{ξ}^iv_i\). Dans ce
-cas, compte-tenu de l'expression~\eqref{eq:20220124135324} de \(u₂\)
+On peut d�composer le vecteur \(\hat{u}\in U\) de fa�on unique sous la forme
+\(\hat{u}=\hat{v}+\hat{w}\), avec \(\hat{v}\in V\) et \(\hat{w}\in W\). Le terme
+constant du d�veloppement pr�c�dent vaut alors \(\mathcal E_2(\lambda _0; \hat{w}, \hat{w})\). Si
+\(\hat{w}\neq0\), alors ce terme constant est strictement positif, puisque la
+hessienne est d�finie positive sur \(W\) en \(\lambda =\lambda _0\). La hessienne sur la
+branche bifurqu�e est donc positive pour tout \(\hat{u}\in U\) ayant une
+composante dans \(W\). Il suffit donc d'�tudier le signe de la hessienne sur la
+branche bifurqu�e pour \(\hat{u}\in V\), soit \(\hat{u}=\hat{\xi }^iv_i\). Dans ce
+cas, compte-tenu de l'expression~\eqref{eq:20220124135324} de \(u_2\)
 \begin{eqnarray}
   \notag
-  ℰ₃(λ₀; u₂, \hat{u}, \hat{u})
-  &=&ξ₁^iξ₁^j\hat{ξ}^k\hat{ξ}^lℰ₃(λ₀; w_{ij}, v_k, v_l)
-      +ξ₂^i\hat{ξ}^j\hat{ξ}^kℰ₃(λ₀; v_i, v_j, v_k)\\
-  &&+λ₁ξ₁^i\hat{ξ}^j\hat{ξ}^kℰ₃(λ₀; w_i, v_j, v_k).
+  \mathcal E_3(\lambda _0; u_2, \hat{u}, \hat{u})
+  &=&\xi _1^i\xi _1^j\hat{\xi }^k\hat{\xi }^l\mathcal E_3(\lambda _0; w_{ij}, v_k, v_l)
+      +\xi _2^i\hat{\xi }^j\hat{\xi }^k\mathcal E_3(\lambda _0; v_i, v_j, v_k)\\
+  &&+\lambda _1\xi _1^i\hat{\xi }^j\hat{\xi }^k\mathcal E_3(\lambda _0; w_i, v_j, v_k).
 \end{eqnarray}
 
-On peut complètement symétriser le premier terme
+On peut compl�tement sym�triser le premier terme
 \begin{eqnarray}
   \notag
-  ξ₁^iξ₁^j\hat{ξ}^k\hat{ξ}^lℰ₃(λ₀; w_{ij}, v_k, v_l)
-  &=&\tfrac13\bigl[ξ₁^iξ₁^j\hat{ξ}^k\hat{ξ}^lℰ₃(λ₀; w_{ij}, v_k, v_l)\\
+  \xi _1^i\xi _1^j\hat{\xi }^k\hat{\xi }^l\mathcal E_3(\lambda _0; w_{ij}, v_k, v_l)
+  &=&\tfrac13\bigl[\xi _1^i\xi _1^j\hat{\xi }^k\hat{\xi }^l\mathcal E_3(\lambda _0; w_{ij}, v_k, v_l)\\
   \notag
-  &&+ξ₁^iξ₁^j\hat{ξ}^k\hat{ξ}^lℰ₃(λ₀; w_{ij}, v_k, v_l)\\
-  &&+ξ₁^iξ₁^j\hat{ξ}^k\hat{ξ}^lℰ₃(λ₀; w_{ij}, v_k, v_l)\bigr]
+  &&+\xi _1^i\xi _1^j\hat{\xi }^k\hat{\xi }^l\mathcal E_3(\lambda _0; w_{ij}, v_k, v_l)\\
+  &&+\xi _1^i\xi _1^j\hat{\xi }^k\hat{\xi }^l\mathcal E_3(\lambda _0; w_{ij}, v_k, v_l)\bigr]
 \end{eqnarray}
 
 \begin{eqnarray}
   \notag
-  ℰ_{,uu}[u(η), λ(η); \hat{u}, \hat{u}]
-  &=&η\hat{ξ}^i\hat{ξ}^j\bigl[ξ₁^kℰ_{ijk}(λ₀)+λ₁\dot{ℰ}_{ij}(λ₀)\bigr]\\
+  \mathcal E_{,uu}[u(\eta ), \lambda (\eta ); \hat{u}, \hat{u}]
+  &=&\eta \hat{\xi }^i\hat{\xi }^j\bigl[\xi _1^k\mathcal E_{ijk}(\lambda _0)+\lambda _1\dot{\mathcal E}_{ij}(\lambda _0)\bigr]\\
   \notag
-  &&+\tfrac12η²\hat{ξ}^i\hat{ξ}^j\bigl\{ξ₁^kξ₁^l\bigl[ℰ_{ijkl}(λ₀)
-     -2ℰ₂(λ₀; w_{ij}, w_{kl})\bigr]\\
+  &&+\tfrac12\eta �\hat{\xi }^i\hat{\xi }^j\bigl\{\xi _1^k\xi _1^l\bigl[\mathcal E_{ijkl}(\lambda _0)
+     -2\mathcal E_2(\lambda _0; w_{ij}, w_{kl})\bigr]\\
   \notag
-  &&+λ₁ξ₁^k\bigl[ℰ₃(λ₀; v_i, v_j, w_k)+\dot{ℰ}_{ijk}(λ₀)\bigr]\\
+  &&+\lambda _1\xi _1^k\bigl[\mathcal E_3(\lambda _0; v_i, v_j, w_k)+\dot{\mathcal E}_{ijk}(\lambda _0)\bigr]\\
   \label{eq:20220203144500}
-  &&+λ₁²\ddot{ℰ}_{ij}(λ₀)+ξ₂^kℰ_{ijk}(λ₀)+λ₂\dot{ℰ}_{ij}\bigr\}+o(η²).
+  &&+\lambda _1�\ddot{\mathcal E}_{ij}(\lambda _0)+\xi _2^k\mathcal E_{ijk}(\lambda _0)+\lambda _2\dot{\mathcal E}_{ij}\bigr\}+o(\eta �).
 \end{eqnarray}
 
 Compte-tenu de la relation~\eqref{eq:20211112183220}, on trouve pour
-\(\hat{v}=u₁\) (\(\hat{ξ}^i=ξ₁^i\))
+\(\hat{v}=u_1\) (\(\hat{\xi }^i=\xi _1^i\))
 \begin{equation}
-  ℰ_{,uu}[u(η), λ(η); u₁, u₁]=-λ₁η\dot{ℰ}₂(λ₀; u₁, u₁)+o(η).
+  \mathcal E_{,uu}[u(\eta ), \lambda (\eta ); u_1, u_1]=-\lambda _1\eta \dot{\mathcal E}_2(\lambda _0; u_1, u_1)+o(\eta ).
 \end{equation}
 
-Si \(λ₁≠0\), l'expression précédente peut également s'écrire
+Si \(\lambda _1\neq0\), l'expression pr�c�dente peut �galement s'�crire
 \begin{equation}
-  ℰ_{,uu}[u(η), λ(η); u₁, u₁]=-\bigl(λ-λ₀\bigr)\dot{ℰ}₂(λ₀; u₁, u₁)+o(λ-λ₀),
+  \mathcal E_{,uu}[u(\eta ), \lambda (\eta ); u_1, u_1]=-\bigl(\lambda -\lambda _0\bigr)\dot{\mathcal E}_2(\lambda _0; u_1, u_1)+o(\lambda -\lambda _0),
 \end{equation}
-qui est négative pour \(λ<λ₀\): la branche bifurquée est instable sous la
-charge critique. Il reste alors à étudier le signe de la hessienne de la
-branche bifurquée au-delà de la charge critique (\(λ>λ₀\)).
+qui est n�gative pour \(\lambda <\lambda _0\): la branche bifurqu�e est instable sous la
+charge critique. Il reste alors � �tudier le signe de la hessienne de la
+branche bifurqu�e au-del� de la charge critique (\(\lambda >\lambda _0\)).
 
 \section{Cas d'un mode de flambement simple (\(m=1\))}
 
-Lorsque \(m=\dim V=1\), la base \(v₁, …, vₘ\) est réduite au seul vecteur
-\(v₁\) et \(u₁\) est parallèle à ce vecteur. Comme \(\lVert u₁\rVert=1\), on a
-donc nécessairement \(u₁=v₁\) (quitte à changer \(η\) en \(-η\)). L'équation de
-bifurcation~\eqref{eq:20220216140121} s'écrit alors
+Lorsque \(m=\dim V=1\), la base \(v_1, \ldots, v_m\) est r�duite au seul vecteur
+\(v_1\) et \(u_1\) est parall�le � ce vecteur. Comme \(\lVert u_1\rVert=1\), on a
+donc n�cessairement \(u_1=v_1\) (quitte � changer \(\eta \) en \(-\eta \)). L'�quation de
+bifurcation~\eqref{eq:20220216140121} s'�crit alors
 \begin{equation}
   \label{eq:20220203144712}
-  ℰ₁₁₁(λ₀)+2λ₁\dot{ℰ}₁₁(λ₀)=0,
+  \mathcal E_{111}(\lambda _0)+2\lambda _1\dot{\mathcal E}_{11}(\lambda _0)=0,
   \quad\text{soit}\quad
-  λ₁=-\frac{ℰ₁₁₁(λ₀)}{2\dot{ℰ}₁₁(λ₀)},
+  \lambda _1=-\frac{\mathcal E_{111}(\lambda _0)}{2\dot{\mathcal E}_{11}(\lambda _0)},
 \end{equation}
-où on remarque que le quotient a un sens, puisque \(\dot{ℰ₂}(λ₀)\) est définie
-négative sur \(V\). On trouve donc les développements limités
+o� on remarque que le quotient a un sens, puisque \(\dot{\mathcal E_2}(\lambda _0)\) est d�finie
+n�gative sur \(V\). On trouve donc les d�veloppements limit�s
 \begin{equation}
-  λ=λ₀+λ₁η+o(η)
+  \lambda =\lambda _0+\lambda _1\eta +o(\eta )
   \quad\text{et}\quad
-  u=u^*(λ)+ηv₁+o(η),
+  u=u^*(\lambda )+\eta v_1+o(\eta ),
 \end{equation}
-soit finalement, en éliminant \(η\)
+soit finalement, en �liminant \(\eta \)
 \begin{equation}
-  λ=λ₀-\frac{ξℰ₁₁₁(λ₀)}{2\dot{ℰ}₁₁(λ₀)}+o(ξ),
+  \lambda =\lambda _0-\frac{\xi \mathcal E_{111}(\lambda _0)}{2\dot{\mathcal E}_{11}(\lambda _0)}+o(\xi ),
   \quad\text{avec}\quad
-  ξ=〈u(λ)-u^*(λ), v₁〉.
+  \xi =\langle u(\lambda )-u^*(\lambda ), v_1\rangle .
 \end{equation}
 
-Pour déterminer la stabilité de la branche bifurquée, on calcule la hessienne
-en \((v₁, v₁)\). L'équation~\eqref{eq:20220203144500} s'écrit
+Pour d�terminer la stabilit� de la branche bifurqu�e, on calcule la hessienne
+en \((v_1, v_1)\). L'�quation~\eqref{eq:20220203144500} s'�crit
 \begin{equation}
-  ℰ_{,uu}[u(η), λ(η); v₁, v₁]=η\bigl[ℰ₁₁₁(λ₀)+λ₁\dot{ℰ}₁₁(λ₀)\bigr]+o(η),
+  \mathcal E_{,uu}[u(\eta ), \lambda (\eta ); v_1, v_1]=\eta \bigl[\mathcal E_{111}(\lambda _0)+\lambda _1\dot{\mathcal E}_{11}(\lambda _0)\bigr]+o(\eta ),
 \end{equation}
-soit, en substituant l'équation~\eqref{eq:20220203144712}
+soit, en substituant l'�quation~\eqref{eq:20220203144712}
 \begin{equation}
-  ℰ_{,uu}[u(η), λ(η); v₁, v₁]=-λ₁η\dot{ℰ}₁₁(λ₀)+o(η).
+  \mathcal E_{,uu}[u(\eta ), \lambda (\eta ); v_1, v_1]=-\lambda _1\eta \dot{\mathcal E}_{11}(\lambda _0)+o(\eta ).
 \end{equation}
 
-Ce développement ne permet de conclure que si le terme linéaire est non-nul,
-soit \(ℰ₁₁₁(λ₀)≠0\) [voir Éq.~\eqref{eq:20220203144712}]. Dans ce cas, le
-développement asymptotique précédent s'écrit également
+Ce d�veloppement ne permet de conclure que si le terme lin�aire est non-nul,
+soit \(\mathcal E_{111}(\lambda _0)\neq0\) [voir �q.~\eqref{eq:20220203144712}]. Dans ce cas, le
+d�veloppement asymptotique pr�c�dent s'�crit �galement
 \begin{equation}
-  ℰ_{,uu}[u(η), λ(η); v₁, v₁]=-\bigl(λ-λ₀\bigr)\dot{ℰ}₁₁(λ₀)+o(λ-λ₀).
+  \mathcal E_{,uu}[u(\eta ), \lambda (\eta ); v_1, v_1]=-\bigl(\lambda -\lambda _0\bigr)\dot{\mathcal E}_{11}(\lambda _0)+o(\lambda -\lambda _0).
 \end{equation}
 
-Comme \(\dot{ℰ}₂(λ₀)\) est définie négative, la branche bifurquée est
-\emph{instable} pour \(λ<λ₀\) et \emph{stable} pour \(λ>λ₀\) lorsque
-\(ℰ₁₁₁(λ₀)≠0\).
+Comme \(\dot{\mathcal E}_2(\lambda _0)\) est d�finie n�gative, la branche bifurqu�e est
+\emph{instable} pour \(\lambda <\lambda _0\) et \emph{stable} pour \(\lambda >\lambda _0\) lorsque
+\(\mathcal E_{111}(\lambda _0)\neq0\).
 
-Supposons maintenant que \(ℰ₁₁₁(λ₀)=0\)~; alors \(λ₁=0\) et il faut calculer au
-moins un terme supplémentaire dans le développement limité de la
-Hessienne. L'équation de bifurcation~\eqref{eq:20220216141706} s'écrit
+Supposons maintenant que \(\mathcal E_{111}(\lambda _0)=0\)~; alors \(\lambda _1=0\) et il faut calculer au
+moins un terme suppl�mentaire dans le d�veloppement limit� de la
+Hessienne. L'�quation de bifurcation~\eqref{eq:20220216141706} s'�crit
 \begin{equation}
   \label{eq:20220217164528}
-  ℰ₁₁₁₁(λ₀)+6ℰ₃(λ₀; v₁, v₁, u₂)+6λ₂\dot{ℰ}₁₁(λ₀)=0.
+  \mathcal E_{1111}(\lambda _0)+6\mathcal E_3(\lambda _0; v_1, v_1, u_2)+6\lambda _2\dot{\mathcal E}_{11}(\lambda _0)=0.
 \end{equation}
-En introduisant le développement~\eqref{eq:20220124135324} de \(u₂\) et en
-utilisant le problème variationnel~\eqref{eq:20211221155859}
+En introduisant le d�veloppement~\eqref{eq:20220124135324} de \(u_2\) et en
+utilisant le probl�me variationnel~\eqref{eq:20211221155859}
 \begin{equation}
-  u₂=ξ₂v₁+w₁₁+λ₁w₁,
+  u_2=\xi _2v_1+w_{11}+\lambda _1w_1,
 \end{equation}
 donc
 \begin{equation}
-  ℰ₃(λ₀;v₁, v₁, u₂)=ℰ₃(λ₀;v₁, v₁, w₁₁)=-2ℰ₂(λ₀;w₁₁, w₁₁)
+  \mathcal E_3(\lambda _0;v_1, v_1, u_2)=\mathcal E_3(\lambda _0;v_1, v_1, w_{11})=-2\mathcal E_2(\lambda _0;w_{11}, w_{11})
 \end{equation}
 soit finalement
 \begin{equation*}
-  λ₂=-\frac{ℰ₁₁₁₁(λ₀)-12ℰ₂(λ₀;w₁₁, w₁₁)}{6\dot{ℰ}₁₁(λ₀)},
+  \lambda _2=-\frac{\mathcal E_{1111}(\lambda _0)-12\mathcal E_2(\lambda _0;w_{11}, w_{11})}{6\dot{\mathcal E}_{11}(\lambda _0)},
 \end{equation*}
-le quotient ayant une nouvelle fois un sens. Le développement
-asymptotique~\eqref{eq:20211115082025} de la Hessienne s'écrit alors, en tenant
-compte de l'Éq.~\eqref{eq:20220217164528}
+le quotient ayant une nouvelle fois un sens. Le d�veloppement
+asymptotique~\eqref{eq:20211115082025} de la Hessienne s'�crit alors, en tenant
+compte de l'�q.~\eqref{eq:20220217164528}
 \begin{eqnarray}
   \notag
-  ℰ_{,uu}[u(η), λ(η); v₁, v₁]
-  &=&\tfrac12η²\bigl[ℰ₁₁₁₁(λ₀)+2ℰ₃(λ₀; v₁, v₁, u₂)+2λ₂\dot{ℰ}₁₁(λ₀)\bigr]+o(η²)\\
-  &=&\tfrac5{12}η²ℰ₁₁₁₁(λ₀)+o(η²).
+  \mathcal E_{,uu}[u(\eta ), \lambda (\eta ); v_1, v_1]
+  &=&\tfrac12\eta �\bigl[\mathcal E_{1111}(\lambda _0)+2\mathcal E_3(\lambda _0; v_1, v_1, u_2)+2\lambda _2\dot{\mathcal E}_{11}(\lambda _0)\bigr]+o(\eta �)\\
+  &=&\tfrac5{12}\eta �\mathcal E_{1111}(\lambda _0)+o(\eta �).
 \end{eqnarray}
 
 \appendix
 
-\section{Propriétés des formes bilinéaires symétriques, positives}
+\section{Propri�t�s des formes bilin�aires sym�triques, positives}
 
-Soit \(ℬ\) une forme bilinéaire symétrique, positive sur l'espace vectoriel
-\(V\). On définit son noyau \(\kerℬ\) de la façon suivante
+Soit \(\mathcal B\) une forme bilin�aire sym�trique, positive sur l'espace vectoriel
+\(V\). On d�finit son noyau \(\ker\mathcal B\) de la fa�on suivante
 \begin{equation}
-  \kerℬ=\{u∈V|ℬ(u, u)=0\}.
+  \ker\mathcal B=\{u\in V|\mathcal B(u, u)=0\}.
 \end{equation}
 
 \begin{theorem}
-  Le noyau \(\kerℬ\) d'une forme bilinéaire, symétrique, positive \(ℬ\) sur
+  Le noyau \(\ker\mathcal B\) d'une forme bilin�aire, sym�trique, positive \(\mathcal B\) sur
   l'espace vectoriel \(V\) est un sous-espace vectoriel de \(V\).
 \end{theorem}
 \begin{proof}
-  Soient \(u, v∈\kerℬ\), \(α∈ℝ\) et \(w=u+α v\). Montrons que \(w∈\kerℬ\). Il
-  suffit d'évaluer \(ℬ(w, w)\)
+  Soient \(u, v\in\ker\mathcal B\), \(\alpha\in\mathbb R \) et \(w=u+\alpha v\). Montrons que \(w\in\ker\mathcal B\). Il
+  suffit d'�valuer \(\mathcal B(w, w)\)
   \begin{equation}
-    ℬ(w, w)=ℬ(u+α v, u+α v)=ℬ(u, u)+2αℬ(u, v)+α²ℬ(v, v),
+    \mathcal B(w, w)=\mathcal B(u+\alpha v, u+\alpha v)=\mathcal B(u, u)+2\alpha\mathcal B(u, v)+\alpha�\mathcal B(v, v),
   \end{equation}
-  où l'on a tenu compte de la symétrie de \(ℬ\) pour écrire que
-  \(ℬ(u, v)=ℬ(v, u)\). Comme \(u, v∈\kerℬ\), le premier et le dernier terme
-  sont nuls, soit \(ℬ(w, w)=2αℬ(u, v)\). La forme bilinéaire étant positive,
-  cette grandeur est positive, \emph{quelle que soit la valeur de \(α∈ℝ\)}. On
-  en déduit donc que \(ℬ(u, v)=0\), puis que \(ℬ(w, w)=0\).
+  o� l'on a tenu compte de la sym�trie de \(\mathcal B\) pour �crire que
+  \(\mathcal B(u, v)=\mathcal B(v, u)\). Comme \(u, v\in\ker\mathcal B\), le premier et le dernier terme
+  sont nuls, soit \(\mathcal B(w, w)=2\alpha\mathcal B(u, v)\). La forme bilin�aire �tant positive,
+  cette grandeur est positive, \emph{quelle que soit la valeur de \(\alpha\in\mathbb R \)}. On
+  en d�duit donc que \(\mathcal B(u, v)=0\), puis que \(\mathcal B(w, w)=0\).
 \end{proof}
 
-Soit \(u∈V\). Alors
+Soit \(u\in V\). Alors
 \begin{equation}
-  u∈\kerℬ\quad\text{ssi}\quad\text{pour tout }v∈V, ℬ(u, v)=0.
+  u\in\ker\mathcal B\quad\text{ssi}\quad\text{pour tout }v\in V, \mathcal B(u, v)=0.
 \end{equation}
 \begin{proof}
-  Soient \(u∈\kerℬ\), \(v∈V\) et \(α∈ℝ\). Comme précédemment, on écrit que
-  \(ℬ(w, w)≥0\), avec \(w=α u+v\)
+  Soient \(u\in\ker\mathcal B\), \(v\in V\) et \(\alpha\in\mathbb R \). Comme pr�c�demment, on �crit que
+  \(\mathcal B(w, w)\geq0\), avec \(w=\alpha u+v\)
   \begin{equation}
-    ℬ(w, w)=2αℬ(u, v)+ℬ(v, v)≥0,
+    \mathcal B(w, w)=2\alpha\mathcal B(u, v)+\mathcal B(v, v)\geq0,
   \end{equation}
-  où l'on a tenu compte de ce que \(ℬ(u, u)=0\). L'expression précédente,
-  affine en \(α\), a un signe constant. Le terme linéaire en \(α\) est donc
-  nul, soit \(ℬ(u, v)=0\).
+  o� l'on a tenu compte de ce que \(\mathcal B(u, u)=0\). L'expression pr�c�dente,
+  affine en \(\alpha\), a un signe constant. Le terme lin�aire en \(\alpha\) est donc
+  nul, soit \(\mathcal B(u, v)=0\).
 
-  Réciproquement, si \(ℬ(u, v)=0\) pour tout \(v∈V\), alors \(ℬ(u, u)=0\) (en
+  R�ciproquement, si \(\mathcal B(u, v)=0\) pour tout \(v\in V\), alors \(\mathcal B(u, u)=0\) (en
   prenant \(v=u\)).
 \end{proof}
 
-\section{Développements limités le long d'une branche bifurquée du diagramme
-  d'équilibre}
+\section{D�veloppements limit�s le long d'une branche bifurqu�e du diagramme
+  d'�quilibre}
 
 \subsection{Principe du calcul}
 \label{sec:20220107121442}
@@ -594,359 +594,359 @@ Soit \(u∈V\). Alors
 On pose dans ce qui suit
 \begin{eqnarray}
   \label{eq:20211112155446}
-  Λ(η)&=&λ(η)-λ₀=ηλ₁+η²λ₂+η³λ₃+\cdots,\\
+  \Lambda (\eta )&=&\lambda (\eta )-\lambda _0=\eta \lambda _1+\eta �\lambda _2+\eta ^3\lambda _3+\cdots,\\
   \label{eq:20211112113028}
-  U(η)&=&u(η)-u^*[λ(η)]=ηu₁+η²u₂+η³u₃+\cdots.
+  U(\eta )&=&u(\eta )-u^*[\lambda (\eta )]=\eta u_1+\eta �u_2+\eta ^3u_3+\cdots.
 \end{eqnarray}
 
-On considère une quantité \(ℱ\), fonction de \(u\) et \(λ\)~: \(ℱ(u,
-λ)\). Cette fonctionnelle est évaluée le long de la branche bifurquée. En
-d'autres termes, on considère
+On consid�re une quantit� \(\mathcal{F}\), fonction de \(u\) et \(\lambda \)~: \(\mathcal{F}(u,
+\lambda )\). Cette fonctionnelle est �valu�e le long de la branche bifurqu�e. En
+d'autres termes, on consid�re
 \begin{equation}
-  f(η)=F\bigl(u^*[λ₀+Λ(η)]+U(η), λ₀+Λ(η)\bigr).
+  f(\eta )=F\bigl(u^*[\lambda _0+\Lambda (\eta )]+U(\eta ), \lambda _0+\Lambda (\eta )\bigr).
 \end{equation}
 
-On souhaite établir un développement limité de \(f\) au voisinage de \(η=0\),
-ce qui conduit à calculer les dérivées successives de \(f\) en \(η=0\), puisque
+On souhaite �tablir un d�veloppement limit� de \(f\) au voisinage de \(\eta =0\),
+ce qui conduit � calculer les d�riv�es successives de \(f\) en \(\eta =0\), puisque
 \begin{equation}
-  f(η)=f(0)+η f'(0)+\tfrac12η²f''(0)+\cdots
+  f(\eta )=f(0)+\eta  f'(0)+\tfrac12\eta �f''(0)+\cdots
 \end{equation}
 
-Pour calculer ces dérivées, il sera commode d'introduire la fonction auxiliaire
+Pour calculer ces d�riv�es, il sera commode d'introduire la fonction auxiliaire
 \(F\)
 \begin{equation}
-  F(η, λ)=ℱ[u^*(λ)+U(η), λ],
+  F(\eta , \lambda )=\mathcal{F}[u^*(\lambda )+U(\eta ), \lambda ],
 \end{equation}
-dans laquelle les variables \(λ\) et \(η\) sont provisoirement considérées
-comme indépendantes. On a
+dans laquelle les variables \(\lambda \) et \(\eta \) sont provisoirement consid�r�es
+comme ind�pendantes. On a
 \begin{equation}
-  f(η)=F[η, λ₀+Λ(η)],
+  f(\eta )=F[\eta , \lambda _0+\Lambda (\eta )],
 \end{equation}
-d'où l'on déduit successivement que
+d'o� l'on d�duit successivement que
 \begin{eqnarray}
   \label{eq:20211112162417}
-  f'(η)&=&∂_ηF+Λ'∂_λF,\\
+  f'(\eta )&=&\partial _\eta F+\Lambda '\partial _\lambda F,\\
   \label{eq:20211112165810}
-  f''(η)&=&∂_{ηη}²F+2Λ'∂_{ηλ}²F+Λ'^2∂_{λλ}²F+Λ''∂_λ F,\\
+  f''(\eta )&=&\partial _{\eta \eta }�F+2\Lambda '\partial _{\eta \lambda }�F+\Lambda '^2\partial _{\lambda \lambda }�F+\Lambda ''\partial _\lambda  F,\\
   \notag
-  f'''(η)&=&∂_{ηηη}³F+3Λ'∂_{ηηλ}³F+3Λ'^2∂_{ηλλ}³F+Λ'^3∂_{λλλ}³F\\
+  f'''(\eta )&=&\partial _{\eta \eta \eta }^3F+3\Lambda '\partial _{\eta \eta \lambda }^3F+3\Lambda '^2\partial _{\eta \lambda \lambda }^3F+\Lambda '^3\partial _{\lambda \lambda \lambda }^3F\\
   \label{eq:20211112173223}
-       &&+3Λ''∂_{ηλ}²F+3Λ'Λ''∂_{λλ}²F+Λ'''∂_λF,\\
+       &&+3\Lambda ''\partial _{\eta \lambda }�F+3\Lambda '\Lambda ''\partial _{\lambda \lambda }�F+\Lambda '''\partial _\lambda F,\\
   \notag
-  f''''(η)&=&∂_{ηηηη}⁴F+4Λ'∂_{ηηηλ}⁴F+6Λ'^2∂_{ηηλλ}⁴F+4Λ'^3∂_{ηλλλ}⁴F\\
+  f''''(\eta )&=&\partial _{\eta \eta \eta \eta }^4F+4\Lambda '\partial _{\eta \eta \eta \lambda }^4F+6\Lambda '^2\partial _{\eta \eta \lambda \lambda }^4F+4\Lambda '^3\partial _{\eta \lambda \lambda \lambda }^4F\\
   \notag
-       &&+Λ'^4∂_{λλλλ}⁴F+6Λ''∂_{ηηλ}³F+12Λ'Λ''∂_{ηλλ}³F+6Λ'^2Λ''∂_{λλλ}³F\\
-       &&+4Λ'''∂_{ηλ}²F+\bigl(3Λ''^2+4Λ'Λ'''\bigr)∂_{λλ}²F+Λ''''∂_λF
+       &&+\Lambda '^4\partial _{\lambda \lambda \lambda \lambda }^4F+6\Lambda ''\partial _{\eta \eta \lambda }^3F+12\Lambda '\Lambda ''\partial _{\eta \lambda \lambda }^3F+6\Lambda '^2\Lambda ''\partial _{\lambda \lambda \lambda }^3F\\
+       &&+4\Lambda '''\partial _{\eta \lambda }�F+\bigl(3\Lambda ''^2+4\Lambda '\Lambda '''\bigr)\partial _{\lambda \lambda }�F+\Lambda ''''\partial _\lambda F
 \end{eqnarray}
-où \(Λ\) et ses dérivées sont évaluées en \(η\), tandis que \(F\) et ses
-dérivées partielles sont évaluées en \([η, λ₀+Λ(η)]\). En \(η=0\), les
-relations précédentes s'écrivent
+o� \(\Lambda \) et ses d�riv�es sont �valu�es en \(\eta \), tandis que \(F\) et ses
+d�riv�es partielles sont �valu�es en \([\eta , \lambda _0+\Lambda (\eta )]\). En \(\eta =0\), les
+relations pr�c�dentes s'�crivent
 \begin{eqnarray}
   \label{eq:20220107060454}
-  f'(0)&=&∂_η F+λ₁∂_λ F,\\
+  f'(0)&=&\partial _\eta  F+\lambda _1\partial _\lambda  F,\\
   \label{eq:20220107124311}
-  f''(0)&=&∂_{ηη}²F+2λ₁∂_{ηλ}²F+2λ₂∂_λ F+λ₁²∂_{λλ}²F,\\
+  f''(0)&=&\partial _{\eta \eta }�F+2\lambda _1\partial _{\eta \lambda }�F+2\lambda _2\partial _\lambda  F+\lambda _1�\partial _{\lambda \lambda }�F,\\
   \notag
-  f'''(0)&=&∂_{ηηη}³F+3λ₁∂_{ηηλ}³F+3λ₁²∂_{ηλλ}³F+λ₁³∂_{λλλ}³F\\
+  f'''(0)&=&\partial _{\eta \eta \eta }^3F+3\lambda _1\partial _{\eta \eta \lambda }^3F+3\lambda _1�\partial _{\eta \lambda \lambda }^3F+\lambda _1^3\partial _{\lambda \lambda \lambda }^3F\\
   \label{eq:20220107060500}
-       &&+6λ₂∂_{ηλ}²F+6λ₁λ₂∂_{λλ}²F+6λ₃∂_λF,\\
+       &&+6\lambda _2\partial _{\eta \lambda }�F+6\lambda _1\lambda _2\partial _{\lambda \lambda }�F+6\lambda _3\partial _\lambda F,\\
   \notag
-  f''''(0)&=&∂_{ηηηη}⁴F+4λ₁∂_{ηηηλ}⁴F+6λ₁²∂_{ηηλλ}⁴F+4λ₁³∂_{ηλλλ}⁴F\\
+  f''''(0)&=&\partial _{\eta \eta \eta \eta }^4F+4\lambda _1\partial _{\eta \eta \eta \lambda }^4F+6\lambda _1�\partial _{\eta \eta \lambda \lambda }^4F+4\lambda _1^3\partial _{\eta \lambda \lambda \lambda }^4F\\
   \notag
-       &&+λ₁⁴∂_{λλλλ}⁴F+12λ₂∂_{ηηλ}³F+24λ₁λ₂∂_{ηλλ}³F+12λ₁²λ₂∂_{λλλ}³F\\
-       &&+24λ₃∂_{ηλ}²F+\bigl(12λ₂²+24λ₁λ₃\bigr)∂_{λλ}²F+24λ₄∂_λF
+       &&+\lambda _1^4\partial _{\lambda \lambda \lambda \lambda }^4F+12\lambda _2\partial _{\eta \eta \lambda }^3F+24\lambda _1\lambda _2\partial _{\eta \lambda \lambda }^3F+12\lambda _1�\lambda _2\partial _{\lambda \lambda \lambda }^3F\\
+       &&+24\lambda _3\partial _{\eta \lambda }�F+\bigl(12\lambda _2�+24\lambda _1\lambda _3\bigr)\partial _{\lambda \lambda }�F+24\lambda _4\partial _\lambda F
 \end{eqnarray}
-où \(F\) et ses dérivées sont évaluées en \((0, λ₀)\).
+o� \(F\) et ses d�riv�es sont �valu�es en \((0, \lambda _0)\).
 
-\subsection{Développement limité du résidu}
+\subsection{D�veloppement limit� du r�sidu}
 \label{sec:20211112182000}
 
-On cherche un développement limité du résidu (c'est-à-dire de la première
-variation de l'énergie). La fonction test \(\hat{u}∈U\) étant fixée, la
-méthode précédente est donc appliquée avec
+On cherche un d�veloppement limit� du r�sidu (c'est-�-dire de la premi�re
+variation de l'�nergie). La fonction test \(\hat{u}\in U\) �tant fix�e, la
+m�thode pr�c�dente est donc appliqu�e avec
 \begin{equation}
   \label{eq:20220107054629}
-  f(η)=ℰ_{,u}[u(η), λ(η);\hat{u}]
+  f(\eta )=\mathcal E_{,u}[u(\eta ), \lambda (\eta );\hat{u}]
   \quad\text{et}\quad
-  F(η, λ)=ℰ_{,u}[u^*(λ)+U(η), λ; \hat{u}].
+  F(\eta , \lambda )=\mathcal E_{,u}[u^*(\lambda )+U(\eta ), \lambda ; \hat{u}].
 \end{equation}
 
-On remarque tout d'abord que \(F(0, λ)=ℰ_{,u}[u^*(λ), λ; \hat{u}]=0\), puisque
-\(u^*(λ)\) est un point d'équilibre. En dérivant par rapport à \(λ\), on obtient
+On remarque tout d'abord que \(F(0, \lambda )=\mathcal E_{,u}[u^*(\lambda ), \lambda ; \hat{u}]=0\), puisque
+\(u^*(\lambda )\) est un point d'�quilibre. En d�rivant par rapport � \(\lambda \), on obtient
 \begin{equation}
   \label{eq:20211112164240}
-  \frac{∂^kF}{∂λ^k}(0, λ)=0.
+  \frac{\partial ^kF}{\partial \lambda ^k}(0, \lambda )=0.
 \end{equation}
 
-En dérivant une première fois l'expression~\eqref{eq:20220107054629} de \(F\),
+En d�rivant une premi�re fois l'expression~\eqref{eq:20220107054629} de \(F\),
 on obtient
 \begin{eqnarray}
-  ∂_ηF(η, λ)
-  &=&ℰ_{,uu}[u^*(λ)+U(η), λ; U'(η), \hat{u}],\\
+  \partial _\eta F(\eta , \lambda )
+  &=&\mathcal E_{,uu}[u^*(\lambda )+U(\eta ), \lambda ; U'(\eta ), \hat{u}],\\
   \notag
-  ∂_{ηη}²F(η, λ)
-  &=&ℰ_{,uuu}[u^*(λ)+U(η), λ; U'(η), U'(η), \hat{u}]\\
-  &&+ℰ_{,uu}[u^*(λ)+U(η), λ; U''(η), \hat{u}],\\
+  \partial _{\eta \eta }�F(\eta , \lambda )
+  &=&\mathcal E_{,uuu}[u^*(\lambda )+U(\eta ), \lambda ; U'(\eta ), U'(\eta ), \hat{u}]\\
+  &&+\mathcal E_{,uu}[u^*(\lambda )+U(\eta ), \lambda ; U''(\eta ), \hat{u}],\\
   \notag
-  ∂_{ηηη}³F(η, λ)
-  &=&ℰ_{,uuuu}[u^*(λ)+U(η), λ;U'(η), U'(η), U'(η), \hat{u}]\\
+  \partial _{\eta \eta \eta }^3F(\eta , \lambda )
+  &=&\mathcal E_{,uuuu}[u^*(\lambda )+U(\eta ), \lambda ;U'(\eta ), U'(\eta ), U'(\eta ), \hat{u}]\\
   \notag
-  &&+3ℰ_{,uuu}[u^*(λ)+U(η), λ;U'(η), U''(η), \hat{u}]\\
-  &&+ℰ_{,uu}[u^*(λ)+U(η), λ;U'''(η), \hat{u}],
+  &&+3\mathcal E_{,uuu}[u^*(\lambda )+U(\eta ), \lambda ;U'(\eta ), U''(\eta ), \hat{u}]\\
+  &&+\mathcal E_{,uu}[u^*(\lambda )+U(\eta ), \lambda ;U'''(\eta ), \hat{u}],
 \end{eqnarray}
-soit, en \(η=0\)
+soit, en \(\eta =0\)
 \begin{eqnarray}
-  ∂_η F(0, λ)
-  &=&ℰ₂(λ; u₁, \hat{u}),\\
-  ∂_{ηη}²F(0, λ)
-  &=&ℰ₃(λ; u₁, u₁, \hat{u})+2ℰ₂(λ; u₂, \hat{u}),\\
-  ∂_{ηηη}³F(0, λ)
-  &=&ℰ₄(λ; u₁, u₁, u₁, \hat{u})+6ℰ₃(λ; u₁, u₂, \hat{u})+6ℰ₂(λ; u₃, \hat{u}).
+  \partial _\eta  F(0, \lambda )
+  &=&\mathcal E_2(\lambda ; u_1, \hat{u}),\\
+  \partial _{\eta \eta }�F(0, \lambda )
+  &=&\mathcal E_3(\lambda ; u_1, u_1, \hat{u})+2\mathcal E_2(\lambda ; u_2, \hat{u}),\\
+  \partial _{\eta \eta \eta }^3F(0, \lambda )
+  &=&\mathcal E_4(\lambda ; u_1, u_1, u_1, \hat{u})+6\mathcal E_3(\lambda ; u_1, u_2, \hat{u})+6\mathcal E_2(\lambda ; u_3, \hat{u}).
 \end{eqnarray}
 
-Les dérivées croisées de \(F\) en \((0, λ)\) s'obtiennent par simple dérivation
-des relations précédentes par rapport à \(λ\)
+Les d�riv�es crois�es de \(F\) en \((0, \lambda )\) s'obtiennent par simple d�rivation
+des relations pr�c�dentes par rapport � \(\lambda \)
 \begin{eqnarray}
-  ∂_{ηλ}²F(0, λ)&=&\dot{ℰ₂}(λ; u₁, \hat{u}),\\
-  ∂_{ηηλ}³F(0, λ)&=&\dot{ℰ₃}(λ; u₁, u₁, \hat{u})+2\dot{ℰ₂}(λ; u₂, \hat{u}),\\
-  ∂_{ηλλ}³F(0, λ)&=&\ddot{ℰ₂}(λ; u₁, \hat{u}).
+  \partial _{\eta \lambda }�F(0, \lambda )&=&\dot{\mathcal E_2}(\lambda ; u_1, \hat{u}),\\
+  \partial _{\eta \eta \lambda }^3F(0, \lambda )&=&\dot{\mathcal E_3}(\lambda ; u_1, u_1, \hat{u})+2\dot{\mathcal E_2}(\lambda ; u_2, \hat{u}),\\
+  \partial _{\eta \lambda \lambda }^3F(0, \lambda )&=&\ddot{\mathcal E_2}(\lambda ; u_1, \hat{u}).
 \end{eqnarray}
 
-En insérant les résultats précédentes dans les relations
-générales~\eqref{eq:20220107060454}–\eqref{eq:20220107060500}, on trouve
-finalement les expressions suivantes des dérivées successives de \(f\) en
-\(η=0\)
+En ins�rant les r�sultats pr�c�dentes dans les relations
+g�n�rales~\eqref{eq:20220107060454}--\eqref{eq:20220107060500}, on trouve
+finalement les expressions suivantes des d�riv�es successives de \(f\) en
+\(\eta =0\)
 \begin{eqnarray}
   f'(0)
-  &=&ℰ₂(λ₀; u₁, \hat{u}),\\
+  &=&\mathcal E_2(\lambda _0; u_1, \hat{u}),\\
   f''(0)
-  &=&ℰ₃(λ₀; u₁, u₁, \hat{u})
-    +2λ₁\dot{ℰ₂}(λ₀; u₁, \hat{u})
-    +2ℰ₂(λ₀; u₂, \hat{u}),\\
+  &=&\mathcal E_3(\lambda _0; u_1, u_1, \hat{u})
+    +2\lambda _1\dot{\mathcal E_2}(\lambda _0; u_1, \hat{u})
+    +2\mathcal E_2(\lambda _0; u_2, \hat{u}),\\
   \notag
   f'''(0)
-  &=&ℰ₄(λ₀; u₁, u₁, u₁, \hat{u})
-      +6ℰ₃(λ₀; u₁, u₂, \hat{u})
-    +6ℰ₂(λ₀; u₃, \hat{u})\\
+  &=&\mathcal E_4(\lambda _0; u_1, u_1, u_1, \hat{u})
+      +6\mathcal E_3(\lambda _0; u_1, u_2, \hat{u})
+    +6\mathcal E_2(\lambda _0; u_3, \hat{u})\\
   \notag
-  &&+3λ₁\bigl[\dot{ℰ₃}(λ₀; u₁, u₁, \hat{u})
-     +2\dot{ℰ₂}(λ₀; u₂, \hat{u})\bigr]\\
-  &&+3λ₁²\ddot{ℰ₂}(λ₀; u₁, \hat{u})
-     +6λ₂\dot{ℰ₂}(λ₀; u₁, \hat{u}).
+  &&+3\lambda _1\bigl[\dot{\mathcal E_3}(\lambda _0; u_1, u_1, \hat{u})
+     +2\dot{\mathcal E_2}(\lambda _0; u_2, \hat{u})\bigr]\\
+  &&+3\lambda _1�\ddot{\mathcal E_2}(\lambda _0; u_1, \hat{u})
+     +6\lambda _2\dot{\mathcal E_2}(\lambda _0; u_1, \hat{u}).
 \end{eqnarray}
 
-On en déduit finalement le développement limité à l'ordre 3 en \(η\) du résidu
+On en d�duit finalement le d�veloppement limit� � l'ordre 3 en \(\eta \) du r�sidu
 \begin{eqnarray}
-    ℰ_{,u}[u(η), λ(η)]
-    &=&ηℰ₂(λ₀; u₁, \hat{u})
-    +\tfrac12η²\bigl[ℰ₃(λ₀; u₁, u₁, \hat{u})\\
+    \mathcal E_{,u}[u(\eta ), \lambda (\eta )]
+    &=&\eta \mathcal E_2(\lambda _0; u_1, \hat{u})
+    +\tfrac12\eta �\bigl[\mathcal E_3(\lambda _0; u_1, u_1, \hat{u})\\
     \notag
-    &&+2λ₁\dot{ℰ₂}(λ₀; u₁, \hat{u})
-    +2ℰ₂(λ₀; u₂, \hat{u})\bigr]\\
+    &&+2\lambda _1\dot{\mathcal E_2}(\lambda _0; u_1, \hat{u})
+    +2\mathcal E_2(\lambda _0; u_2, \hat{u})\bigr]\\
     \notag
-    &&+\tfrac16η³\bigl\{
-    ℰ₄(λ₀; u₁, u₁, u₁, \hat{u})
-    +6ℰ₃(λ₀; u₁, u₂, \hat{u})\\
+    &&+\tfrac16\eta ^3\bigl\{
+    \mathcal E_4(\lambda _0; u_1, u_1, u_1, \hat{u})
+    +6\mathcal E_3(\lambda _0; u_1, u_2, \hat{u})\\
     \notag
-    &&+6ℰ₂(λ₀; u₃, \hat{u})
-    +3λ₁\bigl[\dot{ℰ₃}(λ₀; u₁, u₁, \hat{u})\\
+    &&+6\mathcal E_2(\lambda _0; u_3, \hat{u})
+    +3\lambda _1\bigl[\dot{\mathcal E_3}(\lambda _0; u_1, u_1, \hat{u})\\
     \notag
-    &&+2\dot{ℰ₂}(λ₀; u₂, \hat{u})\bigr]
-    +3λ₁²\ddot{ℰ₂}(λ₀; u₁, \hat{u})\\
+    &&+2\dot{\mathcal E_2}(\lambda _0; u_2, \hat{u})\bigr]
+    +3\lambda _1�\ddot{\mathcal E_2}(\lambda _0; u_1, \hat{u})\\
     \label{eq:20220107080901}
-    &&+6λ₂\dot{ℰ₂}(λ₀; u₁, \hat{u})\bigr\}
-    +o(η³).
+    &&+6\lambda _2\dot{\mathcal E_2}(\lambda _0; u_1, \hat{u})\bigr\}
+    +o(\eta ^3).
 \end{eqnarray}
 
-\subsection{Développement limité de l'énergie}
+\subsection{D�veloppement limit� de l'�nergie}
 \label{sec:20220121172919}
 
-On s'intéresse ici à l'écart d'énergie, pour un chargement \(λ\) donné, entre
-la branche bifurquée et la branche fondamentale, soit
+On s'int�resse ici � l'�cart d'�nergie, pour un chargement \(\lambda \) donn�, entre
+la branche bifurqu�e et la branche fondamentale, soit
 \begin{equation}
-  F(η, λ) = ℰ[u^*(λ)+U(η), λ]-ℰ[u^*(λ), λ]
+  F(\eta , \lambda ) = \mathcal E[u^*(\lambda )+U(\eta ), \lambda ]-\mathcal E[u^*(\lambda ), \lambda ]
 \end{equation}
 et
 \begin{equation}
-  f(η) = F[η, λ₀+Λ(η)].
+  f(\eta ) = F[\eta , \lambda _0+\Lambda (\eta )].
 \end{equation}
 
-On observe tout d'abord que \(F(0, λ)=0\) pour tout \(λ\), donc
+On observe tout d'abord que \(F(0, \lambda )=0\) pour tout \(\lambda \), donc
 \begin{equation}
-  \frac{∂^kF}{∂λ^k}(0, λ)=0\quad(k≥0),
+  \frac{\partial ^kF}{\partial \lambda ^k}(0, \lambda )=0\quad(k\geq0),
 \end{equation}
-tandis que les dérivées de \(F\) par rapport à \(η\) s'écrivent
+tandis que les d�riv�es de \(F\) par rapport � \(\eta \) s'�crivent
 \begin{eqnarray}
-  ∂_ηF(η, λ)&=&ℰ_{,u}[u^*(λ)+U(η), λ; U'(η)],\\
+  \partial _\eta F(\eta , \lambda )&=&\mathcal E_{,u}[u^*(\lambda )+U(\eta ), \lambda ; U'(\eta )],\\
   \notag
-  ∂_{ηη}²F(η, λ)&=&ℰ_{,uu}[u^*(λ)+U(η), λ; U'(η), U'(η)]\\
-               &&+ℰ_{,u}[u^*(λ)+U(η), λ; U''(η)],\\
+  \partial _{\eta \eta }�F(\eta , \lambda )&=&\mathcal E_{,uu}[u^*(\lambda )+U(\eta ), \lambda ; U'(\eta ), U'(\eta )]\\
+               &&+\mathcal E_{,u}[u^*(\lambda )+U(\eta ), \lambda ; U''(\eta )],\\
   \notag
-  ∂_{ηηη}³F(η, λ)&=&ℰ_{,uuu}[u^*(λ)+U(η), λ; U'(η), U'(η), U'(η)]\\
+  \partial _{\eta \eta \eta }^3F(\eta , \lambda )&=&\mathcal E_{,uuu}[u^*(\lambda )+U(\eta ), \lambda ; U'(\eta ), U'(\eta ), U'(\eta )]\\
   \notag
-            &&+3ℰ_{,uu}[u^*(λ)+U(η), λ; U'(η), U''(η)]\\
-               &&+ℰ_{,u}[u^*(λ)+U(η), λ; U'''(η)],\\
+            &&+3\mathcal E_{,uu}[u^*(\lambda )+U(\eta ), \lambda ; U'(\eta ), U''(\eta )]\\
+               &&+\mathcal E_{,u}[u^*(\lambda )+U(\eta ), \lambda ; U'''(\eta )],\\
   \notag
-  ∂_{ηηηη}⁴F(η, λ)&=&ℰ_{,uuuu}[u^*(λ)+U(η), λ; U'(η), U'(η), U'(η), U'(η)]\\
+  \partial _{\eta \eta \eta \eta }^4F(\eta , \lambda )&=&\mathcal E_{,uuuu}[u^*(\lambda )+U(\eta ), \lambda ; U'(\eta ), U'(\eta ), U'(\eta ), U'(\eta )]\\
   \notag
-               &&+6ℰ_{,uuu}[u^*(λ)+U(η), λ; U'(η), U'(η), U''(η)]\\
+               &&+6\mathcal E_{,uuu}[u^*(\lambda )+U(\eta ), \lambda ; U'(\eta ), U'(\eta ), U''(\eta )]\\
   \notag
-               &&+3ℰ_{,uu}[u^*(λ)+U(η), λ; U''(η), U''(η)]\\
+               &&+3\mathcal E_{,uu}[u^*(\lambda )+U(\eta ), \lambda ; U''(\eta ), U''(\eta )]\\
   \notag
-               &&+3ℰ_{,uu}[u^*(λ)+U(η), λ; U'(η), U'''(η)]\\
-               &&+ℰ_{,u}[u^*(λ)+U(η), λ; U''''(η)],
+               &&+3\mathcal E_{,uu}[u^*(\lambda )+U(\eta ), \lambda ; U'(\eta ), U'''(\eta )]\\
+               &&+\mathcal E_{,u}[u^*(\lambda )+U(\eta ), \lambda ; U''''(\eta )],
 \end{eqnarray}
-soit, en \(η=0\), en observant que \(ℰ_{,u}[u^*(λ), λ]=0\)
+soit, en \(\eta =0\), en observant que \(\mathcal E_{,u}[u^*(\lambda ), \lambda ]=0\)
 \begin{eqnarray}
-  ∂_ηF(0, λ)&=&0,\\
-  ∂_{ηη}²F(0, λ)&=&ℰ₂(λ; u₁, u₁),\\
-  ∂_{ηηη}³F(0, λ)&=&ℰ₃(λ;u₁, u₁, u₁)+6ℰ₂(λ; u₁, u₂),\\
+  \partial _\eta F(0, \lambda )&=&0,\\
+  \partial _{\eta \eta }�F(0, \lambda )&=&\mathcal E_2(\lambda ; u_1, u_1),\\
+  \partial _{\eta \eta \eta }^3F(0, \lambda )&=&\mathcal E_3(\lambda ;u_1, u_1, u_1)+6\mathcal E_2(\lambda ; u_1, u_2),\\
   \notag
-  ∂_{ηηηη}⁴F(η, λ)&=&ℰ₄(λ;u₁, u₁, u₁, u₁)+12ℰ₃(λ; u₁, u₁, u₂)\\
-            &&+12ℰ₂(λ; u₂, u₂)+18ℰ₂(λ; u₁, u₃).
+  \partial _{\eta \eta \eta \eta }^4F(\eta , \lambda )&=&\mathcal E_4(\lambda ;u_1, u_1, u_1, u_1)+12\mathcal E_3(\lambda ; u_1, u_1, u_2)\\
+            &&+12\mathcal E_2(\lambda ; u_2, u_2)+18\mathcal E_2(\lambda ; u_1, u_3).
 \end{eqnarray}
 
-On en déduit que
+On en d�duit que
 \begin{eqnarray}
-  ∂_{ηλ}²F(0, λ)&=&0,\\
-  ∂_{ηηλ}³F(0, λ)&=&\dot{ℰ}₂(λ; u₁, u₁),\\
-  ∂_{ηλλ}³F(0, λ)&=&0,\\
-  ∂_{ηηηλ}⁴F(0, λ)&=&\dot{ℰ}₃(λ; u₁, u₁, u₁)+6\dot{ℰ}₂(λ; u₁, u₂),\\
-  ∂_{ηηλλ}⁴F(0, λ)&=&\ddot{ℰ}₂(λ; u₁, u₁),\\
-  ∂_{ηλλλ}⁴F(0, λ)&=&0
+  \partial _{\eta \lambda }�F(0, \lambda )&=&0,\\
+  \partial _{\eta \eta \lambda }^3F(0, \lambda )&=&\dot{\mathcal E}_2(\lambda ; u_1, u_1),\\
+  \partial _{\eta \lambda \lambda }^3F(0, \lambda )&=&0,\\
+  \partial _{\eta \eta \eta \lambda }^4F(0, \lambda )&=&\dot{\mathcal E}_3(\lambda ; u_1, u_1, u_1)+6\dot{\mathcal E}_2(\lambda ; u_1, u_2),\\
+  \partial _{\eta \eta \lambda \lambda }^4F(0, \lambda )&=&\ddot{\mathcal E}_2(\lambda ; u_1, u_1),\\
+  \partial _{\eta \lambda \lambda \lambda }^4F(0, \lambda )&=&0
 \end{eqnarray}
 et finalement
 \begin{eqnarray}
   f'(0)&=&0,\\
-  f''(0)&=&ℰ₂(λ₀; u₁, u₁),\\
-  f'''(0)&=&ℰ₃(λ₀;u₁, u₁, u₁)+6ℰ₂(λ₀; u₁, u₂)+3λ₁\dot{ℰ}₂(λ₀; u₁, u₁),\\
+  f''(0)&=&\mathcal E_2(\lambda _0; u_1, u_1),\\
+  f'''(0)&=&\mathcal E_3(\lambda _0;u_1, u_1, u_1)+6\mathcal E_2(\lambda _0; u_1, u_2)+3\lambda _1\dot{\mathcal E}_2(\lambda _0; u_1, u_1),\\
   \notag
-  f''''(0)&=&ℰ₄(λ₀;u₁, u₁, u₁, u₁)+12ℰ₃(λ₀; u₁, u₁, u₂)\\
+  f''''(0)&=&\mathcal E_4(\lambda _0;u_1, u_1, u_1, u_1)+12\mathcal E_3(\lambda _0; u_1, u_1, u_2)\\
   \notag
-          &&+12ℰ₂(λ₀; u₂, u₂)+18ℰ₂(λ₀; u₁, u₃)\\
+          &&+12\mathcal E_2(\lambda _0; u_2, u_2)+18\mathcal E_2(\lambda _0; u_1, u_3)\\
   \notag
-          &&+4λ₁\bigl[\dot{ℰ}₃(λ₀; u₁, u₁, u₁)+6\dot{ℰ}₂(λ₀; u₁, u₂)\bigr]\\
-          &&+6λ₁²\ddot{ℰ}₂(λ₀; u₁, u₁)+12λ₂\dot{ℰ}₂(λ₀; u₁, u₁)
+          &&+4\lambda _1\bigl[\dot{\mathcal E}_3(\lambda _0; u_1, u_1, u_1)+6\dot{\mathcal E}_2(\lambda _0; u_1, u_2)\bigr]\\
+          &&+6\lambda _1�\ddot{\mathcal E}_2(\lambda _0; u_1, u_1)+12\lambda _2\dot{\mathcal E}_2(\lambda _0; u_1, u_1)
 \end{eqnarray}
 
-On en déduit finalement le développement limité de l'énergie~\eqref{eq:20220121172753}.
+On en d�duit finalement le d�veloppement limit� de l'�nergie~\eqref{eq:20220121172753}.
 
-\subsection{Développement limité de la hessienne}
+\subsection{D�veloppement limit� de la hessienne}
 \label{sec:20211115081016}
 
-On cherche maintenant un développement limité de la hessienne de l'énergie. Les
-fonctions test \(\hat{u}, \hat{v}∈U\) étant fixées, on applique la méthode du
-§\ref{sec:20220107121442} à la fonction \(f(η)=F[η, λ₀+Λ(η)]\), avec
+On cherche maintenant un d�veloppement limit� de la hessienne de l'�nergie. Les
+fonctions test \(\hat{u}, \hat{v}\in U\) �tant fix�es, on applique la m�thode du
+�\ref{sec:20220107121442} � la fonction \(f(\eta )=F[\eta , \lambda _0+\Lambda (\eta )]\), avec
 \begin{equation}
-  F(η, λ)=ℰ_{,uu}[u^*(λ)+U(η), λ; \hat{u}, \hat{v}].
+  F(\eta , \lambda )=\mathcal E_{,uu}[u^*(\lambda )+U(\eta ), \lambda ; \hat{u}, \hat{v}].
 \end{equation}
 
-On observe tout d'abord que \(F(0, λ)=ℰ₂(λ; \hat{u}, \hat{v})\), soit, en
-dérivant par rapport à \(λ\)
+On observe tout d'abord que \(F(0, \lambda )=\mathcal E_2(\lambda ; \hat{u}, \hat{v})\), soit, en
+d�rivant par rapport � \(\lambda \)
 \begin{equation}
-  ∂_λ F(0, λ)=\dot{ℰ₂}(λ; \hat{u}, \hat{v})
+  \partial _\lambda  F(0, \lambda )=\dot{\mathcal E_2}(\lambda ; \hat{u}, \hat{v})
   \quad\text{et}\quad
-  ∂_{λλ}²F(0, λ)=\ddot{ℰ₂}(λ; \hat{u}, \hat{v}).
+  \partial _{\lambda \lambda }�F(0, \lambda )=\ddot{\mathcal E_2}(\lambda ; \hat{u}, \hat{v}).
 \end{equation}
 
-On trouve de même successivement
+On trouve de m�me successivement
 \begin{eqnarray}
-  ∂_ηF(η, λ)&=&ℰ_{,uuu}[u^\ast(λ)+U(η), λ; U'(η), \hat{u}, \hat{v}],\\
+  \partial _\eta F(\eta , \lambda )&=&\mathcal E_{,uuu}[u^\ast(\lambda )+U(\eta ), \lambda ; U'(\eta ), \hat{u}, \hat{v}],\\
   \notag
-  ∂_{ηη}²F(η, λ)&=&ℰ_{,uuuu}[u^\ast(λ)+U(η), λ; U'(η), U'(η), \hat{u}, \hat{v}]\\
-            &&+ℰ_{,uuu}[u^\ast(λ)+U(η), λ; U''(η), \hat{u}, \hat{v}],
+  \partial _{\eta \eta }�F(\eta , \lambda )&=&\mathcal E_{,uuuu}[u^\ast(\lambda )+U(\eta ), \lambda ; U'(\eta ), U'(\eta ), \hat{u}, \hat{v}]\\
+            &&+\mathcal E_{,uuu}[u^\ast(\lambda )+U(\eta ), \lambda ; U''(\eta ), \hat{u}, \hat{v}],
 \end{eqnarray}
-soit, en \(η=0\)
+soit, en \(\eta =0\)
 \begin{eqnarray}
-  ∂_ηF(0, λ)&=&ℰ₃(λ; u₁, \hat{u}, \hat{v}),\\
-  ∂_{ηη}²F(0, λ)&=&ℰ₄(λ; u₁, u₁, \hat{u}, \hat{v})+2ℰ₃(λ; u₂, \hat{u}, \hat{v}),
+  \partial _\eta F(0, \lambda )&=&\mathcal E_3(\lambda ; u_1, \hat{u}, \hat{v}),\\
+  \partial _{\eta \eta }�F(0, \lambda )&=&\mathcal E_4(\lambda ; u_1, u_1, \hat{u}, \hat{v})+2\mathcal E_3(\lambda ; u_2, \hat{u}, \hat{v}),
 \end{eqnarray}
-et en dérivant cette fois par rapport à \(λ\)
+et en d�rivant cette fois par rapport � \(\lambda \)
 \begin{equation}
-  ∂_{ηλ}²F(0, λ)=\dot{ℰ₃}(λ; u₁, \hat{u}, \hat{v}).
+  \partial _{\eta \lambda }�F(0, \lambda )=\dot{\mathcal E_3}(\lambda ; u_1, \hat{u}, \hat{v}).
 \end{equation}
 
-En insérant les résultats précédents dans les
+En ins�rant les r�sultats pr�c�dents dans les
 expressions~\eqref{eq:20220107060454} et \eqref{eq:20220107124311}, on trouve
 \begin{eqnarray}
-  f'(0)&=&ℰ₃(λ₀; u₁, \hat{u}, \hat{v})
-            +λ₁\dot{ℰ₂}(λ₀; \hat{u}, \hat{v}),\\
+  f'(0)&=&\mathcal E_3(\lambda _0; u_1, \hat{u}, \hat{v})
+            +\lambda _1\dot{\mathcal E_2}(\lambda _0; \hat{u}, \hat{v}),\\
   \notag
-  f''(0)&=&ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v})
-             +2λ₁\dot{ℰ₃}(λ₀; u₁, \hat{u}, \hat{v})
-             +λ₁²\ddot{ℰ₂}(λ₀; \hat{u}, \hat{v})\\
-          &&+2ℰ₃(λ₀; u₂, \hat{u}, \hat{v})
-            +2λ₂\dot{ℰ₂}(λ₀; \hat{u}, \hat{v}).
+  f''(0)&=&\mathcal E_4(\lambda _0; u_1, u_1, \hat{u}, \hat{v})
+             +2\lambda _1\dot{\mathcal E_3}(\lambda _0; u_1, \hat{u}, \hat{v})
+             +\lambda _1�\ddot{\mathcal E_2}(\lambda _0; \hat{u}, \hat{v})\\
+          &&+2\mathcal E_3(\lambda _0; u_2, \hat{u}, \hat{v})
+            +2\lambda _2\dot{\mathcal E_2}(\lambda _0; \hat{u}, \hat{v}).
 \end{eqnarray}
-qui conduisent finalement au développement limité suivant, à l'ordre 2 en \(η\)
+qui conduisent finalement au d�veloppement limit� suivant, � l'ordre 2 en \(\eta \)
 \begin{eqnarray}
   \notag
-  ℰ_{,uu}[u(η), λ(η); \hat{u}, \hat{v}]
-  &=&ℰ₂(λ₀; \hat{u}, \hat{v})+η\bigl[ℰ₃(λ₀; u₁, \hat{u}, \hat{v})\\
+  \mathcal E_{,uu}[u(\eta ), \lambda (\eta ); \hat{u}, \hat{v}]
+  &=&\mathcal E_2(\lambda _0; \hat{u}, \hat{v})+\eta \bigl[\mathcal E_3(\lambda _0; u_1, \hat{u}, \hat{v})\\
   \notag
-  &&+λ₁\dot{ℰ₂}(λ₀; \hat{u}, \hat{v})\bigr]+\tfrac12η²\bigl[ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v})\\
+  &&+\lambda _1\dot{\mathcal E_2}(\lambda _0; \hat{u}, \hat{v})\bigr]+\tfrac12\eta �\bigl[\mathcal E_4(\lambda _0; u_1, u_1, \hat{u}, \hat{v})\\
   \notag
-  &&+2λ₁\dot{ℰ₃}(λ₀; u₁, \hat{u}, \hat{v})+λ₁²\ddot{ℰ₂}(λ₀; \hat{u}, \hat{v})\\
-  &&+2ℰ₃(λ₀; u₂, \hat{u}, \hat{v})+2λ₂\dot{ℰ₂}^*(λ₀; \hat{u}, \hat{v})\bigr]+o(η²).
+  &&+2\lambda _1\dot{\mathcal E_3}(\lambda _0; u_1, \hat{u}, \hat{v})+\lambda _1�\ddot{\mathcal E_2}(\lambda _0; \hat{u}, \hat{v})\\
+  &&+2\mathcal E_3(\lambda _0; u_2, \hat{u}, \hat{v})+2\lambda _2\dot{\mathcal E_2}^*(\lambda _0; \hat{u}, \hat{v})\bigr]+o(\eta �).
 \end{eqnarray}
 
-\subsection{Développement limité des valeurs propres et vecteurs propres de la Hessienne}
+\subsection{D�veloppement limit� des valeurs propres et vecteurs propres de la Hessienne}
 
-On cherche les vecteurs propres \(v∈V\) et valeurs propres \(α∈ℝ\) de la
+On cherche les vecteurs propres \(v\in V\) et valeurs propres \(\alpha\in\mathbb R \) de la
 Hessienne
 \begin{equation}
   \label{eq:20211115082122}
-  ℰ_{,uu}[u(η), λ(η)](v, \hat{u})=α〈v, \hat{u}〉\quad\text{pour tout}\quad\hat{u}∈V.
+  \mathcal E_{,uu}[u(\eta ), \lambda (\eta )](v, \hat{u})=\alpha\langle v, \hat{u}\rangle \quad\text{pour tout}\quad\hat{u}\in V.
 \end{equation}
 
-On cherche les développements limités à l'ordre 1 en \(η\) de \(v\) et \(α\)
+On cherche les d�veloppements limit�s � l'ordre 1 en \(\eta \) de \(v\) et \(\alpha\)
 \begin{equation}
   \label{eq:20211115082037}
-  v = v₀+η v₁+o(η)\quad\text{et}\quadα=α₀+ηα₁+o(η)
+  v = v_0+\eta  v_1+o(\eta )\quad\text{et}\quad\alpha=\alpha_0+\eta \alpha_1+o(\eta )
 \end{equation}
 
-Les développements limités~\eqref{eq:20211115082025} et
-\eqref{eq:20211115082037} sont insérés dans le
-problème~\eqref{eq:20211115082122}
+Les d�veloppements limit�s~\eqref{eq:20211115082025} et
+\eqref{eq:20211115082037} sont ins�r�s dans le
+probl�me~\eqref{eq:20211115082122}
 \begin{eqnarray}
   \notag
-  ℰ_{,uu}[u(η), λ(η)](v, \hat{w})
-  &=&ℰ₂^*(v₀, \hat{w})+η\bigl[ℰ₃^*(u₁, v₀, \hat{w})+λ₁\dot{ℰ₂}^*(v₀, \hat{w})\\
-  &&+ℰ₂^*(v₁, \hat{w})\bigr]+o(η)
+  \mathcal E_{,uu}[u(\eta ), \lambda (\eta )](v, \hat{w})
+  &=&\mathcal E_2^*(v_0, \hat{w})+\eta \bigl[\mathcal E_3^*(u_1, v_0, \hat{w})+\lambda _1\dot{\mathcal E_2}^*(v_0, \hat{w})\\
+  &&+\mathcal E_2^*(v_1, \hat{w})\bigr]+o(\eta )
 \end{eqnarray}
 
 \begin{equation}
-  α〈 v, \hat{w}〉=α₀〈v₀, \hat{w}〉+η\bigl(α₁〈 v₀, \hat{w}〉+α₀〈 v₁, \hat{w}〉\bigr)+o(η).
+  \alpha\langle  v, \hat{w}\rangle =\alpha_0\langle v_0, \hat{w}\rangle +\eta \bigl(\alpha_1\langle  v_0, \hat{w}\rangle +\alpha_0\langle  v_1, \hat{w}\rangle \bigr)+o(\eta ).
 \end{equation}
 
-On obtient le problème variationnel d'ordre 0
+On obtient le probl�me variationnel d'ordre 0
 \begin{equation}
-  ℰ₂^*(v₀, \hat{w})=α₀〈v₀, \hat{w}〉\quad\text{pour tout}\quad\hat{w}∈V,
+  \mathcal E_2^*(v_0, \hat{w})=\alpha_0\langle v_0, \hat{w}\rangle \quad\text{pour tout}\quad\hat{w}\in V,
 \end{equation}
-qui montre que \(v₀\) est le vecteur propre de \(ℰ₂^*\) associé à la valeur
-propre \(α₀\). Si \(α₀≠ 0\), \(ℰ₂^*\) étant positive par hypothèse, on a
-nécessairement \(α₀>0\), et la valeur propre de la hessienne est positive.
+qui montre que \(v_0\) est le vecteur propre de \(\mathcal E_2^*\) associ� � la valeur
+propre \(\alpha_0\). Si \(\alpha_0\neq 0\), \(\mathcal E_2^*\) �tant positive par hypoth�se, on a
+n�cessairement \(\alpha_0>0\), et la valeur propre de la hessienne est positive.
 
-On considère maintenant le cas où \(α₀\), c'est-à-dire que \(v₀∈\kerℰ₂^*\). En
-prenant \(\hat{w}∈\kerℰ₂^*\), on obtient alors le problème variationnel d'ordre
+On consid�re maintenant le cas o� \(\alpha_0\), c'est-�-dire que \(v_0\in\ker\mathcal E_2^*\). En
+prenant \(\hat{w}\in\ker\mathcal E_2^*\), on obtient alors le probl�me variationnel d'ordre
 1
 \begin{equation}
-  ℰ₃^*(u₁, v₀, \hat{w})+λ₁\dot{ℰ₂}^*(v₀, \hat{w})=α₁〈v₀, \hat{w}〉
-  \quad\text{pour tout}\quad\hat{w}∈\kerℰ₂^*.
+  \mathcal E_3^*(u_1, v_0, \hat{w})+\lambda _1\dot{\mathcal E_2}^*(v_0, \hat{w})=\alpha_1\langle v_0, \hat{w}\rangle
+  \quad\text{pour tout}\quad\hat{w}\in\ker\mathcal E_2^*.
 \end{equation}
 
-En posant \(u₁=ξᵢaᵢ\) et \(v₀=χⱼaⱼ\), on obtient l'équation
+En posant \(u_1=\xi _ia_i\) et \(v_0=\chi _ja_j\), on obtient l'�quation
 \begin{equation}
-  \bigl(ℰ_{3,ijk}^*ξₖ+λ₁\dot{ℰ}_{2, ij}^*\bigr)χⱼ=α₁χᵢ,
+  \bigl(\mathcal E_{3,ijk}^*\xi _k+\lambda _1\dot{\mathcal E}_{2, ij}^*\bigr)\chi _j=\alpha_1\chi _i,
 \end{equation}
-qui est un problème aux valeurs propres pour la matrice symétrique
-\((ℰ_{3, ijk}^*ξₖ+λ₁\dot{ℰ}_{2,ij}^*)_{1≤i, j≤m}\)
+qui est un probl�me aux valeurs propres pour la matrice sym�trique
+\((\mathcal E_{3, ijk}^*\xi _k+\lambda _1\dot{\mathcal E}_{2,ij}^*)_{1\leq i, j\leq m}\)
 
 % \printbibliography
 \end{document}
 
 %%% Local Variables:
-%%% coding: utf-8
+%%% coding: iso-latin-1
 %%% fill-column: 79
 %%% mode: latex
 %%% TeX-engine: xetex

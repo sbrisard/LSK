@@ -217,7 +217,7 @@
   </equation>
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+6*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|2>,<wide|u|^>|)>+6*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|3>,<wide|u|^>|)>>|<cell|>|<cell|<eq-number>>>|<row|<cell|+3*\<lambda\><rsub|1>*<around*|[|<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+2<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>|)>|]>>|<cell|>|<cell|<eq-number>>>|<row|<cell|+3*\<lambda\><rsub|1>*\<twosuperior\><wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>+6*\<lambda\><rsub|2><wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>>|<cell|=>|<cell|0.<eq-number><label|eq20220114135717>>>>>
+    <tformat|<table|<row|<cell|\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+6*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|2>,<wide|u|^>|)>+6*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|3>,<wide|u|^>|)>>|<cell|>|<cell|>>|<row|<cell|+3*\<lambda\><rsub|1>*<around*|[|<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+2<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>|)>|]>>|<cell|>|<cell|>>|<row|<cell|+3*\<lambda\><rsub|1>*\<twosuperior\><wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>+6*\<lambda\><rsub|2><wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>>|<cell|=>|<cell|0.<eq-number><label|eq20220114135717>>>>>
   </eqnarray>
 
   On déduit de l'équation<nbsp><eqref|eq20211112182917> que
@@ -273,13 +273,13 @@
   bifurcation suivante
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|6*\<xi\><rsub|2><rsup|j>*<around*|[|\<xi\><rsub|1><rsup|k>*\<cal-E\><rsub|i*j*k><around|(|\<lambda\><rsub|0>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|i*j><around|(|\<lambda\><rsub|0>|)>|]>>|<cell|>|<cell|<eq-number>>>|<row|<cell|+\<xi\><rsub|1><rsup|j>*\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>*<around*|[|\<cal-E\><rsub|i*j*k*l><around|(|\<lambda\><rsub|0>|)>+6*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k*l>|)>|]>>|<cell|>|<cell|<eq-number>>>|<row|<cell|+3*\<lambda\><rsub|1>*\<xi\><rsub|1><rsup|j>*\<xi\><rsub|1><rsup|k>*<around*|[|<wide|\<cal-E\>|\<dot\>><rsub|i*j*k><around|(|\<lambda\><rsub|0>|)>+2*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k>|)>+2<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;v<rsub|i>,w<rsub|j*k>|)>|]>>|<cell|>|<cell|<eq-number>>>|<row|<cell|+3*\<lambda\><rsub|1>*\<twosuperior\>*\<xi\><rsub|1><rsup|j>*<around*|[|<wide|\<cal-E\>|\<ddot\>><rsub|i*j><around|(|\<lambda\><rsub|0>|)>+2<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|v<rsub|i>,w<rsub|j>|)>|]>+6*\<lambda\><rsub|2>*\<xi\><rsub|1><rsup|j>*<wide|\<cal-E\>|\<dot\>><rsub|i*j><around|(|\<lambda\><rsub|0>|)>>|<cell|=>|<cell|0.<eq-number><label|eq20220210143805>>>>>
+    <tformat|<table|<row|<cell|6*\<xi\><rsub|2><rsup|j>*<around*|[|\<xi\><rsub|1><rsup|k>*\<cal-E\><rsub|i*j*k><around|(|\<lambda\><rsub|0>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|i*j><around|(|\<lambda\><rsub|0>|)>|]>>|<cell|>|<cell|>>|<row|<cell|+\<xi\><rsub|1><rsup|j>*\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>*<around*|[|\<cal-E\><rsub|i*j*k*l><around|(|\<lambda\><rsub|0>|)>+6*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k*l>|)>|]>>|<cell|>|<cell|>>|<row|<cell|+3*\<lambda\><rsub|1>*\<xi\><rsub|1><rsup|j>*\<xi\><rsub|1><rsup|k>*<around*|[|<wide|\<cal-E\>|\<dot\>><rsub|i*j*k><around|(|\<lambda\><rsub|0>|)>+2*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k>|)>+2<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;v<rsub|i>,w<rsub|j*k>|)>|]>>|<cell|>|<cell|>>|<row|<cell|+3*\<lambda\><rsub|1>*\<twosuperior\>*\<xi\><rsub|1><rsup|j>*<around*|[|<wide|\<cal-E\>|\<ddot\>><rsub|i*j><around|(|\<lambda\><rsub|0>|)>+2<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|v<rsub|i>,w<rsub|j>|)>|]>+6*\<lambda\><rsub|2>*\<xi\><rsub|1><rsup|j>*<wide|\<cal-E\>|\<dot\>><rsub|i*j><around|(|\<lambda\><rsub|0>|)>>|<cell|=>|<cell|0.<eq-number><label|eq20220210143805>>>>>
   </eqnarray>
 
   On remarque que certains termes peuvent être symétrisés. Ainsi
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<xi\><rsub|1><rsup|j>*\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k*l>|)>>|<cell|=>|<cell|<tfrac|1|3>\<xi\><rsub|1><rsup|j>*\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>*<around*|[|\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k*l>|)>|\<nobracket\>><eq-number>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|k>,w<rsub|l*j>|)>+\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|l>,w<rsub|j*k>|)>|]>,<eq-number>>>>>
+    <tformat|<table|<row|<cell|\<xi\><rsub|1><rsup|j>*\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k*l>|)>>|<cell|=>|<cell|<tfrac|1|3>\<xi\><rsub|1><rsup|j>*\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>*<around*|[|\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k*l>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|k>,w<rsub|l*j>|)>+\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|l>,w<rsub|j*k>|)>|]>,<eq-number>>>>>
   </eqnarray>
 
   de même
@@ -334,7 +334,7 @@
   bifurquée est établi dans l'annexe<nbsp><reference|sec20220121172919>
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\>*<around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>|]>>|<cell|=>|<cell|\<cal-E\>*<around*|(|u<rsup|\<ast\>><around|[|\<lambda\><around|(|\<eta\>|)>|]>,\<lambda\><around|(|\<eta\>|)>|)>+<tfrac|1|2>\<eta\>*\<twosuperior\>*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>|)><eq-number>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|6>\<eta\><rsup|3>*<around*|[|\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,u<rsub|1>|)>+6*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|2>|)>|\<nobracket\>><eq-number>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+3*\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>|)>|]>+<tfrac|1|24>\<eta\><rsup|4>*<around*|{|\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,u<rsub|1>,u<rsub|1>|)>|\<nobracket\>><eq-number>>>|<row|<cell|>|<cell|>|<cell|+12*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,u<rsub|2>|)>+12*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|2>,u<rsub|2>|)><eq-number>>>|<row|<cell|>|<cell|>|<cell|+18*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|3>|)>+4*\<lambda\><rsub|1>*<around*|[|<wide|\<cal-E\>|\<dot\>><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,u<rsub|1>|)>|\<nobracket\>><eq-number>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+6*<wide|\<cal-E\>|\<dot\>><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|2>|)>|]>+6*\<lambda\><rsub|1>*\<twosuperior\>*<wide|\<cal-E\>|\<ddot\>><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>|)><eq-number>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+12*\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>|)>|}>+o<around|(|\<eta\><rsup|4>|)>.<eq-number><label|eq20220121172753>>>>>
+    <tformat|<table|<row|<cell|\<cal-E\>*<around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>|]>>|<cell|=>|<cell|\<cal-E\>*<around*|(|u<rsup|\<ast\>><around|[|\<lambda\><around|(|\<eta\>|)>|]>,\<lambda\><around|(|\<eta\>|)>|)>+<tfrac|1|2>\<eta\>*\<twosuperior\>*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|6>\<eta\><rsup|3>*<around*|[|\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,u<rsub|1>|)>+6*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|2>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+3*\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>|)>|]>+<tfrac|1|24>\<eta\><rsup|4>*<around*|{|\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,u<rsub|1>,u<rsub|1>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|+12*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,u<rsub|2>|)>+12*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|2>,u<rsub|2>|)>>>|<row|<cell|>|<cell|>|<cell|+18*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|3>|)>+4*\<lambda\><rsub|1>*<around*|[|<wide|\<cal-E\>|\<dot\>><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,u<rsub|1>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+6*<wide|\<cal-E\>|\<dot\>><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|2>|)>|]>+6*\<lambda\><rsub|1>*\<twosuperior\>*<wide|\<cal-E\>|\<ddot\>><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>|)>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+12*\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>|)>|}>+o<around|(|\<eta\><rsup|4>|)>.<eq-number><label|eq20220121172753>>>>>
   </eqnarray>
 
   La relation<nbsp><eqref|eq20211112182917> montre tout d'abord que les
@@ -394,7 +394,7 @@
   <math|<wide|u|^>\<in\>U>, on trouve
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u*u>*<around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>,<wide|u|^>|]>>|<cell|=>|<cell|\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>+\<eta\>*<around*|[|\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|u|^>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|2>*<around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>|]><eq-number>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>\<eta\>*\<twosuperior\>*<around*|[|\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|u|^>|)>+2*\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|u|^>|)>|\<nobracket\>><eq-number>>>|<row|<cell|>|<cell|>|<cell|+\<lambda\><rsub|1>*\<twosuperior\>*<wide|\<cal-E\>|\<ddot\>><rsub|2>*<around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>+\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|u|^>|)><eq-number>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|2>*<around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>|]>+o<around|(|\<eta\>*\<twosuperior\>|)>.<eq-number><label|eq20211115082025>>>>>
+    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u*u>*<around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>,<wide|u|^>|]>>|<cell|=>|<cell|\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>+\<eta\>*<around*|[|\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|u|^>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|2>*<around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>|]>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>\<eta\>*\<twosuperior\>*<around*|[|\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|u|^>|)>+2*\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|u|^>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|+\<lambda\><rsub|1>*\<twosuperior\>*<wide|\<cal-E\>|\<ddot\>><rsub|2>*<around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>+\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|2>*<around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>|]>+o<around|(|\<eta\>*\<twosuperior\>|)>.<eq-number><label|eq20211115082025>>>>>
   </eqnarray>
 
   On peut décomposer le vecteur <math|<wide|u|^>\<in\>U> de façon unique sous
@@ -412,17 +412,17 @@
   <math|u<rsub|2>>
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|u|^>|)>>|<cell|=>|<cell|\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>*<wide|\<xi\>|^><rsup|k>*<wide|\<xi\>|^><rsup|l>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;w<rsub|i*j>,v<rsub|k>,v<rsub|l>|)>+\<xi\><rsub|2><rsup|i>*<wide|\<xi\>|^><rsup|j>*<wide|\<xi\>|^><rsup|k>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>|)><eq-number>>>|<row|<cell|>|<cell|>|<cell|+\<lambda\><rsub|1>*\<xi\><rsub|1><rsup|i>*<wide|\<xi\>|^><rsup|j>*<wide|\<xi\>|^><rsup|k>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;w<rsub|i>,v<rsub|j>,v<rsub|k>|)>.<eq-number>>>>>
+    <tformat|<table|<row|<cell|\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|u|^>|)>>|<cell|=>|<cell|\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>*<wide|\<xi\>|^><rsup|k>*<wide|\<xi\>|^><rsup|l>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;w<rsub|i*j>,v<rsub|k>,v<rsub|l>|)>+\<xi\><rsub|2><rsup|i>*<wide|\<xi\>|^><rsup|j>*<wide|\<xi\>|^><rsup|k>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>|)>>>|<row|<cell|>|<cell|>|<cell|+\<lambda\><rsub|1>*\<xi\><rsub|1><rsup|i>*<wide|\<xi\>|^><rsup|j>*<wide|\<xi\>|^><rsup|k>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;w<rsub|i>,v<rsub|j>,v<rsub|k>|)>.<eq-number>>>>>
   </eqnarray>
 
   On peut complètement symétriser le premier terme
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>*<wide|\<xi\>|^><rsup|k>*<wide|\<xi\>|^><rsup|l>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;w<rsub|i*j>,v<rsub|k>,v<rsub|l>|)>>|<cell|=>|<cell|<tfrac|1|3><around*|[|\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>*<wide|\<xi\>|^><rsup|k>*<wide|\<xi\>|^><rsup|l>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;w<rsub|i*j>,v<rsub|k>,v<rsub|l>|)>|\<nobracket\>><eq-number>>>|<row|<cell|>|<cell|>|<cell|+\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>*<wide|\<xi\>|^><rsup|k>*<wide|\<xi\>|^><rsup|l>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;w<rsub|i*j>,v<rsub|k>,v<rsub|l>|)><eq-number>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>*<wide|\<xi\>|^><rsup|k>*<wide|\<xi\>|^><rsup|l>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;w<rsub|i*j>,v<rsub|k>,v<rsub|l>|)>|]><eq-number>>>>>
+    <tformat|<table|<row|<cell|\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>*<wide|\<xi\>|^><rsup|k>*<wide|\<xi\>|^><rsup|l>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;w<rsub|i*j>,v<rsub|k>,v<rsub|l>|)>>|<cell|=>|<cell|<tfrac|1|3><around*|[|\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>*<wide|\<xi\>|^><rsup|k>*<wide|\<xi\>|^><rsup|l>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;w<rsub|i*j>,v<rsub|k>,v<rsub|l>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|+\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>*<wide|\<xi\>|^><rsup|k>*<wide|\<xi\>|^><rsup|l>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;w<rsub|i*j>,v<rsub|k>,v<rsub|l>|)>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>*<wide|\<xi\>|^><rsup|k>*<wide|\<xi\>|^><rsup|l>*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;w<rsub|i*j>,v<rsub|k>,v<rsub|l>|)>|]><eq-number>>>>>
   </eqnarray>
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u*u>*<around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>,<wide|u|^>|]>>|<cell|=>|<cell|\<eta\>*<wide|\<xi\>|^><rsup|i>*<wide|\<xi\>|^><rsup|j>*<around*|[|\<xi\><rsub|1><rsup|k>*\<cal-E\><rsub|i*j*k><around|(|\<lambda\><rsub|0>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|i*j><around|(|\<lambda\><rsub|0>|)>|]><eq-number>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>\<eta\>*\<twosuperior\>*<wide|\<xi\>|^><rsup|i>*<wide|\<xi\>|^><rsup|j>*<around*|{|\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>*<around*|[|\<cal-E\><rsub|i*j*k*l><around|(|\<lambda\><rsub|0>|)>-2*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;w<rsub|i*j>,w<rsub|k*l>|)>|]>|\<nobracket\>><eq-number>>>|<row|<cell|>|<cell|>|<cell|+\<lambda\><rsub|1>*\<xi\><rsub|1><rsup|k>*<around*|[|\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k>|)>+<wide|\<cal-E\>|\<dot\>><rsub|i*j*k><around|(|\<lambda\><rsub|0>|)>|]><eq-number>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+\<lambda\><rsub|1>*\<twosuperior\>*<wide|\<cal-E\>|\<ddot\>><rsub|i*j><around|(|\<lambda\><rsub|0>|)>+\<xi\><rsub|2><rsup|k>*\<cal-E\><rsub|i*j*k><around|(|\<lambda\><rsub|0>|)>+\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|i*j>|}>+o<around|(|\<eta\>*\<twosuperior\>|)>.<eq-number><label|eq20220203144500>>>>>
+    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u*u>*<around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>,<wide|u|^>|]>>|<cell|=>|<cell|\<eta\>*<wide|\<xi\>|^><rsup|i>*<wide|\<xi\>|^><rsup|j>*<around*|[|\<xi\><rsub|1><rsup|k>*\<cal-E\><rsub|i*j*k><around|(|\<lambda\><rsub|0>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|i*j><around|(|\<lambda\><rsub|0>|)>|]>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>\<eta\>*\<twosuperior\>*<wide|\<xi\>|^><rsup|i>*<wide|\<xi\>|^><rsup|j>*<around*|{|\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>*<around*|[|\<cal-E\><rsub|i*j*k*l><around|(|\<lambda\><rsub|0>|)>-2*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;w<rsub|i*j>,w<rsub|k*l>|)>|]>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|+\<lambda\><rsub|1>*\<xi\><rsub|1><rsup|k>*<around*|[|\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k>|)>+<wide|\<cal-E\>|\<dot\>><rsub|i*j*k><around|(|\<lambda\><rsub|0>|)>|]>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+\<lambda\><rsub|1>*\<twosuperior\>*<wide|\<cal-E\>|\<ddot\>><rsub|i*j><around|(|\<lambda\><rsub|0>|)>+\<xi\><rsub|2><rsup|k>*\<cal-E\><rsub|i*j*k><around|(|\<lambda\><rsub|0>|)>+\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|i*j>|}>+o<around|(|\<eta\>*\<twosuperior\>|)>.<eq-number><label|eq20220203144500>>>>>
   </eqnarray>
 
   Compte-tenu de la relation<nbsp><eqref|eq20211112183220>, on trouve pour
@@ -901,37 +901,37 @@
     <associate|eq20211108164416|<tuple|4|2|LSK-notes.tex>>
     <associate|eq20211109145224|<tuple|7|3|LSK-notes.tex>>
     <associate|eq20211109145356|<tuple|6|2|LSK-notes.tex>>
-    <associate|eq20211112113028|<tuple|84|12|LSK-notes.tex>>
-    <associate|eq20211112155446|<tuple|83|12|LSK-notes.tex>>
-    <associate|eq20211112162417|<tuple|89|13|LSK-notes.tex>>
-    <associate|eq20211112164240|<tuple|104|14|LSK-notes.tex>>
-    <associate|eq20211112165810|<tuple|90|13|LSK-notes.tex>>
-    <associate|eq20211112173223|<tuple|92|13|LSK-notes.tex>>
+    <associate|eq20211112113028|<tuple|63|12|LSK-notes.tex>>
+    <associate|eq20211112155446|<tuple|62|12|LSK-notes.tex>>
+    <associate|eq20211112162417|<tuple|68|13|LSK-notes.tex>>
+    <associate|eq20211112164240|<tuple|83|14|LSK-notes.tex>>
+    <associate|eq20211112165810|<tuple|69|13|LSK-notes.tex>>
+    <associate|eq20211112173223|<tuple|71|13|LSK-notes.tex>>
     <associate|eq20211112182917|<tuple|18|4|LSK-notes.tex>>
     <associate|eq20211112183220|<tuple|19|4|LSK-notes.tex>>
     <associate|eq20211115075817|<tuple|14|4|LSK-notes.tex>>
     <associate|eq20211115075835|<tuple|15|4|LSK-notes.tex>>
-    <associate|eq20211115082025|<tuple|56|8|LSK-notes.tex>>
-    <associate|eq20211115082037|<tuple|176|18|LSK-notes.tex>>
-    <associate|eq20211115082122|<tuple|175|18|LSK-notes.tex>>
-    <associate|eq20211210131623|<tuple|26|5|LSK-notes.tex>>
+    <associate|eq20211115082025|<tuple|41|8|LSK-notes.tex>>
+    <associate|eq20211115082037|<tuple|155|18|LSK-notes.tex>>
+    <associate|eq20211115082122|<tuple|154|18|LSK-notes.tex>>
+    <associate|eq20211210131623|<tuple|24|5|LSK-notes.tex>>
     <associate|eq20211221155859|<tuple|8|3|LSK-notes.tex>>
-    <associate|eq20220107054629|<tuple|103|13|LSK-notes.tex>>
-    <associate|eq20220107060454|<tuple|96|13|LSK-notes.tex>>
-    <associate|eq20220107060500|<tuple|99|13|LSK-notes.tex>>
-    <associate|eq20220107080901|<tuple|127|15|LSK-notes.tex>>
-    <associate|eq20220107124311|<tuple|97|13|LSK-notes.tex>>
-    <associate|eq20220114135717|<tuple|22|5|LSK-notes.tex>>
-    <associate|eq20220121172753|<tuple|48|7|LSK-notes.tex>>
-    <associate|eq20220124135236|<tuple|23|5|LSK-notes.tex>>
-    <associate|eq20220124135324|<tuple|28|5|LSK-notes.tex>>
-    <associate|eq20220203144500|<tuple|65|9|LSK-notes.tex>>
-    <associate|eq20220203144712|<tuple|68|9|LSK-notes.tex>>
-    <associate|eq20220208143055|<tuple|27|5|LSK-notes.tex>>
-    <associate|eq20220210143805|<tuple|32|6|LSK-notes.tex>>
-    <associate|eq20220216140121|<tuple|24|5|LSK-notes.tex>>
-    <associate|eq20220216141706|<tuple|36|6|LSK-notes.tex>>
-    <associate|eq20220217164528|<tuple|74|10|LSK-notes.tex>>
+    <associate|eq20220107054629|<tuple|82|13|LSK-notes.tex>>
+    <associate|eq20220107060454|<tuple|75|13|LSK-notes.tex>>
+    <associate|eq20220107060500|<tuple|78|13|LSK-notes.tex>>
+    <associate|eq20220107080901|<tuple|106|15|LSK-notes.tex>>
+    <associate|eq20220107124311|<tuple|76|13|LSK-notes.tex>>
+    <associate|eq20220114135717|<tuple|20|5|LSK-notes.tex>>
+    <associate|eq20220121172753|<tuple|36|7|LSK-notes.tex>>
+    <associate|eq20220124135236|<tuple|21|5|LSK-notes.tex>>
+    <associate|eq20220124135324|<tuple|26|5|LSK-notes.tex>>
+    <associate|eq20220203144500|<tuple|44|9|LSK-notes.tex>>
+    <associate|eq20220203144712|<tuple|47|9|LSK-notes.tex>>
+    <associate|eq20220208143055|<tuple|25|5|LSK-notes.tex>>
+    <associate|eq20220210143805|<tuple|27|6|LSK-notes.tex>>
+    <associate|eq20220216140121|<tuple|22|5|LSK-notes.tex>>
+    <associate|eq20220216141706|<tuple|30|6|LSK-notes.tex>>
+    <associate|eq20220217164528|<tuple|53|10|LSK-notes.tex>>
     <associate|sec20211112182000|<tuple|6.2|13|LSK-notes.tex>>
     <associate|sec20211115081016|<tuple|6.4|16|LSK-notes.tex>>
     <associate|sec20220107121442|<tuple|6.1|12|LSK-notes.tex>>

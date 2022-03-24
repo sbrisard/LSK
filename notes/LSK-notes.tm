@@ -54,7 +54,7 @@
   <math|\<eta\>>
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<Delta\>*\<cal-E\>>|<cell|=>|<cell|\<cal-E\>*<around|(|u<rsub|0>+\<xi\>*v+\<eta\>*w|)>-\<cal-E\><around|(|u<rsub|0>|)><eq-number>>>|<row|<cell|>|<cell|=>|<cell|<tfrac|1|2>\<cal-E\><rsub|,u*u>*<around|(|u<rsub|0>;\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>+<tfrac|1|6>\<cal-E\><rsub|,u*u*u>*<around|(|u<rsub|0>;\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)><eq-number>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>\<cal-E\><rsub|,u*u*u*u>*<around|(|u<rsub|0>;\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>+\<cal-O\>*<around*|(|<around*|(|\<xi\>*\<twosuperior\>+\<eta\>*\<twosuperior\>|)>*\<twosuperior\>|)>,<eq-number>>>>>
+    <tformat|<table|<row|<cell|\<Delta\>*\<cal-E\>>|<cell|=>|<cell|\<cal-E\>*<around|(|u<rsub|0>+\<xi\>*v+\<eta\>*w|)>-\<cal-E\><around|(|u<rsub|0>|)>>>|<row|<cell|>|<cell|=>|<cell|<tfrac|1|2>\<cal-E\><rsub|,u*u>*<around|(|u<rsub|0>;\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>+<tfrac|1|6>\<cal-E\><rsub|,u*u*u>*<around|(|u<rsub|0>;\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>\<cal-E\><rsub|,u*u*u*u>*<around|(|u<rsub|0>;\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>+\<cal-O\>*<around*|(|<around*|(|\<xi\>*\<twosuperior\>+\<eta\>*\<twosuperior\>|)>*\<twosuperior\>|)>,<eq-number>>>>>
   </eqnarray>
 
   où le terme linéaire a été omis puisque <math|u> est un point critique de
@@ -64,7 +64,7 @@
   l'expression précédente s'écrit
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<Delta\>*\<cal-E\>>|<cell|=>|<cell|<tfrac|1|2>\<eta\>*\<twosuperior\>*\<cal-E\><rsub|,u*u>*<around|(|w,w|)>+<tfrac|1|6>\<xi\><rsup|3>*\<cal-E\><rsub|,u*u*u>*<around|(|v,v,v|)>+<tfrac|1|2>\<xi\>*\<twosuperior\>*\<eta\>*\<cal-E\><rsub|,u*u*u>*<around|(|v,v,w|)><eq-number>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>\<xi\>*\<eta\>*\<twosuperior\>*\<cal-E\><rsub|,u*u*u>*<around|(|v,w,w|)>+<tfrac|1|6>\<eta\><rsup|3>*\<cal-E\><rsub|,u*u*u>*<around|(|w,w,w|)><eq-number>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>\<xi\><rsup|4>*\<cal-E\><rsub|,u*u*u*u>*<around|(|v,v,v,v|)>+<tfrac|1|6>\<xi\><rsup|3>*\<cal-E\><rsub|,u*u*u*u>*<around|(|v,v,v,w|)><eq-number>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|4>\<xi\>*\<twosuperior\>*\<eta\>*\<twosuperior\>*\<cal-E\><rsub|,u*u*u*u>*<around|(|v,v,w,w|)>+<tfrac|1|6>\<xi\>*\<eta\><rsup|3>*\<cal-E\><rsub|,u*u*u*u>*<around|(|v,w,w,w|)><eq-number>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>\<eta\><rsup|4>*\<cal-E\><rsub|,u*u*u*u>*<around|(|w,w,w,w|)>+\<cal-O\>*<around*|(|<around*|(|\<xi\>*\<twosuperior\>+\<eta\>*\<twosuperior\>|)>*\<twosuperior\>|)>,<eq-number>>>>>
+    <tformat|<table|<row|<cell|\<Delta\>*\<cal-E\>>|<cell|=>|<cell|<tfrac|1|2>\<eta\>*\<twosuperior\>*\<cal-E\><rsub|,u*u>*<around|(|w,w|)>+<tfrac|1|6>\<xi\><rsup|3>*\<cal-E\><rsub|,u*u*u>*<around|(|v,v,v|)>+<tfrac|1|2>\<xi\>*\<twosuperior\>*\<eta\>*\<cal-E\><rsub|,u*u*u>*<around|(|v,v,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>\<xi\>*\<eta\>*\<twosuperior\>*\<cal-E\><rsub|,u*u*u>*<around|(|v,w,w|)>+<tfrac|1|6>\<eta\><rsup|3>*\<cal-E\><rsub|,u*u*u>*<around|(|w,w,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>\<xi\><rsup|4>*\<cal-E\><rsub|,u*u*u*u>*<around|(|v,v,v,v|)>+<tfrac|1|6>\<xi\><rsup|3>*\<cal-E\><rsub|,u*u*u*u>*<around|(|v,v,v,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|4>\<xi\>*\<twosuperior\>*\<eta\>*\<twosuperior\>*\<cal-E\><rsub|,u*u*u*u>*<around|(|v,v,w,w|)>+<tfrac|1|6>\<xi\>*\<eta\><rsup|3>*\<cal-E\><rsub|,u*u*u*u>*<around|(|v,w,w,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>\<eta\><rsup|4>*\<cal-E\><rsub|,u*u*u*u>*<around|(|w,w,w,w|)>+\<cal-O\>*<around*|(|<around*|(|\<xi\>*\<twosuperior\>+\<eta\>*\<twosuperior\>|)>*\<twosuperior\>|)>,<eq-number>>>>>
   </eqnarray>
 
   où l'on convient que toutes les différentielles de <math|\<cal-E\>> sont
@@ -898,40 +898,40 @@
     <associate|auto-7|<tuple|6.1|12|LSK-notes.tex>>
     <associate|auto-8|<tuple|6.2|13|LSK-notes.tex>>
     <associate|auto-9|<tuple|6.3|15|LSK-notes.tex>>
-    <associate|eq20211108164416|<tuple|10|2|LSK-notes.tex>>
-    <associate|eq20211109145224|<tuple|13|3|LSK-notes.tex>>
-    <associate|eq20211109145356|<tuple|12|2|LSK-notes.tex>>
-    <associate|eq20211112113028|<tuple|90|12|LSK-notes.tex>>
-    <associate|eq20211112155446|<tuple|89|12|LSK-notes.tex>>
-    <associate|eq20211112162417|<tuple|95|13|LSK-notes.tex>>
-    <associate|eq20211112164240|<tuple|110|14|LSK-notes.tex>>
-    <associate|eq20211112165810|<tuple|96|13|LSK-notes.tex>>
-    <associate|eq20211112173223|<tuple|98|13|LSK-notes.tex>>
-    <associate|eq20211112182917|<tuple|24|4|LSK-notes.tex>>
-    <associate|eq20211112183220|<tuple|25|4|LSK-notes.tex>>
-    <associate|eq20211115075817|<tuple|20|4|LSK-notes.tex>>
-    <associate|eq20211115075835|<tuple|21|4|LSK-notes.tex>>
-    <associate|eq20211115082025|<tuple|62|8|LSK-notes.tex>>
-    <associate|eq20211115082037|<tuple|182|18|LSK-notes.tex>>
-    <associate|eq20211115082122|<tuple|181|18|LSK-notes.tex>>
-    <associate|eq20211210131623|<tuple|32|5|LSK-notes.tex>>
-    <associate|eq20211221155859|<tuple|14|3|LSK-notes.tex>>
-    <associate|eq20220107054629|<tuple|109|13|LSK-notes.tex>>
-    <associate|eq20220107060454|<tuple|102|13|LSK-notes.tex>>
-    <associate|eq20220107060500|<tuple|105|13|LSK-notes.tex>>
-    <associate|eq20220107080901|<tuple|133|15|LSK-notes.tex>>
-    <associate|eq20220107124311|<tuple|103|13|LSK-notes.tex>>
-    <associate|eq20220114135717|<tuple|28|5|LSK-notes.tex>>
-    <associate|eq20220121172753|<tuple|54|7|LSK-notes.tex>>
-    <associate|eq20220124135236|<tuple|29|5|LSK-notes.tex>>
-    <associate|eq20220124135324|<tuple|34|5|LSK-notes.tex>>
-    <associate|eq20220203144500|<tuple|71|9|LSK-notes.tex>>
-    <associate|eq20220203144712|<tuple|74|9|LSK-notes.tex>>
-    <associate|eq20220208143055|<tuple|33|5|LSK-notes.tex>>
-    <associate|eq20220210143805|<tuple|38|6|LSK-notes.tex>>
-    <associate|eq20220216140121|<tuple|30|5|LSK-notes.tex>>
-    <associate|eq20220216141706|<tuple|42|6|LSK-notes.tex>>
-    <associate|eq20220217164528|<tuple|80|10|LSK-notes.tex>>
+    <associate|eq20211108164416|<tuple|4|2|LSK-notes.tex>>
+    <associate|eq20211109145224|<tuple|7|3|LSK-notes.tex>>
+    <associate|eq20211109145356|<tuple|6|2|LSK-notes.tex>>
+    <associate|eq20211112113028|<tuple|84|12|LSK-notes.tex>>
+    <associate|eq20211112155446|<tuple|83|12|LSK-notes.tex>>
+    <associate|eq20211112162417|<tuple|89|13|LSK-notes.tex>>
+    <associate|eq20211112164240|<tuple|104|14|LSK-notes.tex>>
+    <associate|eq20211112165810|<tuple|90|13|LSK-notes.tex>>
+    <associate|eq20211112173223|<tuple|92|13|LSK-notes.tex>>
+    <associate|eq20211112182917|<tuple|18|4|LSK-notes.tex>>
+    <associate|eq20211112183220|<tuple|19|4|LSK-notes.tex>>
+    <associate|eq20211115075817|<tuple|14|4|LSK-notes.tex>>
+    <associate|eq20211115075835|<tuple|15|4|LSK-notes.tex>>
+    <associate|eq20211115082025|<tuple|56|8|LSK-notes.tex>>
+    <associate|eq20211115082037|<tuple|176|18|LSK-notes.tex>>
+    <associate|eq20211115082122|<tuple|175|18|LSK-notes.tex>>
+    <associate|eq20211210131623|<tuple|26|5|LSK-notes.tex>>
+    <associate|eq20211221155859|<tuple|8|3|LSK-notes.tex>>
+    <associate|eq20220107054629|<tuple|103|13|LSK-notes.tex>>
+    <associate|eq20220107060454|<tuple|96|13|LSK-notes.tex>>
+    <associate|eq20220107060500|<tuple|99|13|LSK-notes.tex>>
+    <associate|eq20220107080901|<tuple|127|15|LSK-notes.tex>>
+    <associate|eq20220107124311|<tuple|97|13|LSK-notes.tex>>
+    <associate|eq20220114135717|<tuple|22|5|LSK-notes.tex>>
+    <associate|eq20220121172753|<tuple|48|7|LSK-notes.tex>>
+    <associate|eq20220124135236|<tuple|23|5|LSK-notes.tex>>
+    <associate|eq20220124135324|<tuple|28|5|LSK-notes.tex>>
+    <associate|eq20220203144500|<tuple|65|9|LSK-notes.tex>>
+    <associate|eq20220203144712|<tuple|68|9|LSK-notes.tex>>
+    <associate|eq20220208143055|<tuple|27|5|LSK-notes.tex>>
+    <associate|eq20220210143805|<tuple|32|6|LSK-notes.tex>>
+    <associate|eq20220216140121|<tuple|24|5|LSK-notes.tex>>
+    <associate|eq20220216141706|<tuple|36|6|LSK-notes.tex>>
+    <associate|eq20220217164528|<tuple|74|10|LSK-notes.tex>>
     <associate|sec20211112182000|<tuple|6.2|13|LSK-notes.tex>>
     <associate|sec20211115081016|<tuple|6.4|16|LSK-notes.tex>>
     <associate|sec20220107121442|<tuple|6.1|12|LSK-notes.tex>>

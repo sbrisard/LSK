@@ -9,9 +9,9 @@
 
   <doc-data|<doc-title|Notes relatives à la méthode asymptotique de
   Lyapunov--Schmidt--Koiter>|<doc-author|<author-data|<author-name|Sébastien
-  Brisard>|<author-email|sebastien.brisard@univ-eiffel>|<author-affiliation|Navier,
-  Ecole des Ponts, Univ Gustave Eiffel, IFSTTAR, CNRS, Marne-la-Vallée,
-  France>>>>
+  Brisard>|<author-email|sebastien.brisard@univ-eiffel.fr>|<author-affiliation|Univ
+  Gustave Eiffel, Ecole des Ponts, IFSTTAR, CNRS, Navier, F-77454
+  Marne-la-Vallée, France>>>>
 
   <abstract-data|<\abstract>
     blabla

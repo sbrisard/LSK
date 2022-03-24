@@ -1,6 +1,6 @@
 <TeXmacs|2.1.1>
 
-<style|amsart>
+<style|article>
 
 <\body>
   <\hide-preamble>
@@ -883,105 +883,105 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|?>>
-    <associate|auto-10|<tuple|6.4|?>>
-    <associate|auto-11|<tuple|6.5|?>>
-    <associate|auto-2|<tuple|2|?>>
-    <associate|auto-3|<tuple|3|?>>
-    <associate|auto-4|<tuple|4|?>>
-    <associate|auto-5|<tuple|5|?>>
-    <associate|auto-6|<tuple|6|?>>
-    <associate|auto-7|<tuple|6.1|?>>
-    <associate|auto-8|<tuple|6.2|?>>
-    <associate|auto-9|<tuple|6.3|?>>
-    <associate|eq20211108164416|<tuple|10|?>>
-    <associate|eq20211109145224|<tuple|13|?>>
-    <associate|eq20211109145356|<tuple|12|?>>
-    <associate|eq20211112113028|<tuple|90|?>>
-    <associate|eq20211112155446|<tuple|89|?>>
-    <associate|eq20211112162417|<tuple|95|?>>
-    <associate|eq20211112164240|<tuple|110|?>>
-    <associate|eq20211112165810|<tuple|96|?>>
-    <associate|eq20211112173223|<tuple|98|?>>
-    <associate|eq20211112182917|<tuple|24|?>>
-    <associate|eq20211112183220|<tuple|25|?>>
-    <associate|eq20211115075817|<tuple|20|?>>
-    <associate|eq20211115075835|<tuple|21|?>>
-    <associate|eq20211115082025|<tuple|62|?>>
-    <associate|eq20211115082037|<tuple|182|?>>
-    <associate|eq20211115082122|<tuple|181|?>>
-    <associate|eq20211210131623|<tuple|32|?>>
-    <associate|eq20211221155859|<tuple|14|?>>
-    <associate|eq20220107054629|<tuple|109|?>>
-    <associate|eq20220107060454|<tuple|102|?>>
-    <associate|eq20220107060500|<tuple|105|?>>
-    <associate|eq20220107080901|<tuple|133|?>>
-    <associate|eq20220107124311|<tuple|103|?>>
-    <associate|eq20220114135717|<tuple|28|?>>
-    <associate|eq20220121172753|<tuple|54|?>>
-    <associate|eq20220124135236|<tuple|29|?>>
-    <associate|eq20220124135324|<tuple|34|?>>
-    <associate|eq20220203144500|<tuple|71|?>>
-    <associate|eq20220203144712|<tuple|74|?>>
-    <associate|eq20220208143055|<tuple|33|?>>
-    <associate|eq20220210143805|<tuple|38|?>>
-    <associate|eq20220216140121|<tuple|30|?>>
-    <associate|eq20220216141706|<tuple|42|?>>
-    <associate|eq20220217164528|<tuple|80|?>>
-    <associate|sec20211112182000|<tuple|6.2|?>>
-    <associate|sec20211115081016|<tuple|6.4|?>>
-    <associate|sec20220107121442|<tuple|6.1|?>>
-    <associate|sec20220121172919|<tuple|6.3|?>>
+    <associate|auto-1|<tuple|1|?|LSK-notes.tex>>
+    <associate|auto-10|<tuple|6.4|?|LSK-notes.tex>>
+    <associate|auto-11|<tuple|6.5|?|LSK-notes.tex>>
+    <associate|auto-2|<tuple|2|?|LSK-notes.tex>>
+    <associate|auto-3|<tuple|3|?|LSK-notes.tex>>
+    <associate|auto-4|<tuple|4|?|LSK-notes.tex>>
+    <associate|auto-5|<tuple|5|?|LSK-notes.tex>>
+    <associate|auto-6|<tuple|6|?|LSK-notes.tex>>
+    <associate|auto-7|<tuple|6.1|?|LSK-notes.tex>>
+    <associate|auto-8|<tuple|6.2|?|LSK-notes.tex>>
+    <associate|auto-9|<tuple|6.3|?|LSK-notes.tex>>
+    <associate|eq20211108164416|<tuple|10|?|LSK-notes.tex>>
+    <associate|eq20211109145224|<tuple|13|?|LSK-notes.tex>>
+    <associate|eq20211109145356|<tuple|12|?|LSK-notes.tex>>
+    <associate|eq20211112113028|<tuple|90|?|LSK-notes.tex>>
+    <associate|eq20211112155446|<tuple|89|?|LSK-notes.tex>>
+    <associate|eq20211112162417|<tuple|95|?|LSK-notes.tex>>
+    <associate|eq20211112164240|<tuple|110|?|LSK-notes.tex>>
+    <associate|eq20211112165810|<tuple|96|?|LSK-notes.tex>>
+    <associate|eq20211112173223|<tuple|98|?|LSK-notes.tex>>
+    <associate|eq20211112182917|<tuple|24|?|LSK-notes.tex>>
+    <associate|eq20211112183220|<tuple|25|?|LSK-notes.tex>>
+    <associate|eq20211115075817|<tuple|20|?|LSK-notes.tex>>
+    <associate|eq20211115075835|<tuple|21|?|LSK-notes.tex>>
+    <associate|eq20211115082025|<tuple|62|?|LSK-notes.tex>>
+    <associate|eq20211115082037|<tuple|182|?|LSK-notes.tex>>
+    <associate|eq20211115082122|<tuple|181|?|LSK-notes.tex>>
+    <associate|eq20211210131623|<tuple|32|?|LSK-notes.tex>>
+    <associate|eq20211221155859|<tuple|14|?|LSK-notes.tex>>
+    <associate|eq20220107054629|<tuple|109|?|LSK-notes.tex>>
+    <associate|eq20220107060454|<tuple|102|?|LSK-notes.tex>>
+    <associate|eq20220107060500|<tuple|105|?|LSK-notes.tex>>
+    <associate|eq20220107080901|<tuple|133|?|LSK-notes.tex>>
+    <associate|eq20220107124311|<tuple|103|?|LSK-notes.tex>>
+    <associate|eq20220114135717|<tuple|28|?|LSK-notes.tex>>
+    <associate|eq20220121172753|<tuple|54|?|LSK-notes.tex>>
+    <associate|eq20220124135236|<tuple|29|?|LSK-notes.tex>>
+    <associate|eq20220124135324|<tuple|34|?|LSK-notes.tex>>
+    <associate|eq20220203144500|<tuple|71|?|LSK-notes.tex>>
+    <associate|eq20220203144712|<tuple|74|?|LSK-notes.tex>>
+    <associate|eq20220208143055|<tuple|33|?|LSK-notes.tex>>
+    <associate|eq20220210143805|<tuple|38|?|LSK-notes.tex>>
+    <associate|eq20220216140121|<tuple|30|?|LSK-notes.tex>>
+    <associate|eq20220216141706|<tuple|42|?|LSK-notes.tex>>
+    <associate|eq20220217164528|<tuple|80|?|LSK-notes.tex>>
+    <associate|sec20211112182000|<tuple|6.2|?|LSK-notes.tex>>
+    <associate|sec20211115081016|<tuple|6.4|?|LSK-notes.tex>>
+    <associate|sec20220107121442|<tuple|6.1|?|LSK-notes.tex>>
+    <associate|sec20220121172919|<tuple|6.3|?|LSK-notes.tex>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|toc>
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1.<space|2spc>Notations>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Notations>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2.<space|2spc>Analyse
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Analyse
       de la branche fondamentale> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3.<space|2spc>Bifurcations>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Bifurcations>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4.<space|2spc>Cas
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Cas
       d'un mode de flambement simple (<with|mode|<quote|math>|m=1>)>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5.<space|2spc>Propriétés
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Propriétés
       des formes bilinéaires symétriques, positives>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6.<space|2spc>Développements
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Développements
       limités le long d'une branche bifurquée du diagramme d'équilibre>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|6.1.<space|2spc>Principe du calcul
+      <with|par-left|<quote|1tab>|6.1<space|2spc>Principe du calcul
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
-      <with|par-left|<quote|1tab>|6.2.<space|2spc>Développement limité du
+      <with|par-left|<quote|1tab>|6.2<space|2spc>Développement limité du
       résidu <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      <with|par-left|<quote|1tab>|6.3.<space|2spc>Développement limité de
+      <with|par-left|<quote|1tab>|6.3<space|2spc>Développement limité de
       l'énergie <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
 
-      <with|par-left|<quote|1tab>|6.4.<space|2spc>Développement limité de la
+      <with|par-left|<quote|1tab>|6.4<space|2spc>Développement limité de la
       hessienne <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>>
 
-      <with|par-left|<quote|1tab>|6.5.<space|2spc>Développement limité des
+      <with|par-left|<quote|1tab>|6.5<space|2spc>Développement limité des
       valeurs propres et vecteurs propres de la Hessienne
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>>

@@ -80,7 +80,7 @@ Pour que l'équilibre soit stable, il faut que expression soit positive ou nulle
 pour tous \(\xi \) et \(\eta \) suffisamment petits. En prenant tout d'abord \(\eta =0\),
 on obtient les conditions nécessaires
 \begin{equation}
-  \label{eq:20211108164416}
+  \label{eq20211108164416}
   \mathcal E_{,uuu}(v, v, v)=0\quad\text{et}\quad\mathcal E_{,uuuu}(v, v, v, v)\geq0
   \quad\text{pour tout}\quad v\in V.
 \end{equation}
@@ -95,25 +95,25 @@ effet, supposant ces conditions remplies, on prend maintenant \(\eta =\xi ²\)
 \end{equation}
 et on obtient la condition nécessaire supplémentaire
 \begin{equation}
-  \label{eq:20211109145356}
+  \label{eq20211109145356}
   \mathcal E_{,uu}(v, v)+\mathcal E_{,uuu}(v, v, w)+\tfrac1{12}\mathcal E_{,uuuu}(v, v, v, v)\geq0,
 \end{equation}
 pour tous \(v\in V\) et \(w\in W\). Pour \(v\in\ker\mathcal E_2\) fixé, l'expression précédente
 est minimale lorsque \(w\) satisfait le problème variationnel
 \begin{equation}
-  \label{eq:20211109145224}
+  \label{eq20211109145224}
   2\mathcal E_{,uu}(w, \hat{w})+\mathcal E_{,uuu}(v, v, \hat{w})=0\quad\text{pour tout}\quad\hat{w}\in W.
 \end{equation}
 
 Soit \(w_{ij}\in W\) l'unique solution du problème variationnel suivant
 \begin{equation}
-  \label{eq:20211221155859}
+  \label{eq20211221155859}
   2\mathcal E_{,uu}(w_{ij}, \hat{w})+\mathcal E_{,uuu}(v_i, v_j, \hat{w})=0\quad\text{pour tout}\quad\hat{w}\in W.
 \end{equation}
 
 Alors, pour \(v=\xi ^i v_i\), la solution du problème
-variationnel~\eqref{eq:20211109145224} est \(w=\xi ^i\xi ^jw_{ij}\). Pour cette
-valeur de \(v\), la condition~\eqref{eq:20211109145356} s'écrit
+variationnel~\eqref{eq20211109145224} est \(w=\xi ^i\xi ^jw_{ij}\). Pour cette
+valeur de \(v\), la condition~\eqref{eq20211109145356} s'écrit
 \begin{equation}
   \bigl[\tfrac1{12}\mathcal E_{,uuuu}(v_i, v_j, v_k, v_l)-\mathcal E_{,uu}(w_{ij}, w_{kl})\bigr]\xi ^i\xi ^j\xi ^k\xi ^l\geq0,
 \end{equation}
@@ -154,9 +154,9 @@ on notera \(\mathcal E_2(\bullet , \bullet )\) plutôt que \(\mathcal E_2(\lambd
 On écrit toute courbe d'équilibre passant par le point \((u_0, \lambda _0)\) sous la
 forme paramétrique suivante
 \begin{eqnarray}
-  \label{eq:20211115075817}
+  \label{eq20211115075817}
   \lambda &=&\lambda _0+\eta \lambda _1+\eta ²\lambda _2+\eta ^3\lambda _3+\cdots,\\
-  \label{eq:20211115075835}
+  \label{eq20211115075835}
   u&=&u^*(\lambda )+\eta u_1+\eta ²u_2+\eta ^3u_3+\cdots,
 \end{eqnarray}
 où \(\eta \) est un paramètre, non précisé pour le moment. Noter que, dans la
@@ -174,19 +174,19 @@ précédents s'écrivent
 et le terme linéaire en \(\theta\) du développement asymptotique de \(u\) est bien
 de norme 1.
 
-Les coefficients \(\lambda  _k\) et \(u_k\) des développements~\eqref{eq:20211115075817}
-et \eqref{eq:20211115075835} sont identifiés en écrivant que l'énergie est
+Les coefficients \(\lambda  _k\) et \(u_k\) des développements~\eqref{eq20211115075817}
+et \eqref{eq20211115075835} sont identifiés en écrivant que l'énergie est
 stationnaire le long de la courbe d'équilibre, c'est-à-dire que le résidu
 \(\mathcal E_{,u}[u(\eta ), \lambda (\eta )]\) est nul. Le développement limité du résidu est établi au
-voisinage de \(\eta =0\) dans l'annexe~\ref{sec:20211112182000} [voir
-Éq.~\eqref{eq:20220107080901}]. En écrivant que tous ses termes s'annulent, on
+voisinage de \(\eta =0\) dans l'annexe~\ref{sec20211112182000} [voir
+Éq.~\eqref{eq20220107080901}]. En écrivant que tous ses termes s'annulent, on
 trouve successivement, pour tout \(\hat{u}\in U\)
 \begin{equation}
-  \label{eq:20211112182917}
+  \label{eq20211112182917}
   \mathcal E_2(\lambda _0; u_1, \hat{u})=0,
 \end{equation}
 \begin{equation}
-  \label{eq:20211112183220}
+  \label{eq20211112183220}
   \mathcal E_3(\lambda _0; u_1, u_1, \hat{u})+2\lambda _1\dot{\mathcal E_2}(\lambda _0; u_1, \hat{u})+2\mathcal E_2(\lambda _0; u_2, \hat{u})=0,
 \end{equation}
 \begin{eqnarray}
@@ -194,26 +194,26 @@ trouve successivement, pour tout \(\hat{u}\in U\)
   \mathcal E_4(\lambda _0; u_1, u_1, u_1, \hat{u})+6\mathcal E_3(\lambda _0; u_1, u_2, \hat{u})+6\mathcal E_2(\lambda _0; u_3, \hat{u})&&\\
   \notag
   +3\lambda _1\bigl[\dot{\mathcal E_3}(\lambda _0; u_1, u_1, \hat{u})+2\dot{\mathcal E_2}(\lambda _0; u_2, \hat{u})\bigr]&&\\
-  \label{eq:20220114135717}
+  \label{eq20220114135717}
   +3\lambda _1²\ddot{\mathcal E_2}(\lambda _0; u_1, \hat{u})
   +6\lambda _2\dot{\mathcal E_2}(\lambda _0; u_1, \hat{u})&=&0.
 \end{eqnarray}
 
-On déduit de l'équation~\eqref{eq:20211112182917} que \(u_1\in V\). On pose alors
+On déduit de l'équation~\eqref{eq20211112182917} que \(u_1\in V\). On pose alors
 \begin{equation}
-  \label{eq:20220124135236}
+  \label{eq20220124135236}
   u_1=\xi _1^i v_i.
 \end{equation}
 
-En prenant \(\hat{u}=v_i\), l'équation~\eqref{eq:20211112183220} s'écrit
+En prenant \(\hat{u}=v_i\), l'équation~\eqref{eq20211112183220} s'écrit
 \begin{equation}
-  \label{eq:20220216140121}
+  \label{eq20220216140121}
   \mathcal E_{ijk}(\lambda _0)\,\xi _1^j\xi _1^k+2\lambda _1\dot{\mathcal E}_{ij}(\lambda _0)\,\xi _1^j=0.
 \end{equation}
 
 Pour le terme d'ordre 2, on introduit la décomposition~:
 \(u_2=\xi _2^iv_i+u_2^W\), où \(u_2^W\in W\). On a alors
-\(\mathcal E_2(u_2, \hat{u})=\mathcal E_2(u_2^W, \hat{u})\) et l'équation~\eqref{eq:20211112183220}
+\(\mathcal E_2(u_2, \hat{u})=\mathcal E_2(u_2^W, \hat{u})\) et l'équation~\eqref{eq20211112183220}
 s'écrit
 \begin{equation}
   \mathcal E_3(\lambda _0; u_1, u_1, \hat{u})+2\lambda _1\dot{\mathcal E_2}(\lambda _0; u_1, \hat{u})
@@ -222,7 +222,7 @@ s'écrit
 pour tout \(\hat{u}\in V\). En prenant la fonction test dans l'espace \(W\), on
 obtient le problème variationnel suivant~: trouver \(u_2^W\in W\) tel que
 \begin{equation}
-  \label{eq:20211210131623}
+  \label{eq20211210131623}
   \xi _1^i\xi _1^j\mathcal E_3(\lambda _0; v_i, v_j, \hat{w})
   +2\lambda _1\xi _1^i\dot{\mathcal E_2}(\lambda _0; v_i, \hat{w})
   +2\mathcal E_2(\lambda _0; u_2^W, \hat{w})=0,
@@ -230,21 +230,21 @@ obtient le problème variationnel suivant~: trouver \(u_2^W\in W\) tel que
 pour tout \(\hat{w}\in W\). Soient \(w_i\in W\) les solutions des problèmes
 variationnels suivants
 \begin{equation}
-  \label{eq:20220208143055}
+  \label{eq20220208143055}
   \mathcal E_2(\lambda _0; w_i, \hat{w})+\dot{\mathcal E_2}(\lambda _0; v_i, \hat{w})=0,
 \end{equation}
-pour tout \(\hat{w}\in W\). La solution du problème~\eqref{eq:20211210131623}
+pour tout \(\hat{w}\in W\). La solution du problème~\eqref{eq20211210131623}
 s'obtient par simple combinaison linéaire des \(w_i\) et \(w_{ij}\) introduits
-précédemment par le problème variationnel~\eqref{eq:20211221155859}, de sorte
+précédemment par le problème variationnel~\eqref{eq20211221155859}, de sorte
 que
 \begin{equation}
-  \label{eq:20220124135324}
+  \label{eq20220124135324}
   u_2^W=\xi _1^i\xi _1^jw_{ij}+\lambda _1\xi _1^i w_i
   \quad\text{et}\quad
   u_2=\xi _2^iv_i+\xi _1^i\xi _1^jw_{ij}+\lambda _1\xi _1^i w_i.
 \end{equation}
 
-En prenant \(\hat{u}=v_i\) dans l'équation~\eqref{eq:20220114135717}, on
+En prenant \(\hat{u}=v_i\) dans l'équation~\eqref{eq20220114135717}, on
 obtient l'équation de bifurcation suivante
 \begin{eqnarray}
   \notag
@@ -254,7 +254,7 @@ obtient l'équation de bifurcation suivante
   \notag
     +3\lambda _1\xi _1^j\xi _1^k\bigl[\dot{\mathcal E}_{ijk}(\lambda _0)+2\mathcal E_3(\lambda _0; v_i, v_j, w_k)
     +2\dot{\mathcal E_2}(\lambda _0; v_i, w_{jk})\bigr]&&\\
-    \label{eq:20220210143805}
+    \label{eq20220210143805}
     +3\lambda _1²\xi _1^j\bigl[\ddot{\mathcal E}_{ij}(\lambda _0)+2\dot{\mathcal E_2}(v_i, w_j)\bigr]
     +6\lambda _2\xi _1^j\dot{\mathcal E}_{ij}(\lambda _0)
     &=&0.
@@ -272,9 +272,9 @@ de même
   2\xi _1^j\xi _1^k\mathcal E_3(\lambda _0; v_i, v_j, w_k)=\xi _1^j\xi _1^k\bigl[\mathcal E_3(\lambda _0; v_i, v_j, w_k)
   +\mathcal E_3(\lambda _0; v_i, w_j, v_k)\bigr]
 \end{equation}
-et l'équation~\eqref{eq:20220210143805} s'écrit
+et l'équation~\eqref{eq20220210143805} s'écrit
 \begin{equation}
-\label{eq:20220216141706}
+\label{eq20220216141706}
   6A_{ij}\xi _2^j+E_{ijkl}\,\xi _1^j\xi _1^k\xi _1^l+3\lambda _1F_{ijk}\xi _1^j\xi _1^k+3\lambda _1²G_{ij}\xi _1^j
   +6\lambda _2\mathring{E}_{ij}\xi _1^j=0,
 \end{equation}
@@ -286,7 +286,7 @@ en posant \textbf{C'est l'expression de \(B_{ij}\) de Nick, voir
 \textbf{Cette expression coïncide avec l'expression
   (AC-5.11), page 71, de \(\mathcal E_{ijkl}\) de Nick. Le facteur 2 provient du fait que
   dans le problème variationnel (AC-5.9) qui définit les \(v_{ij}\) de Nick, le
-  facteur 2 du problème~\eqref{eq:20211221155859} n'est pas présent.}
+  facteur 2 du problème~\eqref{eq20211221155859} n'est pas présent.}
 \begin{equation}
   E_{ijkl}=\mathcal E_4(\lambda _0; v_i, v_j, v_k, v_l)+2\bigl[\mathcal E_3(\lambda _0; v_i, v_j, w_{kl})
   +\mathcal E_3(\lambda _0; v_i, v_k, w_{lj})+\mathcal E_3(\lambda _0; v_i, v_l, w_{jk})\bigr].
@@ -310,7 +310,7 @@ Les \(\xi _2^i\) sont donc déterminés de façon unique si \(\lambda _1\), \(\l
 sont connus.
 
 Le développement limité suivant de l'énergie le long de la branche bifurquée
-est établi dans l'annexe~\ref{sec:20220121172919}
+est établi dans l'annexe~\ref{sec20220121172919}
 \begin{eqnarray}
   \notag
   \mathcal E[u(\eta ), \lambda (\eta )]
@@ -325,24 +325,24 @@ est établi dans l'annexe~\ref{sec:20220121172919}
   &&+18\mathcal E_2(\lambda _0; u_1, u_3)+4\lambda _1\bigl[\dot{\mathcal E}_3(\lambda _0; u_1, u_1, u_1)\\
   \notag
   &&+6\dot{\mathcal E}_2(\lambda _0; u_1, u_2)\bigr]+6\lambda _1²\ddot{\mathcal E}_2(\lambda _0; u_1, u_1)\\
-  \label{eq:20220121172753}
+  \label{eq20220121172753}
   &&+12\lambda _2\dot{\mathcal E}_2(\lambda _0; u_1, u_1)\bigr\}+o(\eta ^4).
 \end{eqnarray}
 
-La relation~\eqref{eq:20211112182917} montre tout d'abord que les termes en
+La relation~\eqref{eq20211112182917} montre tout d'abord que les termes en
 \(\mathcal E_2(\lambda _0; u_1, u_1)\), \(\mathcal E_2(\lambda _0; u_1, u_2)\) et \(\mathcal E_2(\lambda _0; u_1, u_3)\) sont nuls. Le
-premier terme non-nul du développement limité~\eqref{eq:20220121172753} est
+premier terme non-nul du développement limité~\eqref{eq20220121172753} est
 donc le terme d'ordre 3. En prenant de plus \(\hat{u}=u_1\) dans la
-relation~\eqref{eq:20211112183220}, on trouve finalement \textbf{Cette
+relation~\eqref{eq20211112183220}, on trouve finalement \textbf{Cette
   expression coïncide avec l'Éq. (AC-5.29) de Tryantafyllidis.}
 \begin{equation}
   \mathcal E[u(\eta ), \lambda (\eta )]=\mathcal E\bigl(u^*[\lambda (\eta )], \lambda (\eta )\bigr)+\tfrac16\lambda _1\eta ^3\dot{\mathcal E}_2(u_1, u_1)+o(\eta ^3).
 \end{equation}
 
 Si \(\lambda _1=0\), le premier terme non-nul du développement
-limité~\eqref{eq:20220121172753} est d'ordre 4. En prenant cette fois
-\(\hat{u}=u_2\) dans la relation~\eqref{eq:20211112183220} et \(\hat{u}=u_1\)
-dans la relation~\eqref{eq:20220114135717}, on obtient \textbf{Cette
+limité~\eqref{eq20220121172753} est d'ordre 4. En prenant cette fois
+\(\hat{u}=u_2\) dans la relation~\eqref{eq20211112183220} et \(\hat{u}=u_1\)
+dans la relation~\eqref{eq20220114135717}, on obtient \textbf{Cette
   expression coïncide avec l'Éq. (AC-5.30) de Tryantafyllidis.}
 \begin{equation}
   \mathcal E[u(\eta ), \lambda (\eta )]=\mathcal E\bigl(u^*[\lambda (\eta )], \lambda (\eta )\bigr)+\tfrac1{4}\lambda _2\eta ^4\dot{\mathcal E}_2(\lambda _0; u_1, u_1)+o(\eta ^4).
@@ -371,7 +371,7 @@ Comme la branche fondamentale est stable pour \(\lambda <\lambda _0\), on doit a
 \(\dot{\mathcal E}_2(\lambda _0; \hat{v}, \hat{v})<0\). La forme quadratique \(\dot{\mathcal E}_2(\lambda _0)\) est
 donc définie négative sur \(V\). Le développement limité de la hessienne de
 l'énergie le long de la branche bifurquée est établi dans
-l'annexe~\ref{sec:20211115081016}. Pour tout \(\hat{u}\in U\), on trouve
+l'annexe~\ref{sec20211115081016}. Pour tout \(\hat{u}\in U\), on trouve
 \begin{eqnarray}
   \notag
   \mathcal E_{,uu}[u(\eta ), \lambda (\eta ); \hat{u}, \hat{u}]
@@ -383,7 +383,7 @@ l'annexe~\ref{sec:20211115081016}. Pour tout \(\hat{u}\in U\), on trouve
   \notag
   &&+\lambda _1²\ddot{\mathcal E}_2(\lambda _0; \hat{u}, \hat{u})
      +\mathcal E_3(\lambda _0; u_2, \hat{u}, \hat{u})\\
-  \label{eq:20211115082025}
+  \label{eq20211115082025}
   &&+\lambda _2\dot{\mathcal E}_2(\lambda _0; \hat{u}, \hat{u})\bigr]+o(\eta ²).
 \end{eqnarray}
 
@@ -395,7 +395,7 @@ hessienne est définie positive sur \(W\) en \(\lambda =\lambda _0\). La hessien
 branche bifurquée est donc positive pour tout \(\hat{u}\in U\) ayant une
 composante dans \(W\). Il suffit donc d'étudier le signe de la hessienne sur la
 branche bifurquée pour \(\hat{u}\in V\), soit \(\hat{u}=\hat{\xi }^iv_i\). Dans ce
-cas, compte-tenu de l'expression~\eqref{eq:20220124135324} de \(u_2\)
+cas, compte-tenu de l'expression~\eqref{eq20220124135324} de \(u_2\)
 \begin{eqnarray}
   \notag
   \mathcal E_3(\lambda _0; u_2, \hat{u}, \hat{u})
@@ -423,11 +423,11 @@ On peut complètement symétriser le premier terme
      -2\mathcal E_2(\lambda _0; w_{ij}, w_{kl})\bigr]\\
   \notag
   &&+\lambda _1\xi _1^k\bigl[\mathcal E_3(\lambda _0; v_i, v_j, w_k)+\dot{\mathcal E}_{ijk}(\lambda _0)\bigr]\\
-  \label{eq:20220203144500}
+  \label{eq20220203144500}
   &&+\lambda _1²\ddot{\mathcal E}_{ij}(\lambda _0)+\xi _2^k\mathcal E_{ijk}(\lambda _0)+\lambda _2\dot{\mathcal E}_{ij}\bigr\}+o(\eta ²).
 \end{eqnarray}
 
-Compte-tenu de la relation~\eqref{eq:20211112183220}, on trouve pour
+Compte-tenu de la relation~\eqref{eq20211112183220}, on trouve pour
 \(\hat{v}=u_1\) (\(\hat{\xi }^i=\xi _1^i\))
 \begin{equation}
   \mathcal E_{,uu}[u(\eta ), \lambda (\eta ); u_1, u_1]=-\lambda _1\eta \dot{\mathcal E}_2(\lambda _0; u_1, u_1)+o(\eta ).
@@ -446,9 +446,9 @@ branche bifurquée au-delà de la charge critique (\(\lambda >\lambda _0\)).
 Lorsque \(m=\dim V=1\), la base \(v_1, \ldots, v_m\) est réduite au seul vecteur
 \(v_1\) et \(u_1\) est parallèle à ce vecteur. Comme \(\lVert u_1\rVert=1\), on a
 donc nécessairement \(u_1=v_1\) (quitte à changer \(\eta \) en \(-\eta \)). L'équation de
-bifurcation~\eqref{eq:20220216140121} s'écrit alors
+bifurcation~\eqref{eq20220216140121} s'écrit alors
 \begin{equation}
-  \label{eq:20220203144712}
+  \label{eq20220203144712}
   \mathcal E_{111}(\lambda _0)+2\lambda _1\dot{\mathcal E}_{11}(\lambda _0)=0,
   \quad\text{soit}\quad
   \lambda _1=-\frac{\mathcal E_{111}(\lambda _0)}{2\dot{\mathcal E}_{11}(\lambda _0)},
@@ -468,17 +468,17 @@ soit finalement, en éliminant \(\eta \)
 \end{equation}
 
 Pour déterminer la stabilité de la branche bifurquée, on calcule la hessienne
-en \((v_1, v_1)\). L'équation~\eqref{eq:20220203144500} s'écrit
+en \((v_1, v_1)\). L'équation~\eqref{eq20220203144500} s'écrit
 \begin{equation}
   \mathcal E_{,uu}[u(\eta ), \lambda (\eta ); v_1, v_1]=\eta \bigl[\mathcal E_{111}(\lambda _0)+\lambda _1\dot{\mathcal E}_{11}(\lambda _0)\bigr]+o(\eta ),
 \end{equation}
-soit, en substituant l'équation~\eqref{eq:20220203144712}
+soit, en substituant l'équation~\eqref{eq20220203144712}
 \begin{equation}
   \mathcal E_{,uu}[u(\eta ), \lambda (\eta ); v_1, v_1]=-\lambda _1\eta \dot{\mathcal E}_{11}(\lambda _0)+o(\eta ).
 \end{equation}
 
 Ce développement ne permet de conclure que si le terme linéaire est non-nul,
-soit \(\mathcal E_{111}(\lambda _0)\neq0\) [voir Éq.~\eqref{eq:20220203144712}]. Dans ce cas, le
+soit \(\mathcal E_{111}(\lambda _0)\neq0\) [voir Éq.~\eqref{eq20220203144712}]. Dans ce cas, le
 développement asymptotique précédent s'écrit également
 \begin{equation}
   \mathcal E_{,uu}[u(\eta ), \lambda (\eta ); v_1, v_1]=-\bigl(\lambda -\lambda _0\bigr)\dot{\mathcal E}_{11}(\lambda _0)+o(\lambda -\lambda _0).
@@ -490,13 +490,13 @@ Comme \(\dot{\mathcal E}_2(\lambda _0)\) est définie négative, la branche bifu
 
 Supposons maintenant que \(\mathcal E_{111}(\lambda _0)=0\)~; alors \(\lambda _1=0\) et il faut calculer au
 moins un terme supplémentaire dans le développement limité de la
-Hessienne. L'équation de bifurcation~\eqref{eq:20220216141706} s'écrit
+Hessienne. L'équation de bifurcation~\eqref{eq20220216141706} s'écrit
 \begin{equation}
-  \label{eq:20220217164528}
+  \label{eq20220217164528}
   \mathcal E_{1111}(\lambda _0)+6\mathcal E_3(\lambda _0; v_1, v_1, u_2)+6\lambda _2\dot{\mathcal E}_{11}(\lambda _0)=0.
 \end{equation}
-En introduisant le développement~\eqref{eq:20220124135324} de \(u_2\) et en
-utilisant le problème variationnel~\eqref{eq:20211221155859}
+En introduisant le développement~\eqref{eq20220124135324} de \(u_2\) et en
+utilisant le problème variationnel~\eqref{eq20211221155859}
 \begin{equation}
   u_2=\xi _2v_1+w_{11}+\lambda _1w_1,
 \end{equation}
@@ -509,8 +509,8 @@ soit finalement
   \lambda _2=-\frac{\mathcal E_{1111}(\lambda _0)-12\mathcal E_2(\lambda _0;w_{11}, w_{11})}{6\dot{\mathcal E}_{11}(\lambda _0)},
 \end{equation*}
 le quotient ayant une nouvelle fois un sens. Le développement
-asymptotique~\eqref{eq:20211115082025} de la Hessienne s'écrit alors, en tenant
-compte de l'Éq.~\eqref{eq:20220217164528}
+asymptotique~\eqref{eq20211115082025} de la Hessienne s'écrit alors, en tenant
+compte de l'Éq.~\eqref{eq20220217164528}
 \begin{eqnarray}
   \notag
   \mathcal E_{,uu}[u(\eta ), \lambda (\eta ); v_1, v_1]
@@ -563,13 +563,13 @@ Soit \(u\in V\). Alors
   d'équilibre}
 
 \subsection{Principe du calcul}
-\label{sec:20220107121442}
+\label{sec20220107121442}
 
 On pose dans ce qui suit
 \begin{eqnarray}
-  \label{eq:20211112155446}
+  \label{eq20211112155446}
   \Lambda (\eta )&=&\lambda (\eta )-\lambda _0=\eta \lambda _1+\eta ²\lambda _2+\eta ^3\lambda _3+\cdots,\\
-  \label{eq:20211112113028}
+  \label{eq20211112113028}
   U(\eta )&=&u(\eta )-u^*[\lambda (\eta )]=\eta u_1+\eta ²u_2+\eta ^3u_3+\cdots.
 \end{eqnarray}
 
@@ -598,13 +598,13 @@ comme indépendantes. On a
 \end{equation}
 d'où l'on déduit successivement que
 \begin{eqnarray}
-  \label{eq:20211112162417}
+  \label{eq20211112162417}
   f'(\eta )&=&\partial _\eta F+\Lambda '\partial _\lambda F,\\
-  \label{eq:20211112165810}
+  \label{eq20211112165810}
   f''(\eta )&=&\partial _{\eta \eta }²F+2\Lambda '\partial _{\eta \lambda }²F+\Lambda '^2\partial _{\lambda \lambda }²F+\Lambda ''\partial _\lambda  F,\\
   \notag
   f'''(\eta )&=&\partial _{\eta \eta \eta }^3F+3\Lambda '\partial _{\eta \eta \lambda }^3F+3\Lambda '^2\partial _{\eta \lambda \lambda }^3F+\Lambda '^3\partial _{\lambda \lambda \lambda }^3F\\
-  \label{eq:20211112173223}
+  \label{eq20211112173223}
        &&+3\Lambda ''\partial _{\eta \lambda }²F+3\Lambda '\Lambda ''\partial _{\lambda \lambda }²F+\Lambda '''\partial _\lambda F,\\
   \notag
   f''''(\eta )&=&\partial _{\eta \eta \eta \eta }^4F+4\Lambda '\partial _{\eta \eta \eta \lambda }^4F+6\Lambda '^2\partial _{\eta \eta \lambda \lambda }^4F+4\Lambda '^3\partial _{\eta \lambda \lambda \lambda }^4F\\
@@ -616,13 +616,13 @@ où \(\Lambda \) et ses dérivées sont évaluées en \(\eta \), tandis que \(F\
 dérivées partielles sont évaluées en \([\eta , \lambda _0+\Lambda (\eta )]\). En \(\eta =0\), les
 relations précédentes s'écrivent
 \begin{eqnarray}
-  \label{eq:20220107060454}
+  \label{eq20220107060454}
   f'(0)&=&\partial _\eta  F+\lambda _1\partial _\lambda  F,\\
-  \label{eq:20220107124311}
+  \label{eq20220107124311}
   f''(0)&=&\partial _{\eta \eta }²F+2\lambda _1\partial _{\eta \lambda }²F+2\lambda _2\partial _\lambda  F+\lambda _1²\partial _{\lambda \lambda }²F,\\
   \notag
   f'''(0)&=&\partial _{\eta \eta \eta }^3F+3\lambda _1\partial _{\eta \eta \lambda }^3F+3\lambda _1²\partial _{\eta \lambda \lambda }^3F+\lambda _1^3\partial _{\lambda \lambda \lambda }^3F\\
-  \label{eq:20220107060500}
+  \label{eq20220107060500}
        &&+6\lambda _2\partial _{\eta \lambda }²F+6\lambda _1\lambda _2\partial _{\lambda \lambda }²F+6\lambda _3\partial _\lambda F,\\
   \notag
   f''''(0)&=&\partial _{\eta \eta \eta \eta }^4F+4\lambda _1\partial _{\eta \eta \eta \lambda }^4F+6\lambda _1²\partial _{\eta \eta \lambda \lambda }^4F+4\lambda _1^3\partial _{\eta \lambda \lambda \lambda }^4F\\
@@ -633,13 +633,13 @@ relations précédentes s'écrivent
 où \(F\) et ses dérivées sont évaluées en \((0, \lambda _0)\).
 
 \subsection{Développement limité du résidu}
-\label{sec:20211112182000}
+\label{sec20211112182000}
 
 On cherche un développement limité du résidu (c'est-à-dire de la première
 variation de l'énergie). La fonction test \(\hat{u}\in U\) étant fixée, la
 méthode précédente est donc appliquée avec
 \begin{equation}
-  \label{eq:20220107054629}
+  \label{eq20220107054629}
   f(\eta )=\mathcal E_{,u}[u(\eta ), \lambda (\eta );\hat{u}]
   \quad\text{et}\quad
   F(\eta , \lambda )=\mathcal E_{,u}[u^*(\lambda )+U(\eta ), \lambda ; \hat{u}].
@@ -648,11 +648,11 @@ méthode précédente est donc appliquée avec
 On remarque tout d'abord que \(F(0, \lambda )=\mathcal E_{,u}[u^*(\lambda ), \lambda ; \hat{u}]=0\), puisque
 \(u^*(\lambda )\) est un point d'équilibre. En dérivant par rapport à \(\lambda \), on obtient
 \begin{equation}
-  \label{eq:20211112164240}
+  \label{eq20211112164240}
   \frac{\partial ^kF}{\partial \lambda ^k}(0, \lambda )=0.
 \end{equation}
 
-En dérivant une première fois l'expression~\eqref{eq:20220107054629} de \(F\),
+En dérivant une première fois l'expression~\eqref{eq20220107054629} de \(F\),
 on obtient
 \begin{eqnarray}
   \partial _\eta F(\eta , \lambda )
@@ -687,7 +687,7 @@ des relations précédentes par rapport à \(\lambda \)
 \end{eqnarray}
 
 En insérant les résultats précédentes dans les relations
-générales~\eqref{eq:20220107060454}--\eqref{eq:20220107060500}, on trouve
+générales~\eqref{eq20220107060454}--\eqref{eq20220107060500}, on trouve
 finalement les expressions suivantes des dérivées successives de \(f\) en
 \(\eta =0\)
 \begin{eqnarray}
@@ -727,13 +727,13 @@ On en déduit finalement le développement limité à l'ordre 3 en \(\eta \) du 
     \notag
     &&+2\dot{\mathcal E_2}(\lambda _0; u_2, \hat{u})\bigr]
     +3\lambda _1²\ddot{\mathcal E_2}(\lambda _0; u_1, \hat{u})\\
-    \label{eq:20220107080901}
+    \label{eq20220107080901}
     &&+6\lambda _2\dot{\mathcal E_2}(\lambda _0; u_1, \hat{u})\bigr\}
     +o(\eta ^3).
 \end{eqnarray}
 
 \subsection{Développement limité de l'énergie}
-\label{sec:20220121172919}
+\label{sec20220121172919}
 
 On s'intéresse ici à l'écart d'énergie, pour un chargement \(\lambda \) donné, entre
 la branche bifurquée et la branche fondamentale, soit
@@ -803,14 +803,14 @@ et finalement
           &&+6\lambda _1²\ddot{\mathcal E}_2(\lambda _0; u_1, u_1)+12\lambda _2\dot{\mathcal E}_2(\lambda _0; u_1, u_1)
 \end{eqnarray}
 
-On en déduit finalement le développement limité de l'énergie~\eqref{eq:20220121172753}.
+On en déduit finalement le développement limité de l'énergie~\eqref{eq20220121172753}.
 
 \subsection{Développement limité de la hessienne}
-\label{sec:20211115081016}
+\label{sec20211115081016}
 
 On cherche maintenant un développement limité de la hessienne de l'énergie. Les
 fonctions test \(\hat{u}, \hat{v}\in U\) étant fixées, on applique la méthode du
-§\ref{sec:20220107121442} à la fonction \(f(\eta )=F[\eta , \lambda _0+\Lambda (\eta )]\), avec
+§\ref{sec20220107121442} à la fonction \(f(\eta )=F[\eta , \lambda _0+\Lambda (\eta )]\), avec
 \begin{equation}
   F(\eta , \lambda )=\mathcal E_{,uu}[u^*(\lambda )+U(\eta ), \lambda ; \hat{u}, \hat{v}].
 \end{equation}
@@ -841,7 +841,7 @@ et en dérivant cette fois par rapport à \(\lambda \)
 \end{equation}
 
 En insérant les résultats précédents dans les
-expressions~\eqref{eq:20220107060454} et \eqref{eq:20220107124311}, on trouve
+expressions~\eqref{eq20220107060454} et \eqref{eq20220107124311}, on trouve
 \begin{eqnarray}
   f'(0)&=&\mathcal E_3(\lambda _0; u_1, \hat{u}, \hat{v})
             +\lambda _1\dot{\mathcal E_2}(\lambda _0; \hat{u}, \hat{v}),\\
@@ -869,19 +869,19 @@ qui conduisent finalement au développement limité suivant, à l'ordre 2 en \(\
 On cherche les vecteurs propres \(v\in V\) et valeurs propres \(\alpha\in\mathbb R \) de la
 Hessienne
 \begin{equation}
-  \label{eq:20211115082122}
+  \label{eq20211115082122}
   \mathcal E_{,uu}[u(\eta ), \lambda (\eta )](v, \hat{u})=\alpha\langle v, \hat{u}\rangle \quad\text{pour tout}\quad\hat{u}\in V.
 \end{equation}
 
 On cherche les développements limités à l'ordre 1 en \(\eta \) de \(v\) et \(\alpha\)
 \begin{equation}
-  \label{eq:20211115082037}
+  \label{eq20211115082037}
   v = v_0+\eta  v_1+o(\eta )\quad\text{et}\quad\alpha=\alpha_0+\eta \alpha_1+o(\eta )
 \end{equation}
 
-Les développements limités~\eqref{eq:20211115082025} et
-\eqref{eq:20211115082037} sont insérés dans le
-problème~\eqref{eq:20211115082122}
+Les développements limités~\eqref{eq20211115082025} et
+\eqref{eq20211115082037} sont insérés dans le
+problème~\eqref{eq20211115082122}
 \begin{eqnarray}
   \notag
   \mathcal E_{,uu}[u(\eta ), \lambda (\eta )](v, \hat{w})

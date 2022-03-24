@@ -21,7 +21,7 @@
 
   L'espace des champs cinématiquement admissibles est noté <math|U>. On
   suppose qu'il a la structure d'espace vectoriel. L'énergie du système est
-  noté <math|\<cal-E\><around*|(|u,\<lambda\>|)>>, où <math|\<lambda\>>
+  notée <math|\<cal-E\><around*|(|u,\<lambda\>|)>>, où <math|\<lambda\>>
   désigne un paramètre de chargement. Soit
   <math|u<rsup|\<ast\>><around|(|\<lambda\>|)>> la branche fondamentale. Par
   définition
@@ -67,22 +67,16 @@
 
   <section|Analyse de la branche fondamentale>
 
-  Soit <math|u<rsub|0>\<in\>U> un point d'équilibre du système<nbsp>:
-  l'énergie <math|\<cal-E\>> est stationnaire en <math|u<rsub|0>>. On
-  s'intéresse à la stabilité de cet équilibre. L'équilibre est stable si
-  <math|\<cal-E\>> est minimale en ce point. On sait que
-  <math|\<cal-E\><rsub|,u*u><around|(|u<rsub|0>|)>\<geq\>0> est une condition
-  <em|nécessaire> de stabilité. De plus, <math|\<cal-E\><rsub|,u*u><around|(|u<rsub|0>|)>\<gtr\>0>
-  est une condition <em|suffisante> de stabilité.
-
-  On s'intéresse ici au cas où <math|\<cal-E\><rsub|,u*u><around|(|u<rsub|0>|)>>
-  est positive, sans être définie positive<nbsp>; soit <math|V> son noyau,
-  qui forme un sous-espace vectoriel de <math|U>. On suppose que <math|V> est
-  de dimension finie <math|m=dim V>. Soit
-  <math|<around*|(|v<rsub|1>,\<ldots\>,v<rsub|m>|)>> une base orthonormée de
-  ce noyau pour le produit scalaire <math|\<langle\>\<bullet\>,\<bullet\>\<rangle\>>
-  (qui n'est pas précisé pour le moment). On introduit le sous-espace
-  supplémentaire orthogonal <math|W> de <math|V> dans <math|U>
+  On s'intéresse dans ce paragraphe à la stabilité du point critique
+  <math|<around*|(|u<rsub|0>,\<lambda\><rsub|0>|)>.> Par hypothèse,
+  <math|\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>|)>> est positive, sans
+  être définie positive<nbsp>; soit <math|V> son noyau, qui forme un
+  sous-espace vectoriel de <math|U>. On suppose que <math|V> est de dimension
+  finie <math|m=dim V>. Soit <math|<around*|(|v<rsub|1>,\<ldots\>,v<rsub|m>|)>>
+  une base orthonormée de ce noyau pour le produit scalaire
+  <math|\<langle\>\<bullet\>,\<bullet\>\<rangle\>> (qui n'est pas précisé
+  pour le moment). On introduit le sous-espace supplémentaire orthogonal
+  <math|W> de <math|V> dans <math|U>
 
   <\equation>
     U=V<above|\<otimes\>|\<perp\>>W.
@@ -95,55 +89,55 @@
   <math|\<xi\>> et <math|\<eta\>>
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<Delta\>\<cal-E\>>|<cell|=>|<cell|\<cal-E\><around|(|u<rsub|0>+\<xi\>*v+\<eta\>*w|)>-\<cal-E\><around|(|u<rsub|0>|)>>>|<row|<cell|>|<cell|=>|<cell|<tfrac|1|2>*\<cal-E\><rsub|,u*u><around|(|u<rsub|0>;\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>+<tfrac|1|6>*\<cal-E\><rsub|,u*u*u><around|(|u<rsub|0>;\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>*\<cal-E\><rsub|,u*u*u*u><around|(|u<rsub|0>;\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>+\<cal-O\><around*|(|<around*|(|\<xi\>\<twosuperior\>+\<eta\>\<twosuperior\>|)>\<twosuperior\>|)>,<eq-number>>>>>
+    <tformat|<table|<row|<cell|\<Delta\>\<cal-E\>>|<cell|=>|<cell|\<cal-E\><around|(|u<rsub|0>+\<xi\>*v+\<eta\>*w,\<lambda\><rsub|0>|)>-\<cal-E\><around|(|u<rsub|0>,\<lambda\><rsub|0>|)>>>|<row|<cell|>|<cell|=>|<cell|<tfrac|1|2>*\<cal-E\><rsub|2><around|(|\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>+<tfrac|1|6>*\<cal-E\><rsub|3><around|(|\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+<tfrac|1|24>*\<cal-E\><rsub|4><around|(|\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>+\<cal-O\><around*|[|<around*|(|\<xi\><rsup|2>+\<eta\><rsup|2>|)><rsup|2>|]>,<eq-number>>>>>
   </eqnarray>
 
-  où le terme linéaire a été omis puisque <math|u> est un point critique de
-  l'énergie. En tenant compte de la multilinéarité et de la symétrie des
-  différentielles successives de l'énergie <math|\<cal-E\>>, ainsi que du
-  fait que <math|\<cal-E\><rsub|,u*u><around|(|v,\<bullet\>|)>=0>,
-  l'expression précédente s'écrit
+  où le terme linéaire a été omis puisque <math|u<rsub|0>> est un point
+  critique de l'énergie. En tenant compte de la multilinéarité et de la
+  symétrie des différentielles successives de l'énergie <math|\<cal-E\>>,
+  ainsi que du fait que <math|\<cal-E\><rsub|2><around|(|v,\<bullet\>|)>=0>
+  (puisque <math|v\<in\>V>), l'expression précédente s'écrit
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<Delta\>\<cal-E\>>|<cell|=>|<cell|<tfrac|1|2>*\<eta\>\<twosuperior\>*\<cal-E\><rsub|,u*u><around|(|w,w|)>+<tfrac|1|6>*\<xi\><rsup|3>*\<cal-E\><rsub|,u*u*u><around|(|v,v,v|)>+<tfrac|1|2>*\<xi\>\<twosuperior\>*\<eta\>*\<cal-E\><rsub|,u*u*u><around|(|v,v,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>*\<xi\>*\<eta\>\<twosuperior\>*\<cal-E\><rsub|,u*u*u><around|(|v,w,w|)>+<tfrac|1|6>*\<eta\><rsup|3>*\<cal-E\><rsub|,u*u*u><around|(|w,w,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>*\<xi\><rsup|4>*\<cal-E\><rsub|,u*u*u*u><around|(|v,v,v,v|)>+<tfrac|1|6>*\<xi\><rsup|3>*\<cal-E\><rsub|,u*u*u*u><around|(|v,v,v,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|4>*\<xi\>\<twosuperior\>*\<eta\>\<twosuperior\>*\<cal-E\><rsub|,u*u*u*u><around|(|v,v,w,w|)>+<tfrac|1|6>*\<xi\>*\<eta\><rsup|3>*\<cal-E\><rsub|,u*u*u*u><around|(|v,w,w,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>*\<eta\><rsup|4>*\<cal-E\><rsub|,u*u*u*u><around|(|w,w,w,w|)>+\<cal-O\><around*|(|<around*|(|\<xi\>\<twosuperior\>+\<eta\>\<twosuperior\>|)>\<twosuperior\>|)>,<eq-number>>>>>
+    <tformat|<table|<row|<cell|\<Delta\>\<cal-E\>>|<cell|=>|<cell|<tfrac|1|2>*\<eta\><rsup|2>*\<cal-E\><rsub|2><around|(|w,w|)>+<tfrac|1|6>*\<xi\><rsup|3>*\<cal-E\><rsub|3><around|(|v,v,v|)>+<tfrac|1|2>*\<xi\><rsup|2>*\<eta\>*\<cal-E\><rsub|3><around|(|v,v,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>*\<xi\>*\<eta\><rsup|2>*\<cal-E\><rsub|3><around|(|v,w,w|)>+<tfrac|1|6>*\<eta\><rsup|3>*\<cal-E\><rsub|3><around|(|w,w,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>*\<xi\><rsup|4>*\<cal-E\><rsub|4><around|(|v,v,v,v|)>+<tfrac|1|6>*\<xi\><rsup|3>*\<cal-E\><rsub|4><around|(|v,v,v,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|4>*\<xi\><rsup|2>*\<eta\><rsup|2>*\<cal-E\><rsub|4><around|(|v,v,w,w|)>+<tfrac|1|6>*\<xi\>*\<eta\><rsup|3>*\<cal-E\><rsub|4><around|(|v,w,w,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>*\<eta\><rsup|4>*\<cal-E\><rsub|4><around|(|w,w,w,w|)>+\<cal-O\><around*|[|<around*|(|\<xi\><rsup|2>+\<eta\><rsup|2>|)><rsup|2>|]>,<eq-number>>>>>
   </eqnarray>
 
   où l'on convient que toutes les différentielles de <math|\<cal-E\>> sont
   évaluées au point d'équilibre <math|u<rsub|0>>.
 
-  Pour que l'équilibre soit stable, il faut que expression soit positive ou
-  nulle pour tous <math|\<xi\>> et <math|\<eta\>> suffisamment petits. En
-  prenant tout d'abord <math|\<eta\>=0>, on obtient les conditions
+  Pour que l'équilibre soit stable, il faut que cette expression soit
+  positive ou nulle pour tous <math|\<xi\>> et <math|\<eta\>> suffisamment
+  petits. En prenant tout d'abord <math|\<eta\>=0>, on obtient les conditions
   nécessaires
 
   <\equation>
-    <label|eq20211108164416>\<cal-E\><rsub|,u*u*u><around|(|v,v,v|)>=0<space|1em><text|et><space|1em>\<cal-E\><rsub|,u*u*u*u><around|(|v,v,v,v|)>\<geq\>0<space|1em><text|pour
+    <label|eq20211108164416>\<cal-E\><rsub|3><around|(|v,v,v|)>=0<space|1em><text|et><space|1em>\<cal-E\><rsub|4><around|(|v,v,v,v|)>\<geq\>0<space|1em><text|pour
     tout><space|1em>v\<in\>V.
   </equation>
 
   En d'autres termes, s'il existe <math|v\<in\>V> tel que
-  <math|\<cal-E\><rsub|,u*u*u><around|(|v,v,v|)>\<neq\>0> ou
-  <math|\<cal-E\><rsub|,u*u*u*u><around|(|v,v,v,v|)>\<less\>0>, alors
-  l'équilibre est <em|instable>. Les conditions précédentes ne sont pas
-  suffisantes pour assurer la stabilité. En effet, supposant ces conditions
-  remplies, on prend maintenant <math|\<eta\>=\<xi\>\<twosuperior\>>
+  <math|\<cal-E\><rsub|3><around|(|v,v,v|)>\<neq\>0> ou
+  <math|\<cal-E\><rsub|4><around|(|v,v,v,v|)>\<less\>0>, alors l'équilibre
+  est <em|instable>. Les conditions précédentes ne sont pas suffisantes pour
+  assurer la stabilité. En effet, supposant ces conditions remplies, on prend
+  maintenant <math|\<eta\>=\<xi\><rsup|2>>
 
   <\equation>
-    \<Delta\>\<cal-E\>=<tfrac|1|2>*\<xi\><rsup|4>*<around*|[|\<cal-E\><rsub|,u*u><around|(|w,w|)>+\<cal-E\><rsub|,u*u*u><around|(|v,v,w|)>+<tfrac|1|12>\<cal-E\><rsub|,u*u*u*u><around|(|v,v,v,v|)>|]>+o<around|(|\<xi\><rsup|4>|)>
+    \<Delta\>\<cal-E\>=<tfrac|1|2>*\<xi\><rsup|4>*<around*|[|\<cal-E\><rsub|2><around|(|w,w|)>+\<cal-E\><rsub|3><around|(|v,v,w|)>+<tfrac|1|12>\<cal-E\><rsub|4><around|(|v,v,v,v|)>|]>+o<around|(|\<xi\><rsup|4>|)>
   </equation>
 
   et on obtient la condition nécessaire supplémentaire
 
   <\equation>
-    <label|eq20211109145356>\<cal-E\><rsub|,u*u><around|(|v,v|)>+\<cal-E\><rsub|,u*u*u><around|(|v,v,w|)>+<tfrac|1|12>*\<cal-E\><rsub|,u*u*u*u><around|(|v,v,v,v|)>\<geq\>0,
+    <label|eq20211109145356>\<cal-E\><rsub|2><around|(|v,v|)>+\<cal-E\><rsub|3><around|(|v,v,w|)>+<tfrac|1|12>*\<cal-E\><rsub|4><around|(|v,v,v,v|)>\<geq\>0,
   </equation>
 
-  pour tous <math|v\<in\>V> et <math|w\<in\>W>. Pour <math|v\<in\>ker
-  \<cal-E\><rsub|2>> fixé, l'expression précédente est minimale lorsque
-  <math|w> satisfait le problème variationnel
+  pour tous <math|v\<in\>V> et <math|w\<in\>W>. Pour <math|v\<in\>V> fixé,
+  l'expression précédente est minimale lorsque <math|w> satisfait le problème
+  variationnel
 
   <\equation>
-    <label|eq20211109145224>2*\<cal-E\><rsub|,u*u><around|(|w,<wide|w|^>|)>+\<cal-E\><rsub|,u*u*u><around|(|v,v,<wide|w|^>|)>=0<space|1em><text|pour
+    <label|eq20211109145224>2*\<cal-E\><rsub|2><around|(|w,<wide|w|^>|)>+\<cal-E\><rsub|3><around|(|v,v,<wide|w|^>|)>=0<space|1em><text|pour
     tout><space|1em><wide|w|^>\<in\>W.
   </equation>
 
@@ -151,7 +145,7 @@
   variationnel suivant
 
   <\equation>
-    <label|eq20211221155859>2*\<cal-E\><rsub|,u*u><around|(|w<rsub|i\<nocomma\>j>,<wide|w|^>|)>+\<cal-E\><rsub|,u*u*u><around|(|v<rsub|i>,v<rsub|j>,<wide|w|^>|)>=0*<space|1em><text|pour
+    <label|eq20211221155859>2*\<cal-E\><rsub|2><around|(|w<rsub|i\<nocomma\>j>,<wide|w|^>|)>+\<cal-E\><rsub|3><around|(|v<rsub|i>,v<rsub|j>,<wide|w|^>|)>=0*<space|1em><text|pour
     tout><space|1em><wide|w|^>\<in\>W.
   </equation>
 
@@ -161,7 +155,7 @@
   valeur de <math|v>, la condition<nbsp><eqref|eq20211109145356> s'écrit
 
   <\equation>
-    <around*|[|<tfrac|1|12>*\<cal-E\><rsub|,u*u*u*u><around|(|v<rsub|i>,v<rsub|j>,v<rsub|k>,v<rsub|l>|)>-\<cal-E\><rsub|,u*u><around|(|w<rsub|i\<nocomma\>j>,w<rsub|k\<nocomma\>l>|)>|]>*\<xi\><rsup|i>*\<xi\><rsup|j>*\<xi\><rsup|k>*\<xi\><rsup|l>\<geq\>0,
+    <around*|[|<tfrac|1|12>*\<cal-E\><rsub|4><around|(|v<rsub|i>,v<rsub|j>,v<rsub|k>,v<rsub|l>|)>-\<cal-E\><rsub|2><around|(|w<rsub|i\<nocomma\>j>,w<rsub|k\<nocomma\>l>|)>|]>*\<xi\><rsup|i>*\<xi\><rsup|j>*\<xi\><rsup|k>*\<xi\><rsup|l>\<geq\>0,
   </equation>
 
   pour tous <math|\<xi\><rsub|i>,\<xi\><rsub|j>,\<xi\><rsub|k>,\<xi\><rsub|l>\<in\>\<bbb-R\>>.
@@ -172,10 +166,10 @@
 
   On écrit toute courbe d'équilibre passant par le point
   <math|<around|(|u<rsub|0>,\<lambda\><rsub|0>|)>> sous la forme paramétrique
-  suivante
+  suivantes
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<lambda\>>|<cell|=>|<cell|\<lambda\><rsub|0>+\<eta\>*\<lambda\><rsub|1>+\<eta\>*\<twosuperior\>*\<lambda\><rsub|2>+\<eta\><rsup|3>*\<lambda\><rsub|3>+\<cdots\>,<eq-number><label|eq20211115075817>>>|<row|<cell|u>|<cell|=>|<cell|u<rsup|\<ast\>><around|(|\<lambda\>|)>+\<eta\>*u<rsub|1>+\<eta\>*\<twosuperior\>*u<rsub|2>+\<eta\><rsup|3>*u<rsub|3>+\<cdots\>,<eq-number><label|eq20211115075835>>>>>
+    <tformat|<table|<row|<cell|\<lambda\>>|<cell|=>|<cell|\<lambda\><rsub|0>+\<eta\>*\<lambda\><rsub|1>+\<eta\><rsup|2>*\<lambda\><rsub|2>+\<eta\><rsup|3>*\<lambda\><rsub|3>+\<cdots\>,<eq-number><label|eq20211115075817>>>|<row|<cell|u>|<cell|=>|<cell|u<rsup|\<ast\>><around|(|\<lambda\>|)>+\<eta\>*u<rsub|1>+\<eta\><rsup|2>*u<rsub|2>+\<eta\><rsup|3>*u<rsub|3>+\<cdots\>,<eq-number><label|eq20211115075835>>>>>
   </eqnarray>
 
   où <math|\<eta\>> est un paramètre, non précisé pour le moment. Noter que,

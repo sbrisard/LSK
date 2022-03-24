@@ -21,127 +21,21 @@
 
   L'espace des champs cinématiquement admissibles est noté <math|U>. On
   suppose qu'il a la structure d'espace vectoriel. L'énergie du système est
-  noté <math|\<cal-E\>>.
-
-  <section|Analyse de la branche fondamentale>
-
-  Soit <math|u<rsub|0>\<in\>U> un point d'équilibre du système<nbsp>:
-  l'énergie <math|\<cal-E\>> est stationnaire en <math|u<rsub|0>>. On
-  s'intéresse à la stabilité de cet équilibre. L'équilibre est stable si
-  <math|\<cal-E\>> est minimale en ce point. On sait que
-  <math|\<cal-E\><rsub|,u*u><around|(|u<rsub|0>|)>\<geq\>0> est une condition
-  <em|nécessaire> de stabilité. De plus, <math|\<cal-E\><rsub|,u*u><around|(|u<rsub|0>|)>\<gtr\>0>
-  est une condition <em|suffisante> de stabilité.
-
-  On s'intéresse ici au cas où <math|\<cal-E\><rsub|,u*u><around|(|u<rsub|0>|)>>
-  est positive, sans être définie positive<nbsp>; soit <math|V> son noyau,
-  qui forme un sous-espace vectoriel de <math|U>. On suppose que <math|V> est
-  de dimension finie <math|m=dim V>. Soit
-  <math|<around*|(|v<rsub|1>,\<ldots\>,v<rsub|m>|)>> une base orthonormée de
-  ce noyau pour le produit scalaire <math|\<langle\>\<bullet\>,\<bullet\>\<rangle\>>
-  (qui n'est pas précisé pour le moment). On introduit le sous-espace
-  supplémentaire orthogonal <math|W> de <math|V> dans <math|U>
+  noté <math|\<cal-E\><around*|(|u,\<lambda\>|)>>, où <math|\<lambda\>>
+  désigne un paramètre de chargement. Soit
+  <math|u<rsup|\<ast\>><around|(|\<lambda\>|)>> la branche fondamentale. Par
+  définition
 
   <\equation>
-    U=V<above|\<otimes\>|\<perp\>>W.
-  </equation>
-
-  Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
-  <math|u<rsub|0>+\<xi\>*v+\<eta\>*w> voisin du point d'équilibre
-  <math|u<rsub|0>>, avec <math|\<xi\>,\<eta\>\<in\>\<bbb-R\>>
-  \<guillemotleft\>petits\<guillemotright\>, <math|v\<in\>V> and
-  <math|w\<in\>W>. On obtient alors, à l'ordre 4 en <math|\<xi\>> et
-  <math|\<eta\>>
-
-  <\eqnarray>
-    <tformat|<table|<row|<cell|\<Delta\>*\<cal-E\>>|<cell|=>|<cell|\<cal-E\>*<around|(|u<rsub|0>+\<xi\>*v+\<eta\>*w|)>-\<cal-E\><around|(|u<rsub|0>|)>>>|<row|<cell|>|<cell|=>|<cell|<tfrac|1|2>\<cal-E\><rsub|,u*u>*<around|(|u<rsub|0>;\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>+<tfrac|1|6>\<cal-E\><rsub|,u*u*u>*<around|(|u<rsub|0>;\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>\<cal-E\><rsub|,u*u*u*u>*<around|(|u<rsub|0>;\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>+\<cal-O\>*<around*|(|<around*|(|\<xi\>*\<twosuperior\>+\<eta\>*\<twosuperior\>|)>*\<twosuperior\>|)>,<eq-number>>>>>
-  </eqnarray>
-
-  où le terme linéaire a été omis puisque <math|u> est un point critique de
-  l'énergie. En tenant compte de la multilinéarité et de la symétrie des
-  différentielles successives de l'énergie <math|\<cal-E\>>, ainsi que du
-  fait que <math|\<cal-E\><rsub|,u*u>*<around|(|v,\<bullet\>|)>=0>,
-  l'expression précédente s'écrit
-
-  <\eqnarray>
-    <tformat|<table|<row|<cell|\<Delta\>*\<cal-E\>>|<cell|=>|<cell|<tfrac|1|2>\<eta\>*\<twosuperior\>*\<cal-E\><rsub|,u*u>*<around|(|w,w|)>+<tfrac|1|6>\<xi\><rsup|3>*\<cal-E\><rsub|,u*u*u>*<around|(|v,v,v|)>+<tfrac|1|2>\<xi\>*\<twosuperior\>*\<eta\>*\<cal-E\><rsub|,u*u*u>*<around|(|v,v,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>\<xi\>*\<eta\>*\<twosuperior\>*\<cal-E\><rsub|,u*u*u>*<around|(|v,w,w|)>+<tfrac|1|6>\<eta\><rsup|3>*\<cal-E\><rsub|,u*u*u>*<around|(|w,w,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>\<xi\><rsup|4>*\<cal-E\><rsub|,u*u*u*u>*<around|(|v,v,v,v|)>+<tfrac|1|6>\<xi\><rsup|3>*\<cal-E\><rsub|,u*u*u*u>*<around|(|v,v,v,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|4>\<xi\>*\<twosuperior\>*\<eta\>*\<twosuperior\>*\<cal-E\><rsub|,u*u*u*u>*<around|(|v,v,w,w|)>+<tfrac|1|6>\<xi\>*\<eta\><rsup|3>*\<cal-E\><rsub|,u*u*u*u>*<around|(|v,w,w,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>\<eta\><rsup|4>*\<cal-E\><rsub|,u*u*u*u>*<around|(|w,w,w,w|)>+\<cal-O\>*<around*|(|<around*|(|\<xi\>*\<twosuperior\>+\<eta\>*\<twosuperior\>|)>*\<twosuperior\>|)>,<eq-number>>>>>
-  </eqnarray>
-
-  où l'on convient que toutes les différentielles de <math|\<cal-E\>> sont
-  évaluées au point d'équilibre <math|u<rsub|0>>.
-
-  Pour que l'équilibre soit stable, il faut que expression soit positive ou
-  nulle pour tous <math|\<xi\>> et <math|\<eta\>> suffisamment petits. En
-  prenant tout d'abord <math|\<eta\>=0>, on obtient les conditions
-  nécessaires
-
-  <\equation>
-    <label|eq20211108164416>\<cal-E\><rsub|,u*u*u>*<around|(|v,v,v|)>=0*<space|1em><text|et><space|1em>\<cal-E\><rsub|,u*u*u*u>*<around|(|v,v,v,v|)>\<geq\>0*<space|1em><text|pour
-    tout><space|1em>v\<in\>V.
-  </equation>
-
-  En d'autres termes, s'il existe <math|v\<in\>V> tel que
-  <math|\<cal-E\><rsub|,u*u*u>*<around|(|v,v,v|)>\<neq\>0> ou
-  <math|\<cal-E\><rsub|,u*u*u*u>*<around|(|v,v,v,v|)>\<less\>0>, alors
-  l'équilibre est <em|instable>. Les conditions précédentes ne sont pas
-  suffisantes pour assurer la stabilité. En effet, supposant ces conditions
-  remplies, on prend maintenant <math|\<eta\>=\<xi\>*\<twosuperior\>>
-
-  <\equation>
-    \<Delta\>*\<cal-E\>=<tfrac|1|2>\<xi\><rsup|4>*<around*|[|\<cal-E\><rsub|,u*u>*<around|(|w,w|)>+\<cal-E\><rsub|,u*u*u>*<around|(|v,v,w|)>+<tfrac|1|12>\<cal-E\><rsub|,u*u*u*u>*<around|(|v,v,v,v|)>|]>+o<around|(|\<xi\><rsup|4>|)>
-  </equation>
-
-  et on obtient la condition nécessaire supplémentaire
-
-  <\equation>
-    <label|eq20211109145356>\<cal-E\><rsub|,u*u>*<around|(|v,v|)>+\<cal-E\><rsub|,u*u*u>*<around|(|v,v,w|)>+<tfrac|1|12>\<cal-E\><rsub|,u*u*u*u>*<around|(|v,v,v,v|)>\<geq\>0,
-  </equation>
-
-  pour tous <math|v\<in\>V> et <math|w\<in\>W>. Pour <math|v\<in\>ker
-  \<cal-E\><rsub|2>> fixé, l'expression précédente est minimale lorsque
-  <math|w> satisfait le problème variationnel
-
-  <\equation>
-    <label|eq20211109145224>2*\<cal-E\><rsub|,u*u>*<around|(|w,<wide|w|^>|)>+\<cal-E\><rsub|,u*u*u>*<around|(|v,v,<wide|w|^>|)>=0*<space|1em><text|pour
-    tout><space|1em><wide|w|^>\<in\>W.
-  </equation>
-
-  Soit <math|w<rsub|i*j>\<in\>W> l'unique solution du problème variationnel
-  suivant
-
-  <\equation>
-    <label|eq20211221155859>2*\<cal-E\><rsub|,u*u>*<around|(|w<rsub|i*j>,<wide|w|^>|)>+\<cal-E\><rsub|,u*u*u>*<around|(|v<rsub|i>,v<rsub|j>,<wide|w|^>|)>=0*<space|1em><text|pour
-    tout><space|1em><wide|w|^>\<in\>W.
-  </equation>
-
-  Alors, pour <math|v=\<xi\><rsup|i>*v<rsub|i>>, la solution du problème
-  variationnel<nbsp><eqref|eq20211109145224> est
-  <math|w=\<xi\><rsup|i>*\<xi\><rsup|j>*w<rsub|i*j>>. Pour cette valeur de
-  <math|v>, la condition<nbsp><eqref|eq20211109145356> s'écrit
-
-  <\equation>
-    <around*|[|<tfrac|1|12>\<cal-E\><rsub|,u*u*u*u>*<around|(|v<rsub|i>,v<rsub|j>,v<rsub|k>,v<rsub|l>|)>-\<cal-E\><rsub|,u*u>*<around|(|w<rsub|i*j>,w<rsub|k*l>|)>|]>*\<xi\><rsup|i>*\<xi\><rsup|j>*\<xi\><rsup|k>*\<xi\><rsup|l>\<geq\>0,
-  </equation>
-
-  pour tous <math|\<xi\><rsub|i>,\<xi\><rsub|j>,\<xi\><rsub|k>,\<xi\><rsub|l>\<in\>\<bbb-R\>>.
-  On peut montrer que l'inégalité stricte est une condition <em|suffisante>
-  de stabilité.
-
-  <section|Bifurcations>
-
-  Soit <math|u<rsup|\<ast\>><around|(|\<lambda\>|)>> la branche fondamentale.
-  Par définition
-
-  <\equation>
-    \<cal-E\><rsub|,u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>,\<lambda\>;<wide|u|^>|]>=0*<space|1em><text|pour
+    \<cal-E\><rsub|,u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>,\<lambda\>;<wide|u|^>|]>=0*<space|1em><text|pour
     tout><space|1em><wide|u|^>\<in\>U.
   </equation>
 
   Il sera commode d'introduire les notations suivantes
 
-  <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\><rsub|2><around|(|\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|,u*u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>,\<lambda\>|]>,<eq-number>>>|<row|<cell|\<cal-E\><rsub|3><around|(|\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|,u*u*u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>,\<lambda\>|]>,<eq-number>>>|<row|<cell|\<cal-E\><rsub|4><around|(|\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|,u*u*u*u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>,\<lambda\>|]>.<eq-number>>>>>
-  </eqnarray>
+  <\equation>
+    \<cal-E\><rsub|2><around|(|\<lambda\>|)>=\<cal-E\><rsub|,u\<nocomma\>u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>,\<lambda\>|]>,<space|1em>\<cal-E\><rsub|3><around|(|\<lambda\>|)>=\<cal-E\><rsub|,u\<nocomma\>u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>,\<lambda\>|]>,<space|1em>\<cal-E\><rsub|4><around|(|\<lambda\>|)>=\<cal-E\><rsub|,u\<nocomma\>u\<nocomma\>u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>,\<lambda\>|]>.
+  </equation>
 
   Noter que <math|\<cal-E\><rsub|2>>, <math|\<cal-E\><rsub|3>> et
   <math|\<cal-E\><rsub|4>> sont des formes bi-, tri- et quadri-linéaires,
@@ -169,7 +63,112 @@
   <math|\<cal-E\><rsub|4>> sont implicitement évaluées en
   <math|\<lambda\><rsub|0>> lorsque <math|\<lambda\>> n'est pas rappelé :
   ainsi, on notera <math|\<cal-E\><rsub|2>(\<bullet\>,\<bullet\>)> plutôt que
-  <math|\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;\<bullet\>,\<bullet\>|)>>.
+  <math|\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;\<bullet\>,\<bullet\>|)>>.
+
+  <section|Analyse de la branche fondamentale>
+
+  Soit <math|u<rsub|0>\<in\>U> un point d'équilibre du système<nbsp>:
+  l'énergie <math|\<cal-E\>> est stationnaire en <math|u<rsub|0>>. On
+  s'intéresse à la stabilité de cet équilibre. L'équilibre est stable si
+  <math|\<cal-E\>> est minimale en ce point. On sait que
+  <math|\<cal-E\><rsub|,u*u><around|(|u<rsub|0>|)>\<geq\>0> est une condition
+  <em|nécessaire> de stabilité. De plus, <math|\<cal-E\><rsub|,u*u><around|(|u<rsub|0>|)>\<gtr\>0>
+  est une condition <em|suffisante> de stabilité.
+
+  On s'intéresse ici au cas où <math|\<cal-E\><rsub|,u*u><around|(|u<rsub|0>|)>>
+  est positive, sans être définie positive<nbsp>; soit <math|V> son noyau,
+  qui forme un sous-espace vectoriel de <math|U>. On suppose que <math|V> est
+  de dimension finie <math|m=dim V>. Soit
+  <math|<around*|(|v<rsub|1>,\<ldots\>,v<rsub|m>|)>> une base orthonormée de
+  ce noyau pour le produit scalaire <math|\<langle\>\<bullet\>,\<bullet\>\<rangle\>>
+  (qui n'est pas précisé pour le moment). On introduit le sous-espace
+  supplémentaire orthogonal <math|W> de <math|V> dans <math|U>
+
+  <\equation>
+    U=V<above|\<otimes\>|\<perp\>>W.
+  </equation>
+
+  Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
+  <math|u<rsub|0>+\<xi\>*v+\<eta\>*w> voisin du point d'équilibre
+  <math|u<rsub|0>>, avec <math|\<xi\>,\<eta\>\<in\>\<bbb-R\>> \S petits \T,
+  <math|v\<in\>V> and <math|w\<in\>W>. On obtient alors, à l'ordre 4 en
+  <math|\<xi\>> et <math|\<eta\>>
+
+  <\eqnarray>
+    <tformat|<table|<row|<cell|\<Delta\>\<cal-E\>>|<cell|=>|<cell|\<cal-E\><around|(|u<rsub|0>+\<xi\>*v+\<eta\>*w|)>-\<cal-E\><around|(|u<rsub|0>|)>>>|<row|<cell|>|<cell|=>|<cell|<tfrac|1|2>*\<cal-E\><rsub|,u*u><around|(|u<rsub|0>;\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>+<tfrac|1|6>*\<cal-E\><rsub|,u*u*u><around|(|u<rsub|0>;\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>*\<cal-E\><rsub|,u*u*u*u><around|(|u<rsub|0>;\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w,\<xi\>*v+\<eta\>*w|)>+\<cal-O\><around*|(|<around*|(|\<xi\>\<twosuperior\>+\<eta\>\<twosuperior\>|)>\<twosuperior\>|)>,<eq-number>>>>>
+  </eqnarray>
+
+  où le terme linéaire a été omis puisque <math|u> est un point critique de
+  l'énergie. En tenant compte de la multilinéarité et de la symétrie des
+  différentielles successives de l'énergie <math|\<cal-E\>>, ainsi que du
+  fait que <math|\<cal-E\><rsub|,u*u><around|(|v,\<bullet\>|)>=0>,
+  l'expression précédente s'écrit
+
+  <\eqnarray>
+    <tformat|<table|<row|<cell|\<Delta\>\<cal-E\>>|<cell|=>|<cell|<tfrac|1|2>*\<eta\>\<twosuperior\>*\<cal-E\><rsub|,u*u><around|(|w,w|)>+<tfrac|1|6>*\<xi\><rsup|3>*\<cal-E\><rsub|,u*u*u><around|(|v,v,v|)>+<tfrac|1|2>*\<xi\>\<twosuperior\>*\<eta\>*\<cal-E\><rsub|,u*u*u><around|(|v,v,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>*\<xi\>*\<eta\>\<twosuperior\>*\<cal-E\><rsub|,u*u*u><around|(|v,w,w|)>+<tfrac|1|6>*\<eta\><rsup|3>*\<cal-E\><rsub|,u*u*u><around|(|w,w,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>*\<xi\><rsup|4>*\<cal-E\><rsub|,u*u*u*u><around|(|v,v,v,v|)>+<tfrac|1|6>*\<xi\><rsup|3>*\<cal-E\><rsub|,u*u*u*u><around|(|v,v,v,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|4>*\<xi\>\<twosuperior\>*\<eta\>\<twosuperior\>*\<cal-E\><rsub|,u*u*u*u><around|(|v,v,w,w|)>+<tfrac|1|6>*\<xi\>*\<eta\><rsup|3>*\<cal-E\><rsub|,u*u*u*u><around|(|v,w,w,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>*\<eta\><rsup|4>*\<cal-E\><rsub|,u*u*u*u><around|(|w,w,w,w|)>+\<cal-O\><around*|(|<around*|(|\<xi\>\<twosuperior\>+\<eta\>\<twosuperior\>|)>\<twosuperior\>|)>,<eq-number>>>>>
+  </eqnarray>
+
+  où l'on convient que toutes les différentielles de <math|\<cal-E\>> sont
+  évaluées au point d'équilibre <math|u<rsub|0>>.
+
+  Pour que l'équilibre soit stable, il faut que expression soit positive ou
+  nulle pour tous <math|\<xi\>> et <math|\<eta\>> suffisamment petits. En
+  prenant tout d'abord <math|\<eta\>=0>, on obtient les conditions
+  nécessaires
+
+  <\equation>
+    <label|eq20211108164416>\<cal-E\><rsub|,u*u*u><around|(|v,v,v|)>=0<space|1em><text|et><space|1em>\<cal-E\><rsub|,u*u*u*u><around|(|v,v,v,v|)>\<geq\>0<space|1em><text|pour
+    tout><space|1em>v\<in\>V.
+  </equation>
+
+  En d'autres termes, s'il existe <math|v\<in\>V> tel que
+  <math|\<cal-E\><rsub|,u*u*u><around|(|v,v,v|)>\<neq\>0> ou
+  <math|\<cal-E\><rsub|,u*u*u*u><around|(|v,v,v,v|)>\<less\>0>, alors
+  l'équilibre est <em|instable>. Les conditions précédentes ne sont pas
+  suffisantes pour assurer la stabilité. En effet, supposant ces conditions
+  remplies, on prend maintenant <math|\<eta\>=\<xi\>\<twosuperior\>>
+
+  <\equation>
+    \<Delta\>\<cal-E\>=<tfrac|1|2>*\<xi\><rsup|4>*<around*|[|\<cal-E\><rsub|,u*u><around|(|w,w|)>+\<cal-E\><rsub|,u*u*u><around|(|v,v,w|)>+<tfrac|1|12>\<cal-E\><rsub|,u*u*u*u><around|(|v,v,v,v|)>|]>+o<around|(|\<xi\><rsup|4>|)>
+  </equation>
+
+  et on obtient la condition nécessaire supplémentaire
+
+  <\equation>
+    <label|eq20211109145356>\<cal-E\><rsub|,u*u><around|(|v,v|)>+\<cal-E\><rsub|,u*u*u><around|(|v,v,w|)>+<tfrac|1|12>*\<cal-E\><rsub|,u*u*u*u><around|(|v,v,v,v|)>\<geq\>0,
+  </equation>
+
+  pour tous <math|v\<in\>V> et <math|w\<in\>W>. Pour <math|v\<in\>ker
+  \<cal-E\><rsub|2>> fixé, l'expression précédente est minimale lorsque
+  <math|w> satisfait le problème variationnel
+
+  <\equation>
+    <label|eq20211109145224>2*\<cal-E\><rsub|,u*u><around|(|w,<wide|w|^>|)>+\<cal-E\><rsub|,u*u*u><around|(|v,v,<wide|w|^>|)>=0<space|1em><text|pour
+    tout><space|1em><wide|w|^>\<in\>W.
+  </equation>
+
+  Soit <math|w<rsub|i\<nocomma\>j>\<in\>W> l'unique solution du problème
+  variationnel suivant
+
+  <\equation>
+    <label|eq20211221155859>2*\<cal-E\><rsub|,u*u><around|(|w<rsub|i\<nocomma\>j>,<wide|w|^>|)>+\<cal-E\><rsub|,u*u*u><around|(|v<rsub|i>,v<rsub|j>,<wide|w|^>|)>=0*<space|1em><text|pour
+    tout><space|1em><wide|w|^>\<in\>W.
+  </equation>
+
+  Alors, pour <math|v=\<xi\><rsup|i>*v<rsub|i>>, la solution du problème
+  variationnel<nbsp><eqref|eq20211109145224> est
+  <math|w=\<xi\><rsup|i>*\<xi\><rsup|j>*w<rsub|i\<nocomma\>j>>. Pour cette
+  valeur de <math|v>, la condition<nbsp><eqref|eq20211109145356> s'écrit
+
+  <\equation>
+    <around*|[|<tfrac|1|12>*\<cal-E\><rsub|,u*u*u*u><around|(|v<rsub|i>,v<rsub|j>,v<rsub|k>,v<rsub|l>|)>-\<cal-E\><rsub|,u*u><around|(|w<rsub|i\<nocomma\>j>,w<rsub|k\<nocomma\>l>|)>|]>*\<xi\><rsup|i>*\<xi\><rsup|j>*\<xi\><rsup|k>*\<xi\><rsup|l>\<geq\>0,
+  </equation>
+
+  pour tous <math|\<xi\><rsub|i>,\<xi\><rsub|j>,\<xi\><rsub|k>,\<xi\><rsub|l>\<in\>\<bbb-R\>>.
+  On peut montrer que l'inégalité stricte est une condition <em|suffisante>
+  de stabilité.
+
+  <section|Bifurcations>
 
   On écrit toute courbe d'équilibre passant par le point
   <math|<around|(|u<rsub|0>,\<lambda\><rsub|0>|)>> sous la forme paramétrique
@@ -880,6 +879,7 @@
     <associate|font|stix>
     <associate|font-base-size|12>
     <associate|font-family|rm>
+    <associate|info-flag|detailed>
     <associate|math-font|math-stix>
     <associate|par-columns|1>
   </collection>
@@ -898,40 +898,40 @@
     <associate|auto-7|<tuple|6.1|12|LSK-notes.tex>>
     <associate|auto-8|<tuple|6.2|13|LSK-notes.tex>>
     <associate|auto-9|<tuple|6.3|15|LSK-notes.tex>>
-    <associate|eq20211108164416|<tuple|4|2|LSK-notes.tex>>
-    <associate|eq20211109145224|<tuple|7|3|LSK-notes.tex>>
-    <associate|eq20211109145356|<tuple|6|2|LSK-notes.tex>>
-    <associate|eq20211112113028|<tuple|62|12|LSK-notes.tex>>
-    <associate|eq20211112155446|<tuple|61|12|LSK-notes.tex>>
-    <associate|eq20211112162417|<tuple|67|13|LSK-notes.tex>>
-    <associate|eq20211112164240|<tuple|76|14|LSK-notes.tex>>
-    <associate|eq20211112165810|<tuple|68|13|LSK-notes.tex>>
-    <associate|eq20211112173223|<tuple|69|13|LSK-notes.tex>>
-    <associate|eq20211112182917|<tuple|18|4|LSK-notes.tex>>
-    <associate|eq20211112183220|<tuple|19|4|LSK-notes.tex>>
-    <associate|eq20211115075817|<tuple|14|4|LSK-notes.tex>>
-    <associate|eq20211115075835|<tuple|15|4|LSK-notes.tex>>
-    <associate|eq20211115082025|<tuple|41|8|LSK-notes.tex>>
-    <associate|eq20211115082037|<tuple|122|18|LSK-notes.tex>>
-    <associate|eq20211115082122|<tuple|121|18|LSK-notes.tex>>
-    <associate|eq20211210131623|<tuple|24|5|LSK-notes.tex>>
-    <associate|eq20211221155859|<tuple|8|3|LSK-notes.tex>>
-    <associate|eq20220107054629|<tuple|75|13|LSK-notes.tex>>
-    <associate|eq20220107060454|<tuple|71|13|LSK-notes.tex>>
-    <associate|eq20220107060500|<tuple|73|13|LSK-notes.tex>>
-    <associate|eq20220107080901|<tuple|89|15|LSK-notes.tex>>
-    <associate|eq20220107124311|<tuple|72|13|LSK-notes.tex>>
-    <associate|eq20220114135717|<tuple|20|5|LSK-notes.tex>>
-    <associate|eq20220121172753|<tuple|36|7|LSK-notes.tex>>
-    <associate|eq20220124135236|<tuple|21|5|LSK-notes.tex>>
-    <associate|eq20220124135324|<tuple|26|5|LSK-notes.tex>>
-    <associate|eq20220203144500|<tuple|44|9|LSK-notes.tex>>
-    <associate|eq20220203144712|<tuple|47|9|LSK-notes.tex>>
-    <associate|eq20220208143055|<tuple|25|5|LSK-notes.tex>>
-    <associate|eq20220210143805|<tuple|27|6|LSK-notes.tex>>
-    <associate|eq20220216140121|<tuple|22|5|LSK-notes.tex>>
-    <associate|eq20220216141706|<tuple|30|6|LSK-notes.tex>>
-    <associate|eq20220217164528|<tuple|53|10|LSK-notes.tex>>
+    <associate|eq20211108164416|<tuple|6|2|LSK-notes.tex>>
+    <associate|eq20211109145224|<tuple|9|3|LSK-notes.tex>>
+    <associate|eq20211109145356|<tuple|8|2|LSK-notes.tex>>
+    <associate|eq20211112113028|<tuple|60|12|LSK-notes.tex>>
+    <associate|eq20211112155446|<tuple|59|12|LSK-notes.tex>>
+    <associate|eq20211112162417|<tuple|65|13|LSK-notes.tex>>
+    <associate|eq20211112164240|<tuple|74|14|LSK-notes.tex>>
+    <associate|eq20211112165810|<tuple|66|13|LSK-notes.tex>>
+    <associate|eq20211112173223|<tuple|67|13|LSK-notes.tex>>
+    <associate|eq20211112182917|<tuple|16|4|LSK-notes.tex>>
+    <associate|eq20211112183220|<tuple|17|4|LSK-notes.tex>>
+    <associate|eq20211115075817|<tuple|12|4|LSK-notes.tex>>
+    <associate|eq20211115075835|<tuple|13|4|LSK-notes.tex>>
+    <associate|eq20211115082025|<tuple|39|8|LSK-notes.tex>>
+    <associate|eq20211115082037|<tuple|120|18|LSK-notes.tex>>
+    <associate|eq20211115082122|<tuple|119|18|LSK-notes.tex>>
+    <associate|eq20211210131623|<tuple|22|5|LSK-notes.tex>>
+    <associate|eq20211221155859|<tuple|10|3|LSK-notes.tex>>
+    <associate|eq20220107054629|<tuple|73|13|LSK-notes.tex>>
+    <associate|eq20220107060454|<tuple|69|13|LSK-notes.tex>>
+    <associate|eq20220107060500|<tuple|71|13|LSK-notes.tex>>
+    <associate|eq20220107080901|<tuple|87|15|LSK-notes.tex>>
+    <associate|eq20220107124311|<tuple|70|13|LSK-notes.tex>>
+    <associate|eq20220114135717|<tuple|18|5|LSK-notes.tex>>
+    <associate|eq20220121172753|<tuple|34|7|LSK-notes.tex>>
+    <associate|eq20220124135236|<tuple|19|5|LSK-notes.tex>>
+    <associate|eq20220124135324|<tuple|24|5|LSK-notes.tex>>
+    <associate|eq20220203144500|<tuple|42|9|LSK-notes.tex>>
+    <associate|eq20220203144712|<tuple|45|9|LSK-notes.tex>>
+    <associate|eq20220208143055|<tuple|23|5|LSK-notes.tex>>
+    <associate|eq20220210143805|<tuple|25|6|LSK-notes.tex>>
+    <associate|eq20220216140121|<tuple|20|5|LSK-notes.tex>>
+    <associate|eq20220216141706|<tuple|28|6|LSK-notes.tex>>
+    <associate|eq20220217164528|<tuple|51|10|LSK-notes.tex>>
     <associate|sec20211112182000|<tuple|6.2|13|LSK-notes.tex>>
     <associate|sec20211115081016|<tuple|6.4|16|LSK-notes.tex>>
     <associate|sec20220107121442|<tuple|6.1|12|LSK-notes.tex>>

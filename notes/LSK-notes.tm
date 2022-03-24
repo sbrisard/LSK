@@ -1,6 +1,6 @@
 <TeXmacs|2.1.1>
 
-<style|<tuple|article|french>>
+<style|<tuple|article|french|pagella-font>>
 
 <\body>
   <\hide-preamble>
@@ -8,7 +8,7 @@
   </hide-preamble>
 
   <doc-data|<doc-title|Notes relatives à la méthode asymptotique de
-  Lyapunov--Schmidt--Koiter>|<doc-author|<author-data|<author-name|Sébastien
+  Lyapunov\USchmidt\UKoiter>|<doc-author|<author-data|<author-name|Sébastien
   Brisard>|<author-email|sebastien.brisard@univ-eiffel.fr>|<author-affiliation|Univ
   Gustave Eiffel, Ecole des Ponts, IFSTTAR, CNRS, Navier, F-77454
   Marne-la-Vallée, France>>>>
@@ -878,6 +878,7 @@
 <\initial>
   <\collection>
     <associate|font-base-size|12>
+    <associate|math-font|math-pagella>
   </collection>
 </initial>
 

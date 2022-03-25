@@ -444,7 +444,7 @@
   bifurcation<nbsp><eqref|eq20220216140121> s'écrit alors
 
   <\equation>
-    <label|eq20220203144712>\<cal-E\><rsub|111><around|(|\<lambda\><rsub|0>|)>+2*\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|11><around|(|\<lambda\><rsub|0>|)>=0,<space|1em><text|soit><space|1em>\<lambda\><rsub|1>=-<frac|\<cal-E\><rsub|111><around|(|\<lambda\><rsub|0>|)>|2*<wide|\<cal-E\>|\<dot\>><rsub|11><around|(|\<lambda\><rsub|0>|)>>,
+    <label|eq20220203144712>\<cal-E\><rsub|1\<nocomma\>1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>+2*\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>=0,<space|1em><text|soit><space|1em>\<lambda\><rsub|1>=-<frac|\<cal-E\><rsub|1\<nocomma\>1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>|2*<wide|\<cal-E\>|\<dot\>><rsub|1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>>,
   </equation>
 
   où on remarque que le quotient a un sens, puisque
@@ -458,7 +458,7 @@
   soit finalement, en éliminant <math|\<eta\>>
 
   <\equation>
-    \<lambda\>=\<lambda\><rsub|0>-<frac|\<xi\>*\<cal-E\><rsub|111><around|(|\<lambda\><rsub|0>|)>|2*<wide|\<cal-E\>|\<dot\>><rsub|11><around|(|\<lambda\><rsub|0>|)>>+o<around|(|\<xi\>|)>,<space|1em><text|avec><space|1em>\<xi\>=<around|\<langle\>|u<around|(|\<lambda\>|)>-u<rsup|\<ast\>><around|(|\<lambda\>|)>,v<rsub|1>|\<rangle\>>.
+    \<lambda\>=\<lambda\><rsub|0>-<frac|\<xi\>*\<cal-E\><rsub|1\<nocomma\>1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>|2*<wide|\<cal-E\>|\<dot\>><rsub|1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>>+o<around|(|\<xi\>|)>,<space|1em><text|avec><space|1em>\<xi\>=<around|\<langle\>|u<around|(|\<lambda\>|)>-u<rsup|\<ast\>><around|(|\<lambda\>|)>,v<rsub|1>|\<rangle\>>.
   </equation>
 
   Pour déterminer la stabilité de la branche bifurquée, on calcule la
@@ -466,37 +466,37 @@
   L'équation<nbsp><eqref|eq20220203144500> s'écrit
 
   <\equation>
-    \<cal-E\><rsub|,u*u>*<around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;v<rsub|1>,v<rsub|1>|]>=\<eta\>*<around*|[|\<cal-E\><rsub|111><around|(|\<lambda\><rsub|0>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|11><around|(|\<lambda\><rsub|0>|)>|]>+o<around|(|\<eta\>|)>,
+    \<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;v<rsub|1>,v<rsub|1>|]>=\<eta\>*<around*|[|\<cal-E\><rsub|1\<nocomma\>1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>|]>+o<around|(|\<eta\>|)>,
   </equation>
 
   soit, en substituant l'équation<nbsp><eqref|eq20220203144712>
 
   <\equation>
-    \<cal-E\><rsub|,u*u>*<around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;v<rsub|1>,v<rsub|1>|]>=-\<lambda\><rsub|1>*\<eta\>*<wide|\<cal-E\>|\<dot\>><rsub|11><around|(|\<lambda\><rsub|0>|)>+o<around|(|\<eta\>|)>.
+    \<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;v<rsub|1>,v<rsub|1>|]>=-\<lambda\><rsub|1>*\<eta\>*<wide|\<cal-E\>|\<dot\>><rsub|1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>+o<around|(|\<eta\>|)>.
   </equation>
 
   Ce développement ne permet de conclure que si le terme linéaire est
-  non-nul, soit <math|\<cal-E\><rsub|111><around|(|\<lambda\><rsub|0>|)>\<neq\>0>
+  non-nul, soit <math|\<cal-E\><rsub|1\<nocomma\>1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>\<neq\>0>
   [voir Éq.<nbsp><eqref|eq20220203144712>]. Dans ce cas, le développement
   asymptotique précédent s'écrit également
 
   <\equation>
-    \<cal-E\><rsub|,u*u>*<around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;v<rsub|1>,v<rsub|1>|]>=-<around*|(|\<lambda\>-\<lambda\><rsub|0>|)>*<wide|\<cal-E\>|\<dot\>><rsub|11><around|(|\<lambda\><rsub|0>|)>+o<around|(|\<lambda\>-\<lambda\><rsub|0>|)>.
+    \<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;v<rsub|1>,v<rsub|1>|]>=-<around*|(|\<lambda\>-\<lambda\><rsub|0>|)>*<wide|\<cal-E\>|\<dot\>><rsub|1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>+o<around|(|\<lambda\>-\<lambda\><rsub|0>|)>.
   </equation>
 
   Comme <math|<wide|\<cal-E\>|\<dot\>><rsub|2><around|(|\<lambda\><rsub|0>|)>>
   est définie négative, la branche bifurquée est <em|instable> pour
   <math|\<lambda\>\<less\>\<lambda\><rsub|0>> et <em|stable> pour
   <math|\<lambda\>\<gtr\>\<lambda\><rsub|0>> lorsque
-  <math|\<cal-E\><rsub|111><around|(|\<lambda\><rsub|0>|)>\<neq\>0>.
+  <math|\<cal-E\><rsub|1\<nocomma\>1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>\<neq\>0>.
 
-  Supposons maintenant que <math|\<cal-E\><rsub|111><around|(|\<lambda\><rsub|0>|)>=0><nbsp>;
+  Supposons maintenant que <math|\<cal-E\><rsub|1\<nocomma\>1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>=0><nbsp>;
   alors <math|\<lambda\><rsub|1>=0> et il faut calculer au moins un terme
   supplémentaire dans le développement limité de la Hessienne. L'équation de
   bifurcation<nbsp><eqref|eq20220216141706> s'écrit
 
   <\equation>
-    <label|eq20220217164528>\<cal-E\><rsub|1111><around|(|\<lambda\><rsub|0>|)>+6*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|1>,v<rsub|1>,u<rsub|2>|)>+6*\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|11><around|(|\<lambda\><rsub|0>|)>=0.
+    <label|eq20220217164528>\<cal-E\><rsub|1\<nocomma\>1\<nocomma\>1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>+6*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|1>,v<rsub|1>,u<rsub|2>|)>+6*\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>=0.
   </equation>
 
   En introduisant le développement<nbsp><eqref|eq20220124135324> de
@@ -504,19 +504,19 @@
   variationnel<nbsp><eqref|eq20211221155859>
 
   <\equation>
-    u<rsub|2>=\<xi\><rsub|2>*v<rsub|1>+w<rsub|11>+\<lambda\><rsub|1>*w<rsub|1>,
+    u<rsub|2>=\<xi\><rsub|2>*v<rsub|1>+w<rsub|1\<nocomma\>1>+\<lambda\><rsub|1>*w<rsub|1>,
   </equation>
 
   donc
 
   <\equation>
-    \<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|1>,v<rsub|1>,u<rsub|2>|)>=\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|1>,v<rsub|1>,w<rsub|11>|)>=-2*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;w<rsub|11>,w<rsub|11>|)>
+    \<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|1>,v<rsub|1>,u<rsub|2>|)>=\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|1>,v<rsub|1>,w<rsub|1\<nocomma\>1>|)>=-2*\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;w<rsub|11>,w<rsub|11>|)>
   </equation>
 
   soit finalement
 
   <\equation*>
-    \<lambda\><rsub|2>=-<frac|\<cal-E\><rsub|1111><around|(|\<lambda\><rsub|0>|)>-12*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;w<rsub|11>,w<rsub|11>|)>|6*<wide|\<cal-E\>|\<dot\>><rsub|11><around|(|\<lambda\><rsub|0>|)>>,
+    \<lambda\><rsub|2>=-<frac|\<cal-E\><rsub|1\<nocomma\>1\<nocomma\>1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>-12*\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;w<rsub|11>,w<rsub|11>|)>|6*<wide|\<cal-E\>|\<dot\>><rsub|1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>>,
   </equation*>
 
   le quotient ayant une nouvelle fois un sens. Le développement
@@ -524,7 +524,7 @@
   en tenant compte de l'Éq.<nbsp><eqref|eq20220217164528>
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u*u>*<around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;v<rsub|1>,v<rsub|1>|]>>|<cell|=>|<cell|<tfrac|1|2>\<eta\>*\<twosuperior\>*<around*|[|\<cal-E\><rsub|1111><around|(|\<lambda\><rsub|0>|)>+2*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;v<rsub|1>,v<rsub|1>,u<rsub|2>|)>+2*\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|11><around|(|\<lambda\><rsub|0>|)>|]>+o<around|(|\<eta\>*\<twosuperior\>|)>>>|<row|<cell|>|<cell|=>|<cell|<tfrac|5|12>\<eta\>*\<twosuperior\>*\<cal-E\><rsub|1111><around|(|\<lambda\><rsub|0>|)>+o<around|(|\<eta\>*\<twosuperior\>|)>.<eq-number>>>>>
+    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;v<rsub|1>,v<rsub|1>|]>>|<cell|=>|<cell|<tfrac|1|2>\<eta\><rsup|2>*<around*|[|\<cal-E\><rsub|1\<nocomma\>1\<nocomma\>1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>+2*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|1>,v<rsub|1>,u<rsub|2>|)>+2*\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>|]>+o<around|(|\<eta\><rsup|2>|)>>>|<row|<cell|>|<cell|=>|<cell|<tfrac|5|12>\<eta\><rsup|2>*\<cal-E\><rsub|1\<nocomma\>1\<nocomma\>1\<nocomma\>1><around|(|\<lambda\><rsub|0>|)>+o<around|(|\<eta\><rsup|2>|)>.<eq-number>>>>>
   </eqnarray>
 
   <section|Propriétés des formes bilinéaires symétriques, positives>

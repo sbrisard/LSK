@@ -596,16 +596,16 @@
   On pose dans ce qui suit
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<Lambda\><around|(|\<eta\>|)>>|<cell|=>|<cell|\<lambda\><around|(|\<eta\>|)>-\<lambda\><rsub|0>=\<eta\>*\<lambda\><rsub|1>+\<eta\>*\<twosuperior\>*\<lambda\><rsub|2>+\<eta\><rsup|3>*\<lambda\><rsub|3>+\<cdots\>,<eq-number><label|eq20211112155446>>>|<row|<cell|U<around|(|\<eta\>|)>>|<cell|=>|<cell|u<around|(|\<eta\>|)>-u<rsup|\<ast\>><around|[|\<lambda\><around|(|\<eta\>|)>|]>=\<eta\>*u<rsub|1>+\<eta\>*\<twosuperior\>*u<rsub|2>+\<eta\><rsup|3>*u<rsub|3>+\<cdots\>.<eq-number><label|eq20211112113028>>>>>
+    <tformat|<table|<row|<cell|\<Lambda\><around|(|\<eta\>|)>>|<cell|=>|<cell|\<lambda\><around|(|\<eta\>|)>-\<lambda\><rsub|0>=\<eta\>*\<lambda\><rsub|1>+\<eta\><rsup|2>*\<lambda\><rsub|2>+\<eta\><rsup|3>*\<lambda\><rsub|3>+\<cdots\>,<eq-number><label|eq20211112155446>>>|<row|<cell|U<around|(|\<eta\>|)>>|<cell|=>|<cell|u<around|(|\<eta\>|)>-u<rsup|\<ast\>><around|[|\<lambda\><around|(|\<eta\>|)>|]>=\<eta\>*u<rsub|1>+\<eta\><rsup|2>*u<rsub|2>+\<eta\><rsup|3>*u<rsub|3>+\<cdots\>.<eq-number><label|eq20211112113028>>>>>
   </eqnarray>
 
-  On considère une quantité <math|\<cal-F\>>, fonction de <math|u> et
+  On considère une fonctionnelle <math|\<cal-F\>> de <math|u> et
   <math|\<lambda\>><nbsp>: <math|\<cal-F\><around|(|u,\<lambda\>|)>>. Cette
   fonctionnelle est évaluée le long de la branche bifurquée. En d'autres
   termes, on considère
 
   <\equation>
-    f<around|(|\<eta\>|)>=F*<around*|(|u<rsup|\<ast\>>*<around|[|\<lambda\><rsub|0>+\<Lambda\><around|(|\<eta\>|)>|]>+U<around|(|\<eta\>|)>,\<lambda\><rsub|0>+\<Lambda\><around|(|\<eta\>|)>|)>.
+    f<around|(|\<eta\>|)>=F<around*|{|u<rsup|\<ast\>><around|[|\<lambda\><rsub|0>+\<Lambda\><around|(|\<eta\>|)>|]>+U<around|(|\<eta\>|)>,\<lambda\><rsub|0>+\<Lambda\><around|(|\<eta\>|)>|}>.
   </equation>
 
   On souhaite établir un développement limité de <math|f> au voisinage de
@@ -613,27 +613,39 @@
   <math|f> en <math|\<eta\>=0>, puisque
 
   <\equation>
-    f<around|(|\<eta\>|)>=f<around|(|0|)>+\<eta\>*f<rprime|'><around|(|0|)>+<tfrac|1|2>\<eta\>*\<twosuperior\>*f<rprime|''><around|(|0|)>+\<cdots\>
+    f<around|(|\<eta\>|)>=f<around|(|0|)>+\<eta\>*f<rprime|'><around|(|0|)>+<tfrac|1|2>\<eta\><rsup|2>*f<rprime|''><around|(|0|)>+\<cdots\>
   </equation>
 
   Pour calculer ces dérivées, il sera commode d'introduire la fonction
   auxiliaire <math|F>
 
   <\equation>
-    F*<around|(|\<eta\>,\<lambda\>|)>=\<cal-F\><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>|]>,
+    F<around|(|\<eta\>,\<lambda\>|)>=\<cal-F\><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>|]>,
   </equation>
 
   dans laquelle les variables <math|\<lambda\>> et <math|\<eta\>> sont
   provisoirement considérées comme indépendantes. On a
 
   <\equation>
-    f<around|(|\<eta\>|)>=F*<around|[|\<eta\>,\<lambda\><rsub|0>+\<Lambda\><around|(|\<eta\>|)>|]>,
+    f<around|(|\<eta\>|)>=F<around|[|\<eta\>,\<lambda\><rsub|0>+\<Lambda\><around|(|\<eta\>|)>|]>,
   </equation>
 
   d'où l'on déduit successivement que
 
+  <\equation>
+    <label|eq20211112162417>f<rprime|'><around*|(|\<eta\>|)>=\<partial\><rsub|\<eta\>>F+\<Lambda\><rprime|'>*\<partial\><rsub|\<lambda\>>F,
+  </equation>
+
+  <\equation>
+    <label|eq20211112165810>f<rprime|''><around*|(|\<eta\>|)>=\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>><rsup|2>F+2*\<Lambda\><rprime|'>*\<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>><rsup|2>F+\<Lambda\><rprime|'><rsup|2>*\<partial\><rsub|\<lambda\>\<nocomma\>\<lambda\>><rsup|2>F+\<Lambda\><rprime|''>*\<partial\><rsub|\<lambda\>>F,
+  </equation>
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|<label|eq20211112173223>f<rprime|'''><around*|(|\<eta\>|)>>|<cell|=>|<cell|\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<eta\>><rsup|3>F+3*\<Lambda\><rprime|'>*\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<lambda\>><rsup|3>F+3*\<Lambda\><rprime|'><rsup|2>*\<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>><rsup|3>F+\<Lambda\><rprime|'><rsup|3>*\<partial\><rsub|\<lambda\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>><rsup|3>F+3*\<Lambda\><rprime|''>*\<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>><rsup|2>F+3*\<Lambda\><rprime|'>*\<Lambda\><rprime|''>*\<partial\><rsub|\<lambda\>\<nocomma\>\<lambda\>><rsup|2>F>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+\<Lambda\><rprime|'''>*\<partial\><rsub|\<lambda\>>F<eq-number>>>>>
+  </eqnarray*>
+
   <\eqnarray>
-    <tformat|<table|<row|<cell|f<rprime|'><around|(|\<eta\>|)>>|<cell|=>|<cell|\<partial\><rsub|\<eta\>>*F+\<Lambda\><rprime|'>*\<partial\><rsub|\<lambda\>>*F,<eq-number><label|eq20211112162417>>>|<row|<cell|f<rprime|''><around|(|\<eta\>|)>>|<cell|=>|<cell|\<partial\><rsub|\<eta\>*\<eta\>>*\<twosuperior\>*F+2*\<Lambda\><rprime|'>*\<partial\><rsub|\<eta\>*\<lambda\>>*\<twosuperior\>*F+\<Lambda\><rprime|'><rsup|2>*\<partial\><rsub|\<lambda\>*\<lambda\>>*\<twosuperior\>*F+\<Lambda\><rprime|''>*\<partial\><rsub|\<lambda\>>*F,<eq-number><label|eq20211112165810>>>|<row|<cell|f<rprime|'''><around|(|\<eta\>|)>>|<cell|=>|<cell|\<partial\><rsub|\<eta\>*\<eta\>*\<eta\>><rsup|3>*F+3*\<Lambda\><rprime|'>*\<partial\><rsub|\<eta\>*\<eta\>*\<lambda\>><rsup|3>*F+3*\<Lambda\><rprime|'><rsup|2>*\<partial\><rsub|\<eta\>*\<lambda\>*\<lambda\>><rsup|3>*F+\<Lambda\><rprime|'><rsup|3>*\<partial\><rsub|\<lambda\>*\<lambda\>*\<lambda\>><rsup|3>*F>>|<row|<cell|>|<cell|>|<cell|+3*\<Lambda\><rprime|''>*\<partial\><rsub|\<eta\>*\<lambda\>>*\<twosuperior\>*F+3*\<Lambda\><rprime|'>*\<Lambda\><rprime|''>*\<partial\><rsub|\<lambda\>*\<lambda\>>*\<twosuperior\>*F+\<Lambda\><rprime|'''>*\<partial\><rsub|\<lambda\>>*F,<eq-number><label|eq20211112173223>>>|<row|<cell|f<rprime|''''><around|(|\<eta\>|)>>|<cell|=>|<cell|\<partial\><rsub|\<eta\>*\<eta\>*\<eta\>*\<eta\>><rsup|4>*F+4*\<Lambda\><rprime|'>*\<partial\><rsub|\<eta\>*\<eta\>*\<eta\>*\<lambda\>><rsup|4>*F+6*\<Lambda\><rprime|'><rsup|2>*\<partial\><rsub|\<eta\>*\<eta\>*\<lambda\>*\<lambda\>><rsup|4>*F+4*\<Lambda\><rprime|'><rsup|3>*\<partial\><rsub|\<eta\>*\<lambda\>*\<lambda\>*\<lambda\>><rsup|4>*F>>|<row|<cell|>|<cell|>|<cell|+\<Lambda\><rprime|'><rsup|4>*\<partial\><rsub|\<lambda\>*\<lambda\>*\<lambda\>*\<lambda\>><rsup|4>*F+6*\<Lambda\><rprime|''>*\<partial\><rsub|\<eta\>*\<eta\>*\<lambda\>><rsup|3>*F+12*\<Lambda\><rprime|'>*\<Lambda\><rprime|''>*\<partial\><rsub|\<eta\>*\<lambda\>*\<lambda\>><rsup|3>*F+6*\<Lambda\><rprime|'><rsup|2>*\<Lambda\><rprime|''>*\<partial\><rsub|\<lambda\>*\<lambda\>*\<lambda\>><rsup|3>*F>>|<row|<cell|>|<cell|>|<cell|+4*\<Lambda\><rprime|'''>*\<partial\><rsub|\<eta\>*\<lambda\>>*\<twosuperior\>*F+<around*|(|3*\<Lambda\><rprime|''><rsup|2>+4*\<Lambda\><rprime|'>*\<Lambda\><rprime|'''>|)>*\<partial\><rsub|\<lambda\>*\<lambda\>>*\<twosuperior\>*F+\<Lambda\><rprime|''''>*\<partial\><rsub|\<lambda\>>*F<eq-number>>>>>
+    <tformat|<table|<row|<cell|f<rprime|''''><around|(|\<eta\>|)>>|<cell|=>|<cell|\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<eta\>><rsup|4>F+4*\<Lambda\><rprime|'>*\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<lambda\>><rsup|4>F+6*\<Lambda\><rprime|'><rsup|2>*\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>><rsup|4>F+4*\<Lambda\><rprime|'><rsup|3>*\<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>><rsup|4>F+\<Lambda\><rprime|'><rsup|4>*\<partial\><rsub|\<lambda\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>><rsup|4>F+6*\<Lambda\><rprime|''>*\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<lambda\>><rsup|3>F>>|<row|<cell|>|<cell|>|<cell|+12*\<Lambda\><rprime|'>*\<Lambda\><rprime|''>*\<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>><rsup|3>F+6*\<Lambda\><rprime|'><rsup|2>*\<Lambda\><rprime|''>*\<partial\><rsub|\<lambda\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>><rsup|3>F+4*\<Lambda\><rprime|'''>*\<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>><rsup|2>F+<around*|(|3*\<Lambda\><rprime|''><rsup|2>+4*\<Lambda\><rprime|'>*\<Lambda\><rprime|'''>|)>*\<partial\><rsub|\<lambda\>\<nocomma\>\<lambda\>><rsup|2>F<eq-number>>>|<row|<cell|>|<cell|>|<cell|+\<Lambda\><rprime|''''>*\<partial\><rsub|\<lambda\>>F<eq-number>>>>>
   </eqnarray>
 
   où <math|\<Lambda\>> et ses dérivées sont évaluées en <math|\<eta\>>,
@@ -641,8 +653,20 @@
   <math|<around|[|\<eta\>,\<lambda\><rsub|0>+\<Lambda\><around|(|\<eta\>|)>|]>>.
   En <math|\<eta\>=0>, les relations précédentes s'écrivent
 
+  <\equation>
+    <label|eq20220107060454>f<rprime|'><around*|(|0|)>=\<partial\><rsub|\<eta\>>F+\<lambda\><rsub|1>*\<partial\><rsub|\<lambda\>>F,
+  </equation>
+
+  <\equation>
+    <label|eq20220107124311>f<rprime|''><around*|(|0|)>=\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>><rsup|2>F+2*\<lambda\><rsub|1>*\<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>><rsup|2>F+2*\<lambda\><rsub|2>*\<partial\><rsub|\<lambda\>>F+\<lambda\><rsub|1><rsup|2>*\<partial\><rsub|*\<lambda\>\<nocomma\>\<lambda\>><rsup|2>F,
+  </equation>
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|f<rprime|'''><around*|(|0|)>>|<cell|=>|<cell|\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<eta\>><rsup|3>F+3*\<lambda\><rsub|1>*\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<lambda\>><rsup|3>F+3*\<lambda\><rsub|1><rsup|2>*\<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>><rsup|3>F+\<lambda\><rsub|1><rsup|3>*\<partial\><rsub|\<lambda\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>><rsup|3>F+6*\<lambda\><rsub|2>*\<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>><rsup|2>F+6*\<lambda\><rsub|1>*\<lambda\><rsub|2>*\<partial\><rsub|\<lambda\>\<nocomma\>\<lambda\>><rsup|2>F>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+6*\<lambda\><rsub|3>*\<partial\><rsub|\<lambda\>>F,<eq-number><label|eq20220107060500>>>>>
+  </eqnarray*>
+
   <\eqnarray>
-    <tformat|<table|<row|<cell|f<rprime|'><around|(|0|)>>|<cell|=>|<cell|\<partial\><rsub|\<eta\>>*F+\<lambda\><rsub|1>*\<partial\><rsub|\<lambda\>>*F,<eq-number><label|eq20220107060454>>>|<row|<cell|f<rprime|''><around|(|0|)>>|<cell|=>|<cell|\<partial\><rsub|\<eta\>*\<eta\>>*\<twosuperior\>*F+2*\<lambda\><rsub|1>*\<partial\><rsub|\<eta\>*\<lambda\>>*\<twosuperior\>*F+2*\<lambda\><rsub|2>*\<partial\><rsub|\<lambda\>>*F+\<lambda\><rsub|1>*\<twosuperior\>*\<partial\><rsub|\<lambda\>*\<lambda\>>*\<twosuperior\>*F,<eq-number><label|eq20220107124311>>>|<row|<cell|f<rprime|'''><around|(|0|)>>|<cell|=>|<cell|\<partial\><rsub|\<eta\>*\<eta\>*\<eta\>><rsup|3>*F+3*\<lambda\><rsub|1>*\<partial\><rsub|\<eta\>*\<eta\>*\<lambda\>><rsup|3>*F+3*\<lambda\><rsub|1>*\<twosuperior\>*\<partial\><rsub|\<eta\>*\<lambda\>*\<lambda\>><rsup|3>*F+\<lambda\><rsub|1><rsup|3>*\<partial\><rsub|\<lambda\>*\<lambda\>*\<lambda\>><rsup|3>*F>>|<row|<cell|>|<cell|>|<cell|+6*\<lambda\><rsub|2>*\<partial\><rsub|\<eta\>*\<lambda\>>*\<twosuperior\>*F+6*\<lambda\><rsub|1>*\<lambda\><rsub|2>*\<partial\><rsub|\<lambda\>*\<lambda\>>*\<twosuperior\>*F+6*\<lambda\><rsub|3>*\<partial\><rsub|\<lambda\>>*F,<eq-number><label|eq20220107060500>>>|<row|<cell|f<rprime|''''><around|(|0|)>>|<cell|=>|<cell|\<partial\><rsub|\<eta\>*\<eta\>*\<eta\>*\<eta\>><rsup|4>*F+4*\<lambda\><rsub|1>*\<partial\><rsub|\<eta\>*\<eta\>*\<eta\>*\<lambda\>><rsup|4>*F+6*\<lambda\><rsub|1>*\<twosuperior\>*\<partial\><rsub|\<eta\>*\<eta\>*\<lambda\>*\<lambda\>><rsup|4>*F+4*\<lambda\><rsub|1><rsup|3>*\<partial\><rsub|\<eta\>*\<lambda\>*\<lambda\>*\<lambda\>><rsup|4>*F>>|<row|<cell|>|<cell|>|<cell|+\<lambda\><rsub|1><rsup|4>*\<partial\><rsub|\<lambda\>*\<lambda\>*\<lambda\>*\<lambda\>><rsup|4>*F+12*\<lambda\><rsub|2>*\<partial\><rsub|\<eta\>*\<eta\>*\<lambda\>><rsup|3>*F+24*\<lambda\><rsub|1>*\<lambda\><rsub|2>*\<partial\><rsub|\<eta\>*\<lambda\>*\<lambda\>><rsup|3>*F+12*\<lambda\><rsub|1>*\<twosuperior\>*\<lambda\><rsub|2>*\<partial\><rsub|\<lambda\>*\<lambda\>*\<lambda\>><rsup|3>*F>>|<row|<cell|>|<cell|>|<cell|+24*\<lambda\><rsub|3>*\<partial\><rsub|\<eta\>*\<lambda\>>*\<twosuperior\>*F+<around*|(|12*\<lambda\><rsub|2>*\<twosuperior\>+24*\<lambda\><rsub|1>*\<lambda\><rsub|3>|)>*\<partial\><rsub|\<lambda\>*\<lambda\>>*\<twosuperior\>*F+24*\<lambda\><rsub|4>*\<partial\><rsub|\<lambda\>>*F<eq-number>>>>>
+    <tformat|<table|<row|<cell|f<rprime|''''><around|(|0|)>>|<cell|=>|<cell|\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<eta\>><rsup|4>F+4*\<lambda\><rsub|1>*\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<lambda\>><rsup|4>F+6*\<lambda\><rsub|1><rsup|2>*\<partial\><rsub|\<eta\>\<nocomma\>*\<eta\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>><rsup|4>F+4*\<lambda\><rsub|1><rsup|3>*\<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>><rsup|4>F+\<lambda\><rsub|1><rsup|4>*\<partial\><rsub|\<lambda\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>><rsup|4>F+12*\<lambda\><rsub|2>*\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<lambda\>><rsup|3>F>>|<row|<cell|>|<cell|>|<cell|+24*\<lambda\><rsub|1>*\<lambda\><rsub|2>*\<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>><rsup|3>F+12*\<lambda\><rsub|1><rsup|2>*\<lambda\><rsub|2>*\<partial\><rsub|\<lambda\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>><rsup|3>F+24*\<lambda\><rsub|3>*\<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>><rsup|2>F+<around*|(|12*\<lambda\><rsub|2><rsup|2>+24*\<lambda\><rsub|1>*\<lambda\><rsub|3>|)>*\<partial\><rsub|\<lambda\>\<nocomma\>\<lambda\>><rsup|2>F>>|<row|<cell|>|<cell|>|<cell|+24*\<lambda\><rsub|4>*\<partial\><rsub|\<lambda\>>F,<eq-number>>>>>
   </eqnarray>
 
   où <math|F> et ses dérivées sont évaluées en
@@ -900,24 +924,24 @@
     <associate|eq20211109145356|<tuple|8|2>>
     <associate|eq20211112113028|<tuple|60|12>>
     <associate|eq20211112155446|<tuple|59|12>>
-    <associate|eq20211112162417|<tuple|65|13>>
-    <associate|eq20211112164240|<tuple|74|14>>
+    <associate|eq20211112162417|<tuple|68|13>>
+    <associate|eq20211112164240|<tuple|75|14>>
     <associate|eq20211112165810|<tuple|66|13>>
-    <associate|eq20211112173223|<tuple|67|13>>
+    <associate|eq20211112173223|<tuple|66|13>>
     <associate|eq20211112182917|<tuple|16|4>>
     <associate|eq20211112183220|<tuple|17|4>>
     <associate|eq20211115075817|<tuple|12|4>>
     <associate|eq20211115075835|<tuple|13|4>>
     <associate|eq20211115082025|<tuple|39|8>>
-    <associate|eq20211115082037|<tuple|120|18>>
-    <associate|eq20211115082122|<tuple|119|18>>
+    <associate|eq20211115082037|<tuple|121|18>>
+    <associate|eq20211115082122|<tuple|120|18>>
     <associate|eq20211210131623|<tuple|22|5>>
     <associate|eq20211221155859|<tuple|10|3>>
-    <associate|eq20220107054629|<tuple|73|13>>
-    <associate|eq20220107060454|<tuple|69|13>>
-    <associate|eq20220107060500|<tuple|71|13>>
-    <associate|eq20220107080901|<tuple|87|15>>
-    <associate|eq20220107124311|<tuple|70|13>>
+    <associate|eq20220107054629|<tuple|74|13>>
+    <associate|eq20220107060454|<tuple|70|13>>
+    <associate|eq20220107060500|<tuple|72|13>>
+    <associate|eq20220107080901|<tuple|88|15>>
+    <associate|eq20220107124311|<tuple|71|13>>
     <associate|eq20220114135717|<tuple|18|5>>
     <associate|eq20220121172753|<tuple|34|7>>
     <associate|eq20220124135236|<tuple|19|5>>

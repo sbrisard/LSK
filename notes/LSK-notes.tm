@@ -529,58 +529,64 @@
 
   <section|Propriétés des formes bilinéaires symétriques, positives>
 
-  Soit <math|\<cal-B\>> une forme bilinéaire symétrique, positive sur
-  l'espace vectoriel <math|V>. On définit son noyau <math|ker \<cal-B\>> de
-  la façon suivante
+  Dans ce qui suit, <math|\<cal-B\>> désigne une forme bilinéaire symétrique
+  et positive sur l'espace vectoriel <math|U>. On définit son noyau <math|ker
+  \<cal-B\>> de la façon suivante
 
   <\equation>
-    ker \<cal-B\>=<around|{|u\<in\>V\|\<cal-B\>*<around|(|u,u|)>=0|}>.
+    ker \<cal-B\>=<around|{|u\<in\>U,\<cal-B\>*<around|(|u,u|)>=0|}>.
   </equation>
 
-  Le noyau <math|ker \<cal-B\>> d'une forme bilinéaire, symétrique, positive
-  <math|\<cal-B\>> sur l'espace vectoriel <math|V> est un sous-espace
-  vectoriel de <math|V>.
+  <\theorem>
+    Le noyau d'une forme bilinéaire, symétrique et positive est un
+    sous-espace vectoriel.
+  </theorem>
 
-  Soient <math|u,v\<in\>ker \<cal-B\>>, <math|\<alpha\>\<in\>\<bbb-R\>> et
-  <math|w=u+\<alpha\>*v>. Montrons que <math|w\<in\>ker \<cal-B\>>. Il suffit
-  d'évaluer <math|\<cal-B\>*<around|(|w,w|)>>
+  <\proof>
+    Soient <math|u,v\<in\>ker \<cal-B\>>, <math|\<alpha\>\<in\>\<bbb-R\>> et
+    <math|w=u+\<alpha\>*v>. Montrons que <math|w\<in\>ker \<cal-B\>>. Il
+    suffit d'évaluer <math|\<cal-B\><around|(|w,w|)>>
 
-  <\equation>
-    \<cal-B\>*<around|(|w,w|)>=\<cal-B\>*<around|(|u+\<alpha\>*v,u+\<alpha\>*v|)>=\<cal-B\>*<around|(|u,u|)>+2*\<alpha\>*\<cal-B\>*<around|(|u,v|)>+\<alpha\>*\<twosuperior\>*\<cal-B\>*<around|(|v,v|)>,
-  </equation>
+    <\equation>
+      \<cal-B\><around|(|w,w|)>=\<cal-B\><around|(|u+\<alpha\>*v,u+\<alpha\>*v|)>=\<cal-B\><around|(|u,u|)>+2*\<alpha\>*\<cal-B\><around|(|u,v|)>+\<alpha\><rsup|2>*\<cal-B\><around|(|v,v|)>,
+    </equation>
 
-  où l'on a tenu compte de la symétrie de <math|\<cal-B\>> pour écrire que
-  <math|\<cal-B\>*<around|(|u,v|)>=\<cal-B\>*<around|(|v,u|)>>. Comme
-  <math|u,v\<in\>ker \<cal-B\>>, le premier et le dernier terme sont nuls,
-  soit <math|\<cal-B\>*<around|(|w,w|)>=2*\<alpha\>*\<cal-B\>*<around|(|u,v|)>>.
-  La forme bilinéaire étant positive, cette grandeur est positive, <em|quelle
-  que soit la valeur de <math|\<alpha\>\<in\>\<bbb-R\>>>. On en déduit donc
-  que <math|\<cal-B\>*<around|(|u,v|)>=0>, puis que
-  <math|\<cal-B\>*<around|(|w,w|)>=0>.
+    où l'on a tenu compte de la symétrie de <math|\<cal-B\>> pour écrire que
+    <math|\<cal-B\><around|(|u,v|)>=\<cal-B\><around|(|v,u|)>>. Comme
+    <math|u,v\<in\>ker \<cal-B\>>, le premier et le dernier terme sont nuls,
+    soit <math|\<cal-B\><around|(|w,w|)>=2*\<alpha\>*\<cal-B\><around|(|u,v|)>>.
+    La forme bilinéaire étant positive, cette grandeur est positive,
+    <em|quelle que soit la valeur de <math|\<alpha\>\<in\>\<bbb-R\>>>. On en
+    déduit donc que <math|\<cal-B\><around|(|u,v|)>=0>, puis que
+    <math|\<cal-B\>*<around|(|w,w|)>=0> et donc que <math|w\<in\>ker
+    \<cal-B\>.>
+  </proof>
 
-  Soit <math|u\<in\>V>. Alors
+  <\theorem>
+    Soit <math|u\<in\>V>. Alors
 
-  <\equation>
-    u\<in\>ker \<cal-B\>*<space|1em><text|ssi><space|1em><text|pour tout
-    >v\<in\>V,\<cal-B\>*<around|(|u,v|)>=0.
-  </equation>
+    <\equation>
+      u\<in\>ker \<cal-B\><space|1em><text|ssi><space|1em><text|pour tout
+      >v\<in\>V,\<cal-B\><around|(|u,v|)>=0.
+    </equation>
+  </theorem>
 
-  Soient <math|u\<in\>ker \<cal-B\>>, <math|v\<in\>V> et
-  <math|\<alpha\>\<in\>\<bbb-R\>>. Comme précédemment, on écrit que
-  <math|\<cal-B\>*<around|(|w,w|)>\<geq\>0>, avec <math|w=\<alpha\>*u+v>
+  <\proof>
+    Soient <math|u\<in\>ker \<cal-B\>>, <math|v\<in\>V> et
+    <math|\<alpha\>\<in\>\<bbb-R\>>. Comme précédemment, on écrit que
+    <math|\<cal-B\><around|(|w,w|)>\<geq\>0>, avec <math|w=\<alpha\>*u+v>
 
-  <\equation>
-    \<cal-B\>*<around|(|w,w|)>=2*\<alpha\>*\<cal-B\>*<around|(|u,v|)>+\<cal-B\>*<around|(|v,v|)>\<geq\>0,
-  </equation>
+    <\equation>
+      \<cal-B\><around|(|w,w|)>=2*\<alpha\>*\<cal-B\><around|(|u,v|)>+\<cal-B\><around|(|v,v|)>\<geq\>0,
+    </equation>
 
-  où l'on a tenu compte de ce que <math|\<cal-B\>*<around|(|u,u|)>=0>.
-  L'expression précédente, affine en <math|\<alpha\>>, a un signe constant.
-  Le terme linéaire en <math|\<alpha\>> est donc nul, soit
-  <math|\<cal-B\>*<around|(|u,v|)>=0>.
-
-  Réciproquement, si <math|\<cal-B\>*<around|(|u,v|)>=0> pour tout
-  <math|v\<in\>V>, alors <math|\<cal-B\>*<around|(|u,u|)>=0> (en prenant
-  <math|v=u>).
+    où l'on a tenu compte de ce que <math|\<cal-B\><around|(|u,u|)>=0>.
+    L'expression précédente, affine en <math|\<alpha\>>, a un signe constant.
+    Le terme linéaire en <math|\<alpha\>> est donc nul, soit
+    <math|\<cal-B\><around|(|u,v|)>=0>. Réciproquement, si
+    <math|\<cal-B\><around|(|u,v|)>=0> pour tout <math|v\<in\>V>, alors
+    <math|\<cal-B\><around|(|u,u|)>=0> (en prenant <math|v=u>).
+  </proof>
 
   <section|Développements limités le long d'une branche bifurquée du
   diagramme d'équilibre>

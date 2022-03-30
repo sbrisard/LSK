@@ -679,52 +679,85 @@
   fixée, la méthode précédente est donc appliquée avec
 
   <\equation>
-    <label|eq20220107054629>f<around|(|\<eta\>|)>=\<cal-E\><rsub|,u>*<around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>|]>*<space|1em><text|et><space|1em>F*<around|(|\<eta\>,\<lambda\>|)>=\<cal-E\><rsub|,u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;<wide|u|^>|]>.
+    <label|eq20220107054629>f<around|(|\<eta\>|)>=\<cal-E\><rsub|,u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>|]><space|1em><text|et><space|1em>F<around|(|\<eta\>,\<lambda\>|)>=\<cal-E\><rsub|,u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;<wide|u|^>|]>.
   </equation>
 
-  On remarque tout d'abord que <math|F*<around|(|0,\<lambda\>|)>=\<cal-E\><rsub|,u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>,\<lambda\>;<wide|u|^>|]>=0>,
+  On remarque tout d'abord que <math|F<around|(|0,\<lambda\>|)>=\<cal-E\><rsub|,u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>,\<lambda\>;<wide|u|^>|]>=0>,
   puisque <math|u<rsup|\<ast\>><around|(|\<lambda\>|)>> est un point
   d'équilibre. En dérivant par rapport à <math|\<lambda\>>, on obtient
 
   <\equation>
-    <label|eq20211112164240><frac|\<partial\><rsup|k>*F|\<partial\>*\<lambda\><rsup|k>>*<around|(|0,\<lambda\>|)>=0.
+    <label|eq20211112164240><frac|\<partial\><rsup|k>F|\<partial\>\<lambda\><rsup|k>><around|(|0,\<lambda\>|)>=0.
   </equation>
 
-  En dérivant une première fois l'expression<nbsp><eqref|eq20220107054629> de
-  <math|F>, on obtient
+  En dérivant par rapport à <math|\<eta\>>
+  l'expression<nbsp><eqref|eq20220107054629> de <math|F>, on obtient
+  successivement
+
+  <\equation>
+    \<partial\><rsub|\<eta\>>F<around|(|\<eta\>,\<lambda\>|)>=\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'><around|(|\<eta\>|)>,<wide|u|^>|]>,
+  </equation>
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>><rsup|2>F<around|(|\<eta\>,\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|,u\<nocomma\>u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'><around|(|\<eta\>|)>,U<rprime|'><around|(|\<eta\>|)>,<wide|u|^>|]>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|''><around|(|\<eta\>|)>,<wide|u|^>|]>,<eq-number>>>>>
+  </eqnarray*>
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<partial\><rsub|\<eta\>>*F*<around|(|\<eta\>,\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|,u*u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'><around|(|\<eta\>|)>,<wide|u|^>|]>,<eq-number>>>|<row|<cell|\<partial\><rsub|\<eta\>*\<eta\>>*\<twosuperior\>*F*<around|(|\<eta\>,\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|,u*u*u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'><around|(|\<eta\>|)>,U<rprime|'><around|(|\<eta\>|)>,<wide|u|^>|]>>>|<row|<cell|>|<cell|>|<cell|+\<cal-E\><rsub|,u*u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|''><around|(|\<eta\>|)>,<wide|u|^>|]>,<eq-number>>>|<row|<cell|\<partial\><rsub|\<eta\>*\<eta\>*\<eta\>><rsup|3>*F*<around|(|\<eta\>,\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|,u*u*u*u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'><around|(|\<eta\>|)>,U<rprime|'><around|(|\<eta\>|)>,U<rprime|'><around|(|\<eta\>|)>,<wide|u|^>|]>>>|<row|<cell|>|<cell|>|<cell|+3*\<cal-E\><rsub|,u*u*u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'><around|(|\<eta\>|)>,U<rprime|''><around|(|\<eta\>|)>,<wide|u|^>|]>>>|<row|<cell|>|<cell|>|<cell|+\<cal-E\><rsub|,u*u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'''><around|(|\<eta\>|)>,<wide|u|^>|]>,<eq-number>>>>>
+    <tformat|<table|<row|<cell|\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<eta\>><rsup|3>F<around|(|\<eta\>,\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|,u\<nocomma\>u\<nocomma\>u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'><around|(|\<eta\>|)>,U<rprime|'><around|(|\<eta\>|)>,U<rprime|'><around|(|\<eta\>|)>,<wide|u|^>|]>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+3*\<cal-E\><rsub|,u\<nocomma\>u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'><around|(|\<eta\>|)>,U<rprime|''><around|(|\<eta\>|)>,<wide|u|^>|]>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'''><around|(|\<eta\>|)>,<wide|u|^>|]>,<eq-number>>>>>
   </eqnarray>
 
   soit, en <math|\<eta\>=0>
 
-  <\eqnarray>
-    <tformat|<table|<row|<cell|\<partial\><rsub|\<eta\>>*F*<around|(|0,\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|2>*<around|(|\<lambda\>;u<rsub|1>,<wide|u|^>|)>,<eq-number>>>|<row|<cell|\<partial\><rsub|\<eta\>*\<eta\>>*\<twosuperior\>*F*<around|(|0,\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|3>*<around|(|\<lambda\>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+2*\<cal-E\><rsub|2>*<around|(|\<lambda\>;u<rsub|2>,<wide|u|^>|)>,<eq-number>>>|<row|<cell|\<partial\><rsub|\<eta\>*\<eta\>*\<eta\>><rsup|3>*F*<around|(|0,\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|4>*<around|(|\<lambda\>;u<rsub|1>,u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+6*\<cal-E\><rsub|3>*<around|(|\<lambda\>;u<rsub|1>,u<rsub|2>,<wide|u|^>|)>+6*\<cal-E\><rsub|2>*<around|(|\<lambda\>;u<rsub|3>,<wide|u|^>|)>.<eq-number>>>>>
-  </eqnarray>
+  <\equation>
+    \<partial\><rsub|\<eta\>>F<around|(|0,\<lambda\>|)>=\<cal-E\><rsub|2><around|(|\<lambda\>;u<rsub|1>,<wide|u|^>|)>,
+  </equation>
+
+  <\equation>
+    \<partial\><rsub|\<eta\>\<nocomma\>\<eta\>><rsup|2>F<around|(|0,\<lambda\>|)>=\<cal-E\><rsub|3><around|(|\<lambda\>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+2*\<cal-E\><rsub|2><around|(|\<lambda\>;u<rsub|2>,<wide|u|^>|)>,
+  </equation>
+
+  <\equation>
+    \<partial\><rsub|\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<eta\>><rsup|3>F<around|(|0,\<lambda\>|)>=\<cal-E\><rsub|4><around|(|\<lambda\>;u<rsub|1>,u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+6*\<cal-E\><rsub|3><around|(|\<lambda\>;u<rsub|1>,u<rsub|2>,<wide|u|^>|)>+6*\<cal-E\><rsub|2><around|(|\<lambda\>;u<rsub|3>,<wide|u|^>|)>.
+  </equation>
 
   Les dérivées croisées de <math|F> en <math|<around|(|0,\<lambda\>|)>>
   s'obtiennent par simple dérivation des relations précédentes par rapport à
   <math|\<lambda\>>
 
-  <\eqnarray>
-    <tformat|<table|<row|<cell|\<partial\><rsub|\<eta\>*\<lambda\>>*\<twosuperior\>*F*<around|(|0,\<lambda\>|)>>|<cell|=>|<cell|<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\>;u<rsub|1>,<wide|u|^>|)>,<eq-number>>>|<row|<cell|\<partial\><rsub|\<eta\>*\<eta\>*\<lambda\>><rsup|3>*F*<around|(|0,\<lambda\>|)>>|<cell|=>|<cell|<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+2<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\>;u<rsub|2>,<wide|u|^>|)>,<eq-number>>>|<row|<cell|\<partial\><rsub|\<eta\>*\<lambda\>*\<lambda\>><rsup|3>*F*<around|(|0,\<lambda\>|)>>|<cell|=>|<cell|<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\>;u<rsub|1>,<wide|u|^>|)>.<eq-number>>>>>
-  </eqnarray>
+  <\equation>
+    \<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>><rsup|2>F<around|(|0,\<lambda\>|)>=<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\>;u<rsub|1>,<wide|u|^>|)>,
+  </equation>
+
+  <\equation>
+    \<partial\><rsub|\<eta\>\<nocomma\>\<eta\>\<nocomma\>\<lambda\>><rsup|3>F<around|(|0,\<lambda\>|)>=<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+2*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\>;u<rsub|2>,<wide|u|^>|)>,
+  </equation>
+
+  <\equation>
+    \<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>\<nocomma\>\<lambda\>><rsup|3>F<around|(|0,\<lambda\>|)>=<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\>;u<rsub|1>,<wide|u|^>|)>.
+  </equation>
 
   En insérant les résultats précédentes dans les relations
   générales<nbsp><eqref|eq20220107060454>\U<eqref|eq20220107060500>, on
-  trouve finalement les expressions suivantes des dérivées successives de
-  <math|f> en <math|\<eta\>=0>
+  trouve alors les expressions suivantes des dérivées successives de <math|f>
+  en <math|\<eta\>=0>
+
+  <\equation>
+    f<rprime|'><around*|(|0|)>=\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>,
+  </equation>
+
+  <\equation>
+    f<rprime|''><around*|(|0|)>=\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+2*\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>+2*\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>|)>,
+  </equation>
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|f<rprime|'><around|(|0|)>>|<cell|=>|<cell|\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>,<eq-number>>>|<row|<cell|f<rprime|''><around|(|0|)>>|<cell|=>|<cell|\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+2*\<lambda\><rsub|1><wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>+2*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>|)>,<eq-number>>>|<row|<cell|f<rprime|'''><around|(|0|)>>|<cell|=>|<cell|\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+6*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|2>,<wide|u|^>|)>+6*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|3>,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|+3*\<lambda\><rsub|1>*<around*|[|<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+2<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>|)>|]>>>|<row|<cell|>|<cell|>|<cell|+3*\<lambda\><rsub|1>*\<twosuperior\><wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>+6*\<lambda\><rsub|2><wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>.<eq-number>>>>>
+    <tformat|<table|<row|<cell|f<rprime|'''><around|(|0|)>>|<cell|=>|<cell|\<cal-E\><rsub|4><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+6*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|2>,<wide|u|^>|)>+6*\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;u<rsub|3>,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+3*\<lambda\><rsub|1>*<around*|[|<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+2*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>|)>|]>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+3*\<lambda\><rsub|1><rsup|>*<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>+6*\<lambda\><rsub|2>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>.<eq-number>>>>>
   </eqnarray>
 
   On en déduit finalement le développement limité à l'ordre 3 en
   <math|\<eta\>> du résidu
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u>*<around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>|]>>|<cell|=>|<cell|\<eta\>*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>+<tfrac|1|2>\<eta\>*\<twosuperior\>*<around*|[|\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+2*\<lambda\><rsub|1><wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>+2*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>|)>|]>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|6>\<eta\><rsup|3>*<around*|{|\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+6*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|2>,<wide|u|^>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|+6*\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;u<rsub|3>,<wide|u|^>|)>+3*\<lambda\><rsub|1><around*|[|<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+2<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>|)>|]>+3*\<lambda\><rsub|1>*\<twosuperior\><wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+6*\<lambda\><rsub|2><wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>|}>+o<around|(|\<eta\><rsup|3>|)>.<eq-number><label|eq20220107080901>>>>>
+    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>|]>>|<cell|=>|<cell|\<eta\>*\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+<tfrac|1|2>*\<eta\><rsup|2>*<around*|[|\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+2*\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>+2*\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>|)>|]>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+<tfrac|1|6>*\<eta\><rsup|3>*<around*|{|\<cal-E\><rsub|4><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+6*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|2>,<wide|u|^>|)>|\<nobracket\>>+6*\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;u<rsub|3>,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+3*\<lambda\><rsub|1>*<around*|[|<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+2<wide|*\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>|)>|]>+3*\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|\<nosymbol\>+6*\<lambda\><rsub|2>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>|}>+o<around|(|\<eta\><rsup|3>|)>.<eq-number><label|eq20220107080901>>>>>
   </eqnarray>
 
   <subsection|Développement limité de l'énergie><label|sec20220121172919>

@@ -40,8 +40,8 @@
   Noter que <math|\<cal-E\><rsub|2>>, <math|\<cal-E\><rsub|3>> et
   <math|\<cal-E\><rsub|4>> sont des formes bi-, tri- et quadri-linéaires,
   respectivement. L'application de ces formes à des éléments de <math|U> sera
-  notée <math|\<cal-E\><rsub|2>*<around|(|\<lambda\>;u,v|)>>,
-  <math|\<cal-E\><rsub|3>*<around|(|\<lambda\>;u,v,w|)>>, etc.... La dérivée
+  notée <math|\<cal-E\><rsub|2><around|(|\<lambda\>;u,v|)>>,
+  <math|\<cal-E\><rsub|3><around|(|\<lambda\>;u,v,w|)>>, etc.... La dérivée
   de ces formes par rapport à <math|\<lambda\>> sera notée à l'aide d'un
   point supérieur (<math|<wide|\<cal-E\><rsub|2>|\<dot\>>>,
   <math|<wide|\<cal-E\><rsub|3>|\<dot\>>>, ...).

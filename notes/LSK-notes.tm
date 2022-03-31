@@ -918,7 +918,7 @@
   <math|\<alpha\>\<in\>\<bbb-R\>> de la Hessienne
 
   <\equation>
-    <label|eq20211115082122>\<cal-E\><rsub|,u*u>*<around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>|]><around|(|v,<wide|u|^>|)>=\<alpha\>*<around|\<langle\>|v,<wide|u|^>|\<rangle\>>*<space|1em><text|pour
+    <label|eq20211115082122>\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>|]><around|(|v,<wide|u|^>|)>=\<alpha\>*<around|\<langle\>|v,<wide|u|^>|\<rangle\>><space|1em><text|pour
     tout><space|1em><wide|u|^>\<in\>V.
   </equation>
 
@@ -926,7 +926,7 @@
   <math|v> et <math|\<alpha\>>
 
   <\equation>
-    <label|eq20211115082037>v=v<rsub|0>+\<eta\>*v<rsub|1>+o<around|(|\<eta\>|)>*<space|1em><text|et><space|1em>\<alpha\>=\<alpha\><rsub|0>+\<eta\>*\<alpha\><rsub|1>+o<around|(|\<eta\>|)>
+    <label|eq20211115082037>v=v<rsub|0>+\<eta\>*v<rsub|1>+o<around|(|\<eta\>|)><space|1em><text|et><space|1em>\<alpha\>=\<alpha\><rsub|0>+\<eta\>*\<alpha\><rsub|1>+o<around|(|\<eta\>|)>
   </equation>
 
   Les développements limités<nbsp><eqref|eq20211115082025> et
@@ -934,7 +934,7 @@
   problème<nbsp><eqref|eq20211115082122>
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u*u>*<around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>|]><around|(|v,<wide|w|^>|)>>|<cell|=>|<cell|\<cal-E\><rsub|2><rsup|\<ast\>>*<around|(|v<rsub|0>,<wide|w|^>|)>+\<eta\>*<around*|[|\<cal-E\><rsub|3><rsup|\<ast\>>*<around|(|u<rsub|1>,v<rsub|0>,<wide|w|^>|)>+\<lambda\><rsub|1><wide|\<cal-E\><rsub|2>|\<dot\>><rsup|\<ast\>><around|(|v<rsub|0>,<wide|w|^>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+\<cal-E\><rsub|2><rsup|\<ast\>>*<around|(|v<rsub|1>,<wide|w|^>|)>|]>+o<around|(|\<eta\>|)><eq-number>>>>>
+    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>|]><around|(|v,<wide|w|^>|)>>|<cell|=>|<cell|\<cal-E\><rsub|2><rsup|><around|(|\<lambda\><rsub|0>;v<rsub|0>,<wide|w|^>|)>+\<eta\>*<around*|[|\<cal-E\><rsub|3><rsup|><around|(|\<lambda\><rsub|0>;u<rsub|1>,v<rsub|0>,<wide|w|^>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;v<rsub|0>,<wide|w|^>|)><around*|\<nobracket\>|+\<cal-E\><rsub|2><rsup|><around|(|\<lambda\><rsub|0>;v<rsub|1>,<wide|w|^>|)>|]>+o<around|(|\<eta\>|)><eq-number>>>>>
   </eqnarray>
 
   <\equation>
@@ -944,36 +944,36 @@
   On obtient le problème variationnel d'ordre 0
 
   <\equation>
-    \<cal-E\><rsub|2><rsup|\<ast\>>*<around|(|v<rsub|0>,<wide|w|^>|)>=\<alpha\><rsub|0>*<around|\<langle\>|v<rsub|0>,<wide|w|^>|\<rangle\>>*<space|1em><text|pour
+    \<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;v<rsub|0>,<wide|w|^>|)>=\<alpha\><rsub|0>*<around|\<langle\>|v<rsub|0>,<wide|w|^>|\<rangle\>><space|1em><text|pour
     tout><space|1em><wide|w|^>\<in\>V,
   </equation>
 
   qui montre que <math|v<rsub|0>> est le vecteur propre de
-  <math|\<cal-E\><rsub|2><rsup|\<ast\>>> associé à la valeur propre
-  <math|\<alpha\><rsub|0>>. Si <math|\<alpha\><rsub|0>\<neq\>0>,
-  <math|\<cal-E\><rsub|2><rsup|\<ast\>>> étant positive par hypothèse, on a
-  nécessairement <math|\<alpha\><rsub|0>\<gtr\>0>, et la valeur propre de la
-  hessienne est positive.
-
-  On considère maintenant le cas où <math|\<alpha\><rsub|0>>, c'est-à-dire
-  que <math|v<rsub|0>\<in\>ker \<cal-E\><rsub|2><rsup|\<ast\>>>. En prenant
-  <math|<wide|w|^>\<in\>ker \<cal-E\><rsub|2><rsup|\<ast\>>>, on obtient
-  alors le problème variationnel d'ordre 1
+  <math|\<cal-E\><rsub|2><rsup|><around*|(|\<lambda\><rsub|0>|)>> associé à
+  la valeur propre <math|\<alpha\><rsub|0>>. Si
+  <math|\<alpha\><rsub|0>\<neq\>0>, <math|\<cal-E\><rsub|2><rsup|><around*|(|\<lambda\><rsub|0>|)>>
+  étant positive par hypothèse, on a nécessairement
+  <math|\<alpha\><rsub|0>\<gtr\>0>, et la valeur propre de la hessienne est
+  positive. On considère maintenant le cas où <math|\<alpha\><rsub|0>>,
+  c'est-à-dire que <math|v<rsub|0>\<in\>ker
+  \<cal-E\><rsub|2><rsup|><around*|(|\<lambda\><rsub|0>|)>>. En prenant
+  <math|<wide|w|^>\<in\>ker \<cal-E\><rsub|2><around*|(|\<lambda\><rsub|0>|)>>,
+  on obtient alors le problème variationnel d'ordre 1
 
   <\equation>
-    \<cal-E\><rsub|3><rsup|\<ast\>>*<around|(|u<rsub|1>,v<rsub|0>,<wide|w|^>|)>+\<lambda\><rsub|1><wide|\<cal-E\><rsub|2>|\<dot\>><rsup|\<ast\>><around|(|v<rsub|0>,<wide|w|^>|)>=\<alpha\><rsub|1>*<around|\<langle\>|v<rsub|0>,<wide|w|^>|\<rangle\>>*<space|1em><text|pour
-    tout><space|1em><wide|w|^>\<in\>ker \<cal-E\><rsub|2><rsup|\<ast\>>.
+    \<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,v<rsub|0>,<wide|w|^>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;v<rsub|0>,<wide|w|^>|)>=\<alpha\><rsub|1>*<around|\<langle\>|v<rsub|0>,<wide|w|^>|\<rangle\>><space|1em><text|pour
+    tout><space|1em><wide|w|^>\<in\>ker \<cal-E\><rsub|2><around*|(|\<lambda\><rsub|0>|)>.
   </equation>
 
   En posant <math|u<rsub|1>=\<xi\><rsub|i>*a<rsub|i>> et
   <math|v<rsub|0>=\<chi\><rsub|j>*a<rsub|j>>, on obtient l'équation
 
   <\equation>
-    <around*|(|\<cal-E\><rsub|3,i*j*k><rsup|\<ast\>>*\<xi\><rsub|k>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|2,i*j><rsup|\<ast\>>|)>*\<chi\><rsub|j>=\<alpha\><rsub|1>*\<chi\><rsub|i>,
+    <around*|[|\<cal-E\><rsub|i\<nocomma\>j\<nocomma\>k><rsup|><around*|(|\<lambda\><rsub|0>|)>*\<xi\><rsub|k>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|i\<nocomma\>j><around*|(|\<lambda\><rsub|0>|)>|]>*\<chi\><rsub|j>=\<alpha\><rsub|1>*\<chi\><rsub|i>,
   </equation>
 
   qui est un problème aux valeurs propres pour la matrice symétrique
-  <math|<around|(|\<cal-E\><rsub|3,i*j*k><rsup|\<ast\>>*\<xi\><rsub|k>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|2,i*j><rsup|\<ast\>>|)><rsub|1\<leq\>i,j\<leq\>m>>
+  <math|<around*|[|\<cal-E\><rsub|i\<nocomma\>j\<nocomma\>k><rsup|><around*|(|\<lambda\><rsub|0>|)>*\<xi\><rsub|k>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|i\<nocomma\>j><around*|(|\<lambda\><rsub|0>|)>|]><rsub|1\<leq\>i,j\<leq\>m>>.
 </body>
 
 <\initial>

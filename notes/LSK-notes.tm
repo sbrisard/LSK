@@ -856,51 +856,59 @@
   On cherche maintenant un développement limité de la hessienne de l'énergie.
   Les fonctions test <math|<wide|u|^>,<wide|v|^>\<in\>U> étant fixées, on
   applique la méthode du Ÿ<reference|sec20220107121442> à la fonction
-  <math|f<around|(|\<eta\>|)>=F*<around|[|\<eta\>,\<lambda\><rsub|0>+\<Lambda\><around|(|\<eta\>|)>|]>>,
+  <math|f<around|(|\<eta\>|)>=F<around|[|\<eta\>,\<lambda\><rsub|0>+\<Lambda\><around|(|\<eta\>|)>|]>>,
   avec
 
   <\equation>
-    F*<around|(|\<eta\>,\<lambda\>|)>=\<cal-E\><rsub|,u*u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;<wide|u|^>,<wide|v|^>|]>.
+    F<around|(|\<eta\>,\<lambda\>|)>=\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;<wide|u|^>,<wide|v|^>|]>.
   </equation>
 
-  On observe tout d'abord que <math|F*<around|(|0,\<lambda\>|)>=\<cal-E\><rsub|2>*<around|(|\<lambda\>;<wide|u|^>,<wide|v|^>|)>>,
+  On observe tout d'abord que <math|F<around|(|0,\<lambda\>|)>=\<cal-E\><rsub|2><around|(|\<lambda\>;<wide|u|^>,<wide|v|^>|)>>,
   soit, en dérivant par rapport à <math|\<lambda\>>
 
   <\equation>
-    \<partial\><rsub|\<lambda\>>*F*<around|(|0,\<lambda\>|)>=<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\>;<wide|u|^>,<wide|v|^>|)>*<space|1em><text|et><space|1em>\<partial\><rsub|\<lambda\>*\<lambda\>>*\<twosuperior\>*F*<around|(|0,\<lambda\>|)>=<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\>;<wide|u|^>,<wide|v|^>|)>.
+    \<partial\><rsub|\<lambda\>>F<around|(|0,\<lambda\>|)>=<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\>;<wide|u|^>,<wide|v|^>|)><space|1em><text|et><space|1em>\<partial\><rsub|\<lambda\>\<nocomma\>\<lambda\>><rsup|2>F<around|(|0,\<lambda\>|)>=<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\>;<wide|u|^>,<wide|v|^>|)>.
   </equation>
 
   On trouve de même successivement
 
+  <\equation>
+    \<partial\><rsub|\<eta\>>F<around|(|\<eta\>,\<lambda\>|)>=\<cal-E\><rsub|,u\<nocomma\>u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'><around|(|\<eta\>|)>,<wide|u|^>,<wide|v|^>|]>,
+  </equation>
+
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<partial\><rsub|\<eta\>>*F*<around|(|\<eta\>,\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|,u*u*u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'><around|(|\<eta\>|)>,<wide|u|^>,<wide|v|^>|]>,<eq-number>>>|<row|<cell|\<partial\><rsub|\<eta\>*\<eta\>>*\<twosuperior\>*F*<around|(|\<eta\>,\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|,u*u*u*u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'><around|(|\<eta\>|)>,U<rprime|'><around|(|\<eta\>|)>,<wide|u|^>,<wide|v|^>|]>>>|<row|<cell|>|<cell|>|<cell|+\<cal-E\><rsub|,u*u*u>*<around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|''><around|(|\<eta\>|)>,<wide|u|^>,<wide|v|^>|]>,<eq-number>>>>>
+    <tformat|<table|<row|<cell|\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>><rsup|2>F<around|(|\<eta\>,\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|,u\<nocomma\>u\<nocomma\>u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'><around|(|\<eta\>|)>,U<rprime|'><around|(|\<eta\>|)>,<wide|u|^>,<wide|v|^>|]>>>|<row|<cell|>|<cell|>|<cell|+\<cal-E\><rsub|,u\<nocomma\>u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|''><around|(|\<eta\>|)>,<wide|u|^>,<wide|v|^>|]>,<eq-number>>>>>
   </eqnarray>
 
   soit, en <math|\<eta\>=0>
 
-  <\eqnarray>
-    <tformat|<table|<row|<cell|\<partial\><rsub|\<eta\>>*F*<around|(|0,\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|3>*<around|(|\<lambda\>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>,<eq-number>>>|<row|<cell|\<partial\><rsub|\<eta\>*\<eta\>>*\<twosuperior\>*F*<around|(|0,\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|4>*<around|(|\<lambda\>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+2*\<cal-E\><rsub|3>*<around|(|\<lambda\>;u<rsub|2>,<wide|u|^>,<wide|v|^>|)>,<eq-number>>>>>
-  </eqnarray>
+  <\equation>
+    \<partial\><rsub|\<eta\>>F<around|(|0,\<lambda\>|)>=\<cal-E\><rsub|3><around|(|\<lambda\>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)><space|1em>et<space|1em>\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>><rsup|2>F<around|(|0,\<lambda\>|)>=\<cal-E\><rsub|4><around|(|\<lambda\>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+2*\<cal-E\><rsub|3><around|(|\<lambda\>;u<rsub|2>,<wide|u|^>,<wide|v|^>|)>,
+  </equation>
 
   et en dérivant cette fois par rapport à <math|\<lambda\>>
 
   <\equation>
-    \<partial\><rsub|\<eta\>*\<lambda\>>*\<twosuperior\>*F*<around|(|0,\<lambda\>|)>=<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>.
+    \<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>><rsup|2>F<around|(|0,\<lambda\>|)>=<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>.
   </equation>
 
   En insérant les résultats précédents dans les
   expressions<nbsp><eqref|eq20220107060454> et <eqref|eq20220107124311>, on
   trouve
 
+  <\equation>
+    f<rprime|'><around|(|0|)>=\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+\<lambda\><rsub|1><wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>,
+  </equation>
+
   <\eqnarray>
-    <tformat|<table|<row|<cell|f<rprime|'><around|(|0|)>>|<cell|=>|<cell|\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+\<lambda\><rsub|1><wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>,<eq-number>>>|<row|<cell|f<rprime|''><around|(|0|)>>|<cell|=>|<cell|\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+2*\<lambda\><rsub|1><wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+\<lambda\><rsub|1>*\<twosuperior\><wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>>>|<row|<cell|>|<cell|>|<cell|+2*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|v|^>|)>+2*\<lambda\><rsub|2><wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>.<eq-number>>>>>
+    <tformat|<table|<row|<cell|f<rprime|''><around|(|0|)>>|<cell|=>|<cell|\<cal-E\><rsub|4><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+2*\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+2*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|v|^>|)>+2*\<lambda\><rsub|2>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>.<eq-number>>>>>
   </eqnarray>
 
   qui conduisent finalement au développement limité suivant, à l'ordre 2 en
   <math|\<eta\>>
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u*u>*<around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>,<wide|v|^>|]>>|<cell|=>|<cell|\<cal-E\><rsub|2>*<around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>+\<eta\>*<around*|[|\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+\<lambda\><rsub|1><wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>|]>+<tfrac|1|2>\<eta\>*\<twosuperior\>*<around*|[|\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|v|^>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|+2*\<lambda\><rsub|1><wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+\<lambda\><rsub|1>*\<twosuperior\><wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+2*\<cal-E\><rsub|3>*<around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|v|^>|)>+2*\<lambda\><rsub|2><wide|\<cal-E\><rsub|2>|\<dot\>><rsup|\<ast\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>|]>+o<around|(|\<eta\>*\<twosuperior\>|)>.<eq-number>>>>>
+    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>,<wide|v|^>|]>>|<cell|=>|<cell|\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>+\<eta\>*<around*|[|\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>|\<nobracket\>><around*|\<nobracket\>|+\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>|]>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+<tfrac|1|2>\<eta\><rsup|2>*<around*|[|\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|v|^>|)>|\<nobracket\>>+2*\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\><around*|\<nobracket\>|+2*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|v|^>|)>+2*\<lambda\><rsub|2>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>|]>+o<around|(|\<eta\><rsup|2>|)>.<eq-number>>>>>
   </eqnarray>
 
   <subsection|Développement limité des valeurs propres et vecteurs propres de
@@ -1006,8 +1014,8 @@
     <associate|eq20211115075817|<tuple|12|4>>
     <associate|eq20211115075835|<tuple|13|4>>
     <associate|eq20211115082025|<tuple|39|8>>
-    <associate|eq20211115082037|<tuple|117|18>>
-    <associate|eq20211115082122|<tuple|116|18>>
+    <associate|eq20211115082037|<tuple|116|18>>
+    <associate|eq20211115082122|<tuple|115|18>>
     <associate|eq20211210131623|<tuple|22|5>>
     <associate|eq20211221155859|<tuple|10|3>>
     <associate|eq20220107054629|<tuple|74|13>>

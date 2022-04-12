@@ -1,35 +1,43 @@
-\documentclass{article}
-\usepackage[french]{babel}
-\usepackage{amsmath,amssymb,latexsym,accents}
+\newcommand{\sbtitle}{Notes relatives à la méthode asymptotique de Lyapunov–Schmidt–Koiter}
+\newcommand{\sbauthor}{Sébastien Brisard}
+\newcommand{\sbaddress}{Univ Gustave Eiffel, Ecole des Ponts, IFSTTAR, CNRS, Navier, F-77454 Marne-la-Vall\'ee, France}
+\newcommand{\sbsubject}{Note bibliographique}
 
-%%%%%%%%%% Start TeXmacs macros
-\newcommand{\tmaffiliation}[1]{\\ #1}
-\newcommand{\tmemail}[1]{\\ \textit{Email:} \texttt{#1}}
-\newenvironment{proof}{\noindent\textbf{Proof\ }}{\hspace*{\fill}$\Box$\medskip}
-\newcommand{\nonconverted}[1]{\mbox{}}
-\newtheorem{theorem}{Theorem}
-%%%%%%%%%% End TeXmacs macros
+\documentclass[12pt, final]{amsart}
 
-%
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
 
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{amsthm}
+\newtheorem{remark}{Remarque}
+\newtheorem{theorem}{Théorème}
+
+\usepackage[backend=biber,bibencoding=utf8,doi=false,giveninits=true,isbn=false,maxnames=10,minnames=5,sortcites=true,style=authoryear,texencoding=utf8,url=false]{biblatex}
+\addbibresource{stab.bib}
+
+\usepackage[breaklinks=true, colorlinks=true, pdftitle={\sbtitle}, pdfauthor={\sbauthor}, pdfsubject={\sbsubject}, urlcolor=blue]{hyperref}
+
+\usepackage[color={1 1 0}]{pdfcomment}
+
+\usepackage{unicode-math}
+\setmainfont{XITS}
+\setmathfont{XITS Math}
 
 \begin{document}
-
-\title{Notes relatives {\`a} la m{\'e}thode asymptotique de
-Lyapunov--Schmidt--Koiter}
-
-\author{
-  S{\'e}bastien Brisard
-  \tmaffiliation{Univ Gustave Eiffel, Ecole des Ponts, IFSTTAR, CNRS, Navier,
-  F-77454 Marne-la-Vall{\'e}e, France}
-  \tmemail{sebastien.brisard@univ-eiffel.fr}
-}
-
-\maketitle
+\title{\sbtitle}
+\author{\sbauthor}
+\address{\sbaddress}
+\email{sebastien.brisard@univ-eiffel}
 
 \begin{abstract}
   blabla
 \end{abstract}
+
+\maketitle
 
 \section{Notations}
 
@@ -185,11 +193,9 @@ On se restreindra dans ce qui suit au cas non-d{\'e}g{\'e}n{\'e}r{\'e} $u_1
 En effet, en posant $\theta = \lVert u_1 \rVert \eta$, les d{\'e}veloppements
 pr{\'e}c{\'e}dents s'{\'e}crivent
 \begin{eqnarray}
-  \lambda & = & \lambda_0 + \theta \lVert u_1 \rVert^{- 1} \lambda_1 + \theta
-  \nonconverted{twosuperior} \lVert u_1 \rVert^{- 2} \lambda_2 + \theta^3
+  \lambda & = & \lambda_0 + \theta \lVert u_1 \rVert^{- 1} \lambda_1 + \theta^2 \lVert u_1 \rVert^{- 2} \lambda_2 + \theta^3
   \lVert u_1 \rVert^{- 3} \lambda_3 + \cdots, \\
-  u & = & u^{\ast} (\lambda) + \theta \lVert u_1 \rVert^{- 1} u_1 + \theta
-  \nonconverted{twosuperior} \lVert u_1 \rVert^{- 2} u_2 + \theta^3 \lVert u_1
+  u & = & u^{\ast} (\lambda) + \theta \lVert u_1 \rVert^{- 1} u_1 + \theta^2 \lVert u_1 \rVert^{- 2} u_2 + \theta^3 \lVert u_1
   \rVert^{- 3} u_3 +
 \end{eqnarray}
 et le terme lin{\'e}aire en $\theta$ du d{\'e}veloppement asymptotique de $u$
@@ -301,7 +307,7 @@ et l'{\'e}quation~\eqref{eq20220210143805} s'{\'e}crit
   \label{eq20220216141706} 6 A_{i  j} \xi_2^j + E_{i  j
    k  l}  \hspace{0.17em} \xi_1^j \xi_1^k \xi_1^l + 3
   \lambda_1 F_{i  j  k} \xi_1^j \xi_1^k + 3 \lambda_1^2 G_{i
-   j} \xi_1^j + 6 \lambda_2  \ring{E}_{i  j} \xi_1^j = 0,
+   j} \xi_1^j + 6 \lambda_2  \mathring{E}_{i  j} \xi_1^j = 0,
 \end{equation}
 en posant \textbf{C'est l'expression de $B_{ij}$ de Nick, voir {\'E}q.
 (AC-5.14) p. 74}
@@ -451,7 +457,7 @@ On peut compl{\`e}tement sym{\'e}triser le premier terme
   = & \eta \hat{\xi}^i  \hat{\xi}^j  [\xi_1^k \mathcal{E}_{i  j
    k} (\lambda_0) + \lambda_1  \dot{\mathcal{E}}_{i  j}
   (\lambda_0)] \nonumber\\
-  &  & + \tfrac{1}{2} \eta \nonconverted{twosuperior} \hat{\xi}^i
+  &  & + \tfrac{1}{2} \eta^2 \hat{\xi}^i
   \hat{\xi}^j  \{ \xi_1^k \xi_1^l  [\mathcal{E}_{i  j  k
    l} (\lambda_0) - 2\mathcal{E}_2 (\lambda_0 ; w_{i  j}, w_{k
    l})]  \nonumber\\
@@ -1084,4 +1090,13 @@ qui est un probl{\`e}me aux valeurs propres pour la matrice sym{\'e}trique
 $[\mathcal{E}_{i  j  k}  (\lambda_0) \xi_k + \lambda_1
 \dot{\mathcal{E}}_{i  j} (\lambda_0)]_{1 \leq i, j \leq m}$.
 
+% \printbibliography
 \end{document}
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% fill-column: 79
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-master: t
+%%% End:

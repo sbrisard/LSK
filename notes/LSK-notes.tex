@@ -3,7 +3,6 @@
 \usepackage{amsmath,amssymb,latexsym,accents}
 
 %%%%%%%%%% Start TeXmacs macros
-\newcommand{\nobracket}{}
 \newcommand{\nocomma}{}
 \newcommand{\nosymbol}{}
 \newcommand{\tmaffiliation}[1]{\\ #1}
@@ -103,7 +102,7 @@ avec $\xi, \eta \in \mathbb{R}$ {\guillemotleft} petits {\guillemotright}, $v
   \tfrac{1}{6} \mathcal{E}_3 (\xi v + \eta w, \xi v + \eta w, \xi v + \eta w)
   \nonumber\\
   &  & \nosymbol + \tfrac{1}{24} \mathcal{E}_4 (\xi v + \eta w, \xi v + \eta
-  w, \xi v + \eta w, \xi v + \eta w) +\mathcal{O} [(\xi^2 + \eta^2)^2], 
+  w, \xi v + \eta w, \xi v + \eta w) +\mathcal{O} [(\xi^2 + \eta^2)^2],
 \end{eqnarray}
 o{\`u} le terme lin{\'e}aire a {\'e}t{\'e} omis puisque $u_0$ est un point
 critique de l'{\'e}nergie. En tenant compte de la multilin{\'e}arit{\'e} et de
@@ -121,7 +120,7 @@ $v \in V$), l'expression pr{\'e}c{\'e}dente s'{\'e}crit
   &  & + \tfrac{1}{4} \xi^2 \eta^2 \mathcal{E}_4 (v, v, w, w) + \tfrac{1}{6}
   \xi \eta^3 \mathcal{E}_4 (v, w, w, w) \nonumber\\
   &  & + \tfrac{1}{24} \eta^4 \mathcal{E}_4 (w, w, w, w) +\mathcal{O} [(\xi^2
-  + \eta^2)^2], 
+  + \eta^2)^2],
 \end{eqnarray}
 o{\`u} l'on convient que toutes les diff{\'e}rentielles de $\mathcal{E}$ sont
 {\'e}valu{\'e}es au point d'{\'e}quilibre $u_0$.
@@ -180,7 +179,7 @@ On {\'e}crit toute courbe d'{\'e}quilibre passant par le point $(u_0,
 \begin{eqnarray}
   \lambda & = & \lambda_0 + \eta \lambda_1 + \eta^2 \lambda_2 + \eta^3
   \lambda_3 + \cdots,  \label{eq20211115075817}\\
-  u & = & u^{\ast} (\lambda) + \eta u_1 + \eta^2 u_2 + \eta^3 u_3 + \cdots, 
+  u & = & u^{\ast} (\lambda) + \eta u_1 + \eta^2 u_2 + \eta^3 u_3 + \cdots,
   \label{eq20211115075835}
 \end{eqnarray}
 o{\`u} $\eta$ est un param{\`e}tre, non pr{\'e}cis{\'e} pour le moment. Noter
@@ -197,7 +196,7 @@ pr{\'e}c{\'e}dents s'{\'e}crivent
   \lVert u_1 \rVert^{- 3} \lambda_3 + \cdots, \\
   u & = & u^{\ast} (\lambda) + \theta \lVert u_1 \rVert^{- 1} u_1 + \theta
   \nonconverted{twosuperior} \lVert u_1 \rVert^{- 2} u_2 + \theta^3 \lVert u_1
-  \rVert^{- 3} u_3 + 
+  \rVert^{- 3} u_3 +
 \end{eqnarray}
 et le terme lin{\'e}aire en $\theta$ du d{\'e}veloppement asymptotique de $u$
 est bien de norme 1. {\tmstrong{Que se passe-t-il si $u_1 = u_2 = \ldots = 0$
@@ -227,7 +226,7 @@ tout $\hat{u} \in U$
   + 3 \lambda_1  [\dot{\mathcal{E}_3} (\lambda_0 ; u_1, u_1, \hat{u}) + 2
   \dot{\mathcal{E}_2} (\lambda_0 ; u_2, \hat{u})] &  &  \nonumber\\
   + 3 \lambda_1^2  \ddot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) + 6
-  \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) & = & 0. 
+  \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) & = & 0.
   \label{eq20220114135717}
 \end{eqnarray}
 On d{\'e}duit de l'{\'e}quation~\eqref{eq20211112182917} que $u_1 \in V$. On
@@ -238,7 +237,7 @@ pose alors
 En prenant $\hat{u} = v_i$, l'{\'e}quation~\eqref{eq20211112183220}
 s'{\'e}crit
 \begin{equation}
-  \label{eq20220216140121} \mathcal{E}_{i \nocomma j \nocomma k} (\lambda_0) 
+  \label{eq20220216140121} \mathcal{E}_{i \nocomma j \nocomma k} (\lambda_0)
   \hspace{0.17em} \xi_1^j \xi_1^k + 2 \lambda_1  \dot{\mathcal{E}}_{i \nocomma
   j} (\lambda_0)  \hspace{0.17em} \xi_1^j = 0.
 \end{equation}
@@ -247,7 +246,7 @@ v_i + u_2^W$, o{\`u} $u_2^W \in W$. On a alors $\mathcal{E}_2 (u_2, \hat{u})
 =\mathcal{E}_2 (u_2^W, \hat{u})$ et l'{\'e}quation~\eqref{eq20211112183220}
 s'{\'e}crit
 \begin{equation}
-  \mathcal{E}_3 (\lambda_0 ; u_1, u_1, \hat{u}) + 2 \lambda_1 
+  \mathcal{E}_3 (\lambda_0 ; u_1, u_1, \hat{u}) + 2 \lambda_1
   \dot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) + 2\mathcal{E}_2 (\lambda_0 ;
   u_2^W, \hat{u}) = 0,
 \end{equation}
@@ -279,7 +278,7 @@ obtient l'{\'e}quation de bifurcation suivante
   6 \xi_2^j  [\xi_1^k \mathcal{E}_{i \nocomma j \nocomma k} (\lambda_0) +
   \lambda_1  \dot{\mathcal{E}}_{i \nocomma j} (\lambda_0)] &  &  \nonumber\\
   + \xi_1^j \xi_1^k \xi_1^l  [\mathcal{E}_{i \nocomma j \nocomma k \nocomma l}
-  (\lambda_0) + 6\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k \nocomma l})] &  & 
+  (\lambda_0) + 6\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k \nocomma l})] &  &
   \nonumber\\
   + 3 \lambda_1 \xi_1^j \xi_1^k  [\dot{\mathcal{E}}_{i \nocomma j \nocomma k}
   (\lambda_0) + 2\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_k) + 2
@@ -292,10 +291,10 @@ On remarque que certains termes peuvent {\^e}tre sym{\'e}tris{\'e}s. Ainsi
 \begin{eqnarray}
   \xi_1^j \xi_1^k \xi_1^l \mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k \nocomma
   l}) & = & \tfrac{1}{3} \xi_1^j \xi_1^k \xi_1^l  [\mathcal{E}_3 (\lambda_0 ;
-  v_i, v_j, w_{k \nocomma l}) \nobracket +\mathcal{E}_3 (\lambda_0 ; v_i, v_k,
+  v_i, v_j, w_{k \nocomma l})  +\mathcal{E}_3 (\lambda_0 ; v_i, v_k,
   w_{l \nocomma j}) \nonumber\\
-  &  & \nobracket \nosymbol +\mathcal{E}_3 (\lambda_0 ; v_i, v_l, w_{j
-  \nocomma k})], 
+  &  &  \nosymbol +\mathcal{E}_3 (\lambda_0 ; v_i, v_l, w_{j
+  \nocomma k})],
 \end{eqnarray}
 de m{\^e}me
 \begin{equation}
@@ -339,7 +338,7 @@ probl{\`e}me~\eqref{eq20211221155859} n'est pas pr{\'e}sent.}
 On supposera satisfaite la condition suivante, qui assure que ce syst{\`e}me
 est r{\'e}gulier
 \begin{equation}
-  \det (\xi_1^k \mathcal{E}_{i \nocomma j \nocomma k} + \lambda_1 
+  \det (\xi_1^k \mathcal{E}_{i \nocomma j \nocomma k} + \lambda_1
   \dot{\mathcal{E}}_{i \nocomma j}) \neq 0.
 \end{equation}
 Les $\xi_2^i$ sont donc d{\'e}termin{\'e}s de fa{\c c}on unique si
@@ -352,17 +351,17 @@ bifurqu{\'e}e est {\'e}tabli dans l'annexe~\ref{sec20220121172919}
   (\eta)], \lambda (\eta)] + \tfrac{1}{2} \eta^2 \mathcal{E}_2 (\lambda_0 ;
   u_1, u_1) \nonumber\\
   &  & + \tfrac{1}{6} \eta^3  [\mathcal{E}_3 (\lambda_0 ; u_1, u_1, u_1) +
-  6\mathcal{E}_2 (\lambda_0 ; u_1, u_2) \nobracket \nonumber\\
-  &  & \nobracket + 3 \lambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1)]
+  6\mathcal{E}_2 (\lambda_0 ; u_1, u_2)  \nonumber\\
+  &  &  + 3 \lambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1)]
   + \tfrac{1}{24} \eta^4  \{ \mathcal{E}_4 (\lambda_0 ; u_1, u_1, u_1, u_1)
-  \nobracket \nonumber\\
+   \nonumber\\
   &  & + 12\mathcal{E}_3 (\lambda_0 ; u_1, u_1, u_2) + 12\mathcal{E}_2
   (\lambda_0 ; u_2, u_2) \nonumber\\
-  &  & + 18\mathcal{E}_2 (\lambda_0 ; u_1, u_3) + 4 \lambda_1 
-  [\dot{\mathcal{E}}_3 (\lambda_0 ; u_1, u_1, u_1) \nobracket \nonumber\\
-  &  & \nobracket + 6 \dot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_2)] + 6
+  &  & + 18\mathcal{E}_2 (\lambda_0 ; u_1, u_3) + 4 \lambda_1
+  [\dot{\mathcal{E}}_3 (\lambda_0 ; u_1, u_1, u_1)  \nonumber\\
+  &  &  + 6 \dot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_2)] + 6
   \lambda_1^2  \ddot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1) \nonumber\\
-  &  & \nobracket + 12 \lambda_2  \dot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1)
+  &  &  + 12 \lambda_2  \dot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1)
   \} + o (\eta^4) .  \label{eq20220121172753}
 \end{eqnarray}
 La relation~\eqref{eq20211112182917} montre tout d'abord que les termes en
@@ -373,7 +372,7 @@ relation~\eqref{eq20211112183220}, on trouve finalement \tmtextbf{Cette
 expression co{\"i}ncide avec l'{\'E}q. (AC-5.29) de Tryantafyllidis.}
 \begin{equation}
   \mathcal{E} [u (\eta), \lambda (\eta)] =\mathcal{E} (u^{\ast} [\lambda
-  (\eta)], \lambda (\eta)) + \tfrac{1}{6} \lambda_1 \eta^3 
+  (\eta)], \lambda (\eta)) + \tfrac{1}{6} \lambda_1 \eta^3
   \dot{\mathcal{E}}_2 (u_1, u_1) + o (\eta^3) .
 \end{equation}
 Si $\lambda_1 = 0$, le premier terme non-nul du d{\'e}veloppement
@@ -383,7 +382,7 @@ dans la relation~\eqref{eq20220114135717}, on obtient \tmtextbf{Cette
 expression co{\"i}ncide avec l'{\'E}q. (AC-5.30) de Tryantafyllidis.}
 \begin{equation}
   \mathcal{E} [u (\eta), \lambda (\eta)] =\mathcal{E} (u^{\ast} [\lambda
-  (\eta)], \lambda (\eta)) + \tfrac{1}{4} \lambda_2 \eta^4 
+  (\eta)], \lambda (\eta)) + \tfrac{1}{4} \lambda_2 \eta^4
   \dot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1) + o (\eta^4) .
 \end{equation}
 \begin{center}
@@ -402,7 +401,7 @@ d'ores et d{\'e}j{\`a} remarquer que, sur la branche fondamentale ($u_1 = u_2
 Dans ce qui suit, on supposera que $\dot{\mathcal{E}}_2 (\lambda_0) \neq 0$.
 Pour $\hat{v} \in V$, l'{\'e}galit{\'e} pr{\'e}c{\'e}dente s'{\'e}crit
 \begin{equation}
-  \mathcal{E}_2 (\lambda_0 ; \hat{v}, \hat{v}) = (\lambda - \lambda_0) 
+  \mathcal{E}_2 (\lambda_0 ; \hat{v}, \hat{v}) = (\lambda - \lambda_0)
   \dot{\mathcal{E}}_2 (\hat{v}, \hat{v}) + o (\lambda - \lambda_0) .
 \end{equation}
 Comme la branche fondamentale est stable pour $\lambda < \lambda_0$, on doit
@@ -418,10 +417,10 @@ l'annexe~\ref{sec20211115081016}. Pour tout $\hat{u} \in U$, on trouve
   (\lambda_0 ; \hat{u}, \hat{u})] \nonumber\\
   &  & + \tfrac{1}{2} \eta^2  [\mathcal{E}_4 (\lambda_0 ; u_1, u_1, \hat{u},
   \hat{u}) + 2 \lambda_1  \dot{\mathcal{E}}_3 (\lambda_0 ; u_1, \hat{u},
-  \hat{u}) \nobracket \nonumber\\
+  \hat{u})  \nonumber\\
   &  & + \lambda_1^2  \ddot{\mathcal{E}}_2 (\lambda_0 ; \hat{u}, \hat{u})
-  +\mathcal{E}_3 (\lambda_0 ; u_2, \hat{u}, \hat{u}) \nobracket + \lambda_2 
-  \dot{\mathcal{E}}_2 (\lambda_0 ; \hat{u}, \hat{u})] + o (\eta^2) . 
+  +\mathcal{E}_3 (\lambda_0 ; u_2, \hat{u}, \hat{u})  + \lambda_2
+  \dot{\mathcal{E}}_2 (\lambda_0 ; \hat{u}, \hat{u})] + o (\eta^2) .
   \label{eq20211115082025}
 \end{eqnarray}
 On peut d{\'e}composer le vecteur $\hat{u} \in U$ de fa{\c c}on unique sous la
@@ -435,38 +434,38 @@ dans $W$. Il suffit donc d'{\'e}tudier le signe de la hessienne sur la branche
 bifurqu{\'e}e pour $\hat{u} \in V$, soit $\hat{u} = \hat{\xi}^i v_i$. Dans ce
 cas, compte-tenu de l'expression~\eqref{eq20220124135324} de $u_2$
 \begin{eqnarray}
-  \mathcal{E}_3 (\lambda_0 ; u_2, \hat{u}, \hat{u}) & = & \xi_1^i \xi_1^j 
+  \mathcal{E}_3 (\lambda_0 ; u_2, \hat{u}, \hat{u}) & = & \xi_1^i \xi_1^j
   \hat{\xi}^k  \hat{\xi}^l \mathcal{E}_3 (\lambda_0 ; w_{i \nocomma j}, v_k,
   v_l) + \xi_2^i  \hat{\xi}^j  \hat{\xi}^k \mathcal{E}_3 (\lambda_0 ; v_i,
   v_j, v_k) \nonumber\\
   &  & + \lambda_1 \xi_1^i  \hat{\xi}^j  \hat{\xi}^k \mathcal{E}_3 (\lambda_0
-  ; w_i, v_j, v_k) . 
+  ; w_i, v_j, v_k) .
 \end{eqnarray}
 On peut compl{\`e}tement sym{\'e}triser le premier terme
 \begin{eqnarray}
   \xi_1^i \xi_1^j  \hat{\xi}^k  \hat{\xi}^l \mathcal{E}_3 (\lambda_0 ; w_{i
-  \nocomma j}, v_k, v_l) & = & \tfrac{1}{3} [\xi_1^i \xi_1^j  \hat{\xi}^k 
+  \nocomma j}, v_k, v_l) & = & \tfrac{1}{3} [\xi_1^i \xi_1^j  \hat{\xi}^k
   \hat{\xi}^l \mathcal{E}_3 (\lambda_0 ; w_{i \nocomma j}, v_k, v_l)
-  \nobracket \nonumber\\
+   \nonumber\\
   &  & + \xi_1^i \xi_1^j  \hat{\xi}^k  \hat{\xi}^l \mathcal{E}_3 (\lambda_0 ;
   w_{i \nocomma j}, v_k, v_l) \nonumber\\
-  &  & \nobracket + \xi_1^i \xi_1^j  \hat{\xi}^k  \hat{\xi}^l \mathcal{E}_3
-  (\lambda_0 ; w_{i \nocomma j}, v_k, v_l)] 
+  &  &  + \xi_1^i \xi_1^j  \hat{\xi}^k  \hat{\xi}^l \mathcal{E}_3
+  (\lambda_0 ; w_{i \nocomma j}, v_k, v_l)]
 \end{eqnarray}
 \begin{eqnarray}
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta) ; \hat{u}, \hat{u}] &
   = & \eta \hat{\xi}^i  \hat{\xi}^j  [\xi_1^k \mathcal{E}_{i \nocomma j
   \nocomma k} (\lambda_0) + \lambda_1  \dot{\mathcal{E}}_{i \nocomma j}
   (\lambda_0)] \nonumber\\
-  &  & + \tfrac{1}{2} \eta \nonconverted{twosuperior} \hat{\xi}^i 
+  &  & + \tfrac{1}{2} \eta \nonconverted{twosuperior} \hat{\xi}^i
   \hat{\xi}^j  \{ \xi_1^k \xi_1^l  [\mathcal{E}_{i \nocomma j \nocomma k
   \nocomma l} (\lambda_0) - 2\mathcal{E}_2 (\lambda_0 ; w_{i \nocomma j}, w_{k
-  \nocomma l})] \nobracket \nonumber\\
+  \nocomma l})]  \nonumber\\
   &  & + \lambda_1 \xi_1^k  [\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_k) +
   \dot{\mathcal{E}}_{i \nocomma j \nocomma k} (\lambda_0)] \nonumber\\
   &  & + \lambda_1^2  \ddot{\mathcal{E}}_{i \nocomma j} (\lambda_0) + \xi_2^k
-  \mathcal{E}_{i \nocomma j \nocomma k} (\lambda_0) + \lambda_2 
-  \dot{\mathcal{E}}_{i \nocomma j} (\lambda_0 \} + o (\eta^2) . 
+  \mathcal{E}_{i \nocomma j \nocomma k} (\lambda_0) + \lambda_2
+  \dot{\mathcal{E}}_{i \nocomma j} (\lambda_0 \} + o (\eta^2) .
   \label{eq20220203144500}
 \end{eqnarray}
 Compte-tenu de la relation~\eqref{eq20211112183220}, on trouve pour $\hat{v} =
@@ -519,7 +518,7 @@ la hessienne en $(v_1, v_1)$. L'{\'e}quation~\eqref{eq20220203144500}
 s'{\'e}crit
 \begin{equation}
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta) ; v_1, v_1] = \eta
-  [\mathcal{E}_{1 \nocomma 1 \nocomma 1} (\lambda_0) + \lambda_1 
+  [\mathcal{E}_{1 \nocomma 1 \nocomma 1} (\lambda_0) + \lambda_1
   \dot{\mathcal{E}}_{1 \nocomma 1} (\lambda_0)] + o (\eta),
 \end{equation}
 soit, en substituant l'{\'e}quation~\eqref{eq20220203144712}
@@ -547,7 +546,7 @@ suppl{\'e}mentaire dans le d{\'e}veloppement limit{\'e} de la Hessienne.
 L'{\'e}quation de bifurcation~\eqref{eq20220216141706} s'{\'e}crit
 \begin{equation}
   \label{eq20220217164528} \mathcal{E}_{1 \nocomma 1 \nocomma 1 \nocomma 1}
-  (\lambda_0) + 6\mathcal{E}_3 (\lambda_0 ; v_1, v_1, u_2) + 6 \lambda_2 
+  (\lambda_0) + 6\mathcal{E}_3 (\lambda_0 ; v_1, v_1, u_2) + 6 \lambda_2
   \dot{\mathcal{E}}_{1 \nocomma 1} (\lambda_0) = 0.
 \end{equation}
 En introduisant le d{\'e}veloppement~\eqref{eq20220124135324} de $u_2$ et en
@@ -570,10 +569,10 @@ tenant compte de l'{\'E}q.~\eqref{eq20220217164528}
 \begin{eqnarray}
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta) ; v_1, v_1] & = &
   \tfrac{1}{2} \eta^2  [\mathcal{E}_{1 \nocomma 1 \nocomma 1 \nocomma 1}
-  (\lambda_0) + 2\mathcal{E}_3 (\lambda_0 ; v_1, v_1, u_2) + 2 \lambda_2 
+  (\lambda_0) + 2\mathcal{E}_3 (\lambda_0 ; v_1, v_1, u_2) + 2 \lambda_2
   \dot{\mathcal{E}}_{1 \nocomma 1} (\lambda_0)] + o (\eta^2) \nonumber\\
   & = & \tfrac{5}{12} \eta^2 \mathcal{E}_{1 \nocomma 1 \nocomma 1 \nocomma 1}
-  (\lambda_0) + o (\eta^2) . 
+  (\lambda_0) + o (\eta^2) .
 \end{eqnarray}
 
 \section{Propri{\'e}t{\'e}s des formes bilin{\'e}aires sym{\'e}triques,
@@ -683,7 +682,7 @@ d'o{\`u} l'on d{\'e}duit successivement que
   \lambda}^3 {F + \Lambda'}^3 \partial_{\lambda \nocomma \lambda \nocomma
   \lambda}^3 F + 3 \Lambda'' \partial_{\eta \nocomma \lambda}^2 F + 3 \Lambda'
   \Lambda'' \partial_{\lambda \nocomma \lambda}^2 F \nonumber\\
-  &  & \nosymbol + \Lambda''' \partial_{\lambda} F 
+  &  & \nosymbol + \Lambda''' \partial_{\lambda} F
 \end{eqnarray}
 \begin{eqnarray}
   f'''' (\eta) & = & \partial_{\eta \nocomma \eta \nocomma \eta \nocomma
@@ -698,7 +697,7 @@ d'o{\`u} l'on d{\'e}duit successivement que
   \nocomma \lambda}^3 F + 4 \Lambda''' \partial_{\eta \nocomma \lambda}^2 F +
   \left( {3 \Lambda''}^2 + 4 \Lambda' \Lambda''' \right) \partial_{\lambda
   \nocomma \lambda}^2 F \\
-  &  & + \Lambda'''' \partial_{\lambda} F 
+  &  & + \Lambda'''' \partial_{\lambda} F
 \end{eqnarray}
 o{\`u} $\Lambda$ et ses d{\'e}riv{\'e}es sont {\'e}valu{\'e}es en $\eta$,
 tandis que $F$ et ses d{\'e}riv{\'e}es partielles sont {\'e}valu{\'e}es en
@@ -720,7 +719,7 @@ pr{\'e}c{\'e}dentes s'{\'e}crivent
   \partial_{\lambda \nocomma \lambda \nocomma \lambda}^3 F + 6 \lambda_2
   \partial_{\eta \nocomma \lambda}^2 F + 6 \lambda_1 \lambda_2
   \partial_{\lambda \nocomma \lambda}^2 F \nonumber\\
-  &  & \nosymbol + 6 \lambda_3 \partial_{\lambda} F, 
+  &  & \nosymbol + 6 \lambda_3 \partial_{\lambda} F,
   \label{eq20220107060500}
 \end{eqnarray}
 \begin{eqnarray}
@@ -736,7 +735,7 @@ pr{\'e}c{\'e}dentes s'{\'e}crivent
   \nocomma \lambda}^3 F + 24 \lambda_3 \partial_{\eta \nocomma \lambda}^2 F +
   (12 \lambda_2^2 + 24 \lambda_1 \lambda_3) \partial_{\lambda \nocomma
   \lambda}^2 F \nonumber\\
-  &  & + 24 \lambda_4 \partial_{\lambda} F, 
+  &  & + 24 \lambda_4 \partial_{\lambda} F,
 \end{eqnarray}
 o{\`u} $F$ et ses d{\'e}riv{\'e}es sont {\'e}valu{\'e}es en $(0, \lambda_0)$.
 
@@ -770,7 +769,7 @@ de $F$, on obtient successivement
   \nocomma u \nocomma u} [u^{\ast} (\lambda) + U (\eta), \lambda ; U' (\eta),
   U' (\eta), \hat{u}] \nonumber\\
   &  & \nosymbol +\mathcal{E}_{, u \nocomma u} [u^{\ast} (\lambda) + U
-  (\eta), \lambda ; U'' (\eta), \hat{u}], 
+  (\eta), \lambda ; U'' (\eta), \hat{u}],
 \end{eqnarray}
 \begin{eqnarray}
   \partial_{\eta \nocomma \eta \nocomma \eta}^3 F (\eta, \lambda) & = &
@@ -779,7 +778,7 @@ de $F$, on obtient successivement
   &  & \nosymbol + 3\mathcal{E}_{, u \nocomma u \nocomma u} [u^{\ast}
   (\lambda) + U (\eta), \lambda ; U' (\eta), U'' (\eta), \hat{u}] \nonumber\\
   &  & \nosymbol +\mathcal{E}_{, u \nocomma u} [u^{\ast} (\lambda) + U
-  (\eta), \lambda ; U''' (\eta), \hat{u}], 
+  (\eta), \lambda ; U''' (\eta), \hat{u}],
 \end{eqnarray}
 soit, en $\eta = 0$
 \begin{equation}
@@ -818,7 +817,7 @@ en $\eta = 0$
   f' (0) =\mathcal{E}_2 (\lambda_0 ; u_1, \hat{u}),
 \end{equation}
 \begin{equation}
-  f'' (0) =\mathcal{E}_3 (\lambda_0 ; u_1, u_1, \hat{u}) + 2 \lambda_1 
+  f'' (0) =\mathcal{E}_3 (\lambda_0 ; u_1, u_1, \hat{u}) + 2 \lambda_1
   \dot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) + 2\mathcal{E}_2 (\lambda_0 ;
   u_2, \hat{u}),
 \end{equation}
@@ -829,7 +828,7 @@ en $\eta = 0$
   &  & \nosymbol + 3 \lambda_1  [\dot{\mathcal{E}_3} (\lambda_0 ; u_1, u_1,
   \hat{u}) + 2 \dot{\mathcal{E}_2} (\lambda_0 ; u_2, \hat{u})] \nonumber\\
   &  & \nosymbol + 3 \lambda_1   \ddot{\mathcal{E}_2} (\lambda_0 ; u_1,
-  \hat{u}) + 6 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) . 
+  \hat{u}) + 6 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) .
 \end{eqnarray}
 On en d{\'e}duit finalement le d{\'e}veloppement limit{\'e} {\`a} l'ordre 3 en
 $\eta$ du r{\'e}sidu
@@ -841,11 +840,11 @@ $\eta$ du r{\'e}sidu
   2\mathcal{E}_2 (\lambda_0 ; u_2, \hat{u})] \nonumber\\
   &  & \nosymbol + \tfrac{1}{6} \eta^3  \{ \mathcal{E}_4 (\lambda_0 ; u_1,
   u_1, u_1, \hat{u}) + 6\mathcal{E}_3 (\lambda_0 ; u_1, u_2, \hat{u})
-  \nobracket + 6\mathcal{E}_2 (\lambda_0 ; u_3, \hat{u}) \nonumber\\
+   + 6\mathcal{E}_2 (\lambda_0 ; u_3, \hat{u}) \nonumber\\
   &  & \nosymbol + 3 \lambda_1  [\dot{\mathcal{E}_3} (\lambda_0 ; u_1, u_1,
   \hat{u}) + 2 \dot{\mathcal{E}_2} (\lambda_0 ; u_2, \hat{u})] + 3 \lambda_1^2
   \ddot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) \nonumber\\
-  &  & \nobracket \nosymbol + 6 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ;
+  &  &  \nosymbol + 6 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ;
   u_1, \hat{u}) \} + o (\eta^3) .  \label{eq20220107080901}
 \end{eqnarray}
 \subsection{D{\'e}veloppement limit{\'e} de
@@ -883,7 +882,7 @@ tandis que les d{\'e}riv{\'e}es de $F$ par rapport {\`a} $\eta$ s'{\'e}crivent
   &  & \nosymbol + 3\mathcal{E}_{, u \nocomma u} [u^{\ast} (\lambda) + U
   (\eta), \lambda ; U' (\eta), U'' (\eta)] \nonumber\\
   &  & \nosymbol +\mathcal{E}_{, u} [u^{\ast} (\lambda) + U (\eta), \lambda ;
-  U''' (\eta)], 
+  U''' (\eta)],
 \end{eqnarray}
 \begin{eqnarray}
   \partial_{\eta \nocomma \eta \nocomma \eta \nocomma \eta}^4 F (\eta,
@@ -898,7 +897,7 @@ tandis que les d{\'e}riv{\'e}es de $F$ par rapport {\`a} $\eta$ s'{\'e}crivent
   &  & \nosymbol + 3\mathcal{E}_{, u \nocomma u} [u^{\ast} (\lambda) + U
   (\eta), \lambda ; U' (\eta), U''' (\eta)] \nonumber\\
   &  & \nosymbol +\mathcal{E}_{, u} [u^{\ast} (\lambda) + U (\eta), \lambda ;
-  U'''' (\eta)], 
+  U'''' (\eta)],
 \end{eqnarray}
 soit, en $\eta = 0$, en observant que $\mathcal{E}_{, u} [u^{\ast} (\lambda),
 \lambda] = 0$
@@ -918,7 +917,7 @@ soit, en $\eta = 0$, en observant que $\mathcal{E}_{, u} [u^{\ast} (\lambda),
   \lambda) & = & \mathcal{E}_4 (\lambda ; u_1, u_1, u_1, u_1) +
   12\mathcal{E}_3 (\lambda ; u_1, u_1, u_2) + 12\mathcal{E}_2 (\lambda ; u_2,
   u_2) \nonumber\\
-  &  & + 18\mathcal{E}_2 (\lambda ; u_1, u_3) . 
+  &  & + 18\mathcal{E}_2 (\lambda ; u_1, u_3) .
 \end{eqnarray}
 On en d{\'e}duit que
 \begin{equation}
@@ -955,7 +954,7 @@ et finalement
   &  & + 4 \lambda_1  [\dot{\mathcal{E}}_3 (\lambda_0 ; u_1, u_1, u_1) + 6
   \dot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_2)] \nonumber\\
   &  & + 6 \lambda_1^2  \ddot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1) + 12
-  \lambda_2  \dot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1) 
+  \lambda_2  \dot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1)
 \end{eqnarray}
 On en d{\'e}duit finalement le d{\'e}veloppement limit{\'e} de
 l'{\'e}nergie~\eqref{eq20220121172753}.
@@ -989,7 +988,7 @@ On trouve de m{\^e}me successivement
   \nocomma u \nocomma u \nocomma u} [u^{\ast} (\lambda) + U (\eta), \lambda ;
   U' (\eta), U' (\eta), \hat{u}, \hat{v}] \nonumber\\
   &  & +\mathcal{E}_{, u \nocomma u \nocomma u} [u^{\ast} (\lambda) + U
-  (\eta), \lambda ; U'' (\eta), \hat{u}, \hat{v}], 
+  (\eta), \lambda ; U'' (\eta), \hat{u}, \hat{v}],
 \end{eqnarray}
 soit, en $\eta = 0$
 \begin{equation}
@@ -1014,22 +1013,22 @@ expressions~\eqref{eq20220107060454} et \eqref{eq20220107124311}, on trouve
   \lambda_1  \dot{\mathcal{E}_3} (\lambda_0 ; u_1, \hat{u}, \hat{v}) +
   \lambda_1^2  \ddot{\mathcal{E}_2} (\lambda_0 ; \hat{u}, \hat{v}) \nonumber\\
   &  & \nosymbol + 2\mathcal{E}_3 (\lambda_0 ; u_2, \hat{u}, \hat{v}) + 2
-  \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; \hat{u}, \hat{v}) . 
+  \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; \hat{u}, \hat{v}) .
 \end{eqnarray}
 qui conduisent finalement au d{\'e}veloppement limit{\'e} suivant, {\`a}
 l'ordre 2 en $\eta$
 \begin{eqnarray}
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta) ; \hat{u}, \hat{v}] &
   = & \mathcal{E}_2 (\lambda_0 ; \hat{u}, \hat{v}) + \eta [\mathcal{E}_3
-  (\lambda_0 ; u_1, \hat{u}, \hat{v}) \nobracket \nobracket + \lambda_1 
+  (\lambda_0 ; u_1, \hat{u}, \hat{v})   + \lambda_1
   \dot{\mathcal{E}_2} (\lambda_0 ; \hat{u}, \hat{v})] \nonumber\\
   &  & \nosymbol + \tfrac{1}{2} \eta^2  [\mathcal{E}_4 (\lambda_0 ; u_1, u_1,
-  \hat{u}, \hat{v}) \nobracket + 2 \lambda_1  \dot{\mathcal{E}_3} (\lambda_0 ;
+  \hat{u}, \hat{v})  + 2 \lambda_1  \dot{\mathcal{E}_3} (\lambda_0 ;
   u_1, \hat{u}, \hat{v}) + \lambda_1^2  \ddot{\mathcal{E}_2} (\lambda_0 ;
   \hat{u}, \hat{v}) \nonumber\\
-  &  & \nosymbol \nobracket + 2\mathcal{E}_3 (\lambda_0 ; u_2, \hat{u},
+  &  & \nosymbol  + 2\mathcal{E}_3 (\lambda_0 ; u_2, \hat{u},
   \hat{v}) + 2 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; \hat{u}, \hat{v})]
-  + o (\eta^2) . 
+  + o (\eta^2) .
 \end{eqnarray}
 
 \subsection{D{\'e}veloppement limit{\'e} des valeurs propres et vecteurs
@@ -1054,9 +1053,9 @@ probl{\`e}me~\eqref{eq20211115082122}
 \begin{eqnarray}
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta)] (v, \hat{w}) & = &
   \mathcal{E}_2  (\lambda_0 ; v_0, \hat{w}) + \eta [\mathcal{E}_3  (\lambda_0
-  ; u_1, v_0, \hat{w}) \nobracket \nonumber\\
+  ; u_1, v_0, \hat{w})  \nonumber\\
   &  & \nosymbol + \lambda_1  \dot{\mathcal{E}_2} (\lambda_0 ; v_0, \hat{w})
-  \nobracket +\mathcal{E}_2  (\lambda_0 ; v_1, \hat{w})] + o (\eta) 
+   +\mathcal{E}_2  (\lambda_0 ; v_1, \hat{w})] + o (\eta)
 \end{eqnarray}
 \begin{equation}
   \alpha \langle v, \hat{w} \rangle = \alpha_0  \langle v_0, \hat{w} \rangle +
@@ -1077,18 +1076,18 @@ c'est-{\`a}-dire que $v_0 \in \ker \mathcal{E}_2  (\lambda_0)$. En prenant
 $\hat{w} \in \ker \mathcal{E}_2 (\lambda_0)$, on obtient alors le probl{\`e}me
 variationnel d'ordre 1
 \begin{equation}
-  \mathcal{E}_3 (\lambda_0 ; u_1, v_0, \hat{w}) + \lambda_1 
+  \mathcal{E}_3 (\lambda_0 ; u_1, v_0, \hat{w}) + \lambda_1
   \dot{\mathcal{E}_2} (\lambda_0 ; v_0, \hat{w}) = \alpha_1  \langle v_0,
   \hat{w} \rangle \quad \text{pour tout} \quad \hat{w} \in \ker \mathcal{E}_2
   (\lambda_0) .
 \end{equation}
 En posant $u_1 = \xi_i a_i$ et $v_0 = \chi_j a_j$, on obtient l'{\'e}quation
 \begin{equation}
-  [\mathcal{E}_{i \nocomma j \nocomma k}  (\lambda_0) \xi_k + \lambda_1 
+  [\mathcal{E}_{i \nocomma j \nocomma k}  (\lambda_0) \xi_k + \lambda_1
   \dot{\mathcal{E}}_{i \nocomma j} (\lambda_0)] \chi_j = \alpha_1 \chi_i,
 \end{equation}
 qui est un probl{\`e}me aux valeurs propres pour la matrice sym{\'e}trique
-$[\mathcal{E}_{i \nocomma j \nocomma k}  (\lambda_0) \xi_k + \lambda_1 
+$[\mathcal{E}_{i \nocomma j \nocomma k}  (\lambda_0) \xi_k + \lambda_1
 \dot{\mathcal{E}}_{i \nocomma j} (\lambda_0)]_{1 \leq i, j \leq m}$.
 
 \end{document}

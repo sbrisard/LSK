@@ -3,7 +3,6 @@
 \usepackage{amsmath,amssymb,latexsym,accents}
 
 %%%%%%%%%% Start TeXmacs macros
-\newcommand{\nosymbol}{}
 \newcommand{\tmaffiliation}[1]{\\ #1}
 \newcommand{\tmem}[1]{{\em #1\/}}
 \newcommand{\tmemail}[1]{\\ \textit{Email:} \texttt{#1}}
@@ -100,7 +99,7 @@ avec $\xi, \eta \in \mathbb{R}$ {\guillemotleft} petits {\guillemotright}, $v
   & = & \tfrac{1}{2} \mathcal{E}_2 (\xi v + \eta w, \xi v + \eta w) +
   \tfrac{1}{6} \mathcal{E}_3 (\xi v + \eta w, \xi v + \eta w, \xi v + \eta w)
   \nonumber\\
-  &  & \nosymbol + \tfrac{1}{24} \mathcal{E}_4 (\xi v + \eta w, \xi v + \eta
+  &  &  + \tfrac{1}{24} \mathcal{E}_4 (\xi v + \eta w, \xi v + \eta
   w, \xi v + \eta w, \xi v + \eta w) +\mathcal{O} [(\xi^2 + \eta^2)^2],
 \end{eqnarray}
 o{\`u} le terme lin{\'e}aire a {\'e}t{\'e} omis puisque $u_0$ est un point
@@ -292,7 +291,7 @@ On remarque que certains termes peuvent {\^e}tre sym{\'e}tris{\'e}s. Ainsi
   l}) & = & \tfrac{1}{3} \xi_1^j \xi_1^k \xi_1^l  [\mathcal{E}_3 (\lambda_0 ;
   v_i, v_j, w_{k  l})  +\mathcal{E}_3 (\lambda_0 ; v_i, v_k,
   w_{l  j}) \nonumber\\
-  &  &  \nosymbol +\mathcal{E}_3 (\lambda_0 ; v_i, v_l, w_{j
+  &  &   +\mathcal{E}_3 (\lambda_0 ; v_i, v_l, w_{j
    k})],
 \end{eqnarray}
 de m{\^e}me
@@ -681,7 +680,7 @@ d'o{\`u} l'on d{\'e}duit successivement que
   \lambda}^3 {F + \Lambda'}^3 \partial_{\lambda  \lambda
   \lambda}^3 F + 3 \Lambda'' \partial_{\eta  \lambda}^2 F + 3 \Lambda'
   \Lambda'' \partial_{\lambda  \lambda}^2 F \nonumber\\
-  &  & \nosymbol + \Lambda''' \partial_{\lambda} F
+  &  &  + \Lambda''' \partial_{\lambda} F
 \end{eqnarray}
 \begin{eqnarray}
   f'''' (\eta) & = & \partial_{\eta  \eta  \eta
@@ -718,7 +717,7 @@ pr{\'e}c{\'e}dentes s'{\'e}crivent
   \partial_{\lambda  \lambda  \lambda}^3 F + 6 \lambda_2
   \partial_{\eta  \lambda}^2 F + 6 \lambda_1 \lambda_2
   \partial_{\lambda  \lambda}^2 F \nonumber\\
-  &  & \nosymbol + 6 \lambda_3 \partial_{\lambda} F,
+  &  &  + 6 \lambda_3 \partial_{\lambda} F,
   \label{eq20220107060500}
 \end{eqnarray}
 \begin{eqnarray}
@@ -767,16 +766,16 @@ de $F$, on obtient successivement
   \partial_{\eta  \eta}^2 F (\eta, \lambda) & = & \mathcal{E}_{, u
    u  u} [u^{\ast} (\lambda) + U (\eta), \lambda ; U' (\eta),
   U' (\eta), \hat{u}] \nonumber\\
-  &  & \nosymbol +\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
+  &  &  +\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
   (\eta), \lambda ; U'' (\eta), \hat{u}],
 \end{eqnarray}
 \begin{eqnarray}
   \partial_{\eta  \eta  \eta}^3 F (\eta, \lambda) & = &
   \mathcal{E}_{, u  u  u  u} [u^{\ast} (\lambda) + U
   (\eta), \lambda ; U' (\eta), U' (\eta), U' (\eta), \hat{u}] \nonumber\\
-  &  & \nosymbol + 3\mathcal{E}_{, u  u  u} [u^{\ast}
+  &  &  + 3\mathcal{E}_{, u  u  u} [u^{\ast}
   (\lambda) + U (\eta), \lambda ; U' (\eta), U'' (\eta), \hat{u}] \nonumber\\
-  &  & \nosymbol +\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
+  &  &  +\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
   (\eta), \lambda ; U''' (\eta), \hat{u}],
 \end{eqnarray}
 soit, en $\eta = 0$
@@ -824,9 +823,9 @@ en $\eta = 0$
   f''' (0) & = & \mathcal{E}_4 (\lambda_0 ; u_1, u_1, u_1, \hat{u}) +
   6\mathcal{E}_3 (\lambda_0 ; u_1, u_2, \hat{u}) + 6\mathcal{E}_2 (\lambda_0 ;
   u_3, \hat{u}) \nonumber\\
-  &  & \nosymbol + 3 \lambda_1  [\dot{\mathcal{E}_3} (\lambda_0 ; u_1, u_1,
+  &  &  + 3 \lambda_1  [\dot{\mathcal{E}_3} (\lambda_0 ; u_1, u_1,
   \hat{u}) + 2 \dot{\mathcal{E}_2} (\lambda_0 ; u_2, \hat{u})] \nonumber\\
-  &  & \nosymbol + 3 \lambda_1   \ddot{\mathcal{E}_2} (\lambda_0 ; u_1,
+  &  &  + 3 \lambda_1   \ddot{\mathcal{E}_2} (\lambda_0 ; u_1,
   \hat{u}) + 6 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) .
 \end{eqnarray}
 On en d{\'e}duit finalement le d{\'e}veloppement limit{\'e} {\`a} l'ordre 3 en
@@ -834,16 +833,16 @@ $\eta$ du r{\'e}sidu
 \begin{eqnarray}
   \mathcal{E}_{, u} [u (\eta), \lambda (\eta)] & = & \eta \mathcal{E}_2
   (\lambda_0 ; u_1, \hat{u}) \nonumber\\
-  &  & \nosymbol + \tfrac{1}{2} \eta^2  [\mathcal{E}_3 (\lambda_0 ; u_1, u_1,
+  &  &  + \tfrac{1}{2} \eta^2  [\mathcal{E}_3 (\lambda_0 ; u_1, u_1,
   \hat{u}) + 2 \lambda_1  \dot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) +
   2\mathcal{E}_2 (\lambda_0 ; u_2, \hat{u})] \nonumber\\
-  &  & \nosymbol + \tfrac{1}{6} \eta^3  \{ \mathcal{E}_4 (\lambda_0 ; u_1,
+  &  &  + \tfrac{1}{6} \eta^3  \{ \mathcal{E}_4 (\lambda_0 ; u_1,
   u_1, u_1, \hat{u}) + 6\mathcal{E}_3 (\lambda_0 ; u_1, u_2, \hat{u})
    + 6\mathcal{E}_2 (\lambda_0 ; u_3, \hat{u}) \nonumber\\
-  &  & \nosymbol + 3 \lambda_1  [\dot{\mathcal{E}_3} (\lambda_0 ; u_1, u_1,
+  &  &  + 3 \lambda_1  [\dot{\mathcal{E}_3} (\lambda_0 ; u_1, u_1,
   \hat{u}) + 2 \dot{\mathcal{E}_2} (\lambda_0 ; u_2, \hat{u})] + 3 \lambda_1^2
   \ddot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) \nonumber\\
-  &  &  \nosymbol + 6 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ;
+  &  &   + 6 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ;
   u_1, \hat{u}) \} + o (\eta^3) .  \label{eq20220107080901}
 \end{eqnarray}
 \subsection{D{\'e}veloppement limit{\'e} de
@@ -878,9 +877,9 @@ tandis que les d{\'e}riv{\'e}es de $F$ par rapport {\`a} $\eta$ s'{\'e}crivent
   \partial_{\eta  \eta  \eta}^3 F (\eta, \lambda) & = &
   \mathcal{E}_{, u  u  u} [u^{\ast} (\lambda) + U (\eta),
   \lambda ; U' (\eta), U' (\eta), U' (\eta)] \nonumber\\
-  &  & \nosymbol + 3\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
+  &  &  + 3\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
   (\eta), \lambda ; U' (\eta), U'' (\eta)] \nonumber\\
-  &  & \nosymbol +\mathcal{E}_{, u} [u^{\ast} (\lambda) + U (\eta), \lambda ;
+  &  &  +\mathcal{E}_{, u} [u^{\ast} (\lambda) + U (\eta), \lambda ;
   U''' (\eta)],
 \end{eqnarray}
 \begin{eqnarray}
@@ -888,14 +887,14 @@ tandis que les d{\'e}riv{\'e}es de $F$ par rapport {\`a} $\eta$ s'{\'e}crivent
   \lambda) & = & \mathcal{E}_{, u  u  u  u} [u^{\ast}
   (\lambda) + U (\eta), \lambda ; U' (\eta), U' (\eta), U' (\eta), U' (\eta)]
   \nonumber\\
-  &  & \nosymbol + 6\mathcal{E}_{, u  u  u} [u^{\ast}
+  &  &  + 6\mathcal{E}_{, u  u  u} [u^{\ast}
   (\lambda) + U (\eta), \lambda ; U' (\eta), U' (\eta), U'' (\eta)]
   \nonumber\\
-  &  & \nosymbol + 3\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
+  &  &  + 3\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
   (\eta), \lambda ; U'' (\eta), U'' (\eta)] \nonumber\\
-  &  & \nosymbol + 3\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
+  &  &  + 3\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
   (\eta), \lambda ; U' (\eta), U''' (\eta)] \nonumber\\
-  &  & \nosymbol +\mathcal{E}_{, u} [u^{\ast} (\lambda) + U (\eta), \lambda ;
+  &  &  +\mathcal{E}_{, u} [u^{\ast} (\lambda) + U (\eta), \lambda ;
   U'''' (\eta)],
 \end{eqnarray}
 soit, en $\eta = 0$, en observant que $\mathcal{E}_{, u} [u^{\ast} (\lambda),
@@ -1011,7 +1010,7 @@ expressions~\eqref{eq20220107060454} et \eqref{eq20220107124311}, on trouve
   f'' (0) & = & \mathcal{E}_4 (\lambda_0 ; u_1, u_1, \hat{u}, \hat{v}) + 2
   \lambda_1  \dot{\mathcal{E}_3} (\lambda_0 ; u_1, \hat{u}, \hat{v}) +
   \lambda_1^2  \ddot{\mathcal{E}_2} (\lambda_0 ; \hat{u}, \hat{v}) \nonumber\\
-  &  & \nosymbol + 2\mathcal{E}_3 (\lambda_0 ; u_2, \hat{u}, \hat{v}) + 2
+  &  &  + 2\mathcal{E}_3 (\lambda_0 ; u_2, \hat{u}, \hat{v}) + 2
   \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; \hat{u}, \hat{v}) .
 \end{eqnarray}
 qui conduisent finalement au d{\'e}veloppement limit{\'e} suivant, {\`a}
@@ -1021,11 +1020,11 @@ l'ordre 2 en $\eta$
   = & \mathcal{E}_2 (\lambda_0 ; \hat{u}, \hat{v}) + \eta [\mathcal{E}_3
   (\lambda_0 ; u_1, \hat{u}, \hat{v})   + \lambda_1
   \dot{\mathcal{E}_2} (\lambda_0 ; \hat{u}, \hat{v})] \nonumber\\
-  &  & \nosymbol + \tfrac{1}{2} \eta^2  [\mathcal{E}_4 (\lambda_0 ; u_1, u_1,
+  &  &  + \tfrac{1}{2} \eta^2  [\mathcal{E}_4 (\lambda_0 ; u_1, u_1,
   \hat{u}, \hat{v})  + 2 \lambda_1  \dot{\mathcal{E}_3} (\lambda_0 ;
   u_1, \hat{u}, \hat{v}) + \lambda_1^2  \ddot{\mathcal{E}_2} (\lambda_0 ;
   \hat{u}, \hat{v}) \nonumber\\
-  &  & \nosymbol  + 2\mathcal{E}_3 (\lambda_0 ; u_2, \hat{u},
+  &  &   + 2\mathcal{E}_3 (\lambda_0 ; u_2, \hat{u},
   \hat{v}) + 2 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; \hat{u}, \hat{v})]
   + o (\eta^2) .
 \end{eqnarray}
@@ -1053,7 +1052,7 @@ probl{\`e}me~\eqref{eq20211115082122}
   \mathcal{E}_{, u  u} [u (\eta), \lambda (\eta)] (v, \hat{w}) & = &
   \mathcal{E}_2  (\lambda_0 ; v_0, \hat{w}) + \eta [\mathcal{E}_3  (\lambda_0
   ; u_1, v_0, \hat{w})  \nonumber\\
-  &  & \nosymbol + \lambda_1  \dot{\mathcal{E}_2} (\lambda_0 ; v_0, \hat{w})
+  &  &  + \lambda_1  \dot{\mathcal{E}_2} (\lambda_0 ; v_0, \hat{w})
    +\mathcal{E}_2  (\lambda_0 ; v_1, \hat{w})] + o (\eta)
 \end{eqnarray}
 \begin{equation}

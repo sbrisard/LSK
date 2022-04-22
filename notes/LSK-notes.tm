@@ -58,7 +58,7 @@
   s'intéresse à toutes les courbes d'équilibre qui passent par le point
   <math|<around|(|u<rsub|0>,\<lambda\><rsub|0>|)>>.
 
-  Noter que dans ce qui suit, on convient que les formes
+  Noter que dans ce qui suit, on convient que les f!ormes
   <math|\<cal-E\><rsub|2>>, <math|\<cal-E\><rsub|3>> et
   <math|\<cal-E\><rsub|4>> sont implicitement évaluées en
   <math|\<lambda\><rsub|0>> lorsque <math|\<lambda\>> n'est pas rappelé :
@@ -99,7 +99,7 @@
   (puisque <math|v\<in\>V>), l'expression précédente s'écrit
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<Delta\>\<cal-E\>>|<cell|=>|<cell|<tfrac|1|2>*\<eta\><rsup|2>*\<cal-E\><rsub|2><around|(|w,w|)>+<tfrac|1|6>*\<xi\><rsup|3>*\<cal-E\><rsub|3><around|(|v,v,v|)>+<tfrac|1|2>*\<xi\><rsup|2>*\<eta\>*\<cal-E\><rsub|3><around|(|v,v,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>*\<xi\>*\<eta\><rsup|2>*\<cal-E\><rsub|3><around|(|v,w,w|)>+<tfrac|1|6>*\<eta\><rsup|3>*\<cal-E\><rsub|3><around|(|w,w,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>*\<xi\><rsup|4>*\<cal-E\><rsub|4><around|(|v,v,v,v|)>+<tfrac|1|6>*\<xi\><rsup|3>*\<cal-E\><rsub|4><around|(|v,v,v,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|4>*\<xi\><rsup|2>*\<eta\><rsup|2>*\<cal-E\><rsub|4><around|(|v,v,w,w|)>+<tfrac|1|6>*\<xi\>*\<eta\><rsup|3>*\<cal-E\><rsub|4><around|(|v,w,w,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>*\<eta\><rsup|4>*\<cal-E\><rsub|4><around|(|w,w,w,w|)>+\<cal-O\><around*|[|<around*|(|\<xi\><rsup|2>+\<eta\><rsup|2>|)><rsup|2>|]>,<eq-number>>>>>
+    <tformat|<table|<row|<cell|\<Delta\>\<cal-E\>>|<cell|=>|<cell|<tfrac|1|2>*\<eta\><rsup|2>*\<cal-E\><rsub|2><around|(|w,w|)>+<tfrac|1|6>*\<xi\><rsup|3>*\<cal-E\><rsub|3><around|(|v,v,v|)>+<tfrac|1|2>*\<xi\><rsup|2>*\<eta\>*\<cal-E\><rsub|3><around|(|v,v,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>*\<xi\>*\<eta\><rsup|2>*\<cal-E\><rsub|3><around|(|v,w,w|)>+<tfrac|1|6>*\<eta\><rsup|3>*\<cal-E\><rsub|3><around|(|w,w,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>*\<xi\><rsup|4>*\<cal-E\><rsub|4><around|(|v,v,v,v|)>+<tfrac|1|6>*\<xi\><rsup|3>*\<eta\>*\<cal-E\><rsub|4><around|(|v,v,v,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|4>*\<xi\><rsup|2>*\<eta\><rsup|2>*\<cal-E\><rsub|4><around|(|v,v,w,w|)>+<tfrac|1|6>*\<xi\>*\<eta\><rsup|3>*\<cal-E\><rsub|4><around|(|v,w,w,w|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|24>*\<eta\><rsup|4>*\<cal-E\><rsub|4><around|(|w,w,w,w|)>+\<cal-O\><around*|[|<around*|(|\<xi\><rsup|2>+\<eta\><rsup|2>|)><rsup|2>|]>,<eq-number>>>>>
   </eqnarray>
 
   où l'on convient que toutes les différentielles de <math|\<cal-E\>> sont
@@ -129,7 +129,7 @@
   et on obtient la condition nécessaire supplémentaire
 
   <\equation>
-    <label|eq20211109145356>\<cal-E\><rsub|2><around|(|v,v|)>+\<cal-E\><rsub|3><around|(|v,v,w|)>+<tfrac|1|12>*\<cal-E\><rsub|4><around|(|v,v,v,v|)>\<geq\>0,
+    <label|eq20211109145356>\<cal-E\><rsub|2><around|(|w,w|)>+\<cal-E\><rsub|3><around|(|v,v,w|)>+<tfrac|1|12>*\<cal-E\><rsub|4><around|(|v,v,v,v|)>\<geq\>0,
   </equation>
 
   pour tous <math|v\<in\>V> et <math|w\<in\>W>. Pour <math|v\<in\>V> fixé,
@@ -145,17 +145,18 @@
   variationnel suivant
 
   <\equation>
-    <label|eq20211221155859>2*\<cal-E\><rsub|2><around|(|w<rsub|i\<nocomma\>j>,<wide|w|^>|)>+\<cal-E\><rsub|3><around|(|v<rsub|i>,v<rsub|j>,<wide|w|^>|)>=0*<space|1em><text|pour
+    <label|eq20211221155859>\<cal-E\><rsub|2><around|(|w<rsub|i\<nocomma\>j>,<wide|w|^>|)>+\<cal-E\><rsub|3><around|(|v<rsub|i>,v<rsub|j>,<wide|w|^>|)>=0*<space|1em><text|pour
     tout><space|1em><wide|w|^>\<in\>W.
   </equation>
 
   Alors, pour <math|v=\<xi\><rsup|i>*v<rsub|i>>, la solution du problème
   variationnel<nbsp><eqref|eq20211109145224> est
-  <math|w=\<xi\><rsup|i>*\<xi\><rsup|j>*w<rsub|i\<nocomma\>j>>. Pour cette
-  valeur de <math|v>, la condition<nbsp><eqref|eq20211109145356> s'écrit
+  <math|w==<tfrac|1|2>*\<xi\><rsup|i>*\<xi\><rsup|j>*w<rsub|i\<nocomma\>j>>.
+  Pour cette valeur de <math|v>, la condition<nbsp><eqref|eq20211109145356>
+  s'écrit
 
   <\equation>
-    <around*|[|<tfrac|1|12>*\<cal-E\><rsub|4><around|(|v<rsub|i>,v<rsub|j>,v<rsub|k>,v<rsub|l>|)>-\<cal-E\><rsub|2><around|(|w<rsub|i\<nocomma\>j>,w<rsub|k\<nocomma\>l>|)>|]>*\<xi\><rsup|i>*\<xi\><rsup|j>*\<xi\><rsup|k>*\<xi\><rsup|l>\<geq\>0,
+    <around*|[|\<cal-E\><rsub|4><around|(|v<rsub|i>,v<rsub|j>,v<rsub|k>,v<rsub|l>|)>-3*\<cal-E\><rsub|2><around|(|w<rsub|i\<nocomma\>j>,w<rsub|k\<nocomma\>l>|)>|]>*\<xi\><rsup|i>*\<xi\><rsup|j>*\<xi\><rsup|k>*\<xi\><rsup|l>\<geq\>0,
   </equation>
 
   pour tous <math|\<xi\><rsub|i>,\<xi\><rsub|j>,\<xi\><rsub|k>,\<xi\><rsub|l>\<in\>\<bbb-R\>>.
@@ -174,7 +175,9 @@
 
   où <math|\<eta\>> est un paramètre, non précisé pour le moment. Noter que,
   dans la représentation paramétrique de <math|u>, <math|u<rsup|\<ast\>>> est
-  évalué en <math|\<lambda\>> et pas en <math|\<lambda\><rsub|0>>.
+  évalué en <math|\<lambda\>> et pas en <math|\<lambda\><rsub|0>>.<with|color|red|
+  Modifier les développements précédents en ajoutant les factorielles au
+  dénominateur. Mettre à jour les développements limités en conséquence.>
 
   On se restreindra dans ce qui suit au cas non-dégénéré
   <math|u<rsub|1>\<neq\>0>. On peut alors toujours supposer que
@@ -187,8 +190,7 @@
   </eqnarray>
 
   et le terme linéaire en <math|\<theta\>> du développement asymptotique de
-  <math|u> est bien de norme 1. <strong|Que se passe-t-il si
-  <math|u<rsub|1>=u<rsub|2>=\<ldots\>=0> ?>
+  <math|u> est bien de norme 1.
 
   Les coefficients <math|\<lambda\><rsub|k>> et <math|u<rsub|k>> des
   développements<nbsp><eqref|eq20211115075817> et <eqref|eq20211115075835>

@@ -1,0 +1,86 @@
+\newcommand{\sbtitle}{Notes relatives à la mécanique lagrangienne}
+\newcommand{\sbauthor}{Sébastien Brisard}
+\newcommand{\sbaddress}{Univ Gustave Eiffel, Ecole des Ponts, IFSTTAR, CNRS, Navier, F-77454 Marne-la-Vall\'ee, France}
+\newcommand{\sbsubject}{Note bibliographique}
+
+\documentclass[12pt, final]{amsart}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[backend=biber,bibencoding=utf8,doi=false,giveninits=true,isbn=false,maxnames=10,minnames=5,sortcites=true,style=authoryear,texencoding=utf8,url=false]{biblatex}
+\addbibresource{stab.bib}
+
+\usepackage[breaklinks=true, colorlinks=true, pdftitle={\sbtitle}, pdfauthor={\sbauthor}, pdfsubject={\sbsubject}, urlcolor=blue]{hyperref}
+
+\usepackage[color={1 1 0}]{pdfcomment}
+
+\usepackage{unicode-math}
+\setmainfont{XITS}
+\setmathfont{XITS Math}
+
+\newcommand{\D}{\mathup{d}}
+\newcommand{\mat}[1]{\mathsf{#1}}
+\newcommand{\T}{\mathsf{T}}
+
+\begin{document}
+\title{\sbtitle}
+\author{\sbauthor}
+\address{\sbaddress}
+\email{sebastien.brisard@univ-eiffel}
+
+\begin{abstract}
+  blabla
+\end{abstract}
+
+\maketitle
+
+On considère un système mécanique dont la configuration actuelle est entièrement
+définie par un nombre fini de paramètres, \(q=[q_1, \ldots, q_n]^\T\)
+\begin{equation}
+  \vec x=\vec x(\vec X, q, t),
+\end{equation}
+où \(\vec x\) désigne la position à l'instant \(t\) du point matériel situé en
+\(\vec X\) à \(t=0\). La vitesse \(\vec v\) et l'accélération \(\vec a\) de ce
+point matériel sont données par les relations suivantes
+\begin{equation}
+  \vec v=\frac{\partial\vec x}{\partial q_i}\,\dot{q}_i
+  +\frac{\partial\vec x}{\partial t}
+  \quad\text{et}\quad
+  \vec a=\frac{\partial\vec x}{\partial q_i}\,\ddot{q}_i
+  +\frac{\partial^2\vec x}{\partial q_i\,\partial q_j}\,\dot{q}_i\,\dot{q}_j
+  +2\,\frac{\partial^2\vec x}{\partial q_i\,\partial t}\,\dot{q}_i
+  +\frac{\partial^2\vec x}{\partial t^2}.
+\end{equation}
+
+L'énergie cinétique est obtenue en intégrant sur le système entier la densité
+massique \(\vec v\cdot\vec v\). Noter que dans l'intégrale ci-dessous,
+\(\D m\) est constant (conservation de la masse)
+\begin{equation}
+  \Kappa=\tfrac12\,\int\vec v\cdot\vec v\,\D m
+  =\tfrac12\bigl(\dot{q}^\T\cdot M\cdot\dot{q}+H\cdot\dot{q}+K\bigr)
+\end{equation}
+avec
+\begin{equation}
+  M_{ij}=\int\frac{\partial\vec x}{\partial q_i}
+  \cdot\frac{\partial\vec x}{\partial q_j}\,\D m,\quad
+  H_i=\int\frac{\partial\vec x}{\partial q_i}
+  \cdot\frac{\partial\vec x}{\partial t}\,\D m
+  \quad\text{et}\quad
+  K=\int\frac{\partial\vec x}{\partial t}
+  \cdot\frac{\partial\vec x}{\partial t}\,\D m
+\end{equation}
+
+\end{document}
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% fill-column: 80
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-master: t
+%%% End:

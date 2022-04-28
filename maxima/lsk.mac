@@ -1,0 +1,82 @@
+kill(all);
+
+/*dotexptsimp : false;*/
+dotscrules : true;
+declare(".", commutative);
+
+ORDER : 4;
+mytaylor(expr) := taylor(expr, t, 0, ORDER);
+
+diff_E(order_u, order_p) := if order_p = 0 then concat(E, order_u) else apply(concat, append([E_], makelist('u, k, 1, order_u), makelist('p, k, 1, order_p)));
+
+declare([p, t], scalar);
+declare([E_p, E_uu, E_up, E_pp, E_uuu, E_uup, E_upp, E_ppp, E_uuuu, E_uuup, E_uupp, E_uppp, E_pppp], nonscalar)$
+declare(du, [nonscalar, mainvar])$
+
+E(u, p) := sum(sum(binomial(n, k) * p^k * diff_E(n - k, k) . u ^^ (n - k), k, 0, n) / n!, n, 1, ORDER)$
+
+display(E('u, 'p))$
+
+F : diff(E('u, 'p), 'u) . du$
+display(F)$
+
+/*
+texput(E_p, "\\mathcal E_p")$
+texput(E_uu, "\\mathcal E_{uu}")$
+texput(E_up, "\\mathcal E_{up}")$
+texput(E_pp, "\\mathcal E_{pp}")$
+texput(E_uuu, "\\mathcal E_{uuu}")$
+texput(E_uup, "\\mathcal E_{uup}")$
+texput(E_upp, "\\mathcal E_{upp}")$
+texput(E_ppp, "\\mathcal E_{ppp}")$
+texput(E_uuuu, "\\mathcal E_{uuuu}")$
+texput(E_uuup, "\\mathcal E_{uuup}")$
+texput(E_uupp, "\\mathcal E_{uupp}")$
+texput(E_uppp, "\\mathcal E_{uppp}")$
+texput(E_pppp, "\\mathcal E_{pppp}")$
+texput(du, "\delta u")$
+
+for k:1 thru ORDER do block(
+  texput(concat(U, k), sconcat("U_{", k, "}")),
+  texput(concat(p, k), sconcat("p_{", k, "}")),
+  texput(concat(u, k), sconcat("u_{", k, "}")))$
+*/
+
+declare([p1, p2, p3, p4], scalar)$
+declare([U1, U2, U3, u4], nonscalar)$
+declare([u1, u2, u3, u4], nonscalar)$
+
+U(p) := sum(p ^ k * concat('U, k) / k!, k, 1, ORDER)$
+display(U(p))$
+
+pt : sum(t ^ k * concat(p, k) / k!, k, 1, ORDER);
+ut : expand(taylor(U(pt), t, 0, ORDER) + sum(t^k * concat(u, k) / k!, k, 1, ORDER));
+
+F1 : expand(taylor(subst(U(p), u, F), p, 0, ORDER - 1));
+eqs1 : makelist(expand(first(solve(coeff(F1, p, k), concat('U, k)))), k, 1, ORDER - 1);
+
+print("Equations of the fundamental branch");
+for eq in eqs1 do block(print(eq), newline());
+
+print("Equations of the bifurcated branch(es)");
+
+substitutions : append(makelist('u ^^ k = u_pow[k], k, 1, ORDER), makelist('p ^ k = p_pow[k], k, 1, ORDER))$
+
+F2 : expand(taylor(subst(['u = ut, 'p = pt], F), t, 0, ORDER - 1));
+
+eqs2 : makelist(expand(subst(eqs1, coeff(F2, t, k))) = 0, k, 1, ORDER - 1);
+for eq in eqs2 do block(print(eq), newline());
+
+print("Simplification of the equations");
+
+E2(p) := subst(U(p), u, diff(E(u, p), u, 2));
+E3(p) := subst(U(p), u, diff(E(u, p), u, 3));
+
+eq3a : first(solve(expand(dot_E2 - subst(0, p, diff(E2(p), p))), U1));
+eq3b : first(solve(expand(ddot_E2 - subst(0, p, diff(E2(p), p, 2))), U2));
+eq3c : first(solve(expand(dot_E3 - subst(0, p, diff(E3(p), p))), U1));
+eqs3 : [eq3a . u1 . du, eq3a . u2 . du, eq3b . u1 . du, eq3c . u1 . u1 . du];
+
+eqs4 : map(expand, [1, 2, 6] * subst(eqs3, eqs2));
+
+for eq in eqs4 do block(print(eq), newline());

@@ -335,8 +335,12 @@
   n'est pas nulle sur <math|V>>L'équation <eqref|eq:bifurcation 1c> admet au
   plus <math|<around*|(|2<rsup|m>-1|)>> paires de solutions réelles
   <math|<around*|(|\<lambda\><rsub|1>,u<rsub|1>|)>> et
-  <math|<around*|(|-\<lambda\><rsub|1>,-u<rsub|1>|)>>.<marginal-note|normal|c|Je
-  ne sais pas démontrer ce résultat.>
+  <math|<around*|(|-\<lambda\><rsub|1>,-u<rsub|1>|)>>.<inactive|<marginal-note|normal|c|Je
+  ne sais pas démontrer ce résultat.>>
+
+  <\remark>
+    Je ne sais pas démontrer ce résultat sur le nombre de solutions réelles.
+  </remark>
 
   <paragraph|Si la forme <math|\<cal-E\><rsub|3><around*|(|\<lambda\><rsub|0>|)>>
   est nulle sur <math|V>>L'équation <eqref|eq:bifurcation 1a> conduit
@@ -353,8 +357,12 @@
 
   Cette équation admet cette fois au plus <math|<frac|3<rsup|m>-1|2>> paires
   de solutions réelles <math|<around*|(|\<lambda\><rsub|2>,u<rsub|1>|)>> et
-  <math|<around*|(|-\<lambda\><rsub|2>,-u<rsub|1>|)>>.<marginal-note|normal|c|Je
-  ne sais pas non plus démontrer ce résultat>
+  <math|<around*|(|-\<lambda\><rsub|2>,-u<rsub|1>|)>>.
+
+  <\remark>
+    Je ne sais pas non plus démontrer ce résultat sur le nombre de solutions
+    réelles.
+  </remark>
 
   <\framed>
     <paragraph|Note du 29/04/2022>J'ai relu tous les calculs précédents. Il
@@ -366,7 +374,7 @@
   </framed>
 
   Le développement limité suivant de l'énergie le long de la branche
-  bifurquée est établi dans l'annexe<nbsp><reference|sec20220121172919>
+  bifurquée est établi dans l'annexe<nbsp><reference|sec:DL energie>
 
   <\eqnarray>
     <tformat|<table|<row|<cell|\<cal-E\><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>|]>>|<cell|=>|<cell|\<cal-E\><around*|[|u<rsup|\<ast\>><around|[|\<lambda\><around|(|\<eta\>|)>|]>,\<lambda\><around|(|\<eta\>|)>|]>+<tfrac|1|6>*\<lambda\><rsub|1>*\<eta\><rsup|3>*F<rsub|i\<nocomma\>j><around*|(|\<lambda\><rsub|0>|)>*\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>>>|<row|<cell|>|<cell|>|<cell|<tfrac|1|24>*\<eta\><rsup|4>*<around*|{|E<rsub|i\<nocomma\>j\<nocomma\>k\<nocomma\>l><around*|(|\<lambda\><rsub|0>|)>*\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>**\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>+4*\<mathlambda\><rsub|1>*<wide|E|\<dot\>><rsub|i\<nocomma\>j\<nocomma\>k><around*|(|\<lambda\><rsub|0>|)>*\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>**\<xi\><rsub|1><rsup|k>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|+<around*|\<nobracket\>|6*<around*|[|\<mathlambda\><rsub|1><rsup|2>*<wide|F|\<dot\>><rsub|i\<nocomma\>j><around*|(|\<mathlambda\><rsub|0>|)>+\<lambda\><rsub|2>*F<rsub|i\<nocomma\>j><around|(|\<lambda\><rsub|0>|)>|]>**\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>|}>+o<around|(|\<eta\><rsup|4>|)>.<eq-number><label|eq:DL
@@ -413,7 +421,7 @@
   La forme quadratique <math|<wide|\<cal-E\>|\<dot\>><rsub|2><around|(|\<lambda\><rsub|0>|)>>
   est donc définie négative sur <math|V>. Le développement limité de la
   hessienne de l'énergie le long de la branche bifurquée est établi dans
-  l'annexe<nbsp><reference|sec20211115081016>. Pour tout
+  l'annexe<nbsp><reference|sec:DL hessienne>. Pour tout
   <math|<wide|u|^>\<in\>U>, on trouve
 
   <\eqnarray>
@@ -793,7 +801,7 @@
     <tformat|<table|<row|<cell|\<cal-E\><rsub|,u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>|]>>|<cell|=>|<cell|\<eta\>*\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+<tfrac|1|2>*\<eta\><rsup|2>*<around*|[|\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+2*\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>+\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>|)>|]>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+<tfrac|1|6>*\<eta\><rsup|3>*<around*|{|\<cal-E\><rsub|4><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+3*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|2>,<wide|u|^>|)>|\<nobracket\>>+\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;u<rsub|3>,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+3*\<lambda\><rsub|1>*<around*|[|<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>|)>+<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>|)>|]>+3*\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|\<nosymbol\>+3*\<lambda\><rsub|2>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>|)>|}>+o<around|(|\<eta\><rsup|3>|)>.<eq-number><label|eq20220107080901>>>>>
   </eqnarray>
 
-  <subsection|Développement limité de l'énergie><label|sec20220121172919>
+  <subsection|Développement limité de l'énergie><label|sec:DL energie>
 
   On s'intéresse ici à l'écart d'énergie, pour un chargement
   <math|\<lambda\>> donné, entre la branche bifurquée et la branche
@@ -1006,7 +1014,7 @@
   </equation*>
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>><rsup|2>F<around|(|\<eta\>,\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|,u\<nocomma\>u\<nocomma\>u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'><around|(|\<eta\>|)>,U<rprime|'><around|(|\<eta\>|)>,<wide|u|^>,<wide|v|^>|]><eq-number>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+\<cal-E\><rsub|,u\<nocomma\>u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|''><around|(|\<eta\>|)>,<wide|u|^>,<wide|v|^>|]>,<eq-number>>>>>
+    <tformat|<table|<row|<cell|\<partial\><rsub|\<eta\>\<nocomma\>\<eta\>><rsup|2>F<around|(|\<eta\>,\<lambda\>|)>>|<cell|=>|<cell|\<cal-E\><rsub|,u\<nocomma\>u\<nocomma\>u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|'><around|(|\<eta\>|)>,U<rprime|'><around|(|\<eta\>|)>,<wide|u|^>,<wide|v|^>|]>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+\<cal-E\><rsub|,u\<nocomma\>u\<nocomma\>u><around|[|u<rsup|\<ast\>><around|(|\<lambda\>|)>+U<around|(|\<eta\>|)>,\<lambda\>;U<rprime|''><around|(|\<eta\>|)>,<wide|u|^>,<wide|v|^>|]>,>>>>
   </eqnarray>
 
   soit, en <math|\<eta\>=0>
@@ -1023,20 +1031,20 @@
 
   et en dérivant cette fois par rapport à <math|\<lambda\>>
 
-  <\equation>
+  <\equation*>
     \<partial\><rsub|\<eta\>\<nocomma\>\<lambda\>><rsup|2>F<around|(|0,\<lambda\>|)>=<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>.
-  </equation>
+  </equation*>
 
   En insérant les résultats précédents dans les
   expressions<nbsp><eqref|eq20220107060454> et <eqref|eq20220107124311>, on
   trouve
 
-  <\equation>
+  <\equation*>
     f<rprime|'><around|(|0|)>=\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+\<lambda\><rsub|1><wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>,
-  </equation>
+  </equation*>
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|f<rprime|''><around|(|0|)>>|<cell|=>|<cell|\<cal-E\><rsub|4><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+2*\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+2*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|v|^>|)>+2*\<lambda\><rsub|2>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>.<eq-number>>>>>
+    <tformat|<table|<row|<cell|f<rprime|''><around|(|0|)>>|<cell|=>|<cell|\<cal-E\><rsub|4><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+2*\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+2*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|v|^>|)>+2*\<lambda\><rsub|2>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>.>>>>
   </eqnarray>
 
   qui conduisent finalement au développement limité suivant, à l'ordre 2 en
@@ -1263,8 +1271,8 @@
     <associate|eq20211115075817|<tuple|12|3>>
     <associate|eq20211115075835|<tuple|13|3>>
     <associate|eq20211115082025|<tuple|39|6>>
-    <associate|eq20211115082037|<tuple|99|15>>
-    <associate|eq20211115082122|<tuple|98|14>>
+    <associate|eq20211115082037|<tuple|94|15>>
+    <associate|eq20211115082122|<tuple|93|14>>
     <associate|eq20211210131623|<tuple|22|4>>
     <associate|eq20220107054629|<tuple|74|10>>
     <associate|eq20220107060454|<tuple|70|9>>
@@ -1274,16 +1282,10 @@
     <associate|eq20220203144500|<tuple|42|6>>
     <associate|eq20220203144712|<tuple|45|7>>
     <associate|eq20220217164528|<tuple|51|7>>
-    <associate|eq:20220511061335|<tuple|110|?>>
     <associate|eq:DL energie|<tuple|34|?>>
     <associate|eq:DL energie derivee 2nde|<tuple|89|?>>
     <associate|eq:DL energie derivee 3ieme|<tuple|90|?>>
     <associate|eq:DL energie derivee 4ieme|<tuple|91|?>>
-    <associate|eq:DL energie derivee seconde|<tuple|110|?>>
-    <associate|eq:DL energie derivee troisieme|<tuple|111|?>>
-    <associate|eq:DL energie f2|<tuple|110|?>>
-    <associate|eq:DL energie f3|<tuple|111|?>>
-    <associate|eq:DL energie f4|<tuple|112|?>>
     <associate|eq:bifurcation 1a|<tuple|17|3>>
     <associate|eq:bifurcation 1b|<tuple|19|3>>
     <associate|eq:bifurcation 1c|<tuple|27|4>>
@@ -1300,9 +1302,9 @@
     <associate|eq:res2|<tuple|15|3>>
     <associate|eq:res3|<tuple|16|3>>
     <associate|sec20211112182000|<tuple|6.2|10>>
-    <associate|sec20211115081016|<tuple|6.4|14>>
     <associate|sec20220107121442|<tuple|6.1|8>>
     <associate|sec20220121172919|<tuple|6.3|11>>
+    <associate|sec:DL energie|<tuple|6.3|?>>
     <associate|sec:DL hessienne|<tuple|6.4|?>>
     <associate|sec:Simplification des équations de bifurcation|<tuple|7|15>>
   </collection>

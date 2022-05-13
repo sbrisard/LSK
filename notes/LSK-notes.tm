@@ -305,9 +305,8 @@
   où les tenseurs <math|E<rsub|i\<nocomma\>j\<nocomma\>k>>,
   <math|E<rsub|i\<nocomma\>j\<nocomma\>k\<nocomma\>l>>,
   <math|F<rsub|i\<nocomma\>j>> et <math|A<rsub|i\<nocomma\>j>> sont définis
-  comme suit
-
-  \;
+  comme suit ***je ne suis pas sûr du terme faisant intervenir
+  <math|<wide|A|\<dot\>><rsub|i\<nocomma\>j><around*|(|\<lambda\><rsub|0>|)>>***
 
   <\equation>
     <label|eq:def Eijk>E<rsub|i\<nocomma\>j\<nocomma\>k><around*|(|\<lambda\>|)>=\<cal-E\><rsub|3><around|(|\<lambda\>;v<rsub|i>,v<rsub|j>,v<rsub|k>|)>+\<cal-E\><rsub|2><around|(|\<lambda\><rsub|>;v<rsub|i>,w<rsub|j\<nocomma\>k>|)>+\<cal-E\><rsub|2><around|(|\<lambda\>;v<rsub|j>,w<rsub|i\<nocomma\>k>|)>+\<cal-E\><rsub|2><around|(|\<lambda\>;v<rsub|k>,w<rsub|i\<nocomma\>j>|)>,
@@ -335,8 +334,7 @@
   n'est pas nulle sur <math|V>>L'équation <eqref|eq:bifurcation 1c> admet au
   plus <math|<around*|(|2<rsup|m>-1|)>> paires de solutions réelles
   <math|<around*|(|\<lambda\><rsub|1>,u<rsub|1>|)>> et
-  <math|<around*|(|-\<lambda\><rsub|1>,-u<rsub|1>|)>>.<inactive|<marginal-note|normal|c|Je
-  ne sais pas démontrer ce résultat.>>
+  <math|<around*|(|-\<lambda\><rsub|1>,-u<rsub|1>|)>>.
 
   <\remark>
     Je ne sais pas démontrer ce résultat sur le nombre de solutions réelles.
@@ -421,11 +419,20 @@
   La forme quadratique <math|<wide|\<cal-E\>|\<dot\>><rsub|2><around|(|\<lambda\><rsub|0>|)>>
   est donc définie négative sur <math|V>. Le développement limité de la
   hessienne de l'énergie le long de la branche bifurquée est établi dans
-  l'annexe<nbsp><reference|sec:DL hessienne>. Pour tout
-  <math|<wide|u|^>\<in\>U>, on trouve
+  l'annexe<nbsp><reference|sec:DL hessienne>. Pour tous
+  <math|<wide|u|^>,<wide|v|^>\<in\>U>, on trouve
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>,<wide|u|^>|]>>|<cell|=>|<cell|\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>+\<eta\>*<around*|[|\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|u|^>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|2><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>|]>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>\<eta\><rsup|2>*<around*|[|\<cal-E\><rsub|4><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|u|^>|)>+2*\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|u|^>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\>|\<ddot\>><rsub|2><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|u|^>|)><around*|\<nobracket\>|+\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|2><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>|]>+o<around|(|\<eta\><rsup|2>|)>.<eq-number><label|eq20211115082025>>>>>
+    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>,<wide|v|^>|]>>|<cell|=>|<cell|\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>+\<eta\>*<around*|[|\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>|\<nobracket\>><around*|\<nobracket\>|+\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>|]>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+<tfrac|1|2>\<eta\><rsup|2>*<around*|[|\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|v|^>|)>|\<nobracket\>>+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|v|^>|)>+\<lambda\><rsub|2>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+2*\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)><around*|\<nobracket\>||]>+o<around|(|\<eta\><rsup|2>|)>.<eq-number><label|eq:DL
+    hessienne>>>>>
+  </eqnarray>
+
+  Pour une analyse de stabilité, on doit prendre
+  <math|<wide|u|^>=<wide|v|^>>, soit
+
+  <\eqnarray>
+    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>,<wide|u|^>|]>>|<cell|=>|<cell|\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>+\<eta\>*<around*|[|\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|u|^>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|2><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>|]>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>\<eta\><rsup|2>*<around*|[|\<cal-E\><rsub|4><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|u|^>|)>+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|u|^>|)>+\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|2><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|+<around*|\<nobracket\>|2*\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|u|^>|)>+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\>|\<ddot\>><rsub|2><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|u|^>|)>|]>+o<around|(|\<eta\><rsup|2>|)>.<eq-number><label|eq:DL
+    hessienne diag>>>>>
   </eqnarray>
 
   On peut décomposer le vecteur <math|<wide|u|^>\<in\>U> de façon unique sous
@@ -434,27 +441,33 @@
   développement précédent vaut alors <math|\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;<wide|w|^>,<wide|w|^>|)>>.
   Si <math|<wide|w|^>\<neq\>0>, alors ce terme constant est strictement
   positif, puisque la hessienne est définie positive sur <math|W> en
-  <math|\<lambda\>=\<lambda\><rsub|0>>. La hessienne sur la branche bifurquée
-  est donc positive pour tout <math|<wide|u|^>\<in\>U> ayant une composante
-  dans <math|W>. Il suffit donc d'étudier le signe de la hessienne sur la
-  branche bifurquée pour <math|<wide|u|^>\<in\>V>, soit
-  <math|<wide|u|^>=<wide|\<xi\>|^><rsup|i>*v<rsub|i>>. Dans ce cas,
-  compte-tenu de l'expression<nbsp><eqref|eq20220124135324> de
-  <math|u<rsub|2>>
+  <math|\<lambda\>=\<lambda\><rsub|0>>. Au voisinage du point de bifurcation,
+  la hessienne sur la branche bifurquée est donc positive pour tout
+  <math|<wide|u|^>\<in\>U> ayant une composante dans <math|W>. Il suffit donc
+  d'étudier le signe de la hessienne sur la branche bifurquée pour
+  <math|<wide|u|^>\<in\>V>, soit <math|<wide|u|^>=<wide|\<xi\>|^><rsup|i>*v<rsub|i>>.
+  L'expression<nbsp><eqref|eq:DL hessienne diag> se simplifie alors sous la
+  forme suivante
+
+  Compte-tenu de l'expression<nbsp><eqref|eq:decomposition u2>\ 
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|u|^>|)>>|<cell|=>|<cell|\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>*<wide|\<xi\>|^><rsup|k>*<wide|\<xi\>|^><rsup|l>*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;w<rsub|i\<nocomma\>j>,v<rsub|k>,v<rsub|l>|)>+\<xi\><rsub|2><rsup|i>*<wide|\<xi\>|^><rsup|j>*<wide|\<xi\>|^><rsup|k>*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>|)>>>|<row|<cell|>|<cell|>|<cell|+\<lambda\><rsub|1>*\<xi\><rsub|1><rsup|i>*<wide|\<xi\>|^><rsup|j>*<wide|\<xi\>|^><rsup|k>*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;w<rsub|i>,v<rsub|j>,v<rsub|k>|)>.<eq-number>>>>>
+    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>,<wide|u|^>|]>>|<cell|=>|<cell|\<eta\>*<around*|[|\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>|)>*\<xi\><rsub|1><rsup|k>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|2><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>|)>|]>*<wide|\<xi\>|^><rsup|i>*<wide|\<xi\>|^><rsup|j>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>*\<eta\><rsup|2><around*|[|*\<cal-E\><rsub|4><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>,v<rsub|l>|)>*\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>|)>*\<xi\><rsub|2><rsup|k>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k\<nocomma\>l>|)>*\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>+\<lambda\><rsub|1>*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k>|)>*\<xi\><rsub|1><rsup|k>+\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|2><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>|)>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+2*\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>|)>*\<xi\><rsub|1><rsup|k>+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\>|\<ddot\>><rsub|2><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>|)>|]>*<wide|\<xi\>|^><rsup|i>*<wide|\<xi\>|^><rsup|j>+o<around|(|\<eta\><rsup|2>|)>>>>>
   </eqnarray>
 
-  On peut complètement symétriser le premier terme
+  Si <math|\<lambda\><rsub|1>\<neq\>0>, il suffit d'étudier le signe de la
+  forme quadratique <math|<around*|[|E<rsub|i\<nocomma\>j\<nocomma\>k><around*|(|\<lambda\><rsub|0>|)>*\<xi\><rsub|1><rsup|k>+\<lambda\><rsub|1>*F<rsub|i\<nocomma\>j><around*|(|\<lambda\><rsub|0>|)>|]>.>
+  Si <math|\<lambda\><rsub|1>=0> et que <math|\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>|)>=0>
+  sur <math|V>, alors le développement limité précédent s'écrit
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>*<wide|\<xi\>|^><rsup|k>*<wide|\<xi\>|^><rsup|l>*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;w<rsub|i\<nocomma\>j>,v<rsub|k>,v<rsub|l>|)>>|<cell|=>|<cell|<tfrac|1|3><around*|[|\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>*<wide|\<xi\>|^><rsup|k>*<wide|\<xi\>|^><rsup|l>*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;w<rsub|i\<nocomma\>j>,v<rsub|k>,v<rsub|l>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|+\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>*<wide|\<xi\>|^><rsup|k>*<wide|\<xi\>|^><rsup|l>*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;w<rsub|i\<nocomma\>j>,v<rsub|k>,v<rsub|l>|)>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+\<xi\><rsub|1><rsup|i>*\<xi\><rsub|1><rsup|j>*<wide|\<xi\>|^><rsup|k>*<wide|\<xi\>|^><rsup|l>*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;w<rsub|i\<nocomma\>j>,v<rsub|k>,v<rsub|l>|)>|]><eq-number>>>>>
+    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>,<wide|u|^>|]>>|<cell|=>|<cell|<tfrac|1|2>*\<eta\><rsup|2>*<around*|{|<around*|[|\<cal-E\><rsub|4><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>,v<rsub|l>|)>|\<nobracket\>>+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k\<nocomma\>l>|)>|]>*\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>>>|<row|<cell|>|<cell|>|<cell|+<around*|\<nobracket\>|\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|2><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>|)>|}>*<wide|\<xi\>|^><rsup|i>*<wide|\<xi\>|^><rsup|j>+o<around|(|\<eta\><rsup|2>|)>>>>>
   </eqnarray>
 
-  <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>,<wide|u|^>|]>>|<cell|=>|<cell|\<eta\>*<wide|\<xi\>|^><rsup|i>*<wide|\<xi\>|^><rsup|j>*<around*|[|\<xi\><rsub|1><rsup|k>*\<cal-E\><rsub|i\<nocomma\>j\<nocomma\>k><around|(|\<lambda\><rsub|0>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|i\<nocomma\>j><around|(|\<lambda\><rsub|0>|)>|]>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>\<eta\>*\<twosuperior\>*<wide|\<xi\>|^><rsup|i>*<wide|\<xi\>|^><rsup|j>*<around*|{|\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>*<around*|[|\<cal-E\><rsub|i\<nocomma\>j\<nocomma\>k\<nocomma\>l><around|(|\<lambda\><rsub|0>|)>-2*\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;w<rsub|i\<nocomma\>j>,w<rsub|k\<nocomma\>l>|)>|]>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|+\<lambda\><rsub|1>*\<xi\><rsub|1><rsup|k>*<around*|[|\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k>|)>+<wide|\<cal-E\>|\<dot\>><rsub|i\<nocomma\>j\<nocomma\>k><around|(|\<lambda\><rsub|0>|)>|]>>>|<row|<cell|>|<cell|>|<cell|+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\>|\<ddot\>><rsub|i\<nocomma\>j><around|(|\<lambda\><rsub|0>|)>+\<xi\><rsub|2><rsup|k>*\<cal-E\><rsub|i\<nocomma\>j\<nocomma\>k><around|(|\<lambda\><rsub|0>|)>+\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|i\<nocomma\>j><around*|(|\<lambda\><rsub|0>|}>+o<around|(|\<eta\><rsup|2>|)>.<eq-number><label|eq20220203144500>>>>>
-  </eqnarray>
+  <\framed>
+    12/05/2022 Relecture jusqu'à l'égalité précédente. Je suis un peu
+    surpris, car je m'attendais à un 3E3<text-dots>
+  </framed>
 
   Compte-tenu de la relation<nbsp><eqref|eq20211112183220>, on trouve pour
   <math|<wide|v|^>=u<rsub|1>> (<math|<wide|\<xi\>|^><rsup|i>=\<xi\><rsub|1><rsup|i>>)
@@ -1026,7 +1039,7 @@
   et
 
   <\equation*>
-    \<partial\><rsub|\<eta\>\<nocomma\>\<eta\>><rsup|2>F<around|(|0,\<lambda\>|)>=\<cal-E\><rsub|4><around|(|\<lambda\>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+2*\<cal-E\><rsub|3><around|(|\<lambda\>;u<rsub|2>,<wide|u|^>,<wide|v|^>|)>,
+    \<partial\><rsub|\<eta\>\<nocomma\>\<eta\>><rsup|2>F<around|(|0,\<lambda\>|)>=\<cal-E\><rsub|4><around|(|\<lambda\>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+\<cal-E\><rsub|3><around|(|\<lambda\>;u<rsub|2>,<wide|u|^>,<wide|v|^>|)>,
   </equation*>
 
   et en dérivant cette fois par rapport à <math|\<lambda\>>
@@ -1044,15 +1057,11 @@
   </equation*>
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|f<rprime|''><around|(|0|)>>|<cell|=>|<cell|\<cal-E\><rsub|4><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+2*\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+2*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|v|^>|)>+2*\<lambda\><rsub|2>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>.>>>>
+    <tformat|<table|<row|<cell|f<rprime|''><around|(|0|)>>|<cell|=>|<cell|\<cal-E\><rsub|4><around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|v|^>|)>+\<lambda\><rsub|2>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>\<nosymbol\>+2*\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>.>>>>
   </eqnarray>
 
-  qui conduisent finalement au développement limité suivant, à l'ordre 2 en
-  <math|\<eta\>>
-
-  <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>,<wide|v|^>|]>>|<cell|=>|<cell|\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>+\<eta\>*<around*|[|\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>|\<nobracket\>><around*|\<nobracket\>|+\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>|]>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+<tfrac|1|2>\<eta\><rsup|2>*<around*|[|\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,<wide|u|^>,<wide|v|^>|)>|\<nobracket\>>+2*\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,<wide|u|^>,<wide|v|^>|)>+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\><around*|\<nobracket\>|+2*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|2>,<wide|u|^>,<wide|v|^>|)>+2*\<lambda\><rsub|2>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;<wide|u|^>,<wide|v|^>|)>|]>+o<around|(|\<eta\><rsup|2>|)>.<eq-number>>>>>
-  </eqnarray>
+  qui conduisent finalement au développement limité<nbsp><eqref|eq:DL
+  hessienne>.
 
   <subsection|Développement limité des valeurs propres et vecteurs propres de
   la Hessienne>
@@ -1244,7 +1253,7 @@
     <associate|auto-11|<tuple|6.2|10>>
     <associate|auto-12|<tuple|6.3|11>>
     <associate|auto-13|<tuple|6.4|14>>
-    <associate|auto-14|<tuple|6.5|14>>
+    <associate|auto-14|<tuple|6.5|15>>
     <associate|auto-15|<tuple|7|15>>
     <associate|auto-16|<tuple|1|15>>
     <associate|auto-17|<tuple|2|15>>
@@ -1255,37 +1264,37 @@
     <associate|auto-4|<tuple|1|5>>
     <associate|auto-5|<tuple|2|5>>
     <associate|auto-6|<tuple|3|5>>
-    <associate|auto-7|<tuple|4|7>>
+    <associate|auto-7|<tuple|4|6>>
     <associate|auto-8|<tuple|5|8>>
     <associate|auto-9|<tuple|6|8>>
     <associate|eq20211108164416|<tuple|6|2>>
     <associate|eq20211109145224|<tuple|9|2>>
     <associate|eq20211109145356|<tuple|8|2>>
-    <associate|eq20211112113028|<tuple|60|8>>
-    <associate|eq20211112155446|<tuple|59|8>>
-    <associate|eq20211112162417|<tuple|65|9>>
-    <associate|eq20211112164240|<tuple|75|10>>
-    <associate|eq20211112165810|<tuple|66|9>>
-    <associate|eq20211112173223|<tuple|66|9>>
+    <associate|eq20211112113028|<tuple|58|8>>
+    <associate|eq20211112155446|<tuple|57|8>>
+    <associate|eq20211112162417|<tuple|63|9>>
+    <associate|eq20211112164240|<tuple|73|10>>
+    <associate|eq20211112165810|<tuple|64|9>>
+    <associate|eq20211112173223|<tuple|64|9>>
     <associate|eq20211112182917|<tuple|14|3>>
     <associate|eq20211115075817|<tuple|12|3>>
     <associate|eq20211115075835|<tuple|13|3>>
-    <associate|eq20211115082025|<tuple|39|6>>
-    <associate|eq20211115082037|<tuple|94|15>>
-    <associate|eq20211115082122|<tuple|93|14>>
+    <associate|eq20211115082037|<tuple|91|15>>
+    <associate|eq20211115082122|<tuple|90|15>>
     <associate|eq20211210131623|<tuple|22|4>>
-    <associate|eq20220107054629|<tuple|74|10>>
-    <associate|eq20220107060454|<tuple|70|9>>
-    <associate|eq20220107060500|<tuple|72|9>>
-    <associate|eq20220107080901|<tuple|88|11>>
-    <associate|eq20220107124311|<tuple|71|9>>
-    <associate|eq20220203144500|<tuple|42|6>>
-    <associate|eq20220203144712|<tuple|45|7>>
-    <associate|eq20220217164528|<tuple|51|7>>
-    <associate|eq:DL energie|<tuple|34|?>>
-    <associate|eq:DL energie derivee 2nde|<tuple|89|?>>
-    <associate|eq:DL energie derivee 3ieme|<tuple|90|?>>
-    <associate|eq:DL energie derivee 4ieme|<tuple|91|?>>
+    <associate|eq20220107054629|<tuple|72|10>>
+    <associate|eq20220107060454|<tuple|68|9>>
+    <associate|eq20220107060500|<tuple|70|9>>
+    <associate|eq20220107080901|<tuple|86|11>>
+    <associate|eq20220107124311|<tuple|69|9>>
+    <associate|eq20220203144712|<tuple|43|6>>
+    <associate|eq20220217164528|<tuple|49|7>>
+    <associate|eq:DL energie|<tuple|34|5>>
+    <associate|eq:DL energie derivee 2nde|<tuple|87|12>>
+    <associate|eq:DL energie derivee 3ieme|<tuple|88|12>>
+    <associate|eq:DL energie derivee 4ieme|<tuple|89|13>>
+    <associate|eq:DL hessienne|<tuple|39|?>>
+    <associate|eq:DL hessienne diag|<tuple|40|?>>
     <associate|eq:bifurcation 1a|<tuple|17|3>>
     <associate|eq:bifurcation 1b|<tuple|19|3>>
     <associate|eq:bifurcation 1c|<tuple|27|4>>
@@ -1303,9 +1312,8 @@
     <associate|eq:res3|<tuple|16|3>>
     <associate|sec20211112182000|<tuple|6.2|10>>
     <associate|sec20220107121442|<tuple|6.1|8>>
-    <associate|sec20220121172919|<tuple|6.3|11>>
-    <associate|sec:DL energie|<tuple|6.3|?>>
-    <associate|sec:DL hessienne|<tuple|6.4|?>>
+    <associate|sec:DL energie|<tuple|6.3|11>>
+    <associate|sec:DL hessienne|<tuple|6.4|14>>
     <associate|sec:Simplification des équations de bifurcation|<tuple|7|15>>
   </collection>
 </references>

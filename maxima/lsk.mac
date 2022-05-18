@@ -11,7 +11,7 @@ diff_E(order_u, order_p) := if order_p = 0 then concat(E, order_u) else apply(co
 
 declare([p, t], scalar);
 declare([E_p, E_uu, E_up, E_pp, E_uuu, E_uup, E_upp, E_ppp, E_uuuu, E_uuup, E_uupp, E_uppp, E_pppp], nonscalar)$
-declare(du, [nonscalar, mainvar])$
+declare([du, dv], [nonscalar, mainvar])$
 
 E(u, p) := sum(sum(binomial(n, k) * p^k * diff_E(n - k, k) . u ^^ (n - k), k, 0, n) / n!, n, 1, ORDER)$
 
@@ -60,8 +60,6 @@ for eq in eqs1 do block(print(eq), newline());
 
 print("Equations of the bifurcated branch(es)");
 
-substitutions : append(makelist('u ^^ k = u_pow[k], k, 1, ORDER), makelist('p ^ k = p_pow[k], k, 1, ORDER))$
-
 F2 : expand(taylor(subst(['u = ut, 'p = pt], F), t, 0, ORDER - 1));
 
 eqs2 : makelist(expand(subst(eqs1, coeff(F2, t, k))) = 0, k, 1, ORDER - 1);
@@ -80,3 +78,7 @@ eqs3 : [eq3a . u1 . du, eq3a . u2 . du, eq3b . u1 . du, eq3c . u1 . u1 . du];
 eqs4 : map(expand, [1, 2, 6] * subst(eqs3, eqs2));
 
 for eq in eqs4 do block(print(eq), newline());
+
+H(u, p) := sum(sum(binomial(n, k) * p^k * diff_E(n + 2 - k, k) . u ^^ (n - k), k, 0, n) / n!, n, 1, ORDER-2)$
+H1 : expand(taylor(H(ut, pt), t, 0, ORDER - 2));
+H2 : expand(subst([eq3a, eq3b, eq3c . u1], H1));

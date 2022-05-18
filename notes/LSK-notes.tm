@@ -313,7 +313,7 @@
   </equation>
 
   <\equation>
-    <label|eq:def Eijkl>E<rsub|i\<nocomma\>j\<nocomma\>k\<nocomma\>l><around*|(|\<lambda\>|)>=\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|>;v<rsub|i>,v<rsub|j>,v<rsub|k>,v<rsub|l>|)>+\<cal-E\><rsub|3>*<around|(|\<lambda\>;v<rsub|i>,v<rsub|j>,w<rsub|k\<nocomma\>l>|)>+\<cal-E\><rsub|3>*<around|(|\<lambda\>;v<rsub|i>,v<rsub|k>,w<rsub|l\<nocomma\>j>|)>+\<cal-E\><rsub|3>*<around|(|\<lambda\>;v<rsub|i>,v<rsub|l>,w<rsub|j\<nocomma\>k>|)>,
+    <label|eq:def Eijkl>E<rsub|i\<nocomma\>j\<nocomma\>k\<nocomma\>l><around*|(|\<lambda\>|)>=\<cal-E\><rsub|4><around|(|\<lambda\><rsub|>;v<rsub|i>,v<rsub|j>,v<rsub|k>,v<rsub|l>|)>+\<cal-E\><rsub|3><around|(|\<lambda\>;v<rsub|i>,v<rsub|j>,w<rsub|k\<nocomma\>l>|)>+\<cal-E\><rsub|3><around|(|\<lambda\>;v<rsub|i>,v<rsub|k>,w<rsub|l\<nocomma\>j>|)>+\<cal-E\><rsub|3><around|(|\<lambda\>;v<rsub|i>,v<rsub|l>,w<rsub|j\<nocomma\>k>|)>,
   </equation>
 
   <\equation>
@@ -452,7 +452,7 @@
   Compte-tenu de l'expression<nbsp><eqref|eq:decomposition u2>\ 
 
   <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>,<wide|u|^>|]>>|<cell|=>|<cell|\<eta\>*<around*|[|\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>|)>*\<xi\><rsub|1><rsup|k>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|2><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>|)>|]>*<wide|\<xi\>|^><rsup|i>*<wide|\<xi\>|^><rsup|j>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>*\<eta\><rsup|2><around*|[|*\<cal-E\><rsub|4><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>,v<rsub|l>|)>*\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>|)>*\<xi\><rsub|2><rsup|k>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k\<nocomma\>l>|)>*\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>+\<lambda\><rsub|1>*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k>|)>*\<xi\><rsub|1><rsup|k>+\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|2><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>|)>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+2*\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>|)>*\<xi\><rsub|1><rsup|k>+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\>|\<ddot\>><rsub|2><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>|)>|]>*<wide|\<xi\>|^><rsup|i>*<wide|\<xi\>|^><rsup|j>+o<around|(|\<eta\><rsup|2>|)>>>>>
+    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;<wide|u|^>,<wide|u|^>|]>>|<cell|=>|<cell|\<eta\>*<around*|[|\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>|)>*\<xi\><rsub|1><rsup|k>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|2><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>|)>|]>*<wide|\<xi\>|^><rsup|i>*<wide|\<xi\>|^><rsup|j>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>*\<eta\><rsup|2>*<around*|[|\<cal-E\><rsub|4><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>,v<rsub|l>|)>*\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>|)>*\<xi\><rsub|2><rsup|k>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k\<nocomma\>l>|)>*\<xi\><rsub|1><rsup|k>*\<xi\><rsub|1><rsup|l>+\<lambda\><rsub|1>*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k>|)>*\<xi\><rsub|1><rsup|k>+\<lambda\><rsub|2>*<wide|\<cal-E\>|\<dot\>><rsub|2><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>|)>>>|<row|<cell|>|<cell|>|<cell|<around*|\<nobracket\>|+2*\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>|)>*\<xi\><rsub|1><rsup|k>+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\>|\<ddot\>><rsub|2><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>|)>|]>*<wide|\<xi\>|^><rsup|i>*<wide|\<xi\>|^><rsup|j>+o<around|(|\<eta\><rsup|2>|)>>>>>
   </eqnarray>
 
   Si <math|\<lambda\><rsub|1>\<neq\>0>, il suffit d'étudier le signe de la
@@ -466,7 +466,8 @@
 
   <\framed>
     12/05/2022 Relecture jusqu'à l'égalité précédente. Je suis un peu
-    surpris, car je m'attendais à un 3E3<text-dots>
+    surpris, car je m'attendais à un terme en
+    <math|3*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k\<nocomma\>l>|)>><text-dots>
   </framed>
 
   Compte-tenu de la relation<nbsp><eqref|eq20211112183220>, on trouve pour

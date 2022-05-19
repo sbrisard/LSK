@@ -4,9 +4,6 @@
 \newcommand{\sbsubject}{Note bibliographique}
 
 \documentclass[12pt, final]{amsart}
-\usepackage[french]{babel}
-\usepackage{amsmath,amssymb,latexsym,theorem}
-\usepackage[tikz]{mdframed}
 
 \usepackage{polyglossia}
 \setdefaultlanguage{french}
@@ -14,6 +11,12 @@
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amssymb}
+
+\usepackage{amsthm}
+\theoremstyle{definition}
+\renewcommand{\qedsymbol}{}
+\newtheorem{remark}{Remarque}
+\newtheorem{theorem}{Théorème}
 
 \usepackage[backend=biber,bibencoding=utf8,doi=false,giveninits=true,isbn=false,maxnames=10,minnames=5,sortcites=true,style=authoryear,texencoding=utf8,url=false]{biblatex}
 \addbibresource{stab.bib}
@@ -135,7 +138,7 @@ tout d'abord $η = 0$, on obtient les conditions nécessaires
 \end{equation}
 En d'autres termes, s'il existe $v∈V$ tel que $ℰ₃ (v, v, v)
 \neq 0$ ou $ℰ₄ (v, v, v, v) < 0$, alors l'équilibre est
-{\tmem{instable}}. Les conditions précédentes ne sont pas suffisantes
+\emph{instable}. Les conditions précédentes ne sont pas suffisantes
 pour assurer la stabilité. En effet, supposant ces conditions remplies, on
 prend maintenant $η = ξ^2$
 \begin{equation}
@@ -171,7 +174,7 @@ s'écrit
    l})] ξ^i ξ^j ξ^k ξ^l \geq 0,
 \end{equation}
 pour tous $ξ_i, ξ_j, ξ_k, ξ_l∈\mathbb{R}$. On peut montrer que
-l'inégalité stricte est une condition {\tmem{suffisante}} de
+l'inégalité stricte est une condition \emph{suffisante} de
 stabilité.
 
 \section{Bifurcations}
@@ -341,7 +344,7 @@ suit ***je ne suis pas sûr du terme faisant intervenir $\dot{A}_{i
   \label{eq:def Aij} A_{i  j} (λ) = E_{i  j  k}
   (λ) ξ₁^k + λ₁ F_{i  j} (λ) .
 \end{equation}
-Noter que tous ces tenseurs sont {\tmem{symétriques}}. On remarque que,
+Noter que tous ces tenseurs sont \emph{symétriques}. On remarque que,
 puisque $ℰ₂ (λ₀ ; v_i, •) = 0$, on a les
 simplifications suivantes en $λ = λ₀$ : $E_{i  j
 k} (λ₀) =ℰ₃ (λ₀ ; v_i, v_j, v_k)$ et $F_{i
@@ -375,14 +378,12 @@ solutions réelles $(λ₂, u₁)$ et $(- λ₂, - u₁)$.
   solutions réelles.
 \end{remark}
 
-\begin{tmframed}
-  \paragraph{Note du 29/04/2022}J'ai relu tous les calculs précédents.
-  Il reste à reprendre les calculs des développements asymptotiques de
-  l'énergie et de sa hessienne, pour tenir compte en particulier des
-  factorielles introduites maintenant dans les développements
-  asymptotiques. Il faudrait également introduire les tenseurs
-  précédents dans les expressions de l'énergie et de sa hessienne.
-\end{tmframed}
+\paragraph{Note du 29/04/2022}J'ai relu tous les calculs précédents.  Il reste à
+reprendre les calculs des développements asymptotiques de l'énergie et de sa
+hessienne, pour tenir compte en particulier des factorielles introduites
+maintenant dans les développements asymptotiques. Il faudrait également
+introduire les tenseurs précédents dans les expressions de l'énergie et de sa
+hessienne.
 
 Le développement limité suivant de l'énergie le long de la branche
 bifurquée est établi dans l'annexe~\ref{sec:DL energie}
@@ -503,11 +504,12 @@ précédent s'écrit
   &  & +  λ₂  \dot{ℰ}₂ (λ₀ ; v_i, v_j) \}
   \hat{ξ}^i  \hat{ξ}^j + o (η^2) \nonumber
 \end{eqnarray}
-\begin{tmframed}
+
+\begin{remark}
   12/05/2022 Relecture jusqu'à l'égalité précédente. Je
   suis un peu surpris, car je m'attendais à un terme en $3ℰ₃
-  (λ₀ ; v_i, v_j, w_{k  l})${\textdots}
-\end{tmframed}
+  (λ₀ ; v_i, v_j, w_{k  l})$\dots
+\end{remark}
 
 Compte-tenu de la relation~\eqref{eq20211112183220}, on trouve pour $\hat{v} =
 u₁$ ($\hat{ξ}^i = ξ₁^i$)
@@ -577,8 +579,8 @@ asymptotique précédent s'écrit également
   (λ - λ₀) .
 \end{equation}
 Comme $\dot{ℰ}₂ (λ₀)$ est définie négative, la
-branche bifurquée est {\tmem{instable}} pour $λ < λ₀$ et
-{\tmem{stable}} pour $λ > λ₀$ lorsque $ℰ_{1  1
+branche bifurquée est \emph{instable} pour $λ < λ₀$ et
+\emph{stable} pour $λ > λ₀$ lorsque $ℰ_{1  1
  1} (λ₀) \neq 0$.
 
 Supposons maintenant que $ℰ_{1  1  1} (λ₀) =
@@ -642,8 +644,8 @@ noyau $\ker \mathcal{B}$ de la fa{\c c}on suivante
   écrire que $\mathcal{B} (u, v) =\mathcal{B} (v, u)$. Comme $u, v \in
   \ker \mathcal{B}$, le premier et le dernier terme sont nuls, soit
   $\mathcal{B} (w, w) = 2 α \mathcal{B} (u, v)$. La forme bilinéaire
-  étant positive, cette grandeur est positive, {\tmem{quelle que soit la
-  valeur de $α∈\mathbb{R}$}}. On en déduit donc que $\mathcal{B}
+  étant positive, cette grandeur est positive, \emph{quelle que soit la
+  valeur de $α∈\mathbb{R}$}. On en déduit donc que $\mathcal{B}
   (u, v) = 0$, puis que $\mathcal{B} (w, w) = 0$ et donc que $w∈\ker
   \mathcal{B}.$
 \end{proof}

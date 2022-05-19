@@ -91,17 +91,17 @@ supplémentaire orthogonal $W$ de $V$ dans $U$
   U = V \overset{\perp}{\otimes} W.
 \end{equation}
 Pour étudier la stabilité de l'équilibre, on calcule l'énergie
-dans un état $u_0 + ξ v + \eta w$ voisin du point d'équilibre $u_0$,
-avec $ξ, \eta∈\mathbb{R}$ {\guillemotleft} petits {\guillemotright}, $v
-\in V$ and $w∈W$. On obtient alors, à l'ordre 4 en $ξ$ et $\eta$
+dans un état $u_0 + ξ v + η w$ voisin du point d'équilibre $u_0$,
+avec $ξ, η∈\mathbb{R}$ {\guillemotleft} petits {\guillemotright}, $v
+\in V$ and $w∈W$. On obtient alors, à l'ordre 4 en $ξ$ et $η$
 \begin{eqnarray}
-  \Delta ℰ & = & ℰ (u_0 + ξ v + \eta w, λ_0)
+  \Delta ℰ & = & ℰ (u_0 + ξ v + η w, λ_0)
   -ℰ (u_0, λ_0) \nonumber\\
-  & = & \tfrac{1}{2} ℰ_2 (ξ v + \eta w, ξ v + \eta w) +
-  \tfrac{1}{6} ℰ_3 (ξ v + \eta w, ξ v + \eta w, ξ v + \eta w)
+  & = & \tfrac{1}{2} ℰ_2 (ξ v + η w, ξ v + η w) +
+  \tfrac{1}{6} ℰ_3 (ξ v + η w, ξ v + η w, ξ v + η w)
   \nonumber\\
-  &  &  + \tfrac{1}{24} ℰ_4 (ξ v + \eta w, ξ v + \eta
-  w, ξ v + \eta w, ξ v + \eta w) +\mathcal{O} [(ξ^2 + \eta^2)^2],
+  &  &  + \tfrac{1}{24} ℰ_4 (ξ v + η w, ξ v + η
+  w, ξ v + η w, ξ v + η w) +\mathcal{O} [(ξ^2 + η^2)^2],
 \end{eqnarray}
 où le terme linéaire a été omis puisque $u_0$ est un point
 critique de l'énergie. En tenant compte de la multilinéarité et de
@@ -109,24 +109,24 @@ la symétrie des différentielles successives de l'énergie
 $ℰ$, ainsi que du fait que $ℰ_2 (v, \bullet) = 0$ (puisque
 $v∈V$), l'expression précédente s'écrit
 \begin{eqnarray}
-  \Delta ℰ & = & \tfrac{1}{2} \eta^2 ℰ_2 (w, w) +
-  \tfrac{1}{6} ξ^3 ℰ_3 (v, v, v) + \tfrac{1}{2} ξ^2 \eta
+  \Delta ℰ & = & \tfrac{1}{2} η^2 ℰ_2 (w, w) +
+  \tfrac{1}{6} ξ^3 ℰ_3 (v, v, v) + \tfrac{1}{2} ξ^2 η
   ℰ_3 (v, v, w) \nonumber\\
-  &  & + \tfrac{1}{2} ξ \eta^2 ℰ_3 (v, w, w) + \tfrac{1}{6}
-  \eta^3 ℰ_3 (w, w, w) \nonumber\\
+  &  & + \tfrac{1}{2} ξ η^2 ℰ_3 (v, w, w) + \tfrac{1}{6}
+  η^3 ℰ_3 (w, w, w) \nonumber\\
   &  & + \tfrac{1}{24} ξ^4 ℰ_4 (v, v, v, v) + \tfrac{1}{6} ξ^3
-  \eta ℰ_4 (v, v, v, w) \nonumber\\
-  &  & + \tfrac{1}{4} ξ^2 \eta^2 ℰ_4 (v, v, w, w) + \tfrac{1}{6}
-  ξ \eta^3 ℰ_4 (v, w, w, w) \nonumber\\
-  &  & + \tfrac{1}{24} \eta^4 ℰ_4 (w, w, w, w) +\mathcal{O} [(ξ^2
-  + \eta^2)^2],
+  η ℰ_4 (v, v, v, w) \nonumber\\
+  &  & + \tfrac{1}{4} ξ^2 η^2 ℰ_4 (v, v, w, w) + \tfrac{1}{6}
+  ξ η^3 ℰ_4 (v, w, w, w) \nonumber\\
+  &  & + \tfrac{1}{24} η^4 ℰ_4 (w, w, w, w) +\mathcal{O} [(ξ^2
+  + η^2)^2],
 \end{eqnarray}
 où l'on convient que toutes les différentielles de $ℰ$ sont
 évaluées au point d'équilibre $u_0$.
 
 Pour que l'équilibre soit stable, il faut que cette expression soit
-positive ou nulle pour tous $ξ$ et $\eta$ suffisamment petits. En prenant
-tout d'abord $\eta = 0$, on obtient les conditions nécessaires
+positive ou nulle pour tous $ξ$ et $η$ suffisamment petits. En prenant
+tout d'abord $η = 0$, on obtient les conditions nécessaires
 \begin{equation}
   \label{eq20211108164416} ℰ_3 (v, v, v) = 0 \quad \text{et} \quad
   ℰ_4 (v, v, v, v) \geq 0 \quad \text{pour tout} \quad v∈V.
@@ -135,7 +135,7 @@ En d'autres termes, s'il existe $v∈V$ tel que $ℰ_3 (v, v, v)
 \neq 0$ ou $ℰ_4 (v, v, v, v) < 0$, alors l'équilibre est
 {\tmem{instable}}. Les conditions précédentes ne sont pas suffisantes
 pour assurer la stabilité. En effet, supposant ces conditions remplies, on
-prend maintenant $\eta = ξ^2$
+prend maintenant $η = ξ^2$
 \begin{equation}
   \Delta ℰ= \tfrac{1}{2} ξ^4  \left[ ℰ_2 (w, w)
   +ℰ_3 (v, v, w) + \tfrac{1}{12} ℰ_4 (v, v, v, v) \right]
@@ -177,12 +177,12 @@ stabilité.
 On écrit toute courbe d'équilibre passant par le point $(u_0,
 λ_0)$ sous la forme paramétrique suivante
 \begin{eqnarray}
-  λ & = & λ_0 + \eta λ_1 + \tfrac{1}{2} \eta^2 λ_2 +
-  \tfrac{1}{6} \eta^3 λ_3 + \cdots,  \label{eq20211115075817}\\
-  u & = & u^{\ast} (λ) + \eta u_1 + \tfrac{1}{2} \eta^2 u_2 +
-  \tfrac{1}{6} \eta^3 u_3 + \cdots,  \label{eq20211115075835}
+  λ & = & λ_0 + η λ_1 + \tfrac{1}{2} η^2 λ_2 +
+  \tfrac{1}{6} η^3 λ_3 + \cdots,  \label{eq20211115075817}\\
+  u & = & u^{\ast} (λ) + η u_1 + \tfrac{1}{2} η^2 u_2 +
+  \tfrac{1}{6} η^3 u_3 + \cdots,  \label{eq20211115075835}
 \end{eqnarray}
-où $\eta$ est un paramètre, non précisé pour le moment. Noter
+où $η$ est un paramètre, non précisé pour le moment. Noter
 que, dans la représentation paramétrique de $u$, $u^{\ast}$ est
 évalué en $λ$ et pas en $λ_0$.
 
@@ -190,8 +190,8 @@ Les coefficients $λ_k$ et $u_k$ des
 développements~\eqref{eq20211115075817} et \eqref{eq20211115075835} sont
 identifiés en écrivant que l'énergie est stationnaire le long de
 la courbe d'équilibre, c'est-à-dire que le résidu $ℰ_{,
-u}  [u (\eta), λ (\eta)]$ est nul. Le développement limité du
-résidu est établi au voisinage de $\eta = 0$ dans
+u}  [u (η), λ (η)]$ est nul. Le développement limité du
+résidu est établi au voisinage de $η = 0$ dans
 l'annexe~\ref{sec20211112182000} [voir Éq.~\eqref{eq20220107080901}]. En
 écrivant que tous ses termes s'annulent, on trouve successivement, pour
 tout $\hat{u}∈U$
@@ -385,29 +385,29 @@ solutions réelles $(λ_2, u_1)$ et $(- λ_2, - u_1)$.
 Le développement limité suivant de l'énergie le long de la branche
 bifurquée est établi dans l'annexe~\ref{sec:DL energie}
 \begin{eqnarray}
-  ℰ [u (\eta), λ (\eta)] & = & ℰ [u^{\ast} [λ
-  (\eta)], λ (\eta)] + \tfrac{1}{6} λ_1 \eta^3 F_{i  j}
+  ℰ [u (η), λ (η)] & = & ℰ [u^{\ast} [λ
+  (η)], λ (η)] + \tfrac{1}{6} λ_1 η^3 F_{i  j}
   (λ_0) ξ_1^i ξ_1^j \nonumber\\
-  &  & \tfrac{1}{24} \eta^4  \{ E_{i  j  k  l}
+  &  & \tfrac{1}{24} η^4  \{ E_{i  j  k  l}
   (λ_0) ξ_1^i ξ_1^j ξ_1^k ξ_1^l + 4 λ_1  \dot{E}_{i
    j  k} (λ_0) ξ_1^i ξ_1^j ξ_1^k
   \nonumber\\
   &  & +  6 [λ_1^2  \dot{F}_{i  j}
   (λ_0) + λ_2 F_{i  j} (λ_0)] ξ_1^i ξ_1^j \}
-  + o (\eta^4) .  \label{eq:DL energie}
+  + o (η^4) .  \label{eq:DL energie}
 \end{eqnarray}
 Si $λ_1 \neq 0$, le premier terme non-nul du développement
 limité précédent est d'ordre 3
 \begin{equation}
-  ℰ [u (\eta), λ (\eta)] =ℰ (u^{\ast} [λ
-  (\eta)], λ (\eta)) + \tfrac{1}{6} λ_1 \eta^3 F_{i  j}
-  (λ_0) ξ_1^i ξ_1^j + o (\eta^3),
+  ℰ [u (η), λ (η)] =ℰ (u^{\ast} [λ
+  (η)], λ (η)) + \tfrac{1}{6} λ_1 η^3 F_{i  j}
+  (λ_0) ξ_1^i ξ_1^j + o (η^3),
 \end{equation}
 tandis que si $λ_1 = 0$, le premier terme est d'ordre 4
 \begin{equation}
-  ℰ [u (\eta), λ (\eta)] =ℰ (u^{\ast} [λ
-  (\eta)], λ (\eta)) + \tfrac{1}{4} λ_2 \eta^4 F_{i  j}
-  (λ_0) ξ_1^i ξ_1^j + o (\eta^4) .
+  ℰ [u (η), λ (η)] =ℰ (u^{\ast} [λ
+  (η)], λ (η)) + \tfrac{1}{4} λ_2 η^4 F_{i  j}
+  (λ_0) ξ_1^i ξ_1^j + o (η^4) .
 \end{equation}
 \begin{center}
   ***
@@ -416,7 +416,7 @@ tandis que si $λ_1 = 0$, le premier terme est d'ordre 4
 Pour analyser la stabilité de la branche bifurquée ainsi trouvée,
 il faut déterminer le signe de la hessienne de l'énergie. On peut
 d'ores et déjà remarquer que, sur la branche fondamentale ($u_1 = u_2
-= 0$), en prenant $\eta = λ - λ_0$ ($λ_1 = 1$)
+= 0$), en prenant $η = λ - λ_0$ ($λ_1 = 1$)
 \begin{equation}
   ℰ_2 (λ ; \hat{u}, \hat{v}) =ℰ_2 (λ_0 ;
   \hat{u}, \hat{v}) + (λ - λ_0)  \dot{ℰ}_2 (λ_0 ;
@@ -435,30 +435,30 @@ négative sur $V$. Le développement limité de la hessienne de
 l'énergie le long de la branche bifurquée est établi dans
 l'annexe~\ref{sec:DL hessienne}. Pour tous $\hat{u}, \hat{v}∈U$, on trouve
 \begin{eqnarray}
-  ℰ_{, u  u} [u (\eta), λ (\eta) ; \hat{u}, \hat{v}] &
-  = & ℰ_2 (λ_0 ; \hat{u}, \hat{v}) + \eta [ℰ_3
+  ℰ_{, u  u} [u (η), λ (η) ; \hat{u}, \hat{v}] &
+  = & ℰ_2 (λ_0 ; \hat{u}, \hat{v}) + η [ℰ_3
   (λ_0 ; u_1, \hat{u}, \hat{v})   + λ_1
   \dot{ℰ_2} (λ_0 ; \hat{u}, \hat{v})] \nonumber\\
-  &  &  + \tfrac{1}{2} \eta^2  [ℰ_4 (λ_0 ; u_1, u_1,
+  &  &  + \tfrac{1}{2} η^2  [ℰ_4 (λ_0 ; u_1, u_1,
   \hat{u}, \hat{v})  +ℰ_3 (λ_0 ; u_2, \hat{u},
   \hat{v}) + λ_2  \dot{ℰ_2} (λ_0 ; \hat{u}, \hat{v})
   \nonumber\\
   &  &  + 2 λ_1  \dot{ℰ_3} (λ_0 ; u_1,
   \hat{u}, \hat{v}) + λ_1^2  \ddot{ℰ_2} (λ_0 ; \hat{u},
-  \hat{v}) ] + o (\eta^2) .  \label{eq:DL hessienne}
+  \hat{v}) ] + o (η^2) .  \label{eq:DL hessienne}
 \end{eqnarray}
 Pour une analyse de stabilité, on doit prendre $\hat{u} = \hat{v}$, soit
 \begin{eqnarray}
-  ℰ_{, u  u} [u (\eta), λ (\eta) ; \hat{u}, \hat{u}] &
-  = & ℰ_2 (λ_0 ; \hat{u}, \hat{u}) + \eta [ℰ_3
+  ℰ_{, u  u} [u (η), λ (η) ; \hat{u}, \hat{u}] &
+  = & ℰ_2 (λ_0 ; \hat{u}, \hat{u}) + η [ℰ_3
   (λ_0 ; u_1, \hat{u}, \hat{u}) + λ_1  \dot{ℰ}_2
   (λ_0 ; \hat{u}, \hat{u})] \nonumber\\
-  &  & + \tfrac{1}{2} \eta^2  [ℰ_4 (λ_0 ; u_1, u_1, \hat{u},
+  &  & + \tfrac{1}{2} η^2  [ℰ_4 (λ_0 ; u_1, u_1, \hat{u},
   \hat{u}) +ℰ_3 (λ_0 ; u_2, \hat{u}, \hat{u}) + λ_2
   \dot{ℰ}_2 (λ_0 ; \hat{u}, \hat{u})  \nonumber\\
   &  & +  2 λ_1  \dot{ℰ}_3 (λ_0 ; u_1,
   \hat{u}, \hat{u}) + λ_1^2  \ddot{ℰ}_2 (λ_0 ; \hat{u},
-  \hat{u})] + o (\eta^2) .  \label{eq:DL hessienne diag}
+  \hat{u})] + o (η^2) .  \label{eq:DL hessienne diag}
 \end{eqnarray}
 On peut décomposer le vecteur $\hat{u}∈U$ de fa{\c c}on unique sous la
 forme $\hat{u} = \hat{v} + \hat{w}$, avec $\hat{v}∈V$ et $\hat{w}∈W$.
@@ -474,11 +474,11 @@ hessienne diag} se simplifie alors sous la forme suivante
 
 Compte-tenu de l'expression~\eqref{eq:decomposition u2}
 \begin{eqnarray}
-  ℰ_{, u  u} [u (\eta), λ (\eta) ; \hat{u}, \hat{u}] &
-  = & \eta [ℰ_3 (λ_0 ; v_i, v_j, v_k) ξ_1^k + λ_1
+  ℰ_{, u  u} [u (η), λ (η) ; \hat{u}, \hat{u}] &
+  = & η [ℰ_3 (λ_0 ; v_i, v_j, v_k) ξ_1^k + λ_1
   \dot{ℰ}_2 (λ_0 ; v_i, v_j)]  \hat{ξ}^i  \hat{ξ}^j
   \nonumber\\
-  &  & + \tfrac{1}{2} \eta^2  [ℰ_4 (λ_0 ; v_i, v_j, v_k, v_l)
+  &  & + \tfrac{1}{2} η^2  [ℰ_4 (λ_0 ; v_i, v_j, v_k, v_l)
   ξ_1^k ξ_1^l +ℰ_3 (λ_0 ; v_i, v_j, v_k) ξ_2^k
    \nonumber\\
   &  & +ℰ_3 (λ_0 ; v_i, v_j, w_{k  l}) ξ_1^k
@@ -486,7 +486,7 @@ Compte-tenu de l'expression~\eqref{eq:decomposition u2}
   λ_2  \dot{ℰ}_2 (λ_0 ; v_i, v_j) \nonumber\\
   &  &  + 2 λ_1  \dot{ℰ}_3 (λ_0 ; v_i, v_j,
   v_k) ξ_1^k + λ_1^2  \ddot{ℰ}_2 (λ_0 ; v_i, v_j)]
-  \hat{ξ}^i  \hat{ξ}^j + o (\eta^2) \nonumber
+  \hat{ξ}^i  \hat{ξ}^j + o (η^2) \nonumber
 \end{eqnarray}
 Si $λ_1 \neq 0$, il suffit d'étudier le signe de la forme
 quadratique $[E_{i  j  k} (λ_0) ξ_1^k + λ_1 F_{i
@@ -494,12 +494,12 @@ quadratique $[E_{i  j  k} (λ_0) ξ_1^k + λ_1 F_{i
 (λ_0) = 0$ sur $V$, alors le développement limité
 précédent s'écrit
 \begin{eqnarray}
-  ℰ_{, u  u} [u (\eta), λ (\eta) ; \hat{u}, \hat{u}] &
-  = & \tfrac{1}{2} \eta^2  \{ [ℰ_4 (λ_0 ; v_i, v_j, v_k, v_l)
+  ℰ_{, u  u} [u (η), λ (η) ; \hat{u}, \hat{u}] &
+  = & \tfrac{1}{2} η^2  \{ [ℰ_4 (λ_0 ; v_i, v_j, v_k, v_l)
    +ℰ_3 (λ_0 ; v_i, v_j, w_{k  l})] ξ_1^k
   ξ_1^l \nonumber\\
   &  & +  λ_2  \dot{ℰ}_2 (λ_0 ; v_i, v_j) \}
-  \hat{ξ}^i  \hat{ξ}^j + o (\eta^2) \nonumber
+  \hat{ξ}^i  \hat{ξ}^j + o (η^2) \nonumber
 \end{eqnarray}
 \begin{tmframed}
   12/05/2022 Relecture jusqu'à l'égalité précédente. Je
@@ -510,13 +510,13 @@ précédent s'écrit
 Compte-tenu de la relation~\eqref{eq20211112183220}, on trouve pour $\hat{v} =
 u_1$ ($\hat{ξ}^i = ξ_1^i$)
 \begin{equation}
-  ℰ_{, u  u} [u (\eta), λ (\eta) ; u_1, u_1] = -
-  λ_1 \eta \dot{ℰ}_2 (λ_0 ; u_1, u_1) + o (\eta) .
+  ℰ_{, u  u} [u (η), λ (η) ; u_1, u_1] = -
+  λ_1 η \dot{ℰ}_2 (λ_0 ; u_1, u_1) + o (η) .
 \end{equation}
 Si $λ_1 \neq 0$, l'expression précédente peut également
 s'écrire
 \begin{equation}
-  ℰ_{, u  u} [u (\eta), λ (\eta) ; u_1, u_1] = -
+  ℰ_{, u  u} [u (η), λ (η) ; u_1, u_1] = -
   (λ - λ_0)  \dot{ℰ}_2 (λ_0 ; u_1, u_1) + o
   (λ - λ_0),
 \end{equation}
@@ -530,7 +530,7 @@ la hessienne de la branche bifurquée au-delà de la charge critique
 Lorsque $m = \dim V = 1$, la base $v_1, \ldots, v_m$ est réduite au seul
 vecteur $v_1$ et $u_1$ est parallèle à ce vecteur. Comme $\lVert u_1
 \rVert = 1$, on a donc nécessairement $u_1 = v_1$ (quitte à changer
-$\eta$ en $- \eta$). L'équation de bifurcation~\eqref{eq20220216140121}
+$η$ en $- η$). L'équation de bifurcation~\eqref{eq20220216140121}
 s'écrit alors
 \begin{equation}
   \label{eq20220203144712} ℰ_{1  1  1} (λ_0) +
@@ -542,10 +542,10 @@ où on remarque que le quotient a un sens, puisque $\dot{ℰ_2}
 (λ_0)$ est définie négative sur $V$. On trouve donc les
 développements limités
 \begin{equation}
-  λ = λ_0 + λ_1 \eta + o (\eta)  \quad \text{et} \quad u =
-  u^{\ast} (λ) + \eta v_1 + o (\eta),
+  λ = λ_0 + λ_1 η + o (η)  \quad \text{et} \quad u =
+  u^{\ast} (λ) + η v_1 + o (η),
 \end{equation}
-soit finalement, en éliminant $\eta$
+soit finalement, en éliminant $η$
 \begin{equation}
   λ = λ_0 - \frac{ξ ℰ_{1  1  1}
   (λ_0)}{2 \dot{ℰ}_{1  1} (λ_0)} + o (ξ),
@@ -556,21 +556,21 @@ Pour déterminer la stabilité de la branche bifurquée, on calcule
 la hessienne en $(v_1, v_1)$. L'équation~\eqref{eq20220203144500}
 s'écrit
 \begin{equation}
-  ℰ_{, u  u} [u (\eta), λ (\eta) ; v_1, v_1] = \eta
+  ℰ_{, u  u} [u (η), λ (η) ; v_1, v_1] = η
   [ℰ_{1  1  1} (λ_0) + λ_1
-  \dot{ℰ}_{1  1} (λ_0)] + o (\eta),
+  \dot{ℰ}_{1  1} (λ_0)] + o (η),
 \end{equation}
 soit, en substituant l'équation~\eqref{eq20220203144712}
 \begin{equation}
-  ℰ_{, u  u} [u (\eta), λ (\eta) ; v_1, v_1] = -
-  λ_1 \eta \dot{ℰ}_{1  1} (λ_0) + o (\eta) .
+  ℰ_{, u  u} [u (η), λ (η) ; v_1, v_1] = -
+  λ_1 η \dot{ℰ}_{1  1} (λ_0) + o (η) .
 \end{equation}
 Ce développement ne permet de conclure que si le terme linéaire est
 non-nul, soit $ℰ_{1  1  1} (λ_0) \neq 0$ [voir
 Éq.~\eqref{eq20220203144712}]. Dans ce cas, le développement
 asymptotique précédent s'écrit également
 \begin{equation}
-  ℰ_{, u  u} [u (\eta), λ (\eta) ; v_1, v_1] = -
+  ℰ_{, u  u} [u (η), λ (η) ; v_1, v_1] = -
   (λ - λ_0)  \dot{ℰ}_{1  1} (λ_0) + o
   (λ - λ_0) .
 \end{equation}
@@ -606,12 +606,12 @@ le quotient ayant une nouvelle fois un sens. Le développement
 asymptotique~\eqref{eq20211115082025} de la Hessienne s'écrit alors, en
 tenant compte de l'Éq.~\eqref{eq20220217164528}
 \begin{eqnarray}
-  ℰ_{, u  u} [u (\eta), λ (\eta) ; v_1, v_1] & = &
-  \tfrac{1}{2} \eta^2  [ℰ_{1  1  1  1}
+  ℰ_{, u  u} [u (η), λ (η) ; v_1, v_1] & = &
+  \tfrac{1}{2} η^2  [ℰ_{1  1  1  1}
   (λ_0) + 2ℰ_3 (λ_0 ; v_1, v_1, u_2) + 2 λ_2
-  \dot{ℰ}_{1  1} (λ_0)] + o (\eta^2) \nonumber\\
-  & = & \tfrac{5}{12} \eta^2 ℰ_{1  1  1  1}
-  (λ_0) + o (\eta^2) .
+  \dot{ℰ}_{1  1} (λ_0)] + o (η^2) \nonumber\\
+  & = & \tfrac{5}{12} η^2 ℰ_{1  1  1  1}
+  (λ_0) + o (η^2) .
 \end{eqnarray}
 
 \section{Propriétés des formes bilinéaires symétriques,
@@ -676,103 +676,103 @@ diagramme d'équilibre}
 
 On pose dans ce qui suit
 \begin{eqnarray}
-  λ (\eta) & = & λ (\eta) - λ_0 = \eta λ_1 +
-  \tfrac{1}{2} \eta^2 λ_2 + \tfrac{1}{6} \eta^3 λ_3 + \cdots,
+  λ (η) & = & λ (η) - λ_0 = η λ_1 +
+  \tfrac{1}{2} η^2 λ_2 + \tfrac{1}{6} η^3 λ_3 + \cdots,
   \label{eq20211112155446}\\
-  U (\eta) & = & u (\eta) - u^{\ast} [λ (\eta)] = \eta u_1 +
-  \tfrac{1}{2} \eta^2 u_2 + \tfrac{1}{6} \eta^3 u_3 + \cdots .
+  U (η) & = & u (η) - u^{\ast} [λ (η)] = η u_1 +
+  \tfrac{1}{2} η^2 u_2 + \tfrac{1}{6} η^3 u_3 + \cdots .
   \label{eq20211112113028}
 \end{eqnarray}
 On considère une fonctionnelle $\mathcal{F}$ de $u$ et $λ$~:
 $\mathcal{F} (u, λ)$. Cette fonctionnelle est évaluée le long de
 la branche bifurquée. En d'autres termes, on considère
 \begin{equation}
-  f (\eta) = F \{ u^{\ast} [λ_0 + λ (\eta)] + U (\eta), λ_0
-  + λ (\eta) \} .
+  f (η) = F \{ u^{\ast} [λ_0 + λ (η)] + U (η), λ_0
+  + λ (η) \} .
 \end{equation}
 On souhaite établir un développement limité de $f$ au voisinage de
-$\eta = 0$, ce qui conduit à calculer les dérivées successives de
-$f$ en $\eta = 0$, puisque
+$η = 0$, ce qui conduit à calculer les dérivées successives de
+$f$ en $η = 0$, puisque
 \begin{equation}
-  f (\eta) = f (0) + \eta f' (0) + \tfrac{1}{2} \eta^2 f'' (0) + \cdots
+  f (η) = f (0) + η f' (0) + \tfrac{1}{2} η^2 f'' (0) + \cdots
 \end{equation}
 Pour calculer ces dérivées, il sera commode d'introduire la fonction
 auxiliaire $F$
 \begin{equation}
-  F (\eta, λ) =\mathcal{F} [u^{\ast} (λ) + U (\eta), λ],
+  F (η, λ) =\mathcal{F} [u^{\ast} (λ) + U (η), λ],
 \end{equation}
-dans laquelle les variables $λ$ et $\eta$ sont provisoirement
+dans laquelle les variables $λ$ et $η$ sont provisoirement
 considérées comme indépendantes. On a
 \begin{equation}
-  f (\eta) = F [\eta, λ_0 + λ (\eta)],
+  f (η) = F [η, λ_0 + λ (η)],
 \end{equation}
 d'où l'on déduit successivement que
 \begin{equation}
-  \label{eq20211112162417} f' (\eta) = \partial_{\eta} F + λ'
+  \label{eq20211112162417} f' (η) = \partial_{η} F + λ'
   \partial_{λ} F,
 \end{equation}
 \begin{equation}
-  \label{eq20211112165810} f'' (\eta) = \partial_{\eta  \eta}^2 F + 2
-  λ' \partial_{\eta  λ}^2 {F + λ'}^2
+  \label{eq20211112165810} f'' (η) = \partial_{η  η}^2 F + 2
+  λ' \partial_{η  λ}^2 {F + λ'}^2
   \partial_{λ  λ}^2 F + λ'' \partial_{λ} F,
 \end{equation}
 \begin{eqnarray}
-  \label{eq20211112173223} f''' (\eta) & = & \partial_{\eta  \eta
-   \eta}^3 F + 3 λ' \partial_{\eta  \eta
-  λ}^3 {F + 3 λ'}^2 \partial_{\eta  λ
+  \label{eq20211112173223} f''' (η) & = & \partial_{η  η
+   η}^3 F + 3 λ' \partial_{η  η
+  λ}^3 {F + 3 λ'}^2 \partial_{η  λ
   λ}^3 {F + λ'}^3 \partial_{λ  λ
-  λ}^3 F + 3 λ'' \partial_{\eta  λ}^2 F + 3 λ'
+  λ}^3 F + 3 λ'' \partial_{η  λ}^2 F + 3 λ'
   λ'' \partial_{λ  λ}^2 F \nonumber\\
   &  &  + λ''' \partial_{λ} F
 \end{eqnarray}
 \begin{eqnarray}
-  f'''' (\eta) & = & \partial_{\eta  \eta  \eta
-  \eta}^4 F + 4 λ' \partial_{\eta  \eta  \eta
-  λ}^4 {F + 6 λ'}^2 \partial_{\eta  \eta  λ
-   λ}^4 {F + 4 λ'}^3 \partial_{\eta  λ
+  f'''' (η) & = & \partial_{η  η  η
+  η}^4 F + 4 λ' \partial_{η  η  η
+  λ}^4 {F + 6 λ'}^2 \partial_{η  η  λ
+   λ}^4 {F + 4 λ'}^3 \partial_{η  λ
    λ  λ}^4 {F + λ'}^4 \partial_{λ
    λ  λ  λ}^4 F + 6 λ''
-  \partial_{\eta  \eta  λ}^3 F \nonumber\\
-  &  & + 12 λ' λ'' \partial_{\eta  λ
+  \partial_{η  η  λ}^3 F \nonumber\\
+  &  & + 12 λ' λ'' \partial_{η  λ
   λ}^3 {F + 6 λ'}^2 λ'' \partial_{λ  λ
-   λ}^3 F + 4 λ''' \partial_{\eta  λ}^2 F +
+   λ}^3 F + 4 λ''' \partial_{η  λ}^2 F +
   \left( {3 λ''}^2 + 4 λ' λ''' \right) \partial_{λ
    λ}^2 F \\
   &  & + λ'''' \partial_{λ} F
 \end{eqnarray}
-où $λ$ et ses dérivées sont évaluées en $\eta$,
+où $λ$ et ses dérivées sont évaluées en $η$,
 tandis que $F$ et ses dérivées partielles sont évaluées en
-$[\eta, λ_0 + λ (\eta)]$. En $\eta = 0$, les relations
+$[η, λ_0 + λ (η)]$. En $η = 0$, les relations
 précédentes s'écrivent
 \begin{equation}
-  \label{eq20220107060454} f' (0) = \partial_{\eta} F + λ_1
+  \label{eq20220107060454} f' (0) = \partial_{η} F + λ_1
   \partial_{λ} F,
 \end{equation}
 \begin{equation}
-  \label{eq20220107124311} f'' (0) = \partial_{\eta  \eta}^2 F + 2
-  λ_1 \partial_{\eta  λ}^2 F + λ_2
+  \label{eq20220107124311} f'' (0) = \partial_{η  η}^2 F + 2
+  λ_1 \partial_{η  λ}^2 F + λ_2
   \partial_{λ} F + λ_1^2 \partial_{λ  λ}^2 F,
 \end{equation}
 \begin{eqnarray}
-  f''' (0) & = & \partial_{\eta  \eta  \eta}^3 F + 3 λ_1
-  \partial_{\eta  \eta  λ}^3 F + 3 λ_1^2
-  \partial_{\eta  λ  λ}^3 F + λ_1^3
+  f''' (0) & = & \partial_{η  η  η}^3 F + 3 λ_1
+  \partial_{η  η  λ}^3 F + 3 λ_1^2
+  \partial_{η  λ  λ}^3 F + λ_1^3
   \partial_{λ  λ  λ}^3 F + 3 λ_2
-  \partial_{\eta  λ}^2 F + 3 λ_1 λ_2
+  \partial_{η  λ}^2 F + 3 λ_1 λ_2
   \partial_{λ  λ}^2 F \nonumber\\
   &  &  + λ_3 \partial_{λ} F,  \label{eq20220107060500}
 \end{eqnarray}
 \begin{eqnarray}
-  f'''' (0) & = & \partial_{\eta  \eta  \eta  \eta}^4
-  F + 4 λ_1 \partial_{\eta  \eta  \eta
-  λ}^4 F + 6 λ_1^2 \partial_{\eta  \eta  λ
-   λ}^4 F + 4 λ_1^3 \partial_{\eta  λ
+  f'''' (0) & = & \partial_{η  η  η  η}^4
+  F + 4 λ_1 \partial_{η  η  η
+  λ}^4 F + 6 λ_1^2 \partial_{η  η  λ
+   λ}^4 F + 4 λ_1^3 \partial_{η  λ
    λ  λ}^4 F + λ_1^4 \partial_{λ
    λ  λ  λ}^4 F + 6 λ_2
-  \partial_{\eta  \eta  λ}^3 F \nonumber\\
-  &  & + 12 λ_1 λ_2 \partial_{\eta  λ
+  \partial_{η  η  λ}^3 F \nonumber\\
+  &  & + 12 λ_1 λ_2 \partial_{η  λ
   λ}^3 F + 6 λ_1^2 λ_2 \partial_{λ  λ
-   λ}^3 F + 4 λ_3 \partial_{\eta  λ}^2 F +
+   λ}^3 F + 4 λ_3 \partial_{η  λ}^2 F +
   (3 λ_2^2 + 4 λ_1 λ_3) \partial_{λ
   λ}^2 F \nonumber\\
   &  & + λ_4 \partial_{λ} F,
@@ -787,9 +787,9 @@ la première variation de l'énergie). La fonction test $\hat{u}∈U$
 étant fixée, la méthode précédente est donc appliquée
 avec
 \begin{equation}
-  \label{eq20220107054629} f (\eta) =ℰ_{, u} [u (\eta), λ
-  (\eta) ; \hat{u}] \quad \text{et} \quad F (\eta, λ) =ℰ_{, u}
-  [u^{\ast} (λ) + U (\eta), λ ; \hat{u}] .
+  \label{eq20220107054629} f (η) =ℰ_{, u} [u (η), λ
+  (η) ; \hat{u}] \quad \text{et} \quad F (η, λ) =ℰ_{, u}
+  [u^{\ast} (λ) + U (η), λ ; \hat{u}] .
 \end{equation}
 On remarque tout d'abord que $F (0, λ) =ℰ_{, u} [u^{\ast}
 (λ), λ ; \hat{u}] = 0$, puisque $u^{\ast} (λ)$ est un point
@@ -798,38 +798,38 @@ d'équilibre. En dérivant par rapport à $λ$, on obtient
   \label{eq20211112164240} \frac{\partial^k F}{\partial λ^k} (0,
   λ) = 0.
 \end{equation}
-En dérivant par rapport à $\eta$ l'expression~\eqref{eq20220107054629}
+En dérivant par rapport à $η$ l'expression~\eqref{eq20220107054629}
 de $F$, on obtient successivement
 \begin{equation}
-  \partial_{\eta} F (\eta, λ) =ℰ_{, u  u} [u^{\ast}
-  (λ) + U (\eta), λ ; U' (\eta), \hat{u}],
+  \partial_{η} F (η, λ) =ℰ_{, u  u} [u^{\ast}
+  (λ) + U (η), λ ; U' (η), \hat{u}],
 \end{equation}
 \begin{eqnarray}
-  \partial_{\eta  \eta}^2 F (\eta, λ) & = & ℰ_{, u
-   u  u} [u^{\ast} (λ) + U (\eta), λ ; U' (\eta),
-  U' (\eta), \hat{u}] \nonumber\\
+  \partial_{η  η}^2 F (η, λ) & = & ℰ_{, u
+   u  u} [u^{\ast} (λ) + U (η), λ ; U' (η),
+  U' (η), \hat{u}] \nonumber\\
   &  &  +ℰ_{, u  u} [u^{\ast} (λ) + U
-  (\eta), λ ; U'' (\eta), \hat{u}],
+  (η), λ ; U'' (η), \hat{u}],
 \end{eqnarray}
 \begin{eqnarray}
-  \partial_{\eta  \eta  \eta}^3 F (\eta, λ) & = &
+  \partial_{η  η  η}^3 F (η, λ) & = &
   ℰ_{, u  u  u  u} [u^{\ast} (λ) + U
-  (\eta), λ ; U' (\eta), U' (\eta), U' (\eta), \hat{u}] \nonumber\\
+  (η), λ ; U' (η), U' (η), U' (η), \hat{u}] \nonumber\\
   &  &  + 3ℰ_{, u  u  u} [u^{\ast}
-  (λ) + U (\eta), λ ; U' (\eta), U'' (\eta), \hat{u}] \nonumber\\
+  (λ) + U (η), λ ; U' (η), U'' (η), \hat{u}] \nonumber\\
   &  &  +ℰ_{, u  u} [u^{\ast} (λ) + U
-  (\eta), λ ; U''' (\eta), \hat{u}],
+  (η), λ ; U''' (η), \hat{u}],
 \end{eqnarray}
-soit, en $\eta = 0$
+soit, en $η = 0$
 \begin{equation}
-  \partial_{\eta} F (0, λ) =ℰ_2 (λ ; u_1, \hat{u}),
+  \partial_{η} F (0, λ) =ℰ_2 (λ ; u_1, \hat{u}),
 \end{equation}
 \begin{equation}
-  \partial_{\eta  \eta}^2 F (0, λ) =ℰ_3 (λ ;
+  \partial_{η  η}^2 F (0, λ) =ℰ_3 (λ ;
   u_1, u_1, \hat{u}) +ℰ_2 (λ ; u_2, \hat{u}),
 \end{equation}
 \begin{equation}
-  \partial_{\eta  \eta  \eta}^3 F (0, λ) =ℰ_4
+  \partial_{η  η  η}^3 F (0, λ) =ℰ_4
   (λ ; u_1, u_1, u_1, \hat{u}) + 3ℰ_3 (λ ; u_1, u_2,
   \hat{u}) +ℰ_2 (λ ; u_3, \hat{u}) .
 \end{equation}
@@ -837,22 +837,22 @@ Les dérivées croisées de $F$ en $(0, λ)$ s'obtiennent par
 simple dérivation des relations précédentes par rapport à
 $λ$
 \begin{equation}
-  \partial_{\eta  λ}^2 F (0, λ) = \dot{ℰ_2}
+  \partial_{η  λ}^2 F (0, λ) = \dot{ℰ_2}
   (λ ; u_1, \hat{u}),
 \end{equation}
 \begin{equation}
-  \partial_{\eta  \eta  λ}^3 F (0, λ) =
+  \partial_{η  η  λ}^3 F (0, λ) =
   \dot{ℰ_3} (λ ; u_1, u_1, \hat{u}) + \dot{ℰ_2}
   (λ ; u_2, \hat{u}),
 \end{equation}
 \begin{equation}
-  \partial_{\eta  λ  λ}^3 F (0, λ) =
+  \partial_{η  λ  λ}^3 F (0, λ) =
   \ddot{ℰ_2} (λ ; u_1, \hat{u}) .
 \end{equation}
 En insérant les résultats précédentes dans les relations
 générales~\eqref{eq20220107060454}--\eqref{eq20220107060500}, on
 trouve alors les expressions suivantes des dérivées successives de $f$
-en $\eta = 0$
+en $η = 0$
 \begin{equation}
   f' (0) =ℰ_2 (λ_0 ; u_1, \hat{u}),
 \end{equation}
@@ -871,21 +871,21 @@ en $\eta = 0$
   \hat{u}) + 3 λ_2  \dot{ℰ_2} (λ_0 ; u_1, \hat{u}) .
 \end{eqnarray}
 On en déduit finalement le développement limité à l'ordre 3 en
-$\eta$ du résidu
+$η$ du résidu
 \begin{eqnarray}
-  ℰ_{, u} [u (\eta), λ (\eta)] & = & \eta ℰ_2
+  ℰ_{, u} [u (η), λ (η)] & = & η ℰ_2
   (λ_0 ; u_1, \hat{u}) \nonumber\\
-  &  &  + \tfrac{1}{2} \eta^2  [ℰ_3 (λ_0 ; u_1, u_1,
+  &  &  + \tfrac{1}{2} η^2  [ℰ_3 (λ_0 ; u_1, u_1,
   \hat{u}) + 2 λ_1  \dot{ℰ_2} (λ_0 ; u_1, \hat{u})
   +ℰ_2 (λ_0 ; u_2, \hat{u})] \nonumber\\
-  &  &  + \tfrac{1}{6} \eta^3  \{ ℰ_4 (λ_0 ; u_1,
+  &  &  + \tfrac{1}{6} η^3  \{ ℰ_4 (λ_0 ; u_1,
   u_1, u_1, \hat{u}) + 3ℰ_3 (λ_0 ; u_1, u_2, \hat{u})
    +ℰ_2 (λ_0 ; u_3, \hat{u}) \nonumber\\
   &  &  + 3 λ_1  [\dot{ℰ_3} (λ_0 ; u_1, u_1,
   \hat{u}) + \dot{ℰ_2} (λ_0 ; u_2, \hat{u})] + 3 λ_1^2
   \ddot{ℰ_2} (λ_0 ; u_1, \hat{u}) \nonumber\\
   &  &   + 3 λ_2  \dot{ℰ_2} (λ_0 ;
-  u_1, \hat{u}) \} + o (\eta^3) .  \label{eq20220107080901}
+  u_1, \hat{u}) \} + o (η^3) .  \label{eq20220107080901}
 \end{eqnarray}
 \subsection{Développement limité de l'énergie}\label{sec:DL
 energie}
@@ -893,68 +893,68 @@ energie}
 On s'intéresse ici à l'écart d'énergie, pour un chargement
 $λ$ donné, entre la branche bifurquée et la branche
 fondamentale, soit
-\begin{equation} F (\eta, λ) =ℰ [u^{\ast} (λ) + U (\eta), λ]
+\begin{equation} F (η, λ) =ℰ [u^{\ast} (λ) + U (η), λ]
    -ℰ [u^{\ast} (λ), λ] \end{equation}
 et
-\begin{equation} f (\eta) = F [\eta, λ_0 + λ (\eta)] . \end{equation}
+\begin{equation} f (η) = F [η, λ_0 + λ (η)] . \end{equation}
 On observe tout d'abord que $F (0, λ) = 0$ pour tout $λ$, donc
 \begin{equation} \frac{\partial^k F}{\partial λ^k} (0, λ) = 0 \quad (k \geq 0),
 \end{equation}
-tandis que les dérivées de $F$ par rapport à $\eta$ s'écrivent
-\begin{equation} \partial_{\eta} F (\eta, λ) =ℰ_{, u} [u^{\ast} (λ) +
-   U (\eta), λ ; U' (\eta)], \end{equation}
-\begin{equation} \partial_{\eta  \eta}^2 F (\eta, λ) =ℰ_{, u
-    u} [u^{\ast} (λ) + U (\eta), λ ; U' (\eta), U' (\eta)]
-   +ℰ_{, u} [u^{\ast} (λ) + U (\eta), λ ; U'' (\eta)],
+tandis que les dérivées de $F$ par rapport à $η$ s'écrivent
+\begin{equation} \partial_{η} F (η, λ) =ℰ_{, u} [u^{\ast} (λ) +
+   U (η), λ ; U' (η)], \end{equation}
+\begin{equation} \partial_{η  η}^2 F (η, λ) =ℰ_{, u
+    u} [u^{\ast} (λ) + U (η), λ ; U' (η), U' (η)]
+   +ℰ_{, u} [u^{\ast} (λ) + U (η), λ ; U'' (η)],
 \end{equation}
 \begin{eqnarray*}
-  \partial_{\eta  \eta  \eta}^3 F (\eta, λ) & = &
-  ℰ_{, u  u  u} [u^{\ast} (λ) + U (\eta),
-  λ ; U' (\eta), U' (\eta), U' (\eta)]\\
+  \partial_{η  η  η}^3 F (η, λ) & = &
+  ℰ_{, u  u  u} [u^{\ast} (λ) + U (η),
+  λ ; U' (η), U' (η), U' (η)]\\
   &  &    + 3ℰ_{, u  u}
-  [u^{\ast} (λ) + U (\eta), λ ; U' (\eta), U'' (\eta)]\\
+  [u^{\ast} (λ) + U (η), λ ; U' (η), U'' (η)]\\
   &  &    +ℰ_{, u} [u^{\ast} (λ) +
-  U (\eta), λ ; U''' (\eta)],
+  U (η), λ ; U''' (η)],
 \end{eqnarray*}
 \begin{eqnarray}
-  \partial_{\eta  \eta  \eta  \eta}^4 F (\eta,
+  \partial_{η  η  η  η}^4 F (η,
   λ) & = & ℰ_{, u  u  u  u} [u^{\ast}
-  (λ) + U (\eta), λ ; U' (\eta), U' (\eta), U' (\eta), U' (\eta)]
+  (λ) + U (η), λ ; U' (η), U' (η), U' (η), U' (η)]
   \nonumber\\
   &  &  + 6ℰ_{, u  u  u} [u^{\ast}
-  (λ) + U (\eta), λ ; U' (\eta), U' (\eta), U'' (\eta)]
+  (λ) + U (η), λ ; U' (η), U' (η), U'' (η)]
   \nonumber\\
   &  &  + 3ℰ_{, u  u} [u^{\ast} (λ) + U
-  (\eta), λ ; U'' (\eta), U'' (\eta)] \nonumber\\
+  (η), λ ; U'' (η), U'' (η)] \nonumber\\
   &  &  + 3ℰ_{, u  u} [u^{\ast} (λ) + U
-  (\eta), λ ; U' (\eta), U''' (\eta)] \nonumber\\
-  &  &  +ℰ_{, u} [u^{\ast} (λ) + U (\eta), λ ;
-  U'''' (\eta)], \nonumber
+  (η), λ ; U' (η), U''' (η)] \nonumber\\
+  &  &  +ℰ_{, u} [u^{\ast} (λ) + U (η), λ ;
+  U'''' (η)], \nonumber
 \end{eqnarray}
-soit, en $\eta = 0$, en observant que $ℰ_{, u} [u^{\ast} (λ),
+soit, en $η = 0$, en observant que $ℰ_{, u} [u^{\ast} (λ),
 λ] = 0$
-\begin{equation} \partial_{\eta} F (0, λ) = 0, \end{equation}
-\begin{equation} \partial_{\eta  \eta}^2 F (0, λ) =ℰ_2 (λ ;
+\begin{equation} \partial_{η} F (0, λ) = 0, \end{equation}
+\begin{equation} \partial_{η  η}^2 F (0, λ) =ℰ_2 (λ ;
    u_1, u_1), \end{equation}
-\begin{equation} \partial_{\eta  \eta  \eta}^3 F (0, λ) =ℰ_3
+\begin{equation} \partial_{η  η  η}^3 F (0, λ) =ℰ_3
    (λ ; u_1, u_1, u_1) + 3ℰ_2 (λ ; u_1, u_2), \end{equation}
 \begin{eqnarray}
-  \partial_{\eta  \eta  \eta  \eta}^4 F (\eta,
+  \partial_{η  η  η  η}^4 F (η,
   λ) & = & ℰ_4 (λ ; u_1, u_1, u_1, u_1) + 6ℰ_3
   (λ ; u_1, u_1, u_2) + 3ℰ_2 (λ ; u_2, u_2) \nonumber\\
   &  &  + 3ℰ_2 (λ ; u_1, u_3) . \nonumber
 \end{eqnarray}
 On en déduit que
-\begin{equation} \partial_{\eta  λ}^2 F (0, λ) = 0, \end{equation}
-\begin{equation} \partial_{\eta  \eta  λ}^3 F (0, λ) =
+\begin{equation} \partial_{η  λ}^2 F (0, λ) = 0, \end{equation}
+\begin{equation} \partial_{η  η  λ}^3 F (0, λ) =
    \dot{ℰ}_2 (λ ; u_1, u_1), \end{equation}
-\begin{equation} \partial_{\eta  λ  λ}^3 F (0, λ) = 0, \end{equation}
-\begin{equation} \partial_{\eta  \eta  \eta  λ}^4 F (0,
+\begin{equation} \partial_{η  λ  λ}^3 F (0, λ) = 0, \end{equation}
+\begin{equation} \partial_{η  η  η  λ}^4 F (0,
    λ) = \dot{ℰ}_3 (λ ; u_1, u_1, u_1) + 3
    \dot{ℰ}_2 (λ ; u_1, u_2), \text{} \text{} \end{equation}
-\begin{equation} \partial_{\eta  \eta  λ  λ}^4 F (0,
+\begin{equation} \partial_{η  η  λ  λ}^4 F (0,
    λ) = \ddot{ℰ}_2 (λ ; u_1, u_1), \end{equation}
-\begin{equation} \partial_{\eta  λ  λ  λ}^4 F (0,
+\begin{equation} \partial_{η  λ  λ  λ}^4 F (0,
    λ) = 0 \end{equation}
 et finalement
 \begin{equation} f' (0) = 0, \end{equation}
@@ -1147,34 +1147,34 @@ hessienne}
 On cherche maintenant un développement limité de la hessienne de
 l'énergie. Les fonctions test $\hat{u}, \hat{v}∈U$ étant
 fixées, on applique la méthode du
-{\textsection}\ref{sec20220107121442} à la fonction $f (\eta) = F [\eta,
-λ_0 + λ (\eta)]$, avec
-\begin{equation} F (\eta, λ) =ℰ_{, u  u} [u^{\ast} (λ) + U
-   (\eta), λ ; \hat{u}, \hat{v}] . \end{equation}
+{\textsection}\ref{sec20220107121442} à la fonction $f (η) = F [η,
+λ_0 + λ (η)]$, avec
+\begin{equation} F (η, λ) =ℰ_{, u  u} [u^{\ast} (λ) + U
+   (η), λ ; \hat{u}, \hat{v}] . \end{equation}
 On observe tout d'abord que $F (0, λ) =ℰ_2 (λ ; \hat{u},
 \hat{v})$, soit, en dérivant par rapport à $λ$
 \begin{equation} \partial_{λ} F (0, λ) = \dot{ℰ_2} (λ ; \hat{u},
    \hat{v}) \quad \text{et} \quad \partial_{λ  λ}^2 F (0,
    λ) = \ddot{ℰ_2} (λ ; \hat{u}, \hat{v}) . \end{equation}
 On trouve de même successivement
-\begin{equation} \partial_{\eta} F (\eta, λ) =ℰ_{, u  u  u}
-   [u^{\ast} (λ) + U (\eta), λ ; U' (\eta), \hat{u}, \hat{v}], \end{equation}
+\begin{equation} \partial_{η} F (η, λ) =ℰ_{, u  u  u}
+   [u^{\ast} (λ) + U (η), λ ; U' (η), \hat{u}, \hat{v}], \end{equation}
 \begin{eqnarray}
-  \partial_{\eta  \eta}^2 F (\eta, λ) & = & ℰ_{, u
-   u  u  u} [u^{\ast} (λ) + U (\eta), λ ;
-  U' (\eta), U' (\eta), \hat{u}, \hat{v}] \nonumber\\
+  \partial_{η  η}^2 F (η, λ) & = & ℰ_{, u
+   u  u  u} [u^{\ast} (λ) + U (η), λ ;
+  U' (η), U' (η), \hat{u}, \hat{v}] \nonumber\\
   &  &  +ℰ_{, u  u  u} [u^{\ast} (λ)
-  + U (\eta), λ ; U'' (\eta), \hat{u}, \hat{v}], \nonumber
+  + U (η), λ ; U'' (η), \hat{u}, \hat{v}], \nonumber
 \end{eqnarray}
-soit, en $\eta = 0$
-\begin{equation} \partial_{\eta} F (0, λ) =ℰ_3 (λ ; u_1, \hat{u},
+soit, en $η = 0$
+\begin{equation} \partial_{η} F (0, λ) =ℰ_3 (λ ; u_1, \hat{u},
    \hat{v}) \text{} \end{equation}
 et
-\begin{equation} \partial_{\eta  \eta}^2 F (0, λ) =ℰ_4 (λ ;
+\begin{equation} \partial_{η  η}^2 F (0, λ) =ℰ_4 (λ ;
    u_1, u_1, \hat{u}, \hat{v}) +ℰ_3 (λ ; u_2, \hat{u},
    \hat{v}), \end{equation}
 et en dérivant cette fois par rapport à $λ$
-\begin{equation} \partial_{\eta  λ}^2 F (0, λ) = \dot{ℰ_3}
+\begin{equation} \partial_{η  λ}^2 F (0, λ) = \dot{ℰ_3}
    (λ ; u_1, \hat{u}, \hat{v}) . \end{equation}
 En insérant les résultats précédents dans les
 expressions~\eqref{eq20220107060454} et \eqref{eq20220107124311}, on trouve
@@ -1198,57 +1198,57 @@ On cherche les vecteurs propres $x∈U$ et valeurs propres $\alpha \in
 \mathbb{R}$ de la hessienne de l'énergie. En d'autre terme, on cherche $x$
 et $\alpha$ tels que
 \begin{equation}
-  ℰ_{, u  u} [u (\eta), λ (\eta) ; x, \hat{u}] =
+  ℰ_{, u  u} [u (η), λ (η) ; x, \hat{u}] =
   \alpha \langle x, \hat{u} \rangle \quad \text{pour tout} \quad \hat{u} \in
   V.
 \end{equation}
-On cherche les développements limités à l'ordre 2 en $\eta$ de $x$
+On cherche les développements limités à l'ordre 2 en $η$ de $x$
 et $\alpha$
 \begin{eqnarray*}
-  x & = & x_0 + \eta x_1 + \tfrac{1}{2} \eta^2 x_2 + o (\eta^2),\\
-  \alpha & = & \alpha_0 + \eta \alpha_1 + \tfrac{1}{2} \eta^2 \alpha_2 + o
-  (\eta^2) .
+  x & = & x_0 + η x_1 + \tfrac{1}{2} η^2 x_2 + o (η^2),\\
+  \alpha & = & \alpha_0 + η \alpha_1 + \tfrac{1}{2} η^2 \alpha_2 + o
+  (η^2) .
 \end{eqnarray*}
 Ces développements limités sont tout d'abord insérés dans le
 développement limité \eqref{eq:DL hessienne} de la hessienne de
 l'énergie
 \begin{eqnarray*}
-  ℰ_{, u  u} [u (\eta), λ (\eta) ; x, \hat{u}] & = &
-  ℰ_2 (λ_0 ; x_0, \hat{u}) + \eta ℰ_2 (λ_0 ;
-  x_1, \hat{u}) + \tfrac{1}{2} \eta^2 ℰ_2 (λ_0 ; x_2,
+  ℰ_{, u  u} [u (η), λ (η) ; x, \hat{u}] & = &
+  ℰ_2 (λ_0 ; x_0, \hat{u}) + η ℰ_2 (λ_0 ;
+  x_1, \hat{u}) + \tfrac{1}{2} η^2 ℰ_2 (λ_0 ; x_2,
   \hat{u})\\
-  &  & + \eta ℰ_3 (λ_0 ; u_1, x_0, \hat{u}) + \eta^2
+  &  & + η ℰ_3 (λ_0 ; u_1, x_0, \hat{u}) + η^2
   ℰ_3 (λ_0 ; u_1, x_1, \hat{u})\\
-  &  & + \eta λ_1  \dot{ℰ_2} (λ_0 ; x_0, \hat{u}) +
-  \eta^2 λ_1  \dot{ℰ_2} (λ_0 ; x_1, \hat{u})\\
-  &  & + \tfrac{1}{2} \eta^2  [ℰ_4 (λ_0 ; u_1, u_1, x_0,
+  &  & + η λ_1  \dot{ℰ_2} (λ_0 ; x_0, \hat{u}) +
+  η^2 λ_1  \dot{ℰ_2} (λ_0 ; x_1, \hat{u})\\
+  &  & + \tfrac{1}{2} η^2  [ℰ_4 (λ_0 ; u_1, u_1, x_0,
   \hat{u})  +ℰ_3 (λ_0 ; u_2, x_0, \hat{u})\\
   &  & + λ_2  \dot{ℰ_2} (λ_0 ; x_0, \hat{u}) + 2
   λ_1  \dot{ℰ_3} (λ_0 ; u_1, x, \hat{u})\\
   &  & + λ_1^2  \ddot{ℰ_2} (λ_0 ; x, \hat{u})
-  ] + o (\eta^2)\\
+  ] + o (η^2)\\
   & = & ℰ_2 (λ_0 ; x_0, \hat{u})\\
-  &  & + \eta [ℰ_3 (λ_0 ; u_1, x_0, \hat{u}) +ℰ_2
+  &  & + η [ℰ_3 (λ_0 ; u_1, x_0, \hat{u}) +ℰ_2
   (λ_0 ; x_1, \hat{u}) + λ_1  \dot{ℰ_2} (λ_0 ;
   x_0, \hat{u})]\\
-  &  & + \tfrac{1}{2} \eta^2  [ℰ_2 (λ_0 ; x_2, \hat{u}) +
+  &  & + \tfrac{1}{2} η^2  [ℰ_2 (λ_0 ; x_2, \hat{u}) +
   2ℰ_3 (λ_0 ; u_1, x_1, \hat{u}) + 2 λ_1
   \dot{ℰ_2} (λ_0 ; x_1, \hat{u})]\\
-  &  & + \tfrac{1}{2} \eta^2  [ℰ_4 (λ_0 ; u_1, u_1, x_0,
+  &  & + \tfrac{1}{2} η^2  [ℰ_4 (λ_0 ; u_1, u_1, x_0,
   \hat{u}) +ℰ_3 (λ_0 ; u_2, x_0, \hat{u}) + λ_2
   \dot{ℰ_2} (λ_0 ; x_0, \hat{u})]\\
-  &  & + \tfrac{1}{2} \eta^2  [2 λ_1  \dot{ℰ_3} (λ_0 ;
+  &  & + \tfrac{1}{2} η^2  [2 λ_1  \dot{ℰ_3} (λ_0 ;
   u_1, x, \hat{u}) + λ_1^2  \ddot{ℰ_2} (λ_0 ; x,
-  \hat{u})] + o (\eta^2)
+  \hat{u})] + o (η^2)
 \end{eqnarray*}
 et
 \begin{eqnarray*}
   \alpha \langle x, \hat{u} \rangle & = & \alpha_0  \langle x_0, \hat{u}
-  \rangle + \eta (\alpha_1 \langle x_0, \hat{u} \rangle + \alpha_0 \langle
+  \rangle + η (\alpha_1 \langle x_0, \hat{u} \rangle + \alpha_0 \langle
   x_1, \hat{u} \rangle)\\
-  &  & + \tfrac{1}{2} \eta^2  (\alpha_2 \langle x_0, \hat{u} \rangle + 2
+  &  & + \tfrac{1}{2} η^2  (\alpha_2 \langle x_0, \hat{u} \rangle + 2
   \alpha_1 \langle x_1, \hat{u} \rangle + \alpha_0 \langle x_2, \hat{u}
-  \rangle) + o (\eta^2) .
+  \rangle) + o (η^2) .
 \end{eqnarray*}
 \paragraph{Problème variationnel d'ordre 0}Trouver $x_0∈U$ et
 $\alpha_0∈\mathbb{R}$ tels que, pour tout $\hat{u}∈U$

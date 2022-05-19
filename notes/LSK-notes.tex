@@ -24,13 +24,13 @@
 
 \begin{document}
 
-\title{Notes relatives {\`a} la m{\'e}thode asymptotique de
+\title{Notes relatives à la méthode asymptotique de
 Lyapunov--Schmidt--Koiter}
 
 \author{
-  S{\'e}bastien Brisard
+  Sébastien Brisard
   \tmaffiliation{Univ Gustave Eiffel, Ecole des Ponts, IFSTTAR, CNRS, Navier,
-  F-77454 Marne-la-Vall{\'e}e, France}
+  F-77454 Marne-la-Vallée, France}
   \tmemail{sebastien.brisard@univ-eiffel.fr}
 }
 
@@ -42,11 +42,11 @@ Lyapunov--Schmidt--Koiter}
 
 \section{Notations}
 
-L'espace des champs cin{\'e}matiquement admissibles est not{\'e} $U$. On
-suppose qu'il a la structure d'espace vectoriel. L'{\'e}nergie du syst{\`e}me
-est not{\'e}e $\mathcal{E} (u, \lambda)$, o{\`u} $\lambda$ d{\'e}signe un
-param{\`e}tre de chargement. Soit $u^{\ast} (\lambda)$ la branche
-fondamentale. Par d{\'e}finition
+L'espace des champs cinématiquement admissibles est noté $U$. On
+suppose qu'il a la structure d'espace vectoriel. L'énergie du système
+est notée $\mathcal{E} (u, \lambda)$, où $\lambda$ désigne un
+paramètre de chargement. Soit $u^{\ast} (\lambda)$ la branche
+fondamentale. Par définition
 \begin{equation}
   \mathcal{E}_{, u} [u^{\ast} (\lambda), \lambda ; \hat{u}] = 0 \quad
   \text{pour tout} \quad \hat{u} \in U.
@@ -60,44 +60,44 @@ Il sera commode d'introduire les notations suivantes
   \lambda] .
 \end{equation}
 Noter que $\mathcal{E}_2$, $\mathcal{E}_3$ et $\mathcal{E}_4$ sont des formes
-bi-, tri- et quadri-lin{\'e}aires, respectivement. L'application de ces formes
-{\`a} des {\'e}l{\'e}ments de $U$ sera not{\'e}e $\mathcal{E}_2 (\lambda ; u,
-v)$, $\mathcal{E}_3 (\lambda ; u, v, w)$, etc.... La d{\'e}riv{\'e}e de ces
-formes par rapport {\`a} $\lambda$ sera not{\'e}e {\`a} l'aide d'un point
-sup{\'e}rieur ($\dot{\mathcal{E}_2}$, $\dot{\mathcal{E}_3}$, ...).
+bi-, tri- et quadri-linéaires, respectivement. L'application de ces formes
+à des éléments de $U$ sera notée $\mathcal{E}_2 (\lambda ; u,
+v)$, $\mathcal{E}_3 (\lambda ; u, v, w)$, etc.... La dérivée de ces
+formes par rapport à $\lambda$ sera notée à l'aide d'un point
+supérieur ($\dot{\mathcal{E}_2}$, $\dot{\mathcal{E}_3}$, ...).
 
-On suppose que l'{\'e}quilibre est stable pour des valeurs suffisamment
-petites de $\lambda$. Plus pr{\'e}cis{\'e}ment, on suppose que $\mathcal{E}_2
-(\lambda)$ est d{\'e}finie positive pour tout $\lambda < \lambda_0$. Pour
+On suppose que l'équilibre est stable pour des valeurs suffisamment
+petites de $\lambda$. Plus précisément, on suppose que $\mathcal{E}_2
+(\lambda)$ est définie positive pour tout $\lambda < \lambda_0$. Pour
 $\lambda = \lambda_0$, la forme quadratique $\mathcal{E}_2 (\lambda_0)$ n'est
 plus que positive. En notant $u_0 = u^{\ast} (\lambda_0)$ la position
-d'{\'e}quilibre obtenue pour la valeur critique $\lambda_0$ du param{\`e}tre
-de chargement $\lambda$, on s'int{\'e}resse {\`a} toutes les courbes
-d'{\'e}quilibre qui passent par le point $(u_0, \lambda_0)$.
+d'équilibre obtenue pour la valeur critique $\lambda_0$ du paramètre
+de chargement $\lambda$, on s'intéresse à toutes les courbes
+d'équilibre qui passent par le point $(u_0, \lambda_0)$.
 
 Noter que dans ce qui suit, on convient que les formes $\mathcal{E}_2$,
-$\mathcal{E}_3$ et $\mathcal{E}_4$ sont implicitement {\'e}valu{\'e}es en
-$\lambda_0$ lorsque $\lambda$ n'est pas rappel{\'e} : ainsi, on notera
-$\mathcal{E}_2 (\bullet, \bullet)$ plut{\^o}t que $\mathcal{E}_2 (\lambda_0 ;
+$\mathcal{E}_3$ et $\mathcal{E}_4$ sont implicitement évaluées en
+$\lambda_0$ lorsque $\lambda$ n'est pas rappelé : ainsi, on notera
+$\mathcal{E}_2 (\bullet, \bullet)$ plutôt que $\mathcal{E}_2 (\lambda_0 ;
 \bullet, \bullet)$.
 
 \section{Analyse de la branche fondamentale}
 
-On s'int{\'e}resse dans ce paragraphe {\`a} la stabilit{\'e} du point critique
-$(u_0, \lambda_0) .$ Par hypoth{\`e}se, $\mathcal{E}_2 (\lambda_0)$ est
-positive, sans {\^e}tre d{\'e}finie positive~; soit $V$ son noyau, qui forme
+On s'intéresse dans ce paragraphe à la stabilité du point critique
+$(u_0, \lambda_0) .$ Par hypothèse, $\mathcal{E}_2 (\lambda_0)$ est
+positive, sans être définie positive~; soit $V$ son noyau, qui forme
 un sous-espace vectoriel de $U$. On suppose que $V$ est de dimension finie $m
-= \dim V$. Soit $(v_1, \ldots, v_m)$ une base orthonorm{\'e}e de ce noyau pour
+= \dim V$. Soit $(v_1, \ldots, v_m)$ une base orthonormée de ce noyau pour
 le produit scalaire $\langle \bullet, \bullet \rangle$ (qui n'est pas
-pr{\'e}cis{\'e} pour le moment). On introduit le sous-espace
-suppl{\'e}mentaire orthogonal $W$ de $V$ dans $U$
+précisé pour le moment). On introduit le sous-espace
+supplémentaire orthogonal $W$ de $V$ dans $U$
 \begin{equation}
   U = V \overset{\perp}{\otimes} W.
 \end{equation}
-Pour {\'e}tudier la stabilit{\'e} de l'{\'e}quilibre, on calcule l'{\'e}nergie
-dans un {\'e}tat $u_0 + \xi v + \eta w$ voisin du point d'{\'e}quilibre $u_0$,
+Pour étudier la stabilité de l'équilibre, on calcule l'énergie
+dans un état $u_0 + \xi v + \eta w$ voisin du point d'équilibre $u_0$,
 avec $\xi, \eta \in \mathbb{R}$ {\guillemotleft} petits {\guillemotright}, $v
-\in V$ and $w \in W$. On obtient alors, {\`a} l'ordre 4 en $\xi$ et $\eta$
+\in V$ and $w \in W$. On obtient alors, à l'ordre 4 en $\xi$ et $\eta$
 \begin{eqnarray}
   \Delta \mathcal{E} & = & \mathcal{E} (u_0 + \xi v + \eta w, \lambda_0)
   -\mathcal{E} (u_0, \lambda_0) \nonumber\\
@@ -107,11 +107,11 @@ avec $\xi, \eta \in \mathbb{R}$ {\guillemotleft} petits {\guillemotright}, $v
   &  & \nosymbol + \tfrac{1}{24} \mathcal{E}_4 (\xi v + \eta w, \xi v + \eta
   w, \xi v + \eta w, \xi v + \eta w) +\mathcal{O} [(\xi^2 + \eta^2)^2],
 \end{eqnarray}
-o{\`u} le terme lin{\'e}aire a {\'e}t{\'e} omis puisque $u_0$ est un point
-critique de l'{\'e}nergie. En tenant compte de la multilin{\'e}arit{\'e} et de
-la sym{\'e}trie des diff{\'e}rentielles successives de l'{\'e}nergie
+où le terme linéaire a été omis puisque $u_0$ est un point
+critique de l'énergie. En tenant compte de la multilinéarité et de
+la symétrie des différentielles successives de l'énergie
 $\mathcal{E}$, ainsi que du fait que $\mathcal{E}_2 (v, \bullet) = 0$ (puisque
-$v \in V$), l'expression pr{\'e}c{\'e}dente s'{\'e}crit
+$v \in V$), l'expression précédente s'écrit
 \begin{eqnarray}
   \Delta \mathcal{E} & = & \tfrac{1}{2} \eta^2 \mathcal{E}_2 (w, w) +
   \tfrac{1}{6} \xi^3 \mathcal{E}_3 (v, v, v) + \tfrac{1}{2} \xi^2 \eta
@@ -125,79 +125,79 @@ $v \in V$), l'expression pr{\'e}c{\'e}dente s'{\'e}crit
   &  & + \tfrac{1}{24} \eta^4 \mathcal{E}_4 (w, w, w, w) +\mathcal{O} [(\xi^2
   + \eta^2)^2],
 \end{eqnarray}
-o{\`u} l'on convient que toutes les diff{\'e}rentielles de $\mathcal{E}$ sont
-{\'e}valu{\'e}es au point d'{\'e}quilibre $u_0$.
+où l'on convient que toutes les différentielles de $\mathcal{E}$ sont
+évaluées au point d'équilibre $u_0$.
 
-Pour que l'{\'e}quilibre soit stable, il faut que cette expression soit
+Pour que l'équilibre soit stable, il faut que cette expression soit
 positive ou nulle pour tous $\xi$ et $\eta$ suffisamment petits. En prenant
-tout d'abord $\eta = 0$, on obtient les conditions n{\'e}cessaires
+tout d'abord $\eta = 0$, on obtient les conditions nécessaires
 \begin{equation}
   \label{eq20211108164416} \mathcal{E}_3 (v, v, v) = 0 \quad \text{et} \quad
   \mathcal{E}_4 (v, v, v, v) \geq 0 \quad \text{pour tout} \quad v \in V.
 \end{equation}
 En d'autres termes, s'il existe $v \in V$ tel que $\mathcal{E}_3 (v, v, v)
-\neq 0$ ou $\mathcal{E}_4 (v, v, v, v) < 0$, alors l'{\'e}quilibre est
-{\tmem{instable}}. Les conditions pr{\'e}c{\'e}dentes ne sont pas suffisantes
-pour assurer la stabilit{\'e}. En effet, supposant ces conditions remplies, on
+\neq 0$ ou $\mathcal{E}_4 (v, v, v, v) < 0$, alors l'équilibre est
+{\tmem{instable}}. Les conditions précédentes ne sont pas suffisantes
+pour assurer la stabilité. En effet, supposant ces conditions remplies, on
 prend maintenant $\eta = \xi^2$
 \begin{equation}
   \Delta \mathcal{E}= \tfrac{1}{2} \xi^4  \left[ \mathcal{E}_2 (w, w)
   +\mathcal{E}_3 (v, v, w) + \tfrac{1}{12} \mathcal{E}_4 (v, v, v, v) \right]
   + o (\xi^4)
 \end{equation}
-et on obtient la condition n{\'e}cessaire suppl{\'e}mentaire
+et on obtient la condition nécessaire supplémentaire
 \begin{equation}
   \label{eq20211109145356} \mathcal{E}_2 (w, w) +\mathcal{E}_3 (v, v, w) +
   \tfrac{1}{12} \mathcal{E}_4 (v, v, v, v) \geq 0,
 \end{equation}
-pour tous $v \in V$ et $w \in W$. Pour $v \in V$ fix{\'e}, l'expression
-pr{\'e}c{\'e}dente est minimale lorsque $w$ satisfait le probl{\`e}me
+pour tous $v \in V$ et $w \in W$. Pour $v \in V$ fixé, l'expression
+précédente est minimale lorsque $w$ satisfait le problème
 variationnel
 \begin{equation}
   \label{eq20211109145224} 2\mathcal{E}_2 (w, \hat{w}) +\mathcal{E}_3 (v, v,
   \hat{w}) = 0 \quad \text{pour tout} \quad \hat{w} \in W.
 \end{equation}
-Soit $w_{i \nocomma j} \in W$ l'unique solution du probl{\`e}me variationnel
+Soit $w_{i \nocomma j} \in W$ l'unique solution du problème variationnel
 suivant
 \begin{equation}
   \label{eq:pbvar wij} \mathcal{E}_2 (w_{i \nocomma j}, \hat{w})
   +\mathcal{E}_3 (v_i, v_j, \hat{w}) = 0 \quad \text{pour tout} \quad \hat{w}
   \in W.
 \end{equation}
-Alors, pour $v = \xi^i v_i$, la solution du probl{\`e}me
+Alors, pour $v = \xi^i v_i$, la solution du problème
 variationnel~\eqref{eq20211109145224} est $w = = \tfrac{1}{2} \xi^i \xi^j w_{i
 \nocomma j}$. Pour cette valeur de $v$, la condition~\eqref{eq20211109145356}
-s'{\'e}crit
+s'écrit
 \begin{equation}
   [\mathcal{E}_4 (v_i, v_j, v_k, v_l) - 3\mathcal{E}_2 (w_{i \nocomma j}, w_{k
   \nocomma l})] \xi^i \xi^j \xi^k \xi^l \geq 0,
 \end{equation}
 pour tous $\xi_i, \xi_j, \xi_k, \xi_l \in \mathbb{R}$. On peut montrer que
-l'in{\'e}galit{\'e} stricte est une condition {\tmem{suffisante}} de
-stabilit{\'e}.
+l'inégalité stricte est une condition {\tmem{suffisante}} de
+stabilité.
 
 \section{Bifurcations}
 
-On {\'e}crit toute courbe d'{\'e}quilibre passant par le point $(u_0,
-\lambda_0)$ sous la forme param{\'e}trique suivante
+On écrit toute courbe d'équilibre passant par le point $(u_0,
+\lambda_0)$ sous la forme paramétrique suivante
 \begin{eqnarray}
   \lambda & = & \lambda_0 + \eta \lambda_1 + \tfrac{1}{2} \eta^2 \lambda_2 +
   \tfrac{1}{6} \eta^3 \lambda_3 + \cdots,  \label{eq20211115075817}\\
   u & = & u^{\ast} (\lambda) + \eta u_1 + \tfrac{1}{2} \eta^2 u_2 +
   \tfrac{1}{6} \eta^3 u_3 + \cdots,  \label{eq20211115075835}
 \end{eqnarray}
-o{\`u} $\eta$ est un param{\`e}tre, non pr{\'e}cis{\'e} pour le moment. Noter
-que, dans la repr{\'e}sentation param{\'e}trique de $u$, $u^{\ast}$ est
-{\'e}valu{\'e} en $\lambda$ et pas en $\lambda_0$.
+où $\eta$ est un paramètre, non précisé pour le moment. Noter
+que, dans la représentation paramétrique de $u$, $u^{\ast}$ est
+évalué en $\lambda$ et pas en $\lambda_0$.
 
 Les coefficients $\lambda_k$ et $u_k$ des
-d{\'e}veloppements~\eqref{eq20211115075817} et \eqref{eq20211115075835} sont
-identifi{\'e}s en {\'e}crivant que l'{\'e}nergie est stationnaire le long de
-la courbe d'{\'e}quilibre, c'est-{\`a}-dire que le r{\'e}sidu $\mathcal{E}_{,
-u}  [u (\eta), \lambda (\eta)]$ est nul. Le d{\'e}veloppement limit{\'e} du
-r{\'e}sidu est {\'e}tabli au voisinage de $\eta = 0$ dans
-l'annexe~\ref{sec20211112182000} [voir {\'E}q.~\eqref{eq20220107080901}]. En
-{\'e}crivant que tous ses termes s'annulent, on trouve successivement, pour
+développements~\eqref{eq20211115075817} et \eqref{eq20211115075835} sont
+identifiés en écrivant que l'énergie est stationnaire le long de
+la courbe d'équilibre, c'est-à-dire que le résidu $\mathcal{E}_{,
+u}  [u (\eta), \lambda (\eta)]$ est nul. Le développement limité du
+résidu est établi au voisinage de $\eta = 0$ dans
+l'annexe~\ref{sec20211112182000} [voir Éq.~\eqref{eq20220107080901}]. En
+écrivant que tous ses termes s'annulent, on trouve successivement, pour
 tout $\hat{u} \in U$
 \begin{equation}
   \label{eq20211112182917} \mathcal{E}_2 (\lambda_0 ; u_1, \hat{u}) = 0,
@@ -217,67 +217,67 @@ tout $\hat{u} \in U$
   \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) & = & 0.
   \label{eq:res3}
 \end{eqnarray}
-On d{\'e}duit de l'{\'e}quation~\eqref{eq20211112182917} que $u_1 \in V$. En
-prenant la fonction test {\'e}galement dans $V$, on d{\'e}duit de
-l'{\'e}quation~\eqref{eq:res2} que $u_1$ est solution du probl{\`e}me suivant
+On déduit de l'équation~\eqref{eq20211112182917} que $u_1 \in V$. En
+prenant la fonction test également dans $V$, on déduit de
+l'équation~\eqref{eq:res2} que $u_1$ est solution du problème suivant
 : trouver $u_1 \in V$ tel que
 \begin{equation}
   \label{eq:bifurcation 1a} \tfrac{1}{2} \mathcal{E}_3 (\lambda_0 ; u_1, u_1,
   \hat{v}) + \lambda_1  \dot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{v}) = 0,
 \end{equation}
-pour tout $\hat{v} \in V$. On remarque d'ores et d{\'e}j{\`a} que si \ l'est
-{\'e}galement. Il est commode de transformer l'{\'e}quation de bifurcation
-\eqref{eq:bifurcation 1a}, intrins{\`e}que, en un syst{\`e}me d'{\'e}quations
-scalaires. {\`A} cet effet, on d{\'e}compose $u_1 \in V$ dans la base
+pour tout $\hat{v} \in V$. On remarque d'ores et déjà que si \ l'est
+également. Il est commode de transformer l'équation de bifurcation
+\eqref{eq:bifurcation 1a}, intrinsèque, en un système d'équations
+scalaires. à cet effet, on décompose $u_1 \in V$ dans la base
 $(v_i)_{1 \leqslant i \leqslant m}$
 \begin{equation}
   \label{eq:decomposition u1} u_1 = \xi_1^i v_i .
 \end{equation}
-En prenant $\hat{v} = v_i$, l'{\'e}quation~\eqref{eq:bifurcation 1a}
-s'{\'e}crit
+En prenant $\hat{v} = v_i$, l'équation~\eqref{eq:bifurcation 1a}
+s'écrit
 \begin{equation}
   \label{eq:bifurcation 1b} \tfrac{1}{2} \mathcal{E}_3 (\lambda_0 ; v_i, v_j,
   v_k)  \hspace{0.17em} \xi_1^j \xi_1^k + \lambda_1  \dot{\mathcal{E}}_2
   (\lambda_0 ; v_i, v_j)  \hspace{0.17em} \xi_1^j = 0.
 \end{equation}
-On obtient ainsi un syst{\`e}me de $m$ {\'e}quations quadratiques {\`a} $(m +
-1)$ inconnues, qui permet en g{\'e}n{\'e}ral de d{\'e}terminer les valeurs de
-$\lambda_1$ et $u_1$ (voir discussion ci-apr{\`e}s ***TODO -- Compl{\'e}ter
-r{\'e}f{\'e}rence***).
+On obtient ainsi un système de $m$ équations quadratiques à $(m +
+1)$ inconnues, qui permet en général de déterminer les valeurs de
+$\lambda_1$ et $u_1$ (voir discussion ci-après ***TODO -- Compléter
+référence***).
 
-Afin de d{\'e}terminer les termes suivants du d{\'e}veloppement asymptotique
-de la branche bifurqu{\'e}e, soit $\lambda_2$ et $u_2$, on introduit la
-d{\'e}composition
+Afin de déterminer les termes suivants du développement asymptotique
+de la branche bifurquée, soit $\lambda_2$ et $u_2$, on introduit la
+décomposition
 \begin{equation}
   u_2 = \xi_2^i v_i + \tilde{u}_2,
 \end{equation}
-o{\`u} $\tilde{u}_2 \in W$ est la projection orthogonale de $u_2$ sur
+où $\tilde{u}_2 \in W$ est la projection orthogonale de $u_2$ sur
 $W$(notation provisoire). On a alors $\mathcal{E}_2 (u_2, \hat{u})
-=\mathcal{E}_2 (\tilde{u}_2, \hat{u})$ et l'{\'e}quation~\eqref{eq:res2}
-s'{\'e}crit
+=\mathcal{E}_2 (\tilde{u}_2, \hat{u})$ et l'équation~\eqref{eq:res2}
+s'écrit
 \begin{equation}
   \mathcal{E}_3 (\lambda_0 ; u_1, u_1, \hat{u}) + 2 \lambda_1
   \dot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) +\mathcal{E}_2 (\lambda_0 ;
   \tilde{u}_2, \hat{u}) = 0,
 \end{equation}
 pour tout $\hat{u} \in U$. En prenant cette fois-ci la fonction test dans
-l'espace $W$, on obtient le probl{\`e}me variationnel suivant~: trouver
+l'espace $W$, on obtient le problème variationnel suivant~: trouver
 $\tilde{u}_2 \in W$ tel que
 \begin{equation}
   \label{eq20211210131623} \mathcal{E}_2 (\lambda_0 ; {\tilde{u}_2} , \hat{w})
   + \xi_1^i \xi_1^j \mathcal{E}_3 (\lambda_0 ; v_i, v_j, \hat{w}) + 2
   \lambda_1 \xi_1^i  \dot{\mathcal{E}_2} (\lambda_0 ; v_i, \hat{w}) = 0,
 \end{equation}
-pour tout $\hat{w} \in W$. Soient $w_i \in W$ les solutions des probl{\`e}mes
+pour tout $\hat{w} \in W$. Soient $w_i \in W$ les solutions des problèmes
 variationnels suivants
 \begin{equation}
   \label{eq:pbvar wi} \mathcal{E}_2 (\lambda_0 ; w_i, \hat{w}) + 2
   \dot{\mathcal{E}_2} (\lambda_0 ; v_i, \hat{w}) = 0,
 \end{equation}
 pour tout $\hat{w} \in W$. La solution du
-probl{\`e}me~\eqref{eq20211210131623} s'obtient par simple combinaison
-lin{\'e}aire des $w_i$ et $w_{ij}$ [on rappelle que ces derniers sont
-d{\'e}finis par le probl{\`e}me variationnel~\eqref{eq:pbvar wij}]
+problème~\eqref{eq20211210131623} s'obtient par simple combinaison
+linéaire des $w_i$ et $w_{ij}$ [on rappelle que ces derniers sont
+définis par le problème variationnel~\eqref{eq:pbvar wij}]
 \begin{equation}
   \tilde{u}_2 = \xi_1^i \xi_1^j w_{i \nocomma j} + \lambda_1 \xi_1^i w_i,
 \end{equation}
@@ -287,8 +287,8 @@ de sorte que
   \nocomma j} + \lambda_1 \xi_1^i w_i .
 \end{equation}
 En introduisant les expressions~\eqref{eq:decomposition u1} et
-\eqref{eq:decomposition u2} dans l'{\'e}quation~\eqref{eq:res3} et en prenant
-de plus $\hat{u} = v_i$, on obtient alors les {\'e}quations suivantes
+\eqref{eq:decomposition u2} dans l'équation~\eqref{eq:res3} et en prenant
+de plus $\hat{u} = v_i$, on obtient alors les équations suivantes
 \begin{eqnarray}
   3 [\mathcal{E}_3 (\lambda_0 ; v_i, v_j, v_k) \xi_1^k + \lambda_1
   \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j)] \xi_2^j + 3 \lambda_2
@@ -303,10 +303,10 @@ de plus $\hat{u} = v_i$, on obtient alors les {\'e}quations suivantes
   \dot{\mathcal{E}_2} (\lambda_0 ; v_i, w_j)] \xi_1^j & = & 0,
   \label{eq:bifurcation 2a}
 \end{eqnarray}
-qui permet en principe de d{\'e}terminer $\lambda_2$ ainsi que les $\xi_2^i$.
+qui permet en principe de déterminer $\lambda_2$ ainsi que les $\xi_2^i$.
 On montre dans le paragraphe \ref{sec:Simplification des équations de
-bifurcation} que les {\'e}quations \eqref{eq:bifurcation 1b} et
-\eqref{eq:bifurcation 2a} peuvent s'{\'e}crire sous la forme suivante
+bifurcation} que les équations \eqref{eq:bifurcation 1b} et
+\eqref{eq:bifurcation 2a} peuvent s'écrire sous la forme suivante
 \begin{equation}
   \label{eq:bifurcation 1c} \tfrac{1}{2} E_{i \nocomma j \nocomma k}
   (\lambda_0) \xi_1^j \xi_1^k + \lambda_1 F_{i \nocomma j} (\lambda_0) \xi_1^j
@@ -318,9 +318,9 @@ bifurcation} que les {\'e}quations \eqref{eq:bifurcation 1b} et
   \nocomma j} (\lambda_0) \xi_1^j + A_{i \nocomma j} (\lambda_0) \xi_2^j +
   \lambda_1  \dot{A}_{i \nocomma j} (\lambda_0) \xi_1^j = 0,
 \end{equation}
-o{\`u} les tenseurs $E_{i \nocomma j \nocomma k}$, $E_{i \nocomma j \nocomma k
-\nocomma l}$, $F_{i \nocomma j}$ et $A_{i \nocomma j}$ sont d{\'e}finis comme
-suit ***je ne suis pas s{\^u}r du terme faisant intervenir $\dot{A}_{i
+où les tenseurs $E_{i \nocomma j \nocomma k}$, $E_{i \nocomma j \nocomma k
+\nocomma l}$, $F_{i \nocomma j}$ et $A_{i \nocomma j}$ sont définis comme
+suit ***je ne suis pas sûr du terme faisant intervenir $\dot{A}_{i
 \nocomma j} (\lambda_0)$***
 \begin{equation}
   \label{eq:def Eijk} E_{i \nocomma j \nocomma k} (\lambda) =\mathcal{E}_3
@@ -343,51 +343,51 @@ suit ***je ne suis pas s{\^u}r du terme faisant intervenir $\dot{A}_{i
   \label{eq:def Aij} A_{i \nocomma j} (\lambda) = E_{i \nocomma j \nocomma k}
   (\lambda) \xi_1^k + \lambda_1 F_{i \nocomma j} (\lambda) .
 \end{equation}
-Noter que tous ces tenseurs sont {\tmem{sym{\'e}triques}}. On remarque que,
+Noter que tous ces tenseurs sont {\tmem{symétriques}}. On remarque que,
 puisque $\mathcal{E}_2 (\lambda_0 ; v_i, \bullet) = 0$, on a les
 simplifications suivantes en $\lambda = \lambda_0$ : $E_{i \nocomma j \nocomma
 k} (\lambda_0) =\mathcal{E}_3 (\lambda_0 ; v_i, v_j, v_k)$ et $F_{i \nocomma
 j} (\lambda_0) = \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j)$.
 
 \paragraph{Si la forme $\mathcal{E}_3 (\lambda_0)$ n'est pas nulle sur
-$V$}L'{\'e}quation \eqref{eq:bifurcation 1c} admet au plus $(2^m - 1)$ paires
-de solutions r{\'e}elles $(\lambda_1, u_1)$ et $(- \lambda_1, - u_1)$.
+$V$}L'équation \eqref{eq:bifurcation 1c} admet au plus $(2^m - 1)$ paires
+de solutions réelles $(\lambda_1, u_1)$ et $(- \lambda_1, - u_1)$.
 
 \begin{remark}
-  Je ne sais pas d{\'e}montrer ce r{\'e}sultat sur le nombre de solutions
-  r{\'e}elles.
+  Je ne sais pas démontrer ce résultat sur le nombre de solutions
+  réelles.
 \end{remark}
 
 \paragraph{Si la forme $\mathcal{E}_3 (\lambda_0)$ est nulle sur
-$V$}L'{\'e}quation \eqref{eq:bifurcation 1a} conduit n{\'e}cessairement {\`a}
-$\lambda_1 = 0$, puisque $\dot{\mathcal{E}}_2 (\lambda_0)$ est d{\'e}finie
-n{\'e}gative. D{\`e}s lors, l'{\'e}quation \eqref{eq:bifurcation 2b}
-s'{\'e}crit\marginpar{Expliquer pourquoi la forme quadratique
-$\dot{\mathcal{E}}_2 (\lambda_0)$ est bien d{\'e}finie n{\'e}gative}
+$V$}L'équation \eqref{eq:bifurcation 1a} conduit nécessairement à
+$\lambda_1 = 0$, puisque $\dot{\mathcal{E}}_2 (\lambda_0)$ est définie
+négative. Dès lors, l'équation \eqref{eq:bifurcation 2b}
+s'écrit\marginpar{Expliquer pourquoi la forme quadratique
+$\dot{\mathcal{E}}_2 (\lambda_0)$ est bien définie négative}
 \begin{equation}
   \tfrac{1}{3} E_{i \nocomma j \nocomma k \nocomma l} (\lambda_0)
   \hspace{0.17em} \xi_1^j \xi_1^k \xi_1^l + \lambda_2 F_{i \nocomma j}
   (\lambda_0) \xi_1^j = 0.
 \end{equation}
-Cette {\'e}quation admet cette fois au plus $\frac{3^m - 1}{2}$ paires de
-solutions r{\'e}elles $(\lambda_2, u_1)$ et $(- \lambda_2, - u_1)$.
+Cette équation admet cette fois au plus $\frac{3^m - 1}{2}$ paires de
+solutions réelles $(\lambda_2, u_1)$ et $(- \lambda_2, - u_1)$.
 
 \begin{remark}
-  Je ne sais pas non plus d{\'e}montrer ce r{\'e}sultat sur le nombre de
-  solutions r{\'e}elles.
+  Je ne sais pas non plus démontrer ce résultat sur le nombre de
+  solutions réelles.
 \end{remark}
 
 \begin{tmframed}
-  \paragraph{Note du 29/04/2022}J'ai relu tous les calculs pr{\'e}c{\'e}dents.
-  Il reste {\`a} reprendre les calculs des d{\'e}veloppements asymptotiques de
-  l'{\'e}nergie et de sa hessienne, pour tenir compte en particulier des
-  factorielles introduites maintenant dans les d{\'e}veloppements
-  asymptotiques. Il faudrait {\'e}galement introduire les tenseurs
-  pr{\'e}c{\'e}dents dans les expressions de l'{\'e}nergie et de sa hessienne.
+  \paragraph{Note du 29/04/2022}J'ai relu tous les calculs précédents.
+  Il reste à reprendre les calculs des développements asymptotiques de
+  l'énergie et de sa hessienne, pour tenir compte en particulier des
+  factorielles introduites maintenant dans les développements
+  asymptotiques. Il faudrait également introduire les tenseurs
+  précédents dans les expressions de l'énergie et de sa hessienne.
 \end{tmframed}
 
-Le d{\'e}veloppement limit{\'e} suivant de l'{\'e}nergie le long de la branche
-bifurqu{\'e}e est {\'e}tabli dans l'annexe~\ref{sec:DL energie}
+Le développement limité suivant de l'énergie le long de la branche
+bifurquée est établi dans l'annexe~\ref{sec:DL energie}
 \begin{eqnarray}
   \mathcal{E} [u (\eta), \lambda (\eta)] & = & \mathcal{E} [u^{\ast} [\lambda
   (\eta)], \lambda (\eta)] + \tfrac{1}{6} \lambda_1 \eta^3 F_{i \nocomma j}
@@ -400,8 +400,8 @@ bifurqu{\'e}e est {\'e}tabli dans l'annexe~\ref{sec:DL energie}
   (\mathlambda_0) + \lambda_2 F_{i \nocomma j} (\lambda_0)] \xi_1^i \xi_1^j \}
   + o (\eta^4) .  \label{eq:DL energie}
 \end{eqnarray}
-Si $\lambda_1 \neq 0$, le premier terme non-nul du d{\'e}veloppement
-limit{\'e} pr{\'e}c{\'e}dent est d'ordre 3
+Si $\lambda_1 \neq 0$, le premier terme non-nul du développement
+limité précédent est d'ordre 3
 \begin{equation}
   \mathcal{E} [u (\eta), \lambda (\eta)] =\mathcal{E} (u^{\ast} [\lambda
   (\eta)], \lambda (\eta)) + \tfrac{1}{6} \lambda_1 \eta^3 F_{i \nocomma j}
@@ -417,9 +417,9 @@ tandis que si $\lambda_1 = 0$, le premier terme est d'ordre 4
   ***
 \end{center}
 
-Pour analyser la stabilit{\'e} de la branche bifurqu{\'e}e ainsi trouv{\'e}e,
-il faut d{\'e}terminer le signe de la hessienne de l'{\'e}nergie. On peut
-d'ores et d{\'e}j{\`a} remarquer que, sur la branche fondamentale ($u_1 = u_2
+Pour analyser la stabilité de la branche bifurquée ainsi trouvée,
+il faut déterminer le signe de la hessienne de l'énergie. On peut
+d'ores et déjà remarquer que, sur la branche fondamentale ($u_1 = u_2
 = 0$), en prenant $\eta = \lambda - \lambda_0$ ($\lambda_1 = 1$)
 \begin{equation}
   \mathcal{E}_2 (\lambda ; \hat{u}, \hat{v}) =\mathcal{E}_2 (\lambda_0 ;
@@ -427,16 +427,16 @@ d'ores et d{\'e}j{\`a} remarquer que, sur la branche fondamentale ($u_1 = u_2
   \hat{u}, \hat{v}) + o (\lambda - \lambda_0) .
 \end{equation}
 Dans ce qui suit, on supposera que $\dot{\mathcal{E}}_2 (\lambda_0) \neq 0$.
-Pour $\hat{v} \in V$, l'{\'e}galit{\'e} pr{\'e}c{\'e}dente s'{\'e}crit
+Pour $\hat{v} \in V$, l'égalité précédente s'écrit
 \begin{equation}
   \mathcal{E}_2 (\lambda_0 ; \hat{v}, \hat{v}) = (\lambda - \lambda_0)
   \dot{\mathcal{E}}_2 (\hat{v}, \hat{v}) + o (\lambda - \lambda_0) .
 \end{equation}
 Comme la branche fondamentale est stable pour $\lambda < \lambda_0$, on doit
 avoir $\dot{\mathcal{E}}_2 (\lambda_0 ; \hat{v}, \hat{v}) < 0$. La forme
-quadratique $\dot{\mathcal{E}}_2 (\lambda_0)$ est donc d{\'e}finie
-n{\'e}gative sur $V$. Le d{\'e}veloppement limit{\'e} de la hessienne de
-l'{\'e}nergie le long de la branche bifurqu{\'e}e est {\'e}tabli dans
+quadratique $\dot{\mathcal{E}}_2 (\lambda_0)$ est donc définie
+négative sur $V$. Le développement limité de la hessienne de
+l'énergie le long de la branche bifurquée est établi dans
 l'annexe~\ref{sec:DL hessienne}. Pour tous $\hat{u}, \hat{v} \in U$, on trouve
 \begin{eqnarray}
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta) ; \hat{u}, \hat{v}] &
@@ -451,7 +451,7 @@ l'annexe~\ref{sec:DL hessienne}. Pour tous $\hat{u}, \hat{v} \in U$, on trouve
   \hat{u}, \hat{v}) + \lambda_1^2  \ddot{\mathcal{E}_2} (\lambda_0 ; \hat{u},
   \hat{v}) \nobracket] + o (\eta^2) .  \label{eq:DL hessienne}
 \end{eqnarray}
-Pour une analyse de stabilit{\'e}, on doit prendre $\hat{u} = \hat{v}$, soit
+Pour une analyse de stabilité, on doit prendre $\hat{u} = \hat{v}$, soit
 \begin{eqnarray}
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta) ; \hat{u}, \hat{u}] &
   = & \mathcal{E}_2 (\lambda_0 ; \hat{u}, \hat{u}) + \eta [\mathcal{E}_3
@@ -464,15 +464,15 @@ Pour une analyse de stabilit{\'e}, on doit prendre $\hat{u} = \hat{v}$, soit
   \hat{u}, \hat{u}) + \lambda_1^2  \ddot{\mathcal{E}}_2 (\lambda_0 ; \hat{u},
   \hat{u})] + o (\eta^2) .  \label{eq:DL hessienne diag}
 \end{eqnarray}
-On peut d{\'e}composer le vecteur $\hat{u} \in U$ de fa{\c c}on unique sous la
+On peut décomposer le vecteur $\hat{u} \in U$ de fa{\c c}on unique sous la
 forme $\hat{u} = \hat{v} + \hat{w}$, avec $\hat{v} \in V$ et $\hat{w} \in W$.
-Le terme constant du d{\'e}veloppement pr{\'e}c{\'e}dent vaut alors
+Le terme constant du développement précédent vaut alors
 $\mathcal{E}_2 (\lambda_0 ; \hat{w}, \hat{w})$. Si $\hat{w} \neq 0$, alors ce
-terme constant est strictement positif, puisque la hessienne est d{\'e}finie
+terme constant est strictement positif, puisque la hessienne est définie
 positive sur $W$ en $\lambda = \lambda_0$. Au voisinage du point de
-bifurcation, la hessienne sur la branche bifurqu{\'e}e est donc positive pour
+bifurcation, la hessienne sur la branche bifurquée est donc positive pour
 tout $\hat{u} \in U$ ayant une composante dans $W$. Il suffit donc
-d'{\'e}tudier le signe de la hessienne sur la branche bifurqu{\'e}e pour
+d'étudier le signe de la hessienne sur la branche bifurquée pour
 $\hat{u} \in V$, soit $\hat{u} = \hat{\xi}^i v_i$. L'expression~\eqref{eq:DL
 hessienne diag} se simplifie alors sous la forme suivante
 
@@ -492,11 +492,11 @@ Compte-tenu de l'expression~\eqref{eq:decomposition u2}
   v_k) \xi_1^k + \lambda_1^2  \ddot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j)]
   \hat{\xi}^i  \hat{\xi}^j + o (\eta^2) \nonumber
 \end{eqnarray}
-Si $\lambda_1 \neq 0$, il suffit d'{\'e}tudier le signe de la forme
+Si $\lambda_1 \neq 0$, il suffit d'étudier le signe de la forme
 quadratique $[E_{i \nocomma j \nocomma k} (\lambda_0) \xi_1^k + \lambda_1 F_{i
 \nocomma j} (\lambda_0)] .$ Si $\lambda_1 = 0$ et que $\mathcal{E}_3
-(\lambda_0) = 0$ sur $V$, alors le d{\'e}veloppement limit{\'e}
-pr{\'e}c{\'e}dent s'{\'e}crit
+(\lambda_0) = 0$ sur $V$, alors le développement limité
+précédent s'écrit
 \begin{eqnarray}
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta) ; \hat{u}, \hat{u}] &
   = & \tfrac{1}{2} \eta^2  \{ [\mathcal{E}_4 (\lambda_0 ; v_i, v_j, v_k, v_l)
@@ -506,8 +506,8 @@ pr{\'e}c{\'e}dent s'{\'e}crit
   \hat{\xi}^i  \hat{\xi}^j + o (\eta^2) \nonumber
 \end{eqnarray}
 \begin{tmframed}
-  12/05/2022 Relecture jusqu'{\`a} l'{\'e}galit{\'e} pr{\'e}c{\'e}dente. Je
-  suis un peu surpris, car je m'attendais {\`a} un terme en $3\mathcal{E}_3
+  12/05/2022 Relecture jusqu'à l'égalité précédente. Je
+  suis un peu surpris, car je m'attendais à un terme en $3\mathcal{E}_3
   (\lambda_0 ; v_i, v_j, w_{k \nocomma l})${\textdots}
 \end{tmframed}
 
@@ -517,83 +517,83 @@ u_1$ ($\hat{\xi}^i = \xi_1^i$)
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta) ; u_1, u_1] = -
   \lambda_1 \eta \dot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1) + o (\eta) .
 \end{equation}
-Si $\lambda_1 \neq 0$, l'expression pr{\'e}c{\'e}dente peut {\'e}galement
-s'{\'e}crire
+Si $\lambda_1 \neq 0$, l'expression précédente peut également
+s'écrire
 \begin{equation}
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta) ; u_1, u_1] = -
   (\lambda - \lambda_0)  \dot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1) + o
   (\lambda - \lambda_0),
 \end{equation}
-qui est n{\'e}gative pour $\lambda < \lambda_0$: la branche bifurqu{\'e}e est
-instable sous la charge critique. Il reste alors {\`a} {\'e}tudier le signe de
-la hessienne de la branche bifurqu{\'e}e au-del{\`a} de la charge critique
+qui est négative pour $\lambda < \lambda_0$: la branche bifurquée est
+instable sous la charge critique. Il reste alors à étudier le signe de
+la hessienne de la branche bifurquée au-delà de la charge critique
 ($\lambda > \lambda_0$).
 
 \section{Cas d'un mode de flambement simple ($m = 1$)}
 
-Lorsque $m = \dim V = 1$, la base $v_1, \ldots, v_m$ est r{\'e}duite au seul
-vecteur $v_1$ et $u_1$ est parall{\`e}le {\`a} ce vecteur. Comme $\lVert u_1
-\rVert = 1$, on a donc n{\'e}cessairement $u_1 = v_1$ (quitte {\`a} changer
-$\eta$ en $- \eta$). L'{\'e}quation de bifurcation~\eqref{eq20220216140121}
-s'{\'e}crit alors
+Lorsque $m = \dim V = 1$, la base $v_1, \ldots, v_m$ est réduite au seul
+vecteur $v_1$ et $u_1$ est parallèle à ce vecteur. Comme $\lVert u_1
+\rVert = 1$, on a donc nécessairement $u_1 = v_1$ (quitte à changer
+$\eta$ en $- \eta$). L'équation de bifurcation~\eqref{eq20220216140121}
+s'écrit alors
 \begin{equation}
   \label{eq20220203144712} \mathcal{E}_{1 \nocomma 1 \nocomma 1} (\lambda_0) +
   2 \lambda_1  \dot{\mathcal{E}}_{1 \nocomma 1} (\lambda_0) = 0, \quad
   \text{soit} \quad \lambda_1 = - \frac{\mathcal{E}_{1 \nocomma 1 \nocomma 1}
   (\lambda_0)}{2 \dot{\mathcal{E}}_{1 \nocomma 1} (\lambda_0)},
 \end{equation}
-o{\`u} on remarque que le quotient a un sens, puisque $\dot{\mathcal{E}_2}
-(\lambda_0)$ est d{\'e}finie n{\'e}gative sur $V$. On trouve donc les
-d{\'e}veloppements limit{\'e}s
+où on remarque que le quotient a un sens, puisque $\dot{\mathcal{E}_2}
+(\lambda_0)$ est définie négative sur $V$. On trouve donc les
+développements limités
 \begin{equation}
   \lambda = \lambda_0 + \lambda_1 \eta + o (\eta)  \quad \text{et} \quad u =
   u^{\ast} (\lambda) + \eta v_1 + o (\eta),
 \end{equation}
-soit finalement, en {\'e}liminant $\eta$
+soit finalement, en éliminant $\eta$
 \begin{equation}
   \lambda = \lambda_0 - \frac{\xi \mathcal{E}_{1 \nocomma 1 \nocomma 1}
   (\lambda_0)}{2 \dot{\mathcal{E}}_{1 \nocomma 1} (\lambda_0)} + o (\xi),
   \quad \text{avec} \quad \xi = \langle u (\lambda) - u^{\ast} (\lambda), v_1
   \rangle .
 \end{equation}
-Pour d{\'e}terminer la stabilit{\'e} de la branche bifurqu{\'e}e, on calcule
-la hessienne en $(v_1, v_1)$. L'{\'e}quation~\eqref{eq20220203144500}
-s'{\'e}crit
+Pour déterminer la stabilité de la branche bifurquée, on calcule
+la hessienne en $(v_1, v_1)$. L'équation~\eqref{eq20220203144500}
+s'écrit
 \begin{equation}
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta) ; v_1, v_1] = \eta
   [\mathcal{E}_{1 \nocomma 1 \nocomma 1} (\lambda_0) + \lambda_1
   \dot{\mathcal{E}}_{1 \nocomma 1} (\lambda_0)] + o (\eta),
 \end{equation}
-soit, en substituant l'{\'e}quation~\eqref{eq20220203144712}
+soit, en substituant l'équation~\eqref{eq20220203144712}
 \begin{equation}
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta) ; v_1, v_1] = -
   \lambda_1 \eta \dot{\mathcal{E}}_{1 \nocomma 1} (\lambda_0) + o (\eta) .
 \end{equation}
-Ce d{\'e}veloppement ne permet de conclure que si le terme lin{\'e}aire est
+Ce développement ne permet de conclure que si le terme linéaire est
 non-nul, soit $\mathcal{E}_{1 \nocomma 1 \nocomma 1} (\lambda_0) \neq 0$ [voir
-{\'E}q.~\eqref{eq20220203144712}]. Dans ce cas, le d{\'e}veloppement
-asymptotique pr{\'e}c{\'e}dent s'{\'e}crit {\'e}galement
+Éq.~\eqref{eq20220203144712}]. Dans ce cas, le développement
+asymptotique précédent s'écrit également
 \begin{equation}
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta) ; v_1, v_1] = -
   (\lambda - \lambda_0)  \dot{\mathcal{E}}_{1 \nocomma 1} (\lambda_0) + o
   (\lambda - \lambda_0) .
 \end{equation}
-Comme $\dot{\mathcal{E}}_2 (\lambda_0)$ est d{\'e}finie n{\'e}gative, la
-branche bifurqu{\'e}e est {\tmem{instable}} pour $\lambda < \lambda_0$ et
+Comme $\dot{\mathcal{E}}_2 (\lambda_0)$ est définie négative, la
+branche bifurquée est {\tmem{instable}} pour $\lambda < \lambda_0$ et
 {\tmem{stable}} pour $\lambda > \lambda_0$ lorsque $\mathcal{E}_{1 \nocomma 1
 \nocomma 1} (\lambda_0) \neq 0$.
 
 Supposons maintenant que $\mathcal{E}_{1 \nocomma 1 \nocomma 1} (\lambda_0) =
 0$~; alors $\lambda_1 = 0$ et il faut calculer au moins un terme
-suppl{\'e}mentaire dans le d{\'e}veloppement limit{\'e} de la Hessienne.
-L'{\'e}quation de bifurcation~\eqref{eq20220216141706} s'{\'e}crit
+supplémentaire dans le développement limité de la Hessienne.
+L'équation de bifurcation~\eqref{eq20220216141706} s'écrit
 \begin{equation}
   \label{eq20220217164528} \mathcal{E}_{1 \nocomma 1 \nocomma 1 \nocomma 1}
   (\lambda_0) + 6\mathcal{E}_3 (\lambda_0 ; v_1, v_1, u_2) + 6 \lambda_2
   \dot{\mathcal{E}}_{1 \nocomma 1} (\lambda_0) = 0.
 \end{equation}
-En introduisant le d{\'e}veloppement~\eqref{eq20220124135324} de $u_2$ et en
-utilisant le probl{\`e}me variationnel~\eqref{eq20211221155859}
+En introduisant le développement~\eqref{eq20220124135324} de $u_2$ et en
+utilisant le problème variationnel~\eqref{eq20211221155859}
 \begin{equation}
   u_2 = \xi_2 v_1 + w_{1 \nocomma 1} + \lambda_1 w_1,
 \end{equation}
@@ -606,9 +606,9 @@ soit finalement
 \[ \lambda_2 = - \frac{\mathcal{E}_{1 \nocomma 1 \nocomma 1 \nocomma 1}
    (\lambda_0) - 12\mathcal{E}_2 (\lambda_0 ; w_{11}, w_{11})}{6
    \dot{\mathcal{E}}_{1 \nocomma 1} (\lambda_0)}, \]
-le quotient ayant une nouvelle fois un sens. Le d{\'e}veloppement
-asymptotique~\eqref{eq20211115082025} de la Hessienne s'{\'e}crit alors, en
-tenant compte de l'{\'E}q.~\eqref{eq20220217164528}
+le quotient ayant une nouvelle fois un sens. Le développement
+asymptotique~\eqref{eq20211115082025} de la Hessienne s'écrit alors, en
+tenant compte de l'Éq.~\eqref{eq20220217164528}
 \begin{eqnarray}
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta) ; v_1, v_1] & = &
   \tfrac{1}{2} \eta^2  [\mathcal{E}_{1 \nocomma 1 \nocomma 1 \nocomma 1}
@@ -618,34 +618,34 @@ tenant compte de l'{\'E}q.~\eqref{eq20220217164528}
   (\lambda_0) + o (\eta^2) .
 \end{eqnarray}
 
-\section{Propri{\'e}t{\'e}s des formes bilin{\'e}aires sym{\'e}triques,
+\section{Propriétés des formes bilinéaires symétriques,
 positives}
 
-Dans ce qui suit, $\mathcal{B}$ d{\'e}signe une forme bilin{\'e}aire
-sym{\'e}trique et positive sur l'espace vectoriel $U$. On d{\'e}finit son
+Dans ce qui suit, $\mathcal{B}$ désigne une forme bilinéaire
+symétrique et positive sur l'espace vectoriel $U$. On définit son
 noyau $\ker \mathcal{B}$ de la fa{\c c}on suivante
 \begin{equation}
   \ker \mathcal{B}= \{u \in U, \mathcal{B}(u, u) = 0\} .
 \end{equation}
 \begin{theorem}
-  Le noyau d'une forme bilin{\'e}aire, sym{\'e}trique et positive est un
+  Le noyau d'une forme bilinéaire, symétrique et positive est un
   sous-espace vectoriel.
 \end{theorem}
 
 \begin{proof}
   Soient $u, v \in \ker \mathcal{B}$, $\alpha \in \mathbb{R}$ et $w = u +
-  \alpha v$. Montrons que $w \in \ker \mathcal{B}$. Il suffit d'{\'e}valuer
+  \alpha v$. Montrons que $w \in \ker \mathcal{B}$. Il suffit d'évaluer
   $\mathcal{B} (w, w)$
   \begin{equation}
     \mathcal{B} (w, w) =\mathcal{B} (u + \alpha v, u + \alpha v) =\mathcal{B}
     (u, u) + 2 \alpha \mathcal{B} (u, v) + \alpha^2 \mathcal{B} (v, v),
   \end{equation}
-  o{\`u} l'on a tenu compte de la sym{\'e}trie de $\mathcal{B}$ pour
-  {\'e}crire que $\mathcal{B} (u, v) =\mathcal{B} (v, u)$. Comme $u, v \in
+  où l'on a tenu compte de la symétrie de $\mathcal{B}$ pour
+  écrire que $\mathcal{B} (u, v) =\mathcal{B} (v, u)$. Comme $u, v \in
   \ker \mathcal{B}$, le premier et le dernier terme sont nuls, soit
-  $\mathcal{B} (w, w) = 2 \alpha \mathcal{B} (u, v)$. La forme bilin{\'e}aire
-  {\'e}tant positive, cette grandeur est positive, {\tmem{quelle que soit la
-  valeur de $\alpha \in \mathbb{R}$}}. On en d{\'e}duit donc que $\mathcal{B}
+  $\mathcal{B} (w, w) = 2 \alpha \mathcal{B} (u, v)$. La forme bilinéaire
+  étant positive, cette grandeur est positive, {\tmem{quelle que soit la
+  valeur de $\alpha \in \mathbb{R}$}}. On en déduit donc que $\mathcal{B}
   (u, v) = 0$, puis que $\mathcal{B} (w, w) = 0$ et donc que $w \in \ker
   \mathcal{B}.$
 \end{proof}
@@ -660,21 +660,21 @@ noyau $\ker \mathcal{B}$ de la fa{\c c}on suivante
 
 \begin{proof}
   Soient $u \in \ker \mathcal{B}$, $v \in V$ et $\alpha \in \mathbb{R}$. Comme
-  pr{\'e}c{\'e}demment, on {\'e}crit que $\mathcal{B} (w, w) \geq 0$, avec $w
+  précédemment, on écrit que $\mathcal{B} (w, w) \geq 0$, avec $w
   = \alpha u + v$
   \begin{equation}
     \mathcal{B} (w, w) = 2 \alpha \mathcal{B} (u, v) +\mathcal{B} (v, v) \geq
     0,
   \end{equation}
-  o{\`u} l'on a tenu compte de ce que $\mathcal{B} (u, u) = 0$. L'expression
-  pr{\'e}c{\'e}dente, affine en $\alpha$, a un signe constant. Le terme
-  lin{\'e}aire en $\alpha$ est donc nul, soit $\mathcal{B} (u, v) = 0$.
-  R{\'e}ciproquement, si $\mathcal{B} (u, v) = 0$ pour tout $v \in V$, alors
+  où l'on a tenu compte de ce que $\mathcal{B} (u, u) = 0$. L'expression
+  précédente, affine en $\alpha$, a un signe constant. Le terme
+  linéaire en $\alpha$ est donc nul, soit $\mathcal{B} (u, v) = 0$.
+  Réciproquement, si $\mathcal{B} (u, v) = 0$ pour tout $v \in V$, alors
   $\mathcal{B} (u, u) = 0$ (en prenant $v = u$).
 \end{proof}
 
-\section{D{\'e}veloppements limit{\'e}s le long d'une branche bifurqu{\'e}e du
-diagramme d'{\'e}quilibre}
+\section{Développements limités le long d'une branche bifurquée du
+diagramme d'équilibre}
 
 \subsection{Principe du calcul}\label{sec20220107121442}
 
@@ -687,30 +687,30 @@ On pose dans ce qui suit
   \tfrac{1}{2} \eta^2 u_2 + \tfrac{1}{6} \eta^3 u_3 + \cdots .
   \label{eq20211112113028}
 \end{eqnarray}
-On consid{\`e}re une fonctionnelle $\mathcal{F}$ de $u$ et $\lambda$~:
-$\mathcal{F} (u, \lambda)$. Cette fonctionnelle est {\'e}valu{\'e}e le long de
-la branche bifurqu{\'e}e. En d'autres termes, on consid{\`e}re
+On considère une fonctionnelle $\mathcal{F}$ de $u$ et $\lambda$~:
+$\mathcal{F} (u, \lambda)$. Cette fonctionnelle est évaluée le long de
+la branche bifurquée. En d'autres termes, on considère
 \begin{equation}
   f (\eta) = F \{ u^{\ast} [\lambda_0 + \Lambda (\eta)] + U (\eta), \lambda_0
   + \Lambda (\eta) \} .
 \end{equation}
-On souhaite {\'e}tablir un d{\'e}veloppement limit{\'e} de $f$ au voisinage de
-$\eta = 0$, ce qui conduit {\`a} calculer les d{\'e}riv{\'e}es successives de
+On souhaite établir un développement limité de $f$ au voisinage de
+$\eta = 0$, ce qui conduit à calculer les dérivées successives de
 $f$ en $\eta = 0$, puisque
 \begin{equation}
   f (\eta) = f (0) + \eta f' (0) + \tfrac{1}{2} \eta^2 f'' (0) + \cdots
 \end{equation}
-Pour calculer ces d{\'e}riv{\'e}es, il sera commode d'introduire la fonction
+Pour calculer ces dérivées, il sera commode d'introduire la fonction
 auxiliaire $F$
 \begin{equation}
   F (\eta, \lambda) =\mathcal{F} [u^{\ast} (\lambda) + U (\eta), \lambda],
 \end{equation}
 dans laquelle les variables $\lambda$ et $\eta$ sont provisoirement
-consid{\'e}r{\'e}es comme ind{\'e}pendantes. On a
+considérées comme indépendantes. On a
 \begin{equation}
   f (\eta) = F [\eta, \lambda_0 + \Lambda (\eta)],
 \end{equation}
-d'o{\`u} l'on d{\'e}duit successivement que
+d'où l'on déduit successivement que
 \begin{equation}
   \label{eq20211112162417} f' (\eta) = \partial_{\eta} F + \Lambda'
   \partial_{\lambda} F,
@@ -744,10 +744,10 @@ d'o{\`u} l'on d{\'e}duit successivement que
   \nocomma \lambda}^2 F \\
   &  & + \Lambda'''' \partial_{\lambda} F
 \end{eqnarray}
-o{\`u} $\Lambda$ et ses d{\'e}riv{\'e}es sont {\'e}valu{\'e}es en $\eta$,
-tandis que $F$ et ses d{\'e}riv{\'e}es partielles sont {\'e}valu{\'e}es en
+où $\Lambda$ et ses dérivées sont évaluées en $\eta$,
+tandis que $F$ et ses dérivées partielles sont évaluées en
 $[\eta, \lambda_0 + \Lambda (\eta)]$. En $\eta = 0$, les relations
-pr{\'e}c{\'e}dentes s'{\'e}crivent
+précédentes s'écrivent
 \begin{equation}
   \label{eq20220107060454} f' (0) = \partial_{\eta} F + \lambda_1
   \partial_{\lambda} F,
@@ -781,14 +781,14 @@ pr{\'e}c{\'e}dentes s'{\'e}crivent
   \lambda}^2 F \nonumber\\
   &  & + \lambda_4 \partial_{\lambda} F,
 \end{eqnarray}
-o{\`u} $F$ et ses d{\'e}riv{\'e}es sont {\'e}valu{\'e}es en $(0, \lambda_0)$.
+où $F$ et ses dérivées sont évaluées en $(0, \lambda_0)$.
 
-\subsection{D{\'e}veloppement limit{\'e} du
-r{\'e}sidu}\label{sec20211112182000}
+\subsection{Développement limité du
+résidu}\label{sec20211112182000}
 
-On cherche un d{\'e}veloppement limit{\'e} du r{\'e}sidu (c'est-{\`a}-dire de
-la premi{\`e}re variation de l'{\'e}nergie). La fonction test $\hat{u} \in U$
-{\'e}tant fix{\'e}e, la m{\'e}thode pr{\'e}c{\'e}dente est donc appliqu{\'e}e
+On cherche un développement limité du résidu (c'est-à-dire de
+la première variation de l'énergie). La fonction test $\hat{u} \in U$
+étant fixée, la méthode précédente est donc appliquée
 avec
 \begin{equation}
   \label{eq20220107054629} f (\eta) =\mathcal{E}_{, u} [u (\eta), \lambda
@@ -797,12 +797,12 @@ avec
 \end{equation}
 On remarque tout d'abord que $F (0, \lambda) =\mathcal{E}_{, u} [u^{\ast}
 (\lambda), \lambda ; \hat{u}] = 0$, puisque $u^{\ast} (\lambda)$ est un point
-d'{\'e}quilibre. En d{\'e}rivant par rapport {\`a} $\lambda$, on obtient
+d'équilibre. En dérivant par rapport à $\lambda$, on obtient
 \begin{equation}
   \label{eq20211112164240} \frac{\partial^k F}{\partial \lambda^k} (0,
   \lambda) = 0.
 \end{equation}
-En d{\'e}rivant par rapport {\`a} $\eta$ l'expression~\eqref{eq20220107054629}
+En dérivant par rapport à $\eta$ l'expression~\eqref{eq20220107054629}
 de $F$, on obtient successivement
 \begin{equation}
   \partial_{\eta} F (\eta, \lambda) =\mathcal{E}_{, u \nocomma u} [u^{\ast}
@@ -837,8 +837,8 @@ soit, en $\eta = 0$
   (\lambda ; u_1, u_1, u_1, \hat{u}) + 3\mathcal{E}_3 (\lambda ; u_1, u_2,
   \hat{u}) +\mathcal{E}_2 (\lambda ; u_3, \hat{u}) .
 \end{equation}
-Les d{\'e}riv{\'e}es crois{\'e}es de $F$ en $(0, \lambda)$ s'obtiennent par
-simple d{\'e}rivation des relations pr{\'e}c{\'e}dentes par rapport {\`a}
+Les dérivées croisées de $F$ en $(0, \lambda)$ s'obtiennent par
+simple dérivation des relations précédentes par rapport à
 $\lambda$
 \begin{equation}
   \partial_{\eta \nocomma \lambda}^2 F (0, \lambda) = \dot{\mathcal{E}_2}
@@ -853,9 +853,9 @@ $\lambda$
   \partial_{\eta \nocomma \lambda \nocomma \lambda}^3 F (0, \lambda) =
   \ddot{\mathcal{E}_2} (\lambda ; u_1, \hat{u}) .
 \end{equation}
-En ins{\'e}rant les r{\'e}sultats pr{\'e}c{\'e}dentes dans les relations
-g{\'e}n{\'e}rales~\eqref{eq20220107060454}--\eqref{eq20220107060500}, on
-trouve alors les expressions suivantes des d{\'e}riv{\'e}es successives de $f$
+En insérant les résultats précédentes dans les relations
+générales~\eqref{eq20220107060454}--\eqref{eq20220107060500}, on
+trouve alors les expressions suivantes des dérivées successives de $f$
 en $\eta = 0$
 \begin{equation}
   f' (0) =\mathcal{E}_2 (\lambda_0 ; u_1, \hat{u}),
@@ -874,8 +874,8 @@ en $\eta = 0$
   &  & \nosymbol + 3 \lambda_1^2  \ddot{\mathcal{E}_2} (\lambda_0 ; u_1,
   \hat{u}) + 3 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) .
 \end{eqnarray}
-On en d{\'e}duit finalement le d{\'e}veloppement limit{\'e} {\`a} l'ordre 3 en
-$\eta$ du r{\'e}sidu
+On en déduit finalement le développement limité à l'ordre 3 en
+$\eta$ du résidu
 \begin{eqnarray}
   \mathcal{E}_{, u} [u (\eta), \lambda (\eta)] & = & \eta \mathcal{E}_2
   (\lambda_0 ; u_1, \hat{u}) \nonumber\\
@@ -891,11 +891,11 @@ $\eta$ du r{\'e}sidu
   &  & \nobracket \nosymbol + 3 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ;
   u_1, \hat{u}) \} + o (\eta^3) .  \label{eq20220107080901}
 \end{eqnarray}
-\subsection{D{\'e}veloppement limit{\'e} de l'{\'e}nergie}\label{sec:DL
+\subsection{Développement limité de l'énergie}\label{sec:DL
 energie}
 
-On s'int{\'e}resse ici {\`a} l'{\'e}cart d'{\'e}nergie, pour un chargement
-$\lambda$ donn{\'e}, entre la branche bifurqu{\'e}e et la branche
+On s'intéresse ici à l'écart d'énergie, pour un chargement
+$\lambda$ donné, entre la branche bifurquée et la branche
 fondamentale, soit
 \[ F (\eta, \lambda) =\mathcal{E} [u^{\ast} (\lambda) + U (\eta), \lambda]
    -\mathcal{E} [u^{\ast} (\lambda), \lambda] \]
@@ -904,7 +904,7 @@ et
 On observe tout d'abord que $F (0, \lambda) = 0$ pour tout $\lambda$, donc
 \[ \frac{\partial^k F}{\partial \lambda^k} (0, \lambda) = 0 \quad (k \geq 0),
 \]
-tandis que les d{\'e}riv{\'e}es de $F$ par rapport {\`a} $\eta$ s'{\'e}crivent
+tandis que les dérivées de $F$ par rapport à $\eta$ s'écrivent
 \[ \partial_{\eta} F (\eta, \lambda) =\mathcal{E}_{, u} [u^{\ast} (\lambda) +
    U (\eta), \lambda ; U' (\eta)], \]
 \[ \partial_{\eta \nocomma \eta}^2 F (\eta, \lambda) =\mathcal{E}_{, u
@@ -948,7 +948,7 @@ soit, en $\eta = 0$, en observant que $\mathcal{E}_{, u} [u^{\ast} (\lambda),
   (\lambda ; u_1, u_1, u_2) + 3\mathcal{E}_2 (\lambda ; u_2, u_2) \nonumber\\
   &  & \nosymbol + 3\mathcal{E}_2 (\lambda ; u_1, u_3) . \nonumber
 \end{eqnarray}
-On en d{\'e}duit que
+On en déduit que
 \[ \partial_{\eta \nocomma \lambda}^2 F (0, \lambda) = 0, \]
 \[ \partial_{\eta \nocomma \eta \nocomma \lambda}^3 F (0, \lambda) =
    \dot{\mathcal{E}}_2 (\lambda ; u_1, u_1), \]
@@ -976,7 +976,7 @@ et finalement
   &  & \nosymbol + 6 \lambda_1^2  \ddot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1)
   + 6 \lambda_2  \dot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1) . \nonumber
 \end{eqnarray}
-Les relations pr{\'e}c{\'e}dentes se simplifient notamment en tenant compte de
+Les relations précédentes se simplifient notamment en tenant compte de
 ce que $u_1 \in V$ : $\mathcal{E}_2 (\lambda_0 ; u_1, u_i) = 0$ pour $i = 1,
 2, 3$. On trouve ainsi, pour $f'' (0)$ et $f''' (0)$
 \begin{equation}
@@ -991,8 +991,8 @@ et
   & = & \lambda_1 F_{i \nocomma j} (\lambda_0) \xi_1^i \xi_1^j,  \label{eq:DL
   energie derivee 3ieme}
 \end{eqnarray}
-en utilisant l'{\'e}quation de bifurcation~\eqref{eq:bifurcation 1a} dans la
-deuxi{\`e}me ligne. En introduisant les d{\'e}compositions
+en utilisant l'équation de bifurcation~\eqref{eq:bifurcation 1a} dans la
+deuxième ligne. En introduisant les décompositions
 \eqref{eq:decomposition u1} et \eqref{eq:decomposition u2} de $u_1$ et $u_2$,
 on trouve tout d'abord, pour $\mathcal{E}_3 (\lambda_0 ; u_1, u_1, u_2)$
 \begin{eqnarray*}
@@ -1007,8 +1007,8 @@ on trouve tout d'abord, pour $\mathcal{E}_3 (\lambda_0 ; u_1, u_1, u_2)$
   &  & \nosymbol - \lambda_1 \mathcal{E}_2 (\lambda_0 ; w_{i \nocomma j},
   w_k) \xi_1^i \xi_1^j \xi_1^k,
 \end{eqnarray*}
-en tenant compte de la d{\'e}finition~\eqref{eq:pbvar wij} des $w_{i \nocomma
-j}$. Dans le dernier terme de l'expression pr{\'e}c{\'e}dente, les indices
+en tenant compte de la définition~\eqref{eq:pbvar wij} des $w_{i \nocomma
+j}$. Dans le dernier terme de l'expression précédente, les indices
 $i$, $j$ et $k$ sont muets, donc
 \begin{eqnarray*}
   \mathcal{E}_3 (\lambda_0 ; u_1, u_1, u_2) & = & \mathcal{E}_3 (\lambda_0 ;
@@ -1022,8 +1022,8 @@ $i$, $j$ et $k$ sont muets, donc
   &  & \nosymbol + 2 \lambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ; v_{i
   \nocomma}, w_{j \nocomma k}) \xi_1^i \xi_1^j \xi_1^k,
 \end{eqnarray*}
-en introduisant cette fois-ci la d{\'e}finition~\eqref{eq:pbvar wi} de $w_i .$
-On proc{\`e}de de m{\^e}me pour le terme suivant, soit $\mathcal{E}_2
+en introduisant cette fois-ci la définition~\eqref{eq:pbvar wi} de $w_i .$
+On procède de même pour le terme suivant, soit $\mathcal{E}_2
 (\lambda_0 ; u_2, u_2)$
 \begin{eqnarray*}
   \mathcal{E}_2 (\lambda_0 ; u_2, u_2) & = & \mathcal{E}_2 (\lambda_0 ;
@@ -1065,7 +1065,7 @@ et enfin
   &  & \nosymbol + \tfrac{1}{2} \lambda_1  [\dot{\mathcal{E}}_2 (\lambda_0 ;
   v_i, w_j) + \dot{\mathcal{E}}_2 (\lambda_0 ; v_j, w_i)] \xi_1^i \xi_1^j .
 \end{eqnarray*}
-En rassemblant les r{\'e}sultats pr{\'e}c{\'e}dents, on trouve pour $f''''
+En rassemblant les résultats précédents, on trouve pour $f''''
 (0)$
 \begin{eqnarray*}
   f'''' (0) & = & \mathcal{E}_4 (\lambda_0 ; v_i, v_j, v_k {, v_l} ) \xi_1^i
@@ -1110,7 +1110,7 @@ En rassemblant les r{\'e}sultats pr{\'e}c{\'e}dents, on trouve pour $f''''
   \mathlambda_1 F_{i \nocomma j} (\lambda_0)] \xi_1^i \xi_2^j,
 \end{eqnarray*}
 et on observe que le dernier terme (en $\xi_1^i \xi_2^j$) est nul, du fait de
-l'{\'e}quation de bifurcation~\eqref{eq:bifurcation 1c}. On obtient donc
+l'équation de bifurcation~\eqref{eq:bifurcation 1c}. On obtient donc
 \begin{equation}
   \label{eq:DL energie derivee 4ieme} f'''' (0) = E_{i \nocomma j \nocomma k
   \nocomma l} (\lambda_0) \xi_1^i \xi_1^j \xi_1^k \xi_1^l + 4 \mathlambda_1
@@ -1118,12 +1118,12 @@ l'{\'e}quation de bifurcation~\eqref{eq:bifurcation 1c}. On obtient donc
   [\mathlambda_1^2  \dot{F}_{i \nocomma j} (\mathlambda_0) + \lambda_2 F_{i
   \nocomma j} (\lambda_0)] \xi_1^i \xi_1^j .
 \end{equation}
-Le d{\'e}veloppement limit{\'e}~\eqref{eq:DL energie} est alors obtenu en
-rassemblant les r{\'e}sultats~\eqref{eq:DL energie derivee 2nde}, \eqref{eq:DL
+Le développement limité~\eqref{eq:DL energie} est alors obtenu en
+rassemblant les résultats~\eqref{eq:DL energie derivee 2nde}, \eqref{eq:DL
 energie derivee 3ieme} et \eqref{eq:DL energie derivee 4ieme}.
 
 \begin{remark}
-  On peut r{\'e}{\'e}crire $f'''' (0)$ en tenant compte de l'{\'e}quation de
+  On peut réécrire $f'''' (0)$ en tenant compte de l'équation de
   bifurcation~\eqref{eq:bifurcation 2b}. En multipliant celle-ci par
   $\xi_1^i$, on trouve en effet
   \begin{eqnarray*}
@@ -1145,22 +1145,22 @@ energie derivee 3ieme} et \eqref{eq:DL energie derivee 4ieme}.
      - 3 A_{i \nocomma j} (\mathlambda_0) \xi_1^i \xi_2^j . \]
 \end{remark}
 
-\subsection{D{\'e}veloppement limit{\'e} de la hessienne}\label{sec:DL
+\subsection{Développement limité de la hessienne}\label{sec:DL
 hessienne}
 
-On cherche maintenant un d{\'e}veloppement limit{\'e} de la hessienne de
-l'{\'e}nergie. Les fonctions test $\hat{u}, \hat{v} \in U$ {\'e}tant
-fix{\'e}es, on applique la m{\'e}thode du
-{\textsection}\ref{sec20220107121442} {\`a} la fonction $f (\eta) = F [\eta,
+On cherche maintenant un développement limité de la hessienne de
+l'énergie. Les fonctions test $\hat{u}, \hat{v} \in U$ étant
+fixées, on applique la méthode du
+{\textsection}\ref{sec20220107121442} à la fonction $f (\eta) = F [\eta,
 \lambda_0 + \Lambda (\eta)]$, avec
 \[ F (\eta, \lambda) =\mathcal{E}_{, u \nocomma u} [u^{\ast} (\lambda) + U
    (\eta), \lambda ; \hat{u}, \hat{v}] . \]
 On observe tout d'abord que $F (0, \lambda) =\mathcal{E}_2 (\lambda ; \hat{u},
-\hat{v})$, soit, en d{\'e}rivant par rapport {\`a} $\lambda$
+\hat{v})$, soit, en dérivant par rapport à $\lambda$
 \[ \partial_{\lambda} F (0, \lambda) = \dot{\mathcal{E}_2} (\lambda ; \hat{u},
    \hat{v}) \quad \text{et} \quad \partial_{\lambda \nocomma \lambda}^2 F (0,
    \lambda) = \ddot{\mathcal{E}_2} (\lambda ; \hat{u}, \hat{v}) . \]
-On trouve de m{\^e}me successivement
+On trouve de même successivement
 \[ \partial_{\eta} F (\eta, \lambda) =\mathcal{E}_{, u \nocomma u \nocomma u}
    [u^{\ast} (\lambda) + U (\eta), \lambda ; U' (\eta), \hat{u}, \hat{v}], \]
 \begin{eqnarray}
@@ -1177,10 +1177,10 @@ et
 \[ \partial_{\eta \nocomma \eta}^2 F (0, \lambda) =\mathcal{E}_4 (\lambda ;
    u_1, u_1, \hat{u}, \hat{v}) +\mathcal{E}_3 (\lambda ; u_2, \hat{u},
    \hat{v}), \]
-et en d{\'e}rivant cette fois par rapport {\`a} $\lambda$
+et en dérivant cette fois par rapport à $\lambda$
 \[ \partial_{\eta \nocomma \lambda}^2 F (0, \lambda) = \dot{\mathcal{E}_3}
    (\lambda ; u_1, \hat{u}, \hat{v}) . \]
-En ins{\'e}rant les r{\'e}sultats pr{\'e}c{\'e}dents dans les
+En insérant les résultats précédents dans les
 expressions~\eqref{eq20220107060454} et \eqref{eq20220107124311}, on trouve
 \[ f' (0) =\mathcal{E}_3 (\lambda_0 ; u_1, \hat{u}, \hat{v}) + \lambda_1
    \dot{\mathcal{E}_2} (\lambda_0 ; \hat{u}, \hat{v}), \]
@@ -1192,30 +1192,30 @@ expressions~\eqref{eq20220107060454} et \eqref{eq20220107124311}, on trouve
   u_1, \hat{u}, \hat{v}) + \lambda_1^2  \ddot{\mathcal{E}_2} (\lambda_0 ;
   \hat{u}, \hat{v}) . \nonumber
 \end{eqnarray}
-qui conduisent finalement au d{\'e}veloppement limit{\'e}~\eqref{eq:DL
+qui conduisent finalement au développement limité~\eqref{eq:DL
 hessienne}.
 
-\subsection{D{\'e}veloppement limit{\'e} des valeurs propres et vecteurs
+\subsection{Développement limité des valeurs propres et vecteurs
 propres de la Hessienne}
 
 On cherche les vecteurs propres $x \in U$ et valeurs propres $\alpha \in
-\mathbb{R}$ de la hessienne de l'{\'e}nergie. En d'autre terme, on cherche $x$
+\mathbb{R}$ de la hessienne de l'énergie. En d'autre terme, on cherche $x$
 et $\alpha$ tels que
 \begin{equation}
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta) ; x, \hat{u}] =
   \alpha \langle x, \hat{u} \rangle \quad \text{pour tout} \quad \hat{u} \in
   V.
 \end{equation}
-On cherche les d{\'e}veloppements limit{\'e}s {\`a} l'ordre 2 en $\eta$ de $x$
+On cherche les développements limités à l'ordre 2 en $\eta$ de $x$
 et $\alpha$
 \begin{eqnarray*}
   x & = & x_0 + \eta x_1 + \tfrac{1}{2} \eta^2 x_2 + o (\eta^2),\\
   \alpha & = & \alpha_0 + \eta \alpha_1 + \tfrac{1}{2} \eta^2 \alpha_2 + o
   (\eta^2) .
 \end{eqnarray*}
-Ces d{\'e}veloppements limit{\'e}s sont tout d'abord ins{\'e}r{\'e}s dans le
-d{\'e}veloppement limit{\'e} \eqref{eq:DL hessienne} de la hessienne de
-l'{\'e}nergie
+Ces développements limités sont tout d'abord insérés dans le
+développement limité \eqref{eq:DL hessienne} de la hessienne de
+l'énergie
 \begin{eqnarray*}
   \mathcal{E}_{, u \nocomma u} [u (\eta), \lambda (\eta) ; x, \hat{u}] & = &
   \mathcal{E}_2 (\lambda_0 ; x_0, \hat{u}) + \eta \mathcal{E}_2 (\lambda_0 ;
@@ -1254,25 +1254,25 @@ et
   \alpha_1 \langle x_1, \hat{u} \rangle + \alpha_0 \langle x_2, \hat{u}
   \rangle) + o (\eta^2) .
 \end{eqnarray*}
-\paragraph{Probl{\`e}me variationnel d'ordre 0}Trouver $x_0 \in U$ et
+\paragraph{Problème variationnel d'ordre 0}Trouver $x_0 \in U$ et
 $\alpha_0 \in \mathbb{R}$ tels que, pour tout $\hat{u} \in U$
 \[ \mathcal{E}_2 (\lambda_0 ; x_0, \hat{u}) = \alpha_0  \langle x_0, \hat{u}
    \rangle . \]
-On en d{\'e}duit que $x_0$ est le vecteur propre de $\mathcal{E}_2
-(\lambda_0)$ associ{\'e} {\`a} la valeur propre $\alpha_0$. Si $\alpha_0 \neq
-0$, $\mathcal{E}_2  (\lambda_0)$ {\'e}tant positive par hypoth{\`e}se, on a
-n{\'e}cessairement $\alpha_0 > 0$, et la valeur propre de la hessienne est
-positive. On consid{\`e}re donc dans ce qui suit le cas o{\`u} $\alpha_0 = 0$,
-c'est-{\`a}-dire que $x_0 \in V$
+On en déduit que $x_0$ est le vecteur propre de $\mathcal{E}_2
+(\lambda_0)$ associé à la valeur propre $\alpha_0$. Si $\alpha_0 \neq
+0$, $\mathcal{E}_2  (\lambda_0)$ étant positive par hypothèse, on a
+nécessairement $\alpha_0 > 0$, et la valeur propre de la hessienne est
+positive. On considère donc dans ce qui suit le cas où $\alpha_0 = 0$,
+c'est-à-dire que $x_0 \in V$
 \[ x_0 = \chi_0^i v_i \]
 
 
-\paragraph{Probl{\`e}me variationnel d'ordre 1}Trouver $x_1 \in U$ et
+\paragraph{Problème variationnel d'ordre 1}Trouver $x_1 \in U$ et
 $\alpha_1 \in \mathbb{R}$ tels que, pour tout $\hat{u} \in U$
 \[ \mathcal{E}_3 (\lambda_0 ; u_1, x_0, \hat{u}) +\mathcal{E}_2 (\lambda_0 ;
    x_1, \hat{u}) + \lambda_1  \dot{\mathcal{E}_2} (\lambda_0 ; x_0, \hat{u}) =
    \alpha_1  \langle x_0, \hat{u} \rangle, \]
-soit, en rempla{\c c}ant $u_1$ et $x_0$ par leurs d{\'e}compositions dans la
+soit, en rempla{\c c}ant $u_1$ et $x_0$ par leurs décompositions dans la
 base $v_i$
 \[ \mathcal{E}_3 (\lambda_0 ; v_j, v_k, \hat{u}) \xi_1^k \chi_0^j
    +\mathcal{E}_2 (\lambda_0 ; x_1, \hat{u}) + \lambda_1  \dot{\mathcal{E}_2}
@@ -1285,54 +1285,54 @@ En prenant tout d'abord $\hat{u} = v_i$, on obtient
 soit encore
 \[ [E_{i \nocomma j \nocomma k} (\lambda_0) \xi_1^k + \lambda_1 F_{i \nocomma
    j} (\lambda_0)] \chi_0^j = \alpha_1 \chi_0^i . \]
-Ainsi, le vecteur $\chi_0^i$ appara{\^i}t comme le vecteur propre de la
-matrice sym{\'e}trique $[E_{i \nocomma j \nocomma k} (\lambda_0) \xi_1^k +
-\lambda_1 F_{i \nocomma j} (\lambda_0)]$ associ{\'e} {\`a} la valeur propre
+Ainsi, le vecteur $\chi_0^i$ apparaît comme le vecteur propre de la
+matrice symétrique $[E_{i \nocomma j \nocomma k} (\lambda_0) \xi_1^k +
+\lambda_1 F_{i \nocomma j} (\lambda_0)]$ associé à la valeur propre
 $\alpha_1$. On doit alors discuter en fonction du type de bifurcation.
 
-\paragraph{Cas d'une bifurcation asym{\'e}trique}Dans ce cas, la forme
-trilin{\'e}aire $E_{i \nocomma j \nocomma k} (\lambda_0)$ n'est pas nulle sur
+\paragraph{Cas d'une bifurcation asymétrique}Dans ce cas, la forme
+trilinéaire $E_{i \nocomma j \nocomma k} (\lambda_0)$ n'est pas nulle sur
 $V$, et $\alpha_1 \neq 0$. Le terme dominant de $\alpha$ est donc d'ordre 1,
 tandis que le terme dominant de $x$ est d'ordre 0.
 
-\paragraph{Cas d'une bifurcation sym{\'e}trique}La forme trilin{\'e}aire $E_{i
+\paragraph{Cas d'une bifurcation symétrique}La forme trilinéaire $E_{i
 \nocomma j \nocomma k} (\lambda_0)$ est identiquement nulle sur $V$ ; de plus,
 $\lambda_1 = 0$. On trouve alors que $\alpha_1 = 0$, et on ne peut
-d{\'e}terminer les $\chi_0^i$. On prend maintenant $\hat{u} = \hat{w} \in W$
-dans le probl{\`e}me variationnel d'ordre 1, et on pose $x_1 = \chi_1^i v_i +
-y_1$, avec $y_1 \in W$. On obtient alors le probl{\`e}me variationnel suivant
+déterminer les $\chi_0^i$. On prend maintenant $\hat{u} = \hat{w} \in W$
+dans le problème variationnel d'ordre 1, et on pose $x_1 = \chi_1^i v_i +
+y_1$, avec $y_1 \in W$. On obtient alors le problème variationnel suivant
 : trouver $y_1 \in W$ tel que, pour tout $\hat{w} \in W$,
 \[ \mathcal{E}_3 (\lambda_0 ; v_j, v_k, \hat{w}) \xi_1^k \chi_0^j
    +\mathcal{E}_2 (\lambda_0 ; y_1, \hat{w}) + \lambda_1  \dot{\mathcal{E}_2}
    (\lambda_0 ; v_j, \hat{w}) \chi_0^j = 0. \]
-La solution de ce probl{\`e}me est exprim{\'e}e {\`a} l'aide des $w_{i
-\nocomma j}$ et $w_i$ d{\'e}finis respectivement par les probl{\`e}mes
+La solution de ce problème est exprimée à l'aide des $w_{i
+\nocomma j}$ et $w_i$ définis respectivement par les problèmes
 variationnels auxiliaires \eqref{eq:pbvar wij} et \eqref{eq:pbvar wi}
 \[ y_1 = \xi_1^i \chi_0^j w_{i \nocomma j} + \lambda_1 \chi_0^i w_i, \]
 soit
 \[ x_1 = \chi_1^i v_i + \xi_1^i \chi_0^j w_{i \nocomma j} + \lambda_1 \chi_0^i
    w_i . \]
-Dans le cas d'une bifurcation sym{\'e}trique, le probl{\`e}me aux valeurs
-propres d'ordre 2 s'{\'e}crit quant {\`a} lui
+Dans le cas d'une bifurcation symétrique, le problème aux valeurs
+propres d'ordre 2 s'écrit quant à lui
 \[ \mathcal{E}_2 (\lambda_0 ; x_2, \hat{u}) + 2\mathcal{E}_3 (\lambda_0 ; u_1,
    x_1, \hat{u}) +\mathcal{E}_4  (\lambda_0 ; u_1, u_1, x_0, \hat{u})
    +\mathcal{E}_3 (\lambda_0 ; u_2, x_0, \hat{u}) + \lambda_2
    \dot{\mathcal{E}_2} (\lambda_0 ; x_0, \hat{u}) = \alpha_2  \langle x_0,
    \hat{u} \rangle \]
 soit, en prenant $\hat{u} = \widehat{v_i} \in V$ et en introduisant les
-d{\'e}veloppements de $u_1$, $u_2$, $x_0 $ et $x_1$
+développements de $u_1$, $u_2$, $x_0 $ et $x_1$
 \[ \mathcal{E}_4  (\lambda_0 ; v_i, v_j, v_k, v_l) \chi_0^j \xi_{1 }^k \xi_1^l
    + 2\mathcal{E}_3 (\lambda_0 ; u_1, x_1, v_i) +\mathcal{E}_3 (\lambda_0 ;
    u_2, x_0, \hat{u}) + \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; x_0,
    \hat{u}) \]
-\section{Simplification des {\'e}quations de
+\section{Simplification des équations de
 bifurcation}\label{sec:Simplification des équations de bifurcation}
 
-Dans ce paragraphe, on simplifie les {\'e}quations de bifurcation
+Dans ce paragraphe, on simplifie les équations de bifurcation
 \eqref{eq:bifurcation 1b} et \eqref{eq:bifurcation 2a} pour obtenir les formes
 \eqref{eq:bifurcation 1c} et \eqref{eq:bifurcation 2b}. On commence par
-sym{\'e}triser les termes cubique, quadratique et lin{\'e}aire en $\xi_1^i$ de
-l'{\'e}quation \eqref{eq:bifurcation 2b}.
+symétriser les termes cubique, quadratique et linéaire en $\xi_1^i$ de
+l'équation \eqref{eq:bifurcation 2b}.
 
 \paragraph{Terme cubique en $\xi_1^i$}On observe que
 \[ \mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k \nocomma l}) \xi_1^j \xi_1^k
@@ -1341,25 +1341,25 @@ l'{\'e}quation \eqref{eq:bifurcation 2b}.
    l}) +\mathcal{E}_3 (\lambda_0 ; v_i, v_l, w_{j \nocomma k}] \xi_1^j \xi_1^k
    \xi_1^l . \]
 On obtient donc l'expression suivante du terme cubique en $\xi_1^i$ dans
-l'{\'e}quation de bifurcation \eqref{eq:bifurcation 2a}
+l'équation de bifurcation \eqref{eq:bifurcation 2a}
 \[ \mathcal{E}_4 (\lambda_0 ; v_i, v_j, v_k, v_l) +\mathcal{E}_3 (\lambda_0 ;
    v_i, v_j, w_{k \nocomma l}) +\mathcal{E}_3 (\lambda_0 ; v_i, v_k, w_{j
    \nocomma l}) +\mathcal{E}_3 (\lambda_0 ; v_i, v_l, w_{j \nocomma k}), \]
-qui sugg{\`e}re d'introduire le \ $E_{i \nocomma j \nocomma k \nocomma l}
-(\lambda)$ d{\'e}fini par l'{\'e}quation \eqref{eq:def Eijkl}. Le terme
-cubique en $\xi_1^i$ dans l'{\'e}quation de bifurcation \eqref{eq:bifurcation
+qui suggère d'introduire le \ $E_{i \nocomma j \nocomma k \nocomma l}
+(\lambda)$ défini par l'équation \eqref{eq:def Eijkl}. Le terme
+cubique en $\xi_1^i$ dans l'équation de bifurcation \eqref{eq:bifurcation
 2a} est alors simplement~: $E_{i \nocomma j \nocomma k \nocomma l}
 (\lambda_0)$.
 
-\paragraph{Terme quadratique en $\xi_1^i$}On observe de m{\^e}me que
+\paragraph{Terme quadratique en $\xi_1^i$}On observe de même que
 \[ \mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_k) \xi_1^j \xi_1^k = \tfrac{1}{2}
    [\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_k) +\mathcal{E}_3 (\lambda_0 ; v_i,
    w_j, v_k)] \xi_1^j \xi_1^k . \]
-En prenant tout d'abord $\widehat{w} = w_k$ dans le probl{\`e}me variationnel
+En prenant tout d'abord $\widehat{w} = w_k$ dans le problème variationnel
 \eqref{eq:pbvar wij}, on trouve
 \[ \mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_k) = -\mathcal{E}_2 (\lambda_0 ;
    w_{i \nocomma j}, w_k), \]
-puis, en prenant cette fois $\hat{w} = w_{i \nocomma j}$ dans le probl{\`e}me
+puis, en prenant cette fois $\hat{w} = w_{i \nocomma j}$ dans le problème
 variationnel \eqref{eq:pbvar wi}
 \[ \mathcal{E}_2 (\lambda_0 ; w_k, w_{i \nocomma j}) = - 2 \dot{\mathcal{E}_2}
    (\lambda_0 ; v_k, w_{i \nocomma j}), \]
@@ -1369,35 +1369,35 @@ soit finalement
    \dot{\mathcal{E}}_2 (\lambda_0 ; v_k, w_{i \nocomma j})] \xi_1^j \xi_1^k .
 \]
 On obtient donc l'expression suivante du terme quadratique en $\xi_1^i$ dans
-l'{\'e}quation de bifurcation \eqref{eq:bifurcation 2a}
+l'équation de bifurcation \eqref{eq:bifurcation 2a}
 \[ 3 \lambda_1  [\dot{\mathcal{E}}_3 (\lambda_0 ; v_i, v_j, v_k) +
    \dot{\mathcal{E}_2} (\lambda_0 ; v_i, w_{j \nocomma k}) +
    \dot{\mathcal{E}}_2 (\lambda_0 ; v_j, w_{i \nocomma k}) +
    \dot{\mathcal{E}}_2 (\lambda_0 ; v_k, w_{i \nocomma j})], \]
-qui sugg{\`e}re d'introduire le tenseur $E_{i \nocomma j \nocomma k}
-(\lambda)$ d{\'e}fini par l'{\'e}quation \eqref{eq:def Eijk}. Le terme
-quadratique en $\xi_1^i$ dans l'{\'e}quation de bifurcation
+qui suggère d'introduire le tenseur $E_{i \nocomma j \nocomma k}
+(\lambda)$ défini par l'équation \eqref{eq:def Eijk}. Le terme
+quadratique en $\xi_1^i$ dans l'équation de bifurcation
 \eqref{eq:bifurcation 2a} est alors simplement~: $3 \lambda_1  \dot{E}_{i
 \nocomma j \nocomma k} (\lambda_0)$.
 
-\paragraph{Terme lin{\'e}aire en $\xi_1^i$}Par des arguments similaires, on
-{\'e}tablit {\'e}galement que
+\paragraph{Terme linéaire en $\xi_1^i$}Par des arguments similaires, on
+établit également que
 \[ \dot{\mathcal{E}_2} (\lambda_0 ; v_i, w_j) = - \tfrac{1}{2} \mathcal{E}_2
    (\lambda_0 ; w_i, w_j) = - \tfrac{1}{2} \mathcal{E}_2 (\lambda_0 ; w_j,
    w_i) = \dot{\mathcal{E}_2} (\lambda_0 ; v_j, w_i) . \]
-On obtient donc l'expression suivante du terme lin{\'e}aire en $\xi_1^i$ dans
-l'{\'e}quation de bifurcation \eqref{eq:bifurcation 2a}
+On obtient donc l'expression suivante du terme linéaire en $\xi_1^i$ dans
+l'équation de bifurcation \eqref{eq:bifurcation 2a}
 \[ \ddot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j) + \tfrac{1}{2}
    [\dot{\mathcal{E}_2} (\lambda_0 ; v_i, w_j) + \dot{\mathcal{E}_2}
    (\lambda_0 ; v_j, w_i)], \]
-qui sugg{\`e}re d'introduire le tenseur $F_{i \nocomma j} (\lambda)$
-d{\'e}fini par l'{\'e}quation \eqref{eq:def Fij}. Le terme lin{\'e}aire en
-$\xi_1^i$ dans l'{\'e}quation de bifurcation \eqref{eq:bifurcation 2a} est
+qui suggère d'introduire le tenseur $F_{i \nocomma j} (\lambda)$
+défini par l'équation \eqref{eq:def Fij}. Le terme linéaire en
+$\xi_1^i$ dans l'équation de bifurcation \eqref{eq:bifurcation 2a} est
 alors simplement~: $3 \lambda_1^2  \dot{F}_{i \nocomma j} (\lambda_0)$.
 
-\paragraph{Synth{\`e}se~: simplification des {\'e}quations
+\paragraph{Synthèse~: simplification des équations
 \eqref{eq:bifurcation 1a} et \eqref{eq:bifurcation 2a}}En rassemblant les
-r{\'e}sultats pr{\'e}c{\'e}dents, on obtient tout d'abord pour l'{\'e}quation
+résultats précédents, on obtient tout d'abord pour l'équation
 \eqref{eq:bifurcation 2a}
 \[ 3 [E_{i \nocomma j \nocomma k} (\lambda_0) + \lambda_1 F_{i \nocomma j}
    (\lambda_0)] \xi_2^j + 3 \lambda_2 F_{i \nocomma j} (\lambda_0) \xi_1^j +
@@ -1405,11 +1405,11 @@ r{\'e}sultats pr{\'e}c{\'e}dents, on obtient tout d'abord pour l'{\'e}quation
    \xi_1^k \xi_1^l + 3 \lambda_1  \dot{E}_{i \nocomma j \nocomma k}
    (\lambda_0)  \hspace{0.17em} \xi_1^j \xi_1^k + 3 \lambda_1^2  \dot{F}_{i
    \nocomma j} (\lambda_0) \xi_1^j = 0, \]
-qui sugg{\`e}re d'introduire le tenseur $A_{i \nocomma j} (\lambda)$
-d{\'e}fini par l'{\'e}quation \eqref{eq:def Aij}. On obtient alors finalement
-l'{\'e}quation de bifurcation \eqref{eq:bifurcation 2b}. Les tenseurs $F_{i
+qui suggère d'introduire le tenseur $A_{i \nocomma j} (\lambda)$
+défini par l'équation \eqref{eq:def Aij}. On obtient alors finalement
+l'équation de bifurcation \eqref{eq:bifurcation 2b}. Les tenseurs $F_{i
 \nocomma j}$ et $E_{i \nocomma j \nocomma k}$ ainsi introduits permettent
-{\'e}galement de r{\'e}{\'e}crire l'{\'e}quation de bifurcation
+également de réécrire l'équation de bifurcation
 \eqref{eq:bifurcation 1b} sous la forme compacte \eqref{eq:bifurcation 1c}.
 
 \end{document}

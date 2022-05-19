@@ -91,17 +91,17 @@ supplémentaire orthogonal $W$ de $V$ dans $U$
   U = V \overset{\perp}{\otimes} W.
 \end{equation}
 Pour étudier la stabilité de l'équilibre, on calcule l'énergie
-dans un état $u_0 + \xi v + \eta w$ voisin du point d'équilibre $u_0$,
-avec $\xi, \eta∈\mathbb{R}$ {\guillemotleft} petits {\guillemotright}, $v
-\in V$ and $w∈W$. On obtient alors, à l'ordre 4 en $\xi$ et $\eta$
+dans un état $u_0 + ξ v + \eta w$ voisin du point d'équilibre $u_0$,
+avec $ξ, \eta∈\mathbb{R}$ {\guillemotleft} petits {\guillemotright}, $v
+\in V$ and $w∈W$. On obtient alors, à l'ordre 4 en $ξ$ et $\eta$
 \begin{eqnarray}
-  \Delta ℰ & = & ℰ (u_0 + \xi v + \eta w, λ_0)
+  \Delta ℰ & = & ℰ (u_0 + ξ v + \eta w, λ_0)
   -ℰ (u_0, λ_0) \nonumber\\
-  & = & \tfrac{1}{2} ℰ_2 (\xi v + \eta w, \xi v + \eta w) +
-  \tfrac{1}{6} ℰ_3 (\xi v + \eta w, \xi v + \eta w, \xi v + \eta w)
+  & = & \tfrac{1}{2} ℰ_2 (ξ v + \eta w, ξ v + \eta w) +
+  \tfrac{1}{6} ℰ_3 (ξ v + \eta w, ξ v + \eta w, ξ v + \eta w)
   \nonumber\\
-  &  &  + \tfrac{1}{24} ℰ_4 (\xi v + \eta w, \xi v + \eta
-  w, \xi v + \eta w, \xi v + \eta w) +\mathcal{O} [(\xi^2 + \eta^2)^2],
+  &  &  + \tfrac{1}{24} ℰ_4 (ξ v + \eta w, ξ v + \eta
+  w, ξ v + \eta w, ξ v + \eta w) +\mathcal{O} [(ξ^2 + \eta^2)^2],
 \end{eqnarray}
 où le terme linéaire a été omis puisque $u_0$ est un point
 critique de l'énergie. En tenant compte de la multilinéarité et de
@@ -110,22 +110,22 @@ $ℰ$, ainsi que du fait que $ℰ_2 (v, \bullet) = 0$ (puisque
 $v∈V$), l'expression précédente s'écrit
 \begin{eqnarray}
   \Delta ℰ & = & \tfrac{1}{2} \eta^2 ℰ_2 (w, w) +
-  \tfrac{1}{6} \xi^3 ℰ_3 (v, v, v) + \tfrac{1}{2} \xi^2 \eta
+  \tfrac{1}{6} ξ^3 ℰ_3 (v, v, v) + \tfrac{1}{2} ξ^2 \eta
   ℰ_3 (v, v, w) \nonumber\\
-  &  & + \tfrac{1}{2} \xi \eta^2 ℰ_3 (v, w, w) + \tfrac{1}{6}
+  &  & + \tfrac{1}{2} ξ \eta^2 ℰ_3 (v, w, w) + \tfrac{1}{6}
   \eta^3 ℰ_3 (w, w, w) \nonumber\\
-  &  & + \tfrac{1}{24} \xi^4 ℰ_4 (v, v, v, v) + \tfrac{1}{6} \xi^3
+  &  & + \tfrac{1}{24} ξ^4 ℰ_4 (v, v, v, v) + \tfrac{1}{6} ξ^3
   \eta ℰ_4 (v, v, v, w) \nonumber\\
-  &  & + \tfrac{1}{4} \xi^2 \eta^2 ℰ_4 (v, v, w, w) + \tfrac{1}{6}
-  \xi \eta^3 ℰ_4 (v, w, w, w) \nonumber\\
-  &  & + \tfrac{1}{24} \eta^4 ℰ_4 (w, w, w, w) +\mathcal{O} [(\xi^2
+  &  & + \tfrac{1}{4} ξ^2 \eta^2 ℰ_4 (v, v, w, w) + \tfrac{1}{6}
+  ξ \eta^3 ℰ_4 (v, w, w, w) \nonumber\\
+  &  & + \tfrac{1}{24} \eta^4 ℰ_4 (w, w, w, w) +\mathcal{O} [(ξ^2
   + \eta^2)^2],
 \end{eqnarray}
 où l'on convient que toutes les différentielles de $ℰ$ sont
 évaluées au point d'équilibre $u_0$.
 
 Pour que l'équilibre soit stable, il faut que cette expression soit
-positive ou nulle pour tous $\xi$ et $\eta$ suffisamment petits. En prenant
+positive ou nulle pour tous $ξ$ et $\eta$ suffisamment petits. En prenant
 tout d'abord $\eta = 0$, on obtient les conditions nécessaires
 \begin{equation}
   \label{eq20211108164416} ℰ_3 (v, v, v) = 0 \quad \text{et} \quad
@@ -135,11 +135,11 @@ En d'autres termes, s'il existe $v∈V$ tel que $ℰ_3 (v, v, v)
 \neq 0$ ou $ℰ_4 (v, v, v, v) < 0$, alors l'équilibre est
 {\tmem{instable}}. Les conditions précédentes ne sont pas suffisantes
 pour assurer la stabilité. En effet, supposant ces conditions remplies, on
-prend maintenant $\eta = \xi^2$
+prend maintenant $\eta = ξ^2$
 \begin{equation}
-  \Delta ℰ= \tfrac{1}{2} \xi^4  \left[ ℰ_2 (w, w)
+  \Delta ℰ= \tfrac{1}{2} ξ^4  \left[ ℰ_2 (w, w)
   +ℰ_3 (v, v, w) + \tfrac{1}{12} ℰ_4 (v, v, v, v) \right]
-  + o (\xi^4)
+  + o (ξ^4)
 \end{equation}
 et on obtient la condition nécessaire supplémentaire
 \begin{equation}
@@ -160,15 +160,15 @@ suivant
   +ℰ_3 (v_i, v_j, \hat{w}) = 0 \quad \text{pour tout} \quad \hat{w}
  ∈W.
 \end{equation}
-Alors, pour $v = \xi^i v_i$, la solution du problème
-variationnel~\eqref{eq20211109145224} est $w = = \tfrac{1}{2} \xi^i \xi^j w_{i
+Alors, pour $v = ξ^i v_i$, la solution du problème
+variationnel~\eqref{eq20211109145224} est $w = = \tfrac{1}{2} ξ^i ξ^j w_{i
  j}$. Pour cette valeur de $v$, la condition~\eqref{eq20211109145356}
 s'écrit
 \begin{equation}
   [ℰ_4 (v_i, v_j, v_k, v_l) - 3ℰ_2 (w_{i  j}, w_{k
-   l})] \xi^i \xi^j \xi^k \xi^l \geq 0,
+   l})] ξ^i ξ^j ξ^k ξ^l \geq 0,
 \end{equation}
-pour tous $\xi_i, \xi_j, \xi_k, \xi_l∈\mathbb{R}$. On peut montrer que
+pour tous $ξ_i, ξ_j, ξ_k, ξ_l∈\mathbb{R}$. On peut montrer que
 l'inégalité stricte est une condition {\tmem{suffisante}} de
 stabilité.
 
@@ -227,14 +227,14 @@ pour tout $\hat{v}∈V$. On remarque d'ores et déjà que si \ l'est
 scalaires. à cet effet, on décompose $u_1∈V$ dans la base
 $(v_i)_{1 \leqslant i \leqslant m}$
 \begin{equation}
-  \label{eq:decomposition u1} u_1 = \xi_1^i v_i .
+  \label{eq:decomposition u1} u_1 = ξ_1^i v_i .
 \end{equation}
 En prenant $\hat{v} = v_i$, l'équation~\eqref{eq:bifurcation 1a}
 s'écrit
 \begin{equation}
   \label{eq:bifurcation 1b} \tfrac{1}{2} ℰ_3 (λ_0 ; v_i, v_j,
-  v_k)  \hspace{0.17em} \xi_1^j \xi_1^k + λ_1  \dot{ℰ}_2
-  (λ_0 ; v_i, v_j)  \hspace{0.17em} \xi_1^j = 0.
+  v_k)  \hspace{0.17em} ξ_1^j ξ_1^k + λ_1  \dot{ℰ}_2
+  (λ_0 ; v_i, v_j)  \hspace{0.17em} ξ_1^j = 0.
 \end{equation}
 On obtient ainsi un système de $m$ équations quadratiques à $(m +
 1)$ inconnues, qui permet en général de déterminer les valeurs de
@@ -245,7 +245,7 @@ Afin de déterminer les termes suivants du développement asymptotique
 de la branche bifurquée, soit $λ_2$ et $u_2$, on introduit la
 décomposition
 \begin{equation}
-  u_2 = \xi_2^i v_i + \tilde{u}_2,
+  u_2 = ξ_2^i v_i + \tilde{u}_2,
 \end{equation}
 où $\tilde{u}_2∈W$ est la projection orthogonale de $u_2$ sur
 $W$(notation provisoire). On a alors $ℰ_2 (u_2, \hat{u})
@@ -261,8 +261,8 @@ l'espace $W$, on obtient le problème variationnel suivant~: trouver
 $\tilde{u}_2∈W$ tel que
 \begin{equation}
   \label{eq20211210131623} ℰ_2 (λ_0 ; {\tilde{u}_2} , \hat{w})
-  + \xi_1^i \xi_1^j ℰ_3 (λ_0 ; v_i, v_j, \hat{w}) + 2
-  λ_1 \xi_1^i  \dot{ℰ_2} (λ_0 ; v_i, \hat{w}) = 0,
+  + ξ_1^i ξ_1^j ℰ_3 (λ_0 ; v_i, v_j, \hat{w}) + 2
+  λ_1 ξ_1^i  \dot{ℰ_2} (λ_0 ; v_i, \hat{w}) = 0,
 \end{equation}
 pour tout $\hat{w}∈W$. Soient $w_i∈W$ les solutions des problèmes
 variationnels suivants
@@ -275,44 +275,44 @@ problème~\eqref{eq20211210131623} s'obtient par simple combinaison
 linéaire des $w_i$ et $w_{ij}$ [on rappelle que ces derniers sont
 définis par le problème variationnel~\eqref{eq:pbvar wij}]
 \begin{equation}
-  \tilde{u}_2 = \xi_1^i \xi_1^j w_{i  j} + λ_1 \xi_1^i w_i,
+  \tilde{u}_2 = ξ_1^i ξ_1^j w_{i  j} + λ_1 ξ_1^i w_i,
 \end{equation}
 de sorte que
 \begin{equation}
-  \label{eq:decomposition u2} u_2 = \xi_2^i v_i + \xi_1^i \xi_1^j w_{i
-   j} + λ_1 \xi_1^i w_i .
+  \label{eq:decomposition u2} u_2 = ξ_2^i v_i + ξ_1^i ξ_1^j w_{i
+   j} + λ_1 ξ_1^i w_i .
 \end{equation}
 En introduisant les expressions~\eqref{eq:decomposition u1} et
 \eqref{eq:decomposition u2} dans l'équation~\eqref{eq:res3} et en prenant
 de plus $\hat{u} = v_i$, on obtient alors les équations suivantes
 \begin{eqnarray}
-  3 [ℰ_3 (λ_0 ; v_i, v_j, v_k) \xi_1^k + λ_1
-  \dot{ℰ}_2 (λ_0 ; v_i, v_j)] \xi_2^j + 3 λ_2
-  \dot{ℰ}_2 (λ_0 ; v_i, v_j) \xi_1^j &  &  \nonumber\\
+  3 [ℰ_3 (λ_0 ; v_i, v_j, v_k) ξ_1^k + λ_1
+  \dot{ℰ}_2 (λ_0 ; v_i, v_j)] ξ_2^j + 3 λ_2
+  \dot{ℰ}_2 (λ_0 ; v_i, v_j) ξ_1^j &  &  \nonumber\\
   + [ℰ_4 (λ_0 ; v_i, v_j, v_k, v_l) + 3ℰ_3
-  (λ_0 ; v_i, v_j, w_{k  l})] \xi_1^j \xi_1^k \xi_1^l &  &
+  (λ_0 ; v_i, v_j, w_{k  l})] ξ_1^j ξ_1^k ξ_1^l &  &
   \nonumber\\
   + 3 λ_1  [\dot{ℰ}_3 (λ_0 ; v_i, v_j, v_k)
   +ℰ_3 (λ_0 ; v_i, v_j, w_k) + \dot{ℰ_2} (λ_0
-  ; v_i, w_{j  k})] \xi_1^j \xi_1^k &  &  \nonumber\\
+  ; v_i, w_{j  k})] ξ_1^j ξ_1^k &  &  \nonumber\\
   + 3 λ_1^2  [\ddot{ℰ}_2 (λ_0 ; v_i, v_j) +
-  \dot{ℰ_2} (λ_0 ; v_i, w_j)] \xi_1^j & = & 0,
+  \dot{ℰ_2} (λ_0 ; v_i, w_j)] ξ_1^j & = & 0,
   \label{eq:bifurcation 2a}
 \end{eqnarray}
-qui permet en principe de déterminer $λ_2$ ainsi que les $\xi_2^i$.
+qui permet en principe de déterminer $λ_2$ ainsi que les $ξ_2^i$.
 On montre dans le paragraphe \ref{sec:Simplification des équations de
 bifurcation} que les équations \eqref{eq:bifurcation 1b} et
 \eqref{eq:bifurcation 2a} peuvent s'écrire sous la forme suivante
 \begin{equation}
   \label{eq:bifurcation 1c} \tfrac{1}{2} E_{i  j  k}
-  (λ_0) \xi_1^j \xi_1^k + λ_1 F_{i  j} (λ_0) \xi_1^j
+  (λ_0) ξ_1^j ξ_1^k + λ_1 F_{i  j} (λ_0) ξ_1^j
   = 0,
 \end{equation}
 \begin{equation}
   \label{eq:bifurcation 2b} \tfrac{1}{3} E_{i  j  k
-  l} (λ_0)  \hspace{0.17em} \xi_1^j \xi_1^k \xi_1^l + λ_2 F_{i
-   j} (λ_0) \xi_1^j + A_{i  j} (λ_0) \xi_2^j +
-  λ_1  \dot{A}_{i  j} (λ_0) \xi_1^j = 0,
+  l} (λ_0)  \hspace{0.17em} ξ_1^j ξ_1^k ξ_1^l + λ_2 F_{i
+   j} (λ_0) ξ_1^j + A_{i  j} (λ_0) ξ_2^j +
+  λ_1  \dot{A}_{i  j} (λ_0) ξ_1^j = 0,
 \end{equation}
 où les tenseurs $E_{i  j  k}$, $E_{i  j  k
  l}$, $F_{i  j}$ et $A_{i  j}$ sont définis comme
@@ -337,7 +337,7 @@ suit ***je ne suis pas sûr du terme faisant intervenir $\dot{A}_{i
 \end{equation}
 \begin{equation}
   \label{eq:def Aij} A_{i  j} (λ) = E_{i  j  k}
-  (λ) \xi_1^k + λ_1 F_{i  j} (λ) .
+  (λ) ξ_1^k + λ_1 F_{i  j} (λ) .
 \end{equation}
 Noter que tous ces tenseurs sont {\tmem{symétriques}}. On remarque que,
 puisque $ℰ_2 (λ_0 ; v_i, \bullet) = 0$, on a les
@@ -362,8 +362,8 @@ s'écrit\marginpar{Expliquer pourquoi la forme quadratique
 $\dot{ℰ}_2 (λ_0)$ est bien définie négative}
 \begin{equation}
   \tfrac{1}{3} E_{i  j  k  l} (λ_0)
-  \hspace{0.17em} \xi_1^j \xi_1^k \xi_1^l + λ_2 F_{i  j}
-  (λ_0) \xi_1^j = 0.
+  \hspace{0.17em} ξ_1^j ξ_1^k ξ_1^l + λ_2 F_{i  j}
+  (λ_0) ξ_1^j = 0.
 \end{equation}
 Cette équation admet cette fois au plus $\frac{3^m - 1}{2}$ paires de
 solutions réelles $(λ_2, u_1)$ et $(- λ_2, - u_1)$.
@@ -387,13 +387,13 @@ bifurquée est établi dans l'annexe~\ref{sec:DL energie}
 \begin{eqnarray}
   ℰ [u (\eta), λ (\eta)] & = & ℰ [u^{\ast} [λ
   (\eta)], λ (\eta)] + \tfrac{1}{6} λ_1 \eta^3 F_{i  j}
-  (λ_0) \xi_1^i \xi_1^j \nonumber\\
+  (λ_0) ξ_1^i ξ_1^j \nonumber\\
   &  & \tfrac{1}{24} \eta^4  \{ E_{i  j  k  l}
-  (λ_0) \xi_1^i \xi_1^j \xi_1^k \xi_1^l + 4 λ_1  \dot{E}_{i
-   j  k} (λ_0) \xi_1^i \xi_1^j \xi_1^k
+  (λ_0) ξ_1^i ξ_1^j ξ_1^k ξ_1^l + 4 λ_1  \dot{E}_{i
+   j  k} (λ_0) ξ_1^i ξ_1^j ξ_1^k
   \nonumber\\
   &  & +  6 [λ_1^2  \dot{F}_{i  j}
-  (λ_0) + λ_2 F_{i  j} (λ_0)] \xi_1^i \xi_1^j \}
+  (λ_0) + λ_2 F_{i  j} (λ_0)] ξ_1^i ξ_1^j \}
   + o (\eta^4) .  \label{eq:DL energie}
 \end{eqnarray}
 Si $λ_1 \neq 0$, le premier terme non-nul du développement
@@ -401,13 +401,13 @@ limité précédent est d'ordre 3
 \begin{equation}
   ℰ [u (\eta), λ (\eta)] =ℰ (u^{\ast} [λ
   (\eta)], λ (\eta)) + \tfrac{1}{6} λ_1 \eta^3 F_{i  j}
-  (λ_0) \xi_1^i \xi_1^j + o (\eta^3),
+  (λ_0) ξ_1^i ξ_1^j + o (\eta^3),
 \end{equation}
 tandis que si $λ_1 = 0$, le premier terme est d'ordre 4
 \begin{equation}
   ℰ [u (\eta), λ (\eta)] =ℰ (u^{\ast} [λ
   (\eta)], λ (\eta)) + \tfrac{1}{4} λ_2 \eta^4 F_{i  j}
-  (λ_0) \xi_1^i \xi_1^j + o (\eta^4) .
+  (λ_0) ξ_1^i ξ_1^j + o (\eta^4) .
 \end{equation}
 \begin{center}
   ***
@@ -469,37 +469,37 @@ positive sur $W$ en $λ = λ_0$. Au voisinage du point de
 bifurcation, la hessienne sur la branche bifurquée est donc positive pour
 tout $\hat{u}∈U$ ayant une composante dans $W$. Il suffit donc
 d'étudier le signe de la hessienne sur la branche bifurquée pour
-$\hat{u}∈V$, soit $\hat{u} = \hat{\xi}^i v_i$. L'expression~\eqref{eq:DL
+$\hat{u}∈V$, soit $\hat{u} = \hat{ξ}^i v_i$. L'expression~\eqref{eq:DL
 hessienne diag} se simplifie alors sous la forme suivante
 
 Compte-tenu de l'expression~\eqref{eq:decomposition u2}
 \begin{eqnarray}
   ℰ_{, u  u} [u (\eta), λ (\eta) ; \hat{u}, \hat{u}] &
-  = & \eta [ℰ_3 (λ_0 ; v_i, v_j, v_k) \xi_1^k + λ_1
-  \dot{ℰ}_2 (λ_0 ; v_i, v_j)]  \hat{\xi}^i  \hat{\xi}^j
+  = & \eta [ℰ_3 (λ_0 ; v_i, v_j, v_k) ξ_1^k + λ_1
+  \dot{ℰ}_2 (λ_0 ; v_i, v_j)]  \hat{ξ}^i  \hat{ξ}^j
   \nonumber\\
   &  & + \tfrac{1}{2} \eta^2  [ℰ_4 (λ_0 ; v_i, v_j, v_k, v_l)
-  \xi_1^k \xi_1^l +ℰ_3 (λ_0 ; v_i, v_j, v_k) \xi_2^k
+  ξ_1^k ξ_1^l +ℰ_3 (λ_0 ; v_i, v_j, v_k) ξ_2^k
    \nonumber\\
-  &  & +ℰ_3 (λ_0 ; v_i, v_j, w_{k  l}) \xi_1^k
-  \xi_1^l + λ_1 ℰ_3 (λ_0 ; v_i, v_j, w_k) \xi_1^k +
+  &  & +ℰ_3 (λ_0 ; v_i, v_j, w_{k  l}) ξ_1^k
+  ξ_1^l + λ_1 ℰ_3 (λ_0 ; v_i, v_j, w_k) ξ_1^k +
   λ_2  \dot{ℰ}_2 (λ_0 ; v_i, v_j) \nonumber\\
   &  &  + 2 λ_1  \dot{ℰ}_3 (λ_0 ; v_i, v_j,
-  v_k) \xi_1^k + λ_1^2  \ddot{ℰ}_2 (λ_0 ; v_i, v_j)]
-  \hat{\xi}^i  \hat{\xi}^j + o (\eta^2) \nonumber
+  v_k) ξ_1^k + λ_1^2  \ddot{ℰ}_2 (λ_0 ; v_i, v_j)]
+  \hat{ξ}^i  \hat{ξ}^j + o (\eta^2) \nonumber
 \end{eqnarray}
 Si $λ_1 \neq 0$, il suffit d'étudier le signe de la forme
-quadratique $[E_{i  j  k} (λ_0) \xi_1^k + λ_1 F_{i
+quadratique $[E_{i  j  k} (λ_0) ξ_1^k + λ_1 F_{i
  j} (λ_0)] .$ Si $λ_1 = 0$ et que $ℰ_3
 (λ_0) = 0$ sur $V$, alors le développement limité
 précédent s'écrit
 \begin{eqnarray}
   ℰ_{, u  u} [u (\eta), λ (\eta) ; \hat{u}, \hat{u}] &
   = & \tfrac{1}{2} \eta^2  \{ [ℰ_4 (λ_0 ; v_i, v_j, v_k, v_l)
-   +ℰ_3 (λ_0 ; v_i, v_j, w_{k  l})] \xi_1^k
-  \xi_1^l \nonumber\\
+   +ℰ_3 (λ_0 ; v_i, v_j, w_{k  l})] ξ_1^k
+  ξ_1^l \nonumber\\
   &  & +  λ_2  \dot{ℰ}_2 (λ_0 ; v_i, v_j) \}
-  \hat{\xi}^i  \hat{\xi}^j + o (\eta^2) \nonumber
+  \hat{ξ}^i  \hat{ξ}^j + o (\eta^2) \nonumber
 \end{eqnarray}
 \begin{tmframed}
   12/05/2022 Relecture jusqu'à l'égalité précédente. Je
@@ -508,7 +508,7 @@ précédent s'écrit
 \end{tmframed}
 
 Compte-tenu de la relation~\eqref{eq20211112183220}, on trouve pour $\hat{v} =
-u_1$ ($\hat{\xi}^i = \xi_1^i$)
+u_1$ ($\hat{ξ}^i = ξ_1^i$)
 \begin{equation}
   ℰ_{, u  u} [u (\eta), λ (\eta) ; u_1, u_1] = -
   λ_1 \eta \dot{ℰ}_2 (λ_0 ; u_1, u_1) + o (\eta) .
@@ -547,9 +547,9 @@ développements limités
 \end{equation}
 soit finalement, en éliminant $\eta$
 \begin{equation}
-  λ = λ_0 - \frac{\xi ℰ_{1  1  1}
-  (λ_0)}{2 \dot{ℰ}_{1  1} (λ_0)} + o (\xi),
-  \quad \text{avec} \quad \xi = \langle u (λ) - u^{\ast} (λ), v_1
+  λ = λ_0 - \frac{ξ ℰ_{1  1  1}
+  (λ_0)}{2 \dot{ℰ}_{1  1} (λ_0)} + o (ξ),
+  \quad \text{avec} \quad ξ = \langle u (λ) - u^{\ast} (λ), v_1
   \rangle .
 \end{equation}
 Pour déterminer la stabilité de la branche bifurquée, on calcule
@@ -591,7 +591,7 @@ L'équation de bifurcation~\eqref{eq20220216141706} s'écrit
 En introduisant le développement~\eqref{eq20220124135324} de $u_2$ et en
 utilisant le problème variationnel~\eqref{eq20211221155859}
 \begin{equation}
-  u_2 = \xi_2 v_1 + w_{1  1} + λ_1 w_1,
+  u_2 = ξ_2 v_1 + w_{1  1} + λ_1 w_1,
 \end{equation}
 donc
 \begin{equation}
@@ -984,7 +984,7 @@ et
   \dot{ℰ}_2 (λ_0 ; u_1, u_1) \nonumber\\
   & = & - 2 λ_1  \dot{ℰ_2} (λ_0 ; u_1, \hat{v}) + 3
   λ_1  \dot{ℰ}_2 (λ_0 ; u_1, u_1) \nonumber\\
-  & = & λ_1 F_{i  j} (λ_0) \xi_1^i \xi_1^j,  \label{eq:DL
+  & = & λ_1 F_{i  j} (λ_0) ξ_1^i ξ_1^j,  \label{eq:DL
   energie derivee 3ieme}
 \end{eqnarray}
 en utilisant l'équation de bifurcation~\eqref{eq:bifurcation 1a} dans la
@@ -993,126 +993,126 @@ deuxième ligne. En introduisant les décompositions
 on trouve tout d'abord, pour $ℰ_3 (λ_0 ; u_1, u_1, u_2)$
 \begin{eqnarray*}
   ℰ_3 (λ_0 ; u_1, u_1, u_2) & = & ℰ_3 (λ_0 ;
-  v_i, v_j, v_k) \xi_1^i \xi_1^j \xi_2^k +ℰ_3 (λ_0 ; v_i, v_j,
-  w_{k  l}) \xi_1^i \xi_1^j \xi_1^k \xi_1^l\\
+  v_i, v_j, v_k) ξ_1^i ξ_1^j ξ_2^k +ℰ_3 (λ_0 ; v_i, v_j,
+  w_{k  l}) ξ_1^i ξ_1^j ξ_1^k ξ_1^l\\
   &  &  + λ_1 ℰ_3 (λ_0 ; v_i, v_j, w_k)
-  \xi_1^i \xi_1^j \xi_1^k\\
-  & = & ℰ_3 (λ_0 ; v_i, v_j, v_k) \xi_1^i \xi_1^j \xi_2^k
-  +ℰ_3 (λ_0 ; v_i, v_j, w_{k  l}) \xi_1^i \xi_1^j
-  \xi_1^k \xi_1^l\\
+  ξ_1^i ξ_1^j ξ_1^k\\
+  & = & ℰ_3 (λ_0 ; v_i, v_j, v_k) ξ_1^i ξ_1^j ξ_2^k
+  +ℰ_3 (λ_0 ; v_i, v_j, w_{k  l}) ξ_1^i ξ_1^j
+  ξ_1^k ξ_1^l\\
   &  &  - λ_1 ℰ_2 (λ_0 ; w_{i  j},
-  w_k) \xi_1^i \xi_1^j \xi_1^k,
+  w_k) ξ_1^i ξ_1^j ξ_1^k,
 \end{eqnarray*}
 en tenant compte de la définition~\eqref{eq:pbvar wij} des $w_{i
 j}$. Dans le dernier terme de l'expression précédente, les indices
 $i$, $j$ et $k$ sont muets, donc
 \begin{eqnarray*}
   ℰ_3 (λ_0 ; u_1, u_1, u_2) & = & ℰ_3 (λ_0 ;
-  v_i, v_j, v_k) \xi_1^i \xi_1^j \xi_2^k +ℰ_3 (λ_0 ; v_i, v_j,
-  w_{k  l}) \xi_1^i \xi_1^j \xi_1^k \xi_1^l\\
+  v_i, v_j, v_k) ξ_1^i ξ_1^j ξ_2^k +ℰ_3 (λ_0 ; v_i, v_j,
+  w_{k  l}) ξ_1^i ξ_1^j ξ_1^k ξ_1^l\\
   &  &  - λ_1 ℰ_2 (λ_0 ; w_{i }, w_{j
-   k}) \xi_1^i \xi_1^j \xi_1^k\\
-  & = & ℰ_3 (λ_0 ; v_i, v_j, v_k) \xi_1^i \xi_1^j \xi_2^k
-  +ℰ_3 (λ_0 ; v_i, v_j, w_{k  l}) \xi_1^i \xi_1^j
-  \xi_1^k \xi_1^l\\
+   k}) ξ_1^i ξ_1^j ξ_1^k\\
+  & = & ℰ_3 (λ_0 ; v_i, v_j, v_k) ξ_1^i ξ_1^j ξ_2^k
+  +ℰ_3 (λ_0 ; v_i, v_j, w_{k  l}) ξ_1^i ξ_1^j
+  ξ_1^k ξ_1^l\\
   &  &  + 2 λ_1  \dot{ℰ}_2 (λ_0 ; v_{i
-  }, w_{j  k}) \xi_1^i \xi_1^j \xi_1^k,
+  }, w_{j  k}) ξ_1^i ξ_1^j ξ_1^k,
 \end{eqnarray*}
 en introduisant cette fois-ci la définition~\eqref{eq:pbvar wi} de $w_i .$
 On procède de même pour le terme suivant, soit $ℰ_2
 (λ_0 ; u_2, u_2)$
 \begin{eqnarray*}
   ℰ_2 (λ_0 ; u_2, u_2) & = & ℰ_2 (λ_0 ;
-  \xi_1^i v_i + \xi_1^i \xi_1^j w_{i  j} + λ_1 \xi_1^i w_i,
-  \xi_1^i v_i + \xi_1^k \xi_1^l w_{k  l} + λ_1 \xi_1^k w_k)\\
-  & = & ℰ_2 (λ_0 ; \xi_1^i \xi_1^j w_{i  j} +
-  λ_1 \xi_1^i w_i, \xi_1^k \xi_1^l w_{k  l} + λ_1 \xi_1^k
+  ξ_1^i v_i + ξ_1^i ξ_1^j w_{i  j} + λ_1 ξ_1^i w_i,
+  ξ_1^i v_i + ξ_1^k ξ_1^l w_{k  l} + λ_1 ξ_1^k w_k)\\
+  & = & ℰ_2 (λ_0 ; ξ_1^i ξ_1^j w_{i  j} +
+  λ_1 ξ_1^i w_i, ξ_1^k ξ_1^l w_{k  l} + λ_1 ξ_1^k
   w_k)\\
   & = & ℰ_2 (λ_0 ; w_{i  j}, w_{k  l})
-  \xi_1^i \xi_1^j \xi_1^k \xi_1^l + 2 λ_1 ℰ_2 (λ_0 ;
-  w_{i  j}, w_k) \xi_1^i \xi_1^j \xi_1^k\\
-  &  &  + λ_1^2 ℰ_2 (λ_0 ; w_i, w_j) \xi_1^i
-  \xi_1^j\\
+  ξ_1^i ξ_1^j ξ_1^k ξ_1^l + 2 λ_1 ℰ_2 (λ_0 ;
+  w_{i  j}, w_k) ξ_1^i ξ_1^j ξ_1^k\\
+  &  &  + λ_1^2 ℰ_2 (λ_0 ; w_i, w_j) ξ_1^i
+  ξ_1^j\\
   & = & ℰ_2 (λ_0 ; w_{i  j}, w_{k  l})
-  \xi_1^i \xi_1^j \xi_1^k \xi_1^l + 2 λ_1 ℰ_2 (λ_0 ;
-  w_i, w_{j  k}) \xi_1^i \xi_1^j \xi_1^k\\
+  ξ_1^i ξ_1^j ξ_1^k ξ_1^l + 2 λ_1 ℰ_2 (λ_0 ;
+  w_i, w_{j  k}) ξ_1^i ξ_1^j ξ_1^k\\
   &  &  + \tfrac{1}{2} λ_1^2  [ℰ_2 (λ_0 ; w_i,
-  w_j) +ℰ_2 (λ_0 ; w_j, w_i)] \xi_1^i \xi_1^j\\
+  w_j) +ℰ_2 (λ_0 ; w_j, w_i)] ξ_1^i ξ_1^j\\
   & = & ℰ_2 (λ_0 ; w_{i  j}, w_{k  l})
-  \xi_1^i \xi_1^j \xi_1^k \xi_1^l - 4 λ_1  \dot{ℰ}_2
-  (λ_0 ; v_i, w_{j  k}) \xi_1^i \xi_1^j \xi_1^k\\
+  ξ_1^i ξ_1^j ξ_1^k ξ_1^l - 4 λ_1  \dot{ℰ}_2
+  (λ_0 ; v_i, w_{j  k}) ξ_1^i ξ_1^j ξ_1^k\\
   &  &  - λ_1^2  [\dot{ℰ}_2 (λ_0 ; v_i, w_j) +
-  \dot{ℰ}_2 (λ_0 ; v_j, w_i)] \xi_1^i \xi_1^j\\
-  & = & ℰ_3 (λ_0 ; v_i, v_j, w_{k  l}) \xi_1^i
-  \xi_1^j \xi_1^k \xi_1^l - 4 λ_1  \dot{ℰ}_2 (λ_0 ; v_i,
-  w_{j  k}) \xi_1^i \xi_1^j \xi_1^k\\
+  \dot{ℰ}_2 (λ_0 ; v_j, w_i)] ξ_1^i ξ_1^j\\
+  & = & ℰ_3 (λ_0 ; v_i, v_j, w_{k  l}) ξ_1^i
+  ξ_1^j ξ_1^k ξ_1^l - 4 λ_1  \dot{ℰ}_2 (λ_0 ; v_i,
+  w_{j  k}) ξ_1^i ξ_1^j ξ_1^k\\
   &  &  - λ_1^2  [\dot{ℰ}_2 (λ_0 ; v_i, w_j) +
-  \dot{ℰ}_2 (λ_0 ; v_j, w_i)] \xi_1^i \xi_1^j
+  \dot{ℰ}_2 (λ_0 ; v_j, w_i)] ξ_1^i ξ_1^j
 \end{eqnarray*}
 et enfin
 \begin{eqnarray*}
   \dot{ℰ}_2 (λ_0 ; u_1, u_2) & = & \dot{ℰ}_2
-  (λ_0 ; v_i, v_j) \xi_1^i \xi_2^j + \dot{ℰ}_2 (λ_0 ;
-  v_i, w_{j  k}) \xi_1^i \xi_1^j \xi_1^k + λ_1
-  \dot{ℰ}_2 (λ_0 ; v_i, w_j) \xi_1^i \xi_1^j\\
-  & = & \dot{ℰ}_2 (λ_0 ; v_i, v_j) \xi_1^i \xi_2^j +
-  \dot{ℰ}_2 (λ_0 ; v_i, w_{j  k}) \xi_1^i \xi_1^j
-  \xi_1^k\\
+  (λ_0 ; v_i, v_j) ξ_1^i ξ_2^j + \dot{ℰ}_2 (λ_0 ;
+  v_i, w_{j  k}) ξ_1^i ξ_1^j ξ_1^k + λ_1
+  \dot{ℰ}_2 (λ_0 ; v_i, w_j) ξ_1^i ξ_1^j\\
+  & = & \dot{ℰ}_2 (λ_0 ; v_i, v_j) ξ_1^i ξ_2^j +
+  \dot{ℰ}_2 (λ_0 ; v_i, w_{j  k}) ξ_1^i ξ_1^j
+  ξ_1^k\\
   &  &  + \tfrac{1}{2} λ_1  [\dot{ℰ}_2 (λ_0 ;
-  v_i, w_j) + \dot{ℰ}_2 (λ_0 ; v_j, w_i)] \xi_1^i \xi_1^j .
+  v_i, w_j) + \dot{ℰ}_2 (λ_0 ; v_j, w_i)] ξ_1^i ξ_1^j .
 \end{eqnarray*}
 En rassemblant les résultats précédents, on trouve pour $f''''
 (0)$
 \begin{eqnarray*}
-  f'''' (0) & = & ℰ_4 (λ_0 ; v_i, v_j, v_k {, v_l} ) \xi_1^i
-  \xi_1^j \xi_1^k \xi_1^l + 6ℰ_3 (λ_0 ; v_i, v_j, v_k) \xi_1^i
-  \xi_1^j \xi_2^k\\
+  f'''' (0) & = & ℰ_4 (λ_0 ; v_i, v_j, v_k {, v_l} ) ξ_1^i
+  ξ_1^j ξ_1^k ξ_1^l + 6ℰ_3 (λ_0 ; v_i, v_j, v_k) ξ_1^i
+  ξ_1^j ξ_2^k\\
   &  &  + 6ℰ_3 (λ_0 ; v_i, v_j, w_{k  l})
-  \xi_1^i \xi_1^j \xi_1^k \xi_1^l + 12 λ_1  \dot{ℰ}_2
-  (λ_0 ; v_{i }, w_{j  k}) \xi_1^i \xi_1^j \xi_1^k\\
+  ξ_1^i ξ_1^j ξ_1^k ξ_1^l + 12 λ_1  \dot{ℰ}_2
+  (λ_0 ; v_{i }, w_{j  k}) ξ_1^i ξ_1^j ξ_1^k\\
   &  &  - 3ℰ_3 (λ_0 ; v_i, v_j, w_{k  l})
-  \xi_1^i \xi_1^j \xi_1^k \xi_1^l - 12 λ_1  \dot{ℰ}_2
-  (λ_0 ; v_i, w_{j  k}) \xi_1^i \xi_1^j \xi_1^k\\
+  ξ_1^i ξ_1^j ξ_1^k ξ_1^l - 12 λ_1  \dot{ℰ}_2
+  (λ_0 ; v_i, w_{j  k}) ξ_1^i ξ_1^j ξ_1^k\\
   &  &  - 3 λ_1^2  [\dot{ℰ}_2 (λ_0 ; v_i, w_j)
-  + \dot{ℰ}_2 (λ_0 ; v_j, w_i)] \xi_1^i \xi_1^j + 4 λ_1
-  \dot{ℰ}_3 (λ_0 ; v_i, v_j, v_k) \xi_1^i \xi_1^j \xi_1^k\\
+  + \dot{ℰ}_2 (λ_0 ; v_j, w_i)] ξ_1^i ξ_1^j + 4 λ_1
+  \dot{ℰ}_3 (λ_0 ; v_i, v_j, v_k) ξ_1^i ξ_1^j ξ_1^k\\
   &  &  + 12 λ_1  \dot{ℰ}_2 (λ_0 ; v_i,
-  v_j) \xi_1^i \xi_2^j + 12 λ_1  \dot{ℰ}_2 (λ_0 ;
-  v_i, w_{j  k}) \xi_1^i \xi_1^j \xi_1^k\\
+  v_j) ξ_1^i ξ_2^j + 12 λ_1  \dot{ℰ}_2 (λ_0 ;
+  v_i, w_{j  k}) ξ_1^i ξ_1^j ξ_1^k\\
   &  &  + 6 λ_1^2  [\dot{ℰ}_2 (λ_0 ; v_i,
-  w_j) + \dot{ℰ}_2 (λ_0 ; v_j, w_i)] \xi_1^i \xi_1^j + 6
-  λ_1^2  \ddot{ℰ}_2 (λ_0 ; v_i, v_j) \xi_1^i \xi_1^j\\
+  w_j) + \dot{ℰ}_2 (λ_0 ; v_j, w_i)] ξ_1^i ξ_1^j + 6
+  λ_1^2  \ddot{ℰ}_2 (λ_0 ; v_i, v_j) ξ_1^i ξ_1^j\\
   &  &  + 6 λ_2  \dot{ℰ}_2 (λ_0 ; v_i, v_j)
-  \xi_1^i \xi_1^j\\
+  ξ_1^i ξ_1^j\\
   & = & \left[ ℰ_4 (λ_0 ; v_i, v_j, v_k {, v_l} ) +
-  3ℰ_3 (λ_0 ; v_i, v_j, w_{k  l}) \right] \xi_1^i
-  \xi_1^j \xi_1^k \xi_1^l\\
+  3ℰ_3 (λ_0 ; v_i, v_j, w_{k  l}) \right] ξ_1^i
+  ξ_1^j ξ_1^k ξ_1^l\\
   &  &  + 4 λ_1  [\dot{ℰ}_3 (λ_0 ; v_i, v_j,
-  v_k) + 3 \dot{ℰ}_2 (λ_0 ; v_i, w_{j  k})] \xi_1^i
-  \xi_1^j \xi_1^k\\
+  v_k) + 3 \dot{ℰ}_2 (λ_0 ; v_i, w_{j  k})] ξ_1^i
+  ξ_1^j ξ_1^k\\
   &  &  + \{ 3 λ_1^2  [\dot{2 \ddot{ℰ}_2
   (λ_0 ; v_i, v_j) + \dot{ℰ}}_2 (λ_0 ; v_i, w_j) +
   \dot{ℰ}_2 (λ_0 ; v_j, w_i)] + 6 λ_2
-  \dot{ℰ}_2 (λ_0 ; v_i, v_j) \} \xi_1^i \xi_1^j\\
-  &  &  + 6ℰ_3 (λ_0 ; v_i, v_j, v_k) \xi_1^i \xi_1^j
-  \xi_2^k + 12 λ_1  \dot{ℰ}_2 (λ_0 ; v_i, v_j)
-  \xi_1^i \xi_2^j\\
-  & = & E_{i  j  k  l} (λ_0) \xi_1^i \xi_1^j
-  \xi_1^k \xi_1^l + 4 λ_1  \dot{E}_{i  j  k}
-  (λ_0) \xi_1^i \xi_1^j \xi_1^k + 6 [λ_1^2  \dot{F}_{i
+  \dot{ℰ}_2 (λ_0 ; v_i, v_j) \} ξ_1^i ξ_1^j\\
+  &  &  + 6ℰ_3 (λ_0 ; v_i, v_j, v_k) ξ_1^i ξ_1^j
+  ξ_2^k + 12 λ_1  \dot{ℰ}_2 (λ_0 ; v_i, v_j)
+  ξ_1^i ξ_2^j\\
+  & = & E_{i  j  k  l} (λ_0) ξ_1^i ξ_1^j
+  ξ_1^k ξ_1^l + 4 λ_1  \dot{E}_{i  j  k}
+  (λ_0) ξ_1^i ξ_1^j ξ_1^k + 6 [λ_1^2  \dot{F}_{i
    j} (λ_0) + λ_2 F_{i  j} (λ_0)]
-  \xi_1^i \xi_1^j\\
-  &  &  + 6 [E_{i  j  k} (λ_0) \xi_1^k + 2
-  λ_1 F_{i  j} (λ_0)] \xi_1^i \xi_2^j,
+  ξ_1^i ξ_1^j\\
+  &  &  + 6 [E_{i  j  k} (λ_0) ξ_1^k + 2
+  λ_1 F_{i  j} (λ_0)] ξ_1^i ξ_2^j,
 \end{eqnarray*}
-et on observe que le dernier terme (en $\xi_1^i \xi_2^j$) est nul, du fait de
+et on observe que le dernier terme (en $ξ_1^i ξ_2^j$) est nul, du fait de
 l'équation de bifurcation~\eqref{eq:bifurcation 1c}. On obtient donc
 \begin{equation}
   \label{eq:DL energie derivee 4ieme} f'''' (0) = E_{i  j  k
-   l} (λ_0) \xi_1^i \xi_1^j \xi_1^k \xi_1^l + 4 λ_1
-  \dot{E}_{i  j  k} (λ_0) \xi_1^i \xi_1^j \xi_1^k + 6
+   l} (λ_0) ξ_1^i ξ_1^j ξ_1^k ξ_1^l + 4 λ_1
+  \dot{E}_{i  j  k} (λ_0) ξ_1^i ξ_1^j ξ_1^k + 6
   [λ_1^2  \dot{F}_{i  j} (λ_0) + λ_2 F_{i
-   j} (λ_0)] \xi_1^i \xi_1^j .
+   j} (λ_0)] ξ_1^i ξ_1^j .
 \end{equation}
 Le développement limité~\eqref{eq:DL energie} est alors obtenu en
 rassemblant les résultats~\eqref{eq:DL energie derivee 2nde}, \eqref{eq:DL
@@ -1121,24 +1121,24 @@ energie derivee 3ieme} et \eqref{eq:DL energie derivee 4ieme}.
 \begin{remark}
   On peut réécrire $f'''' (0)$ en tenant compte de l'équation de
   bifurcation~\eqref{eq:bifurcation 2b}. En multipliant celle-ci par
-  $\xi_1^i$, on trouve en effet
+  $ξ_1^i$, on trouve en effet
   \begin{eqnarray*}
-    E_{i  j  k  l} (λ_0) \xi_1^i
-    \hspace{0.17em} \xi_1^j \xi_1^k \xi_1^l & = & - 3 λ_2 F_{i
-    j} (λ_0) \xi_1^i \xi_1^j - 3 A_{i  j} (λ_0)
-    \xi_1^i \xi_2^j - 3 λ_1  [\dot{E}_{i  j  k}
-    (λ_0) \xi_1^k + λ_1  \dot{F}_{i  j} (λ_0)]
-    \xi_1^i \xi_1^j\\
+    E_{i  j  k  l} (λ_0) ξ_1^i
+    \hspace{0.17em} ξ_1^j ξ_1^k ξ_1^l & = & - 3 λ_2 F_{i
+    j} (λ_0) ξ_1^i ξ_1^j - 3 A_{i  j} (λ_0)
+    ξ_1^i ξ_2^j - 3 λ_1  [\dot{E}_{i  j  k}
+    (λ_0) ξ_1^k + λ_1  \dot{F}_{i  j} (λ_0)]
+    ξ_1^i ξ_1^j\\
     & = & - 3 λ_1  \dot{E}_{i  j  k} (λ_0)
-    \xi_1^i \xi_1^j \xi_1^k - 3 [λ_1^2  \dot{F}_{i  j}
-    (λ_0) + λ_2 F_{i  j} (λ_0)] \xi_1^i \xi_1^j - 3
-    A_{i  j} (λ_0) \xi_1^i \xi_2^j,
+    ξ_1^i ξ_1^j ξ_1^k - 3 [λ_1^2  \dot{F}_{i  j}
+    (λ_0) + λ_2 F_{i  j} (λ_0)] ξ_1^i ξ_1^j - 3
+    A_{i  j} (λ_0) ξ_1^i ξ_2^j,
   \end{eqnarray*}
   soit
   \begin{equation} f'''' (0) = λ_1  \dot{E}_{i  j  k} (λ_0)
-     \xi_1^i \xi_1^j \xi_1^k + 3 [λ_1^2  \dot{F}_{i  j}
-     (λ_0) + λ_2 F_{i  j} (λ_0)] \xi_1^i \xi_1^j
-     - 3 A_{i  j} (λ_0) \xi_1^i \xi_2^j . \end{equation}
+     ξ_1^i ξ_1^j ξ_1^k + 3 [λ_1^2  \dot{F}_{i  j}
+     (λ_0) + λ_2 F_{i  j} (λ_0)] ξ_1^i ξ_1^j
+     - 3 A_{i  j} (λ_0) ξ_1^i ξ_2^j . \end{equation}
 \end{remark}
 
 \subsection{Développement limité de la hessienne}\label{sec:DL
@@ -1270,19 +1270,19 @@ $\alpha_1∈\mathbb{R}$ tels que, pour tout $\hat{u}∈U$
    \alpha_1  \langle x_0, \hat{u} \rangle, \end{equation}
 soit, en rempla{\c c}ant $u_1$ et $x_0$ par leurs décompositions dans la
 base $v_i$
-\begin{equation} ℰ_3 (λ_0 ; v_j, v_k, \hat{u}) \xi_1^k \chi_0^j
+\begin{equation} ℰ_3 (λ_0 ; v_j, v_k, \hat{u}) ξ_1^k \chi_0^j
    +ℰ_2 (λ_0 ; x_1, \hat{u}) + λ_1  \dot{ℰ_2}
    (λ_0 ; v_j, \hat{u}) \chi_0^j = \alpha_1 \chi_0^j  \langle v_j,
    \hat{u} \rangle . \end{equation}
 En prenant tout d'abord $\hat{u} = v_i$, on obtient
-\begin{equation} [ℰ_3 (λ_0 ; v_i, v_j, v_k) \xi_1^k + λ_1
+\begin{equation} [ℰ_3 (λ_0 ; v_i, v_j, v_k) ξ_1^k + λ_1
    \dot{ℰ_2} (λ_0 ; v_i, v_j)] \chi_0^j = \alpha_1 \chi_0^i,
 \end{equation}
 soit encore
-\begin{equation} [E_{i  j  k} (λ_0) \xi_1^k + λ_1 F_{i
+\begin{equation} [E_{i  j  k} (λ_0) ξ_1^k + λ_1 F_{i
    j} (λ_0)] \chi_0^j = \alpha_1 \chi_0^i . \end{equation}
 Ainsi, le vecteur $\chi_0^i$ apparaît comme le vecteur propre de la
-matrice symétrique $[E_{i  j  k} (λ_0) \xi_1^k +
+matrice symétrique $[E_{i  j  k} (λ_0) ξ_1^k +
 λ_1 F_{i  j} (λ_0)]$ associé à la valeur propre
 $\alpha_1$. On doit alors discuter en fonction du type de bifurcation.
 
@@ -1298,15 +1298,15 @@ déterminer les $\chi_0^i$. On prend maintenant $\hat{u} = \hat{w}∈W$
 dans le problème variationnel d'ordre 1, et on pose $x_1 = \chi_1^i v_i +
 y_1$, avec $y_1∈W$. On obtient alors le problème variationnel suivant
 : trouver $y_1∈W$ tel que, pour tout $\hat{w}∈W$,
-\begin{equation} ℰ_3 (λ_0 ; v_j, v_k, \hat{w}) \xi_1^k \chi_0^j
+\begin{equation} ℰ_3 (λ_0 ; v_j, v_k, \hat{w}) ξ_1^k \chi_0^j
    +ℰ_2 (λ_0 ; y_1, \hat{w}) + λ_1  \dot{ℰ_2}
    (λ_0 ; v_j, \hat{w}) \chi_0^j = 0. \end{equation}
 La solution de ce problème est exprimée à l'aide des $w_{i
  j}$ et $w_i$ définis respectivement par les problèmes
 variationnels auxiliaires \eqref{eq:pbvar wij} et \eqref{eq:pbvar wi}
-\begin{equation} y_1 = \xi_1^i \chi_0^j w_{i  j} + λ_1 \chi_0^i w_i, \end{equation}
+\begin{equation} y_1 = ξ_1^i \chi_0^j w_{i  j} + λ_1 \chi_0^i w_i, \end{equation}
 soit
-\begin{equation} x_1 = \chi_1^i v_i + \xi_1^i \chi_0^j w_{i  j} + λ_1 \chi_0^i
+\begin{equation} x_1 = \chi_1^i v_i + ξ_1^i \chi_0^j w_{i  j} + λ_1 \chi_0^i
    w_i . \end{equation}
 Dans le cas d'une bifurcation symétrique, le problème aux valeurs
 propres d'ordre 2 s'écrit quant à lui
@@ -1317,7 +1317,7 @@ propres d'ordre 2 s'écrit quant à lui
    \hat{u} \rangle \end{equation}
 soit, en prenant $\hat{u} = \widehat{v_i}∈V$ et en introduisant les
 développements de $u_1$, $u_2$, $x_0 $ et $x_1$
-\begin{equation} ℰ_4  (λ_0 ; v_i, v_j, v_k, v_l) \chi_0^j \xi_{1 }^k \xi_1^l
+\begin{equation} ℰ_4  (λ_0 ; v_i, v_j, v_k, v_l) \chi_0^j ξ_{1 }^k ξ_1^l
    + 2ℰ_3 (λ_0 ; u_1, x_1, v_i) +ℰ_3 (λ_0 ;
    u_2, x_0, \hat{u}) + λ_2  \dot{ℰ_2} (λ_0 ; x_0,
    \hat{u}) \end{equation}
@@ -1327,30 +1327,30 @@ bifurcation}\label{sec:Simplification des équations de bifurcation}
 Dans ce paragraphe, on simplifie les équations de bifurcation
 \eqref{eq:bifurcation 1b} et \eqref{eq:bifurcation 2a} pour obtenir les formes
 \eqref{eq:bifurcation 1c} et \eqref{eq:bifurcation 2b}. On commence par
-symétriser les termes cubique, quadratique et linéaire en $\xi_1^i$ de
+symétriser les termes cubique, quadratique et linéaire en $ξ_1^i$ de
 l'équation \eqref{eq:bifurcation 2b}.
 
-\paragraph{Terme cubique en $\xi_1^i$}On observe que
-\begin{equation} ℰ_3 (λ_0 ; v_i, v_j, w_{k  l}) \xi_1^j \xi_1^k
-   \xi_1^l = \text{} \tfrac{1}{3}  [ℰ_3 (λ_0 ; v_i, v_j, w_{k
+\paragraph{Terme cubique en $ξ_1^i$}On observe que
+\begin{equation} ℰ_3 (λ_0 ; v_i, v_j, w_{k  l}) ξ_1^j ξ_1^k
+   ξ_1^l = \text{} \tfrac{1}{3}  [ℰ_3 (λ_0 ; v_i, v_j, w_{k
     l})  +ℰ_3 (λ_0 ; v_i, v_k, w_{j
-   l}) +ℰ_3 (λ_0 ; v_i, v_l, w_{j  k}] \xi_1^j \xi_1^k
-   \xi_1^l . \end{equation}
-On obtient donc l'expression suivante du terme cubique en $\xi_1^i$ dans
+   l}) +ℰ_3 (λ_0 ; v_i, v_l, w_{j  k}] ξ_1^j ξ_1^k
+   ξ_1^l . \end{equation}
+On obtient donc l'expression suivante du terme cubique en $ξ_1^i$ dans
 l'équation de bifurcation \eqref{eq:bifurcation 2a}
 \begin{equation} ℰ_4 (λ_0 ; v_i, v_j, v_k, v_l) +ℰ_3 (λ_0 ;
    v_i, v_j, w_{k  l}) +ℰ_3 (λ_0 ; v_i, v_k, w_{j
     l}) +ℰ_3 (λ_0 ; v_i, v_l, w_{j  k}), \end{equation}
 qui suggère d'introduire le \ $E_{i  j  k  l}
 (λ)$ défini par l'équation \eqref{eq:def Eijkl}. Le terme
-cubique en $\xi_1^i$ dans l'équation de bifurcation \eqref{eq:bifurcation
+cubique en $ξ_1^i$ dans l'équation de bifurcation \eqref{eq:bifurcation
 2a} est alors simplement~: $E_{i  j  k  l}
 (λ_0)$.
 
-\paragraph{Terme quadratique en $\xi_1^i$}On observe de même que
-\begin{equation} ℰ_3 (λ_0 ; v_i, v_j, w_k) \xi_1^j \xi_1^k = \tfrac{1}{2}
+\paragraph{Terme quadratique en $ξ_1^i$}On observe de même que
+\begin{equation} ℰ_3 (λ_0 ; v_i, v_j, w_k) ξ_1^j ξ_1^k = \tfrac{1}{2}
    [ℰ_3 (λ_0 ; v_i, v_j, w_k) +ℰ_3 (λ_0 ; v_i,
-   w_j, v_k)] \xi_1^j \xi_1^k . \end{equation}
+   w_j, v_k)] ξ_1^j ξ_1^k . \end{equation}
 En prenant tout d'abord $\widehat{w} = w_k$ dans le problème variationnel
 \eqref{eq:pbvar wij}, on trouve
 \begin{equation} ℰ_3 (λ_0 ; v_i, v_j, w_k) = -ℰ_2 (λ_0 ;
@@ -1360,11 +1360,11 @@ variationnel \eqref{eq:pbvar wi}
 \begin{equation} ℰ_2 (λ_0 ; w_k, w_{i  j}) = - 2 \dot{ℰ_2}
    (λ_0 ; v_k, w_{i  j}), \end{equation}
 soit finalement
-\begin{equation} ℰ_3 (λ_0 ; v_i, v_j, w_k) \xi_1^j \xi_1^k =
+\begin{equation} ℰ_3 (λ_0 ; v_i, v_j, w_k) ξ_1^j ξ_1^k =
    [\dot{ℰ}_2 (λ_0 ; v_j, w_{i  k}) +
-   \dot{ℰ}_2 (λ_0 ; v_k, w_{i  j})] \xi_1^j \xi_1^k .
+   \dot{ℰ}_2 (λ_0 ; v_k, w_{i  j})] ξ_1^j ξ_1^k .
 \end{equation}
-On obtient donc l'expression suivante du terme quadratique en $\xi_1^i$ dans
+On obtient donc l'expression suivante du terme quadratique en $ξ_1^i$ dans
 l'équation de bifurcation \eqref{eq:bifurcation 2a}
 \begin{equation} 3 λ_1  [\dot{ℰ}_3 (λ_0 ; v_i, v_j, v_k) +
    \dot{ℰ_2} (λ_0 ; v_i, w_{j  k}) +
@@ -1372,23 +1372,23 @@ l'équation de bifurcation \eqref{eq:bifurcation 2a}
    \dot{ℰ}_2 (λ_0 ; v_k, w_{i  j})], \end{equation}
 qui suggère d'introduire le tenseur $E_{i  j  k}
 (λ)$ défini par l'équation \eqref{eq:def Eijk}. Le terme
-quadratique en $\xi_1^i$ dans l'équation de bifurcation
+quadratique en $ξ_1^i$ dans l'équation de bifurcation
 \eqref{eq:bifurcation 2a} est alors simplement~: $3 λ_1  \dot{E}_{i
  j  k} (λ_0)$.
 
-\paragraph{Terme linéaire en $\xi_1^i$}Par des arguments similaires, on
+\paragraph{Terme linéaire en $ξ_1^i$}Par des arguments similaires, on
 établit également que
 \begin{equation} \dot{ℰ_2} (λ_0 ; v_i, w_j) = - \tfrac{1}{2} ℰ_2
    (λ_0 ; w_i, w_j) = - \tfrac{1}{2} ℰ_2 (λ_0 ; w_j,
    w_i) = \dot{ℰ_2} (λ_0 ; v_j, w_i) . \end{equation}
-On obtient donc l'expression suivante du terme linéaire en $\xi_1^i$ dans
+On obtient donc l'expression suivante du terme linéaire en $ξ_1^i$ dans
 l'équation de bifurcation \eqref{eq:bifurcation 2a}
 \begin{equation} \ddot{ℰ}_2 (λ_0 ; v_i, v_j) + \tfrac{1}{2}
    [\dot{ℰ_2} (λ_0 ; v_i, w_j) + \dot{ℰ_2}
    (λ_0 ; v_j, w_i)], \end{equation}
 qui suggère d'introduire le tenseur $F_{i  j} (λ)$
 défini par l'équation \eqref{eq:def Fij}. Le terme linéaire en
-$\xi_1^i$ dans l'équation de bifurcation \eqref{eq:bifurcation 2a} est
+$ξ_1^i$ dans l'équation de bifurcation \eqref{eq:bifurcation 2a} est
 alors simplement~: $3 λ_1^2  \dot{F}_{i  j} (λ_0)$.
 
 \paragraph{Synthèse~: simplification des équations
@@ -1396,11 +1396,11 @@ alors simplement~: $3 λ_1^2  \dot{F}_{i  j} (λ_0)$.
 résultats précédents, on obtient tout d'abord pour l'équation
 \eqref{eq:bifurcation 2a}
 \begin{equation} 3 [E_{i  j  k} (λ_0) + λ_1 F_{i  j}
-   (λ_0)] \xi_2^j + 3 λ_2 F_{i  j} (λ_0) \xi_1^j +
-   E_{i  j  k  l} (λ_0)  \hspace{0.17em} \xi_1^j
-   \xi_1^k \xi_1^l + 3 λ_1  \dot{E}_{i  j  k}
-   (λ_0)  \hspace{0.17em} \xi_1^j \xi_1^k + 3 λ_1^2  \dot{F}_{i
-    j} (λ_0) \xi_1^j = 0, \end{equation}
+   (λ_0)] ξ_2^j + 3 λ_2 F_{i  j} (λ_0) ξ_1^j +
+   E_{i  j  k  l} (λ_0)  \hspace{0.17em} ξ_1^j
+   ξ_1^k ξ_1^l + 3 λ_1  \dot{E}_{i  j  k}
+   (λ_0)  \hspace{0.17em} ξ_1^j ξ_1^k + 3 λ_1^2  \dot{F}_{i
+    j} (λ_0) ξ_1^j = 0, \end{equation}
 qui suggère d'introduire le tenseur $A_{i  j} (λ)$
 défini par l'équation \eqref{eq:def Aij}. On obtient alors finalement
 l'équation de bifurcation \eqref{eq:bifurcation 2b}. Les tenseurs $F_{i

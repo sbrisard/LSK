@@ -30,6 +30,7 @@
 \setmathfont{XITS Math}
 
 \newcommand{\reals}{\mathbb{R}}
+\newcommand{\×}{\,}
 
 \begin{document}
 \title{\sbtitle}
@@ -86,14 +87,14 @@ sous-espace supplémentaire orthogonal \(W\) de \(V\) dans \(U\)
   U = V \overset{\perp}{\otimes} W.
 \end{equation}
 Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
-\(u₀ + ξ v + η w\) voisin du point d'équilibre \(u₀\), avec \(ξ, η∈\reals\)
+\(u₀ + ξ \× v + η \× w\) voisin du point d'équilibre \(u₀\), avec \(ξ, η∈\reals\)
 {\guillemotleft} petits {\guillemotright}, \(v \in V\) et \(w∈W\). On obtient
 alors, à l'ordre 4 en \(ξ\) et \(η\)
 \begin{equation}
   \begin{aligned}[b]
-    Δℰ ={} &  ℰ(u₀ + ξ v + η w, λ₀) - ℰ(u₀, λ₀)\\
-    ={} & \tfrac{1}{2} ℰ₂(ξ v + η w, ξ v + η w) + \tfrac{1}{6} ℰ₃(ξ v + η w, ξ v + η w, ξ v + η w)\\
-    & + \tfrac{1}{24} ℰ₄(ξ v + η w, ξ v + η w, ξ v + η w, ξ v + η w) + \mathcal{O}\bigl[\bigl(ξ^2 + η^2\bigr)^2\bigr],
+    Δℰ ={} &  ℰ(u₀ + ξ \× v + η \× w, λ₀) - ℰ(u₀, λ₀)\\
+    ={} & \tfrac{1}{2} ℰ₂(ξ \× v + η \× w, ξ \× v + η \× w) + \tfrac{1}{6} ℰ₃(ξ \× v + η \× w, ξ \× v + η \× w, ξ \× v + η \× w)\\
+    & + \tfrac{1}{24} ℰ₄(ξ \× v + η \× w, ξ \× v + η \× w, ξ \× v + η \× w, ξ \× v + η \× w) + \mathcal{O}\bigl[\bigl(ξ^2 + η^2\bigr)^2\bigr],
   \end{aligned}
 \end{equation}
 où le terme linéaire a été omis puisque \(u₀\) est un point critique de

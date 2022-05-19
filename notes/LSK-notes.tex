@@ -48,11 +48,11 @@ a la structure d'espace vectoriel. L'énergie du système est notée \(ℰ(u, λ
 où \(λ\) désigne un paramètre de chargement. Soit \(u^{\ast}(λ)\) la branche
 fondamentale. Par définition
 \begin{equation}
- ℰ_{,u}[u^{\ast}(λ), λ; \hat{u}]=0\quad\text{pour tout}\quad\hat{u}∈U.
+  ℰ_{,u}[u^{\ast}(λ), λ; \hat{u}]=0\quad\text{pour tout}\quad\hat{u}∈U.
 \end{equation}
 Il sera commode d'introduire les notations suivantes
 \begin{equation}
- ℰ₂(λ) = ℰ_{,uu}[u^{\ast}(λ), λ], \quad ℰ₃(λ) = ℰ_{,uuu}[u^{\ast}(λ), λ], \quad ℰ₄(λ) = ℰ_{,uuuu} [u^{\ast}(λ), λ].
+  ℰ₂(λ) = ℰ_{,uu}[u^{\ast}(λ), λ], \quad ℰ₃(λ) = ℰ_{,uuu}[u^{\ast}(λ), λ], \quad ℰ₄(λ) = ℰ_{,uuuu} [u^{\ast}(λ), λ].
 \end{equation}
 Noter que \(ℰ₂\), \(ℰ₃\) et \(ℰ₄\) sont des formes bi-, tri- et
 quadri-linéaires, respectivement. L'application de ces formes à des éléments de
@@ -73,68 +73,83 @@ on notera \(ℰ₂(•, •)\) plutôt que \(ℰ₂(λ₀ ; •, •)\).
 
 \section{Analyse de la branche fondamentale}
 
-On s'intéresse dans ce paragraphe à la stabilité du point critique \((u₀, λ₀) .\) Par hypothèse, \(ℰ₂(λ₀)\) est positive, sans être définie positive~; soit \(V\) son noyau, qui forme un sous-espace vectoriel de \(U\). On suppose que \(V\) est de dimension finie \(m = \dim V\). Soit \((v₁, \ldots, v_m)\) une base orthonormée de ce noyau pour le produit scalaire \(〈 •, • 〉\)(qui n'est pas précisé pour le moment). On introduit le sous-espace supplémentaire orthogonal \(W\) de \(V\) dans \(U\)
+On s'intéresse dans ce paragraphe à la stabilité du point critique
+\((u₀, λ₀) .\) Par hypothèse, \(ℰ₂(λ₀)\) est positive, sans être définie
+positive~; soit \(V\) son noyau, qui forme un sous-espace vectoriel de \(U\). On
+suppose que \(V\) est de dimension finie \(m = \dim V\). Soit
+\((v₁, \ldots, v_m)\) une base orthonormée de ce noyau pour le produit scalaire
+\(〈 •, • 〉\)(qui n'est pas précisé pour le moment). On introduit le
+sous-espace supplémentaire orthogonal \(W\) de \(V\) dans \(U\)
 \begin{equation}
- U = V \overset{\perp}{\otimes} W.
+  U = V \overset{\perp}{\otimes} W.
 \end{equation}
-Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état \(u₀ + ξ v + η w\) voisin du point d'équilibre \(u₀\), avec \(ξ, η∈\mathbb{R}\) {\guillemotleft} petits {\guillemotright}, \(v \in V\) et \(w∈W\). On obtient alors, à l'ordre 4 en \(ξ\) et \(η\)
-\begin{eqnarray}
- \Delta ℰ & = & ℰ(u₀ + ξ v + η w, λ₀)
- -ℰ(u₀, λ₀) \nonumber\\
- & = & \tfrac{1}{2} ℰ₂(ξ v + η w, ξ v + η w) +
- \tfrac{1}{6} ℰ₃(ξ v + η w, ξ v + η w, ξ v + η w)
- \nonumber\\
- & & + \tfrac{1}{24} ℰ₄(ξ v + η w, ξ v + η
- w, ξ v + η w, ξ v + η w) +\mathcal{O} [(ξ^2 + η^2)^2],
-\end{eqnarray}
-où le terme linéaire a été omis puisque \(u₀\) est un point critique de l'énergie. En tenant compte de la multilinéarité et de la symétrie des différentielles successives de l'énergie \(ℰ\), ainsi que du fait que \(ℰ₂(v, •) = 0\)(puisque \(v∈V\)), l'expression précédente s'écrit
-\begin{eqnarray}
- \Delta ℰ & = & \tfrac{1}{2} η^2 ℰ₂(w, w) +
- \tfrac{1}{6} ξ^3 ℰ₃(v, v, v) + \tfrac{1}{2} ξ^2 η
- ℰ₃(v, v, w) \nonumber\\
- & & + \tfrac{1}{2} ξ η^2 ℰ₃(v, w, w) + \tfrac{1}{6}
- η^3 ℰ₃(w, w, w) \nonumber\\
- & & + \tfrac{1}{24} ξ^4 ℰ₄(v, v, v, v) + \tfrac{1}{6} ξ^3
- η ℰ₄(v, v, v, w) \nonumber\\
- & & + \tfrac{1}{4} ξ^2 η^2 ℰ₄(v, v, w, w) + \tfrac{1}{6}
- ξ η^3 ℰ₄(v, w, w, w) \nonumber\\
- & & + \tfrac{1}{24} η^4 ℰ₄(w, w, w, w) +\mathcal{O} [(ξ^2
- + η^2)^2],
-\end{eqnarray}
-où l'on convient que toutes les différentielles de \(ℰ\) sont évaluées au point d'équilibre \(u₀\).
+Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
+\(u₀ + ξ v + η w\) voisin du point d'équilibre \(u₀\), avec \(ξ, η∈\mathbb{R}\)
+{\guillemotleft} petits {\guillemotright}, \(v \in V\) et \(w∈W\). On obtient
+alors, à l'ordre 4 en \(ξ\) et \(η\)
+\begin{equation}
+  \begin{aligned}[b]
+    Δℰ ={} &  ℰ(u₀ + ξ v + η w, λ₀) - ℰ(u₀, λ₀)\\
+    ={} & \tfrac{1}{2} ℰ₂(ξ v + η w, ξ v + η w) + \tfrac{1}{6} ℰ₃(ξ v + η w, ξ v + η w, ξ v + η w)\\
+    & + \tfrac{1}{24} ℰ₄(ξ v + η w, ξ v + η w, ξ v + η w, ξ v + η w) + \mathcal{O}\bigl[\bigl(ξ^2 + η^2\bigr)^2\bigr],
+  \end{aligned}
+\end{equation}
+où le terme linéaire a été omis puisque \(u₀\) est un point critique de
+l'énergie. En tenant compte de la multilinéarité et de la symétrie des
+différentielles successives de l'énergie \(ℰ\), ainsi que du fait que
+\(ℰ₂(v, •) = 0\) (puisque \(v∈V\)), l'expression précédente s'écrit
+\begin{equation}
+  \begin{aligned}[b]
+    \Delta ℰ ={} & \tfrac{1}{2} η^2 ℰ₂(w, w) + \tfrac{1}{6} ξ^3 ℰ₃(v, v, v) + \tfrac{1}{2} ξ^2 η ℰ₃(v, v, w)\\
+    & + \tfrac{1}{2} ξ η^2 ℰ₃(v, w, w) + \tfrac{1}{6} η^3 ℰ₃(w, w, w)\\
+    & + \tfrac{1}{24} ξ^4 ℰ₄(v, v, v, v) + \tfrac{1}{6} ξ^3 η ℰ₄(v, v, v, w)\\
+    & + \tfrac{1}{4} ξ^2 η^2 ℰ₄(v, v, w, w) + \tfrac{1}{6} ξ η^3 ℰ₄(v, w, w, w)\\
+    & + \tfrac{1}{24} η^4 ℰ₄(w, w, w, w) +\mathcal{O}\bigl[\bigl(ξ^2 + η^2\bigr)^2\bigr],
+  \end{aligned}
+\end{equation}
+où l'on convient que toutes les différentielles de \(ℰ\) sont évaluées au point
+d'équilibre \(u₀\).
 
-Pour que l'équilibre soit stable, il faut que cette expression soit positive ou nulle pour tous \(ξ\) et \(η\) suffisamment petits. En prenant tout d'abord \(η = 0\), on obtient les conditions nécessaires \begin{equation}
- \label{eq20211108164416} ℰ₃(v, v, v) = 0 \quad \text{et} \quad
- ℰ₄(v, v, v, v) \geq 0 \quad \text{pour tout} \quad v∈V.
-\end{equation}
-En d'autres termes, s'il existe \(v∈V\) tel que \(ℰ₃(v, v, v) \neq 0\) ou \(ℰ₄(v, v, v, v) < 0\), alors l'équilibre est \emph{instable}. Les conditions précédentes ne sont pas suffisantes pour assurer la stabilité. En effet, supposant ces conditions remplies, on prend maintenant \(η = ξ^2\)
+Pour que l'équilibre soit stable, il faut que cette expression soit positive ou
+nulle pour tous \(ξ\) et \(η\) suffisamment petits. En prenant tout d'abord
+\(η = 0\), on obtient les conditions nécessaires
 \begin{equation}
- \Delta ℰ= \tfrac{1}{2} ξ^4 \left[ ℰ₂(w, w)
- +ℰ₃(v, v, w) + \tfrac{1}{12} ℰ₄(v, v, v, v) \right]
- + o(ξ^4)
+  \label{eq:20211108164416}
+  ℰ₃(v, v, v) = 0 \quad \text{et} \quad ℰ₄(v, v, v, v) \geq 0 \quad \text{pour tout} \quad v∈V.
+\end{equation}
+
+En d'autres termes, s'il existe \(v∈V\) tel que \(ℰ₃(v, v, v) \neq 0\) ou
+\(ℰ₄(v, v, v, v) < 0\), alors l'équilibre est \emph{instable}. Les conditions
+précédentes ne sont pas suffisantes pour assurer la stabilité. En effet,
+supposant ces conditions remplies, on prend maintenant \(η = ξ^2\)
+\begin{equation}
+  Δℰ = \tfrac{1}{2} ξ^4 \bigl[ ℰ₂(w, w) + ℰ₃(v, v, w) + \tfrac{1}{12} ℰ₄(v, v, v, v) \bigr] + o(ξ^4)
 \end{equation}
 et on obtient la condition nécessaire supplémentaire
 \begin{equation}
- \label{eq20211109145356} ℰ₂(w, w) +ℰ₃(v, v, w) +
- \tfrac{1}{12} ℰ₄(v, v, v, v) \geq 0,
+  \label{eq:20211109145356}
+  ℰ₂(w, w) + ℰ₃(v, v, w) + \tfrac{1}{12} ℰ₄(v, v, v, v) \geq 0,
 \end{equation}
-pour tous \(v∈V\) et \(w∈W\). Pour \(v∈V\) fixé, l'expression précédente est minimale lorsque \(w\) satisfait le problème variationnel
+pour tous \(v∈V\) et \(w∈W\). Pour \(v∈V\) fixé, l'expression précédente est
+minimale lorsque \(w\) satisfait le problème variationnel
 \begin{equation}
- \label{eq20211109145224} 2ℰ₂(w, \hat{w}) +ℰ₃(v, v,
- \hat{w}) = 0 \quad \text{pour tout} \quad \hat{w}∈W.
+  \label{eq:20211109145224}
+  2ℰ₂(w, \hat{w}) +ℰ₃(v, v, \hat{w}) = 0 \quad \text{pour tout} \quad \hat{w}∈W.
 \end{equation}
-Soit \(w_{i j}∈W\) l'unique solution du problème variationnel suivant
+Soit \(w_{ij}∈W\) l'unique solution du problème variationnel suivant
 \begin{equation}
- \label{eq:pbvar wij} ℰ₂(w_{i j}, \hat{w})
- +ℰ₃(v_i, v_j, \hat{w}) = 0 \quad \text{pour tout} \quad \hat{w}
- ∈W.
+  \label{eq:20220519164523}
+  ℰ₂(w_{i j}, \hat{w})+ℰ₃(v_i, v_j, \hat{w}) = 0 \quad \text{pour tout} \quad \hat{w}∈W.
 \end{equation}
-Alors, pour \(v = ξ^i v_i\), la solution du problème variationnel~\eqref{eq20211109145224} est \(w = \tfrac{1}{2} ξ^i ξ^j w_{ij}\). Pour cette valeur de \(v\), la condition~\eqref{eq20211109145356} s'écrit
+Alors, pour \(v = ξ^i v_i\), la solution du problème
+variationnel~\eqref{eq:20211109145224} est \(w = \tfrac{1}{2} ξ^i ξ^j
+w_{ij}\). Pour cette valeur de \(v\), la condition~\eqref{eq:20211109145356}
+s'écrit
 \begin{equation}
- [ℰ₄(v_i, v_j, v_k, v_l) - 3ℰ₂(w_{i j}, w_{k
-  l})] ξ^i ξ^j ξ^k ξ^l \geq 0,
+  \bigl[ℰ₄(v_i, v_j, v_k, v_l) - 3ℰ₂(w_{ij}, w_{kl})\bigr] ξ^i ξ^j ξ^k ξ^l \geq 0,
 \end{equation}
-pour tous \(ξ_i, ξ_j, ξ_k, ξ_l∈\mathbb{R}\). On peut montrer que l'inégalité stricte est une condition \emph{suffisante} de stabilité.
+pour tous \(ξ^i, ξ^j, ξ^k, ξ^l∈\mathbb{R}\). On peut montrer que l'inégalité
+stricte est une condition \emph{suffisante} de stabilité.
 
 \section{Bifurcations}
 
@@ -204,7 +219,7 @@ pour tout \(\hat{w}∈W\). Soient \(w_i∈W\) les solutions des problèmes varia
  \label{eq:pbvar wi} ℰ₂(λ₀ ; w_i, \hat{w}) + 2
  \dot{ℰ₂}(λ₀ ; v_i, \hat{w}) = 0,
 \end{equation}
-pour tout \(\hat{w}∈W\). La solution du problème~\eqref{eq20211210131623} s'obtient par simple combinaison linéaire des \(w_i\) et \(w_{ij}\) [on rappelle que ces derniers sont définis par le problème variationnel~\eqref{eq:pbvar wij}]
+pour tout \(\hat{w}∈W\). La solution du problème~\eqref{eq20211210131623} s'obtient par simple combinaison linéaire des \(w_i\) et \(w_{ij}\) [on rappelle que ces derniers sont définis par le problème variationnel~\eqref{eq:20220519164523}]
 \begin{equation}
  \tilde{u}₂ = ξ₁^i ξ₁^j w_{i j} + λ₁ ξ₁^i w_i,
 \end{equation}
@@ -817,7 +832,7 @@ en utilisant l'équation de bifurcation~\eqref{eq:bifurcation 1a} dans la deuxi�
  & & - λ₁ ℰ₂(λ₀ ; w_{i j},
  w_k) ξ₁^i ξ₁^j ξ₁^k,
 \end{eqnarray*}
-en tenant compte de la définition~\eqref{eq:pbvar wij} des \(w_{i j}\). Dans le dernier terme de l'expression précédente, les indices \(i\), \(j\) et \(k\) sont muets, donc
+en tenant compte de la définition~\eqref{eq:20220519164523} des \(w_{i j}\). Dans le dernier terme de l'expression précédente, les indices \(i\), \(j\) et \(k\) sont muets, donc
 \begin{eqnarray*}
  ℰ₃(λ₀ ; u₁, u₁, u₂) & = & ℰ₃(λ₀ ;
  v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k +ℰ₃(λ₀ ; v_i, v_j,
@@ -1074,7 +1089,7 @@ Ainsi, le vecteur \(χ₀^i\) apparaît comme le vecteur propre de la matrice sy
 \begin{equation} ℰ₃(λ₀ ; v_j, v_k, \hat{w}) ξ₁^k χ₀^j
   +ℰ₂(λ₀ ; y₁, \hat{w}) + λ₁ \dot{ℰ₂}
  (λ₀ ; v_j, \hat{w}) χ₀^j = 0. \end{equation}
-La solution de ce problème est exprimée à l'aide des \(w_{i j}\) et \(w_i\) définis respectivement par les problèmes variationnels auxiliaires \eqref{eq:pbvar wij} et \eqref{eq:pbvar wi}
+La solution de ce problème est exprimée à l'aide des \(w_{i j}\) et \(w_i\) définis respectivement par les problèmes variationnels auxiliaires \eqref{eq:20220519164523} et \eqref{eq:pbvar wi}
 \begin{equation} y₁ = ξ₁^i χ₀^j w_{i j} + λ₁ χ₀^i w_i, \end{equation}
 soit
 \begin{equation} x₁ = χ₁^i v_i + ξ₁^i χ₀^j w_{i j} + λ₁ χ₀^i
@@ -1112,7 +1127,7 @@ qui suggère d'introduire le \ \(E_{i j k l}(λ)\) défini par l'équation \eqre
 \begin{equation} ℰ₃(λ₀ ; v_i, v_j, w_k) ξ₁^j ξ₁^k = \tfrac{1}{2}
   [ℰ₃(λ₀ ; v_i, v_j, w_k) +ℰ₃(λ₀ ; v_i,
   w_j, v_k)] ξ₁^j ξ₁^k . \end{equation}
-En prenant tout d'abord \(\widehat{w} = w_k\) dans le problème variationnel \eqref{eq:pbvar wij}, on trouve
+En prenant tout d'abord \(\widehat{w} = w_k\) dans le problème variationnel \eqref{eq:20220519164523}, on trouve
 \begin{equation} ℰ₃(λ₀ ; v_i, v_j, w_k) = -ℰ₂(λ₀ ;
   w_{i j}, w_k), \end{equation}
 puis, en prenant cette fois \(\hat{w} = w_{i j}\) dans le problème variationnel \eqref{eq:pbvar wi}

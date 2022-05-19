@@ -29,6 +29,8 @@
 \setmainfont{XITS}
 \setmathfont{XITS Math}
 
+\newcommand{\reals}{\mathbb{R}}
+
 \begin{document}
 \title{\sbtitle}
 \author{\sbauthor}
@@ -48,7 +50,7 @@ a la structure d'espace vectoriel. L'énergie du système est notée \(ℰ(u, λ
 où \(λ\) désigne un paramètre de chargement. Soit \(u^{\ast}(λ)\) la branche
 fondamentale. Par définition
 \begin{equation}
-  ℰ_{,u}[u^{\ast}(λ), λ; \hat{u}]=0\quad\text{pour tout}\quad\hat{u}∈U.
+  ℰ_{,u}[u^{\ast}(λ), λ; \hat{u}]=0 \quad \text{pour tout} \quad \hat{u}∈U.
 \end{equation}
 Il sera commode d'introduire les notations suivantes
 \begin{equation}
@@ -84,7 +86,7 @@ sous-espace supplémentaire orthogonal \(W\) de \(V\) dans \(U\)
   U = V \overset{\perp}{\otimes} W.
 \end{equation}
 Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
-\(u₀ + ξ v + η w\) voisin du point d'équilibre \(u₀\), avec \(ξ, η∈\mathbb{R}\)
+\(u₀ + ξ v + η w\) voisin du point d'équilibre \(u₀\), avec \(ξ, η∈\reals\)
 {\guillemotleft} petits {\guillemotright}, \(v \in V\) et \(w∈W\). On obtient
 alors, à l'ordre 4 en \(ξ\) et \(η\)
 \begin{equation}
@@ -148,7 +150,7 @@ s'écrit
 \begin{equation}
   \bigl[ℰ₄(v_i, v_j, v_k, v_l) - 3ℰ₂(w_{ij}, w_{kl})\bigr] ξ^i ξ^j ξ^k ξ^l \geq 0,
 \end{equation}
-pour tous \(ξ^i, ξ^j, ξ^k, ξ^l∈\mathbb{R}\). On peut montrer que l'inégalité
+pour tous \(ξ^i, ξ^j, ξ^k, ξ^l∈\reals\). On peut montrer que l'inégalité
 stricte est une condition \emph{suffisante} de stabilité.
 
 \section{Bifurcations}
@@ -499,12 +501,12 @@ Dans ce qui suit, \(\mathcal{B}\) désigne une forme bilinéaire symétrique et 
 \end{theorem}
 
 \begin{proof}
- Soient \(u, v∈\ker \mathcal{B}\), \(α∈\mathbb{R}\) et \(w = u + α v\). Montrons que \(w∈\ker \mathcal{B}\). Il suffit d'évaluer  \(\mathcal{B}(w, w)\)
+ Soient \(u, v∈\ker \mathcal{B}\), \(α∈\reals\) et \(w = u + α v\). Montrons que \(w∈\ker \mathcal{B}\). Il suffit d'évaluer  \(\mathcal{B}(w, w)\)
  \begin{equation}
   \mathcal{B}(w, w) =\mathcal{B}(u + α v, u + α v) =\mathcal{B}
   (u, u) + 2 α \mathcal{B}(u, v) + α^2 \mathcal{B}(v, v),
  \end{equation}
- où l'on a tenu compte de la symétrie de \(\mathcal{B}\) pour  écrire que \(\mathcal{B}(u, v) =\mathcal{B}(v, u)\). Comme \(u, v \in  \ker \mathcal{B}\), le premier et le dernier terme sont nuls, soit  \(\mathcal{B}(w, w) = 2 α \mathcal{B}(u, v)\). La forme bilinéaire  étant positive, cette grandeur est positive, \emph{quelle que soit la  valeur de \(α∈\mathbb{R}\)}. On en déduit donc que \(\mathcal{B} (u, v) = 0\), puis que \(\mathcal{B}(w, w) = 0\) et donc que \(w∈\ker  \mathcal{B}.\)
+ où l'on a tenu compte de la symétrie de \(\mathcal{B}\) pour  écrire que \(\mathcal{B}(u, v) =\mathcal{B}(v, u)\). Comme \(u, v \in  \ker \mathcal{B}\), le premier et le dernier terme sont nuls, soit  \(\mathcal{B}(w, w) = 2 α \mathcal{B}(u, v)\). La forme bilinéaire  étant positive, cette grandeur est positive, \emph{quelle que soit la  valeur de \(α∈\reals\)}. On en déduit donc que \(\mathcal{B} (u, v) = 0\), puis que \(\mathcal{B}(w, w) = 0\) et donc que \(w∈\ker  \mathcal{B}.\)
 \end{proof}
 
 \begin{theorem}
@@ -516,7 +518,7 @@ Dans ce qui suit, \(\mathcal{B}\) désigne une forme bilinéaire symétrique et 
 \end{theorem}
 
 \begin{proof}
- Soient \(u∈\ker \mathcal{B}\), \(v∈V\) et \(α∈\mathbb{R}\). Comme  précédemment, on écrit que \(\mathcal{B}(w, w) \geq 0\), avec \(w  = α u + v\)
+ Soient \(u∈\ker \mathcal{B}\), \(v∈V\) et \(α∈\reals\). Comme  précédemment, on écrit que \(\mathcal{B}(w, w) \geq 0\), avec \(w  = α u + v\)
  \begin{equation}
   \mathcal{B}(w, w) = 2 α \mathcal{B}(u, v) +\mathcal{B}(v, v) \geq
   0,
@@ -1006,7 +1008,7 @@ qui conduisent finalement au développement limité~\eqref{eq:DL hessienne}.
 \subsection{Développement limité des valeurs propres et vecteurs
 propres de la Hessienne}
 
-On cherche les vecteurs propres \(x∈U\) et valeurs propres \(α \in \mathbb{R}\) de la hessienne de l'énergie. En d'autre terme, on cherche \(x\) et \(α\) tels que
+On cherche les vecteurs propres \(x∈U\) et valeurs propres \(α \in \reals\) de la hessienne de l'énergie. En d'autre terme, on cherche \(x\) et \(α\) tels que
 \begin{equation}
  ℰ_{, u u} [u(η), λ(η) ; x, \hat{u}] =
  α 〈 x, \hat{u} 〉 \quad \text{pour tout} \quad \hat{u} \in
@@ -1057,7 +1059,7 @@ et
  α₁ 〈 x₁, \hat{u} 〉 + α₀ 〈 x₂, \hat{u}
  〉) + o(η^2) .
 \end{eqnarray*}
-\paragraph{Problème variationnel d'ordre 0}Trouver \(x₀∈U\) et \(α₀∈\mathbb{R}\) tels que, pour tout \(\hat{u}∈U\)
+\paragraph{Problème variationnel d'ordre 0}Trouver \(x₀∈U\) et \(α₀∈\reals\) tels que, pour tout \(\hat{u}∈U\)
 \begin{equation} ℰ₂(λ₀ ; x₀, \hat{u}) = α₀ 〈 x₀, \hat{u}
   〉 . \end{equation}
 On en déduit que \(x₀\) est le vecteur propre de \(ℰ₂(λ₀)\) associé à la valeur propre \(α₀\). Si \(α₀ \neq 0\), \(ℰ₂ (λ₀)\) étant positive par hypothèse, on a nécessairement \(α₀ > 0\), et la valeur propre de la hessienne est positive. On considère donc dans ce qui suit le cas où \(α₀ = 0\), c'est-à-dire que \(x₀∈V\)
@@ -1065,7 +1067,7 @@ On en déduit que \(x₀\) est le vecteur propre de \(ℰ₂(λ₀)\) associé �
 
 
 \paragraph{Problème variationnel d'ordre 1}Trouver \(x₁∈U\) et
-\(α₁∈\mathbb{R}\) tels que, pour tout \(\hat{u}∈U\)
+\(α₁∈\reals\) tels que, pour tout \(\hat{u}∈U\)
 \begin{equation} ℰ₃(λ₀ ; u₁, x₀, \hat{u}) +ℰ₂(λ₀ ;
   x₁, \hat{u}) + λ₁ \dot{ℰ₂}(λ₀ ; x₀, \hat{u}) =
   α₁ 〈 x₀, \hat{u} 〉, \end{equation}

@@ -629,19 +629,19 @@ noyau $\ker \mathcal{B}$ de la fa{\c c}on suivante
 \end{theorem}
 
 \begin{proof}
-  Soient $u, v∈\ker \mathcal{B}$, $\alpha∈\mathbb{R}$ et $w = u +
-  \alpha v$. Montrons que $w∈\ker \mathcal{B}$. Il suffit d'évaluer
+  Soient $u, v∈\ker \mathcal{B}$, $α∈\mathbb{R}$ et $w = u +
+  α v$. Montrons que $w∈\ker \mathcal{B}$. Il suffit d'évaluer
   $\mathcal{B} (w, w)$
   \begin{equation}
-    \mathcal{B} (w, w) =\mathcal{B} (u + \alpha v, u + \alpha v) =\mathcal{B}
-    (u, u) + 2 \alpha \mathcal{B} (u, v) + \alpha^2 \mathcal{B} (v, v),
+    \mathcal{B} (w, w) =\mathcal{B} (u + α v, u + α v) =\mathcal{B}
+    (u, u) + 2 α \mathcal{B} (u, v) + α^2 \mathcal{B} (v, v),
   \end{equation}
   où l'on a tenu compte de la symétrie de $\mathcal{B}$ pour
   écrire que $\mathcal{B} (u, v) =\mathcal{B} (v, u)$. Comme $u, v \in
   \ker \mathcal{B}$, le premier et le dernier terme sont nuls, soit
-  $\mathcal{B} (w, w) = 2 \alpha \mathcal{B} (u, v)$. La forme bilinéaire
+  $\mathcal{B} (w, w) = 2 α \mathcal{B} (u, v)$. La forme bilinéaire
   étant positive, cette grandeur est positive, {\tmem{quelle que soit la
-  valeur de $\alpha∈\mathbb{R}$}}. On en déduit donc que $\mathcal{B}
+  valeur de $α∈\mathbb{R}$}}. On en déduit donc que $\mathcal{B}
   (u, v) = 0$, puis que $\mathcal{B} (w, w) = 0$ et donc que $w∈\ker
   \mathcal{B}.$
 \end{proof}
@@ -655,16 +655,16 @@ noyau $\ker \mathcal{B}$ de la fa{\c c}on suivante
 \end{theorem}
 
 \begin{proof}
-  Soient $u∈\ker \mathcal{B}$, $v∈V$ et $\alpha∈\mathbb{R}$. Comme
+  Soient $u∈\ker \mathcal{B}$, $v∈V$ et $α∈\mathbb{R}$. Comme
   précédemment, on écrit que $\mathcal{B} (w, w) \geq 0$, avec $w
-  = \alpha u + v$
+  = α u + v$
   \begin{equation}
-    \mathcal{B} (w, w) = 2 \alpha \mathcal{B} (u, v) +\mathcal{B} (v, v) \geq
+    \mathcal{B} (w, w) = 2 α \mathcal{B} (u, v) +\mathcal{B} (v, v) \geq
     0,
   \end{equation}
   où l'on a tenu compte de ce que $\mathcal{B} (u, u) = 0$. L'expression
-  précédente, affine en $\alpha$, a un signe constant. Le terme
-  linéaire en $\alpha$ est donc nul, soit $\mathcal{B} (u, v) = 0$.
+  précédente, affine en $α$, a un signe constant. Le terme
+  linéaire en $α$ est donc nul, soit $\mathcal{B} (u, v) = 0$.
   Réciproquement, si $\mathcal{B} (u, v) = 0$ pour tout $v∈V$, alors
   $\mathcal{B} (u, u) = 0$ (en prenant $v = u$).
 \end{proof}
@@ -1194,19 +1194,19 @@ hessienne}.
 \subsection{Développement limité des valeurs propres et vecteurs
 propres de la Hessienne}
 
-On cherche les vecteurs propres $x∈U$ et valeurs propres $\alpha \in
+On cherche les vecteurs propres $x∈U$ et valeurs propres $α \in
 \mathbb{R}$ de la hessienne de l'énergie. En d'autre terme, on cherche $x$
-et $\alpha$ tels que
+et $α$ tels que
 \begin{equation}
   ℰ_{, u  u} [u (η), λ (η) ; x, \hat{u}] =
-  \alpha \langle x, \hat{u} \rangle \quad \text{pour tout} \quad \hat{u} \in
+  α \langle x, \hat{u} \rangle \quad \text{pour tout} \quad \hat{u} \in
   V.
 \end{equation}
 On cherche les développements limités à l'ordre 2 en $η$ de $x$
-et $\alpha$
+et $α$
 \begin{eqnarray*}
   x & = & x_0 + η x_1 + \tfrac{1}{2} η^2 x_2 + o (η^2),\\
-  \alpha & = & \alpha_0 + η \alpha_1 + \tfrac{1}{2} η^2 \alpha_2 + o
+  α & = & α_0 + η α_1 + \tfrac{1}{2} η^2 α_2 + o
   (η^2) .
 \end{eqnarray*}
 Ces développements limités sont tout d'abord insérés dans le
@@ -1243,57 +1243,57 @@ l'énergie
 \end{eqnarray*}
 et
 \begin{eqnarray*}
-  \alpha \langle x, \hat{u} \rangle & = & \alpha_0  \langle x_0, \hat{u}
-  \rangle + η (\alpha_1 \langle x_0, \hat{u} \rangle + \alpha_0 \langle
+  α \langle x, \hat{u} \rangle & = & α_0  \langle x_0, \hat{u}
+  \rangle + η (α_1 \langle x_0, \hat{u} \rangle + α_0 \langle
   x_1, \hat{u} \rangle)\\
-  &  & + \tfrac{1}{2} η^2  (\alpha_2 \langle x_0, \hat{u} \rangle + 2
-  \alpha_1 \langle x_1, \hat{u} \rangle + \alpha_0 \langle x_2, \hat{u}
+  &  & + \tfrac{1}{2} η^2  (α_2 \langle x_0, \hat{u} \rangle + 2
+  α_1 \langle x_1, \hat{u} \rangle + α_0 \langle x_2, \hat{u}
   \rangle) + o (η^2) .
 \end{eqnarray*}
 \paragraph{Problème variationnel d'ordre 0}Trouver $x_0∈U$ et
-$\alpha_0∈\mathbb{R}$ tels que, pour tout $\hat{u}∈U$
-\begin{equation} ℰ_2 (λ_0 ; x_0, \hat{u}) = \alpha_0  \langle x_0, \hat{u}
+$α_0∈\mathbb{R}$ tels que, pour tout $\hat{u}∈U$
+\begin{equation} ℰ_2 (λ_0 ; x_0, \hat{u}) = α_0  \langle x_0, \hat{u}
    \rangle . \end{equation}
 On en déduit que $x_0$ est le vecteur propre de $ℰ_2
-(λ_0)$ associé à la valeur propre $\alpha_0$. Si $\alpha_0 \neq
+(λ_0)$ associé à la valeur propre $α_0$. Si $α_0 \neq
 0$, $ℰ_2  (λ_0)$ étant positive par hypothèse, on a
-nécessairement $\alpha_0 > 0$, et la valeur propre de la hessienne est
-positive. On considère donc dans ce qui suit le cas où $\alpha_0 = 0$,
+nécessairement $α_0 > 0$, et la valeur propre de la hessienne est
+positive. On considère donc dans ce qui suit le cas où $α_0 = 0$,
 c'est-à-dire que $x_0∈V$
 \begin{equation} x_0 = \chi_0^i v_i \end{equation}
 
 
 \paragraph{Problème variationnel d'ordre 1}Trouver $x_1∈U$ et
-$\alpha_1∈\mathbb{R}$ tels que, pour tout $\hat{u}∈U$
+$α_1∈\mathbb{R}$ tels que, pour tout $\hat{u}∈U$
 \begin{equation} ℰ_3 (λ_0 ; u_1, x_0, \hat{u}) +ℰ_2 (λ_0 ;
    x_1, \hat{u}) + λ_1  \dot{ℰ_2} (λ_0 ; x_0, \hat{u}) =
-   \alpha_1  \langle x_0, \hat{u} \rangle, \end{equation}
+   α_1  \langle x_0, \hat{u} \rangle, \end{equation}
 soit, en rempla{\c c}ant $u_1$ et $x_0$ par leurs décompositions dans la
 base $v_i$
 \begin{equation} ℰ_3 (λ_0 ; v_j, v_k, \hat{u}) ξ_1^k \chi_0^j
    +ℰ_2 (λ_0 ; x_1, \hat{u}) + λ_1  \dot{ℰ_2}
-   (λ_0 ; v_j, \hat{u}) \chi_0^j = \alpha_1 \chi_0^j  \langle v_j,
+   (λ_0 ; v_j, \hat{u}) \chi_0^j = α_1 \chi_0^j  \langle v_j,
    \hat{u} \rangle . \end{equation}
 En prenant tout d'abord $\hat{u} = v_i$, on obtient
 \begin{equation} [ℰ_3 (λ_0 ; v_i, v_j, v_k) ξ_1^k + λ_1
-   \dot{ℰ_2} (λ_0 ; v_i, v_j)] \chi_0^j = \alpha_1 \chi_0^i,
+   \dot{ℰ_2} (λ_0 ; v_i, v_j)] \chi_0^j = α_1 \chi_0^i,
 \end{equation}
 soit encore
 \begin{equation} [E_{i  j  k} (λ_0) ξ_1^k + λ_1 F_{i
-   j} (λ_0)] \chi_0^j = \alpha_1 \chi_0^i . \end{equation}
+   j} (λ_0)] \chi_0^j = α_1 \chi_0^i . \end{equation}
 Ainsi, le vecteur $\chi_0^i$ apparaît comme le vecteur propre de la
 matrice symétrique $[E_{i  j  k} (λ_0) ξ_1^k +
 λ_1 F_{i  j} (λ_0)]$ associé à la valeur propre
-$\alpha_1$. On doit alors discuter en fonction du type de bifurcation.
+$α_1$. On doit alors discuter en fonction du type de bifurcation.
 
 \paragraph{Cas d'une bifurcation asymétrique}Dans ce cas, la forme
 trilinéaire $E_{i  j  k} (λ_0)$ n'est pas nulle sur
-$V$, et $\alpha_1 \neq 0$. Le terme dominant de $\alpha$ est donc d'ordre 1,
+$V$, et $α_1 \neq 0$. Le terme dominant de $α$ est donc d'ordre 1,
 tandis que le terme dominant de $x$ est d'ordre 0.
 
 \paragraph{Cas d'une bifurcation symétrique}La forme trilinéaire $E_{i
  j  k} (λ_0)$ est identiquement nulle sur $V$ ; de plus,
-$λ_1 = 0$. On trouve alors que $\alpha_1 = 0$, et on ne peut
+$λ_1 = 0$. On trouve alors que $α_1 = 0$, et on ne peut
 déterminer les $\chi_0^i$. On prend maintenant $\hat{u} = \hat{w}∈W$
 dans le problème variationnel d'ordre 1, et on pose $x_1 = \chi_1^i v_i +
 y_1$, avec $y_1∈W$. On obtient alors le problème variationnel suivant
@@ -1313,7 +1313,7 @@ propres d'ordre 2 s'écrit quant à lui
 \begin{equation} ℰ_2 (λ_0 ; x_2, \hat{u}) + 2ℰ_3 (λ_0 ; u_1,
    x_1, \hat{u}) +ℰ_4  (λ_0 ; u_1, u_1, x_0, \hat{u})
    +ℰ_3 (λ_0 ; u_2, x_0, \hat{u}) + λ_2
-   \dot{ℰ_2} (λ_0 ; x_0, \hat{u}) = \alpha_2  \langle x_0,
+   \dot{ℰ_2} (λ_0 ; x_0, \hat{u}) = α_2  \langle x_0,
    \hat{u} \rangle \end{equation}
 soit, en prenant $\hat{u} = \widehat{v_i}∈V$ et en introduisant les
 développements de $u_1$, $u_2$, $x_0 $ et $x_1$

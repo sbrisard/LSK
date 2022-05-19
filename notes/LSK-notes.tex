@@ -84,7 +84,7 @@ $(u₀, λ₀) .$ Par hypothèse, $ℰ₂ (λ₀)$ est
 positive, sans être définie positive~; soit $V$ son noyau, qui forme
 un sous-espace vectoriel de $U$. On suppose que $V$ est de dimension finie $m
 = \dim V$. Soit $(v₁, \ldots, v_m)$ une base orthonormée de ce noyau pour
-le produit scalaire $〈 \bullet, \bullet \rangle$ (qui n'est pas
+le produit scalaire $〈 \bullet, \bullet 〉$ (qui n'est pas
 précisé pour le moment). On introduit le sous-espace
 supplémentaire orthogonal $W$ de $V$ dans $U$
 \begin{equation}
@@ -550,7 +550,7 @@ soit finalement, en éliminant $η$
   λ = λ₀ - \frac{ξ ℰ_{1  1  1}
   (λ₀)}{2 \dot{ℰ}_{1  1} (λ₀)} + o (ξ),
   \quad \text{avec} \quad ξ = 〈 u (λ) - u^{\ast} (λ), v₁
-  \rangle .
+  〉 .
 \end{equation}
 Pour déterminer la stabilité de la branche bifurquée, on calcule
 la hessienne en $(v₁, v₁)$. L'équation~\eqref{eq20220203144500}
@@ -1199,7 +1199,7 @@ On cherche les vecteurs propres $x∈U$ et valeurs propres $α \in
 et $α$ tels que
 \begin{equation}
   ℰ_{, u  u} [u (η), λ (η) ; x, \hat{u}] =
-  α 〈 x, \hat{u} \rangle \quad \text{pour tout} \quad \hat{u} \in
+  α 〈 x, \hat{u} 〉 \quad \text{pour tout} \quad \hat{u} \in
   V.
 \end{equation}
 On cherche les développements limités à l'ordre 2 en $η$ de $x$
@@ -1243,17 +1243,17 @@ l'énergie
 \end{eqnarray*}
 et
 \begin{eqnarray*}
-  α 〈 x, \hat{u} \rangle & = & α₀  〈 x₀, \hat{u}
-  \rangle + η (α₁ 〈 x₀, \hat{u} \rangle + α₀ 〈
-  x₁, \hat{u} \rangle)\\
-  &  & + \tfrac{1}{2} η^2  (α₂ 〈 x₀, \hat{u} \rangle + 2
-  α₁ 〈 x₁, \hat{u} \rangle + α₀ 〈 x₂, \hat{u}
-  \rangle) + o (η^2) .
+  α 〈 x, \hat{u} 〉 & = & α₀  〈 x₀, \hat{u}
+  〉 + η (α₁ 〈 x₀, \hat{u} 〉 + α₀ 〈
+  x₁, \hat{u} 〉)\\
+  &  & + \tfrac{1}{2} η^2  (α₂ 〈 x₀, \hat{u} 〉 + 2
+  α₁ 〈 x₁, \hat{u} 〉 + α₀ 〈 x₂, \hat{u}
+  〉) + o (η^2) .
 \end{eqnarray*}
 \paragraph{Problème variationnel d'ordre 0}Trouver $x₀∈U$ et
 $α₀∈\mathbb{R}$ tels que, pour tout $\hat{u}∈U$
 \begin{equation} ℰ₂ (λ₀ ; x₀, \hat{u}) = α₀  〈 x₀, \hat{u}
-   \rangle . \end{equation}
+   〉 . \end{equation}
 On en déduit que $x₀$ est le vecteur propre de $ℰ₂
 (λ₀)$ associé à la valeur propre $α₀$. Si $α₀ \neq
 0$, $ℰ₂  (λ₀)$ étant positive par hypothèse, on a
@@ -1267,13 +1267,13 @@ c'est-à-dire que $x₀∈V$
 $α₁∈\mathbb{R}$ tels que, pour tout $\hat{u}∈U$
 \begin{equation} ℰ₃ (λ₀ ; u₁, x₀, \hat{u}) +ℰ₂ (λ₀ ;
    x₁, \hat{u}) + λ₁  \dot{ℰ₂} (λ₀ ; x₀, \hat{u}) =
-   α₁  〈 x₀, \hat{u} \rangle, \end{equation}
+   α₁  〈 x₀, \hat{u} 〉, \end{equation}
 soit, en rempla{\c c}ant $u₁$ et $x₀$ par leurs décompositions dans la
 base $v_i$
 \begin{equation} ℰ₃ (λ₀ ; v_j, v_k, \hat{u}) ξ₁^k \chi₀^j
    +ℰ₂ (λ₀ ; x₁, \hat{u}) + λ₁  \dot{ℰ₂}
    (λ₀ ; v_j, \hat{u}) \chi₀^j = α₁ \chi₀^j  〈 v_j,
-   \hat{u} \rangle . \end{equation}
+   \hat{u} 〉 . \end{equation}
 En prenant tout d'abord $\hat{u} = v_i$, on obtient
 \begin{equation} [ℰ₃ (λ₀ ; v_i, v_j, v_k) ξ₁^k + λ₁
    \dot{ℰ₂} (λ₀ ; v_i, v_j)] \chi₀^j = α₁ \chi₀^i,
@@ -1314,7 +1314,7 @@ propres d'ordre 2 s'écrit quant à lui
    x₁, \hat{u}) +ℰ₄  (λ₀ ; u₁, u₁, x₀, \hat{u})
    +ℰ₃ (λ₀ ; u₂, x₀, \hat{u}) + λ₂
    \dot{ℰ₂} (λ₀ ; x₀, \hat{u}) = α₂  〈 x₀,
-   \hat{u} \rangle \end{equation}
+   \hat{u} 〉 \end{equation}
 soit, en prenant $\hat{u} = \widehat{v_i}∈V$ et en introduisant les
 développements de $u₁$, $u₂$, $x₀ $ et $x₁$
 \begin{equation} ℰ₄  (λ₀ ; v_i, v_j, v_k, v_l) \chi₀^j ξ_{1 }^k ξ₁^l

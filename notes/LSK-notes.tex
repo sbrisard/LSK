@@ -4,7 +4,6 @@
 \usepackage[tikz]{mdframed}
 
 %%%%%%%%%% Start TeXmacs macros
-\newcommand{\nobracket}{}
 \newcommand{\nosymbol}{}
 \newcommand{\textdots}{...}
 \newcommand{\tmaffiliation}[1]{\\ #1}
@@ -392,9 +391,9 @@ bifurquée est établi dans l'annexe~\ref{sec:DL energie}
   (\lambda_0) \xi_1^i \xi_1^j \nonumber\\
   &  & \tfrac{1}{24} \eta^4  \{ E_{i  j  k  l}
   (\lambda_0) \xi_1^i \xi_1^j \xi_1^k \xi_1^l + 4 \lambda_1  \dot{E}_{i
-   j  k} (\lambda_0) \xi_1^i \xi_1^j \xi_1^k \nobracket
+   j  k} (\lambda_0) \xi_1^i \xi_1^j \xi_1^k
   \nonumber\\
-  &  & + \nobracket 6 [\lambda_1^2  \dot{F}_{i  j}
+  &  & +  6 [\lambda_1^2  \dot{F}_{i  j}
   (\lambda_0) + \lambda_2 F_{i  j} (\lambda_0)] \xi_1^i \xi_1^j \}
   + o (\eta^4) .  \label{eq:DL energie}
 \end{eqnarray}
@@ -439,15 +438,15 @@ l'annexe~\ref{sec:DL hessienne}. Pour tous $\hat{u}, \hat{v} \in U$, on trouve
 \begin{eqnarray}
   \mathcal{E}_{, u  u} [u (\eta), \lambda (\eta) ; \hat{u}, \hat{v}] &
   = & \mathcal{E}_2 (\lambda_0 ; \hat{u}, \hat{v}) + \eta [\mathcal{E}_3
-  (\lambda_0 ; u_1, \hat{u}, \hat{v}) \nobracket \nobracket + \lambda_1
+  (\lambda_0 ; u_1, \hat{u}, \hat{v})   + \lambda_1
   \dot{\mathcal{E}_2} (\lambda_0 ; \hat{u}, \hat{v})] \nonumber\\
   &  & \nosymbol + \tfrac{1}{2} \eta^2  [\mathcal{E}_4 (\lambda_0 ; u_1, u_1,
-  \hat{u}, \hat{v}) \nobracket +\mathcal{E}_3 (\lambda_0 ; u_2, \hat{u},
+  \hat{u}, \hat{v})  +\mathcal{E}_3 (\lambda_0 ; u_2, \hat{u},
   \hat{v}) + \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; \hat{u}, \hat{v})
   \nonumber\\
   &  & \nosymbol + 2 \lambda_1  \dot{\mathcal{E}_3} (\lambda_0 ; u_1,
   \hat{u}, \hat{v}) + \lambda_1^2  \ddot{\mathcal{E}_2} (\lambda_0 ; \hat{u},
-  \hat{v}) \nobracket] + o (\eta^2) .  \label{eq:DL hessienne}
+  \hat{v}) ] + o (\eta^2) .  \label{eq:DL hessienne}
 \end{eqnarray}
 Pour une analyse de stabilité, on doit prendre $\hat{u} = \hat{v}$, soit
 \begin{eqnarray}
@@ -457,8 +456,8 @@ Pour une analyse de stabilité, on doit prendre $\hat{u} = \hat{v}$, soit
   (\lambda_0 ; \hat{u}, \hat{u})] \nonumber\\
   &  & + \tfrac{1}{2} \eta^2  [\mathcal{E}_4 (\lambda_0 ; u_1, u_1, \hat{u},
   \hat{u}) +\mathcal{E}_3 (\lambda_0 ; u_2, \hat{u}, \hat{u}) + \lambda_2
-  \dot{\mathcal{E}}_2 (\lambda_0 ; \hat{u}, \hat{u}) \nobracket \nonumber\\
-  &  & + \nobracket 2 \lambda_1  \dot{\mathcal{E}}_3 (\lambda_0 ; u_1,
+  \dot{\mathcal{E}}_2 (\lambda_0 ; \hat{u}, \hat{u})  \nonumber\\
+  &  & +  2 \lambda_1  \dot{\mathcal{E}}_3 (\lambda_0 ; u_1,
   \hat{u}, \hat{u}) + \lambda_1^2  \ddot{\mathcal{E}}_2 (\lambda_0 ; \hat{u},
   \hat{u})] + o (\eta^2) .  \label{eq:DL hessienne diag}
 \end{eqnarray}
@@ -482,11 +481,11 @@ Compte-tenu de l'expression~\eqref{eq:decomposition u2}
   \nonumber\\
   &  & + \tfrac{1}{2} \eta^2  [\mathcal{E}_4 (\lambda_0 ; v_i, v_j, v_k, v_l)
   \xi_1^k \xi_1^l +\mathcal{E}_3 (\lambda_0 ; v_i, v_j, v_k) \xi_2^k
-  \nobracket \nonumber\\
+   \nonumber\\
   &  & +\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k  l}) \xi_1^k
   \xi_1^l + \lambda_1 \mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_k) \xi_1^k +
   \lambda_2  \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j) \nonumber\\
-  &  & \nobracket + 2 \lambda_1  \dot{\mathcal{E}}_3 (\lambda_0 ; v_i, v_j,
+  &  &  + 2 \lambda_1  \dot{\mathcal{E}}_3 (\lambda_0 ; v_i, v_j,
   v_k) \xi_1^k + \lambda_1^2  \ddot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j)]
   \hat{\xi}^i  \hat{\xi}^j + o (\eta^2) \nonumber
 \end{eqnarray}
@@ -498,9 +497,9 @@ précédent s'écrit
 \begin{eqnarray}
   \mathcal{E}_{, u  u} [u (\eta), \lambda (\eta) ; \hat{u}, \hat{u}] &
   = & \tfrac{1}{2} \eta^2  \{ [\mathcal{E}_4 (\lambda_0 ; v_i, v_j, v_k, v_l)
-  \nobracket +\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k  l})] \xi_1^k
+   +\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k  l})] \xi_1^k
   \xi_1^l \nonumber\\
-  &  & + \nobracket \lambda_2  \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j) \}
+  &  & +  \lambda_2  \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j) \}
   \hat{\xi}^i  \hat{\xi}^j + o (\eta^2) \nonumber
 \end{eqnarray}
 \begin{tmframed}
@@ -882,11 +881,11 @@ $\eta$ du résidu
   +\mathcal{E}_2 (\lambda_0 ; u_2, \hat{u})] \nonumber\\
   &  & \nosymbol + \tfrac{1}{6} \eta^3  \{ \mathcal{E}_4 (\lambda_0 ; u_1,
   u_1, u_1, \hat{u}) + 3\mathcal{E}_3 (\lambda_0 ; u_1, u_2, \hat{u})
-  \nobracket +\mathcal{E}_2 (\lambda_0 ; u_3, \hat{u}) \nonumber\\
+   +\mathcal{E}_2 (\lambda_0 ; u_3, \hat{u}) \nonumber\\
   &  & \nosymbol + 3 \lambda_1  [\dot{\mathcal{E}_3} (\lambda_0 ; u_1, u_1,
   \hat{u}) + \dot{\mathcal{E}_2} (\lambda_0 ; u_2, \hat{u})] + 3 \lambda_1^2
   \ddot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) \nonumber\\
-  &  & \nobracket \nosymbol + 3 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ;
+  &  &  \nosymbol + 3 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ;
   u_1, \hat{u}) \} + o (\eta^3) .  \label{eq20220107080901}
 \end{eqnarray}
 \subsection{Développement limité de l'énergie}\label{sec:DL
@@ -1224,11 +1223,11 @@ l'énergie
   &  & + \eta \lambda_1  \dot{\mathcal{E}_2} (\lambda_0 ; x_0, \hat{u}) +
   \eta^2 \lambda_1  \dot{\mathcal{E}_2} (\lambda_0 ; x_1, \hat{u})\\
   &  & + \tfrac{1}{2} \eta^2  [\mathcal{E}_4 (\lambda_0 ; u_1, u_1, x_0,
-  \hat{u}) \nobracket +\mathcal{E}_3 (\lambda_0 ; u_2, x_0, \hat{u})\\
+  \hat{u})  +\mathcal{E}_3 (\lambda_0 ; u_2, x_0, \hat{u})\\
   &  & + \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; x_0, \hat{u}) + 2
   \lambda_1  \dot{\mathcal{E}_3} (\lambda_0 ; u_1, x, \hat{u})\\
   &  & + \lambda_1^2  \ddot{\mathcal{E}_2} (\lambda_0 ; x, \hat{u})
-  \nobracket] + o (\eta^2)\\
+  ] + o (\eta^2)\\
   & = & \mathcal{E}_2 (\lambda_0 ; x_0, \hat{u})\\
   &  & + \eta [\mathcal{E}_3 (\lambda_0 ; u_1, x_0, \hat{u}) +\mathcal{E}_2
   (\lambda_0 ; x_1, \hat{u}) + \lambda_1  \dot{\mathcal{E}_2} (\lambda_0 ;
@@ -1335,7 +1334,7 @@ l'équation \eqref{eq:bifurcation 2b}.
 \paragraph{Terme cubique en $\xi_1^i$}On observe que
 \[ \mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k  l}) \xi_1^j \xi_1^k
    \xi_1^l = \text{} \tfrac{1}{3}  [\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k
-    l}) \nobracket +\mathcal{E}_3 (\lambda_0 ; v_i, v_k, w_{j
+    l})  +\mathcal{E}_3 (\lambda_0 ; v_i, v_k, w_{j
    l}) +\mathcal{E}_3 (\lambda_0 ; v_i, v_l, w_{j  k}] \xi_1^j \xi_1^k
    \xi_1^l . \]
 On obtient donc l'expression suivante du terme cubique en $\xi_1^i$ dans

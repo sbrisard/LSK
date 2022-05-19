@@ -1067,66 +1067,141 @@
   <subsection|Développement limité des valeurs propres et vecteurs propres de
   la Hessienne>
 
-  On cherche les vecteurs propres <math|v\<in\>V> et valeurs propres
-  <math|\<alpha\>\<in\>\<bbb-R\>> de la Hessienne
+  On cherche les vecteurs propres <math|x\<in\>U> et valeurs propres
+  <math|\<alpha\>\<in\>\<bbb-R\>> de la hessienne de l'énergie. En d'autre
+  terme, on cherche <math|x> et <math|\<alpha\>> tels que
 
   <\equation>
-    <label|eq20211115082122>\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>|]><around|(|v,<wide|u|^>|)>=\<alpha\>*<around|\<langle\>|v,<wide|u|^>|\<rangle\>><space|1em><text|pour
+    \<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;x,<wide|u|^>|]>=\<alpha\>*<around|\<langle\>|x,<wide|u|^>|\<rangle\>><space|1em><text|pour
     tout><space|1em><wide|u|^>\<in\>V.
   </equation>
 
-  On cherche les développements limités à l'ordre 1 en <math|\<eta\>> de
-  <math|v> et <math|\<alpha\>>
+  On cherche les développements limités à l'ordre 2 en <math|\<eta\>> de
+  <math|x> et <math|\<alpha\>>
 
-  <\equation>
-    <label|eq20211115082037>v=v<rsub|0>+\<eta\>*v<rsub|1>+o<around|(|\<eta\>|)><space|1em><text|et><space|1em>\<alpha\>=\<alpha\><rsub|0>+\<eta\>*\<alpha\><rsub|1>+o<around|(|\<eta\>|)>
-  </equation>
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|x>|<cell|=>|<cell|x<rsub|0>+\<eta\>*x<rsub|1>+<tfrac|1|2>*\<eta\><rsup|2>*x<rsub|2>+o<around*|(|\<eta\><rsup|2>|)>,>>|<row|<cell|\<alpha\>>|<cell|=>|<cell|\<alpha\><rsub|0>+\<eta\>*\<alpha\><rsub|1>+<tfrac|1|2>*\<eta\><rsup|2>*\<alpha\><rsub|2>+o<around*|(|\<eta\><rsup|2>|)>.>>>>
+  </eqnarray*>
 
-  Les développements limités<nbsp><eqref|eq20211115082025> et
-  <eqref|eq20211115082037> sont insérés dans le
-  problème<nbsp><eqref|eq20211115082122>
+  Ces développements limités sont tout d'abord insérés dans le développement
+  limité <eqref|eq:DL hessienne> de la hessienne de l'énergie
 
-  <\eqnarray>
-    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>|]><around|(|v,<wide|w|^>|)>>|<cell|=>|<cell|\<cal-E\><rsub|2><rsup|><around|(|\<lambda\><rsub|0>;v<rsub|0>,<wide|w|^>|)>+\<eta\>*<around*|[|\<cal-E\><rsub|3><rsup|><around|(|\<lambda\><rsub|0>;u<rsub|1>,v<rsub|0>,<wide|w|^>|)>|\<nobracket\>>>>|<row|<cell|>|<cell|>|<cell|\<nosymbol\>+\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;v<rsub|0>,<wide|w|^>|)><around*|\<nobracket\>|+\<cal-E\><rsub|2><rsup|><around|(|\<lambda\><rsub|0>;v<rsub|1>,<wide|w|^>|)>|]>+o<around|(|\<eta\>|)><eq-number>>>>>
-  </eqnarray>
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|\<cal-E\><rsub|,u\<nocomma\>u><around|[|u<around|(|\<eta\>|)>,\<lambda\><around|(|\<eta\>|)>;x,<wide|u|^>|]>>|<cell|=>|<cell|\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;x<rsub|0>,<wide|u|^>|)>+\<eta\>*\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;x<rsub|1>,<wide|u|^>|)>+<tfrac|1|2>*\<eta\><rsup|2>*\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;x<rsub|2>,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|+\<eta\>*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,x<rsub|0>,<wide|u|^>|)>+\<eta\><rsup|2>*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,x<rsub|1>,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|+\<eta\>*\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;x<rsub|0>,<wide|u|^>|)>+\<eta\>*<rsup|2>\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;x<rsub|1>,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>\<eta\><rsup|2>*<around*|[|\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,x<rsub|0>,<wide|u|^>|)>|\<nobracket\>>+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|2>,x<rsub|0>,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|+\<lambda\><rsub|2>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;x<rsub|0>,<wide|u|^>|)>+2*\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,x,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;x,<wide|u|^>|)><around*|\<nobracket\>||]>+o<around|(|\<eta\><rsup|2>|)>>>|<row|<cell|>|<cell|=>|<cell|\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;x<rsub|0>,<wide|u|^>|)>>>|<row|<cell|>|<cell|>|<cell|+\<eta\>*<around*|[|\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,x<rsub|0>,<wide|u|^>|)>+\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;x<rsub|1>,<wide|u|^>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;x<rsub|0>,<wide|u|^>|)>|]>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>*\<eta\><rsup|2>*<around*|[|\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;x<rsub|2>,<wide|u|^>|)>+2*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,x<rsub|1>,<wide|u|^>|)>+2*\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;x<rsub|1>,<wide|u|^>|)>|]>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>*\<eta\><rsup|2>*<around*|[|\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,x<rsub|0>,<wide|u|^>|)>+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|2>,x<rsub|0>,<wide|u|^>|)>+\<lambda\><rsub|2>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;x<rsub|0>,<wide|u|^>|)>|]>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>*\<eta\><rsup|2>*<around*|[|2*\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|3>|\<dot\>><around|(|\<lambda\><rsub|0>;u<rsub|1>,x,<wide|u|^>|)>+\<lambda\><rsub|1><rsup|2>*<wide|\<cal-E\><rsub|2>|\<ddot\>><around|(|\<lambda\><rsub|0>;x,<wide|u|^>|)>|]>+o<around|(|\<eta\><rsup|2>|)>>>>>
+  </eqnarray*>
 
-  <\equation>
-    \<alpha\>*<around|\<langle\>|v,<wide|w|^>|\<rangle\>>=\<alpha\><rsub|0>*<around|\<langle\>|v<rsub|0>,<wide|w|^>|\<rangle\>>+\<eta\>*<around*|(|\<alpha\><rsub|1>*<around|\<langle\>|v<rsub|0>,<wide|w|^>|\<rangle\>>+\<alpha\><rsub|0>*<around|\<langle\>|v<rsub|1>,<wide|w|^>|\<rangle\>>|)>+o<around|(|\<eta\>|)>.
-  </equation>
+  et
 
-  On obtient le problème variationnel d'ordre 0
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|\<alpha\>*<around|\<langle\>|x,<wide|u|^>|\<rangle\>>>|<cell|=>|<cell|\<alpha\><rsub|0>*<around|\<langle\>|x<rsub|0>,<wide|u|^>|\<rangle\>>+\<eta\>*<around*|(|\<alpha\><rsub|1>*<around|\<langle\>|x<rsub|0>,<wide|u|^>|\<rangle\>>+\<alpha\><rsub|0>*<around|\<langle\>|x<rsub|1>,<wide|u|^>|\<rangle\>>|)>>>|<row|<cell|>|<cell|>|<cell|+<tfrac|1|2>*\<eta\><rsup|2>*<around*|(|\<alpha\><rsub|2>*<around|\<langle\>|x<rsub|0>,<wide|u|^>|\<rangle\>>+2*\<alpha\><rsub|1>*<around|\<langle\>|x<rsub|1>,<wide|u|^>|\<rangle\>>+\<alpha\><rsub|0>*<around|\<langle\>|x<rsub|2>,<wide|u|^>|\<rangle\>>|)>+o<around|(|\<eta\><rsup|2>|)>.>>>>
+  </eqnarray*>
 
-  <\equation>
-    \<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;v<rsub|0>,<wide|w|^>|)>=\<alpha\><rsub|0>*<around|\<langle\>|v<rsub|0>,<wide|w|^>|\<rangle\>><space|1em><text|pour
-    tout><space|1em><wide|w|^>\<in\>V,
-  </equation>
+  <paragraph|Problème variationnel d'ordre 0>Trouver <math|x<rsub|0>\<in\>U>
+  et <math|\<alpha\><rsub|0>\<in\><with|font|Bbb|R>> tels que, pour tout
+  <math|<wide|u|^>\<in\>U>
 
-  qui montre que <math|v<rsub|0>> est le vecteur propre de
+  <\equation*>
+    \<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;x<rsub|0>,<wide|u|^>|)>=\<alpha\><rsub|0>*<around|\<langle\>|x<rsub|0>,<wide|u|^>|\<rangle\>>.
+  </equation*>
+
+  On en déduit que <math|x<rsub|0>> est le vecteur propre de
   <math|\<cal-E\><rsub|2><rsup|><around*|(|\<lambda\><rsub|0>|)>> associé à
   la valeur propre <math|\<alpha\><rsub|0>>. Si
   <math|\<alpha\><rsub|0>\<neq\>0>, <math|\<cal-E\><rsub|2><rsup|><around*|(|\<lambda\><rsub|0>|)>>
   étant positive par hypothèse, on a nécessairement
   <math|\<alpha\><rsub|0>\<gtr\>0>, et la valeur propre de la hessienne est
-  positive. On considère maintenant le cas où <math|\<alpha\><rsub|0>>,
-  c'est-à-dire que <math|v<rsub|0>\<in\>ker
-  \<cal-E\><rsub|2><rsup|><around*|(|\<lambda\><rsub|0>|)>>. En prenant
-  <math|<wide|w|^>\<in\>ker \<cal-E\><rsub|2><around*|(|\<lambda\><rsub|0>|)>>,
-  on obtient alors le problème variationnel d'ordre 1
+  positive. On considère donc dans ce qui suit le cas où
+  <math|\<alpha\><rsub|0>=0>, c'est-à-dire que <math|x<rsub|0>\<in\>V>
 
-  <\equation>
-    \<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,v<rsub|0>,<wide|w|^>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;v<rsub|0>,<wide|w|^>|)>=\<alpha\><rsub|1>*<around|\<langle\>|v<rsub|0>,<wide|w|^>|\<rangle\>><space|1em><text|pour
-    tout><space|1em><wide|w|^>\<in\>ker \<cal-E\><rsub|2><around*|(|\<lambda\><rsub|0>|)>.
-  </equation>
+  <\equation*>
+    x<rsub|0>=\<chi\><rsub|0><rsup|i>*v<rsub|i>
+  </equation*>
 
-  En posant <math|u<rsub|1>=\<xi\><rsub|i>*a<rsub|i>> et
-  <math|v<rsub|0>=\<chi\><rsub|j>*a<rsub|j>>, on obtient l'équation
+  \ 
 
-  <\equation>
-    <around*|[|\<cal-E\><rsub|i\<nocomma\>j\<nocomma\>k><rsup|><around*|(|\<lambda\><rsub|0>|)>*\<xi\><rsub|k>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|i\<nocomma\>j><around*|(|\<lambda\><rsub|0>|)>|]>*\<chi\><rsub|j>=\<alpha\><rsub|1>*\<chi\><rsub|i>,
-  </equation>
+  <paragraph|Problème variationnel d'ordre 1>Trouver <math|x<rsub|1>\<in\>U>
+  et <math|\<alpha\><rsub|1>\<in\><with|font|Bbb|R>> tels que, pour tout
+  <math|<wide|u|^>\<in\>U>
 
-  qui est un problème aux valeurs propres pour la matrice symétrique
-  <math|<around*|[|\<cal-E\><rsub|i\<nocomma\>j\<nocomma\>k><rsup|><around*|(|\<lambda\><rsub|0>|)>*\<xi\><rsub|k>+\<lambda\><rsub|1>*<wide|\<cal-E\>|\<dot\>><rsub|i\<nocomma\>j><around*|(|\<lambda\><rsub|0>|)>|]><rsub|1\<leq\>i,j\<leq\>m>>.
+  <\equation*>
+    \<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,x<rsub|0>,<wide|u|^>|)>+\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;x<rsub|1>,<wide|u|^>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;x<rsub|0>,<wide|u|^>|)>=\<alpha\><rsub|1>*<around|\<langle\>|x<rsub|0>,<wide|u|^>|\<rangle\>>,
+  </equation*>
+
+  soit, en remplaçant <math|u<rsub|1>> et <math|x<rsub|0>> par leurs
+  décompositions dans la base <math|v<rsub|i>>
+
+  <\equation*>
+    \<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|j>,v<rsub|k>,<wide|u|^>|)>*\<xi\><rsub|1><rsup|k>*\<chi\><rsub|0><rsup|j>+\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;x<rsub|1>,<wide|u|^>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;v<rsub|j>,<wide|u|^>|)>*\<chi\><rsub|0><rsup|j>=\<alpha\><rsub|1>*\<chi\><rsub|0><rsup|j>*<around|\<langle\>|v<rsub|j>,<wide|u|^>|\<rangle\>>.
+  </equation*>
+
+  En prenant tout d'abord <math|<wide|u|^>=v<rsub|i>>, on obtient
+
+  <\equation*>
+    <around*|[|\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>|)>*\<xi\><rsub|1><rsup|k>+\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>|)>|]>*\<chi\><rsub|0><rsup|j>=\<alpha\><rsub|1>*\<chi\><rsub|0><rsup|i>,
+  </equation*>
+
+  soit encore
+
+  <\equation*>
+    <around*|[|E<rsub|i\<nocomma\>j\<nocomma\>k><around*|(|\<lambda\><rsub|0>|)>*\<xi\><rsub|1><rsup|k>+\<lambda\><rsub|1>*F<rsub|i\<nocomma\>j><around*|(|\<lambda\><rsub|0>|)>|]>**\<chi\><rsub|0><rsup|j>=\<alpha\><rsub|1>*\<chi\><rsub|0><rsup|i>.
+  </equation*>
+
+  Ainsi, le vecteur <math|\<chi\><rsub|0><rsup|i>> apparaît comme le vecteur
+  propre de la matrice symétrique <math|<around*|[|E<rsub|i\<nocomma\>j\<nocomma\>k><around*|(|\<lambda\><rsub|0>|)>*\<xi\><rsub|1><rsup|k>+\<lambda\><rsub|1>*F<rsub|i\<nocomma\>j><around*|(|\<lambda\><rsub|0>|)>|]>>
+  associé à la valeur propre <math|\<alpha\><rsub|1>>. On doit alors discuter
+  en fonction du type de bifurcation.
+
+  <paragraph|Cas d'une bifurcation asymétrique>Dans ce cas, la forme
+  trilinéaire <math|E<rsub|i\<nocomma\>j\<nocomma\>k><around*|(|\<lambda\><rsub|0>|)>>
+  n'est pas nulle sur <math|V>, et <math|\<alpha\><rsub|1>\<neq\>0>. Le terme
+  dominant de <math|\<alpha\>> est donc d'ordre 1, tandis que le terme
+  dominant de <math|x> est d'ordre 0.
+
+  <paragraph|Cas d'une bifurcation symétrique>La forme trilinéaire
+  <math|E<rsub|i\<nocomma\>j\<nocomma\>k><around*|(|\<lambda\><rsub|0>|)>>
+  est identiquement nulle sur <math|V> ; de plus,
+  <math|\<lambda\><rsub|1>=0>. On trouve alors que
+  <math|\<alpha\><rsub|1>=0>, et on ne peut déterminer les
+  <math|\<chi\><rsub|0><rsup|i>>. On prend maintenant
+  <math|<wide|u|^>=<wide|w|^>\<in\>W> dans le problème variationnel d'ordre
+  1, et on pose <math|x<rsub|1>=\<chi\><rsub|1><rsup|i>*v<rsub|i>+y<rsub|1>>,
+  avec <math|y<rsub|1>\<in\>W>. On obtient alors le problème variationnel
+  suivant : trouver <math|y<rsub|1>\<in\>W> tel que, pour tout
+  <math|<wide|w|^>\<in\>W>,
+
+  <\equation*>
+    \<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|j>,v<rsub|k>,<wide|w|^>|)>*\<xi\><rsub|1><rsup|k>*\<chi\><rsub|0><rsup|j>+\<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;y<rsub|1>,<wide|w|^>|)>+\<lambda\><rsub|1>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;v<rsub|j>,<wide|w|^>|)>*\<chi\><rsub|0><rsup|j>=0.
+  </equation*>
+
+  La solution de ce problème est exprimée à l'aide des
+  <math|w<rsub|i\<nocomma\>j>> et <math|w<rsub|i>> définis respectivement par
+  les problèmes variationnels auxiliaires <eqref|eq:pbvar wij> et
+  <eqref|eq:pbvar wi>
+
+  <\equation*>
+    y<rsub|1>=\<xi\><rsub|1><rsup|i>*\<chi\><rsub|0><rsup|j>*w<rsub|i\<nocomma\>j>+\<lambda\><rsub|1>*\<chi\><rsub|0><rsup|i>*w<rsub|i>,
+  </equation*>
+
+  soit
+
+  <\equation*>
+    x<rsub|1>=\<chi\><rsub|1><rsup|i>*v<rsub|i>+\<xi\><rsub|1><rsup|i>*\<chi\><rsub|0><rsup|j>*w<rsub|i\<nocomma\>j>+\<lambda\><rsub|1>*\<chi\><rsub|0><rsup|i>*w<rsub|i>.
+  </equation*>
+
+  Dans le cas d'une bifurcation symétrique, le problème aux valeurs propres
+  d'ordre 2 s'écrit quant à lui
+
+  <\equation*>
+    \<cal-E\><rsub|2><around|(|\<lambda\><rsub|0>;x<rsub|2>,<wide|u|^>|)>+2*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,x<rsub|1>,<wide|u|^>|)>+\<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;u<rsub|1>,u<rsub|1>,x<rsub|0>,<wide|u|^>|)>+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|2>,x<rsub|0>,<wide|u|^>|)>+\<lambda\><rsub|2>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;x<rsub|0>,<wide|u|^>|)>=\<alpha\><rsub|2>*<around|\<langle\>|x<rsub|0>,<wide|u|^>|\<rangle\>>
+  </equation*>
+
+  soit, en prenant <math|<wide|u|^>=<wide| v<rsub|i>|^>\<in\>V> et en
+  introduisant les développements de <math|u<rsub|1>>, <math|u<rsub|2>>,
+  <math|x<rsub|0> > et <math|x<rsub|1>>
+
+  <\equation*>
+    \<cal-E\><rsub|4>*<around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>,v<rsub|l>|)>*\<chi\><rsub|0><rsup|j>*\<xi\><rsub|1<rsup|>><rsup|k>*\<xi\><rsub|1><rsup|l>+2*\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|1>,x<rsub|1>,v<rsub|i>|)>+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;u<rsub|2>,x<rsub|0>,<wide|u|^>|)>+\<lambda\><rsub|2>*<wide|\<cal-E\><rsub|2>|\<dot\>><around|(|\<lambda\><rsub|0>;x<rsub|0>,<wide|u|^>|)>
+  </equation*>
 
   <section|Simplification des équations de
   bifurcation><label|sec:Simplification des équations de bifurcation>
@@ -1151,7 +1226,7 @@
     \<cal-E\><rsub|4><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,v<rsub|k>,v<rsub|l>|)>+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|j>,w<rsub|k\<nocomma\>l>|)>+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|k>,w<rsub|j\<nocomma\>l>|)>+\<cal-E\><rsub|3><around|(|\<lambda\><rsub|0>;v<rsub|i>,v<rsub|l>,w<rsub|j\<nocomma\>k>|)>,
   </equation*>
 
-  qui suggère d'introduire le tenseur <math|E<rsub|i\<nocomma\>j\<nocomma\>k\<nocomma\>l><around*|(|\<lambda\>|)>>
+  qui suggère d'introduire le \ <math|E<rsub|i\<nocomma\>j\<nocomma\>k\<nocomma\>l><around*|(|\<lambda\>|)>>
   défini par l'équation <eqref|eq:def Eijkl>. Le terme cubique en
   <math|\<xi\><rsub|1><rsup|i>> dans l'équation de bifurcation
   <eqref|eq:bifurcation 2a> est alors simplement<nbsp>:
@@ -1255,12 +1330,17 @@
     <associate|auto-12|<tuple|6.3|11>>
     <associate|auto-13|<tuple|6.4|14>>
     <associate|auto-14|<tuple|6.5|15>>
-    <associate|auto-15|<tuple|7|15>>
-    <associate|auto-16|<tuple|1|15>>
-    <associate|auto-17|<tuple|2|15>>
-    <associate|auto-18|<tuple|3|16>>
-    <associate|auto-19|<tuple|4|16>>
+    <associate|auto-15|<tuple|1|15>>
+    <associate|auto-16|<tuple|2|15>>
+    <associate|auto-17|<tuple|3|15>>
+    <associate|auto-18|<tuple|4|16>>
+    <associate|auto-19|<tuple|7|16>>
     <associate|auto-2|<tuple|2|1>>
+    <associate|auto-20|<tuple|1|?>>
+    <associate|auto-21|<tuple|2|?>>
+    <associate|auto-22|<tuple|3|?>>
+    <associate|auto-23|<tuple|4|?>>
+    <associate|auto-24|<tuple|4|?>>
     <associate|auto-3|<tuple|3|3>>
     <associate|auto-4|<tuple|1|5>>
     <associate|auto-5|<tuple|2|5>>
@@ -1280,8 +1360,6 @@
     <associate|eq20211112182917|<tuple|14|3>>
     <associate|eq20211115075817|<tuple|12|3>>
     <associate|eq20211115075835|<tuple|13|3>>
-    <associate|eq20211115082037|<tuple|91|15>>
-    <associate|eq20211115082122|<tuple|90|15>>
     <associate|eq20211210131623|<tuple|22|4>>
     <associate|eq20220107054629|<tuple|72|10>>
     <associate|eq20220107060454|<tuple|68|9>>
@@ -1386,30 +1464,42 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-14>>
 
+      <with|par-left|<quote|4tab>|Problème variationnel d'ordre 0
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-15><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|Problème variationnel d'ordre 1
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|Problème variationnel d'ordre 2
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-17><vspace|0.15fn>>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|7.<space|2spc>Simplification
       des équations de bifurcation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <pageref|auto-15><vspace|0.5fn>
+      <pageref|auto-18><vspace|0.5fn>
 
       <with|par-left|<quote|4tab>|Terme cubique en
       <with|mode|<quote|math>|\<xi\><rsub|1><rsup|i>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16><vspace|0.15fn>>
+      <no-break><pageref|auto-19><vspace|0.15fn>>
 
       <with|par-left|<quote|4tab>|Terme quadratique en
       <with|mode|<quote|math>|\<xi\><rsub|1><rsup|i>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17><vspace|0.15fn>>
+      <no-break><pageref|auto-20><vspace|0.15fn>>
 
       <with|par-left|<quote|4tab>|Terme linéaire en
       <with|mode|<quote|math>|\<xi\><rsub|1><rsup|i>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18><vspace|0.15fn>>
+      <no-break><pageref|auto-21><vspace|0.15fn>>
 
       <with|par-left|<quote|4tab>|Synthèse
       <no-break><specific|screen|<resize|<move|<with|color|<quote|#A0A0FF>|->|-0.3em|>|0em||0em|>>:
       simplification des équations (<reference|eq:bifurcation 1a>) et
       (<reference|eq:bifurcation 2a>) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19><vspace|0.15fn>>
+      <no-break><pageref|auto-22><vspace|0.15fn>>
     </associate>
   </collection>
 </auxiliary>

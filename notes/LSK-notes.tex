@@ -4,7 +4,6 @@
 \usepackage[tikz]{mdframed}
 
 %%%%%%%%%% Start TeXmacs macros
-\newcommand{\nosymbol}{}
 \newcommand{\textdots}{...}
 \newcommand{\tmaffiliation}[1]{\\ #1}
 \newcommand{\tmem}[1]{{\em #1\/}}
@@ -101,7 +100,7 @@ avec $\xi, \eta \in \mathbb{R}$ {\guillemotleft} petits {\guillemotright}, $v
   & = & \tfrac{1}{2} \mathcal{E}_2 (\xi v + \eta w, \xi v + \eta w) +
   \tfrac{1}{6} \mathcal{E}_3 (\xi v + \eta w, \xi v + \eta w, \xi v + \eta w)
   \nonumber\\
-  &  & \nosymbol + \tfrac{1}{24} \mathcal{E}_4 (\xi v + \eta w, \xi v + \eta
+  &  &  + \tfrac{1}{24} \mathcal{E}_4 (\xi v + \eta w, \xi v + \eta
   w, \xi v + \eta w, \xi v + \eta w) +\mathcal{O} [(\xi^2 + \eta^2)^2],
 \end{eqnarray}
 où le terme linéaire a été omis puisque $u_0$ est un point
@@ -440,11 +439,11 @@ l'annexe~\ref{sec:DL hessienne}. Pour tous $\hat{u}, \hat{v} \in U$, on trouve
   = & \mathcal{E}_2 (\lambda_0 ; \hat{u}, \hat{v}) + \eta [\mathcal{E}_3
   (\lambda_0 ; u_1, \hat{u}, \hat{v})   + \lambda_1
   \dot{\mathcal{E}_2} (\lambda_0 ; \hat{u}, \hat{v})] \nonumber\\
-  &  & \nosymbol + \tfrac{1}{2} \eta^2  [\mathcal{E}_4 (\lambda_0 ; u_1, u_1,
+  &  &  + \tfrac{1}{2} \eta^2  [\mathcal{E}_4 (\lambda_0 ; u_1, u_1,
   \hat{u}, \hat{v})  +\mathcal{E}_3 (\lambda_0 ; u_2, \hat{u},
   \hat{v}) + \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; \hat{u}, \hat{v})
   \nonumber\\
-  &  & \nosymbol + 2 \lambda_1  \dot{\mathcal{E}_3} (\lambda_0 ; u_1,
+  &  &  + 2 \lambda_1  \dot{\mathcal{E}_3} (\lambda_0 ; u_1,
   \hat{u}, \hat{v}) + \lambda_1^2  \ddot{\mathcal{E}_2} (\lambda_0 ; \hat{u},
   \hat{v}) ] + o (\eta^2) .  \label{eq:DL hessienne}
 \end{eqnarray}
@@ -724,7 +723,7 @@ d'où l'on déduit successivement que
   \lambda}^3 {F + \Lambda'}^3 \partial_{\lambda  \lambda
   \lambda}^3 F + 3 \Lambda'' \partial_{\eta  \lambda}^2 F + 3 \Lambda'
   \Lambda'' \partial_{\lambda  \lambda}^2 F \nonumber\\
-  &  & \nosymbol + \Lambda''' \partial_{\lambda} F
+  &  &  + \Lambda''' \partial_{\lambda} F
 \end{eqnarray}
 \begin{eqnarray}
   f'''' (\eta) & = & \partial_{\eta  \eta  \eta
@@ -761,7 +760,7 @@ précédentes s'écrivent
   \partial_{\lambda  \lambda  \lambda}^3 F + 3 \lambda_2
   \partial_{\eta  \lambda}^2 F + 3 \lambda_1 \lambda_2
   \partial_{\lambda  \lambda}^2 F \nonumber\\
-  &  & \nosymbol + \lambda_3 \partial_{\lambda} F,  \label{eq20220107060500}
+  &  &  + \lambda_3 \partial_{\lambda} F,  \label{eq20220107060500}
 \end{eqnarray}
 \begin{eqnarray}
   f'''' (0) & = & \partial_{\eta  \eta  \eta  \eta}^4
@@ -809,16 +808,16 @@ de $F$, on obtient successivement
   \partial_{\eta  \eta}^2 F (\eta, \lambda) & = & \mathcal{E}_{, u
    u  u} [u^{\ast} (\lambda) + U (\eta), \lambda ; U' (\eta),
   U' (\eta), \hat{u}] \nonumber\\
-  &  & \nosymbol +\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
+  &  &  +\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
   (\eta), \lambda ; U'' (\eta), \hat{u}],
 \end{eqnarray}
 \begin{eqnarray}
   \partial_{\eta  \eta  \eta}^3 F (\eta, \lambda) & = &
   \mathcal{E}_{, u  u  u  u} [u^{\ast} (\lambda) + U
   (\eta), \lambda ; U' (\eta), U' (\eta), U' (\eta), \hat{u}] \nonumber\\
-  &  & \nosymbol + 3\mathcal{E}_{, u  u  u} [u^{\ast}
+  &  &  + 3\mathcal{E}_{, u  u  u} [u^{\ast}
   (\lambda) + U (\eta), \lambda ; U' (\eta), U'' (\eta), \hat{u}] \nonumber\\
-  &  & \nosymbol +\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
+  &  &  +\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
   (\eta), \lambda ; U''' (\eta), \hat{u}],
 \end{eqnarray}
 soit, en $\eta = 0$
@@ -866,9 +865,9 @@ en $\eta = 0$
   f''' (0) & = & \mathcal{E}_4 (\lambda_0 ; u_1, u_1, u_1, \hat{u}) +
   3\mathcal{E}_3 (\lambda_0 ; u_1, u_2, \hat{u}) +\mathcal{E}_2 (\lambda_0 ;
   u_3, \hat{u}) \nonumber\\
-  &  & \nosymbol + 3 \lambda_1  [\dot{\mathcal{E}_3} (\lambda_0 ; u_1, u_1,
+  &  &  + 3 \lambda_1  [\dot{\mathcal{E}_3} (\lambda_0 ; u_1, u_1,
   \hat{u}) + \dot{\mathcal{E}_2} (\lambda_0 ; u_2, \hat{u})] \nonumber\\
-  &  & \nosymbol + 3 \lambda_1^2  \ddot{\mathcal{E}_2} (\lambda_0 ; u_1,
+  &  &  + 3 \lambda_1^2  \ddot{\mathcal{E}_2} (\lambda_0 ; u_1,
   \hat{u}) + 3 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) .
 \end{eqnarray}
 On en déduit finalement le développement limité à l'ordre 3 en
@@ -876,16 +875,16 @@ $\eta$ du résidu
 \begin{eqnarray}
   \mathcal{E}_{, u} [u (\eta), \lambda (\eta)] & = & \eta \mathcal{E}_2
   (\lambda_0 ; u_1, \hat{u}) \nonumber\\
-  &  & \nosymbol + \tfrac{1}{2} \eta^2  [\mathcal{E}_3 (\lambda_0 ; u_1, u_1,
+  &  &  + \tfrac{1}{2} \eta^2  [\mathcal{E}_3 (\lambda_0 ; u_1, u_1,
   \hat{u}) + 2 \lambda_1  \dot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u})
   +\mathcal{E}_2 (\lambda_0 ; u_2, \hat{u})] \nonumber\\
-  &  & \nosymbol + \tfrac{1}{6} \eta^3  \{ \mathcal{E}_4 (\lambda_0 ; u_1,
+  &  &  + \tfrac{1}{6} \eta^3  \{ \mathcal{E}_4 (\lambda_0 ; u_1,
   u_1, u_1, \hat{u}) + 3\mathcal{E}_3 (\lambda_0 ; u_1, u_2, \hat{u})
    +\mathcal{E}_2 (\lambda_0 ; u_3, \hat{u}) \nonumber\\
-  &  & \nosymbol + 3 \lambda_1  [\dot{\mathcal{E}_3} (\lambda_0 ; u_1, u_1,
+  &  &  + 3 \lambda_1  [\dot{\mathcal{E}_3} (\lambda_0 ; u_1, u_1,
   \hat{u}) + \dot{\mathcal{E}_2} (\lambda_0 ; u_2, \hat{u})] + 3 \lambda_1^2
   \ddot{\mathcal{E}_2} (\lambda_0 ; u_1, \hat{u}) \nonumber\\
-  &  &  \nosymbol + 3 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ;
+  &  &   + 3 \lambda_2  \dot{\mathcal{E}_2} (\lambda_0 ;
   u_1, \hat{u}) \} + o (\eta^3) .  \label{eq20220107080901}
 \end{eqnarray}
 \subsection{Développement limité de l'énergie}\label{sec:DL
@@ -912,9 +911,9 @@ tandis que les dérivées de $F$ par rapport à $\eta$ s'écrivent
   \partial_{\eta  \eta  \eta}^3 F (\eta, \lambda) & = &
   \mathcal{E}_{, u  u  u} [u^{\ast} (\lambda) + U (\eta),
   \lambda ; U' (\eta), U' (\eta), U' (\eta)]\\
-  &  & \nosymbol \nosymbol \nosymbol + 3\mathcal{E}_{, u  u}
+  &  &    + 3\mathcal{E}_{, u  u}
   [u^{\ast} (\lambda) + U (\eta), \lambda ; U' (\eta), U'' (\eta)]\\
-  &  & \nosymbol \nosymbol \nosymbol +\mathcal{E}_{, u} [u^{\ast} (\lambda) +
+  &  &    +\mathcal{E}_{, u} [u^{\ast} (\lambda) +
   U (\eta), \lambda ; U''' (\eta)],
 \end{eqnarray*}
 \begin{eqnarray}
@@ -922,14 +921,14 @@ tandis que les dérivées de $F$ par rapport à $\eta$ s'écrivent
   \lambda) & = & \mathcal{E}_{, u  u  u  u} [u^{\ast}
   (\lambda) + U (\eta), \lambda ; U' (\eta), U' (\eta), U' (\eta), U' (\eta)]
   \nonumber\\
-  &  & \nosymbol + 6\mathcal{E}_{, u  u  u} [u^{\ast}
+  &  &  + 6\mathcal{E}_{, u  u  u} [u^{\ast}
   (\lambda) + U (\eta), \lambda ; U' (\eta), U' (\eta), U'' (\eta)]
   \nonumber\\
-  &  & \nosymbol + 3\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
+  &  &  + 3\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
   (\eta), \lambda ; U'' (\eta), U'' (\eta)] \nonumber\\
-  &  & \nosymbol + 3\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
+  &  &  + 3\mathcal{E}_{, u  u} [u^{\ast} (\lambda) + U
   (\eta), \lambda ; U' (\eta), U''' (\eta)] \nonumber\\
-  &  & \nosymbol +\mathcal{E}_{, u} [u^{\ast} (\lambda) + U (\eta), \lambda ;
+  &  &  +\mathcal{E}_{, u} [u^{\ast} (\lambda) + U (\eta), \lambda ;
   U'''' (\eta)], \nonumber
 \end{eqnarray}
 soit, en $\eta = 0$, en observant que $\mathcal{E}_{, u} [u^{\ast} (\lambda),
@@ -943,7 +942,7 @@ soit, en $\eta = 0$, en observant que $\mathcal{E}_{, u} [u^{\ast} (\lambda),
   \partial_{\eta  \eta  \eta  \eta}^4 F (\eta,
   \lambda) & = & \mathcal{E}_4 (\lambda ; u_1, u_1, u_1, u_1) + 6\mathcal{E}_3
   (\lambda ; u_1, u_1, u_2) + 3\mathcal{E}_2 (\lambda ; u_2, u_2) \nonumber\\
-  &  & \nosymbol + 3\mathcal{E}_2 (\lambda ; u_1, u_3) . \nonumber
+  &  &  + 3\mathcal{E}_2 (\lambda ; u_1, u_3) . \nonumber
 \end{eqnarray}
 On en déduit que
 \[ \partial_{\eta  \lambda}^2 F (0, \lambda) = 0, \]
@@ -966,11 +965,11 @@ et finalement
 \begin{eqnarray}
   f'''' (0) & = & \mathcal{E}_4 (\lambda_0 ; u_1, u_1, u_1, u_1) +
   6\mathcal{E}_3 (\lambda_0 ; u_1, u_1, u_2) \nonumber\\
-  &  & \nosymbol + 3\mathcal{E}_2 (\lambda_0 ; u_2, u_2) + 3\mathcal{E}_2
+  &  &  + 3\mathcal{E}_2 (\lambda_0 ; u_2, u_2) + 3\mathcal{E}_2
   (\lambda_0 ; u_1, u_3) \nonumber\\
-  &  & \nosymbol + 4 \lambda_1  \dot{\mathcal{E}}_3 (\lambda_0 ; u_1, u_1,
+  &  &  + 4 \lambda_1  \dot{\mathcal{E}}_3 (\lambda_0 ; u_1, u_1,
   u_1) + 12 \lambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_2) \nonumber\\
-  &  & \nosymbol + 6 \lambda_1^2  \ddot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1)
+  &  &  + 6 \lambda_1^2  \ddot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1)
   + 6 \lambda_2  \dot{\mathcal{E}}_2 (\lambda_0 ; u_1, u_1) . \nonumber
 \end{eqnarray}
 Les relations précédentes se simplifient notamment en tenant compte de
@@ -996,12 +995,12 @@ on trouve tout d'abord, pour $\mathcal{E}_3 (\lambda_0 ; u_1, u_1, u_2)$
   \mathcal{E}_3 (\lambda_0 ; u_1, u_1, u_2) & = & \mathcal{E}_3 (\lambda_0 ;
   v_i, v_j, v_k) \xi_1^i \xi_1^j \xi_2^k +\mathcal{E}_3 (\lambda_0 ; v_i, v_j,
   w_{k  l}) \xi_1^i \xi_1^j \xi_1^k \xi_1^l\\
-  &  & \nosymbol + \lambda_1 \mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_k)
+  &  &  + \lambda_1 \mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_k)
   \xi_1^i \xi_1^j \xi_1^k\\
   & = & \mathcal{E}_3 (\lambda_0 ; v_i, v_j, v_k) \xi_1^i \xi_1^j \xi_2^k
   +\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k  l}) \xi_1^i \xi_1^j
   \xi_1^k \xi_1^l\\
-  &  & \nosymbol - \lambda_1 \mathcal{E}_2 (\lambda_0 ; w_{i  j},
+  &  &  - \lambda_1 \mathcal{E}_2 (\lambda_0 ; w_{i  j},
   w_k) \xi_1^i \xi_1^j \xi_1^k,
 \end{eqnarray*}
 en tenant compte de la définition~\eqref{eq:pbvar wij} des $w_{i
@@ -1011,12 +1010,12 @@ $i$, $j$ et $k$ sont muets, donc
   \mathcal{E}_3 (\lambda_0 ; u_1, u_1, u_2) & = & \mathcal{E}_3 (\lambda_0 ;
   v_i, v_j, v_k) \xi_1^i \xi_1^j \xi_2^k +\mathcal{E}_3 (\lambda_0 ; v_i, v_j,
   w_{k  l}) \xi_1^i \xi_1^j \xi_1^k \xi_1^l\\
-  &  & \nosymbol - \lambda_1 \mathcal{E}_2 (\lambda_0 ; w_{i }, w_{j
+  &  &  - \lambda_1 \mathcal{E}_2 (\lambda_0 ; w_{i }, w_{j
    k}) \xi_1^i \xi_1^j \xi_1^k\\
   & = & \mathcal{E}_3 (\lambda_0 ; v_i, v_j, v_k) \xi_1^i \xi_1^j \xi_2^k
   +\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k  l}) \xi_1^i \xi_1^j
   \xi_1^k \xi_1^l\\
-  &  & \nosymbol + 2 \lambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ; v_{i
+  &  &  + 2 \lambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ; v_{i
   }, w_{j  k}) \xi_1^i \xi_1^j \xi_1^k,
 \end{eqnarray*}
 en introduisant cette fois-ci la définition~\eqref{eq:pbvar wi} de $w_i .$
@@ -1032,22 +1031,22 @@ On procède de même pour le terme suivant, soit $\mathcal{E}_2
   & = & \mathcal{E}_2 (\lambda_0 ; w_{i  j}, w_{k  l})
   \xi_1^i \xi_1^j \xi_1^k \xi_1^l + 2 \lambda_1 \mathcal{E}_2 (\lambda_0 ;
   w_{i  j}, w_k) \xi_1^i \xi_1^j \xi_1^k\\
-  &  & \nosymbol + \lambda_1^2 \mathcal{E}_2 (\lambda_0 ; w_i, w_j) \xi_1^i
+  &  &  + \lambda_1^2 \mathcal{E}_2 (\lambda_0 ; w_i, w_j) \xi_1^i
   \xi_1^j\\
   & = & \mathcal{E}_2 (\lambda_0 ; w_{i  j}, w_{k  l})
   \xi_1^i \xi_1^j \xi_1^k \xi_1^l + 2 \lambda_1 \mathcal{E}_2 (\lambda_0 ;
   w_i, w_{j  k}) \xi_1^i \xi_1^j \xi_1^k\\
-  &  & \nosymbol + \tfrac{1}{2} \lambda_1^2  [\mathcal{E}_2 (\lambda_0 ; w_i,
+  &  &  + \tfrac{1}{2} \lambda_1^2  [\mathcal{E}_2 (\lambda_0 ; w_i,
   w_j) +\mathcal{E}_2 (\lambda_0 ; w_j, w_i)] \xi_1^i \xi_1^j\\
   & = & \mathcal{E}_2 (\lambda_0 ; w_{i  j}, w_{k  l})
   \xi_1^i \xi_1^j \xi_1^k \xi_1^l - 4 \lambda_1  \dot{\mathcal{E}}_2
   (\lambda_0 ; v_i, w_{j  k}) \xi_1^i \xi_1^j \xi_1^k\\
-  &  & \nosymbol - \lambda_1^2  [\dot{\mathcal{E}}_2 (\lambda_0 ; v_i, w_j) +
+  &  &  - \lambda_1^2  [\dot{\mathcal{E}}_2 (\lambda_0 ; v_i, w_j) +
   \dot{\mathcal{E}}_2 (\lambda_0 ; v_j, w_i)] \xi_1^i \xi_1^j\\
   & = & \mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k  l}) \xi_1^i
   \xi_1^j \xi_1^k \xi_1^l - 4 \lambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ; v_i,
   w_{j  k}) \xi_1^i \xi_1^j \xi_1^k\\
-  &  & \nosymbol - \lambda_1^2  [\dot{\mathcal{E}}_2 (\lambda_0 ; v_i, w_j) +
+  &  &  - \lambda_1^2  [\dot{\mathcal{E}}_2 (\lambda_0 ; v_i, w_j) +
   \dot{\mathcal{E}}_2 (\lambda_0 ; v_j, w_i)] \xi_1^i \xi_1^j
 \end{eqnarray*}
 et enfin
@@ -1059,7 +1058,7 @@ et enfin
   & = & \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j) \xi_1^i \xi_2^j +
   \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, w_{j  k}) \xi_1^i \xi_1^j
   \xi_1^k\\
-  &  & \nosymbol + \tfrac{1}{2} \lambda_1  [\dot{\mathcal{E}}_2 (\lambda_0 ;
+  &  &  + \tfrac{1}{2} \lambda_1  [\dot{\mathcal{E}}_2 (\lambda_0 ;
   v_i, w_j) + \dot{\mathcal{E}}_2 (\lambda_0 ; v_j, w_i)] \xi_1^i \xi_1^j .
 \end{eqnarray*}
 En rassemblant les résultats précédents, on trouve pour $f''''
@@ -1068,34 +1067,34 @@ En rassemblant les résultats précédents, on trouve pour $f''''
   f'''' (0) & = & \mathcal{E}_4 (\lambda_0 ; v_i, v_j, v_k {, v_l} ) \xi_1^i
   \xi_1^j \xi_1^k \xi_1^l + 6\mathcal{E}_3 (\lambda_0 ; v_i, v_j, v_k) \xi_1^i
   \xi_1^j \xi_2^k\\
-  &  & \nosymbol + 6\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k  l})
+  &  &  + 6\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k  l})
   \xi_1^i \xi_1^j \xi_1^k \xi_1^l + 12 \lambda_1  \dot{\mathcal{E}}_2
   (\lambda_0 ; v_{i }, w_{j  k}) \xi_1^i \xi_1^j \xi_1^k\\
-  &  & \nosymbol - 3\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k  l})
+  &  &  - 3\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k  l})
   \xi_1^i \xi_1^j \xi_1^k \xi_1^l - 12 \lambda_1  \dot{\mathcal{E}}_2
   (\lambda_0 ; v_i, w_{j  k}) \xi_1^i \xi_1^j \xi_1^k\\
-  &  & \nosymbol - 3 \lambda_1^2  [\dot{\mathcal{E}}_2 (\lambda_0 ; v_i, w_j)
+  &  &  - 3 \lambda_1^2  [\dot{\mathcal{E}}_2 (\lambda_0 ; v_i, w_j)
   + \dot{\mathcal{E}}_2 (\lambda_0 ; v_j, w_i)] \xi_1^i \xi_1^j + 4 \lambda_1
   \dot{\mathcal{E}}_3 (\lambda_0 ; v_i, v_j, v_k) \xi_1^i \xi_1^j \xi_1^k\\
-  &  & \nosymbol + 12 \lambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ; v_i,
+  &  &  + 12 \lambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ; v_i,
   v_j) \xi_1^i \xi_2^j + 12 \lambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ;
   v_i, w_{j  k}) \xi_1^i \xi_1^j \xi_1^k\\
-  &  & \nosymbol + 6 \lambda_1^2  [\dot{\mathcal{E}}_2 (\lambda_0 ; v_i,
+  &  &  + 6 \lambda_1^2  [\dot{\mathcal{E}}_2 (\lambda_0 ; v_i,
   w_j) + \dot{\mathcal{E}}_2 (\lambda_0 ; v_j, w_i)] \xi_1^i \xi_1^j + 6
   \lambda_1^2  \ddot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j) \xi_1^i \xi_1^j\\
-  &  & \nosymbol + 6 \lambda_2  \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j)
+  &  &  + 6 \lambda_2  \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j)
   \xi_1^i \xi_1^j\\
   & = & \left[ \mathcal{E}_4 (\lambda_0 ; v_i, v_j, v_k {, v_l} ) +
   3\mathcal{E}_3 (\lambda_0 ; v_i, v_j, w_{k  l}) \right] \xi_1^i
   \xi_1^j \xi_1^k \xi_1^l\\
-  &  & \nosymbol + 4 \lambda_1  [\dot{\mathcal{E}}_3 (\lambda_0 ; v_i, v_j,
+  &  &  + 4 \lambda_1  [\dot{\mathcal{E}}_3 (\lambda_0 ; v_i, v_j,
   v_k) + 3 \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, w_{j  k})] \xi_1^i
   \xi_1^j \xi_1^k\\
-  &  & \nosymbol + \{ 3 \lambda_1^2  [\dot{2 \ddot{\mathcal{E}}_2
+  &  &  + \{ 3 \lambda_1^2  [\dot{2 \ddot{\mathcal{E}}_2
   (\lambda_0 ; v_i, v_j) + \dot{\mathcal{E}}}_2 (\lambda_0 ; v_i, w_j) +
   \dot{\mathcal{E}}_2 (\lambda_0 ; v_j, w_i)] + 6 \lambda_2
   \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j) \} \xi_1^i \xi_1^j\\
-  &  & \nosymbol + 6\mathcal{E}_3 (\lambda_0 ; v_i, v_j, v_k) \xi_1^i \xi_1^j
+  &  &  + 6\mathcal{E}_3 (\lambda_0 ; v_i, v_j, v_k) \xi_1^i \xi_1^j
   \xi_2^k + 12 \lambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j)
   \xi_1^i \xi_2^j\\
   & = & E_{i  j  k  l} (\lambda_0) \xi_1^i \xi_1^j
@@ -1103,7 +1102,7 @@ En rassemblant les résultats précédents, on trouve pour $f''''
   (\lambda_0) \xi_1^i \xi_1^j \xi_1^k + 6 [\lambda_1^2  \dot{F}_{i
    j} (\lambda_0) + \lambda_2 F_{i  j} (\lambda_0)]
   \xi_1^i \xi_1^j\\
-  &  & \nosymbol + 6 [E_{i  j  k} (\lambda_0) \xi_1^k + 2
+  &  &  + 6 [E_{i  j  k} (\lambda_0) \xi_1^k + 2
   \lambda_1 F_{i  j} (\lambda_0)] \xi_1^i \xi_2^j,
 \end{eqnarray*}
 et on observe que le dernier terme (en $\xi_1^i \xi_2^j$) est nul, du fait de
@@ -1164,7 +1163,7 @@ On trouve de même successivement
   \partial_{\eta  \eta}^2 F (\eta, \lambda) & = & \mathcal{E}_{, u
    u  u  u} [u^{\ast} (\lambda) + U (\eta), \lambda ;
   U' (\eta), U' (\eta), \hat{u}, \hat{v}] \nonumber\\
-  &  & \nosymbol +\mathcal{E}_{, u  u  u} [u^{\ast} (\lambda)
+  &  &  +\mathcal{E}_{, u  u  u} [u^{\ast} (\lambda)
   + U (\eta), \lambda ; U'' (\eta), \hat{u}, \hat{v}], \nonumber
 \end{eqnarray}
 soit, en $\eta = 0$
@@ -1185,7 +1184,7 @@ expressions~\eqref{eq20220107060454} et \eqref{eq20220107124311}, on trouve
   f'' (0) & = & \mathcal{E}_4 (\lambda_0 ; u_1, u_1, \hat{u}, \hat{v})
   +\mathcal{E}_3 (\lambda_0 ; u_2, \hat{u}, \hat{v}) + \lambda_2
   \dot{\mathcal{E}_2} (\lambda_0 ; \hat{u}, \hat{v}) \nonumber\\
-  &  & \nosymbol \nosymbol + 2 \lambda_1  \dot{\mathcal{E}_3} (\lambda_0 ;
+  &  &   + 2 \lambda_1  \dot{\mathcal{E}_3} (\lambda_0 ;
   u_1, \hat{u}, \hat{v}) + \lambda_1^2  \ddot{\mathcal{E}_2} (\lambda_0 ;
   \hat{u}, \hat{v}) . \nonumber
 \end{eqnarray}

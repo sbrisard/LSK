@@ -4,7 +4,6 @@
 \usepackage[tikz]{mdframed}
 
 %%%%%%%%%% Start TeXmacs macros
-\newcommand{\mathlambda}{\lambda}
 \newcommand{\nobracket}{}
 \newcommand{\nosymbol}{}
 \newcommand{\textdots}{...}
@@ -392,11 +391,11 @@ bifurquée est établi dans l'annexe~\ref{sec:DL energie}
   (\eta)], \lambda (\eta)] + \tfrac{1}{6} \lambda_1 \eta^3 F_{i  j}
   (\lambda_0) \xi_1^i \xi_1^j \nonumber\\
   &  & \tfrac{1}{24} \eta^4  \{ E_{i  j  k  l}
-  (\lambda_0) \xi_1^i \xi_1^j \xi_1^k \xi_1^l + 4 \mathlambda_1  \dot{E}_{i
+  (\lambda_0) \xi_1^i \xi_1^j \xi_1^k \xi_1^l + 4 \lambda_1  \dot{E}_{i
    j  k} (\lambda_0) \xi_1^i \xi_1^j \xi_1^k \nobracket
   \nonumber\\
-  &  & + \nobracket 6 [\mathlambda_1^2  \dot{F}_{i  j}
-  (\mathlambda_0) + \lambda_2 F_{i  j} (\lambda_0)] \xi_1^i \xi_1^j \}
+  &  & + \nobracket 6 [\lambda_1^2  \dot{F}_{i  j}
+  (\lambda_0) + \lambda_2 F_{i  j} (\lambda_0)] \xi_1^i \xi_1^j \}
   + o (\eta^4) .  \label{eq:DL energie}
 \end{eqnarray}
 Si $\lambda_1 \neq 0$, le premier terme non-nul du développement
@@ -1079,10 +1078,10 @@ En rassemblant les résultats précédents, on trouve pour $f''''
   &  & \nosymbol - 3 \lambda_1^2  [\dot{\mathcal{E}}_2 (\lambda_0 ; v_i, w_j)
   + \dot{\mathcal{E}}_2 (\lambda_0 ; v_j, w_i)] \xi_1^i \xi_1^j + 4 \lambda_1
   \dot{\mathcal{E}}_3 (\lambda_0 ; v_i, v_j, v_k) \xi_1^i \xi_1^j \xi_1^k\\
-  &  & \nosymbol + 12 \mathlambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ; v_i,
-  v_j) \xi_1^i \xi_2^j + 12 \mathlambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ;
+  &  & \nosymbol + 12 \lambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ; v_i,
+  v_j) \xi_1^i \xi_2^j + 12 \lambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ;
   v_i, w_{j  k}) \xi_1^i \xi_1^j \xi_1^k\\
-  &  & \nosymbol + 6 \mathlambda_1^2  [\dot{\mathcal{E}}_2 (\lambda_0 ; v_i,
+  &  & \nosymbol + 6 \lambda_1^2  [\dot{\mathcal{E}}_2 (\lambda_0 ; v_i,
   w_j) + \dot{\mathcal{E}}_2 (\lambda_0 ; v_j, w_i)] \xi_1^i \xi_1^j + 6
   \lambda_1^2  \ddot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j) \xi_1^i \xi_1^j\\
   &  & \nosymbol + 6 \lambda_2  \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j)
@@ -1093,28 +1092,28 @@ En rassemblant les résultats précédents, on trouve pour $f''''
   &  & \nosymbol + 4 \lambda_1  [\dot{\mathcal{E}}_3 (\lambda_0 ; v_i, v_j,
   v_k) + 3 \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, w_{j  k})] \xi_1^i
   \xi_1^j \xi_1^k\\
-  &  & \nosymbol + \{ 3 \mathlambda_1^2  [\dot{2 \ddot{\mathcal{E}}_2
+  &  & \nosymbol + \{ 3 \lambda_1^2  [\dot{2 \ddot{\mathcal{E}}_2
   (\lambda_0 ; v_i, v_j) + \dot{\mathcal{E}}}_2 (\lambda_0 ; v_i, w_j) +
   \dot{\mathcal{E}}_2 (\lambda_0 ; v_j, w_i)] + 6 \lambda_2
   \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j) \} \xi_1^i \xi_1^j\\
   &  & \nosymbol + 6\mathcal{E}_3 (\lambda_0 ; v_i, v_j, v_k) \xi_1^i \xi_1^j
-  \xi_2^k + 12 \mathlambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j)
+  \xi_2^k + 12 \lambda_1  \dot{\mathcal{E}}_2 (\lambda_0 ; v_i, v_j)
   \xi_1^i \xi_2^j\\
   & = & E_{i  j  k  l} (\lambda_0) \xi_1^i \xi_1^j
-  \xi_1^k \xi_1^l + 4 \mathlambda_1  \dot{E}_{i  j  k}
-  (\lambda_0) \xi_1^i \xi_1^j \xi_1^k + 6 [\mathlambda_1^2  \dot{F}_{i
-   j} (\mathlambda_0) + \lambda_2 F_{i  j} (\lambda_0)]
+  \xi_1^k \xi_1^l + 4 \lambda_1  \dot{E}_{i  j  k}
+  (\lambda_0) \xi_1^i \xi_1^j \xi_1^k + 6 [\lambda_1^2  \dot{F}_{i
+   j} (\lambda_0) + \lambda_2 F_{i  j} (\lambda_0)]
   \xi_1^i \xi_1^j\\
   &  & \nosymbol + 6 [E_{i  j  k} (\lambda_0) \xi_1^k + 2
-  \mathlambda_1 F_{i  j} (\lambda_0)] \xi_1^i \xi_2^j,
+  \lambda_1 F_{i  j} (\lambda_0)] \xi_1^i \xi_2^j,
 \end{eqnarray*}
 et on observe que le dernier terme (en $\xi_1^i \xi_2^j$) est nul, du fait de
 l'équation de bifurcation~\eqref{eq:bifurcation 1c}. On obtient donc
 \begin{equation}
   \label{eq:DL energie derivee 4ieme} f'''' (0) = E_{i  j  k
-   l} (\lambda_0) \xi_1^i \xi_1^j \xi_1^k \xi_1^l + 4 \mathlambda_1
+   l} (\lambda_0) \xi_1^i \xi_1^j \xi_1^k \xi_1^l + 4 \lambda_1
   \dot{E}_{i  j  k} (\lambda_0) \xi_1^i \xi_1^j \xi_1^k + 6
-  [\mathlambda_1^2  \dot{F}_{i  j} (\mathlambda_0) + \lambda_2 F_{i
+  [\lambda_1^2  \dot{F}_{i  j} (\lambda_0) + \lambda_2 F_{i
    j} (\lambda_0)] \xi_1^i \xi_1^j .
 \end{equation}
 Le développement limité~\eqref{eq:DL energie} est alors obtenu en
@@ -1128,20 +1127,20 @@ energie derivee 3ieme} et \eqref{eq:DL energie derivee 4ieme}.
   \begin{eqnarray*}
     E_{i  j  k  l} (\lambda_0) \xi_1^i
     \hspace{0.17em} \xi_1^j \xi_1^k \xi_1^l & = & - 3 \lambda_2 F_{i
-    j} (\lambda_0) \xi_1^i \xi_1^j - 3 A_{i  j} (\mathlambda_0)
+    j} (\lambda_0) \xi_1^i \xi_1^j - 3 A_{i  j} (\lambda_0)
     \xi_1^i \xi_2^j - 3 \lambda_1  [\dot{E}_{i  j  k}
-    (\mathlambda_0) \xi_1^k + \lambda_1  \dot{F}_{i  j} (\lambda_0)]
+    (\lambda_0) \xi_1^k + \lambda_1  \dot{F}_{i  j} (\lambda_0)]
     \xi_1^i \xi_1^j\\
-    & = & - 3 \lambda_1  \dot{E}_{i  j  k} (\mathlambda_0)
+    & = & - 3 \lambda_1  \dot{E}_{i  j  k} (\lambda_0)
     \xi_1^i \xi_1^j \xi_1^k - 3 [\lambda_1^2  \dot{F}_{i  j}
     (\lambda_0) + \lambda_2 F_{i  j} (\lambda_0)] \xi_1^i \xi_1^j - 3
-    A_{i  j} (\mathlambda_0) \xi_1^i \xi_2^j,
+    A_{i  j} (\lambda_0) \xi_1^i \xi_2^j,
   \end{eqnarray*}
   soit
-  \[ f'''' (0) = \mathlambda_1  \dot{E}_{i  j  k} (\lambda_0)
-     \xi_1^i \xi_1^j \xi_1^k + 3 [\mathlambda_1^2  \dot{F}_{i  j}
-     (\mathlambda_0) + \lambda_2 F_{i  j} (\lambda_0)] \xi_1^i \xi_1^j
-     - 3 A_{i  j} (\mathlambda_0) \xi_1^i \xi_2^j . \]
+  \[ f'''' (0) = \lambda_1  \dot{E}_{i  j  k} (\lambda_0)
+     \xi_1^i \xi_1^j \xi_1^k + 3 [\lambda_1^2  \dot{F}_{i  j}
+     (\lambda_0) + \lambda_2 F_{i  j} (\lambda_0)] \xi_1^i \xi_1^j
+     - 3 A_{i  j} (\lambda_0) \xi_1^i \xi_2^j . \]
 \end{remark}
 
 \subsection{Développement limité de la hessienne}\label{sec:DL

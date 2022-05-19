@@ -1,40 +1,42 @@
-\documentclass{article}
+\newcommand{\sbtitle}{Notes relatives à la méthode asymptotique de Lyapunov–Schmidt–Koiter}
+\newcommand{\sbauthor}{Sébastien Brisard}
+\newcommand{\sbaddress}{Univ Gustave Eiffel, Ecole des Ponts, IFSTTAR, CNRS, Navier, F-77454 Marne-la-Vall\'ee, France}
+\newcommand{\sbsubject}{Note bibliographique}
+
+\documentclass[12pt, final]{amsart}
 \usepackage[french]{babel}
 \usepackage{amsmath,amssymb,latexsym,theorem}
 \usepackage[tikz]{mdframed}
 
-%%%%%%%%%% Start TeXmacs macros
-\newcommand{\textdots}{...}
-\newcommand{\tmaffiliation}[1]{\\ #1}
-\newcommand{\tmem}[1]{{\em #1\/}}
-\newcommand{\tmemail}[1]{\\ \textit{Email:} \texttt{#1}}
-\newenvironment{proof}{\noindent\textbf{Proof\ }}{\hspace*{\fill}$\Box$\medskip}
-\mdfsetup{linecolor=black,linewidth=0.5pt,skipabove=0.5em,skipbelow=0.5em,hidealllines=true,innerleftmargin=0pt,innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt}
-{\theorembodyfont{\rmfamily}\newtheorem{remark}{Remark}}
-\newtheorem{theorem}{Theorem}
-\newmdenv[hidealllines=false,innertopmargin=1ex,innerbottommargin=1ex,innerleftmargin=1ex,innerrightmargin=1ex]{tmframed}
-%%%%%%%%%% End TeXmacs macros
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
 
-%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
+\usepackage[backend=biber,bibencoding=utf8,doi=false,giveninits=true,isbn=false,maxnames=10,minnames=5,sortcites=true,style=authoryear,texencoding=utf8,url=false]{biblatex}
+\addbibresource{stab.bib}
+
+\usepackage[breaklinks=true, colorlinks=true, pdftitle={\sbtitle}, pdfauthor={\sbauthor}, pdfsubject={\sbsubject}, urlcolor=blue]{hyperref}
+
+\usepackage[color={1 1 0}]{pdfcomment}
+
+\usepackage{unicode-math}
+\setmainfont{XITS}
+\setmathfont{XITS Math}
 
 \begin{document}
-
-\title{Notes relatives à la méthode asymptotique de
-Lyapunov--Schmidt--Koiter}
-
-\author{
-  Sébastien Brisard
-  \tmaffiliation{Univ Gustave Eiffel, Ecole des Ponts, IFSTTAR, CNRS, Navier,
-  F-77454 Marne-la-Vallée, France}
-  \tmemail{sebastien.brisard@univ-eiffel.fr}
-}
-
-\maketitle
+\title{\sbtitle}
+\author{\sbauthor}
+\address{\sbaddress}
+\email{sebastien.brisard@univ-eiffel}
 
 \begin{abstract}
   blabla
 \end{abstract}
+
+\maketitle
 
 \section{Notations}
 
@@ -1410,6 +1412,10 @@ l'équation de bifurcation \eqref{eq:bifurcation 2b}. Les tenseurs $F_{i
 
 \end{document}
 
-% Local Variables:
-% fill-column: 80
-% End:
+%%% Local Variables:
+%%% coding: utf-8
+%%% fill-column: 80
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-master: t
+%%% End:

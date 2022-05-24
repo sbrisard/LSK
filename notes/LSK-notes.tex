@@ -30,7 +30,6 @@
 \setmathfont{XITS Math}
 
 \newcommand{\reals}{\mathbb{R}}
-\newcommand{\×}{\,}
 
 \begin{document}
 \title{\sbtitle}
@@ -87,14 +86,14 @@ sous-espace supplémentaire orthogonal \(W\) de \(V\) dans \(U\)
   U = V \overset{\perp}{\otimes} W.
 \end{equation}
 Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
-\(u₀ + ξ \× v + η \× w\) voisin du point d'équilibre \(u₀\), avec \(ξ, η∈\reals\)
+\(u₀ + ξ  v + η  w\) voisin du point d'équilibre \(u₀\), avec \(ξ, η∈\reals\)
 {\guillemotleft} petits {\guillemotright}, \(v \in V\) et \(w∈W\). On obtient
 alors, à l'ordre 4 en \(ξ\) et \(η\)
 \begin{equation}
   \begin{aligned}[b]
-    Δℰ ={} &  ℰ(u₀ + ξ \× v + η \× w, λ₀) - ℰ(u₀, λ₀)\\
-    ={} & \tfrac{1}{2} ℰ₂(ξ \× v + η \× w, ξ \× v + η \× w) + \tfrac{1}{6} ℰ₃(ξ \× v + η \× w, ξ \× v + η \× w, ξ \× v + η \× w)\\
-    & + \tfrac{1}{24} ℰ₄(ξ \× v + η \× w, ξ \× v + η \× w, ξ \× v + η \× w, ξ \× v + η \× w) + \mathcal{O}\bigl[\bigl(ξ^2 + η^2\bigr)^2\bigr],
+    Δℰ ={} &  ℰ(u₀ + ξv + ηw, λ₀) - ℰ(u₀, λ₀)\\
+    ={} & \tfrac{1}{2} ℰ₂(ξv + ηw, ξv + ηw) + \tfrac{1}{6} ℰ₃(ξv + ηw, ξv + ηw, ξv + ηw)\\
+    & + \tfrac{1}{24} ℰ₄(ξv + ηw, ξv + ηw, ξv + ηw, ξv + ηw) + \mathcal{O}\bigl[\bigl(ξ^2 + η^2\bigr)^2\bigr],
   \end{aligned}
 \end{equation}
 où le terme linéaire a été omis puisque \(u₀\) est un point critique de
@@ -151,159 +150,173 @@ s'écrit
 \begin{equation}
   \bigl[ℰ₄(v_i, v_j, v_k, v_l) - 3ℰ₂(w_{ij}, w_{kl})\bigr] ξ^i ξ^j ξ^k ξ^l \geq 0,
 \end{equation}
-pour tous \(ξ^i, ξ^j, ξ^k, ξ^l∈\reals\). On peut montrer que l'inégalité
-stricte est une condition \emph{suffisante} de stabilité.
+pour tous \(ξ^i, ξ^j, ξ^k, ξ^l∈\reals\). On peut montrer que l'inégalité stricte
+est une condition \emph{suffisante} de
+stabilité. \pdfmargincomment{Est-ce vrai ? Essayer de préciser}
 
 \section{Bifurcations}
 
-On écrit toute courbe d'équilibre passant par le point \((u₀, λ₀)\) sous la forme paramétrique suivante
-\begin{eqnarray}
- λ & = & λ₀ + η λ₁ + \tfrac{1}{2} η^2 λ₂ +
- \tfrac{1}{6} η^3 λ₃ + \cdots, \label{eq20211115075817}\\
- u & = & u^{\ast}(λ) + η u₁ + \tfrac{1}{2} η^2 u₂ +
- \tfrac{1}{6} η^3 u₃ + \cdots, \label{eq20211115075835}
-\end{eqnarray}
-où \(η\) est un paramètre, non précisé pour le moment. Noter que, dans la représentation paramétrique de \(u\), \(u^{\ast}\) est évalué en \(λ\) et pas en \(λ₀\).
+On écrit toute courbe d'équilibre passant par le point \((u₀, λ₀)\) sous la
+forme paramétrique suivante
+\begin{align}
+  \label{eq:20211115075817}
+  λ &=  λ₀ + η λ₁ + \tfrac{1}{2} η^2 λ₂ + \tfrac{1}{6} η^3 λ₃ + \cdots,\\
+  \label{eq:20211115075835}
+  u &= u^{\ast}(λ) + η u₁ + \tfrac{1}{2} η^2 u₂ + \tfrac{1}{6} η^3 u₃ + \cdots,
+\end{align}
+où \(η\) est un paramètre, non précisé pour le moment. Noter que, dans la
+représentation paramétrique de \(u\), \(u^{\ast}\) est évalué en \(λ\) et pas en
+\(λ₀\).
 
-Les coefficients \(λ_k\) et \(u_k\) des développements~\eqref{eq20211115075817} et \eqref{eq20211115075835} sont identifiés en écrivant que l'énergie est stationnaire le long de la courbe d'équilibre, c'est-à-dire que le résidu \(ℰ_{, u} [u(η), λ(η)]\) est nul. Le développement limité du résidu est établi au voisinage de \(η = 0\) dans l'annexe~\ref{sec20211112182000} [voir Éq.~\eqref{eq20220107080901}]. En écrivant que tous ses termes s'annulent, on trouve successivement, pour tout \(\hat{u}∈U\)
+Les coefficients \(λ_k\) et \(u_k\) des développements~\eqref{eq:20211115075817}
+et \eqref{eq:20211115075835} sont identifiés en écrivant que l'énergie est
+stationnaire le long de la courbe d'équilibre, c'est-à-dire que le résidu
+\(ℰ_{, u} [u(η), λ(η)]\) est nul. Le développement limité du résidu est établi
+au voisinage de \(η = 0\) dans l'annexe~\ref{sec:20211112182000} [voir
+Éq.~\eqref{eq:20220107080901}]. En écrivant que tous ses termes s'annulent, on
+trouve successivement, pour tout \(\hat{u}∈U\)
 \begin{equation}
- \label{eq20211112182917} ℰ₂(λ₀ ; u₁, \hat{u}) = 0,
+  \label{eq:20211112182917}
+  ℰ₂(λ₀; u₁, \hat{u}) = 0,
 \end{equation}
 \begin{equation}
- \label{eq:res2} ℰ₃(λ₀ ; u₁, u₁, \hat{u}) + 2 λ₁
- \dot{ℰ₂}(λ₀ ; u₁, \hat{u}) +ℰ₂(λ₀ ;
- u₂, \hat{u}) = 0,
+  \label{eq:20220524133447}
+  ℰ₃(λ₀; u₁, u₁, \hat{u}) + 2λ₁\dot{ℰ}₂(λ₀; u₁, \hat{u}) + ℰ₂(λ₀; u₂, \hat{u}) = 0,
 \end{equation}
-\begin{eqnarray}
- ℰ₄(λ₀ ; u₁, u₁, u₁, \hat{u}) + 3ℰ₃
- (λ₀ ; u₁, u₂, \hat{u}) +ℰ₂(λ₀ ; u₃, \hat{u}) &
- & \nonumber\\
- + 3 λ₁ \dot{ℰ₃}(λ₀ ; u₁, u₁, \hat{u}) + 3
- λ₁ \dot{ℰ₂}(λ₀ ; u₂, \hat{u}) & & \nonumber\\
- + 3 λ₁^2 \ddot{ℰ₂}(λ₀ ; u₁, \hat{u}) + 3
- λ₂ \dot{ℰ₂}(λ₀ ; u₁, \hat{u}) & = & 0.
- \label{eq:res3}
-\end{eqnarray}
-On déduit de l'équation~\eqref{eq20211112182917} que \(u₁∈V\). En prenant la fonction test également dans \(V\), on déduit de l'équation~\eqref{eq:res2} que \(u₁\) est solution du problème suivant : trouver \(u₁∈V\) tel que
 \begin{equation}
- \label{eq:bifurcation 1a} \tfrac{1}{2} ℰ₃(λ₀ ; u₁, u₁,
- \hat{v}) + λ₁ \dot{ℰ₂}(λ₀ ; u₁, \hat{v}) = 0,
+  \label{eq:res3}
+  \begin{aligned}[b]
+    ℰ₄(λ₀; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ₀; u₁, u₂, \hat{u}) + ℰ₂(λ₀; u₃, \hat{u})&\\
+    + 3λ₁\dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + 3λ₁\dot{ℰ}₂(λ₀;  u₂, \hat{u})&\\
+    + 3λ₁^2\ddot{ℰ}₂(λ₀; u₁, \hat{u}) + 3λ₂\dot{ℰ}₂(λ₀; u₁, \hat{u}) & = 0.
+  \end{aligned}
 \end{equation}
-pour tout \(\hat{v}∈V\). On remarque d'ores et déjà que si \ l'est également. Il est commode de transformer l'équation de bifurcation \eqref{eq:bifurcation 1a}, intrinsèque, en un système d'équations scalaires. à cet effet, on décompose \(u₁∈V\) dans la base \((v_i)_{1 \leqslant i \leqslant m}\)
+On déduit de l'équation~\eqref{eq:20211112182917} que \(u₁∈V\). En prenant la
+fonction test également dans \(V\), on déduit de
+l'équation~\eqref{eq:20220524133447} que \(u₁\) est solution du problème
+suivant~: trouver \(u₁∈V\) tel que
 \begin{equation}
- \label{eq:decomposition u1} u₁ = ξ₁^i v_i .
+  \label{eq:20220524133816}
+  \tfrac{1}{2} ℰ₃(λ₀; u₁, u₁, \hat{v}) + λ₁\dot{ℰ}₂(λ₀; u₁, \hat{v}) = 0,
 \end{equation}
-En prenant \(\hat{v} = v_i\), l'équation~\eqref{eq:bifurcation 1a} s'écrit
+pour tout \(\hat{v}∈V\). Il est commode de transformer l'équation de bifurcation
+\eqref{eq:20220524133816}, intrinsèque, en un système d'équations scalaires. à
+cet effet, on décompose \(u₁∈V\) dans la base \((v_i)_{1 ≤ i ≤ m}\)
 \begin{equation}
- \label{eq:bifurcation 1b} \tfrac{1}{2} ℰ₃(λ₀ ; v_i, v_j,
- v_k) \hspace{0.17em} ξ₁^j ξ₁^k + λ₁ \dot{ℰ}₂
- (λ₀ ; v_i, v_j) \hspace{0.17em} ξ₁^j = 0.
+  \label{eq:20220524133944}
+  u₁ = ξ₁^i v_i.
 \end{equation}
-On obtient ainsi un système de \(m\) équations quadratiques à \((m + 1)\) inconnues, qui permet en général de déterminer les valeurs de \(λ₁\) et \(u₁\)(voir discussion ci-après ***TODO -- Compléter référence***).
+En prenant \(\hat{v} = v_i\), l'équation~\eqref{eq:20220524133816} s'écrit
+\begin{equation}
+  \label{eq:20220524134121}
+  \tfrac{1}{2} ℰ₃(λ₀; v_i, v_j, v_k)ξ₁^j ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j = 0.
+\end{equation}
+On obtient ainsi un système de \(m\) équations quadratiques à \((m + 1)\)
+inconnues, qui permet en général de déterminer les valeurs de \(λ₁\) et
+\(u₁\)(\pdfmarkupcomment{voir discussion ci-après}{Compléter référence}).
 
-Afin de déterminer les termes suivants du développement asymptotique de la branche bifurquée, soit \(λ₂\) et \(u₂\), on introduit la décomposition
+Afin de déterminer les termes suivants du développement asymptotique de la
+branche bifurquée, soit \(λ₂\) et \(u₂\), on introduit la décomposition
 \begin{equation}
- u₂ = ξ₂^i v_i + \tilde{u}₂,
+  u₂ = ξ₂^i v_i + \tilde{u}₂,
 \end{equation}
-où \(\tilde{u}₂∈W\) est la projection orthogonale de \(u₂\) sur \(W\)(notation provisoire). On a alors \(ℰ₂(u₂, \hat{u}) =ℰ₂(\tilde{u}₂, \hat{u})\) et l'équation~\eqref{eq:res2} s'écrit
+où \(\tilde{u}₂∈W\) est la projection orthogonale de \(u₂\) sur \(W\). On a
+alors \(ℰ₂(u₂, \hat{u}) =ℰ₂(\tilde{u}₂, \hat{u})\) et
+l'équation~\eqref{eq:20220524133447} s'écrit
 \begin{equation}
- ℰ₃(λ₀ ; u₁, u₁, \hat{u}) + 2 λ₁
- \dot{ℰ₂}(λ₀ ; u₁, \hat{u}) +ℰ₂(λ₀ ;
- \tilde{u}₂, \hat{u}) = 0,
+ ℰ₃(λ₀; u₁, u₁, \hat{u}) + 2λ₁ \dot{ℰ}₂(λ₀; u₁, \hat{u}) + ℰ₂(λ₀; \tilde{u}₂, \hat{u}) = 0,
 \end{equation}
-pour tout \(\hat{u}∈U\). En prenant cette fois-ci la fonction test dans l'espace \(W\), on obtient le problème variationnel suivant~: trouver \(\tilde{u}₂∈W\) tel que
+pour tout \(\hat{u}∈U\). En prenant cette fois-ci la fonction test dans l'espace
+\(W\), on obtient le problème variationnel suivant~: trouver \(\tilde{u}₂∈W\)
+tel que
 \begin{equation}
- \label{eq20211210131623} ℰ₂(λ₀ ; {\tilde{u}₂} , \hat{w})
- + ξ₁^i ξ₁^j ℰ₃(λ₀ ; v_i, v_j, \hat{w}) + 2
- λ₁ ξ₁^i \dot{ℰ₂}(λ₀ ; v_i, \hat{w}) = 0,
+  \label{eq:20211210131623}
+  ℰ₂(λ₀; \tilde{u}₂, \hat{w}) + ξ₁^i ξ₁^j ℰ₃(λ₀; v_i, v_j, \hat{w}) + 2λ₁ ξ₁^i \dot{ℰ}₂(λ₀; v_i, \hat{w}) = 0,
 \end{equation}
-pour tout \(\hat{w}∈W\). Soient \(w_i∈W\) les solutions des problèmes variationnels suivants
+pour tout \(\hat{w}∈W\). Soient \(w_i∈W\) les solutions des problèmes
+variationnels suivants
 \begin{equation}
- \label{eq:pbvar wi} ℰ₂(λ₀ ; w_i, \hat{w}) + 2
- \dot{ℰ₂}(λ₀ ; v_i, \hat{w}) = 0,
+  \label{eq:20220524134525}
+  ℰ₂(λ₀; w_i, \hat{w}) + 2\dot{ℰ}₂(λ₀; v_i, \hat{w}) = 0,
 \end{equation}
-pour tout \(\hat{w}∈W\). La solution du problème~\eqref{eq20211210131623} s'obtient par simple combinaison linéaire des \(w_i\) et \(w_{ij}\) [on rappelle que ces derniers sont définis par le problème variationnel~\eqref{eq:20220519164523}]
+pour tout \(\hat{w}∈W\). La solution du problème~\eqref{eq:20211210131623}
+s'obtient par simple combinaison linéaire des \(w_i\) et \(w_{ij}\) [on rappelle
+que ces derniers sont définis par le problème
+variationnel~\eqref{eq:20220519164523}]
 \begin{equation}
- \tilde{u}₂ = ξ₁^i ξ₁^j w_{i j} + λ₁ ξ₁^i w_i,
+ \tilde{u}₂ = ξ₁^i ξ₁^j w_{ij} + λ₁ ξ₁^i w_i,
 \end{equation}
 de sorte que
 \begin{equation}
- \label{eq:decomposition u2} u₂ = ξ₂^i v_i + ξ₁^i ξ₁^j w_{i
-  j} + λ₁ ξ₁^i w_i .
+  \label{eq:20220524134613}
+  u₂ = ξ₂^i v_i + ξ₁^i ξ₁^j w_{ij} + λ₁ ξ₁^i w_i .
 \end{equation}
-En introduisant les expressions~\eqref{eq:decomposition u1} et \eqref{eq:decomposition u2} dans l'équation~\eqref{eq:res3} et en prenant de plus \(\hat{u} = v_i\), on obtient alors les équations suivantes
-\begin{eqnarray}
- 3 [ℰ₃(λ₀ ; v_i, v_j, v_k) ξ₁^k + λ₁
- \dot{ℰ}₂(λ₀ ; v_i, v_j)] ξ₂^j + 3 λ₂
- \dot{ℰ}₂(λ₀ ; v_i, v_j) ξ₁^j & & \nonumber\\
- + [ℰ₄(λ₀ ; v_i, v_j, v_k, v_l) + 3ℰ₃
- (λ₀ ; v_i, v_j, w_{k l})] ξ₁^j ξ₁^k ξ₁^l & &
- \nonumber\\
- + 3 λ₁ [\dot{ℰ}₃(λ₀ ; v_i, v_j, v_k)
- +ℰ₃(λ₀ ; v_i, v_j, w_k) + \dot{ℰ₂}(λ₀
- ; v_i, w_{j k})] ξ₁^j ξ₁^k & & \nonumber\\
- + 3 λ₁^2 [\ddot{ℰ}₂(λ₀ ; v_i, v_j) +
- \dot{ℰ₂}(λ₀ ; v_i, w_j)] ξ₁^j & = & 0,
- \label{eq:bifurcation 2a}
-\end{eqnarray}
-qui permet en principe de déterminer \(λ₂\) ainsi que les \(ξ₂^i\). On montre dans le paragraphe \ref{sec:Simplification des équations de bifurcation} que les équations \eqref{eq:bifurcation 1b} et \eqref{eq:bifurcation 2a} peuvent s'écrire sous la forme suivante
+En introduisant les expressions~\eqref{eq:20220524133944} et
+\eqref{eq:20220524134613} dans l'équation~\eqref{eq:res3} et en prenant de plus
+\(\hat{u} = v_i\), on obtient alors les équations suivantes
 \begin{equation}
- \label{eq:bifurcation 1c} \tfrac{1}{2} E_{i j k}
- (λ₀) ξ₁^j ξ₁^k + λ₁ F_{i j}(λ₀) ξ₁^j
- = 0,
+  \begin{aligned}[b]
+    3[ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j)] ξ₂^j + 3λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j &\\
+    + [ℰ₄(λ₀; v_i, v_j, v_k, v_l) + 3ℰ₃(λ₀; v_i, v_j, w_{kl})] ξ₁^j ξ₁^k ξ₁^l &\\
+    + 3λ₁ [\dot{ℰ}₃(λ₀; v_i, v_j, v_k) + ℰ₃(λ₀; v_i, v_j, w_k) + \dot{ℰ₂}(λ₀; v_i, w_{jk})] ξ₁^j ξ₁^k&\\
+    + 3λ₁^2 [\ddot{ℰ}₂(λ₀; v_i, v_j) + \dot{ℰ}₂(λ₀ ; v_i, w_j)] ξ₁^j &= 0,
+  \end{aligned}
+  \label{eq:20220524134835}
 \end{equation}
+qui permet en principe de déterminer \(λ₂\) ainsi que les \(ξ₂^i\). On montre
+dans le paragraphe \ref{sec:20220524134954} que les équations
+\eqref{eq:20220524134121} et \eqref{eq:20220524134835} peuvent s'écrire sous la
+forme suivante
 \begin{equation}
- \label{eq:bifurcation 2b} \tfrac{1}{3} E_{i j k
- l}(λ₀) \hspace{0.17em} ξ₁^j ξ₁^k ξ₁^l + λ₂ F_{i
-  j}(λ₀) ξ₁^j + A_{i j}(λ₀) ξ₂^j +
- λ₁ \dot{A}_{i j}(λ₀) ξ₁^j = 0,
-\end{equation}
-où les tenseurs \(E_{i j k}\), \(E_{i j k
- l}\), \(F_{i j}\) et \(A_{i j}\) sont définis comme
-suit ***je ne suis pas sûr du terme faisant intervenir \(\dot{A}_{i
- j}(λ₀)\)***
-\begin{equation}
- \label{eq:def Eijk} E_{i j k}(λ) =ℰ₃
- (λ ; v_i, v_j, v_k) +ℰ₂(λ ; v_i, w_{j k})
- +ℰ₂(λ ; v_j, w_{i k}) +ℰ₂(λ ;
- v_k, w_{i j}),
+  \label{eq:20220524135036}
+  \tfrac{1}{2} E_{ijk}(λ₀) ξ₁^j ξ₁^k + λ₁ F_{ij}(λ₀) ξ₁^j = 0,
 \end{equation}
 \begin{equation}
- \label{eq:def Eijkl} E_{i j k l}(λ)
+  \label{eq:bifurcation 2b}
+  \tfrac{1}{3} E_{ijkl}(λ₀) ξ₁^j ξ₁^k ξ₁^l + λ₂ F_{ij}(λ₀) ξ₁^j + A_{ij}(λ₀) ξ₂^j + λ₁ \dot{A}_{ij}(λ₀) ξ₁^j = 0,
+\end{equation}
+où les tenseurs \(E_{i j k}\), \(E_{i j k l}\), \(F_{i j}\) et \(A_{i j}\) sont
+définis comme suit \pdfmargincomment{Je ne suis pas sûr du terme faisant
+  intervenir Ȧᵢⱼ(λ₀)}
+\begin{equation}
+  \label{eq:20220524135619}
+  E_{ijk}(λ) = ℰ₃(λ; v_i, v_j, v_k) + ℰ₂(λ; v_i, w_{jk}) + ℰ₂(λ; v_j, w_{ik}) + ℰ₂(λ ; v_k, w_{ij}),
+\end{equation}
+\begin{equation}
+ \label{eq:20220524135553} E_{i j k l}(λ)
  =ℰ₄(λ ; v_i, v_j, v_k, v_l) +ℰ₃(λ ;
  v_i, v_j, w_{k l}) +ℰ₃(λ ; v_i, v_k, w_{l
   j}) +ℰ₃(λ ; v_i, v_l, w_{j k}),
 \end{equation}
 \begin{equation}
- \label{eq:def Fij} F_{i j}(λ) = \dot{ℰ}₂(λ
- ; v_i, v_j) + \tfrac{1}{2} [ℰ₂(λ ; v_i, w_j)
- +ℰ₂(λ ; v_j, w_i)],
+  \label{eq:20220524135643}
+  F_{ij}(λ) = \dot{ℰ}₂(λ; v_i, v_j) + \tfrac{1}{2} [ℰ₂(λ; v_i, w_j) + ℰ₂(λ; v_j, w_i)],
 \end{equation}
 \begin{equation}
- \label{eq:def Aij} A_{i j}(λ) = E_{i j k}
- (λ) ξ₁^k + λ₁ F_{i j}(λ) .
+  \label{eq:20220524135705}
+  A_{ij}(λ) = E_{ijk}(λ) ξ₁^k + λ₁ F_{ij}(λ) .
 \end{equation}
-Noter que tous ces tenseurs sont \emph{symétriques}. On remarque que, puisque \(ℰ₂(λ₀ ; v_i, •) = 0\), on a les simplifications suivantes en \(λ = λ₀\) : \(E_{i j
-k}(λ₀) =ℰ₃(λ₀ ; v_i, v_j, v_k)\) et \(F_{i
-j}(λ₀) = \dot{ℰ}₂(λ₀ ; v_i, v_j)\).
+Noter que tous ces tenseurs sont \emph{symétriques}. On remarque que, puisque
+\(ℰ₂(λ₀ ; v_i, •) = 0\), on a les simplifications suivantes en \(λ = λ₀\) :
+\(E_{ijk}(λ₀) = ℰ₃(λ₀; v_i, v_j, v_k)\) et
+\(F_{ij}(λ₀) = \dot{ℰ}₂(λ₀; v_i, v_j)\).
 
-\paragraph{Si la forme \(ℰ₃(λ₀)\) n'est pas nulle sur \(V\)}L'équation \eqref{eq:bifurcation 1c} admet au plus \((2^m - 1)\) paires de solutions réelles \((λ₁, u₁)\) et \((- λ₁, - u₁)\).
+\paragraph{Si la forme \(ℰ₃(λ₀)\) n'est pas nulle sur \(V\)} L'équation
+\eqref{eq:20220524135036} admet au plus \((2^m - 1)\) paires de solutions
+réelles \((λ₁, u₁)\) et \((- λ₁, - u₁)\). \pdfmargincomment{Je ne sais pas
+  démontrer ce résultat sur le nombre de solutions réelles.}
 
-\begin{remark}
- Je ne sais pas démontrer ce résultat sur le nombre de solutions  réelles.
-\end{remark}
-
-\paragraph{Si la forme \(ℰ₃(λ₀)\) est nulle sur \(V\)}L'équation \eqref{eq:bifurcation 1a} conduit nécessairement à \(λ₁ = 0\), puisque \(\dot{ℰ}₂(λ₀)\) est définie négative. Dès lors, l'équation \eqref{eq:bifurcation 2b} s'écrit\marginpar{Expliquer pourquoi la forme quadratique \(\dot{ℰ}₂(λ₀)\) est bien définie négative}
+\paragraph{Si la forme \(ℰ₃(λ₀)\) est nulle sur \(V\)} L'équation
+\eqref{eq:20220524133816} conduit nécessairement à \(λ₁ = 0\), puisque
+\(\dot{ℰ}₂(λ₀)\) est définie négative. Dès lors, l'équation
+\eqref{eq:bifurcation 2b} s'écrit \pdfmargincomment{Expliquer pourquoi la forme
+  quadratique ℰ̇₂(λ₀) bien définie négative}
 \begin{equation}
- \tfrac{1}{3} E_{i j k l}(λ₀)
- \hspace{0.17em} ξ₁^j ξ₁^k ξ₁^l + λ₂ F_{i j}
- (λ₀) ξ₁^j = 0.
+ \tfrac{1}{3} E_{ijkl}(λ₀) ξ₁^j ξ₁^k ξ₁^l + λ₂ F_{ij}(λ₀) ξ₁^j = 0.
 \end{equation}
-Cette équation admet cette fois au plus \(\frac{3^m - 1}{2}\) paires de solutions réelles \((λ₂, u₁)\) et \((- λ₂, - u₁)\).
-
-\begin{remark}
- Je ne sais pas non plus démontrer ce résultat sur le nombre de  solutions réelles.
-\end{remark}
+Cette équation admet cette fois au plus \(\frac{3^m - 1}{2}\) paires de
+solutions réelles \((λ₂, u₁)\) et \((- λ₂, - u₁)\). \pdfmargincomment{Je ne sais
+pas non plus démontrer ce résultat sur le nombre de solutions réelles.}
 
 \paragraph{Note du 29/04/2022}J'ai relu tous les calculs précédents. Il reste à reprendre les calculs des développements asymptotiques de l'énergie et de sa hessienne, pour tenir compte en particulier des factorielles introduites maintenant dans les développements asymptotiques. Il faudrait également introduire les tenseurs précédents dans les expressions de l'énergie et de sa hessienne.
 
@@ -374,7 +387,7 @@ Pour une analyse de stabilité, on doit prendre \(\hat{u} = \hat{v}\), soit
  \hat{u}, \hat{u}) + λ₁^2 \ddot{ℰ}₂(λ₀ ; \hat{u},
  \hat{u})] + o(η^2) . \label{eq:DL hessienne diag}
 \end{eqnarray}
-On peut décomposer le vecteur \(\hat{u}∈U\) de fa{\c c}on unique sous la forme \(\hat{u} = \hat{v} + \hat{w}\), avec \(\hat{v}∈V\) et \(\hat{w}∈W\). Le terme constant du développement précédent vaut alors \(ℰ₂(λ₀ ; \hat{w}, \hat{w})\). Si \(\hat{w} \neq 0\), alors ce terme constant est strictement positif, puisque la hessienne est définie positive sur \(W\) en \(λ = λ₀\). Au voisinage du point de bifurcation, la hessienne sur la branche bifurquée est donc positive pour tout \(\hat{u}∈U\) ayant une composante dans \(W\). Il suffit donc d'étudier le signe de la hessienne sur la branche bifurquée pour \(\hat{u}∈V\), soit \(\hat{u} = \hat{ξ}^i v_i\). L'expression~\eqref{eq:DL hessienne diag} se simplifie alors sous la forme suivante Compte-tenu de l'expression~\eqref{eq:decomposition u2}
+On peut décomposer le vecteur \(\hat{u}∈U\) de fa{\c c}on unique sous la forme \(\hat{u} = \hat{v} + \hat{w}\), avec \(\hat{v}∈V\) et \(\hat{w}∈W\). Le terme constant du développement précédent vaut alors \(ℰ₂(λ₀ ; \hat{w}, \hat{w})\). Si \(\hat{w} \neq 0\), alors ce terme constant est strictement positif, puisque la hessienne est définie positive sur \(W\) en \(λ = λ₀\). Au voisinage du point de bifurcation, la hessienne sur la branche bifurquée est donc positive pour tout \(\hat{u}∈U\) ayant une composante dans \(W\). Il suffit donc d'étudier le signe de la hessienne sur la branche bifurquée pour \(\hat{u}∈V\), soit \(\hat{u} = \hat{ξ}^i v_i\). L'expression~\eqref{eq:DL hessienne diag} se simplifie alors sous la forme suivante Compte-tenu de l'expression~\eqref{eq:20220524134613}
 \begin{eqnarray}
  ℰ_{, u u} [u(η), λ(η) ; \hat{u}, \hat{u}] &
  = & η [ℰ₃(λ₀ ; v_i, v_j, v_k) ξ₁^k + λ₁
@@ -629,7 +642,7 @@ où \(λ\) et ses dérivées sont évaluées en \(η\), tandis que \(F\) et ses 
 où \(F\) et ses dérivées sont évaluées en \((0, λ₀)\).
 
 \subsection{Développement limité du
-résidu}\label{sec20211112182000}
+résidu}\label{sec:20211112182000}
 
 On cherche un développement limité du résidu(c'est-à-dire de la première variation de l'énergie). La fonction test \(\hat{u}∈U\) étant fixée, la méthode précédente est donc appliquée avec
 \begin{equation}
@@ -724,7 +737,7 @@ On en déduit finalement le développement limité à l'ordre 3 en \(η\) du ré
  \hat{u}) + \dot{ℰ₂}(λ₀ ; u₂, \hat{u})] + 3 λ₁^2
  \ddot{ℰ₂}(λ₀ ; u₁, \hat{u}) \nonumber\\
  & &  + 3 λ₂ \dot{ℰ₂}(λ₀ ;
- u₁, \hat{u}) \} + o(η^3) . \label{eq20220107080901}
+ u₁, \hat{u}) \} + o(η^3) . \label{eq:20220107080901}
 \end{eqnarray}
 \subsection{Développement limité de l'énergie}\label{sec:DL
 energie}
@@ -822,7 +835,7 @@ et
  & = & λ₁ F_{i j}(λ₀) ξ₁^i ξ₁^j, \label{eq:DL
  energie derivee 3ieme}
 \end{eqnarray}
-en utilisant l'équation de bifurcation~\eqref{eq:bifurcation 1a} dans la deuxième ligne. En introduisant les décompositions \eqref{eq:decomposition u1} et \eqref{eq:decomposition u2} de \(u₁\) et \(u₂\), on trouve tout d'abord, pour \(ℰ₃(λ₀ ; u₁, u₁, u₂)\)
+en utilisant l'équation de bifurcation~\eqref{eq:20220524133816} dans la deuxième ligne. En introduisant les décompositions \eqref{eq:20220524133944} et \eqref{eq:20220524134613} de \(u₁\) et \(u₂\), on trouve tout d'abord, pour \(ℰ₃(λ₀ ; u₁, u₁, u₂)\)
 \begin{eqnarray*}
  ℰ₃(λ₀ ; u₁, u₁, u₂) & = & ℰ₃(λ₀ ;
  v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k +ℰ₃(λ₀ ; v_i, v_j,
@@ -848,7 +861,7 @@ en tenant compte de la définition~\eqref{eq:20220519164523} des \(w_{i j}\). Da
  & & + 2 λ₁ \dot{ℰ}₂(λ₀ ; v_{i
  }, w_{j k}) ξ₁^i ξ₁^j ξ₁^k,
 \end{eqnarray*}
-en introduisant cette fois-ci la définition~\eqref{eq:pbvar wi} de \(w_i .\) On procède de même pour le terme suivant, soit \(ℰ₂(λ₀ ; u₂, u₂)\)
+en introduisant cette fois-ci la définition~\eqref{eq:20220524134525} de \(w_i .\) On procède de même pour le terme suivant, soit \(ℰ₂(λ₀ ; u₂, u₂)\)
 \begin{eqnarray*}
  ℰ₂(λ₀ ; u₂, u₂) & = & ℰ₂(λ₀ ;
  ξ₁^i v_i + ξ₁^i ξ₁^j w_{i j} + λ₁ ξ₁^i w_i,
@@ -932,7 +945,7 @@ En rassemblant les résultats précédents, on trouve pour \(f''''(0)\)
  & & + 6 [E_{i j k}(λ₀) ξ₁^k + 2
  λ₁ F_{i j}(λ₀)] ξ₁^i ξ₂^j,
 \end{eqnarray*}
-et on observe que le dernier terme(en \(ξ₁^i ξ₂^j\)) est nul, du fait de l'équation de bifurcation~\eqref{eq:bifurcation 1c}. On obtient donc
+et on observe que le dernier terme(en \(ξ₁^i ξ₂^j\)) est nul, du fait de l'équation de bifurcation~\eqref{eq:20220524135036}. On obtient donc
 \begin{equation}
  \label{eq:DL energie derivee 4ieme} f''''(0) = E_{i j k
   l}(λ₀) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4 λ₁
@@ -1092,7 +1105,7 @@ Ainsi, le vecteur \(χ₀^i\) apparaît comme le vecteur propre de la matrice sy
 \begin{equation} ℰ₃(λ₀ ; v_j, v_k, \hat{w}) ξ₁^k χ₀^j
   +ℰ₂(λ₀ ; y₁, \hat{w}) + λ₁ \dot{ℰ₂}
  (λ₀ ; v_j, \hat{w}) χ₀^j = 0. \end{equation}
-La solution de ce problème est exprimée à l'aide des \(w_{i j}\) et \(w_i\) définis respectivement par les problèmes variationnels auxiliaires \eqref{eq:20220519164523} et \eqref{eq:pbvar wi}
+La solution de ce problème est exprimée à l'aide des \(w_{i j}\) et \(w_i\) définis respectivement par les problèmes variationnels auxiliaires \eqref{eq:20220519164523} et \eqref{eq:20220524134525}
 \begin{equation} y₁ = ξ₁^i χ₀^j w_{i j} + λ₁ χ₀^i w_i, \end{equation}
 soit
 \begin{equation} x₁ = χ₁^i v_i + ξ₁^i χ₀^j w_{i j} + λ₁ χ₀^i
@@ -1109,9 +1122,9 @@ soit, en prenant \(\hat{u} = \widehat{v_i}∈V\) et en introduisant les dévelop
   u₂, x₀, \hat{u}) + λ₂ \dot{ℰ₂}(λ₀ ; x₀,
   \hat{u}) \end{equation}
 \section{Simplification des équations de
-bifurcation}\label{sec:Simplification des équations de bifurcation}
+bifurcation}\label{sec:20220524134954}
 
-Dans ce paragraphe, on simplifie les équations de bifurcation \eqref{eq:bifurcation 1b} et \eqref{eq:bifurcation 2a} pour obtenir les formes \eqref{eq:bifurcation 1c} et \eqref{eq:bifurcation 2b}. On commence par symétriser les termes cubique, quadratique et linéaire en \(ξ₁^i\) de
+Dans ce paragraphe, on simplifie les équations de bifurcation \eqref{eq:20220524134121} et \eqref{eq:20220524134835} pour obtenir les formes \eqref{eq:20220524135036} et \eqref{eq:bifurcation 2b}. On commence par symétriser les termes cubique, quadratique et linéaire en \(ξ₁^i\) de
 l'équation \eqref{eq:bifurcation 2b}.
 
 \paragraph{Terme cubique en \(ξ₁^i\)}On observe que
@@ -1120,11 +1133,11 @@ l'équation \eqref{eq:bifurcation 2b}.
   l}) +ℰ₃(λ₀ ; v_i, v_k, w_{j
   l}) +ℰ₃(λ₀ ; v_i, v_l, w_{j k}] ξ₁^j ξ₁^k
   ξ₁^l . \end{equation}
-On obtient donc l'expression suivante du terme cubique en \(ξ₁^i\) dans l'équation de bifurcation \eqref{eq:bifurcation 2a}
+On obtient donc l'expression suivante du terme cubique en \(ξ₁^i\) dans l'équation de bifurcation \eqref{eq:20220524134835}
 \begin{equation} ℰ₄(λ₀ ; v_i, v_j, v_k, v_l) +ℰ₃(λ₀ ;
   v_i, v_j, w_{k l}) +ℰ₃(λ₀ ; v_i, v_k, w_{j
   l}) +ℰ₃(λ₀ ; v_i, v_l, w_{j k}), \end{equation}
-qui suggère d'introduire le \ \(E_{i j k l}(λ)\) défini par l'équation \eqref{eq:def Eijkl}. Le terme cubique en \(ξ₁^i\) dans l'équation de bifurcation \eqref{eq:bifurcation 2a} est alors simplement~: \(E_{i j k l}(λ₀)\).
+qui suggère d'introduire le \ \(E_{i j k l}(λ)\) défini par l'équation \eqref{eq:20220524135553}. Le terme cubique en \(ξ₁^i\) dans l'équation de bifurcation \eqref{eq:20220524134835} est alors simplement~: \(E_{i j k l}(λ₀)\).
 
 \paragraph{Terme quadratique en \(ξ₁^i\)}On observe de même que
 \begin{equation} ℰ₃(λ₀ ; v_i, v_j, w_k) ξ₁^j ξ₁^k = \tfrac{1}{2}
@@ -1133,7 +1146,7 @@ qui suggère d'introduire le \ \(E_{i j k l}(λ)\) défini par l'équation \eqre
 En prenant tout d'abord \(\widehat{w} = w_k\) dans le problème variationnel \eqref{eq:20220519164523}, on trouve
 \begin{equation} ℰ₃(λ₀ ; v_i, v_j, w_k) = -ℰ₂(λ₀ ;
   w_{i j}, w_k), \end{equation}
-puis, en prenant cette fois \(\hat{w} = w_{i j}\) dans le problème variationnel \eqref{eq:pbvar wi}
+puis, en prenant cette fois \(\hat{w} = w_{i j}\) dans le problème variationnel \eqref{eq:20220524134525}
 \begin{equation} ℰ₂(λ₀ ; w_k, w_{i j}) = - 2 \dot{ℰ₂}
  (λ₀ ; v_k, w_{i j}), \end{equation}
 soit finalement
@@ -1141,33 +1154,33 @@ soit finalement
   [\dot{ℰ}₂(λ₀ ; v_j, w_{i k}) +
   \dot{ℰ}₂(λ₀ ; v_k, w_{i j})] ξ₁^j ξ₁^k .
 \end{equation}
-On obtient donc l'expression suivante du terme quadratique en \(ξ₁^i\) dans l'équation de bifurcation \eqref{eq:bifurcation 2a}
+On obtient donc l'expression suivante du terme quadratique en \(ξ₁^i\) dans l'équation de bifurcation \eqref{eq:20220524134835}
 \begin{equation} 3 λ₁ [\dot{ℰ}₃(λ₀ ; v_i, v_j, v_k) +
   \dot{ℰ₂}(λ₀ ; v_i, w_{j k}) +
   \dot{ℰ}₂(λ₀ ; v_j, w_{i k}) +
   \dot{ℰ}₂(λ₀ ; v_k, w_{i j})], \end{equation}
-qui suggère d'introduire le tenseur \(E_{i j k}(λ)\) défini par l'équation \eqref{eq:def Eijk}. Le terme quadratique en \(ξ₁^i\) dans l'équation de bifurcation \eqref{eq:bifurcation 2a} est alors simplement~: \(3 λ₁ \dot{E}_{i j k}(λ₀)\).
+qui suggère d'introduire le tenseur \(E_{i j k}(λ)\) défini par l'équation \eqref{eq:20220524135619}. Le terme quadratique en \(ξ₁^i\) dans l'équation de bifurcation \eqref{eq:20220524134835} est alors simplement~: \(3 λ₁ \dot{E}_{i j k}(λ₀)\).
 
 \paragraph{Terme linéaire en \(ξ₁^i\)}Par des arguments similaires, on établit également que
 \begin{equation} \dot{ℰ₂}(λ₀ ; v_i, w_j) = - \tfrac{1}{2} ℰ₂
  (λ₀ ; w_i, w_j) = - \tfrac{1}{2} ℰ₂(λ₀ ; w_j,
   w_i) = \dot{ℰ₂}(λ₀ ; v_j, w_i) . \end{equation}
 On obtient donc l'expression suivante du terme linéaire en \(ξ₁^i\) dans
-l'équation de bifurcation \eqref{eq:bifurcation 2a}
+l'équation de bifurcation \eqref{eq:20220524134835}
 \begin{equation} \ddot{ℰ}₂(λ₀ ; v_i, v_j) + \tfrac{1}{2}
   [\dot{ℰ₂}(λ₀ ; v_i, w_j) + \dot{ℰ₂}
  (λ₀ ; v_j, w_i)], \end{equation}
-qui suggère d'introduire le tenseur \(F_{i j}(λ)\) défini par l'équation \eqref{eq:def Fij}. Le terme linéaire en \(ξ₁^i\) dans l'équation de bifurcation \eqref{eq:bifurcation 2a} est alors simplement~: \(3 λ₁^2 \dot{F}_{i j}(λ₀)\).
+qui suggère d'introduire le tenseur \(F_{i j}(λ)\) défini par l'équation \eqref{eq:20220524135643}. Le terme linéaire en \(ξ₁^i\) dans l'équation de bifurcation \eqref{eq:20220524134835} est alors simplement~: \(3 λ₁^2 \dot{F}_{i j}(λ₀)\).
 
 \paragraph{Synthèse~: simplification des équations
-\eqref{eq:bifurcation 1a} et \eqref{eq:bifurcation 2a}}En rassemblant les résultats précédents, on obtient tout d'abord pour l'équation \eqref{eq:bifurcation 2a}
+\eqref{eq:20220524133816} et \eqref{eq:20220524134835}}En rassemblant les résultats précédents, on obtient tout d'abord pour l'équation \eqref{eq:20220524134835}
 \begin{equation} 3 [E_{i j k}(λ₀) + λ₁ F_{i j}
  (λ₀)] ξ₂^j + 3 λ₂ F_{i j}(λ₀) ξ₁^j +
   E_{i j k l}(λ₀) \hspace{0.17em} ξ₁^j
   ξ₁^k ξ₁^l + 3 λ₁ \dot{E}_{i j k}
  (λ₀) \hspace{0.17em} ξ₁^j ξ₁^k + 3 λ₁^2 \dot{F}_{i
   j}(λ₀) ξ₁^j = 0, \end{equation}
-qui suggère d'introduire le tenseur \(A_{i j}(λ)\) défini par l'équation \eqref{eq:def Aij}. On obtient alors finalement l'équation de bifurcation \eqref{eq:bifurcation 2b}. Les tenseurs \(F_{i j}\) et \(E_{i j k}\) ainsi introduits permettent également de réécrire l'équation de bifurcation \eqref{eq:bifurcation 1b} sous la forme compacte \eqref{eq:bifurcation 1c}.
+qui suggère d'introduire le tenseur \(A_{i j}(λ)\) défini par l'équation \eqref{eq:20220524135705}. On obtient alors finalement l'équation de bifurcation \eqref{eq:bifurcation 2b}. Les tenseurs \(F_{i j}\) et \(E_{i j k}\) ainsi introduits permettent également de réécrire l'équation de bifurcation \eqref{eq:20220524134121} sous la forme compacte \eqref{eq:20220524135036}.
 
 \end{document}
 

@@ -316,64 +316,66 @@ réelles \((λ₁, u₁)\) et \((- λ₁, - u₁)\). \pdfmargincomment{Je ne sai
 \end{equation}
 Cette équation admet cette fois au plus \(\frac{3^m - 1}{2}\) paires de
 solutions réelles \((λ₂, u₁)\) et \((- λ₂, - u₁)\). \pdfmargincomment{Je ne sais
-pas non plus démontrer ce résultat sur le nombre de solutions réelles.}
+  pas non plus démontrer ce résultat sur le nombre de solutions réelles.}
+\pdfmargincomment{Note du 29/04/2022 – J'ai relu tous les calculs précédents. Il
+  reste à reprendre les calculs des développements asymptotiques de l'énergie et
+  de sa hessienne, pour tenir compte en particulier des factorielles introduites
+  maintenant dans les développements asymptotiques. Il faudrait également
+  introduire les tenseurs précédents dans les expressions de l'énergie et de sa
+  hessienne.}
 
-\paragraph{Note du 29/04/2022}J'ai relu tous les calculs précédents. Il reste à reprendre les calculs des développements asymptotiques de l'énergie et de sa hessienne, pour tenir compte en particulier des factorielles introduites maintenant dans les développements asymptotiques. Il faudrait également introduire les tenseurs précédents dans les expressions de l'énergie et de sa hessienne.
-
-Le développement limité suivant de l'énergie le long de la branche bifurquée est établi dans l'annexe~\ref{sec:DL energie}
-\begin{eqnarray}
- ℰ [u(η), λ(η)] & = & ℰ [u^{\ast} [λ
- (η)], λ(η)] + \tfrac{1}{6} λ₁ η^3 F_{i j}
- (λ₀) ξ₁^i ξ₁^j \nonumber\\
- & & \tfrac{1}{24} η^4 \{ E_{i j k l}
- (λ₀) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4 λ₁ \dot{E}_{i
-  j k}(λ₀) ξ₁^i ξ₁^j ξ₁^k
- \nonumber\\
- & & + 6 [λ₁^2 \dot{F}_{i j}
- (λ₀) + λ₂ F_{i j}(λ₀)] ξ₁^i ξ₁^j \}
- + o(η^4) . \label{eq:DL energie}
-\end{eqnarray}
-Si \(λ₁ \neq 0\), le premier terme non-nul du développement limité précédent est d'ordre 3
+Le développement limité suivant de l'énergie le long de la branche bifurquée est
+établi dans l'annexe~\ref{sec:20220525053434}
 \begin{equation}
- ℰ [u(η), λ(η)] =ℰ(u^{\ast} [λ
- (η)], λ(η)) + \tfrac{1}{6} λ₁ η^3 F_{i j}
- (λ₀) ξ₁^i ξ₁^j + o(η^3),
+  \label{eq:20220525053600}
+  \begin{aligned}[b]
+    ℰ[u(η), λ(η)] ={}
+    & ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{6} λ₁ η^3 F_{i j}(λ₀) ξ₁^i ξ₁^j\\
+    & + \tfrac{1}{24} η^4 \bigl\{E_{ijkl}(λ₀) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4λ₁ \dot{E}_{ijk}(λ₀) ξ₁^i ξ₁^j ξ₁^k\\
+    & + 6 \bigl[λ₁^2 \dot{F}_{ij}(λ₀) + λ₂ F_{ij}(λ₀)\bigr] ξ₁^i ξ₁^j\bigr\} + o(η^4).
+  \end{aligned}
+\end{equation}
+Si \(λ₁ ≠ 0\), le premier terme non-nul du développement limité précédent est
+d'ordre 3
+\begin{equation}
+ ℰ [u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{6} λ₁ η^3 F_{ij}(λ₀) ξ₁^i ξ₁^j + o(η^3),
 \end{equation}
 tandis que si \(λ₁ = 0\), le premier terme est d'ordre 4
 \begin{equation}
- ℰ [u(η), λ(η)] =ℰ(u^{\ast} [λ
- (η)], λ(η)) + \tfrac{1}{4} λ₂ η^4 F_{i j}
- (λ₀) ξ₁^i ξ₁^j + o(η^4) .
+ ℰ[u(η), λ(η)] = ℰ\{u^{\ast} [λ(η)], λ(η)\} + \tfrac{1}{4} λ₂ η^4 F_{ij}(λ₀) ξ₁^i ξ₁^j + o(η^4).
 \end{equation}
 \begin{center}
  ***
 \end{center}
 
-Pour analyser la stabilité de la branche bifurquée ainsi trouvée, il faut déterminer le signe de la hessienne de l'énergie. On peut d'ores et déjà remarquer que, sur la branche fondamentale(\(u₁ = u₂ = 0\)), en prenant \(η = λ - λ₀\)(\(λ₁ = 1\))
+Pour analyser la stabilité de la branche bifurquée ainsi trouvée, il faut
+déterminer le signe de la hessienne de l'énergie. On peut d'ores et déjà
+remarquer que, sur la branche fondamentale(\(u₁ = u₂ = 0\)), en prenant
+\(η = λ - λ₀\) (\(λ₁ = 1\))
 \begin{equation}
- ℰ₂(λ ; \hat{u}, \hat{v}) =ℰ₂(λ₀ ;
- \hat{u}, \hat{v}) +(λ - λ₀) \dot{ℰ}₂(λ₀ ;
- \hat{u}, \hat{v}) + o(λ - λ₀) .
+ ℰ₂(λ; \hat{u}, \hat{v}) = ℰ₂(λ₀; \hat{u}, \hat{v}) + \bigl(λ - λ₀\bigr) \dot{ℰ}₂(λ₀; \hat{u}, \hat{v}) + o(λ - λ₀).
 \end{equation}
-Dans ce qui suit, on supposera que \(\dot{ℰ}₂(λ₀) \neq 0\). Pour \(\hat{v}∈V\), l'égalité précédente s'écrit
+
+Dans ce qui suit, on supposera que \(\dot{ℰ}₂(λ₀) ≠ 0\). Pour \(\hat{v}∈V\),
+l'égalité précédente s'écrit
 \begin{equation}
- ℰ₂(λ₀ ; \hat{v}, \hat{v}) =(λ - λ₀)
- \dot{ℰ}₂(\hat{v}, \hat{v}) + o(λ - λ₀) .
+ ℰ₂(λ₀; \hat{v}, \hat{v}) = \bigl(λ - λ₀\bigr)\dot{ℰ}₂(\hat{v}, \hat{v}) + o(λ - λ₀).
 \end{equation}
-Comme la branche fondamentale est stable pour \(λ < λ₀\), on doit avoir \(\dot{ℰ}₂(λ₀ ; \hat{v}, \hat{v}) < 0\). La forme quadratique \(\dot{ℰ}₂(λ₀)\) est donc définie négative sur \(V\). Le développement limité de la hessienne de l'énergie le long de la branche bifurquée est établi dans l'annexe~\ref{sec:DL hessienne}. Pour tous \(\hat{u}, \hat{v}∈U\), on trouve
-\begin{eqnarray}
- ℰ_{, u u} [u(η), λ(η) ; \hat{u}, \hat{v}] &
- = & ℰ₂(λ₀ ; \hat{u}, \hat{v}) + η [ℰ₃
- (λ₀ ; u₁, \hat{u}, \hat{v})  + λ₁
- \dot{ℰ₂}(λ₀ ; \hat{u}, \hat{v})] \nonumber\\
- & & + \tfrac{1}{2} η^2 [ℰ₄(λ₀ ; u₁, u₁,
- \hat{u}, \hat{v}) +ℰ₃(λ₀ ; u₂, \hat{u},
- \hat{v}) + λ₂ \dot{ℰ₂}(λ₀ ; \hat{u}, \hat{v})
- \nonumber\\
- & & + 2 λ₁ \dot{ℰ₃}(λ₀ ; u₁,
- \hat{u}, \hat{v}) + λ₁^2 \ddot{ℰ₂}(λ₀ ; \hat{u},
- \hat{v}) ] + o(η^2) . \label{eq:DL hessienne}
-\end{eqnarray}
+
+Comme la branche fondamentale est stable pour \(λ < λ₀\), on doit avoir
+\(\dot{ℰ}₂(λ₀ ; \hat{v}, \hat{v}) < 0\). La forme quadratique \(\dot{ℰ}₂(λ₀)\)
+est donc définie négative sur \(V\). Le développement limité de la hessienne de
+l'énergie le long de la branche bifurquée est établi \pdfmarkupcomment{dans
+  l'annexe}{xref}. Pour tous \(\hat{u}, \hat{v}∈U\), on trouve
+\begin{equation}
+  \label{eq:DL hessienne}
+  \begin{aligned}[b]
+    ℰ_{, u u}[u(η), λ(η); \hat{u}, \hat{v}]
+    ={} & ℰ₂(λ₀ ; \hat{u}, \hat{v}) + η \bigl[ℰ₃(λ₀ ; u₁, \hat{u}, \hat{v})  + λ₁ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v})\bigr]\\
+    & + \tfrac{1}{2} η^2 \bigl[ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(λ₀; u₂, \hat{u}, \hat{v}) + λ₂ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v})\\
+    & + 2 λ₁ \dot{ℰ}₃(λ₀; u₁, \hat{u}, \hat{v}) + λ₁^2 \ddot{ℰ}₂(λ₀; \hat{u}, \hat{v}) \bigr] + o(η^2).
+  \end{aligned}
+\end{equation}\pdfmargincomment{Relecture 25/05/2022 05:48}
 Pour une analyse de stabilité, on doit prendre \(\hat{u} = \hat{v}\), soit
 \begin{eqnarray}
  ℰ_{, u u} [u(η), λ(η) ; \hat{u}, \hat{u}] &
@@ -824,7 +826,7 @@ et finalement
 \end{eqnarray}
 Les relations précédentes se simplifient notamment en tenant compte de ce que \(u₁∈V\) : \(ℰ₂(λ₀ ; u₁, u_i) = 0\) pour \(i = 1, 2, 3\). On trouve ainsi, pour \(f''(0)\) et \(f'''(0)\)
 \begin{equation}
- \label{eq:DL energie derivee 2nde} f''(0) = 0
+ \label{eq:20220525053600 derivee 2nde} f''(0) = 0
 \end{equation}
 et
 \begin{eqnarray}
@@ -947,13 +949,13 @@ En rassemblant les résultats précédents, on trouve pour \(f''''(0)\)
 \end{eqnarray*}
 et on observe que le dernier terme(en \(ξ₁^i ξ₂^j\)) est nul, du fait de l'équation de bifurcation~\eqref{eq:20220524135036}. On obtient donc
 \begin{equation}
- \label{eq:DL energie derivee 4ieme} f''''(0) = E_{i j k
+ \label{eq:20220525053600 derivee 4ieme} f''''(0) = E_{i j k
   l}(λ₀) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4 λ₁
  \dot{E}_{i j k}(λ₀) ξ₁^i ξ₁^j ξ₁^k + 6
  [λ₁^2 \dot{F}_{i j}(λ₀) + λ₂ F_{i
   j}(λ₀)] ξ₁^i ξ₁^j .
 \end{equation}
-Le développement limité~\eqref{eq:DL energie} est alors obtenu en rassemblant les résultats~\eqref{eq:DL energie derivee 2nde}, \eqref{eq:DL energie derivee 3ieme} et \eqref{eq:DL energie derivee 4ieme}.
+Le développement limité~\eqref{eq:20220525053600} est alors obtenu en rassemblant les résultats~\eqref{eq:20220525053600 derivee 2nde}, \eqref{eq:20220525053600 derivee 3ieme} et \eqref{eq:20220525053600 derivee 4ieme}.
 
 \begin{remark}
  On peut réécrire \(f''''(0)\) en tenant compte de l'équation de  bifurcation~\eqref{eq:bifurcation 2b}. En multipliant celle-ci par  \(ξ₁^i\), on trouve en effet

@@ -671,63 +671,49 @@ un point d'équilibre. En dérivant par rapport à \(λ\), on obtient
 
 En dérivant par rapport à \(η\) l'expression~\eqref{eq:20220107054629} de \(F\),
 on obtient successivement
-\begin{equation}
- ∂_{η}F(η, λ) = ℰ_{, u u}[u^{\ast}(λ) + U(η), λ; U'(η), \hat{u}],
-\end{equation}
-\begin{equation}
+\begin{gather}
+  ∂_{η}F(η, λ) = ℰ_{, u u}[u^{\ast}(λ) + U(η), λ; U'(η), \hat{u}],\\
   \begin{aligned}[b]
     ∂_{η η}^2 F(η, λ) ={}
     & ℰ_{, uuu}[u^{\ast}(λ) + U(η), λ; U'(η), U'(η), \hat{u}]\\
     & + ℰ_{, uu} [u^{\ast}(λ) + U(η), λ; U''(η), \hat{u}],
-  \end{aligned}
-\end{equation}
-\begin{equation}
+  \end{aligned}\\
   \begin{aligned}[b]
     ∂_{ηηη}^3 F(η, λ) ={}
     & ℰ_{, uuuu}[u^{\ast}(λ) + U(η), λ; U'(η), U'(η), U'(η), \hat{u}]\\
     & + 3ℰ_{, u u u}[u^{\ast}(λ) + U(η), λ; U'(η), U''(η), \hat{u}]\\
     & + ℰ_{, uu}[u^{\ast}(λ) + U(η), λ; U'''(η), \hat{u}],
   \end{aligned}
-\end{equation} \pdfmargincomment{Relecture 31/05/2022 08:11}
+\end{gather}
 soit, en \(η = 0\)
-\begin{equation}
-  ∂_{η}F(0, λ) = ℰ₂(λ; u₁, \hat{u}),
-\end{equation}
-\begin{equation}
- ∂_{ηη}^2 F(0, λ) = ℰ₃(λ; u₁, u₁, \hat{u}) + ℰ₂(λ; u₂, \hat{u}),
-\end{equation}
-\begin{equation}
- ∂_{ηηη}^3 F(0, λ) = ℰ₄(λ; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ; u₁, u₂, \hat{u}) + ℰ₂(λ; u₃, \hat{u}).
-\end{equation}
+\begin{gather}
+  ∂_{η}F(0, λ) = ℰ₂(λ; u₁, \hat{u}),\\
+  ∂_{ηη}^2 F(0, λ) = ℰ₃(λ; u₁, u₁, \hat{u}) + ℰ₂(λ; u₂, \hat{u}),\\
+  ∂_{ηηη}^3 F(0, λ) = ℰ₄(λ; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ; u₁, u₂, \hat{u}) + ℰ₂(λ; u₃, \hat{u}).
+\end{gather}
 
 Les dérivées croisées de \(F\) en \((0, λ)\) s'obtiennent par simple dérivation
 des relations précédentes par rapport à \(λ\)
-\begin{equation}
- ∂_{ηλ}^2 F(0, λ) = \dot{ℰ₂}(λ; u₁, \hat{u}),
-\end{equation}
-\begin{equation}
- ∂_{ηηλ}^3 F(0, λ) = \dot{ℰ₃}(λ; u₁, u₁, \hat{u}) + \dot{ℰ₂}(λ; u₂, \hat{u}),
-\end{equation}
-\begin{equation}
- ∂_{ηλλ}^3 F(0, λ) = \ddot{ℰ₂}(λ; u₁, \hat{u}) .
-\end{equation}
+\begin{gather}
+  ∂_{ηλ}^2 F(0, λ) = \dot{ℰ}₂(λ; u₁, \hat{u}),\\
+  ∂_{ηηλ}^3 F(0, λ) = \dot{ℰ}₃(λ; u₁, u₁, \hat{u}) + \dot{ℰ₂}(λ; u₂, \hat{u}),\\
+  ∂_{ηλλ}^3 F(0, λ) = \ddot{ℰ}₂(λ; u₁, \hat{u}).
+\end{gather}
+
 En insérant les résultats précédentes dans les relations
 générales~\eqref{eq:20220107060454}--\eqref{eq:20220107060500}, on trouve alors
 les expressions suivantes des dérivées successives de \(f\) en \(η = 0\)
-\begin{equation}
- f'(0) =ℰ₂(λ₀; u₁, \hat{u}),
-\end{equation}
-\begin{equation}
- f''(0) = ℰ₃(λ₀; u₁, u₁, \hat{u}) + 2 λ₁ \dot{ℰ₂}(λ₀; u₁, \hat{u}) +ℰ₂(λ₀; u₂, \hat{u}),
-\end{equation}
-\begin{equation}
+\begin{gather}
+  f'(0) = ℰ₂(λ₀; u₁, \hat{u}),\\
+  f''(0) = ℰ₃(λ₀; u₁, u₁, \hat{u}) + 2 λ₁ \dot{ℰ}₂(λ₀; u₁, \hat{u}) +ℰ₂(λ₀; u₂, \hat{u}),\\
   \begin{aligned}[b]
     f'''(0) ={}
     & ℰ₄(λ₀; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ₀; u₁, u₂, \hat{u}) + ℰ₂(λ₀ ; u₃, \hat{u})\\
-    & + 3 λ₁ [\dot{ℰ}₂₃(λ₀; u₁, u₁, \hat{u}) + \dot{ℰ}₂(λ₀; u₂, \hat{u})]\\
+    & + 3 λ₁ [\dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + \dot{ℰ}₂(λ₀; u₂, \hat{u})]\\
     & + 3 λ₁^2 \ddot{ℰ}₂(λ₀; u₁, \hat{u}) + 3 λ₂ \dot{ℰ}₂(λ₀; u₁, \hat{u}) .
   \end{aligned}
-\end{equation}
+\end{gather}
+
 On en déduit finalement le développement limité à l'ordre 3 en \(η\) du résidu
 \begin{equation}
   \label{eq:20220107080901}
@@ -735,12 +721,12 @@ On en déduit finalement le développement limité à l'ordre 3 en \(η\) du ré
     ℰ_{, u}[u(η), λ(η)] ={} & η ℰ₂(λ₀; u₁, \hat{u}) \\
     & + \tfrac{1}{2} η^2 [ℰ₃(λ₀; u₁, u₁, \hat{u}) + 2 λ₁ \dot{ℰ}₂(λ₀; u₁, \hat{u}) + ℰ₂(λ₀; u₂, \hat{u})]\\
     & + \tfrac{1}{6} η^3 \bigl\{ ℰ₄(λ₀; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ₀; u₁, u₂, \hat{u}) + ℰ₂(λ₀; u₃, \hat{u})\\
-    & + 3 λ₁ \bigl[\dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + \dot{ℰ}₂(λ₀; u₂, \hat{u})\bigr] + 3 λ₁^2 \ddot{ℰ}₂(λ₀; u₁, \hat{u}) \\
-    &  + 3 λ₂ \dot{ℰ}₂(λ₀ ; u₁, \hat{u}) \bigr\} + o(η^3) .
+    & + 3 λ₁ \bigl[\dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + \dot{ℰ}₂(λ₀; u₂, \hat{u})\bigr] + 3 λ₁^2 \ddot{ℰ}₂(λ₀; u₁, \hat{u})\\
+    &  + 3 λ₂ \dot{ℰ}₂(λ₀ ; u₁, \hat{u}) \bigr\} + o(η^3).
   \end{aligned}
 \end{equation}
 
-\subsection{Développement limité de l'énergie}}
+\subsection{Développement limité de l'énergie}
 
 On s'intéresse ici à l'écart d'énergie, pour un chargement \(λ\) donné, entre la
 branche bifurquée et la branche fondamentale, soit

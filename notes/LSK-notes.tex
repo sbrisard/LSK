@@ -272,7 +272,7 @@ forme suivante
   \tfrac{1}{2} E_{ijk}(λ₀) ξ₁^j ξ₁^k + λ₁ F_{ij}(λ₀) ξ₁^j = 0,
 \end{equation}
 \begin{equation}
-  \label{eq:bifurcation 2b}
+  \label{eq:20220601070917}
   \tfrac{1}{3} E_{ijkl}(λ₀) ξ₁^j ξ₁^k ξ₁^l + λ₂ F_{ij}(λ₀) ξ₁^j + A_{ij}(λ₀) ξ₂^j + λ₁ \dot{A}_{ij}(λ₀) ξ₁^j = 0,
 \end{equation}
 où les tenseurs \(E_{i j k}\), \(E_{i j k l}\), \(F_{i j}\) et \(A_{i j}\) sont
@@ -309,7 +309,7 @@ réelles \((λ₁, u₁)\) et \((- λ₁, - u₁)\). \pdfmargincomment{Je ne sai
 \paragraph{Si la forme \(ℰ₃(λ₀)\) est nulle sur \(V\)} L'équation
 \eqref{eq:20220524133816} conduit nécessairement à \(λ₁ = 0\), puisque
 \(\dot{ℰ}₂(λ₀)\) est définie négative. Dès lors, l'équation
-\eqref{eq:bifurcation 2b} s'écrit \pdfmargincomment{Expliquer pourquoi la forme
+\eqref{eq:20220601070917} s'écrit \pdfmargincomment{Expliquer pourquoi la forme
   quadratique ℰ̇₂(λ₀) bien définie négative}
 \begin{equation}
  \tfrac{1}{3} E_{ijkl}(λ₀) ξ₁^j ξ₁^k ξ₁^l + λ₂ F_{ij}(λ₀) ξ₁^j = 0.
@@ -899,7 +899,7 @@ et \eqref{eq:20220601055512}.
 
 \begin{remark}
   On peut réécrire \(f''''(0)\) en tenant compte de l'équation de
-  bifurcation~\eqref{eq:bifurcation 2b}. En multipliant celle-ci par \(ξ₁^i\),
+  bifurcation~\eqref{eq:20220601070917}. En multipliant celle-ci par \(ξ₁^i\),
   on trouve en effet
  \begin{equation*}
    \begin{aligned}[b]
@@ -1075,68 +1075,85 @@ soit, en prenant \(\hat{u} = \hat{v}_i∈V\) et en introduisant les développeme
 de \(u₁\), \(u₂\), \(x₀ \) et \(x₁\)
 \begin{equation}
   ℰ₄ (λ₀; v_i, v_j, v_k, v_l) χ₀^j ξ_{1}^k ξ₁^l + 2ℰ₃(λ₀; u₁, x₁, v_i) +ℰ₃(λ₀ ; u₂, x₀, \hat{u}) + λ₂ \dot{ℰ₂}(λ₀; x₀, \hat{u})
-\end{equation}\pdfmargincomment{Relecture 01/06/2022 06:12}
-
-\section{Simplification des équations de
-bifurcation}\label{sec:20220524134954}
-
-Dans ce paragraphe, on simplifie les équations de bifurcation \eqref{eq:20220524134121} et \eqref{eq:20220524134835} pour obtenir les formes \eqref{eq:20220524135036} et \eqref{eq:bifurcation 2b}. On commence par symétriser les termes cubique, quadratique et linéaire en \(ξ₁^i\) de
-l'équation \eqref{eq:bifurcation 2b}.
-
-\paragraph{Terme cubique en \(ξ₁^i\)}On observe que
-\begin{equation} ℰ₃(λ₀; v_i, v_j, w_{k l}) ξ₁^j ξ₁^k
-  ξ₁^l = \text{} \tfrac{1}{3} [ℰ₃(λ₀; v_i, v_j, w_{k
-  l}) +ℰ₃(λ₀; v_i, v_k, w_{j
-  l}) +ℰ₃(λ₀; v_i, v_l, w_{j k}] ξ₁^j ξ₁^k
-  ξ₁^l . \end{equation}
-On obtient donc l'expression suivante du terme cubique en \(ξ₁^i\) dans l'équation de bifurcation \eqref{eq:20220524134835}
-\begin{equation} ℰ₄(λ₀; v_i, v_j, v_k, v_l) +ℰ₃(λ₀ ;
-  v_i, v_j, w_{k l}) +ℰ₃(λ₀; v_i, v_k, w_{j
-  l}) +ℰ₃(λ₀; v_i, v_l, w_{j k}), \end{equation}
-qui suggère d'introduire le \ \(E_{i j k l}(λ)\) défini par l'équation \eqref{eq:20220524135553}. Le terme cubique en \(ξ₁^i\) dans l'équation de bifurcation \eqref{eq:20220524134835} est alors simplement~: \(E_{i j k l}(λ₀)\).
-
-\paragraph{Terme quadratique en \(ξ₁^i\)}On observe de même que
-\begin{equation} ℰ₃(λ₀; v_i, v_j, w_k) ξ₁^j ξ₁^k = \tfrac{1}{2}
-  [ℰ₃(λ₀; v_i, v_j, w_k) +ℰ₃(λ₀; v_i,
-  w_j, v_k)] ξ₁^j ξ₁^k . \end{equation}
-En prenant tout d'abord \(\widehat{w} = w_k\) dans le problème variationnel \eqref{eq:20220519164523}, on trouve
-\begin{equation} ℰ₃(λ₀; v_i, v_j, w_k) = -ℰ₂(λ₀ ;
-  w_{i j}, w_k), \end{equation}
-puis, en prenant cette fois \(\hat{w} = w_{i j}\) dans le problème variationnel \eqref{eq:20220524134525}
-\begin{equation} ℰ₂(λ₀; w_k, w_{i j}) = - 2 \dot{ℰ₂}
- (λ₀; v_k, w_{i j}), \end{equation}
-soit finalement
-\begin{equation} ℰ₃(λ₀; v_i, v_j, w_k) ξ₁^j ξ₁^k =
-  [\dot{ℰ}₂(λ₀; v_j, w_{i k}) +
-  \dot{ℰ}₂(λ₀; v_k, w_{i j})] ξ₁^j ξ₁^k .
 \end{equation}
-On obtient donc l'expression suivante du terme quadratique en \(ξ₁^i\) dans l'équation de bifurcation \eqref{eq:20220524134835}
-\begin{equation} 3 λ₁ [\dot{ℰ}₃(λ₀; v_i, v_j, v_k) +
-  \dot{ℰ₂}(λ₀; v_i, w_{j k}) +
-  \dot{ℰ}₂(λ₀; v_j, w_{i k}) +
-  \dot{ℰ}₂(λ₀; v_k, w_{i j})], \end{equation}
-qui suggère d'introduire le tenseur \(E_{i j k}(λ)\) défini par l'équation \eqref{eq:20220524135619}. Le terme quadratique en \(ξ₁^i\) dans l'équation de bifurcation \eqref{eq:20220524134835} est alors simplement~: \(3 λ₁ \dot{E}_{i j k}(λ₀)\).
 
-\paragraph{Terme linéaire en \(ξ₁^i\)}Par des arguments similaires, on établit également que
-\begin{equation} \dot{ℰ₂}(λ₀; v_i, w_j) = - \tfrac{1}{2} ℰ₂
- (λ₀; w_i, w_j) = - \tfrac{1}{2} ℰ₂(λ₀; w_j,
-  w_i) = \dot{ℰ₂}(λ₀; v_j, w_i) . \end{equation}
+\section{Simplification des équations de bifurcation}
+\label{sec:20220524134954}
+
+Dans ce paragraphe, on simplifie les équations de bifurcation
+\eqref{eq:20220524134121} et \eqref{eq:20220524134835} pour obtenir les formes
+\eqref{eq:20220524135036} et \eqref{eq:20220601070917}. On commence par
+symétriser les termes cubique, quadratique et linéaire en \(ξ₁^i\) de l'équation
+\eqref{eq:20220601070917}.
+
+\paragraph{Terme cubique en \(ξ₁^i\)} On observe que
+\begin{equation}
+  ℰ₃(λ₀; v_i, v_j, w_{k l}) ξ₁^j ξ₁^k ξ₁^l = \tfrac{1}{3} \bigl[ℰ₃(λ₀; v_i, v_j, w_{k l}) + ℰ₃(λ₀; v_i, v_k, w_{j l}) + ℰ₃(λ₀; v_i, v_l, w_{j k})\bigr] ξ₁^j ξ₁^k ξ₁^l.
+\end{equation}
+On obtient donc l'expression suivante du terme cubique en \(ξ₁^i\) dans
+l'équation de bifurcation \eqref{eq:20220524134835}
+\begin{equation}
+  ℰ₄(λ₀; v_i, v_j, v_k, v_l) + ℰ₃(λ₀ ; v_i, v_j, w_{k l}) + ℰ₃(λ₀; v_i, v_k, w_{j l}) + ℰ₃(λ₀; v_i, v_l, w_{j k}),
+\end{equation}
+qui suggère d'introduire le tenseur \(E_{ijkl}(λ)\) défini par l'équation
+\eqref{eq:20220524135553}. Le terme cubique en \(ξ₁^i\) dans l'équation de
+bifurcation \eqref{eq:20220524134835} est alors simplement~: \(E_{ijkl}(λ₀)\).
+
+\paragraph{Terme quadratique en \(ξ₁^i\)} On observe de même que
+\begin{equation}
+  ℰ₃(λ₀; v_i, v_j, w_k) ξ₁^j ξ₁^k = \tfrac{1}{2} \bigl[ℰ₃(λ₀; v_i, v_j, w_k) + ℰ₃(λ₀; v_i, w_j, v_k)\bigr] ξ₁^j ξ₁^k.
+\end{equation}
+
+En prenant tout d'abord \(\hat{w} = w_k\) dans le problème variationnel
+\eqref{eq:20220519164523}, on trouve
+\begin{equation}
+  ℰ₃(λ₀; v_i, v_j, w_k) = -ℰ₂(λ₀ ; w_{i j}, w_k),
+\end{equation}
+puis, en prenant cette fois \(\hat{w} = w_{i j}\) dans le problème variationnel
+\eqref{eq:20220524134525}
+\begin{equation}
+  ℰ₂(λ₀; w_k, w_{i j}) = - 2 \dot{ℰ}₂(λ₀; v_k, w_{i j}),
+\end{equation}
+soit finalement
+\begin{equation}
+  ℰ₃(λ₀; v_i, v_j, w_k) ξ₁^j ξ₁^k = \bigl[\dot{ℰ}₂(λ₀; v_j, w_{i k}) + \dot{ℰ}₂(λ₀; v_k, w_{i j})\bigr] ξ₁^j ξ₁^k.
+\end{equation}
+On obtient donc l'expression suivante du terme quadratique en \(ξ₁^i\) dans
+l'équation de bifurcation \eqref{eq:20220524134835}
+\begin{equation}
+  3 λ₁ [\dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ}₂(λ₀; v_i, w_{j k}) + \dot{ℰ}₂(λ₀; v_j, w_{i k}) + \dot{ℰ}₂(λ₀; v_k, w_{i j})],
+\end{equation}
+qui suggère d'introduire le tenseur \(E_{ijk}(λ)\) défini par l'équation
+\eqref{eq:20220524135619}. Le terme quadratique en \(ξ₁^i\) dans l'équation de
+bifurcation \eqref{eq:20220524134835} est alors simplement~:
+\(3 λ₁ \dot{E}_{ijk}(λ₀)\).
+
+\paragraph{Terme linéaire en \(ξ₁^i\)} Par des arguments similaires, on établit
+également que
+\begin{equation}
+  \dot{ℰ}₂(λ₀; v_i, w_j) = - \tfrac{1}{2} ℰ₂(λ₀; w_i, w_j) = - \tfrac{1}{2} ℰ₂(λ₀; w_j, w_i) = \dot{ℰ}₂(λ₀; v_j, w_i).
+\end{equation}
 On obtient donc l'expression suivante du terme linéaire en \(ξ₁^i\) dans
 l'équation de bifurcation \eqref{eq:20220524134835}
-\begin{equation} \ddot{ℰ}₂(λ₀; v_i, v_j) + \tfrac{1}{2}
-  [\dot{ℰ₂}(λ₀; v_i, w_j) + \dot{ℰ₂}
- (λ₀; v_j, w_i)], \end{equation}
-qui suggère d'introduire le tenseur \(F_{i j}(λ)\) défini par l'équation \eqref{eq:20220524135643}. Le terme linéaire en \(ξ₁^i\) dans l'équation de bifurcation \eqref{eq:20220524134835} est alors simplement~: \(3 λ₁^2 \dot{F}_{i j}(λ₀)\).
+\begin{equation}
+  \ddot{ℰ}₂(λ₀; v_i, v_j) + \tfrac{1}{2}\bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr],
+\end{equation}
+qui suggère d'introduire le tenseur \(F_{i j}(λ)\) défini par l'équation
+\eqref{eq:20220524135643}. Le terme linéaire en \(ξ₁^i\) dans l'équation de
+bifurcation \eqref{eq:20220524134835} est alors simplement~:
+\(3 λ₁^2 \dot{F}_{i j}(λ₀)\).
 
-\paragraph{Synthèse~: simplification des équations
-\eqref{eq:20220524133816} et \eqref{eq:20220524134835}}En rassemblant les résultats précédents, on obtient tout d'abord pour l'équation \eqref{eq:20220524134835}
-\begin{equation} 3 [E_{i j k}(λ₀) + λ₁ F_{i j}
- (λ₀)] ξ₂^j + 3 λ₂ F_{i j}(λ₀) ξ₁^j +
-  E_{i j k l}(λ₀) \hspace{0.17em} ξ₁^j
-  ξ₁^k ξ₁^l + 3 λ₁ \dot{E}_{i j k}
- (λ₀) \hspace{0.17em} ξ₁^j ξ₁^k + 3 λ₁^2 \dot{F}_{i
-  j}(λ₀) ξ₁^j = 0, \end{equation}
-qui suggère d'introduire le tenseur \(A_{i j}(λ)\) défini par l'équation \eqref{eq:20220524135705}. On obtient alors finalement l'équation de bifurcation \eqref{eq:bifurcation 2b}. Les tenseurs \(F_{i j}\) et \(E_{i j k}\) ainsi introduits permettent également de réécrire l'équation de bifurcation \eqref{eq:20220524134121} sous la forme compacte \eqref{eq:20220524135036}.
+\paragraph{Synthèse~: simplification des équations \eqref{eq:20220524133816} et
+  \eqref{eq:20220524134835}} En rassemblant les résultats précédents, on obtient
+tout d'abord pour l'équation \eqref{eq:20220524134835}
+\begin{equation}
+  3 [E_{i j k}(λ₀) + λ₁ F_{i j} (λ₀)] ξ₂^j + 3 λ₂ F_{i j}(λ₀) ξ₁^j + E_{i j k l}(λ₀) ξ₁^j ξ₁^k ξ₁^l + 3 λ₁ \dot{E}_{i j k} (λ₀) ξ₁^j ξ₁^k + 3 λ₁^2 \dot{F}_{i j}(λ₀) ξ₁^j = 0,
+\end{equation}
+qui suggère d'introduire le tenseur \(A_{i j}(λ)\) défini par l'équation
+\eqref{eq:20220524135705}. On obtient alors finalement l'équation de bifurcation
+\eqref{eq:20220601070917}. Les tenseurs \(F_{i j}\) et \(E_{i j k}\) ainsi
+introduits permettent également de réécrire l'équation de bifurcation
+\eqref{eq:20220524134121} sous la forme compacte \eqref{eq:20220524135036}.
 
 \end{document}
 

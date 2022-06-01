@@ -1,9 +1,11 @@
 \newcommand{\sbtitle}{Notes relatives à la méthode asymptotique de Lyapunov–Schmidt–Koiter}
 \newcommand{\sbauthor}{Sébastien Brisard}
+\newcommand{\sbemail}{sebastien.brisard@univ-eiffel.fr}
 \newcommand{\sbaddress}{Univ Gustave Eiffel, Ecole des Ponts, IFSTTAR, CNRS, Navier, F-77454 Marne-la-Vall\'ee, France}
 \newcommand{\sbsubject}{Note bibliographique}
 
-\documentclass[12pt, final]{amsart}
+\documentclass[12pt, final]{scrartcl}
+\setkomafont{disposition}{\rmfamily}
 
 \usepackage{polyglossia}
 \setdefaultlanguage{french}
@@ -26,22 +28,22 @@
 \usepackage[color={1 1 0}]{pdfcomment}
 
 \usepackage{unicode-math}
-\setmainfont{XITS}
-\setmathfont{XITS Math}
+% \setmainfont{XITS}
+% \setmathfont{XITS Math}
+\setmainfont{Asana Math}
+\setmathfont{Asana Math}
 
 \newcommand{\reals}{\mathbb{R}}
 
 \begin{document}
 \title{\sbtitle}
-\author{\sbauthor}
-\address{\sbaddress}
-\email{sebastien.brisard@univ-eiffel}
+\author{\sbauthor\thanks{\sbaddress~--- \sbemail}}
+\maketitle
 
 \begin{abstract}
  blabla
 \end{abstract}
 
-\maketitle
 
 \section{Notations}
 

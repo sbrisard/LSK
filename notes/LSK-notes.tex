@@ -255,17 +255,17 @@ En introduisant les expressions~\eqref{eq:20220524133944} et
 \eqref{eq:20220524134613} dans l'équation~\eqref{eq:res3} et en prenant de plus
 \(\hat{u} = v_i\), on obtient alors les équations suivantes
 \begin{equation}
+  \label{eq:20211112183220}
   \begin{aligned}[b]
     3[ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j)] ξ₂^j + 3λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j &\\
     + [ℰ₄(λ₀; v_i, v_j, v_k, v_l) + 3ℰ₃(λ₀; v_i, v_j, w_{kl})] ξ₁^j ξ₁^k ξ₁^l &\\
     + 3λ₁ [\dot{ℰ}₃(λ₀; v_i, v_j, v_k) + ℰ₃(λ₀; v_i, v_j, w_k) + \dot{ℰ₂}(λ₀; v_i, w_{jk})] ξ₁^j ξ₁^k&\\
     + 3λ₁^2 [\ddot{ℰ}₂(λ₀; v_i, v_j) + \dot{ℰ}₂(λ₀ ; v_i, w_j)] ξ₁^j &= 0,
   \end{aligned}
-  \label{eq:20220524134835}
 \end{equation}
 qui permet en principe de déterminer \(λ₂\) ainsi que les \(ξ₂^i\). On montre
 dans le paragraphe \ref{sec:20220524134954} que les équations
-\eqref{eq:20220524134121} et \eqref{eq:20220524134835} peuvent s'écrire sous la
+\eqref{eq:20220524134121} et \eqref{eq:20211112183220} peuvent s'écrire sous la
 forme suivante
 \begin{equation}
   \label{eq:20220524135036}
@@ -283,10 +283,8 @@ définis comme suit \pdfmargincomment{Je ne suis pas sûr du terme faisant
   E_{ijk}(λ) = ℰ₃(λ; v_i, v_j, v_k) + ℰ₂(λ; v_i, w_{jk}) + ℰ₂(λ; v_j, w_{ik}) + ℰ₂(λ ; v_k, w_{ij}),
 \end{equation}
 \begin{equation}
- \label{eq:20220524135553} E_{i j k l}(λ)
- =ℰ₄(λ ; v_i, v_j, v_k, v_l) +ℰ₃(λ ;
- v_i, v_j, w_{k l}) +ℰ₃(λ ; v_i, v_k, w_{l
-  j}) +ℰ₃(λ ; v_i, v_l, w_{j k}),
+  \label{eq:20220524135553}
+  E_{i j k l}(λ) = ℰ₄(λ ; v_i, v_j, v_k, v_l) + ℰ₃(λ ; v_i, v_j, w_{k l}) + ℰ₃(λ ; v_i, v_k, w_{l j}) + ℰ₃(λ ; v_i, v_l, w_{j k}),
 \end{equation}
 \begin{equation}
   \label{eq:20220524135643}
@@ -420,7 +418,8 @@ sur \(V\), alors le développement limité précédent s'écrit
   \end{aligned}
 \end{equation}
 
-Compte-tenu de la relation~\eqref{eq20211112183220}, on trouve pour \(\hat{v} = u₁\) (\(\hat{ξ}^i = ξ₁^i\))
+Compte-tenu de la relation~\eqref{eq:20211112183220}, on trouve pour
+\(\hat{v} = u₁\) (\(\hat{ξ}^i = ξ₁^i\))
 \begin{equation}
  ℰ_{, uu} [u(η), λ(η); u₁, u₁] = -λ₁ η \dot{ℰ}₂(λ₀; u₁, u₁) + o(η).
 \end{equation}
@@ -431,81 +430,6 @@ Si \(λ₁ \neq 0\), l'expression précédente peut également s'écrire
 qui est négative pour \(λ < λ₀\): la branche bifurquée est instable sous la
 charge critique. Il reste alors à étudier le signe de la hessienne de la branche
 bifurquée au-delà de la charge critique (\(λ > λ₀\)).
-
-\section{Cas d'un mode de flambement simple(\(m = 1\))}
-
-Lorsque \(m = \dim V = 1\), la base \(v₁, \ldots, v_m\) est réduite au seul vecteur \(v₁\) et \(u₁\) est parallèle à ce vecteur. Comme \(\lVert u₁ \rVert = 1\), on a donc nécessairement \(u₁ = v₁\)(quitte à changer \(η\) en \(- η\)). L'équation de bifurcation~\eqref{eq20220216140121} s'écrit alors
-\begin{equation}
-  \label{eq:20220203144712}
-  ℰ_{111}(λ₀) + 2 λ₁ \dot{ℰ}_{11}(λ₀) = 0,
-  \quad \text{soit} \quad
-  λ₁ = - \frac{ℰ_{111}(λ₀)}{2 \dot{ℰ}_{11}(λ₀)},
-\end{equation}
-où on remarque que le quotient a un sens, puisque \(\dot{ℰ₂}(λ₀)\) est définie
-négative sur \(V\). On trouve donc les développements limités
-\begin{equation}
-  λ = λ₀ + λ₁ η + o(η)
-  \quad \text{et} \quad
-  u = u^{\ast}(λ) + η v₁ + o(η),
-\end{equation}
-soit finalement, en éliminant \(η\)
-\begin{equation}
- λ = λ₀ - \frac{ξ ℰ_{111}(λ₀)}{2 \dot{ℰ}_{11}(λ₀)} + o(ξ),
- \quad \text{avec} \quad
- ξ = 〈u(λ) - u^{\ast}(λ), v₁〉 .
-\end{equation}
-
-Pour déterminer la stabilité de la branche bifurquée, on calcule la hessienne en
-\((v₁, v₁)\). L'équation~\eqref{eq:20220203144500} s'écrit
-\begin{equation}
- ℰ_{, uu} [u(η), λ(η); v₁, v₁] = η \bigl[ℰ_{111}(λ₀) + λ₁ \dot{ℰ}_{1 1}(λ₀)\bigr] + o(η),
-\end{equation}
-soit, en substituant l'équation~\eqref{eq:20220203144712}
-\begin{equation}
- ℰ_{, uu} [u(η), λ(η); v₁, v₁] = - λ₁ η \dot{ℰ}_{11}(λ₀) + o(η).
-\end{equation}
-
-Ce développement ne permet de conclure que si le terme linéaire est non-nul,
-soit \(ℰ_{111}(λ₀) ≠ 0\) [voir Éq.~\eqref{eq:20220203144712}]. Dans ce cas, le
-développement asymptotique précédent s'écrit également
-\begin{equation}
- ℰ_{, uu} [u(η), λ(η); v₁, v₁] = - (λ - λ₀) \dot{ℰ}_{11}(λ₀) + o(λ - λ₀).
-\end{equation}
-Comme \(\dot{ℰ}₂(λ₀)\) est définie négative, la branche bifurquée est
-\emph{instable} pour \(λ < λ₀\) et \emph{stable} pour \(λ > λ₀\) lorsque
-\(ℰ_{111}(λ₀) ≠ 0\).
-
-Supposons maintenant que \(ℰ_{111}(λ₀) = 0\)~; alors \(λ₁ = 0\) et il faut
-calculer au moins un terme supplémentaire dans le développement limité de la
-Hessienne. L'équation de bifurcation~\eqref{eq:20220216141706} s'écrit
-\begin{equation}
-  \label{eq:20220217164528}
-  ℰ_{1111}(λ₀) + 6ℰ₃(λ₀; v₁, v₁, u₂) + 6 λ₂ \dot{ℰ}_{11}(λ₀) = 0.
-\end{equation}
-
-En introduisant le développement~\eqref{eq:20220124135324} de \(u₂\) et en
-utilisant le problème variationnel~\eqref{eq:20211221155859}
-\begin{equation}
- u₂ = ξ₂ v₁ + w_{11} + λ₁ w₁,
-\end{equation}
-donc
-\begin{equation}
- ℰ₃(λ₀; v₁, v₁, u₂) = ℰ₃(λ₀; v₁, v₁, w_{11}) = - 2ℰ₂(λ₀; w_{11}, w_{11})
-\end{equation}
-soit finalement
-\begin{equation}
-  λ₂ = - \frac{ℰ_{1111}(λ₀) - 12ℰ₂(λ₀; w_{11}, w_{11})}{6\dot{ℰ}_{11}(λ₀)},
-\end{equation}
-le quotient ayant une nouvelle fois un sens. Le développement
-asymptotique~\eqref{eq20211115082025} de la Hessienne s'écrit alors, en tenant
-compte de l'Éq.~\eqref{eq:20220217164528}
-\begin{equation}
-  \begin{aligned}[b]
-    ℰ_{, uu} [u(η), λ(η); v₁, v₁] ={}
-    & \tfrac{1}{2} η^2 [ℰ_{1111}(λ₀) + 2ℰ₃(λ₀; v₁, v₁, u₂) + 2 λ₂ \dot{ℰ}_{11}(λ₀)] + o(η^2)\\
-    = & \tfrac{5}{12} η^2 ℰ_{1111}(λ₀) + o(η^2).
-  \end{aligned}
-\end{equation}
 
 \section{Propriétés des formes bilinéaires symétriques, positives}
 
@@ -727,6 +651,7 @@ On en déduit finalement le développement limité à l'ordre 3 en \(η\) du ré
 \end{equation}
 
 \subsection{Développement limité de l'énergie}
+\label{sec:20220525053434}
 
 On s'intéresse ici à l'écart d'énergie, pour un chargement \(λ\) donné, entre la
 branche bifurquée et la branche fondamentale, soit
@@ -1081,7 +1006,7 @@ de \(u₁\), \(u₂\), \(x₀ \) et \(x₁\)
 \label{sec:20220524134954}
 
 Dans ce paragraphe, on simplifie les équations de bifurcation
-\eqref{eq:20220524134121} et \eqref{eq:20220524134835} pour obtenir les formes
+\eqref{eq:20220524134121} et \eqref{eq:20211112183220} pour obtenir les formes
 \eqref{eq:20220524135036} et \eqref{eq:20220601070917}. On commence par
 symétriser les termes cubique, quadratique et linéaire en \(ξ₁^i\) de l'équation
 \eqref{eq:20220601070917}.
@@ -1091,13 +1016,13 @@ symétriser les termes cubique, quadratique et linéaire en \(ξ₁^i\) de l'éq
   ℰ₃(λ₀; v_i, v_j, w_{k l}) ξ₁^j ξ₁^k ξ₁^l = \tfrac{1}{3} \bigl[ℰ₃(λ₀; v_i, v_j, w_{k l}) + ℰ₃(λ₀; v_i, v_k, w_{j l}) + ℰ₃(λ₀; v_i, v_l, w_{j k})\bigr] ξ₁^j ξ₁^k ξ₁^l.
 \end{equation}
 On obtient donc l'expression suivante du terme cubique en \(ξ₁^i\) dans
-l'équation de bifurcation \eqref{eq:20220524134835}
+l'équation de bifurcation \eqref{eq:20211112183220}
 \begin{equation}
   ℰ₄(λ₀; v_i, v_j, v_k, v_l) + ℰ₃(λ₀ ; v_i, v_j, w_{k l}) + ℰ₃(λ₀; v_i, v_k, w_{j l}) + ℰ₃(λ₀; v_i, v_l, w_{j k}),
 \end{equation}
 qui suggère d'introduire le tenseur \(E_{ijkl}(λ)\) défini par l'équation
 \eqref{eq:20220524135553}. Le terme cubique en \(ξ₁^i\) dans l'équation de
-bifurcation \eqref{eq:20220524134835} est alors simplement~: \(E_{ijkl}(λ₀)\).
+bifurcation \eqref{eq:20211112183220} est alors simplement~: \(E_{ijkl}(λ₀)\).
 
 \paragraph{Terme quadratique en \(ξ₁^i\)} On observe de même que
 \begin{equation}
@@ -1119,13 +1044,13 @@ soit finalement
   ℰ₃(λ₀; v_i, v_j, w_k) ξ₁^j ξ₁^k = \bigl[\dot{ℰ}₂(λ₀; v_j, w_{i k}) + \dot{ℰ}₂(λ₀; v_k, w_{i j})\bigr] ξ₁^j ξ₁^k.
 \end{equation}
 On obtient donc l'expression suivante du terme quadratique en \(ξ₁^i\) dans
-l'équation de bifurcation \eqref{eq:20220524134835}
+l'équation de bifurcation \eqref{eq:20211112183220}
 \begin{equation}
   3 λ₁ [\dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ}₂(λ₀; v_i, w_{j k}) + \dot{ℰ}₂(λ₀; v_j, w_{i k}) + \dot{ℰ}₂(λ₀; v_k, w_{i j})],
 \end{equation}
 qui suggère d'introduire le tenseur \(E_{ijk}(λ)\) défini par l'équation
 \eqref{eq:20220524135619}. Le terme quadratique en \(ξ₁^i\) dans l'équation de
-bifurcation \eqref{eq:20220524134835} est alors simplement~:
+bifurcation \eqref{eq:20211112183220} est alors simplement~:
 \(3 λ₁ \dot{E}_{ijk}(λ₀)\).
 
 \paragraph{Terme linéaire en \(ξ₁^i\)} Par des arguments similaires, on établit
@@ -1134,18 +1059,18 @@ bifurcation \eqref{eq:20220524134835} est alors simplement~:
   \dot{ℰ}₂(λ₀; v_i, w_j) = - \tfrac{1}{2} ℰ₂(λ₀; w_i, w_j) = - \tfrac{1}{2} ℰ₂(λ₀; w_j, w_i) = \dot{ℰ}₂(λ₀; v_j, w_i).
 \end{equation}
 On obtient donc l'expression suivante du terme linéaire en \(ξ₁^i\) dans
-l'équation de bifurcation \eqref{eq:20220524134835}
+l'équation de bifurcation \eqref{eq:20211112183220}
 \begin{equation}
   \ddot{ℰ}₂(λ₀; v_i, v_j) + \tfrac{1}{2}\bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr],
 \end{equation}
 qui suggère d'introduire le tenseur \(F_{i j}(λ)\) défini par l'équation
 \eqref{eq:20220524135643}. Le terme linéaire en \(ξ₁^i\) dans l'équation de
-bifurcation \eqref{eq:20220524134835} est alors simplement~:
+bifurcation \eqref{eq:20211112183220} est alors simplement~:
 \(3 λ₁^2 \dot{F}_{i j}(λ₀)\).
 
 \paragraph{Synthèse~: simplification des équations \eqref{eq:20220524133816} et
-  \eqref{eq:20220524134835}} En rassemblant les résultats précédents, on obtient
-tout d'abord pour l'équation \eqref{eq:20220524134835}
+  \eqref{eq:20211112183220}} En rassemblant les résultats précédents, on obtient
+tout d'abord pour l'équation \eqref{eq:20211112183220}
 \begin{equation}
   3 [E_{i j k}(λ₀) + λ₁ F_{i j} (λ₀)] ξ₂^j + 3 λ₂ F_{i j}(λ₀) ξ₁^j + E_{i j k l}(λ₀) ξ₁^j ξ₁^k ξ₁^l + 3 λ₁ \dot{E}_{i j k} (λ₀) ξ₁^j ξ₁^k + 3 λ₁^2 \dot{F}_{i j}(λ₀) ξ₁^j = 0,
 \end{equation}

@@ -914,47 +914,54 @@ et \eqref{eq:20220601055512}.
  \end{equation}
 \end{remark}
 
-\subsection{Développement limité de la hessienne}\label{sec:DL
-hessienne}
+\subsection{Développement limité de la hessienne}
 
-On cherche maintenant un développement limité de la hessienne de l'énergie. Les fonctions test \(\hat{u}, \hat{v}∈U\) étant fixées, on applique la méthode du {\textsection}\ref{sec:20220107121442} à la fonction \(f(η) = F [η, λ₀ + λ(η)]\), avec
-\begin{equation} F(η, λ) =ℰ_{, u u} [u^{\ast}(λ) + U
- (η), λ; \hat{u}, \hat{v}] . \end{equation}
-On observe tout d'abord que \(F(0, λ) =ℰ₂(λ; \hat{u}, \hat{v})\), soit, en dérivant par rapport à \(λ\)
-\begin{equation} ∂_{λ} F(0, λ) = \dot{ℰ₂}(λ; \hat{u},
-  \hat{v}) \quad \text{et} \quad ∂_{λ λ}^2 F(0,
-  λ) = \ddot{ℰ₂}(λ; \hat{u}, \hat{v}) . \end{equation}
+On cherche maintenant un développement limité de la hessienne de l'énergie. Les
+fonctions test \(\hat{u}, \hat{v} ∈ U\) étant fixées, on applique la méthode du
+\S\ref{sec:20220107121442} à la fonction \(f(η) = F [η, λ₀ + λ(η)]\), avec
+\begin{equation}
+  F(η, λ) =ℰ_{, u u} [u^{\ast}(λ) + U(η), λ; \hat{u}, \hat{v}].
+\end{equation}
+
+On observe tout d'abord que \(F(0, λ) =ℰ₂(λ; \hat{u}, \hat{v})\), soit, en
+dérivant par rapport à \(λ\)
+\begin{equation}
+  ∂_{λ} F(0, λ) = \dot{ℰ}₂(λ; \hat{u}, \hat{v})
+  \quad \text{et} \quad
+  ∂_{λ λ}^2 F(0, λ) = \ddot{ℰ}₂(λ; \hat{u}, \hat{v}).
+\end{equation}
 On trouve de même successivement
-\begin{equation} ∂_{η} F(η, λ) =ℰ_{, u u u}
-  [u^{\ast}(λ) + U(η), λ; U'(η), \hat{u}, \hat{v}], \end{equation}
-\begin{eqnarray}
- ∂_{η η}^2 F(η, λ) & = & ℰ_{, u
-  u u u} [u^{\ast}(λ) + U(η), λ ;
- U'(η), U'(η), \hat{u}, \hat{v}] \\
- & & +ℰ_{, u u u} [u^{\ast}(λ)
- + U(η), λ; U''(η), \hat{u}, \hat{v}],
-\end{eqnarray}
+\begin{gather}
+  ∂_{η} F(η, λ) = ℰ_{, u u u} [u^{\ast}(λ) + U(η), λ; U'(η), \hat{u}, \hat{v}],\\
+  \begin{aligned}[b]
+    ∂_{η η}^2 F(η, λ)
+    ={} & ℰ_{, u u u u} [u^{\ast}(λ) + U(η), λ ; U'(η), U'(η), \hat{u}, \hat{v}] \\
+    ={} & +ℰ_{, u u u} [u^{\ast}(λ) + U(η), λ; U''(η), \hat{u}, \hat{v}],
+  \end{aligned}
+\end{gather}
 soit, en \(η = 0\)
-\begin{equation} ∂_{η} F(0, λ) =ℰ₃(λ; u₁, \hat{u},
-  \hat{v}) \text{} \end{equation}
+\begin{equation}
+  ∂_{η} F(0, λ) = ℰ₃(λ; u₁, \hat{u}, \hat{v})
+\end{equation}
 et
-\begin{equation} ∂_{η η}^2 F(0, λ) =ℰ₄(λ ;
-  u₁, u₁, \hat{u}, \hat{v}) +ℰ₃(λ; u₂, \hat{u},
-  \hat{v}), \end{equation}
+\begin{equation}
+  ∂_{η η}^2 F(0, λ) = ℰ₄(λ ; u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(λ; u₂, \hat{u}, \hat{v}),
+\end{equation}
 et en dérivant cette fois par rapport à \(λ\)
-\begin{equation} ∂_{η λ}^2 F(0, λ) = \dot{ℰ₃}
- (λ; u₁, \hat{u}, \hat{v}) . \end{equation}
-En insérant les résultats précédents dans les expressions~\eqref{eq:20220107060454} et \eqref{eq:20220107124311}, on trouve
-\begin{equation} f'(0) =ℰ₃(λ₀; u₁, \hat{u}, \hat{v}) + λ₁
-  \dot{ℰ₂}(λ₀; \hat{u}, \hat{v}), \end{equation}
-\begin{eqnarray}
- f''(0) & = & ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v})
- +ℰ₃(λ₀; u₂, \hat{u}, \hat{v}) + λ₂
- \dot{ℰ₂}(λ₀; \hat{u}, \hat{v}) \\
- & &  + 2 λ₁ \dot{ℰ₃}(λ₀ ;
- u₁, \hat{u}, \hat{v}) + λ₁^2 \ddot{ℰ₂}(λ₀ ;
- \hat{u}, \hat{v}) .
-\end{eqnarray}
+\begin{equation}
+  ∂_{η λ}^2 F(0, λ) = \dot{ℰ}₃(λ; u₁, \hat{u}, \hat{v}).
+\end{equation}
+
+En insérant les résultats précédents dans les
+expressions~\eqref{eq:20220107060454} et \eqref{eq:20220107124311}, on trouve
+\begin{gather}
+  f'(0) =ℰ₃(λ₀; u₁, \hat{u}, \hat{v}) + λ₁ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v}),\\
+  \begin{aligned}[b]
+    f''(0)
+    ={} & ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v}) +ℰ₃(λ₀; u₂, \hat{u}, \hat{v}) + λ₂ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v})\\
+    & + 2 λ₁ \dot{ℰ}₃(λ₀ ; u₁, \hat{u}, \hat{v}) + λ₁^2 \ddot{ℰ}₂(λ₀ ; \hat{u}, \hat{v}).
+  \end{aligned}
+\end{gather}
 qui conduisent finalement au développement limité~\eqref{eq:20220531054247}.
 
 \subsection{Développement limité des valeurs propres et vecteurs

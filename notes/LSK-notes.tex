@@ -967,105 +967,116 @@ qui conduisent finalement au développement limité~\eqref{eq:20220531054247}.
 \subsection{Développement limité des valeurs propres et vecteurs
 propres de la Hessienne}
 
-On cherche les vecteurs propres \(x∈U\) et valeurs propres \(α \in \reals\) de la hessienne de l'énergie. En d'autre terme, on cherche \(x\) et \(α\) tels que
+On cherche les vecteurs propres \(x ∈ U\) et valeurs propres \(α ∈ \reals\) de
+la hessienne de l'énergie. En d'autre terme, on cherche \(x\) et \(α\) tels que
 \begin{equation}
- ℰ_{, u u} [u(η), λ(η); x, \hat{u}] =
- α 〈 x, \hat{u} 〉 \quad \text{pour tout} \quad \hat{u} \in
- V.
+ ℰ_{, u u} [u(η), λ(η); x, \hat{u}] = α 〈 x, \hat{u} 〉 \quad \text{pour tout} \quad \hat{u} ∈ V.
 \end{equation}
+
 On cherche les développements limités à l'ordre 2 en \(η\) de \(x\) et \(α\)
-\begin{eqnarray*}
- x & = & x₀ + η x₁ + \tfrac{1}{2} η^2 x₂ + o(η^2),\\
- α & = & α₀ + η α₁ + \tfrac{1}{2} η^2 α₂ + o
- (η^2) .
-\end{eqnarray*}
-Ces développements limités sont tout d'abord insérés dans le développement limité \eqref{eq:20220531054247} de la hessienne de l'énergie
-\begin{eqnarray*}
- ℰ_{, u u} [u(η), λ(η); x, \hat{u}] & = &
- ℰ₂(λ₀; x₀, \hat{u}) + η ℰ₂(λ₀ ;
- x₁, \hat{u}) + \tfrac{1}{2} η^2 ℰ₂(λ₀; x₂,
- \hat{u})\\
- & & + η ℰ₃(λ₀; u₁, x₀, \hat{u}) + η^2
- ℰ₃(λ₀; u₁, x₁, \hat{u})\\
- & & + η λ₁ \dot{ℰ₂}(λ₀; x₀, \hat{u}) +
- η^2 λ₁ \dot{ℰ₂}(λ₀; x₁, \hat{u})\\
- & & + \tfrac{1}{2} η^2 [ℰ₄(λ₀; u₁, u₁, x₀,
- \hat{u}) +ℰ₃(λ₀; u₂, x₀, \hat{u})\\
- & & + λ₂ \dot{ℰ₂}(λ₀; x₀, \hat{u}) + 2
- λ₁ \dot{ℰ₃}(λ₀; u₁, x, \hat{u})\\
- & & + λ₁^2 \ddot{ℰ₂}(λ₀; x, \hat{u})
- ] + o(η^2)\\
- & = & ℰ₂(λ₀; x₀, \hat{u})\\
- & & + η [ℰ₃(λ₀; u₁, x₀, \hat{u}) +ℰ₂
- (λ₀; x₁, \hat{u}) + λ₁ \dot{ℰ₂}(λ₀ ;
- x₀, \hat{u})]\\
- & & + \tfrac{1}{2} η^2 [ℰ₂(λ₀; x₂, \hat{u}) +
- 2ℰ₃(λ₀; u₁, x₁, \hat{u}) + 2 λ₁
- \dot{ℰ₂}(λ₀; x₁, \hat{u})]\\
- & & + \tfrac{1}{2} η^2 [ℰ₄(λ₀; u₁, u₁, x₀,
- \hat{u}) +ℰ₃(λ₀; u₂, x₀, \hat{u}) + λ₂
- \dot{ℰ₂}(λ₀; x₀, \hat{u})]\\
- & & + \tfrac{1}{2} η^2 [2 λ₁ \dot{ℰ₃}(λ₀ ;
- u₁, x, \hat{u}) + λ₁^2 \ddot{ℰ₂}(λ₀; x,
- \hat{u})] + o(η^2)
-\end{eqnarray*}
+\begin{align*}
+ x & = x₀ + η x₁ + \tfrac{1}{2} η^2 x₂ + o(η^2),\\
+ α & = α₀ + η α₁ + \tfrac{1}{2} η^2 α₂ + o(η^2).
+\end{align*}
+
+Ces développements limités sont tout d'abord insérés dans le développement
+limité \eqref{eq:20220531054247} de la hessienne de l'énergie
+\begin{equation*}
+  \begin{aligned}[b]
+    ℰ_{, u u} [u(η), λ(η); x, \hat{u}]
+    ={} & ℰ₂(λ₀; x₀, \hat{u}) + η ℰ₂(λ₀ ; x₁, \hat{u}) + \tfrac{1}{2} η^2 ℰ₂(λ₀; x₂, \hat{u})\\
+    & + η ℰ₃(λ₀; u₁, x₀, \hat{u}) + η^2 ℰ₃(λ₀; u₁, x₁, \hat{u})\\
+    & + η λ₁ \dot{ℰ}₂(λ₀; x₀, \hat{u}) + η^2 λ₁ \dot{ℰ}₂(λ₀; x₁, \hat{u})\\
+    & + \tfrac{1}{2} η^2 \bigl[ℰ₄(λ₀; u₁, u₁, x₀, \hat{u}) + ℰ₃(λ₀; u₂, x₀, \hat{u})\\
+    & + λ₂ \dot{ℰ}₂(λ₀; x₀, \hat{u}) + 2 λ₁ \dot{ℰ}₃(λ₀; u₁, x, \hat{u})\\
+    & + λ₁^2 \ddot{ℰ}₂(λ₀; x, \hat{u}) \bigr] + o(η^2)\\
+    ={} & ℰ₂(λ₀; x₀, \hat{u})\\
+    & + η \bigl[ℰ₃(λ₀; u₁, x₀, \hat{u}) + ℰ₂ (λ₀; x₁, \hat{u}) + λ₁ \dot{ℰ}₂(λ₀ ; x₀, \hat{u})\bigr]\\
+    & + \tfrac{1}{2} η^2 \bigl[ℰ₂(λ₀; x₂, \hat{u}) + 2ℰ₃(λ₀; u₁, x₁, \hat{u}) + 2 λ₁ \dot{ℰ}₂(λ₀; x₁, \hat{u})\bigr]\\
+    & + \tfrac{1}{2} η^2 \bigl[ℰ₄(λ₀; u₁, u₁, x₀, \hat{u}) + ℰ₃(λ₀; u₂, x₀, \hat{u}) + λ₂ \dot{ℰ}₂(λ₀; x₀, \hat{u})\bigr]\\
+    & + \tfrac{1}{2} η^2 \bigl[2 λ₁ \dot{ℰ}₃(λ₀ ; u₁, x, \hat{u}) + λ₁^2 \ddot{ℰ}₂(λ₀; x, \hat{u})\bigr] + o(η^2)
+  \end{aligned}
+\end{equation*}
 et
-\begin{eqnarray*}
- α 〈 x, \hat{u} 〉 & = & α₀ 〈 x₀, \hat{u}
- 〉 + η(α₁ 〈 x₀, \hat{u} 〉 + α₀ 〈
- x₁, \hat{u} 〉)\\
- & & + \tfrac{1}{2} η^2 (α₂ 〈 x₀, \hat{u} 〉 + 2
- α₁ 〈 x₁, \hat{u} 〉 + α₀ 〈 x₂, \hat{u}
- 〉) + o(η^2) .
-\end{eqnarray*}
-\paragraph{Problème variationnel d'ordre 0}Trouver \(x₀∈U\) et \(α₀∈\reals\) tels que, pour tout \(\hat{u}∈U\)
-\begin{equation} ℰ₂(λ₀; x₀, \hat{u}) = α₀ 〈 x₀, \hat{u}
-  〉 . \end{equation}
-On en déduit que \(x₀\) est le vecteur propre de \(ℰ₂(λ₀)\) associé à la valeur propre \(α₀\). Si \(α₀ \neq 0\), \(ℰ₂ (λ₀)\) étant positive par hypothèse, on a nécessairement \(α₀ > 0\), et la valeur propre de la hessienne est positive. On considère donc dans ce qui suit le cas où \(α₀ = 0\), c'est-à-dire que \(x₀∈V\)
-\begin{equation} x₀ = χ₀^i v_i \end{equation}
+\begin{equation*}
+  \begin{aligned}[b]
+    α 〈 x, \hat{u} 〉
+    ={} & α₀ 〈 x₀, \hat{u} 〉 + η(α₁ 〈 x₀, \hat{u} 〉 + α₀ 〈 x₁, \hat{u} 〉)\\
+    & + \tfrac{1}{2} η^2 (α₂ 〈 x₀, \hat{u} 〉 + 2 α₁ 〈 x₁, \hat{u} 〉 + α₀ 〈 x₂, \hat{u} 〉) + o(η^2) .
+  \end{aligned}
+\end{equation*}
 
+\paragraph{Problème variationnel d'ordre 0} Trouver \(x₀∈U\) et \(α₀∈\reals\)
+tels que, pour tout \(\hat{u}∈U\)
+\begin{equation}
+  ℰ₂(λ₀; x₀, \hat{u}) = α₀ 〈 x₀, \hat{u} 〉.
+\end{equation}
 
-\paragraph{Problème variationnel d'ordre 1}Trouver \(x₁∈U\) et
-\(α₁∈\reals\) tels que, pour tout \(\hat{u}∈U\)
-\begin{equation} ℰ₃(λ₀; u₁, x₀, \hat{u}) +ℰ₂(λ₀ ;
-  x₁, \hat{u}) + λ₁ \dot{ℰ₂}(λ₀; x₀, \hat{u}) =
-  α₁ 〈 x₀, \hat{u} 〉, \end{equation}
-soit, en rempla{\c c}ant \(u₁\) et \(x₀\) par leurs décompositions dans la base \(v_i\)
-\begin{equation} ℰ₃(λ₀; v_j, v_k, \hat{u}) ξ₁^k χ₀^j
-  +ℰ₂(λ₀; x₁, \hat{u}) + λ₁ \dot{ℰ₂}
- (λ₀; v_j, \hat{u}) χ₀^j = α₁ χ₀^j 〈 v_j,
-  \hat{u} 〉 . \end{equation}
+On en déduit que \(x₀\) est le vecteur propre de \(ℰ₂(λ₀)\) associé à la valeur
+propre \(α₀\). Si \(α₀ \neq 0\), \(ℰ₂ (λ₀)\) étant positive par hypothèse, on a
+nécessairement \(α₀ > 0\), et la valeur propre de la hessienne est positive. On
+considère donc dans ce qui suit le cas où \(α₀ = 0\), c'est-à-dire que \(x₀∈V\)
+\begin{equation}
+  x₀ = χ₀^i v_i.
+\end{equation}
+
+\paragraph{Problème variationnel d'ordre 1} Trouver \(x₁∈U\) et \(α₁∈\reals\)
+tels que, pour tout \(\hat{u}∈U\)
+\begin{equation}
+  ℰ₃(λ₀; u₁, x₀, \hat{u}) + ℰ₂(λ₀ ; x₁, \hat{u}) + λ₁ \dot{ℰ}₂(λ₀; x₀, \hat{u}) = α₁ 〈 x₀, \hat{u} 〉,
+\end{equation}
+soit, en remplaçant \(u₁\) et \(x₀\) par leurs décompositions dans la base \(v_i\)
+\begin{equation}
+  ℰ₃(λ₀; v_j, v_k, \hat{u}) ξ₁^k χ₀^j + ℰ₂(λ₀; x₁, \hat{u}) + λ₁ \dot{ℰ}₂(λ₀; v_j, \hat{u}) χ₀^j = α₁ χ₀^j 〈 v_j, \hat{u} 〉.
+\end{equation}
 En prenant tout d'abord \(\hat{u} = v_i\), on obtient
-\begin{equation} [ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁
-  \dot{ℰ₂}(λ₀; v_i, v_j)] χ₀^j = α₁ χ₀^i,
+\begin{equation}
+  \bigl[ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] χ₀^j = α₁ χ₀^i,
 \end{equation}
 soit encore
-\begin{equation} [E_{i j k}(λ₀) ξ₁^k + λ₁ F_{i
-  j}(λ₀)] χ₀^j = α₁ χ₀^i . \end{equation}
-Ainsi, le vecteur \(χ₀^i\) apparaît comme le vecteur propre de la matrice symétrique \([E_{i j k}(λ₀) ξ₁^k + λ₁ F_{i j}(λ₀)]\) associé à la valeur propre \(α₁\). On doit alors discuter en fonction du type de bifurcation.
+\begin{equation}
+  \bigl[E_{i j k}(λ₀) ξ₁^k + λ₁ F_{i j}(λ₀)\bigr] χ₀^j = α₁ χ₀^i.
+\end{equation}
+Ainsi, le vecteur \(χ₀^i\) apparaît comme le vecteur propre de la matrice
+symétrique \([E_{i j k}(λ₀) ξ₁^k + λ₁ F_{i j}(λ₀)]\) associé à la valeur propre
+\(α₁\). On doit alors discuter en fonction du type de bifurcation.
 
-\paragraph{Cas d'une bifurcation asymétrique}Dans ce cas, la forme trilinéaire \(E_{i j k}(λ₀)\) n'est pas nulle sur \(V\), et \(α₁ \neq 0\). Le terme dominant de \(α\) est donc d'ordre 1, tandis que le terme dominant de \(x\) est d'ordre 0.
+\paragraph{Cas d'une bifurcation asymétrique} Dans ce cas, la forme trilinéaire
+\(E_{i j k}(λ₀)\) n'est pas nulle sur \(V\), et \(α₁ \neq 0\). Le terme dominant
+de \(α\) est donc d'ordre 1, tandis que le terme dominant de \(x\) est d'ordre
+0.
 
-\paragraph{Cas d'une bifurcation symétrique}La forme trilinéaire \(E_{i j k}(λ₀)\) est identiquement nulle sur \(V\); de plus, \(λ₁ = 0\). On trouve alors que \(α₁ = 0\), et on ne peut déterminer les \(χ₀^i\). On prend maintenant \(\hat{u} = \hat{w}∈W\) dans le problème variationnel d'ordre 1, et on pose \(x₁ = χ₁^i v_i + y₁\), avec \(y₁∈W\). On obtient alors le problème variationnel suivant : trouver \(y₁∈W\) tel que, pour tout \(\hat{w}∈W\),
-\begin{equation} ℰ₃(λ₀; v_j, v_k, \hat{w}) ξ₁^k χ₀^j
-  +ℰ₂(λ₀; y₁, \hat{w}) + λ₁ \dot{ℰ₂}
- (λ₀; v_j, \hat{w}) χ₀^j = 0. \end{equation}
-La solution de ce problème est exprimée à l'aide des \(w_{i j}\) et \(w_i\) définis respectivement par les problèmes variationnels auxiliaires \eqref{eq:20220519164523} et \eqref{eq:20220524134525}
-\begin{equation} y₁ = ξ₁^i χ₀^j w_{i j} + λ₁ χ₀^i w_i, \end{equation}
+\paragraph{Cas d'une bifurcation symétrique} La forme trilinéaire
+\(E_{i j k}(λ₀)\) est identiquement nulle sur \(V\); de plus, \(λ₁ = 0\). On
+trouve alors que \(α₁ = 0\), et on ne peut déterminer les \(χ₀^i\). On prend
+maintenant \(\hat{u} = \hat{w}∈W\) dans le problème variationnel d'ordre 1, et
+on pose \(x₁ = χ₁^i v_i + y₁\), avec \(y₁∈W\). On obtient alors le problème
+variationnel suivant : trouver \(y₁∈W\) tel que, pour tout \(\hat{w}∈W\),
+\begin{equation}
+  ℰ₃(λ₀; v_j, v_k, \hat{w}) ξ₁^k χ₀^j + ℰ₂(λ₀; y₁, \hat{w}) + λ₁ \dot{ℰ}₂(λ₀; v_j, \hat{w}) χ₀^j = 0.
+\end{equation}
+
+La solution de ce problème est exprimée à l'aide des \(w_{i j}\) et \(w_i\)
+définis respectivement par les problèmes variationnels auxiliaires
+\eqref{eq:20220519164523} et \eqref{eq:20220524134525}
+\begin{equation}
+  y₁ = ξ₁^i χ₀^j w_{i j} + λ₁ χ₀^i w_i,
+\end{equation}
 soit
-\begin{equation} x₁ = χ₁^i v_i + ξ₁^i χ₀^j w_{i j} + λ₁ χ₀^i
-  w_i . \end{equation}
+\begin{equation}
+  x₁ = χ₁^i v_i + ξ₁^i χ₀^j w_{i j} + λ₁ χ₀^i w_i.
+\end{equation}
+
 Dans le cas d'une bifurcation symétrique, le problème aux valeurs propres d'ordre 2 s'écrit quant à lui
-\begin{equation} ℰ₂(λ₀; x₂, \hat{u}) + 2ℰ₃(λ₀; u₁,
-  x₁, \hat{u}) +ℰ₄ (λ₀; u₁, u₁, x₀, \hat{u})
-  +ℰ₃(λ₀; u₂, x₀, \hat{u}) + λ₂
-  \dot{ℰ₂}(λ₀; x₀, \hat{u}) = α₂ 〈 x₀,
-  \hat{u} 〉 \end{equation}
-soit, en prenant \(\hat{u} = \widehat{v_i}∈V\) et en introduisant les développements de \(u₁\), \(u₂\), \(x₀ \) et \(x₁\)
-\begin{equation} ℰ₄ (λ₀; v_i, v_j, v_k, v_l) χ₀^j ξ_{1 }^k ξ₁^l
-  + 2ℰ₃(λ₀; u₁, x₁, v_i) +ℰ₃(λ₀ ;
-  u₂, x₀, \hat{u}) + λ₂ \dot{ℰ₂}(λ₀; x₀,
-  \hat{u}) \end{equation}
+\begin{equation}
+  ℰ₂(λ₀; x₂, \hat{u}) + 2ℰ₃(λ₀; u₁, x₁, \hat{u}) +ℰ₄ (λ₀; u₁, u₁, x₀, \hat{u}) + ℰ₃(λ₀; u₂, x₀, \hat{u}) + λ₂ \dot{ℰ}₂(λ₀; x₀, \hat{u}) = α₂ 〈 x₀, \hat{u} 〉
+\end{equation}
+soit, en prenant \(\hat{u} = \hat{v}_i∈V\) et en introduisant les développements
+de \(u₁\), \(u₂\), \(x₀ \) et \(x₁\)
+\begin{equation}
+  ℰ₄ (λ₀; v_i, v_j, v_k, v_l) χ₀^j ξ_{1}^k ξ₁^l + 2ℰ₃(λ₀; u₁, x₁, v_i) +ℰ₃(λ₀ ; u₂, x₀, \hat{u}) + λ₂ \dot{ℰ₂}(λ₀; x₀, \hat{u})
+\end{equation}\pdfmargincomment{Relecture 01/06/2022 06:12}
+
 \section{Simplification des équations de
 bifurcation}\label{sec:20220524134954}
 

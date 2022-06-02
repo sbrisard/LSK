@@ -491,7 +491,7 @@ de la façon suivante
 On pose dans ce qui suit
 \begin{align}
   \label{eq:20211112155446}
-  λ(η) & = λ(η) - λ₀ = η λ₁ + \tfrac{1}{2} η^2 λ₂ + \tfrac{1}{6} η^3 λ₃ + \cdots,\\
+  Λ(η) & = λ(η) - λ₀ = η λ₁ + \tfrac{1}{2} η^2 λ₂ + \tfrac{1}{6} η^3 λ₃ + \cdots,\\
  \label{eq:20211112113028}
   U(η) & = u(η) - u^{\ast}[λ(η)] = η u₁ + \tfrac{1}{2} η^2 u₂ + \tfrac{1}{6} η^3 u₃ + \cdots.
 \end{align}
@@ -500,14 +500,14 @@ On considère une fonctionnelle \(\mathcal{F}\) de \(u\) et \(λ\)~:
 \(\mathcal{F}(u, λ)\). Cette fonctionnelle est évaluée le long de la branche
 bifurquée. En d'autres termes, on considère
 \begin{equation}
-  f(η) = F\{ u^{\ast} [λ₀ + λ(η)] + U(η), λ₀ + λ(η) \}.
+  f(η) = F\{ u^{\ast} [λ₀ + Λ(η)] + U(η), λ₀ + Λ(η) \}.
 \end{equation}
 
 On souhaite établir un développement limité de \(f\) au voisinage de \(η = 0\),
 ce qui conduit à calculer les dérivées successives de \(f\) en \(η = 0\),
 puisque
 \begin{equation}
-  f(η) = f(0) + η f'(0) + \tfrac{1}{2} η^2 f''(0) + \cdots
+  f(η) = f(0) + η f'(0) + \tfrac{1}{2} η^2 f''(0) + \cdots.
 \end{equation}
 
 Pour calculer ces dérivées, il sera commode d'introduire la fonction auxiliaire
@@ -518,61 +518,49 @@ Pour calculer ces dérivées, il sera commode d'introduire la fonction auxiliair
 dans laquelle les variables \(λ\) et \(η\) sont provisoirement considérées comme
 indépendantes. On a
 \begin{equation}
- f(η) = F[η, λ₀ + λ(η)],
+ f(η) = F[η, λ₀ + Λ(η)],
 \end{equation}
 d'où l'on déduit successivement que
-\begin{equation}
+\begin{gather}
   \label{eq:20211112162417}
-  f'(η) = ∂_{η} F + λ' ∂_{λ} F,
-\end{equation}
-\begin{equation}
+  f'(η) = ∂_{η} F + Λ' ∂_{λ} F,\\
   \label{eq:20211112165810}
-  f''(η) = ∂_{ηη}^2 F + 2λ' ∂_{ηλ}^2 {F + λ'}^2 + ∂_{λλ}^2 F + λ'' ∂_{λ} F,
-\end{equation}
-\begin{equation*}
+  f''(η) = ∂_{ηη}^2 F + 2Λ' ∂_{ηλ}^2F + Λ'^2 ∂_{λλ}^2 F + Λ'' ∂_{λ} F,\\
   \begin{aligned}[b]
     \label{eq:20211112173223}
     f'''(η) ={}
-    & ∂_{ηηη}^3 F + 3 λ' ∂_{ηηλ}^3 {F + 3 λ'}^2 ∂_{ηλλ}^3 {F + λ'}^3 ∂_{λλλ}^3 F + 3 λ'' ∂_{ηλ}^2 F + 3 λ' λ'' ∂_{λ λ}^2 F\\
-    & + λ''' ∂_{λ} F
-  \end{aligned}
-\end{equation*}
-\begin{equation}
+    & ∂_{ηηη}^3 F + 3Λ' ∂_{ηηλ}^3F + 3Λ'^2 ∂_{ηλλ}^3F + λ'^3 ∂_{λλλ}^3 F\\
+    & + 3Λ'' ∂_{ηλ}^2 F + 3Λ' Λ'' ∂_{λ λ}^2 F + Λ''' ∂_{λ} F,
+  \end{aligned}\\
   \begin{aligned}[b]
     f''''(η) ={}
-    & ∂_{ηηηη}^4 F + 4 λ' ∂_{ηηηλ}^4 {F + 6 λ'}^2 ∂_{ηηλλ}^4 {F + 4 λ'}^3 ∂_{ηλλλ}^4 {F + λ'}^4 ∂_{λλλλ}^4 F + 6 λ'' ∂_{ηηλ}^3 F\\
-    & + 12 λ' λ'' ∂_{ηλλ}^3 {F + 6 λ'}^2 λ'' ∂_{λλλ}^3 F + 4 λ''' ∂_{ηλ}^2 F + \bigl( {3 λ''}^2 + 4 λ' λ''' \bigr) ∂_{λλ}^2 F\\
-    & + λ'''' ∂_{λ}F
+    & ∂_{ηηηη}^4 F + 4Λ' ∂_{ηηηλ}^4F + 6Λ'^2 ∂_{ηηλλ}^4F + 4Λ'^3 ∂_{ηλλλ}^4F + Λ'^4 ∂_{λλλλ}^4 F\\
+    & + 6Λ'' ∂_{ηηλ}^3 F + 12Λ' Λ'' ∂_{ηλλ}^3F + 6Λ'^2 Λ'' ∂_{λλλ}^3 F\\
+    & + 4 Λ''' ∂_{ηλ}^2 F + \bigl( 3Λ''^2 + 4 Λ' Λ''' \bigr) ∂_{λλ}^2 F + λ'''' ∂_{λ}F,
   \end{aligned}
-\end{equation}
+\end{gather}
 où \(λ\) et ses dérivées sont évaluées en \(η\), tandis que \(F\) et ses
 dérivées partielles sont évaluées en \([η, λ₀ + λ(η)]\). En \(η = 0\), les
 relations précédentes s'écrivent
-\begin{equation}
+\begin{gather}
   \label{eq:20220107060454}
-  f'(0) = ∂_{η} F + λ₁ ∂_{λ} F,
-\end{equation}
-\begin{equation}
+  f'(0) = ∂_{η} F + λ₁ ∂_{λ} F,\\
   \label{eq:20220107124311}
-  f''(0) = ∂_{ηη}^2 F + 2 λ₁ ∂_{ηλ}^2 F + λ₂ ∂_{λ} F + λ₁^2 ∂_{λλ}^2 F,
-\end{equation}
-\begin{equation}
+  f''(0) = ∂_{ηη}^2 F + 2 λ₁ ∂_{ηλ}^2 F + λ₁^2 ∂_{λλ}^2 F + λ₂ ∂_{λ} F,\\
   \label{eq:20220107060500}
   \begin{aligned}[b]
     f'''(0) ={}
-    & ∂_{ηηη}^3 F + 3 λ₁ ∂_{ηηλ}^3 F + 3 λ₁^2 ∂_{ηλλ}^3 F + λ₁^3 ∂_{λλλ}^3 F + 3 λ₂ ∂_{ηλ}^2 F + 3 λ₁ λ₂ ∂_{λλ}^2 F\\
-    & + λ₃ ∂_{λ} F,
-  \end{aligned}
-\end{equation}
-\begin{equation}
+    & ∂_{ηηη}^3 F + 3 λ₁ ∂_{ηηλ}^3 F + 3 λ₁^2 ∂_{ηλλ}^3 F + λ₁^3 ∂_{λλλ}^3 F\\
+    & + 3 λ₂ ∂_{ηλ}^2 F + 3 λ₁ λ₂ ∂_{λλ}^2 F + λ₃ ∂_{λ} F,
+  \end{aligned}\\
   \begin{aligned}[b]
     f''''(0) ={}
-    & ∂_{ηηηη}^4F + 4 λ₁ ∂_{ηηηλ}^4 F + 6 λ₁^2 ∂_{ηηλλ}^4 F + 4 λ₁^3 ∂_{ηλλλ}^4 F + λ₁^4 ∂_{λλλλ}^4 F + 6 λ₂ ∂_{ηηλ}^3 F\\
-    & + 12 λ₁ λ₂ ∂_{ηλλ}^3 F + 6 λ₁^2 λ₂ ∂_{λλλ}^3 F + 4 λ₃ ∂_{ηλ}^2 F + \bigl(3 λ₂^2 + 4 λ₁ λ₃\bigr) ∂_{λλ}^2 F \\
-    & + λ₄ ∂_{λ} F,
+    & ∂_{ηηηη}^4F + 4 λ₁ ∂_{ηηηλ}^4 F + 6 λ₁^2 ∂_{ηηλλ}^4 F + 4 λ₁^3 ∂_{ηλλλ}^4 F + λ₁^4 ∂_{λλλλ}^4 F\\
+    & + 6 λ₂ ∂_{ηηλ}^3 F + 12 λ₁ λ₂ ∂_{ηλλ}^3 F + 6 λ₁^2 λ₂ ∂_{λλλ}^3 F\\
+    & + 4 λ₃ ∂_{ηλ}^2 F + \bigl(3 λ₂^2 + 4 λ₁ λ₃\bigr) ∂_{λλ}^2 F + λ₄ ∂_{λ} F,
   \end{aligned}
-\end{equation}
-où \(F\) et ses dérivées sont évaluées en \((0, λ₀)\).
+\end{gather}
+où \(F\) et ses dérivées sont maintenant évaluées en \((0, λ₀)\).
 
 \subsection{Développement limité du résidu}
 \label{sec:20211112182000}

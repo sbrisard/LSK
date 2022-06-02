@@ -95,7 +95,7 @@ alors, à l'ordre 4 en \(ξ\) et \(η\)
   \begin{aligned}[b]
     Δℰ ={} &  ℰ(u₀ + ξv + ηw, λ₀) - ℰ(u₀, λ₀)\\
     ={} & \tfrac{1}{2} ℰ₂(ξv + ηw, ξv + ηw) + \tfrac{1}{6} ℰ₃(ξv + ηw, ξv + ηw, ξv + ηw)\\
-    & + \tfrac{1}{24} ℰ₄(ξv + ηw, ξv + ηw, ξv + ηw, ξv + ηw) + \mathcal{O}\bigl[\bigl(ξ^2 + η^2\bigr)^2\bigr],
+    & + \tfrac{1}{24} ℰ₄(ξv + ηw, ξv + ηw, ξv + ηw, ξv + ηw) + \mathcal{O}\bigl[\bigl(ξ² + η²\bigr)²\bigr],
   \end{aligned}
 \end{equation}
 où le terme linéaire a été omis puisque \(u₀\) est un point critique de
@@ -104,11 +104,11 @@ différentielles successives de l'énergie \(ℰ\), ainsi que du fait que
 \(ℰ₂(v, •) = 0\) (puisque \(v∈V\)), l'expression précédente s'écrit
 \begin{equation}
   \begin{aligned}[b]
-    \Delta ℰ ={} & \tfrac{1}{2} η^2 ℰ₂(w, w) + \tfrac{1}{6} ξ^3 ℰ₃(v, v, v) + \tfrac{1}{2} ξ^2 η ℰ₃(v, v, w)\\
-    & + \tfrac{1}{2} ξ η^2 ℰ₃(v, w, w) + \tfrac{1}{6} η^3 ℰ₃(w, w, w)\\
-    & + \tfrac{1}{24} ξ^4 ℰ₄(v, v, v, v) + \tfrac{1}{6} ξ^3 η ℰ₄(v, v, v, w)\\
-    & + \tfrac{1}{4} ξ^2 η^2 ℰ₄(v, v, w, w) + \tfrac{1}{6} ξ η^3 ℰ₄(v, w, w, w)\\
-    & + \tfrac{1}{24} η^4 ℰ₄(w, w, w, w) +\mathcal{O}\bigl[\bigl(ξ^2 + η^2\bigr)^2\bigr],
+    \Delta ℰ ={} & \tfrac{1}{2} η² ℰ₂(w, w) + \tfrac{1}{6} ξ³ ℰ₃(v, v, v) + \tfrac{1}{2} ξ² η ℰ₃(v, v, w)\\
+    & + \tfrac{1}{2} ξ η² ℰ₃(v, w, w) + \tfrac{1}{6} η³ ℰ₃(w, w, w)\\
+    & + \tfrac{1}{24} ξ⁴ ℰ₄(v, v, v, v) + \tfrac{1}{6} ξ³ η ℰ₄(v, v, v, w)\\
+    & + \tfrac{1}{4} ξ² η² ℰ₄(v, v, w, w) + \tfrac{1}{6} ξ η³ ℰ₄(v, w, w, w)\\
+    & + \tfrac{1}{24} η⁴ ℰ₄(w, w, w, w) +\mathcal{O}\bigl[\bigl(ξ² + η²\bigr)²\bigr],
   \end{aligned}
 \end{equation}
 où l'on convient que toutes les différentielles de \(ℰ\) sont évaluées au point
@@ -125,9 +125,9 @@ nulle pour tous \(ξ\) et \(η\) suffisamment petits. En prenant tout d'abord
 En d'autres termes, s'il existe \(v∈V\) tel que \(ℰ₃(v, v, v) \neq 0\) ou
 \(ℰ₄(v, v, v, v) < 0\), alors l'équilibre est \emph{instable}. Les conditions
 précédentes ne sont pas suffisantes pour assurer la stabilité. En effet,
-supposant ces conditions remplies, on prend maintenant \(η = ξ^2\)
+supposant ces conditions remplies, on prend maintenant \(η = ξ²\)
 \begin{equation}
-  Δℰ = \tfrac{1}{2} ξ^4 \bigl[ ℰ₂(w, w) + ℰ₃(v, v, w) + \tfrac{1}{12} ℰ₄(v, v, v, v) \bigr] + o(ξ^4)
+  Δℰ = \tfrac{1}{2} ξ⁴ \bigl[ ℰ₂(w, w) + ℰ₃(v, v, w) + \tfrac{1}{12} ℰ₄(v, v, v, v) \bigr] + o(ξ⁴)
 \end{equation}
 et on obtient la condition nécessaire supplémentaire
 \begin{equation}
@@ -162,9 +162,9 @@ On écrit toute courbe d'équilibre passant par le point \((u₀, λ₀)\) sous 
 forme paramétrique suivante
 \begin{align}
   \label{eq:20211115075817}
-  λ &=  λ₀ + η λ₁ + \tfrac{1}{2} η^2 λ₂ + \tfrac{1}{6} η^3 λ₃ + \cdots,\\
+  λ &=  λ₀ + η λ₁ + \tfrac{1}{2} η² λ₂ + \tfrac{1}{6} η³ λ₃ + \cdots,\\
   \label{eq:20211115075835}
-  u &= u^{\ast}(λ) + η u₁ + \tfrac{1}{2} η^2 u₂ + \tfrac{1}{6} η^3 u₃ + \cdots,
+  u &= u^{\ast}(λ) + η u₁ + \tfrac{1}{2} η² u₂ + \tfrac{1}{6} η³ u₃ + \cdots,
 \end{align}
 où \(η\) est un paramètre, non précisé pour le moment. Noter que, dans la
 représentation paramétrique de \(u\), \(u^{\ast}\) est évalué en \(λ\) et pas en
@@ -190,7 +190,7 @@ trouve successivement, pour tout \(\hat{u}∈U\)
   \begin{aligned}[b]
     ℰ₄(λ₀; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ₀; u₁, u₂, \hat{u}) + ℰ₂(λ₀; u₃, \hat{u})&\\
     + 3λ₁\dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + 3λ₁\dot{ℰ}₂(λ₀;  u₂, \hat{u})&\\
-    + 3λ₁^2\ddot{ℰ}₂(λ₀; u₁, \hat{u}) + 3λ₂\dot{ℰ}₂(λ₀; u₁, \hat{u}) & = 0.
+    + 3λ₁²\ddot{ℰ}₂(λ₀; u₁, \hat{u}) + 3λ₂\dot{ℰ}₂(λ₀; u₁, \hat{u}) & = 0.
   \end{aligned}
 \end{equation}
 On déduit de l'équation~\eqref{eq:20211112182917} que \(u₁∈V\). En prenant la
@@ -262,7 +262,7 @@ En introduisant les expressions~\eqref{eq:20220524133944} et
     3[ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j)] ξ₂^j + 3λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j &\\
     + [ℰ₄(λ₀; v_i, v_j, v_k, v_l) + 3ℰ₃(λ₀; v_i, v_j, w_{kl})] ξ₁^j ξ₁^k ξ₁^l &\\
     + 3λ₁ [\dot{ℰ}₃(λ₀; v_i, v_j, v_k) + ℰ₃(λ₀; v_i, v_j, w_k) + \dot{ℰ₂}(λ₀; v_i, w_{jk})] ξ₁^j ξ₁^k&\\
-    + 3λ₁^2 [\ddot{ℰ}₂(λ₀; v_i, v_j) + \dot{ℰ}₂(λ₀ ; v_i, w_j)] ξ₁^j &= 0,
+    + 3λ₁² [\ddot{ℰ}₂(λ₀; v_i, v_j) + \dot{ℰ}₂(λ₀ ; v_i, w_j)] ξ₁^j &= 0,
   \end{aligned}
 \end{equation}
 qui permet en principe de déterminer \(λ₂\) ainsi que les \(ξ₂^i\). On montre
@@ -330,19 +330,19 @@ Le développement limité suivant de l'énergie le long de la branche bifurquée
   \label{eq:20220525053600}
   \begin{aligned}[b]
     ℰ[u(η), λ(η)] ={}
-    & ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{6} λ₁ η^3 F_{i j}(λ₀) ξ₁^i ξ₁^j\\
-    & + \tfrac{1}{24} η^4 \bigl\{E_{ijkl}(λ₀) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4λ₁ \dot{E}_{ijk}(λ₀) ξ₁^i ξ₁^j ξ₁^k\\
-    & + 6 \bigl[λ₁^2 \dot{F}_{ij}(λ₀) + λ₂ F_{ij}(λ₀)\bigr] ξ₁^i ξ₁^j\bigr\} + o(η^4).
+    & ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{6} λ₁ η³ F_{i j}(λ₀) ξ₁^i ξ₁^j\\
+    & + \tfrac{1}{24} η⁴ \bigl\{E_{ijkl}(λ₀) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4λ₁ \dot{E}_{ijk}(λ₀) ξ₁^i ξ₁^j ξ₁^k\\
+    & + 6 \bigl[λ₁² \dot{F}_{ij}(λ₀) + λ₂ F_{ij}(λ₀)\bigr] ξ₁^i ξ₁^j\bigr\} + o(η⁴).
   \end{aligned}
 \end{equation}
 Si \(λ₁ ≠ 0\), le premier terme non-nul du développement limité précédent est
 d'ordre 3
 \begin{equation}
- ℰ [u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{6} λ₁ η^3 F_{ij}(λ₀) ξ₁^i ξ₁^j + o(η^3),
+ ℰ [u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{6} λ₁ η³ F_{ij}(λ₀) ξ₁^i ξ₁^j + o(η³),
 \end{equation}
 tandis que si \(λ₁ = 0\), le premier terme est d'ordre 4
 \begin{equation}
- ℰ[u(η), λ(η)] = ℰ\{u^{\ast} [λ(η)], λ(η)\} + \tfrac{1}{4} λ₂ η^4 F_{ij}(λ₀) ξ₁^i ξ₁^j + o(η^4).
+ ℰ[u(η), λ(η)] = ℰ\{u^{\ast} [λ(η)], λ(η)\} + \tfrac{1}{4} λ₂ η⁴ F_{ij}(λ₀) ξ₁^i ξ₁^j + o(η⁴).
 \end{equation}
 \begin{center}
  ***
@@ -372,8 +372,8 @@ l'énergie le long de la branche bifurquée est établi \pdfmarkupcomment{dans
   \begin{aligned}[b]
     ℰ_{, uu}[u(η), λ(η); \hat{u}, \hat{v}] ={}
     & ℰ₂(λ₀ ; \hat{u}, \hat{v}) + η \bigl[ℰ₃(λ₀ ; u₁, \hat{u}, \hat{v})  + λ₁ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v})\bigr]\\
-    & + \tfrac{1}{2} η^2 \bigl[ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(λ₀; u₂, \hat{u}, \hat{v}) + λ₂ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v})\\
-    & + 2 λ₁ \dot{ℰ}₃(λ₀; u₁, \hat{u}, \hat{v}) + λ₁^2 \ddot{ℰ}₂(λ₀; \hat{u}, \hat{v}) \bigr] + o(η^2).
+    & + \tfrac{1}{2} η² \bigl[ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(λ₀; u₂, \hat{u}, \hat{v}) + λ₂ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v})\\
+    & + 2 λ₁ \dot{ℰ}₃(λ₀; u₁, \hat{u}, \hat{v}) + λ₁² \ddot{ℰ}₂(λ₀; \hat{u}, \hat{v}) \bigr] + o(η²).
   \end{aligned}
 \end{equation}
 Pour une analyse de stabilité, on doit prendre \(\hat{u} = \hat{v}\), soit
@@ -383,7 +383,7 @@ Pour une analyse de stabilité, on doit prendre \(\hat{u} = \hat{v}\), soit
     ℰ_{, uu}[u(η), λ(η) ; \hat{u}, \hat{u}] ={}
     & ℰ₂(λ₀; \hat{u}, \hat{u}) + η [ℰ(λ₀; u₁, \hat{u}, \hat{u}) + λ₁ \dot{ℰ}₂ (λ₀; \hat{u}, \hat{u})]\\
     & + \tfrac{1}{2} η² [ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{u}) +ℰ₃(λ₀; u₂, \hat{u}, \hat{u}) + λ₂ \dot{ℰ}₂(λ₀; \hat{u}, \hat{u})\\
-    & + 2 λ₁ \dot{ℰ}₃(λ₀; u₁, \hat{u}, \hat{u}) + λ₁^2 \ddot{ℰ}₂(λ₀; \hat{u}, \hat{u})] + o(η^2) .
+    & + 2 λ₁ \dot{ℰ}₃(λ₀; u₁, \hat{u}, \hat{u}) + λ₁² \ddot{ℰ}₂(λ₀; \hat{u}, \hat{u})] + o(η²) .
   \end{aligned}
 \end{equation}
 
@@ -402,9 +402,9 @@ l'expression~\eqref{eq:20220524134613}
   \begin{aligned}[b]
     ℰ_{, uu}[u(η), λ(η); \hat{u}, \hat{u}] ={}
     & η [ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j)] \hat{ξ}^i \hat{ξ}^j\\
-    & + \tfrac{1}{2} η^2 \bigl[ℰ₄(λ₀; v_i, v_j, v_k, v_l) ξ₁^k ξ₁^l + ℰ₃(λ₀; v_i, v_j, v_k) ξ₂^k\\
+    & + \tfrac{1}{2} η² \bigl[ℰ₄(λ₀; v_i, v_j, v_k, v_l) ξ₁^k ξ₁^l + ℰ₃(λ₀; v_i, v_j, v_k) ξ₂^k\\
     & + ℰ₃(λ₀; v_i, v_j, w_{k l}) ξ₁^k ξ₁^l + λ₁ ℰ₃(λ₀; v_i, v_j, w_k) ξ₁^k + λ₂ \dot{ℰ}₂(λ₀; v_i, v_j)\\
-    & + 2 λ₁ \dot{ℰ}₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁^2 \ddot{ℰ}₂(λ₀; v_i, v_j)\bigr] \hat{ξ}^i \hat{ξ}^j + o(η^2).
+    & + 2 λ₁ \dot{ℰ}₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁² \ddot{ℰ}₂(λ₀; v_i, v_j)\bigr] \hat{ξ}^i \hat{ξ}^j + o(η²).
   \end{aligned}
 \end{equation}
 Si \(λ₁ ≠ 0\), il suffit d'étudier le signe de la forme quadratique
@@ -415,8 +415,8 @@ sur \(V\), alors le développement limité précédent s'écrit
 \begin{equation}
   \begin{aligned}[b]
     ℰ_{, uu} [u(η), λ(η); \hat{u}, \hat{u}] ={}
-    & \tfrac{1}{2} η^2 \bigl\{ \bigl[ℰ₄(λ₀; v_i, v_j, v_k, v_l) + ℰ₃(λ₀; v_i, v_j, w_{k l})\bigr] ξ₁^k ξ₁^l\\
-    & + λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) \bigr\} \hat{ξ}^i \hat{ξ}^j + o(η^2)
+    & \tfrac{1}{2} η² \bigl\{ \bigl[ℰ₄(λ₀; v_i, v_j, v_k, v_l) + ℰ₃(λ₀; v_i, v_j, w_{k l})\bigr] ξ₁^k ξ₁^l\\
+    & + λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) \bigr\} \hat{ξ}^i \hat{ξ}^j + o(η²)
   \end{aligned}
 \end{equation}
 
@@ -494,9 +494,9 @@ de la façon suivante
 On pose dans ce qui suit
 \begin{align}
   \label{eq:20211112155446}
-  Λ(η) & = λ(η) - λ₀ = η λ₁ + \tfrac{1}{2} η^2 λ₂ + \tfrac{1}{6} η^3 λ₃ + \cdots,\\
+  Λ(η) & = λ(η) - λ₀ = η λ₁ + \tfrac{1}{2} η² λ₂ + \tfrac{1}{6} η³ λ₃ + \cdots,\\
   \label{eq:20211112113028}
-  U(η) & = u(η) - u^{\ast}[λ(η)] = η u₁ + \tfrac{1}{2} η^2 u₂ + \tfrac{1}{6} η^3 u₃ + \cdots.
+  U(η) & = u(η) - u^{\ast}[λ(η)] = η u₁ + \tfrac{1}{2} η² u₂ + \tfrac{1}{6} η³ u₃ + \cdots.
 \end{align}
 
 On considère une fonctionnelle \(\mathcal{F}\) de \(u\) et \(λ\)~:
@@ -510,7 +510,7 @@ On souhaite établir un développement limité de \(f\) au voisinage de \(η = 0
 ce qui conduit à calculer les dérivées successives de \(f\) en \(η = 0\),
 puisque
 \begin{equation}
-  f(η) = f(0) + η f'(0) + \tfrac{1}{2} η^2 f''(0) + \cdots.
+  f(η) = f(0) + η f'(0) + \tfrac{1}{2} η² f''(0) + \cdots.
 \end{equation}
 
 Pour calculer ces dérivées, il sera commode d'introduire la fonction auxiliaire
@@ -528,18 +528,18 @@ d'où l'on déduit successivement que
   \label{eq:20211112162417}
   f'(η) = ∂_{η} F + Λ' ∂_{λ} F,\\
   \label{eq:20211112165810}
-  f''(η) = ∂_{ηη}^2 F + 2Λ' ∂_{ηλ}^2F + Λ'^2 ∂_{λλ}^2 F + Λ'' ∂_{λ} F,\\
+  f''(η) = ∂_{ηη}² F + 2Λ' ∂_{ηλ}²F + Λ'² ∂_{λλ}² F + Λ'' ∂_{λ} F,\\
   \begin{aligned}[b]
     \label{eq:20211112173223}
     f'''(η) ={}
-    & ∂_{ηηη}^3 F + 3Λ' ∂_{ηηλ}^3F + 3Λ'^2 ∂_{ηλλ}^3F + λ'^3 ∂_{λλλ}^3 F\\
-    & + 3Λ'' ∂_{ηλ}^2 F + 3Λ' Λ'' ∂_{λ λ}^2 F + Λ''' ∂_{λ} F,
+    & ∂_{ηηη}³ F + 3Λ' ∂_{ηηλ}³F + 3Λ'² ∂_{ηλλ}³F + λ'³ ∂_{λλλ}³ F\\
+    & + 3Λ'' ∂_{ηλ}² F + 3Λ' Λ'' ∂_{λ λ}² F + Λ''' ∂_{λ} F,
   \end{aligned}\\
   \begin{aligned}[b]
     f''''(η) ={}
-    & ∂_{ηηηη}^4 F + 4Λ' ∂_{ηηηλ}^4F + 6Λ'^2 ∂_{ηηλλ}^4F + 4Λ'^3 ∂_{ηλλλ}^4F + Λ'^4 ∂_{λλλλ}^4 F\\
-    & + 6Λ'' ∂_{ηηλ}^3 F + 12Λ' Λ'' ∂_{ηλλ}^3F + 6Λ'^2 Λ'' ∂_{λλλ}^3 F\\
-    & + 4 Λ''' ∂_{ηλ}^2 F + \bigl( 3Λ''^2 + 4 Λ' Λ''' \bigr) ∂_{λλ}^2 F + λ'''' ∂_{λ}F,
+    & ∂_{ηηηη}⁴ F + 4Λ' ∂_{ηηηλ}⁴F + 6Λ'² ∂_{ηηλλ}⁴F + 4Λ'³ ∂_{ηλλλ}⁴F + Λ'⁴ ∂_{λλλλ}⁴ F\\
+    & + 6Λ'' ∂_{ηηλ}³ F + 12Λ' Λ'' ∂_{ηλλ}³F + 6Λ'² Λ'' ∂_{λλλ}³ F\\
+    & + 4 Λ''' ∂_{ηλ}² F + \bigl( 3Λ''² + 4 Λ' Λ''' \bigr) ∂_{λλ}² F + λ'''' ∂_{λ}F,
   \end{aligned}
 \end{gather}
 où \(λ\) et ses dérivées sont évaluées en \(η\), tandis que \(F\) et ses
@@ -549,18 +549,18 @@ relations précédentes s'écrivent
   \label{eq:20220107060454}
   f'(0) = ∂_{η} F + λ₁ ∂_{λ} F,\\
   \label{eq:20220107124311}
-  f''(0) = ∂_{ηη}^2 F + 2 λ₁ ∂_{ηλ}^2 F + λ₁^2 ∂_{λλ}^2 F + λ₂ ∂_{λ} F,\\
+  f''(0) = ∂_{ηη}² F + 2 λ₁ ∂_{ηλ}² F + λ₁² ∂_{λλ}² F + λ₂ ∂_{λ} F,\\
   \label{eq:20220107060500}
   \begin{aligned}[b]
     f'''(0) ={}
-    & ∂_{ηηη}^3 F + 3 λ₁ ∂_{ηηλ}^3 F + 3 λ₁^2 ∂_{ηλλ}^3 F + λ₁^3 ∂_{λλλ}^3 F\\
-    & + 3 λ₂ ∂_{ηλ}^2 F + 3 λ₁ λ₂ ∂_{λλ}^2 F + λ₃ ∂_{λ} F,
+    & ∂_{ηηη}³ F + 3 λ₁ ∂_{ηηλ}³ F + 3 λ₁² ∂_{ηλλ}³ F + λ₁³ ∂_{λλλ}³ F\\
+    & + 3 λ₂ ∂_{ηλ}² F + 3 λ₁ λ₂ ∂_{λλ}² F + λ₃ ∂_{λ} F,
   \end{aligned}\\
   \begin{aligned}[b]
     f''''(0) ={}
-    & ∂_{ηηηη}^4F + 4 λ₁ ∂_{ηηηλ}^4 F + 6 λ₁^2 ∂_{ηηλλ}^4 F + 4 λ₁^3 ∂_{ηλλλ}^4 F + λ₁^4 ∂_{λλλλ}^4 F\\
-    & + 6 λ₂ ∂_{ηηλ}^3 F + 12 λ₁ λ₂ ∂_{ηλλ}^3 F + 6 λ₁^2 λ₂ ∂_{λλλ}^3 F\\
-    & + 4 λ₃ ∂_{ηλ}^2 F + \bigl(3 λ₂^2 + 4 λ₁ λ₃\bigr) ∂_{λλ}^2 F + λ₄ ∂_{λ} F,
+    & ∂_{ηηηη}⁴F + 4 λ₁ ∂_{ηηηλ}⁴ F + 6 λ₁² ∂_{ηηλλ}⁴ F + 4 λ₁³ ∂_{ηλλλ}⁴ F + λ₁⁴ ∂_{λλλλ}⁴ F\\
+    & + 6 λ₂ ∂_{ηηλ}³ F + 12 λ₁ λ₂ ∂_{ηλλ}³ F + 6 λ₁² λ₂ ∂_{λλλ}³ F\\
+    & + 4 λ₃ ∂_{ηλ}² F + \bigl(3 λ₂² + 4 λ₁ λ₃\bigr) ∂_{λλ}² F + λ₄ ∂_{λ} F,
   \end{aligned}
 \end{gather}
 où \(F\) et ses dérivées sont maintenant évaluées en \((0, λ₀)\).
@@ -591,12 +591,12 @@ on obtient successivement
 \begin{gather}
   ∂_{η}F(η, λ) = ℰ_{, u u}[u^{\ast}(λ) + U(η), λ; U'(η), \hat{u}],\\
   \begin{aligned}[b]
-    ∂_{η η}^2 F(η, λ) ={}
+    ∂_{η η}² F(η, λ) ={}
     & ℰ_{, uuu}[u^{\ast}(λ) + U(η), λ; U'(η), U'(η), \hat{u}]\\
     & + ℰ_{, uu} [u^{\ast}(λ) + U(η), λ; U''(η), \hat{u}],
   \end{aligned}\\
   \begin{aligned}[b]
-    ∂_{ηηη}^3 F(η, λ) ={}
+    ∂_{ηηη}³ F(η, λ) ={}
     & ℰ_{, uuuu}[u^{\ast}(λ) + U(η), λ; U'(η), U'(η), U'(η), \hat{u}]\\
     & + 3ℰ_{, u u u}[u^{\ast}(λ) + U(η), λ; U'(η), U''(η), \hat{u}]\\
     & + ℰ_{, uu}[u^{\ast}(λ) + U(η), λ; U'''(η), \hat{u}],
@@ -605,16 +605,16 @@ on obtient successivement
 soit, en \(η = 0\)
 \begin{gather}
   ∂_{η}F(0, λ) = ℰ₂(λ; u₁, \hat{u}),\\
-  ∂_{ηη}^2 F(0, λ) = ℰ₃(λ; u₁, u₁, \hat{u}) + ℰ₂(λ; u₂, \hat{u}),\\
-  ∂_{ηηη}^3 F(0, λ) = ℰ₄(λ; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ; u₁, u₂, \hat{u}) + ℰ₂(λ; u₃, \hat{u}).
+  ∂_{ηη}² F(0, λ) = ℰ₃(λ; u₁, u₁, \hat{u}) + ℰ₂(λ; u₂, \hat{u}),\\
+  ∂_{ηηη}³ F(0, λ) = ℰ₄(λ; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ; u₁, u₂, \hat{u}) + ℰ₂(λ; u₃, \hat{u}).
 \end{gather}
 
 Les dérivées croisées de \(F\) en \((0, λ)\) s'obtiennent par simple dérivation
 des relations précédentes par rapport à \(λ\)
 \begin{gather}
-  ∂_{ηλ}^2 F(0, λ) = \dot{ℰ}₂(λ; u₁, \hat{u}),\\
-  ∂_{ηηλ}^3 F(0, λ) = \dot{ℰ}₃(λ; u₁, u₁, \hat{u}) + \dot{ℰ₂}(λ; u₂, \hat{u}),\\
-  ∂_{ηλλ}^3 F(0, λ) = \ddot{ℰ}₂(λ; u₁, \hat{u}).
+  ∂_{ηλ}² F(0, λ) = \dot{ℰ}₂(λ; u₁, \hat{u}),\\
+  ∂_{ηηλ}³ F(0, λ) = \dot{ℰ}₃(λ; u₁, u₁, \hat{u}) + \dot{ℰ₂}(λ; u₂, \hat{u}),\\
+  ∂_{ηλλ}³ F(0, λ) = \ddot{ℰ}₂(λ; u₁, \hat{u}).
 \end{gather}
 
 En insérant les résultats précédentes dans les relations
@@ -627,7 +627,7 @@ les expressions suivantes des dérivées successives de \(f\) en \(η = 0\)
     f'''(0) ={}
     & ℰ₄(λ₀; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ₀; u₁, u₂, \hat{u}) + ℰ₂(λ₀ ; u₃, \hat{u})\\
     & + 3 λ₁ [\dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + \dot{ℰ}₂(λ₀; u₂, \hat{u})]\\
-    & + 3 λ₁^2 \ddot{ℰ}₂(λ₀; u₁, \hat{u}) + 3 λ₂ \dot{ℰ}₂(λ₀; u₁, \hat{u}) .
+    & + 3 λ₁² \ddot{ℰ}₂(λ₀; u₁, \hat{u}) + 3 λ₂ \dot{ℰ}₂(λ₀; u₁, \hat{u}) .
   \end{aligned}
 \end{gather}
 
@@ -636,10 +636,10 @@ On en déduit finalement le développement limité à l'ordre 3 en \(η\) du ré
   \label{eq:20220107080901}
   \begin{aligned}[b]
     ℰ_{, u}[u(η), λ(η)] ={} & η ℰ₂(λ₀; u₁, \hat{u}) \\
-    & + \tfrac{1}{2} η^2 [ℰ₃(λ₀; u₁, u₁, \hat{u}) + 2 λ₁ \dot{ℰ}₂(λ₀; u₁, \hat{u}) + ℰ₂(λ₀; u₂, \hat{u})]\\
-    & + \tfrac{1}{6} η^3 \bigl\{ ℰ₄(λ₀; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ₀; u₁, u₂, \hat{u}) + ℰ₂(λ₀; u₃, \hat{u})\\
-    & + 3 λ₁ \bigl[\dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + \dot{ℰ}₂(λ₀; u₂, \hat{u})\bigr] + 3 λ₁^2 \ddot{ℰ}₂(λ₀; u₁, \hat{u})\\
-    &  + 3 λ₂ \dot{ℰ}₂(λ₀ ; u₁, \hat{u}) \bigr\} + o(η^3).
+    & + \tfrac{1}{2} η² [ℰ₃(λ₀; u₁, u₁, \hat{u}) + 2 λ₁ \dot{ℰ}₂(λ₀; u₁, \hat{u}) + ℰ₂(λ₀; u₂, \hat{u})]\\
+    & + \tfrac{1}{6} η³ \bigl\{ ℰ₄(λ₀; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ₀; u₁, u₂, \hat{u}) + ℰ₂(λ₀; u₃, \hat{u})\\
+    & + 3 λ₁ \bigl[\dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + \dot{ℰ}₂(λ₀; u₂, \hat{u})\bigr] + 3 λ₁² \ddot{ℰ}₂(λ₀; u₁, \hat{u})\\
+    &  + 3 λ₂ \dot{ℰ}₂(λ₀ ; u₁, \hat{u}) \bigr\} + o(η³).
   \end{aligned}
 \end{equation}
 
@@ -665,11 +665,11 @@ tandis que les dérivées de \(F\) par rapport à \(η\) s'écrivent
   ∂_{η} F(η, λ) = ℰ_{, u}[u^{\ast}(λ) + U(η), λ; U'(η)],
 \end{equation}
 \begin{equation}
-  ∂_{ηη}^2 F(η, λ) = ℰ_{, uu} [u^{\ast}(λ) + U(η), λ; U'(η), U'(η)] + ℰ_{, u} [u^{\ast}(λ) + U(η), λ; U''(η)],
+  ∂_{ηη}² F(η, λ) = ℰ_{, uu} [u^{\ast}(λ) + U(η), λ; U'(η), U'(η)] + ℰ_{, u} [u^{\ast}(λ) + U(η), λ; U''(η)],
 \end{equation}
 \begin{equation*}
   \begin{aligned}[b]
-    ∂_{ηηη}^3 F(η, λ) ={}
+    ∂_{ηηη}³ F(η, λ) ={}
     & ℰ_{, uuu} [u^{\ast}(λ) + U(η), λ; U'(η), U'(η), U'(η)]\\
     & + 3ℰ_{, uu}[u^{\ast}(λ) + U(η), λ; U'(η), U''(η)]\\
     & + ℰ_{, u}[u^{\ast}(λ) + U(η), λ; U'''(η)],
@@ -677,7 +677,7 @@ tandis que les dérivées de \(F\) par rapport à \(η\) s'écrivent
 \end{equation*}
 \begin{equation}
   \begin{aligned}[b]
-    ∂_{ηηηη}^4 F(η, λ) ={}
+    ∂_{ηηηη}⁴ F(η, λ) ={}
     & ℰ_{, uuuu}[u^{\ast}(λ) + U(η), λ; U'(η), U'(η), U'(η), U'(η)]\\
     & + 6ℰ_{,uuu}[u^{\ast}(λ) + U(η), λ; U'(η), U'(η), U''(η)]\\
     & + 3ℰ_{, uu}[u^{\ast}(λ) + U(η), λ; U''(η), U''(η)]\\
@@ -688,10 +688,10 @@ tandis que les dérivées de \(F\) par rapport à \(η\) s'écrivent
 soit, en \(η = 0\), en observant que \(ℰ_{, u}[u^{\ast}(λ), λ] = 0\)
 \begin{gather}
   ∂_{η} F(0, λ) = 0,\\
-  ∂_{ηη}^2 F(0, λ) =ℰ₂(λ ; u₁, u₁),\\
-  ∂_{ηηη}^3 F(0, λ) = ℰ₃(λ; u₁, u₁, u₁) + 3ℰ₂(λ; u₁, u₂),\\
+  ∂_{ηη}² F(0, λ) =ℰ₂(λ ; u₁, u₁),\\
+  ∂_{ηηη}³ F(0, λ) = ℰ₃(λ; u₁, u₁, u₁) + 3ℰ₂(λ; u₁, u₂),\\
   \begin{aligned}[b]
-    ∂_{ηηηη}^4 F(η, λ) ={}
+    ∂_{ηηηη}⁴ F(η, λ) ={}
     & ℰ₄(λ; u₁, u₁, u₁, u₁) + 6ℰ₃(λ; u₁, u₁, u₂)\\
     & + 3ℰ₂(λ; u₂, u₂) + 3ℰ₂(λ; u₁, u₃).
   \end{aligned}
@@ -699,12 +699,12 @@ soit, en \(η = 0\), en observant que \(ℰ_{, u}[u^{\ast}(λ), λ] = 0\)
 
 On en déduit que
 \begin{gather}
-  ∂_{ηλ}^2 F(0, λ) = 0,\\
-  ∂_{ηηλ}^3 F(0, λ) = \dot{ℰ}₂(λ; u₁, u₁),\\
-  ∂_{ηλλ}^3 F(0, λ) = 0,\\
-  ∂_{ηηηλ}^4 F(0, λ) = \dot{ℰ}₃(λ; u₁, u₁, u₁) + 3\dot{ℰ}₂(λ; u₁, u₂),\\
-  ∂_{ηηλλ}^4 F(0, λ) = \ddot{ℰ}₂(λ; u₁, u₁),\\
-  ∂_{ηλλλ}^4 F(0, λ) = 0
+  ∂_{ηλ}² F(0, λ) = 0,\\
+  ∂_{ηηλ}³ F(0, λ) = \dot{ℰ}₂(λ; u₁, u₁),\\
+  ∂_{ηλλ}³ F(0, λ) = 0,\\
+  ∂_{ηηηλ}⁴ F(0, λ) = \dot{ℰ}₃(λ; u₁, u₁, u₁) + 3\dot{ℰ}₂(λ; u₁, u₂),\\
+  ∂_{ηηλλ}⁴ F(0, λ) = \ddot{ℰ}₂(λ; u₁, u₁),\\
+  ∂_{ηλλλ}⁴ F(0, λ) = 0
 \end{gather}
 et finalement
 \begin{gather}
@@ -716,7 +716,7 @@ et finalement
     & ℰ₄(λ₀; u₁, u₁, u₁, u₁) + 6ℰ₃(λ₀; u₁, u₁, u₂)\\
     & + 3ℰ₂(λ₀; u₂, u₂) + 3ℰ₂(λ₀; u₁, u₃)\\
     & + 4 λ₁ \dot{ℰ}₃(λ₀; u₁, u₁, u₁) + 12 λ₁ \dot{ℰ}₂(λ₀; u₁, u₂)\\
-    & + 6λ₁^2 \ddot{ℰ}₂(λ₀; u₁, u₁) + 6λ₂ \dot{ℰ}₂(λ₀; u₁, u₁).
+    & + 6λ₁² \ddot{ℰ}₂(λ₀; u₁, u₁) + 6λ₂ \dot{ℰ}₂(λ₀; u₁, u₁).
   \end{aligned}
 \end{gather}
 
@@ -768,13 +768,13 @@ en introduisant cette fois-ci la définition~\eqref{eq:20220524134525} de
     ={} & ℰ₂(λ₀ ; ξ₁^i v_i + ξ₁^i ξ₁^j w_{i j} + λ₁ ξ₁^i w_i, ξ₁^i v_i + ξ₁^k ξ₁^l w_{k l} + λ₁ ξ₁^k w_k)\\
     ={} & ℰ₂(λ₀; ξ₁^i ξ₁^j w_{i j} + λ₁ ξ₁^i w_i, ξ₁^k ξ₁^l w_{k l} + λ₁ ξ₁^k w_k)\\
     ={} & ℰ₂(λ₀; w_{i j}, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 2 λ₁ ℰ₂(λ₀ ; w_{i j}, w_k) ξ₁^i ξ₁^j ξ₁^k\\
-    & + λ₁^2 ℰ₂(λ₀; w_i, w_j) ξ₁^i ξ₁^j\\
+    & + λ₁² ℰ₂(λ₀; w_i, w_j) ξ₁^i ξ₁^j\\
     ={} & ℰ₂(λ₀; w_{i j}, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 2 λ₁ ℰ₂(λ₀ ; w_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k\\
-    & + \tfrac{1}{2} λ₁^2 \bigl[ℰ₂(λ₀; w_i, w_j) + ℰ₂(λ₀; w_j, w_i)\bigr] ξ₁^i ξ₁^j\\
+    & + \tfrac{1}{2} λ₁² \bigl[ℰ₂(λ₀; w_i, w_j) + ℰ₂(λ₀; w_j, w_i)\bigr] ξ₁^i ξ₁^j\\
     ={} & ℰ₂(λ₀; w_{i j}, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l - 4 λ₁ \dot{ℰ}₂ (λ₀; v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k\\
-    & - λ₁^2 \bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr] ξ₁^i ξ₁^j\\
+    & - λ₁² \bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr] ξ₁^i ξ₁^j\\
     ={} & ℰ₃(λ₀; v_i, v_j, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l - 4 λ₁ \dot{ℰ}₂(λ₀; v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k\\
-    & - λ₁^2 \bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr] ξ₁^i ξ₁^j
+    & - λ₁² \bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr] ξ₁^i ξ₁^j
   \end{aligned}
 \end{equation*}
 et enfin
@@ -793,15 +793,15 @@ En rassemblant les résultats précédents, on trouve pour \(f''''(0)\)
     ={} & ℰ₄(λ₀; v_i, v_j, v_k , v_l) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 6ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k\\
     & + 6ℰ₃(λ₀; v_i, v_j, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 12 λ₁ \dot{ℰ}₂ (λ₀; v_{i }, w_{j k}) ξ₁^i ξ₁^j ξ₁^k\\
     & - 3ℰ₃(λ₀; v_i, v_j, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l - 12 λ₁ \dot{ℰ}₂ (λ₀; v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k\\
-    & - 3 λ₁^2 \bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr] ξ₁^i ξ₁^j + 4 λ₁ \dot{ℰ}₃(λ₀; v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₁^k\\
+    & - 3 λ₁² \bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr] ξ₁^i ξ₁^j + 4 λ₁ \dot{ℰ}₃(λ₀; v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₁^k\\
     & + 12 λ₁ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^i ξ₂^j + 12 λ₁ \dot{ℰ}₂(λ₀ ; v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k\\
-    & + 6 λ₁^2 \bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr] ξ₁^i ξ₁^j + 6 λ₁^2 \ddot{ℰ}₂(λ₀; v_i, v_j) ξ₁^i ξ₁^j\\
+    & + 6 λ₁² \bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr] ξ₁^i ξ₁^j + 6 λ₁² \ddot{ℰ}₂(λ₀; v_i, v_j) ξ₁^i ξ₁^j\\
     & + 6 λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^i ξ₁^j\\
     ={} & \bigl[ ℰ₄(λ₀; v_i, v_j, v_k , v_l) + 3ℰ₃(λ₀; v_i, v_j, w_{k l}) \bigr] ξ₁^i ξ₁^j ξ₁^k ξ₁^l\\
     & + 4 λ₁ \bigl[\dot{ℰ}₃(λ₀; v_i, v_j, v_k) + 3 \dot{ℰ}₂(λ₀; v_i, w_{j k})\bigr] ξ₁^i ξ₁^j ξ₁^k\\
-    & + \bigl\{ 3 λ₁^2 \bigl[2 \ddot{ℰ}₂ (λ₀; v_i, v_j) + \dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr] + 6 λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) \bigr\} ξ₁^i ξ₁^j\\
+    & + \bigl\{ 3 λ₁² \bigl[2 \ddot{ℰ}₂ (λ₀; v_i, v_j) + \dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr] + 6 λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) \bigr\} ξ₁^i ξ₁^j\\
     & + 6ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k + 12 λ₁ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^i ξ₂^j\\
-    ={} & E_{i j k l}(λ₀) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4 λ₁ \dot{E}_{i j k} (λ₀) ξ₁^i ξ₁^j ξ₁^k + 6 \bigl[λ₁^2 \dot{F}_{i j}(λ₀) + λ₂ F_{i j}(λ₀)\bigr] ξ₁^i ξ₁^j\\
+    ={} & E_{i j k l}(λ₀) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4 λ₁ \dot{E}_{i j k} (λ₀) ξ₁^i ξ₁^j ξ₁^k + 6 \bigl[λ₁² \dot{F}_{i j}(λ₀) + λ₂ F_{i j}(λ₀)\bigr] ξ₁^i ξ₁^j\\
     & + 6 \bigl[E_{i j k}(λ₀) ξ₁^k + 2 λ₁ F_{i j}(λ₀)\bigr] ξ₁^i ξ₂^j,
   \end{aligned}
 \end{equation*}
@@ -809,7 +809,7 @@ et on observe que le dernier terme(en \(ξ₁^i ξ₂^j\)) est nul, du fait de
 l'équation de bifurcation~\eqref{eq:20220524135036}. On obtient donc
 \begin{equation}
   \label{eq:20220601055512}
-  f''''(0) = E_{i j k l}(λ₀) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4 λ₁ \dot{E}_{i j k}(λ₀) ξ₁^i ξ₁^j ξ₁^k + 6 \bigl[λ₁^2 \dot{F}_{i j}(λ₀) + λ₂ F_{i j}(λ₀)\bigr] ξ₁^i ξ₁^j .
+  f''''(0) = E_{i j k l}(λ₀) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4 λ₁ \dot{E}_{i j k}(λ₀) ξ₁^i ξ₁^j ξ₁^k + 6 \bigl[λ₁² \dot{F}_{i j}(λ₀) + λ₂ F_{i j}(λ₀)\bigr] ξ₁^i ξ₁^j .
 \end{equation}
 Le développement limité~\eqref{eq:20220525053600} est alors obtenu en
 rassemblant les résultats~\eqref{eq:20220601055423}, \eqref{eq:20220601055448}
@@ -823,12 +823,12 @@ et \eqref{eq:20220601055512}.
    \begin{aligned}[b]
      E_{i j k l}(λ₀) ξ₁^i ξ₁^j ξ₁^k ξ₁^l
      ={} & - 3 λ₂ F_{i j}(λ₀) ξ₁^i ξ₁^j - 3 A_{i j}(λ₀) ξ₁^i ξ₂^j - 3 λ₁ \bigl[\dot{E}_{i j k} (λ₀) ξ₁^k + λ₁ \dot{F}_{i j}(λ₀)\bigr] ξ₁^i ξ₁^j\\
-     ={} & - 3 λ₁ \dot{E}_{i j k}(λ₀) ξ₁^i ξ₁^j ξ₁^k - 3 [λ₁^2 \dot{F}_{i j} (λ₀) + λ₂ F_{i j}(λ₀)] ξ₁^i ξ₁^j - 3 A_{i j}(λ₀) ξ₁^i ξ₂^j,
+     ={} & - 3 λ₁ \dot{E}_{i j k}(λ₀) ξ₁^i ξ₁^j ξ₁^k - 3 [λ₁² \dot{F}_{i j} (λ₀) + λ₂ F_{i j}(λ₀)] ξ₁^i ξ₁^j - 3 A_{i j}(λ₀) ξ₁^i ξ₂^j,
    \end{aligned}
  \end{equation*}
  soit
  \begin{equation}
-   f''''(0) = λ₁ \dot{E}_{i j k}(λ₀) ξ₁^i ξ₁^j ξ₁^k + 3 [λ₁^2 \dot{F}_{i j} (λ₀) + λ₂ F_{i j}(λ₀)] ξ₁^i ξ₁^j - 3 A_{i j}(λ₀) ξ₁^i ξ₂^j.
+   f''''(0) = λ₁ \dot{E}_{i j k}(λ₀) ξ₁^i ξ₁^j ξ₁^k + 3 [λ₁² \dot{F}_{i j} (λ₀) + λ₂ F_{i j}(λ₀)] ξ₁^i ξ₁^j - 3 A_{i j}(λ₀) ξ₁^i ξ₂^j.
  \end{equation}
 \end{remark}
 
@@ -846,13 +846,13 @@ dérivant par rapport à \(λ\)
 \begin{equation}
   ∂_{λ} F(0, λ) = \dot{ℰ}₂(λ; \hat{u}, \hat{v})
   \quad \text{et} \quad
-  ∂_{λ λ}^2 F(0, λ) = \ddot{ℰ}₂(λ; \hat{u}, \hat{v}).
+  ∂_{λ λ}² F(0, λ) = \ddot{ℰ}₂(λ; \hat{u}, \hat{v}).
 \end{equation}
 On trouve de même successivement
 \begin{gather}
   ∂_{η} F(η, λ) = ℰ_{, u u u} [u^{\ast}(λ) + U(η), λ; U'(η), \hat{u}, \hat{v}],\\
   \begin{aligned}[b]
-    ∂_{η η}^2 F(η, λ)
+    ∂_{η η}² F(η, λ)
     ={} & ℰ_{, u u u u} [u^{\ast}(λ) + U(η), λ ; U'(η), U'(η), \hat{u}, \hat{v}] \\
     ={} & +ℰ_{, u u u} [u^{\ast}(λ) + U(η), λ; U''(η), \hat{u}, \hat{v}],
   \end{aligned}
@@ -863,11 +863,11 @@ soit, en \(η = 0\)
 \end{equation}
 et
 \begin{equation}
-  ∂_{η η}^2 F(0, λ) = ℰ₄(λ ; u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(λ; u₂, \hat{u}, \hat{v}),
+  ∂_{η η}² F(0, λ) = ℰ₄(λ ; u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(λ; u₂, \hat{u}, \hat{v}),
 \end{equation}
 et en dérivant cette fois par rapport à \(λ\)
 \begin{equation}
-  ∂_{η λ}^2 F(0, λ) = \dot{ℰ}₃(λ; u₁, \hat{u}, \hat{v}).
+  ∂_{η λ}² F(0, λ) = \dot{ℰ}₃(λ; u₁, \hat{u}, \hat{v}).
 \end{equation}
 
 En insérant les résultats précédents dans les
@@ -877,7 +877,7 @@ expressions~\eqref{eq:20220107060454} et \eqref{eq:20220107124311}, on trouve
   \begin{aligned}[b]
     f''(0)
     ={} & ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v}) +ℰ₃(λ₀; u₂, \hat{u}, \hat{v}) + λ₂ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v})\\
-    & + 2 λ₁ \dot{ℰ}₃(λ₀ ; u₁, \hat{u}, \hat{v}) + λ₁^2 \ddot{ℰ}₂(λ₀ ; \hat{u}, \hat{v}).
+    & + 2 λ₁ \dot{ℰ}₃(λ₀ ; u₁, \hat{u}, \hat{v}) + λ₁² \ddot{ℰ}₂(λ₀ ; \hat{u}, \hat{v}).
   \end{aligned}
 \end{gather}
 qui conduisent finalement au développement limité~\eqref{eq:20220531054247}.
@@ -893,8 +893,8 @@ la hessienne de l'énergie. En d'autre terme, on cherche \(x\) et \(α\) tels qu
 
 On cherche les développements limités à l'ordre 2 en \(η\) de \(x\) et \(α\)
 \begin{align*}
- x & = x₀ + η x₁ + \tfrac{1}{2} η^2 x₂ + o(η^2),\\
- α & = α₀ + η α₁ + \tfrac{1}{2} η^2 α₂ + o(η^2).
+ x & = x₀ + η x₁ + \tfrac{1}{2} η² x₂ + o(η²),\\
+ α & = α₀ + η α₁ + \tfrac{1}{2} η² α₂ + o(η²).
 \end{align*}
 
 Ces développements limités sont tout d'abord insérés dans le développement
@@ -902,17 +902,17 @@ limité \eqref{eq:20220531054247} de la hessienne de l'énergie
 \begin{equation*}
   \begin{aligned}[b]
     ℰ_{, u u} [u(η), λ(η); x, \hat{u}]
-    ={} & ℰ₂(λ₀; x₀, \hat{u}) + η ℰ₂(λ₀ ; x₁, \hat{u}) + \tfrac{1}{2} η^2 ℰ₂(λ₀; x₂, \hat{u})\\
-    & + η ℰ₃(λ₀; u₁, x₀, \hat{u}) + η^2 ℰ₃(λ₀; u₁, x₁, \hat{u})\\
-    & + η λ₁ \dot{ℰ}₂(λ₀; x₀, \hat{u}) + η^2 λ₁ \dot{ℰ}₂(λ₀; x₁, \hat{u})\\
-    & + \tfrac{1}{2} η^2 \bigl[ℰ₄(λ₀; u₁, u₁, x₀, \hat{u}) + ℰ₃(λ₀; u₂, x₀, \hat{u})\\
+    ={} & ℰ₂(λ₀; x₀, \hat{u}) + η ℰ₂(λ₀ ; x₁, \hat{u}) + \tfrac{1}{2} η² ℰ₂(λ₀; x₂, \hat{u})\\
+    & + η ℰ₃(λ₀; u₁, x₀, \hat{u}) + η² ℰ₃(λ₀; u₁, x₁, \hat{u})\\
+    & + η λ₁ \dot{ℰ}₂(λ₀; x₀, \hat{u}) + η² λ₁ \dot{ℰ}₂(λ₀; x₁, \hat{u})\\
+    & + \tfrac{1}{2} η² \bigl[ℰ₄(λ₀; u₁, u₁, x₀, \hat{u}) + ℰ₃(λ₀; u₂, x₀, \hat{u})\\
     & + λ₂ \dot{ℰ}₂(λ₀; x₀, \hat{u}) + 2 λ₁ \dot{ℰ}₃(λ₀; u₁, x, \hat{u})\\
-    & + λ₁^2 \ddot{ℰ}₂(λ₀; x, \hat{u}) \bigr] + o(η^2)\\
+    & + λ₁² \ddot{ℰ}₂(λ₀; x, \hat{u}) \bigr] + o(η²)\\
     ={} & ℰ₂(λ₀; x₀, \hat{u})\\
     & + η \bigl[ℰ₃(λ₀; u₁, x₀, \hat{u}) + ℰ₂ (λ₀; x₁, \hat{u}) + λ₁ \dot{ℰ}₂(λ₀ ; x₀, \hat{u})\bigr]\\
-    & + \tfrac{1}{2} η^2 \bigl[ℰ₂(λ₀; x₂, \hat{u}) + 2ℰ₃(λ₀; u₁, x₁, \hat{u}) + 2 λ₁ \dot{ℰ}₂(λ₀; x₁, \hat{u})\bigr]\\
-    & + \tfrac{1}{2} η^2 \bigl[ℰ₄(λ₀; u₁, u₁, x₀, \hat{u}) + ℰ₃(λ₀; u₂, x₀, \hat{u}) + λ₂ \dot{ℰ}₂(λ₀; x₀, \hat{u})\bigr]\\
-    & + \tfrac{1}{2} η^2 \bigl[2 λ₁ \dot{ℰ}₃(λ₀ ; u₁, x, \hat{u}) + λ₁^2 \ddot{ℰ}₂(λ₀; x, \hat{u})\bigr] + o(η^2)
+    & + \tfrac{1}{2} η² \bigl[ℰ₂(λ₀; x₂, \hat{u}) + 2ℰ₃(λ₀; u₁, x₁, \hat{u}) + 2 λ₁ \dot{ℰ}₂(λ₀; x₁, \hat{u})\bigr]\\
+    & + \tfrac{1}{2} η² \bigl[ℰ₄(λ₀; u₁, u₁, x₀, \hat{u}) + ℰ₃(λ₀; u₂, x₀, \hat{u}) + λ₂ \dot{ℰ}₂(λ₀; x₀, \hat{u})\bigr]\\
+    & + \tfrac{1}{2} η² \bigl[2 λ₁ \dot{ℰ}₃(λ₀ ; u₁, x, \hat{u}) + λ₁² \ddot{ℰ}₂(λ₀; x, \hat{u})\bigr] + o(η²)
   \end{aligned}
 \end{equation*}
 et
@@ -920,7 +920,7 @@ et
   \begin{aligned}[b]
     α 〈 x, \hat{u} 〉
     ={} & α₀ 〈 x₀, \hat{u} 〉 + η(α₁ 〈 x₀, \hat{u} 〉 + α₀ 〈 x₁, \hat{u} 〉)\\
-    & + \tfrac{1}{2} η^2 (α₂ 〈 x₀, \hat{u} 〉 + 2 α₁ 〈 x₁, \hat{u} 〉 + α₀ 〈 x₂, \hat{u} 〉) + o(η^2) .
+    & + \tfrac{1}{2} η² (α₂ 〈 x₀, \hat{u} 〉 + 2 α₁ 〈 x₁, \hat{u} 〉 + α₀ 〈 x₂, \hat{u} 〉) + o(η²) .
   \end{aligned}
 \end{equation*}
 
@@ -1059,13 +1059,13 @@ l'équation de bifurcation \eqref{eq:20211112183220}
 qui suggère d'introduire le tenseur \(F_{i j}(λ)\) défini par l'équation
 \eqref{eq:20220524135643}. Le terme linéaire en \(ξ₁^i\) dans l'équation de
 bifurcation \eqref{eq:20211112183220} est alors simplement~:
-\(3 λ₁^2 \dot{F}_{i j}(λ₀)\).
+\(3 λ₁² \dot{F}_{i j}(λ₀)\).
 
 \paragraph{Synthèse~: simplification des équations \eqref{eq:20220524133816} et
   \eqref{eq:20211112183220}} En rassemblant les résultats précédents, on obtient
 tout d'abord pour l'équation \eqref{eq:20211112183220}
 \begin{equation}
-  3 [E_{i j k}(λ₀) + λ₁ F_{i j} (λ₀)] ξ₂^j + 3 λ₂ F_{i j}(λ₀) ξ₁^j + E_{i j k l}(λ₀) ξ₁^j ξ₁^k ξ₁^l + 3 λ₁ \dot{E}_{i j k} (λ₀) ξ₁^j ξ₁^k + 3 λ₁^2 \dot{F}_{i j}(λ₀) ξ₁^j = 0,
+  3 [E_{i j k}(λ₀) + λ₁ F_{i j} (λ₀)] ξ₂^j + 3 λ₂ F_{i j}(λ₀) ξ₁^j + E_{i j k l}(λ₀) ξ₁^j ξ₁^k ξ₁^l + 3 λ₁ \dot{E}_{i j k} (λ₀) ξ₁^j ξ₁^k + 3 λ₁² \dot{F}_{i j}(λ₀) ξ₁^j = 0,
 \end{equation}
 qui suggère d'introduire le tenseur \(A_{i j}(λ)\) défini par l'équation
 \eqref{eq:20220524135705}. On obtient alors finalement l'équation de bifurcation

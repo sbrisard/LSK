@@ -502,48 +502,42 @@ On pose dans ce qui suit
 On considère une fonctionnelle \(\mathcal{F}\) de \(u\) et \(λ\)~:
 \(\mathcal{F}(u, λ)\). Cette fonctionnelle est évaluée le long de la branche
 bifurquée. En d'autres termes, on considère
-\begin{equation}
+\begin{equation*}
   f(η) = F\{ u^{\ast} [λ₀ + Λ(η)] + U(η), λ₀ + Λ(η) \}.
-\end{equation}
+\end{equation*}
 
 On souhaite établir un développement limité de \(f\) au voisinage de \(η = 0\),
 ce qui conduit à calculer les dérivées successives de \(f\) en \(η = 0\),
 puisque
-\begin{equation}
+\begin{equation*}
   f(η) = f(0) + η f'(0) + \tfrac{1}{2} η² f''(0) + \cdots.
-\end{equation}
+\end{equation*}
 
 Pour calculer ces dérivées, il sera commode d'introduire la fonction auxiliaire
 \(F\)
-\begin{equation}
+\begin{equation*}
   F(η, λ) =\mathcal{F}[u^{\ast}(λ) + U(η), λ],
-\end{equation}
+\end{equation*}
 dans laquelle les variables \(λ\) et \(η\) sont provisoirement considérées comme
-indépendantes. On a
-\begin{equation}
- f(η) = F[η, λ₀ + Λ(η)],
-\end{equation}
-d'où l'on déduit successivement que
-\begin{gather}
-  \label{eq:20211112162417}
+indépendantes. On a \(f(η) = F[η, λ₀ + Λ(η)]\), d'où l'on déduit successivement
+que
+\begin{gather*}
   f'(η) = ∂_{η} F + Λ' ∂_{λ} F,\\
-  \label{eq:20211112165810}
-  f''(η) = ∂_{ηη}² F + 2Λ' ∂_{ηλ}²F + Λ'² ∂_{λλ}² F + Λ'' ∂_{λ} F,\\
+  f''(η) = ∂_{ηη}² F + 2Λ' ∂_{ηλ}²F + Λ'^2 ∂_{λλ}² F + Λ'' ∂_{λ} F,\\
   \begin{aligned}[b]
-    \label{eq:20211112173223}
     f'''(η) ={}
-    & ∂_{ηηη}³ F + 3Λ' ∂_{ηηλ}³F + 3Λ'² ∂_{ηλλ}³F + λ'³ ∂_{λλλ}³ F\\
+    & ∂_{ηηη}³ F + 3Λ' ∂_{ηηλ}³F + 3Λ'^2 ∂_{ηλλ}³F + λ'^3 ∂_{λλλ}³ F\\
     & + 3Λ'' ∂_{ηλ}² F + 3Λ' Λ'' ∂_{λ λ}² F + Λ''' ∂_{λ} F,
   \end{aligned}\\
   \begin{aligned}[b]
     f''''(η) ={}
-    & ∂_{ηηηη}⁴ F + 4Λ' ∂_{ηηηλ}⁴F + 6Λ'² ∂_{ηηλλ}⁴F + 4Λ'³ ∂_{ηλλλ}⁴F + Λ'⁴ ∂_{λλλλ}⁴ F\\
-    & + 6Λ'' ∂_{ηηλ}³ F + 12Λ' Λ'' ∂_{ηλλ}³F + 6Λ'² Λ'' ∂_{λλλ}³ F\\
-    & + 4 Λ''' ∂_{ηλ}² F + \bigl( 3Λ''² + 4 Λ' Λ''' \bigr) ∂_{λλ}² F + λ'''' ∂_{λ}F,
+    & ∂_{ηηηη}⁴ F + 4Λ' ∂_{ηηηλ}⁴F + 6Λ'^2 ∂_{ηηλλ}⁴F + 4Λ'^3 ∂_{ηλλλ}⁴F + Λ'^4 ∂_{λλλλ}⁴ F\\
+    & + 6Λ'' ∂_{ηηλ}³ F + 12Λ' Λ'' ∂_{ηλλ}³F + 6Λ'^2 Λ'' ∂_{λλλ}³ F\\
+    & + 4 Λ''' ∂_{ηλ}² F + \bigl( 3Λ''^2 + 4 Λ' Λ''' \bigr) ∂_{λλ}² F + λ'''' ∂_{λ}F,
   \end{aligned}
-\end{gather}
-où \(λ\) et ses dérivées sont évaluées en \(η\), tandis que \(F\) et ses
-dérivées partielles sont évaluées en \([η, λ₀ + λ(η)]\). En \(η = 0\), les
+\end{gather*}
+où \(Λ\) et ses dérivées sont évaluées en \(η\), tandis que \(F\) et ses
+dérivées partielles sont évaluées en \([η, λ₀ + Λ(η)]\). En \(η = 0\), les
 relations précédentes s'écrivent
 \begin{gather}
   \label{eq:20220107060454}
@@ -556,6 +550,7 @@ relations précédentes s'écrivent
     & ∂_{ηηη}³ F + 3 λ₁ ∂_{ηηλ}³ F + 3 λ₁² ∂_{ηλλ}³ F + λ₁³ ∂_{λλλ}³ F\\
     & + 3 λ₂ ∂_{ηλ}² F + 3 λ₁ λ₂ ∂_{λλ}² F + λ₃ ∂_{λ} F,
   \end{aligned}\\
+  \label{eq:20220602185935}
   \begin{aligned}[b]
     f''''(0) ={}
     & ∂_{ηηηη}⁴F + 4 λ₁ ∂_{ηηηλ}⁴ F + 6 λ₁² ∂_{ηηλλ}⁴ F + 4 λ₁³ ∂_{ηλλλ}⁴ F + λ₁⁴ ∂_{λλλλ}⁴ F\\
@@ -563,17 +558,20 @@ relations précédentes s'écrivent
     & + 4 λ₃ ∂_{ηλ}² F + \bigl(3 λ₂² + 4 λ₁ λ₃\bigr) ∂_{λλ}² F + λ₄ ∂_{λ} F,
   \end{aligned}
 \end{gather}
-où \(F\) et ses dérivées sont maintenant évaluées en \((0, λ₀)\).
+où \(F\) et ses dérivées sont maintenant évaluées en \((η = 0, λ = λ₀)\).
 
 \subsection{Développement limité du résidu}
 \label{sec:20211112182000}
+% 03/06/2022 —
+%
+% Validation des calculs de ce paragraphe
 
-On cherche un développement limité du résidu(c'est-à-dire de la première
+On cherche un développement limité du résidu (c'est-à-dire de la première
 variation de l'énergie). La fonction test \(\hat{u} ∈ U\) étant fixée, la
 méthode précédente est donc appliquée avec
 \begin{equation}
   \label{eq:20220107054629}
-  f(η) =ℰ_{, u} [u(η), λ(η); \hat{u}]
+  f(η) = ℰ_{, u} [u(η), λ(η); \hat{u}]
   \quad \text{et} \quad
   F(η, λ) = ℰ_{, u}[u^{\ast}(λ) + U(η), λ; \hat{u}].
 \end{equation}
@@ -581,66 +579,63 @@ méthode précédente est donc appliquée avec
 On remarque tout d'abord que
 \(F(0, λ) =ℰ_{, u} [u^{\ast} (λ), λ; \hat{u}] = 0\), puisque \(u^{\ast}(λ)\) est
 un point d'équilibre. En dérivant par rapport à \(λ\), on obtient
-\begin{equation}
-  \label{eq:20211112164204}
-  \frac{∂^k F}{∂ λ^k}(0, λ) = 0.
-\end{equation}
+\begin{equation*}
+  \frac{∂^k F}{∂ λ^k}(0, λ) = 0 \quad \text{pour tout} \quad k ≥ 0.
+\end{equation*}
 
 En dérivant par rapport à \(η\) l'expression~\eqref{eq:20220107054629} de \(F\),
 on obtient successivement
-\begin{gather}
-  ∂_{η}F(η, λ) = ℰ_{, u u}[u^{\ast}(λ) + U(η), λ; U'(η), \hat{u}],\\
+\begin{equation*}
+  ∂_{η}F(η, λ) = ℰ_{, u u}[u^{\ast}(λ) + U(η), λ; U'(η), \hat{u}],
+\end{equation*}
+\begin{equation*}
   \begin{aligned}[b]
     ∂_{η η}² F(η, λ) ={}
     & ℰ_{, uuu}[u^{\ast}(λ) + U(η), λ; U'(η), U'(η), \hat{u}]\\
     & + ℰ_{, uu} [u^{\ast}(λ) + U(η), λ; U''(η), \hat{u}],
-  \end{aligned}\\
+  \end{aligned}
+\end{equation*}
+\begin{equation*}
   \begin{aligned}[b]
     ∂_{ηηη}³ F(η, λ) ={}
     & ℰ_{, uuuu}[u^{\ast}(λ) + U(η), λ; U'(η), U'(η), U'(η), \hat{u}]\\
     & + 3ℰ_{, u u u}[u^{\ast}(λ) + U(η), λ; U'(η), U''(η), \hat{u}]\\
     & + ℰ_{, uu}[u^{\ast}(λ) + U(η), λ; U'''(η), \hat{u}],
   \end{aligned}
-\end{gather}
+\end{equation*}
 soit, en \(η = 0\)
-\begin{gather}
-  ∂_{η}F(0, λ) = ℰ₂(λ; u₁, \hat{u}),\\
-  ∂_{ηη}² F(0, λ) = ℰ₃(λ; u₁, u₁, \hat{u}) + ℰ₂(λ; u₂, \hat{u}),\\
-  ∂_{ηηη}³ F(0, λ) = ℰ₄(λ; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ; u₁, u₂, \hat{u}) + ℰ₂(λ; u₃, \hat{u}).
-\end{gather}
+\[∂_{η}F(0, λ) = ℰ₂(λ; u₁, \hat{u}),\]
+\[∂_{ηη}² F(0, λ) = ℰ₃(λ; u₁, u₁, \hat{u}) + ℰ₂(λ; u₂, \hat{u}),\]
+\[∂_{ηηη}³ F(0, λ) = ℰ₄(λ; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ; u₁, u₂, \hat{u}) + ℰ₂(λ; u₃, \hat{u}).\]
 
 Les dérivées croisées de \(F\) en \((0, λ)\) s'obtiennent par simple dérivation
 des relations précédentes par rapport à \(λ\)
-\begin{gather}
-  ∂_{ηλ}² F(0, λ) = \dot{ℰ}₂(λ; u₁, \hat{u}),\\
-  ∂_{ηηλ}³ F(0, λ) = \dot{ℰ}₃(λ; u₁, u₁, \hat{u}) + \dot{ℰ₂}(λ; u₂, \hat{u}),\\
-  ∂_{ηλλ}³ F(0, λ) = \ddot{ℰ}₂(λ; u₁, \hat{u}).
-\end{gather}
+\[∂_{ηλ}² F(0, λ) = \dot{ℰ}₂(λ; u₁, \hat{u}), \quad ∂_{ηλλ}³ F(0, λ) = \ddot{ℰ}₂(λ; u₁, \hat{u}),\]
+\[∂_{ηηλ}³ F(0, λ) = \dot{ℰ}₃(λ; u₁, u₁, \hat{u}) + \dot{ℰ₂}(λ; u₂, \hat{u}).\]
 
-En insérant les résultats précédentes dans les relations
-générales~\eqref{eq:20220107060454}--\eqref{eq:20220107060500}, on trouve alors
+En insérant les résultats précédents dans les relations
+générales~\eqref{eq:20220107060454}--\eqref{eq:20220602185935}, on trouve alors
 les expressions suivantes des dérivées successives de \(f\) en \(η = 0\)
-\begin{gather}
+\begin{gather*}
   f'(0) = ℰ₂(λ₀; u₁, \hat{u}),\\
-  f''(0) = ℰ₃(λ₀; u₁, u₁, \hat{u}) + 2 λ₁ \dot{ℰ}₂(λ₀; u₁, \hat{u}) +ℰ₂(λ₀; u₂, \hat{u}),\\
+  f''(0) = ℰ₃(λ₀; u₁, u₁, \hat{u}) + ℰ₂(λ₀; u₂, \hat{u}) + 2 λ₁ \dot{ℰ}₂(λ₀; u₁, \hat{u}),\\
   \begin{aligned}[b]
     f'''(0) ={}
     & ℰ₄(λ₀; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ₀; u₁, u₂, \hat{u}) + ℰ₂(λ₀ ; u₃, \hat{u})\\
-    & + 3 λ₁ [\dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + \dot{ℰ}₂(λ₀; u₂, \hat{u})]\\
-    & + 3 λ₁² \ddot{ℰ}₂(λ₀; u₁, \hat{u}) + 3 λ₂ \dot{ℰ}₂(λ₀; u₁, \hat{u}) .
+    & + 3λ₁ \dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + 3λ₁ \dot{ℰ}₂(λ₀; u₂, \hat{u})\\
+    & + 3 λ₁² \ddot{ℰ}₂(λ₀; u₁, \hat{u}) + 3 λ₂ \dot{ℰ}₂(λ₀; u₁, \hat{u}).
   \end{aligned}
-\end{gather}
+\end{gather*}
 
 On en déduit finalement le développement limité à l'ordre 3 en \(η\) du résidu
 \begin{equation}
   \label{eq:20220107080901}
-  \begin{aligned}[b]
-    ℰ_{, u}[u(η), λ(η)] ={} & η ℰ₂(λ₀; u₁, \hat{u}) \\
-    & + \tfrac{1}{2} η² [ℰ₃(λ₀; u₁, u₁, \hat{u}) + 2 λ₁ \dot{ℰ}₂(λ₀; u₁, \hat{u}) + ℰ₂(λ₀; u₂, \hat{u})]\\
-    & + \tfrac{1}{6} η³ \bigl\{ ℰ₄(λ₀; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ₀; u₁, u₂, \hat{u}) + ℰ₂(λ₀; u₃, \hat{u})\\
-    & + 3 λ₁ \bigl[\dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + \dot{ℰ}₂(λ₀; u₂, \hat{u})\bigr] + 3 λ₁² \ddot{ℰ}₂(λ₀; u₁, \hat{u})\\
-    &  + 3 λ₂ \dot{ℰ}₂(λ₀ ; u₁, \hat{u}) \bigr\} + o(η³).
-  \end{aligned}
+  \begin{gathered}[b]
+    ℰ_{, u}[u(η), λ(η)] ={} η ℰ₂(λ₀; u₁, \hat{u}) + \tfrac{1}{2} η² \bigl[ℰ₃(λ₀; u₁, u₁, \hat{u})  + ℰ₂(λ₀; u₂, \hat{u})\\
+    {} + 2 λ₁ \dot{ℰ}₂(λ₀; u₁, \hat{u})\bigr] + \tfrac{1}{6} η³ \bigl[ ℰ₄(λ₀; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ₀; u₁, u₂, \hat{u})\\
+    {} + ℰ₂(λ₀; u₃, \hat{u}) + 3λ₁ \dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + 3λ₁ \dot{ℰ}₂(λ₀; u₂, \hat{u})\\
+    {} + 3 λ₁² \ddot{ℰ}₂(λ₀; u₁, \hat{u}) + 3 λ₂ \dot{ℰ}₂(λ₀ ; u₁, \hat{u}) \bigr] + o(η³).
+  \end{gathered}
 \end{equation}
 
 \subsection{Développement limité de l'énergie}

@@ -562,7 +562,7 @@ où \(F\) et ses dérivées sont maintenant évaluées en \((η = 0, λ = λ₀)
 
 \subsection{Développement limité du résidu}
 \label{sec:20211112182000}
-% 03/06/2022 —
+% 03/06/2022 — b028b234970605720c9022c16c7fc3012997ced7
 %
 % Validation des calculs de ce paragraphe
 
@@ -645,93 +645,78 @@ On s'intéresse ici à l'écart d'énergie, pour un chargement \(λ\) donné, en
 branche bifurquée et la branche fondamentale, soit
 \begin{equation}
   F(η, λ) = ℰ[u^{\ast}(λ) + U(η), λ] - ℰ[u^{\ast}(λ), λ]
-\end{equation}
-et
-\begin{equation}
-  f(η) = F [η, λ₀ + λ(η)].
+  \quad \text{et} \quad
+  f(η) = F [η, λ₀ + Λ(η)].
 \end{equation}
 
 On observe tout d'abord que \(F(0, λ) = 0\) pour tout \(λ\), donc
-\begin{equation}
-  \frac{∂^k F}{∂ λ^k}(0, λ) = 0 \quad (k ≥ 0),
-\end{equation}
-tandis que les dérivées de \(F\) par rapport à \(η\) s'écrivent
-\begin{equation}
-  ∂_{η} F(η, λ) = ℰ_{, u}[u^{\ast}(λ) + U(η), λ; U'(η)],
-\end{equation}
-\begin{equation}
-  ∂_{ηη}² F(η, λ) = ℰ_{, uu} [u^{\ast}(λ) + U(η), λ; U'(η), U'(η)] + ℰ_{, u} [u^{\ast}(λ) + U(η), λ; U''(η)],
-\end{equation}
 \begin{equation*}
-  \begin{aligned}[b]
-    ∂_{ηηη}³ F(η, λ) ={}
-    & ℰ_{, uuu} [u^{\ast}(λ) + U(η), λ; U'(η), U'(η), U'(η)]\\
-    & + 3ℰ_{, uu}[u^{\ast}(λ) + U(η), λ; U'(η), U''(η)]\\
-    & + ℰ_{, u}[u^{\ast}(λ) + U(η), λ; U'''(η)],
-  \end{aligned}
+  \frac{∂^k F}{∂ λ^k}(0, λ) = 0 \quad \text{pour tout} \quad k ≥ 0,
 \end{equation*}
-\begin{equation}
+tandis que les dérivées de \(F\) par rapport à \(η\) s'écrivent
+\begin{gather*}
+  ∂_{η} F(η, λ) = ℰ_{, u}(U'),\\
+  ∂_{ηη}² F(η, λ) = ℰ_{, uu} (U', U') + ℰ_{, u} (U''),\\
+  ∂_{ηηη}³ F(η, λ) = ℰ_{, uuu}(U', U', U') + 3ℰ_{, uu}(U', U'') + ℰ_{, u}(U'''),\\
   \begin{aligned}[b]
-    ∂_{ηηηη}⁴ F(η, λ) ={}
-    & ℰ_{, uuuu}[u^{\ast}(λ) + U(η), λ; U'(η), U'(η), U'(η), U'(η)]\\
-    & + 6ℰ_{,uuu}[u^{\ast}(λ) + U(η), λ; U'(η), U'(η), U''(η)]\\
-    & + 3ℰ_{, uu}[u^{\ast}(λ) + U(η), λ; U''(η), U''(η)]\\
-    & + 3ℰ_{, uu}[u^{\ast}(λ) + U(η), λ; U'(η), U'''(η)]\\
-    & +ℰ_{, u}[u^{\ast}(λ) + U(η), λ ; U''''(η)],
-  \end{aligned}
-\end{equation}
-soit, en \(η = 0\), en observant que \(ℰ_{, u}[u^{\ast}(λ), λ] = 0\)
-\begin{gather}
+    ∂_{ηηηη}⁴ F ={}
+    & ℰ_{, uuuu}(U', U', U', U') + 6ℰ_{,uuu}(U', U', U'')\\
+    & + 3ℰ_{, uu}(U'', U'') + 4ℰ_{, uu}(U', U''') + ℰ_{, u}(U''''),
+  \end{aligned}\\
+\end{gather*}
+où les différentielles successives de \(ℰ\) sont évaluées en
+\([u^{\ast}(λ) + U(η), λ]\), tandis que les dérivées successives de \(U\) sont
+évaluées e \(η\).  Les relations précédentes s'écrivent, en \(η = 0\), en
+observant que \(ℰ_{, u}[u^{\ast}(λ), λ] = 0\)
+\begin{gather*}
   ∂_{η} F(0, λ) = 0,\\
   ∂_{ηη}² F(0, λ) =ℰ₂(λ ; u₁, u₁),\\
   ∂_{ηηη}³ F(0, λ) = ℰ₃(λ; u₁, u₁, u₁) + 3ℰ₂(λ; u₁, u₂),\\
-  \begin{aligned}[b]
-    ∂_{ηηηη}⁴ F(η, λ) ={}
-    & ℰ₄(λ; u₁, u₁, u₁, u₁) + 6ℰ₃(λ; u₁, u₁, u₂)\\
-    & + 3ℰ₂(λ; u₂, u₂) + 3ℰ₂(λ; u₁, u₃).
-  \end{aligned}
-\end{gather}
+  ∂_{ηηηη}⁴ F(η, λ) = ℰ₄(λ; u₁, u₁, u₁, u₁) + 6ℰ₃(λ; u₁, u₁, u₂) + 3ℰ₂(λ; u₂, u₂) + 4ℰ₂(λ; u₁, u₃).
+\end{gather*}
 
-On en déduit que
-\begin{gather}
-  ∂_{ηλ}² F(0, λ) = 0,\\
-  ∂_{ηηλ}³ F(0, λ) = \dot{ℰ}₂(λ; u₁, u₁),\\
-  ∂_{ηλλ}³ F(0, λ) = 0,\\
-  ∂_{ηηηλ}⁴ F(0, λ) = \dot{ℰ}₃(λ; u₁, u₁, u₁) + 3\dot{ℰ}₂(λ; u₁, u₂),\\
-  ∂_{ηηλλ}⁴ F(0, λ) = \ddot{ℰ}₂(λ; u₁, u₁),\\
-  ∂_{ηλλλ}⁴ F(0, λ) = 0
-\end{gather}
+En dérivant alors par rapport à \(λ\), on en déduit que\\
+\begin{equation*}
+  \begin{gathered}
+    ∂_{ηλ}² F(0, λ) = 0,\\
+    ∂_{ηηλ}³ F(0, λ) = \dot{ℰ}₂(λ; u₁, u₁),\\
+    ∂_{ηλλ}³ F(0, λ) = 0,\\
+  \end{gathered}
+  \qquad
+  \begin{gathered}
+    ∂_{ηηηλ}⁴ F(0, λ) = \dot{ℰ}₃(λ; u₁, u₁, u₁) + 3\dot{ℰ}₂(λ; u₁, u₂),\\
+    ∂_{ηηλλ}⁴ F(0, λ) = \ddot{ℰ}₂(λ; u₁, u₁),\\
+    ∂_{ηλλλ}⁴ F(0, λ) = 0
+  \end{gathered}
+\end{equation*}
 et finalement
-\begin{gather}
-  f'(0) = 0,\\
-  f''(0) = ℰ₂(λ₀; u₁, u₁),\\
-  f'''(0) =ℰ₃(λ₀; u₁, u₁, u₁) + 3ℰ₂(λ₀; u₁, u₂) + 3λ₁ \dot{ℰ}₂(λ₀; u₁, u₁),\\
-  \begin{aligned}[b]
-    f''''(0) ={}
-    & ℰ₄(λ₀; u₁, u₁, u₁, u₁) + 6ℰ₃(λ₀; u₁, u₁, u₂)\\
-    & + 3ℰ₂(λ₀; u₂, u₂) + 3ℰ₂(λ₀; u₁, u₃)\\
-    & + 4 λ₁ \dot{ℰ}₃(λ₀; u₁, u₁, u₁) + 12 λ₁ \dot{ℰ}₂(λ₀; u₁, u₂)\\
-    & + 6λ₁² \ddot{ℰ}₂(λ₀; u₁, u₁) + 6λ₂ \dot{ℰ}₂(λ₀; u₁, u₁).
-  \end{aligned}
-\end{gather}
+\begin{gather*}
+    f'(0) = 0, \qquad f''(0) = ℰ₂(λ₀; u₁, u₁),\\
+    f'''(0) =ℰ₃(λ₀; u₁, u₁, u₁) + 3ℰ₂(λ₀; u₁, u₂) + 3λ₁ \dot{ℰ}₂(λ₀; u₁, u₁),\\
+    \begin{aligned}[b]
+      f''''(0) ={}
+      & ℰ₄(λ₀; u₁, u₁, u₁, u₁) + 6ℰ₃(λ₀; u₁, u₁, u₂) + 3ℰ₂(λ₀; u₂, u₂) + 4ℰ₂(λ₀; u₁, u₃)\\
+      & + 4 λ₁ \dot{ℰ}₃(λ₀; u₁, u₁, u₁) + 12 λ₁ \dot{ℰ}₂(λ₀; u₁, u₂) + 6λ₁² \ddot{ℰ}₂(λ₀; u₁, u₁) + 6λ₂ \dot{ℰ}₂(λ₀; u₁, u₁).
+    \end{aligned}
+\end{gather*}
+
+% 03/06/2022 —
+%
+% Relecture de tous les calculs de ce paragraphe jusqu'à ce point
 
 Les relations précédentes se simplifient notamment en tenant compte de ce que
-\(u₁∈V\) : \(ℰ₂(λ₀; u₁, u_i) = 0\) pour \(i = 1, 2, 3\). On trouve ainsi, pour
-\(f''(0)\) et \(f'''(0)\)
-\begin{gather}
-  \label{eq:20220601055423}
-  f''(0) = 0\\
-  \intertext{et}
+\(u₁∈V\) : \(ℰ₂(λ₀; u₁, u_i) = 0\) pour \(i = 1, 2, 3\). On trouve ainsi
+\(f''(0)=0\) et
+\begin{equation}
   \begin{aligned}[b]
     \label{eq:20220601055448}
     f'''(0) ={} &
-    ℰ₃(λ₀; u₁, u₁, u₁) + 3λ₁ \dot{ℰ}₂(λ₀; u₁, u₁) \\
-    ={} & - 2λ₁ \dot{ℰ₂}(λ₀; u₁, \hat{v}) + 3λ₁ \dot{ℰ}₂(λ₀; u₁, u₁) \\
-    ={} & λ₁ F_{ij}(λ₀) ξ₁^i ξ₁^j,
+    ℰ₃(λ₀; u₁, u₁, u₁) + 3λ₁ \dot{ℰ}₂(λ₀; u₁, u₁)\\
+    ={} & - 2λ₁ \dot{ℰ₂}(λ₀; u₁, \hat{v}) + 3λ₁ \dot{ℰ}₂(λ₀; u₁, u₁) = λ₁ F_{ij}(λ₀) ξ₁^i ξ₁^j,
   \end{aligned}
-\end{gather}
-en utilisant l'équation de bifurcation~\eqref{eq:20220524133816} dans la
-deuxième ligne. En introduisant les décompositions \eqref{eq:20220524133944} et
+\end{equation}
+en utilisant l'équation de bifurcation~\eqref{eq:20220524133816}. En
+introduisant les décompositions \eqref{eq:20220524133944} et
 \eqref{eq:20220524134613} de \(u₁\) et \(u₂\), on trouve tout d'abord, pour
 \(ℰ₃(λ₀; u₁, u₁, u₂)\)
 \begin{equation}

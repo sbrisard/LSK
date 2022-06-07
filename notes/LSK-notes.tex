@@ -326,23 +326,20 @@ solutions réelles \((λ₂, u₁)\) et \((- λ₂, - u₁)\). \pdfmargincomment
 
 Le développement limité suivant de l'énergie le long de la branche bifurquée est
 établi dans l'annexe~\ref{sec:20220525053434}
-\begin{equation}
+\begin{multline}
   \label{eq:20220525053600}
-  \begin{aligned}[b]
-    ℰ[u(η), λ(η)] ={}
-    & ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{6} λ₁ η³ F_{i j}(λ₀) ξ₁^i ξ₁^j\\
-    & + \tfrac{1}{24} η⁴ \bigl\{E_{ijkl}(λ₀) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4λ₁ \dot{E}_{ijk}(λ₀) ξ₁^i ξ₁^j ξ₁^k\\
-    & + 6 \bigl[λ₁² \dot{F}_{ij}(λ₀) + λ₂ F_{ij}(λ₀)\bigr] ξ₁^i ξ₁^j\bigr\} + o(η⁴).
-  \end{aligned}
-\end{equation}
+    ℰ[u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} - \tfrac{1}{6} λ₁ η³ G_{i j} ξ₁^i ξ₁^j\\
+    \tfrac{1}{24} η⁴ \bigl[E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4λ₁ \mathring{E}_{ijk} ξ₁^i ξ₁^j ξ₁^k - 6 \bigl(λ₁² \mathring{G}_{ij} + λ₂ G_{ij}(λ₀)\bigr) ξ₁^i ξ₁^j\bigr] + o(η⁴).
+\end{multline}
 Si \(λ₁ ≠ 0\), le premier terme non-nul du développement limité précédent est
 d'ordre 3
 \begin{equation}
- ℰ [u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{6} λ₁ η³ F_{ij}(λ₀) ξ₁^i ξ₁^j + o(η³),
+ ℰ [u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} - \tfrac{1}{6} λ₁ η³ G_{ij} ξ₁^i ξ₁^j + o(η³),
 \end{equation}
-tandis que si \(λ₁ = 0\), le premier terme est d'ordre 4
+tandis que si \(λ₁ = 0\), le premier terme est d'ordre 4 \pdfcomment{07/06/2022
+  — Vérifier le coefficient de η⁴.}
 \begin{equation}
- ℰ[u(η), λ(η)] = ℰ\{u^{\ast} [λ(η)], λ(η)\} + \tfrac{1}{4} λ₂ η⁴ F_{ij}(λ₀) ξ₁^i ξ₁^j + o(η⁴).
+ ℰ[u(η), λ(η)] = ℰ\{u^{\ast} [λ(η)], λ(η)\} - \tfrac{1}{8} λ₂ η⁴ G_{ij} ξ₁^i ξ₁^j + o(η⁴).
 \end{equation}
 \begin{center}
  ***
@@ -640,6 +637,9 @@ On en déduit finalement le développement limité à l'ordre 3 en \(η\) du ré
 
 \subsection{Développement limité de l'énergie}
 \label{sec:20220525053434}
+% 07/06/2022 —
+%
+% Relecture de tous les calculs de ce paragraphe
 
 On s'intéresse ici à l'écart d'énergie, pour un chargement \(λ\) donné, entre la
 branche bifurquée et la branche fondamentale, soit
@@ -700,117 +700,72 @@ et finalement
     \end{aligned}
 \end{gather*}
 
-% 03/06/2022 — 211e2d1bfce91c84a2e49d969552e7d85f57887a
-%
-% Relecture de tous les calculs de ce paragraphe jusqu'à ce point
-
 Les relations précédentes se simplifient notamment en tenant compte de ce que
 \(u₁∈V\) : \(ℰ₂(λ₀; u₁, u_i) = 0\) pour \(i = 1, 2, 3\). On trouve ainsi
 \(f''(0)=0\) et
 \begin{equation}
-  \begin{aligned}[b]
-    \label{eq:20220601055448}
-    f'''(0) ={} &
-    ℰ₃(λ₀; u₁, u₁, u₁) + 3λ₁ \dot{ℰ}₂(λ₀; u₁, u₁)\\
-    ={} & - 2λ₁ \dot{ℰ₂}(λ₀; u₁, \hat{v}) + 3λ₁ \dot{ℰ}₂(λ₀; u₁, u₁) = λ₁ F_{ij}(λ₀) ξ₁^i ξ₁^j,
-  \end{aligned}
+  \label{eq:20220601055448}
+  f'''(0) = -λ₁ G_{ij} ξ₁^i ξ₁^j,
 \end{equation}
 en utilisant l'équation de bifurcation~\eqref{eq:20220524133816}. En
 introduisant les décompositions \eqref{eq:20220524133944} et
 \eqref{eq:20220524134613} de \(u₁\) et \(u₂\), on trouve tout d'abord, pour
 \(ℰ₃(λ₀; u₁, u₁, u₂)\)
-\begin{equation}
+\begin{equation*}
   \begin{aligned}[b]
     ℰ₃(λ₀; u₁, u₁, u₂)
-    ={} & ℰ₃(λ₀ ; v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k + ℰ₃(λ₀; v_i, v_j, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l\\
-    & + λ₁ ℰ₃(λ₀; v_i, v_j, w_k) ξ₁^i ξ₁^j ξ₁^k\\
-    ={} & ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k + ℰ₃(λ₀; v_i, v_j, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l\\
-    & - λ₁ ℰ₂(λ₀; w_{ij}, w_k) ξ₁^i ξ₁^j ξ₁^k,
+    ={} & ℰ₃(v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k + ℰ₃(v_i, v_j, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + λ₁ ℰ₃(v_i, v_j, w_k) ξ₁^i ξ₁^j ξ₁^k \\
+    ={} & ℰ₃(v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k + ℰ₃(v_i, v_j, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l - λ₁ ℰ₂(w_{ij}, w_k) ξ₁^i ξ₁^j ξ₁^k,
   \end{aligned}
-\end{equation}
+\end{equation*}
 en tenant compte de la définition~\eqref{eq:20220519164523} des \(w_{ij}\). Dans
 le dernier terme de l'expression précédente, les indices \(i\), \(j\) et \(k\)
 sont muets, donc
 \begin{equation*}
   \begin{aligned}[b]
     ℰ₃(λ₀; u₁, u₁, u₂)
-    ={} & ℰ₃(λ₀ ; v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k + ℰ₃(λ₀; v_i, v_j, w_{kl}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l\\
-    & - λ₁ ℰ₂(λ₀; w_{i}, w_{jk}) ξ₁^i ξ₁^j ξ₁^k\\
-    ={} & ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k + ℰ₃(λ₀; v_i, v_j, w_{kl}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l\\
-    & + 2 λ₁ \dot{ℰ}₂(λ₀; v_{i}, w_{jk}) ξ₁^i ξ₁^j ξ₁^k,
+    ={} & ℰ₃(v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k + ℰ₃(v_i, v_j, w_{kl}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l - λ₁ ℰ₂(w_{i}, w_{jk}) ξ₁^i ξ₁^j ξ₁^k\\
+    ={} & ℰ₃(v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k + ℰ₃(v_i, v_j, w_{kl}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 2 λ₁ \dot{ℰ}₂(v_{i}, w_{jk}) ξ₁^i ξ₁^j ξ₁^k,
   \end{aligned}
 \end{equation*}
 en introduisant cette fois-ci la définition~\eqref{eq:20220524134525} de
-\(w_i\). On procède de même pour le terme suivant, soit \(ℰ₂(λ₀; u₂, u₂)\)
+\(w_i\). On procède de même pour le terme suivant, soit \(ℰ₂(u₂, u₂)\)
 \begin{equation*}
   \begin{aligned}[b]
-    ℰ₂(λ₀; u₂, u₂)
-    ={} & ℰ₂(λ₀ ; ξ₁^i v_i + ξ₁^i ξ₁^j w_{i j} + λ₁ ξ₁^i w_i, ξ₁^i v_i + ξ₁^k ξ₁^l w_{k l} + λ₁ ξ₁^k w_k)\\
-    ={} & ℰ₂(λ₀; ξ₁^i ξ₁^j w_{i j} + λ₁ ξ₁^i w_i, ξ₁^k ξ₁^l w_{k l} + λ₁ ξ₁^k w_k)\\
-    ={} & ℰ₂(λ₀; w_{i j}, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 2 λ₁ ℰ₂(λ₀ ; w_{i j}, w_k) ξ₁^i ξ₁^j ξ₁^k\\
-    & + λ₁² ℰ₂(λ₀; w_i, w_j) ξ₁^i ξ₁^j\\
-    ={} & ℰ₂(λ₀; w_{i j}, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 2 λ₁ ℰ₂(λ₀ ; w_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k\\
-    & + \tfrac{1}{2} λ₁² \bigl[ℰ₂(λ₀; w_i, w_j) + ℰ₂(λ₀; w_j, w_i)\bigr] ξ₁^i ξ₁^j\\
-    ={} & ℰ₂(λ₀; w_{i j}, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l - 4 λ₁ \dot{ℰ}₂ (λ₀; v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k\\
-    & - λ₁² \bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr] ξ₁^i ξ₁^j\\
-    ={} & ℰ₃(λ₀; v_i, v_j, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l - 4 λ₁ \dot{ℰ}₂(λ₀; v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k\\
-    & - λ₁² \bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr] ξ₁^i ξ₁^j
+    ℰ₂(u₂, u₂)
+    ={} & ℰ₂(ξ₂^i v_i + ξ₁^i ξ₁^j w_{i j} + λ₁ ξ₁^i w_i, ξ₂^k v_k + ξ₁^k ξ₁^l w_{k l} + λ₁ ξ₁^k w_k)\\
+    ={} & ℰ₂(ξ₁^i ξ₁^j w_{i j} + λ₁ ξ₁^i w_i, ξ₁^k ξ₁^l w_{k l} + λ₁ ξ₁^k w_k)\\
+    ={} & ℰ₂(w_{i j}, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 2 λ₁ ℰ₂(w_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k + λ₁² ℰ₂(w_i, w_j) ξ₁^i ξ₁^j\\
+    ={} & ℰ₂(w_{i j}, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 2 λ₁ ℰ₂(w_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k + \tfrac{1}{2} λ₁² \bigl[ℰ₂(w_i, w_j) + ℰ₂(w_j, w_i)\bigr] ξ₁^i ξ₁^j\\
+    ={} & -ℰ₃(v_i, v_j, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l - 4 λ₁ \dot{ℰ}₂ (v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k - λ₁² \bigl[\dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i)\bigr] ξ₁^i ξ₁^j
   \end{aligned}
 \end{equation*}
 et enfin
 \begin{equation*}
   \begin{aligned}[b]
-    \dot{ℰ}₂(λ₀; u₁, u₂)
-    ={} & \dot{ℰ}₂ (λ₀; v_i, v_j) ξ₁^i ξ₂^j + \dot{ℰ}₂(λ₀ ; v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, w_j) ξ₁^i ξ₁^j\\
-    ={} & \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^i ξ₂^j + \dot{ℰ}₂(λ₀; v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k\\
-    & + \tfrac{1}{2} λ₁ [\dot{ℰ}₂(λ₀ ; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)] ξ₁^i ξ₁^j.
+    \dot{ℰ}₂(u₁, u₂)
+    ={} & \dot{ℰ}₂ (v_i, v_j) ξ₁^i ξ₂^j + \dot{ℰ}₂(v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k + λ₁ \dot{ℰ}₂(v_i, w_j) ξ₁^i ξ₁^j\\
+    ={} & \dot{ℰ}₂(v_i, v_j) ξ₁^i ξ₂^j + \dot{ℰ}₂(v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k + \tfrac{1}{2} λ₁ [\dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i)] ξ₁^i ξ₁^j.
   \end{aligned}
 \end{equation*}
 En rassemblant les résultats précédents, on trouve pour \(f''''(0)\)
 \begin{equation*}
   \begin{aligned}[b]
     f''''(0)
-    ={} & ℰ₄(λ₀; v_i, v_j, v_k , v_l) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 6ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k\\
-    & + 6ℰ₃(λ₀; v_i, v_j, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 12 λ₁ \dot{ℰ}₂ (λ₀; v_{i }, w_{j k}) ξ₁^i ξ₁^j ξ₁^k\\
-    & - 3ℰ₃(λ₀; v_i, v_j, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l - 12 λ₁ \dot{ℰ}₂ (λ₀; v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k\\
-    & - 3 λ₁² \bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr] ξ₁^i ξ₁^j + 4 λ₁ \dot{ℰ}₃(λ₀; v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₁^k\\
-    & + 12 λ₁ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^i ξ₂^j + 12 λ₁ \dot{ℰ}₂(λ₀ ; v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k\\
-    & + 6 λ₁² \bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr] ξ₁^i ξ₁^j + 6 λ₁² \ddot{ℰ}₂(λ₀; v_i, v_j) ξ₁^i ξ₁^j\\
-    & + 6 λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^i ξ₁^j\\
-    ={} & \bigl[ ℰ₄(λ₀; v_i, v_j, v_k , v_l) + 3ℰ₃(λ₀; v_i, v_j, w_{k l}) \bigr] ξ₁^i ξ₁^j ξ₁^k ξ₁^l\\
-    & + 4 λ₁ \bigl[\dot{ℰ}₃(λ₀; v_i, v_j, v_k) + 3 \dot{ℰ}₂(λ₀; v_i, w_{j k})\bigr] ξ₁^i ξ₁^j ξ₁^k\\
-    & + \bigl\{ 3 λ₁² \bigl[2 \ddot{ℰ}₂ (λ₀; v_i, v_j) + \dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr] + 6 λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) \bigr\} ξ₁^i ξ₁^j\\
-    & + 6ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k + 12 λ₁ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^i ξ₂^j\\
-    ={} & E_{i j k l}(λ₀) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4 λ₁ \dot{E}_{i j k} (λ₀) ξ₁^i ξ₁^j ξ₁^k + 6 \bigl[λ₁² \dot{F}_{i j}(λ₀) + λ₂ F_{i j}(λ₀)\bigr] ξ₁^i ξ₁^j\\
-    & + 6 \bigl[E_{i j k}(λ₀) ξ₁^k + 2 λ₁ F_{i j}(λ₀)\bigr] ξ₁^i ξ₂^j,
+    ={} & \bigl[ ℰ₄(v_i, v_j, v_k , v_l) + 3ℰ₃(v_i, v_j, w_{k l}) \bigr] ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4 λ₁ \bigl[\dot{ℰ}₃(v_i, v_j, v_k) + 3 \dot{ℰ}₂(v_i, w_{j k})\bigr] ξ₁^i ξ₁^j ξ₁^k\\
+    & + \bigl\{3 λ₁² \bigl[ 2\ddot{ℰ}₂ (v_i, v_j) + \dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i) \bigr] + 6λ₂ \dot{ℰ}₂(v_i, v_j) \bigr\} ξ₁^i ξ₁^j\\
+    & + 6\bigl[ℰ₃(v_i, v_j, v_k) ξ₁^k + 2 λ₁ \dot{ℰ}₂(v_i, v_j)\bigr] ξ₁^i ξ₂^j,
   \end{aligned}
 \end{equation*}
 et on observe que le dernier terme(en \(ξ₁^i ξ₂^j\)) est nul, du fait de
 l'équation de bifurcation~\eqref{eq:20220524135036}. On obtient donc
 \begin{equation}
   \label{eq:20220601055512}
-  f''''(0) = E_{i j k l}(λ₀) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4 λ₁ \dot{E}_{i j k}(λ₀) ξ₁^i ξ₁^j ξ₁^k + 6 \bigl[λ₁² \dot{F}_{i j}(λ₀) + λ₂ F_{i j}(λ₀)\bigr] ξ₁^i ξ₁^j .
+  f''''(0) = E_{i j k l} ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4 λ₁ \mathring{E}_{i j k} ξ₁^i ξ₁^j ξ₁^k - 6 \bigl(λ₁² \mathring{G}_{i j} + λ₂ G_{i j}\bigr) ξ₁^i ξ₁^j .
 \end{equation}
 Le développement limité~\eqref{eq:20220525053600} est alors obtenu en
-rassemblant les résultats~\eqref{eq:20220601055423}, \eqref{eq:20220601055448}
-et \eqref{eq:20220601055512}.
-
-\begin{remark}
-  On peut réécrire \(f''''(0)\) en tenant compte de l'équation de
-  bifurcation~\eqref{eq:20220601070917}. En multipliant celle-ci par \(ξ₁^i\),
-  on trouve en effet
- \begin{equation*}
-   \begin{aligned}[b]
-     E_{i j k l}(λ₀) ξ₁^i ξ₁^j ξ₁^k ξ₁^l
-     ={} & - 3 λ₂ F_{i j}(λ₀) ξ₁^i ξ₁^j - 3 A_{i j}(λ₀) ξ₁^i ξ₂^j - 3 λ₁ \bigl[\dot{E}_{i j k} (λ₀) ξ₁^k + λ₁ \dot{F}_{i j}(λ₀)\bigr] ξ₁^i ξ₁^j\\
-     ={} & - 3 λ₁ \dot{E}_{i j k}(λ₀) ξ₁^i ξ₁^j ξ₁^k - 3 [λ₁² \dot{F}_{i j} (λ₀) + λ₂ F_{i j}(λ₀)] ξ₁^i ξ₁^j - 3 A_{i j}(λ₀) ξ₁^i ξ₂^j,
-   \end{aligned}
- \end{equation*}
- soit
- \begin{equation}
-   f''''(0) = λ₁ \dot{E}_{i j k}(λ₀) ξ₁^i ξ₁^j ξ₁^k + 3 [λ₁² \dot{F}_{i j} (λ₀) + λ₂ F_{i j}(λ₀)] ξ₁^i ξ₁^j - 3 A_{i j}(λ₀) ξ₁^i ξ₂^j.
- \end{equation}
-\end{remark}
+rassemblant les expressions précédentes de \(f'(0)\), \(f''(0)\), \(f'''(0)\) et
+\(f''''(0)\).
 
 \subsection{Développement limité de la hessienne}
 

@@ -369,8 +369,8 @@ l'énergie le long de la branche bifurquée est établi \pdfmarkupcomment{dans
   \begin{aligned}[b]
     ℰ_{, uu}[u(η), λ(η); \hat{u}, \hat{v}] ={}
     & ℰ₂(λ₀ ; \hat{u}, \hat{v}) + η \bigl[ℰ₃(λ₀ ; u₁, \hat{u}, \hat{v})  + λ₁ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v})\bigr]\\
-    & + \tfrac{1}{2} η² \bigl[ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(λ₀; u₂, \hat{u}, \hat{v}) + λ₂ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v})\\
-    & + 2 λ₁ \dot{ℰ}₃(λ₀; u₁, \hat{u}, \hat{v}) + λ₁² \ddot{ℰ}₂(λ₀; \hat{u}, \hat{v}) \bigr] + o(η²).
+    & + \tfrac{1}{2} η² \bigl[ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(λ₀; u₂, \hat{u}, \hat{v}) \\
+    & + 2 λ₁ \dot{ℰ}₃(λ₀; u₁, \hat{u}, \hat{v}) + λ₁² \ddot{ℰ}₂(λ₀; \hat{u}, \hat{v}) + λ₂ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v}) \bigr] + o(η²).
   \end{aligned}
 \end{equation}
 Pour une analyse de stabilité, on doit prendre \(\hat{u} = \hat{v}\), soit
@@ -379,8 +379,8 @@ Pour une analyse de stabilité, on doit prendre \(\hat{u} = \hat{v}\), soit
     \label{eq:20220531054218}
     ℰ_{, uu}[u(η), λ(η) ; \hat{u}, \hat{u}] ={}
     & ℰ₂(λ₀; \hat{u}, \hat{u}) + η [ℰ(λ₀; u₁, \hat{u}, \hat{u}) + λ₁ \dot{ℰ}₂ (λ₀; \hat{u}, \hat{u})]\\
-    & + \tfrac{1}{2} η² [ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{u}) +ℰ₃(λ₀; u₂, \hat{u}, \hat{u}) + λ₂ \dot{ℰ}₂(λ₀; \hat{u}, \hat{u})\\
-    & + 2 λ₁ \dot{ℰ}₃(λ₀; u₁, \hat{u}, \hat{u}) + λ₁² \ddot{ℰ}₂(λ₀; \hat{u}, \hat{u})] + o(η²) .
+    & + \tfrac{1}{2} η² \bigl[ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{u}) +ℰ₃(λ₀; u₂, \hat{u}, \hat{u})\\
+    & + 2 λ₁ \dot{ℰ}₃(λ₀; u₁, \hat{u}, \hat{u}) + λ₁² \ddot{ℰ}₂(λ₀; \hat{u}, \hat{u})  + λ₂ \dot{ℰ}₂(λ₀; \hat{u}, \hat{u})\bigr] + o(η²) .
   \end{aligned}
 \end{equation}
 
@@ -666,7 +666,7 @@ tandis que les dérivées de \(F\) par rapport à \(η\) s'écrivent
 \end{gather*}
 où les différentielles successives de \(ℰ\) sont évaluées en
 \([u^{\ast}(λ) + U(η), λ]\), tandis que les dérivées successives de \(U\) sont
-évaluées e \(η\).  Les relations précédentes s'écrivent, en \(η = 0\), en
+évaluées en \(η\).  Les relations précédentes s'écrivent, en \(η = 0\), en
 observant que \(ℰ_{, u}[u^{\ast}(λ), λ] = 0\)
 \begin{gather*}
   ∂_{η} F(0, λ) = 0,\\
@@ -763,58 +763,54 @@ l'équation de bifurcation~\eqref{eq:20220524135036}. On obtient donc
   \label{eq:20220601055512}
   f''''(0) = E_{i j k l} ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4 λ₁ \mathring{E}_{i j k} ξ₁^i ξ₁^j ξ₁^k - 6 \bigl(λ₁² \mathring{G}_{i j} + λ₂ G_{i j}\bigr) ξ₁^i ξ₁^j .
 \end{equation}
+
 Le développement limité~\eqref{eq:20220525053600} est alors obtenu en
 rassemblant les expressions précédentes de \(f'(0)\), \(f''(0)\), \(f'''(0)\) et
 \(f''''(0)\).
 
 \subsection{Développement limité de la hessienne}
+% 08/06/2022 —
+%
+% Relecture de tous les calculs de ce paragraphe
 
 On cherche maintenant un développement limité de la hessienne de l'énergie. Les
 fonctions test \(\hat{u}, \hat{v} ∈ U\) étant fixées, on applique la méthode du
-\S\ref{sec:20220107121442} à la fonction \(f(η) = F [η, λ₀ + λ(η)]\), avec
-\begin{equation}
-  F(η, λ) =ℰ_{, u u} [u^{\ast}(λ) + U(η), λ; \hat{u}, \hat{v}].
-\end{equation}
+\S\ref{sec:20220107121442} à la fonction \(f(η) = F [η, λ₀ + Λ(η)]\), avec
+\begin{equation*}
+  F(η, λ) = ℰ_{, u u} [u^{\ast}(λ) + U(η), λ; \hat{u}, \hat{v}].
+\end{equation*}
 
 On observe tout d'abord que \(F(0, λ) =ℰ₂(λ; \hat{u}, \hat{v})\), soit, en
 dérivant par rapport à \(λ\)
-\begin{equation}
+\begin{equation*}
   ∂_{λ} F(0, λ) = \dot{ℰ}₂(λ; \hat{u}, \hat{v})
   \quad \text{et} \quad
-  ∂_{λ λ}² F(0, λ) = \ddot{ℰ}₂(λ; \hat{u}, \hat{v}).
-\end{equation}
+  ∂_{λλ}² F(0, λ) = \ddot{ℰ}₂(λ; \hat{u}, \hat{v}).
+\end{equation*}
+
 On trouve de même successivement
-\begin{gather}
-  ∂_{η} F(η, λ) = ℰ_{, u u u} [u^{\ast}(λ) + U(η), λ; U'(η), \hat{u}, \hat{v}],\\
-  \begin{aligned}[b]
-    ∂_{η η}² F(η, λ)
-    ={} & ℰ_{, u u u u} [u^{\ast}(λ) + U(η), λ ; U'(η), U'(η), \hat{u}, \hat{v}] \\
-    ={} & +ℰ_{, u u u} [u^{\ast}(λ) + U(η), λ; U''(η), \hat{u}, \hat{v}],
-  \end{aligned}
-\end{gather}
-soit, en \(η = 0\)
-\begin{equation}
-  ∂_{η} F(0, λ) = ℰ₃(λ; u₁, \hat{u}, \hat{v})
-\end{equation}
-et
-\begin{equation}
-  ∂_{η η}² F(0, λ) = ℰ₄(λ ; u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(λ; u₂, \hat{u}, \hat{v}),
-\end{equation}
+\begin{gather*}
+  ∂_{η} F(η, λ) = ℰ_{, uuu}(U', \hat{u}, \hat{v}),\\
+  ∂_{ηη}² F(η, λ) = ℰ_{, uuuu}(U', U', \hat{u}, \hat{v}) + ℰ_{, uuu}(U'', \hat{u}, \hat{v}),
+\end{gather*}
+où les différentielles successives de \(ℰ\) sont évaluées en
+\([u^{\ast}(λ) + U(η), λ]\), tandis que les dérivées successives de \(U\) sont
+évaluées en \(η\). Les relations précédentes s'écrivent en \(η = 0\)
+\begin{gather*}
+  ∂_{η} F(0, λ) = ℰ₃(λ; u₁, \hat{u}, \hat{v}),\\
+  ∂_{ηη}² F(0, λ) = ℰ₄(λ ; u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(λ; u₂, \hat{u}, \hat{v}),
+\end{gather*}
 et en dérivant cette fois par rapport à \(λ\)
-\begin{equation}
+\begin{equation*}
   ∂_{η λ}² F(0, λ) = \dot{ℰ}₃(λ; u₁, \hat{u}, \hat{v}).
-\end{equation}
+\end{equation*}
 
 En insérant les résultats précédents dans les
 expressions~\eqref{eq:20220107060454} et \eqref{eq:20220107124311}, on trouve
-\begin{gather}
-  f'(0) =ℰ₃(λ₀; u₁, \hat{u}, \hat{v}) + λ₁ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v}),\\
-  \begin{aligned}[b]
-    f''(0)
-    ={} & ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v}) +ℰ₃(λ₀; u₂, \hat{u}, \hat{v}) + λ₂ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v})\\
-    & + 2 λ₁ \dot{ℰ}₃(λ₀ ; u₁, \hat{u}, \hat{v}) + λ₁² \ddot{ℰ}₂(λ₀ ; \hat{u}, \hat{v}).
-  \end{aligned}
-\end{gather}
+\begin{gather*}
+  f'(0) = ℰ₃(u₁, \hat{u}, \hat{v}) + λ₁ \dot{ℰ}₂(\hat{u}, \hat{v}),\\
+  f''(0) = ℰ₄(u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(u₂, \hat{u}, \hat{v}) + 2λ₁ \dot{ℰ}₃(u₁, \hat{u}, \hat{v}) + λ₁² \ddot{ℰ}₂(\hat{u}, \hat{v}) + λ₂ \dot{ℰ}₂(\hat{u}, \hat{v}) .
+\end{gather*}
 qui conduisent finalement au développement limité~\eqref{eq:20220531054247}.
 
 \subsection{Développement limité des valeurs propres et vecteurs

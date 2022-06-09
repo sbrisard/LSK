@@ -829,36 +829,30 @@ On cherche les développements limités à l'ordre 2 en \(η\) de \(x\) et \(α\
 \end{align*}
 
 Ces développements limités sont tout d'abord insérés dans le développement
-limité \eqref{eq:20220531054247} de la hessienne de l'énergie
+limité \eqref{eq:20220531054247} de la hessienne de l'énergie. D'une part
 \begin{equation*}
   \begin{aligned}[b]
-    ℰ_{, u u} [u(η), λ(η); x, \hat{u}]
-    ={} & ℰ₂(λ₀; x₀, \hat{u}) + η ℰ₂(λ₀ ; x₁, \hat{u}) + \tfrac{1}{2} η² ℰ₂(λ₀; x₂, \hat{u})\\
-    & + η ℰ₃(λ₀; u₁, x₀, \hat{u}) + η² ℰ₃(λ₀; u₁, x₁, \hat{u})\\
-    & + η λ₁ \dot{ℰ}₂(λ₀; x₀, \hat{u}) + η² λ₁ \dot{ℰ}₂(λ₀; x₁, \hat{u})\\
-    & + \tfrac{1}{2} η² \bigl[ℰ₄(λ₀; u₁, u₁, x₀, \hat{u}) + ℰ₃(λ₀; u₂, x₀, \hat{u})\\
-    & + λ₂ \dot{ℰ}₂(λ₀; x₀, \hat{u}) + 2 λ₁ \dot{ℰ}₃(λ₀; u₁, x, \hat{u})\\
-    & + λ₁² \ddot{ℰ}₂(λ₀; x, \hat{u}) \bigr] + o(η²)\\
-    ={} & ℰ₂(λ₀; x₀, \hat{u})\\
-    & + η \bigl[ℰ₃(λ₀; u₁, x₀, \hat{u}) + ℰ₂ (λ₀; x₁, \hat{u}) + λ₁ \dot{ℰ}₂(λ₀ ; x₀, \hat{u})\bigr]\\
-    & + \tfrac{1}{2} η² \bigl[ℰ₂(λ₀; x₂, \hat{u}) + 2ℰ₃(λ₀; u₁, x₁, \hat{u}) + 2 λ₁ \dot{ℰ}₂(λ₀; x₁, \hat{u})\bigr]\\
-    & + \tfrac{1}{2} η² \bigl[ℰ₄(λ₀; u₁, u₁, x₀, \hat{u}) + ℰ₃(λ₀; u₂, x₀, \hat{u}) + λ₂ \dot{ℰ}₂(λ₀; x₀, \hat{u})\bigr]\\
-    & + \tfrac{1}{2} η² \bigl[2 λ₁ \dot{ℰ}₃(λ₀ ; u₁, x, \hat{u}) + λ₁² \ddot{ℰ}₂(λ₀; x, \hat{u})\bigr] + o(η²)
+    ℰ_{, u u} [u(η), λ(η); x, \hat{u}] ={}
+    & ℰ₂(x₀, \hat{u}) + η \bigl[ ℰ₂(x₁, \hat{u}) + ℰ₃(u₁, x₀, \hat{u}) + λ₁ \dot{ℰ}₂(x₀, \hat{u})\bigr] + \tfrac{1}{2} η² \bigl[ℰ₂(x₂, \hat{u})\\
+    & + 2ℰ₃(u₁, x₁, \hat{u}) + 2 λ₁ \dot{ℰ}₂(x₁, \hat{u}) + ℰ₄(u₁, u₁, x₀, \hat{u}) + ℰ₃(u₂, x₀, \hat{u})\\
+    & + 2λ₁ \dot{ℰ}₃(u₁, x₀, \hat{u}) + λ₁² \ddot{ℰ}₂(x₀, \hat{u}) + λ₂ \dot{ℰ}₂(x₀, \hat{u}) \bigr] + o(η²)
   \end{aligned}
 \end{equation*}
-et
-\begin{equation*}
-  \begin{aligned}[b]
-    α 〈 x, \hat{u} 〉
-    ={} & α₀ 〈 x₀, \hat{u} 〉 + η(α₁ 〈 x₀, \hat{u} 〉 + α₀ 〈 x₁, \hat{u} 〉)\\
-    & + \tfrac{1}{2} η² (α₂ 〈 x₀, \hat{u} 〉 + 2 α₁ 〈 x₁, \hat{u} 〉 + α₀ 〈 x₂, \hat{u} 〉) + o(η²) .
-  \end{aligned}
-\end{equation*}
+(les formes multilinéaires \(\dot{ℰ}_k\) étant toutes évaluées en \(λ=λ₀\)) et
+d'autre part
+\begin{multline*}
+    α 〈 x, \hat{u} 〉 = α₀ 〈 x₀, \hat{u} 〉 + η\bigl(α₁ 〈 x₀, \hat{u} 〉 + α₀ 〈 x₁, \hat{u} 〉\bigr)\\
+    + \tfrac{1}{2} η² \bigl(α₀ 〈 x₂, \hat{u} 〉 + 2 α₁ 〈 x₁, \hat{u} 〉 + α₂ 〈 x₀, \hat{u} 〉\bigr) + o(η²).
+\end{multline*}
+
+En égalant les deux expressions précédentes pour tout \(\hat{u} ∈ U\), on trouve
+trois problèmes variationnels (correspondant aux termes en \(η⁰\), \(η¹\) et
+\(η²\)).
 
 \paragraph{Problème variationnel d'ordre 0} Trouver \(x₀∈U\) et \(α₀∈\reals\)
 tels que, pour tout \(\hat{u}∈U\)
 \begin{equation}
-  ℰ₂(λ₀; x₀, \hat{u}) = α₀ 〈 x₀, \hat{u} 〉.
+  ℰ₂(x₀, \hat{u}) = α₀ 〈 x₀, \hat{u} 〉.
 \end{equation}
 
 On en déduit que \(x₀\) est le vecteur propre de \(ℰ₂(λ₀)\) associé à la valeur
@@ -866,17 +860,19 @@ propre \(α₀\). Si \(α₀ \neq 0\), \(ℰ₂ (λ₀)\) étant positive par hy
 nécessairement \(α₀ > 0\), et la valeur propre de la hessienne est positive. On
 considère donc dans ce qui suit le cas où \(α₀ = 0\), c'est-à-dire que \(x₀∈V\)
 \begin{equation}
+  \label{eq:20220609133608}
   x₀ = χ₀^i v_i.
 \end{equation}
 
 \paragraph{Problème variationnel d'ordre 1} Trouver \(x₁∈U\) et \(α₁∈\reals\)
 tels que, pour tout \(\hat{u}∈U\)
 \begin{equation}
-  ℰ₃(λ₀; u₁, x₀, \hat{u}) + ℰ₂(λ₀ ; x₁, \hat{u}) + λ₁ \dot{ℰ}₂(λ₀; x₀, \hat{u}) = α₁ 〈 x₀, \hat{u} 〉,
+  \label{eq:20220609131953}
+  ℰ₂(x₁, \hat{u}) + ℰ₃(u₁, x₀, \hat{u}) + λ₁ \dot{ℰ}₂(x₀, \hat{u}) = α₁ 〈 x₀, \hat{u} 〉,
 \end{equation}
 soit, en remplaçant \(u₁\) et \(x₀\) par leurs décompositions dans la base \(v_i\)
 \begin{equation}
-  ℰ₃(λ₀; v_j, v_k, \hat{u}) ξ₁^k χ₀^j + ℰ₂(λ₀; x₁, \hat{u}) + λ₁ \dot{ℰ}₂(λ₀; v_j, \hat{u}) χ₀^j = α₁ χ₀^j 〈 v_j, \hat{u} 〉.
+  ℰ₂(x₁, \hat{u}) + ℰ₃(v_j, v_k, \hat{u}) χ₀^j ξ₁^k + λ₁ \dot{ℰ}₂(v_j, \hat{u}) χ₀^j = α₁ χ₀^j 〈 v_j, \hat{u} 〉.
 \end{equation}
 En prenant tout d'abord \(\hat{u} = v_i\), on obtient
 \begin{equation}
@@ -884,47 +880,117 @@ En prenant tout d'abord \(\hat{u} = v_i\), on obtient
 \end{equation}
 soit encore
 \begin{equation}
-  \bigl[E_{i j k}(λ₀) ξ₁^k + λ₁ F_{i j}(λ₀)\bigr] χ₀^j = α₁ χ₀^i.
+  \bigl[E_{ijk}(λ₀) ξ₁^k + λ₁ F_{ij}(λ₀)\bigr] χ₀^j = α₁ χ₀^i.
 \end{equation}
 Ainsi, le vecteur \(χ₀^i\) apparaît comme le vecteur propre de la matrice
-symétrique \([E_{i j k}(λ₀) ξ₁^k + λ₁ F_{i j}(λ₀)]\) associé à la valeur propre
-\(α₁\). On doit alors discuter en fonction du type de bifurcation.
-
-\paragraph{Cas d'une bifurcation asymétrique} Dans ce cas, la forme trilinéaire
-\(E_{i j k}(λ₀)\) n'est pas nulle sur \(V\), et \(α₁ \neq 0\). Le terme dominant
-de \(α\) est donc d'ordre 1, tandis que le terme dominant de \(x\) est d'ordre
-0.
-
-\paragraph{Cas d'une bifurcation symétrique} La forme trilinéaire
-\(E_{i j k}(λ₀)\) est identiquement nulle sur \(V\); de plus, \(λ₁ = 0\). On
-trouve alors que \(α₁ = 0\), et on ne peut déterminer les \(χ₀^i\). On prend
-maintenant \(\hat{u} = \hat{w}∈W\) dans le problème variationnel d'ordre 1, et
-on pose \(x₁ = χ₁^i v_i + y₁\), avec \(y₁∈W\). On obtient alors le problème
-variationnel suivant : trouver \(y₁∈W\) tel que, pour tout \(\hat{w}∈W\),
+symétrique \([E_{ijk}(λ₀) ξ₁^k + λ₁ F_{ij}(λ₀)]\) associé à la valeur propre
+\(α₁\).  On prend maintenant \(\hat{u} = \hat{w}∈W\) dans le problème
+variationnel d'ordre 1~\eqref{eq:20220609131953} et on pose
+\(x₁ = χ₁^i v_i + y₁\), avec \(y₁∈W\). On obtient alors le problème variationnel
+suivant : trouver \(y₁∈W\) tel que, pour tout \(\hat{w}∈W\),
 \begin{equation}
-  ℰ₃(λ₀; v_j, v_k, \hat{w}) ξ₁^k χ₀^j + ℰ₂(λ₀; y₁, \hat{w}) + λ₁ \dot{ℰ}₂(λ₀; v_j, \hat{w}) χ₀^j = 0.
+  ℰ₂(y₁, \hat{w}) + ℰ₃(v_i, v_j, \hat{w}) χ₀^i ξ₁^j + λ₁ \dot{ℰ}₂(v_i, \hat{w}) χ₀^i = 0.
 \end{equation}
 
 La solution de ce problème est exprimée à l'aide des \(w_{i j}\) et \(w_i\)
 définis respectivement par les problèmes variationnels auxiliaires
 \eqref{eq:20220519164523} et \eqref{eq:20220524134525}
 \begin{equation}
-  y₁ = ξ₁^i χ₀^j w_{i j} + λ₁ χ₀^i w_i,
+  y₁ =  χ₀^i ξ₁^j w_{i j} + \tfrac{1}{2} λ₁ χ₀^i w_i,
 \end{equation}
 soit
 \begin{equation}
-  x₁ = χ₁^i v_i + ξ₁^i χ₀^j w_{i j} + λ₁ χ₀^i w_i.
+  \label{eq:20220609133629}
+  x₁ = χ₁^i v_i +  χ₀^i ξ₁^j w_{i j} + \tfrac{1}{2} λ₁ χ₀^i w_i.
 \end{equation}
 
-Dans le cas d'une bifurcation symétrique, le problème aux valeurs propres d'ordre 2 s'écrit quant à lui
-\begin{equation}
-  ℰ₂(λ₀; x₂, \hat{u}) + 2ℰ₃(λ₀; u₁, x₁, \hat{u}) +ℰ₄ (λ₀; u₁, u₁, x₀, \hat{u}) + ℰ₃(λ₀; u₂, x₀, \hat{u}) + λ₂ \dot{ℰ}₂(λ₀; x₀, \hat{u}) = α₂ 〈 x₀, \hat{u} 〉
-\end{equation}
+\paragraph{Problème variationnel d'ordre 2} Pour tout \(\hat{u} ∈ U\),
+\begin{multline*}
+  ℰ₂(x₂, \hat{u}) + 2ℰ₃(u₁, x₁, \hat{u}) + 2 λ₁ \dot{ℰ}₂(x₁, \hat{u}) + ℰ₄(u₁, u₁, x₀, \hat{u})\\
+  ℰ₃(u₂, x₀, \hat{u}) + 2λ₁ \dot{ℰ}₃(u₁, x₀, \hat{u}) + λ₁² \ddot{ℰ}₂(x₀, \hat{u}) + λ₂ \dot{ℰ}₂(x₀, \hat{u})\\
+  = 2 α₁ 〈 x₁, \hat{u} 〉 + α₂ 〈 x₀, \hat{u} 〉,
+\end{multline*}
 soit, en prenant \(\hat{u} = \hat{v}_i∈V\) et en introduisant les développements
-de \(u₁\), \(u₂\), \(x₀ \) et \(x₁\)
-\begin{equation}
-  ℰ₄ (λ₀; v_i, v_j, v_k, v_l) χ₀^j ξ_{1}^k ξ₁^l + 2ℰ₃(λ₀; u₁, x₁, v_i) +ℰ₃(λ₀ ; u₂, x₀, \hat{u}) + λ₂ \dot{ℰ₂}(λ₀; x₀, \hat{u})
-\end{equation}
+\eqref{eq:20220524133944}, \eqref{eq:20220524134613}, \eqref{eq:20220609133608}
+et \eqref{eq:20220609133629} de \(u₁\), \(u₂\), \(x₀ \) et \(x₁\)
+
+\begin{multline*}
+  2ℰ₃(v_i, x₁, u₁) + 2 λ₁ \dot{ℰ}₂(v_i, x₁) + ℰ₄(v_i, x₀, u₁, u₁)\\
+  ℰ₃(v_i, x₀, u₂) + 2λ₁ \dot{ℰ}₃(v_i, x₀, u₁) + λ₁² \ddot{ℰ}₂(v_i, x₀) + λ₂ \dot{ℰ}₂(v_i, x₀)\\
+  = 2α₁ 〈 v_i, x₁ 〉 + α₂ 〈 v_i, x₀ 〉,
+\end{multline*}
+\begin{multline*}
+  2ℰ₃(v_i, χ₁^jv_j + χ₀^jξ₁^kw_{jk}+\tfrac{1}{2} λ₁ χ₀^j w_j, ξ₁^k v_k)\\
+  + 2 λ₁ \dot{ℰ}₂(v_i, χ₁^jv_j + χ₀^jξ₁^kw_{jk}+\tfrac{1}{2} λ₁ χ₀^j w_j) + ℰ₄(v_i, χ₀^j v_j, ξ₁^k v_k, ξ₁^l v_l)\\
+  + ℰ₃(v_i, χ₀^j v_j, ξ₂^k v_k + ξ₁^k ξ₁^l w_{kl} + λ₁ ξ₁^k w_k) + 2λ₁ \dot{ℰ}₃(v_i, χ₀^j v_j, ξ₁^k v_k)\\
+  + λ₁² \ddot{ℰ}₂(v_i, χ₀^j v_j) + λ₂ \dot{ℰ}₂(v_i, χ₀^j v_j)\\
+  = 2α₁ 〈 v_i,  χ₁^jv_j + χ₀^jξ₁^kw_{jk}+\tfrac{1}{2} λ₁ χ₀^j w_j 〉 + α₂ 〈 v_i, χ₀^j v_j〉,
+\end{multline*}
+\begin{multline*}
+  2ℰ₃(v_i, v_j,  v_l) χ₁^j ξ₁^l + 2ℰ₃(v_i, w_{jk}, v_l) χ₀^j ξ₁^k ξ₁^l + λ₁ ℰ₃(v_i,  w_j, v_k) χ₀^j ξ₁^k\\
+  + 2 λ₁ \dot{ℰ}₂(v_i, v_j) χ₁^j + 2 λ₁ \dot{ℰ}₂(v_i, w_{jk}) χ₀^j ξ₁^k+ λ₁² \dot{ℰ}₂(v_i, w_j) χ₀^j + ℰ₄(v_i, v_j,  v_k, v_l) χ₀^j ξ₁^k ξ₁^l\\
+  + ℰ₃(v_i, v_j, v_k) χ₀^j ξ₂^k + ℰ₃(v_i, v_j, w_{kl}) χ₀^j ξ₁^k ξ₁^l + λ₁ ℰ₃(v_i, v_j, w_k) χ₀^j ξ₁^k\\
+  + 2λ₁ \dot{ℰ}₃(v_i, v_j,  v_k) χ₀^j ξ₁^k + λ₁² \ddot{ℰ}₂(v_i, v_j) χ₀^j + λ₂ \dot{ℰ}₂(v_i, v_j) χ₀^j\\
+  = 2α₁χ₁^i + 2α₁ 〈 v_i, w_{jk} 〉 χ₀^j ξ₁^k + λ₁ α₁ 〈 v_i,  w_j 〉 χ₀^j + α₂ χ₀^i,
+\end{multline*}
+et on remarque que \(〈 v_i, w_{jk} 〉 = 〈 v_i, w_j 〉 = 0\) puisque \(V\) et
+\(W\) sont deux sous-espaces supplémentaires, orthogonaux.
+
+\begin{multline*}
+  2ℰ₃(v_i, v_j,  v_l) χ₁^j ξ₁^l + 2ℰ₃(v_i, w_{jk}, v_l) χ₀^j ξ₁^k ξ₁^l + λ₁ ℰ₃(v_i,  w_j, v_k) χ₀^j ξ₁^k\\
+  + 2 λ₁ \dot{ℰ}₂(v_i, v_j) χ₁^j + 2 λ₁ \dot{ℰ}₂(v_i, w_{jk}) χ₀^j ξ₁^k+ λ₁² \dot{ℰ}₂(v_i, w_j) χ₀^j + ℰ₄(v_i, v_j,  v_k, v_l) χ₀^j ξ₁^k ξ₁^l\\
+  + ℰ₃(v_i, v_j, v_k) χ₀^j ξ₂^k + ℰ₃(v_i, v_j, w_{kl}) χ₀^j ξ₁^k ξ₁^l + λ₁ ℰ₃(v_i, v_j, w_k) χ₀^j ξ₁^k\\
+  + 2λ₁ \dot{ℰ}₃(v_i, v_j,  v_k) χ₀^j ξ₁^k + λ₁² \ddot{ℰ}₂(v_i, v_j) χ₀^j + λ₂ \dot{ℰ}₂(v_i, v_j) χ₀^j\\
+  = 2α₁χ₁^i + α₂ χ₀^i,
+\end{multline*}
+
+\begin{multline*}
+  \bigl[ ℰ₄(v_i, v_j,  v_k, v_l) + 2ℰ₃(v_i, w_{jk}, v_l) + ℰ₃(v_i, v_j, w_{kl})\bigr] χ₀^j ξ₁^k ξ₁^l\\
+  + λ₁ \bigl[ ℰ₃(v_i,  w_j, v_k) + 2 \dot{ℰ}₂(v_i, w_{jk}) + ℰ₃(v_i, v_j, w_k) + 2 \dot{ℰ}₃(v_i, v_j,  v_k) \bigr] χ₀^j ξ₁^k\\
+  + λ₁² \bigl[\dot{ℰ}₂(v_i, w_j) + \ddot{ℰ}₂(v_i, v_j)\bigr] χ₀^j + \bigl[ℰ₃(v_i, v_j, v_k) ξ₂^k + λ₂ \dot{ℰ}₂(v_i, v_j)\bigr] χ₀^j \\
+  +2\bigl[ℰ₃(v_i, v_j,  v_k)  ξ₁^k + λ₁ \dot{ℰ}₂(v_i, v_j)\bigr] χ₁^j = 2α₁χ₁^i + α₂ χ₀^i,
+\end{multline*}
+
+\begin{multline*}
+  E_{ijkl} χ₀^j ξ₁^k ξ₁^l + λ₁ \bigl[ -ℰ₂(w_{ik},  w_j) - ℰ₂(w_i, w_{jk}) - ℰ₂(w_{ij}, w_k) + 2 \dot{ℰ}₃(v_i, v_j, v_k) \bigr] χ₀^j ξ₁^k\\
+  + λ₁²\bigl[\dot{ℰ}₂(v_i, w_j) + \ddot{ℰ}₂(v_i, v_j)\bigr] χ₀^j + \bigl(E_{ijk} ξ₂^k + λ₂ F_{ij}\bigr) χ₀^j + 2\bigl(E_{ijk}  ξ₁^k + λ₁ F_{ij}\bigr) χ₁^j\\
+  = 2α₁χ₁^i + α₂ χ₀^i,
+\end{multline*}
+
+\begin{multline*}
+  \bigl[E_{ijkl} ξ₁^k ξ₁^l + λ₁\bigl(2 \dot{E}_{ijk} ξ₁^k + λ₁ \dot{F}_{ij}\bigr) + E_{ijk} ξ₂^k + λ₂ F_{ij}\bigr] χ₀^j+ 2\bigl(E_{ijk}  ξ₁^k + λ₁ F_{ij}\bigr) χ₁^j\\
+  = 2α₁χ₁^i + α₂ χ₀^i,
+\end{multline*}
+
+\begin{equation*}
+  \begin{aligned}[b]
+    \dot{E}_{ijk}(λ₀) ={}& \dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ}₂(λ₀; v_i, w_{jk}) + \dot{ℰ}₂(λ₀; v_j, w_{ik}) + \dot{ℰ}₂(λ₀; v_k, w_{ij})\\
+  ={}& \dot{ℰ}₃(λ₀; v_i, v_j, v_k) -\tfrac{1}{2}\bigl[ℰ₂(λ₀; w_i, w_{jk}) + ℰ₂(λ₀; w_j, w_{ik}) + ℰ₂(λ₀; w_k, w_{ij})\bigr]
+  \end{aligned}
+\end{equation*}
+
+\begin{equation*}
+  \begin{aligned}[b]
+    \dot{ℰ}₂(λ₀; v_i, w_j) + \ddot{ℰ}₂(λ₀; v_i, v_j)
+    ={} & -\tfrac{1}{2}ℰ₂(λ₀; w_i, w_j) χ₀^j + \ddot{ℰ}₂(λ₀; v_i, v_j) χ₀^j\\
+    ={} & \dot{ℰ}₂(λ₀; v_j, w_i) χ₀^j + \ddot{ℰ}₂(λ₀; v_i, v_j) χ₀^j\\
+    ={} & \tfrac{1}{2}\bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; w_i, v_j)\bigr] + \ddot{ℰ}₂(λ₀; v_i, v_j)\\
+    ={} & \dot{F}_{ij}(λ₀)
+  \end{aligned}
+\end{equation*}
+
+
+ On
+doit alors discuter en fonction du type de bifurcation.
+
+\paragraph{Cas d'une bifurcation asymétrique} Dans ce cas, le tenseur
+\(E_{ijk}\) n'est pas nul, et \(α₁ \neq 0\). Le terme dominant de \(α\) est donc
+d'ordre 1, tandis que le terme dominant de \(x\) est d'ordre 0.
+
+\paragraph{Cas d'une bifurcation symétrique} Le tenseur \(E_{ijk}\) est
+identiquement nul; de plus, \(λ₁ = 0\). On trouve alors que \(α₁ = 0\), et on ne
+peut déterminer les \(χ₀^i\).
+
 
 \section{Simplification des équations de bifurcation}
 \label{sec:20220524134954}

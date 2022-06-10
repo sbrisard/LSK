@@ -75,10 +75,7 @@ Noter que dans ce qui suit, on convient que les formes \(ℰ₂\), \(ℰ₃\) et
 sont implicitement évaluées en \(λ₀\) lorsque \(λ\) n'est pas rappelé : ainsi,
 on notera \(ℰ₂(•, •)\) plutôt que \(ℰ₂(λ₀ ; •, •)\).
 
-\section{Analyse de la branche fondamentale}
-
-On s'intéresse dans ce paragraphe à la stabilité du point critique
-\((u₀, λ₀) .\) Par hypothèse, \(ℰ₂(λ₀)\) est positive, sans être définie
+Par hypothèse, \(ℰ₂(λ₀)\) est positive, sans être définie
 positive~; soit \(V\) son noyau, qui forme un sous-espace vectoriel de \(U\). On
 suppose que \(V\) est de dimension finie \(m = \dim V\). Soit
 \((v₁, \ldots, v_m)\) une base orthonormée de ce noyau pour le produit scalaire
@@ -87,10 +84,61 @@ sous-espace supplémentaire orthogonal \(W\) de \(V\) dans \(U\)
 \begin{equation}
   U = V \overset{\perp}{\otimes} W.
 \end{equation}
-Pour étudier la stabilité de l'équilibre, on calcule l'énergie dans un état
-\(u₀ + ξ  v + η  w\) voisin du point d'équilibre \(u₀\), avec \(ξ, η∈\reals\)
-{\guillemotleft} petits {\guillemotright}, \(v \in V\) et \(w∈W\). On obtient
-alors, à l'ordre 4 en \(ξ\) et \(η\)
+
+The bilinear form \(ℰ₂\) being elliptic over \(W\), variational problems of the
+type: find \(w ∈ W\) such that
+\begin{equation}
+  ℰ₂(w, \hat{w})+\ell(\hat{w}) = 0 \quad \text{for all} \quad \hat{w}∈W
+\end{equation}
+are well-posed for any linear form \(\ell\) over \(W\). For \(1 ≤ i, j ≤ m\), we
+introduce the solutions \(w_i, w_{ij} ∈ W\) to the following variational
+problems
+\begin{gather}
+  \label{eq:20220524134525}
+  ℰ₂(λ₀; w_i, \hat{w}) + 2\dot{ℰ}₂(λ₀; v_i, \hat{w}) = 0,\\
+  \label{eq:20220519164523}
+  ℰ₂(λ₀; w_{i j}, \hat{w})+ℰ₃(λ₀; v_i, v_j, \hat{w}) = 0,
+\end{gather}
+for all \(\hat{w} ∈ W\). Since \(w_{i}\) and \(w_{ij}\) belong to \(W\), we have
+\(〈 w_{i}, v 〉 = 〈 w_{ij}, v 〉 = 0\) for all \(v ∈ V\). Since \(ℰ₂(λ₀; •,
+•)\) is symmetric, it can be verified that \(w_{ij}=w_{ji}\). We also introduce
+the following tensors, defined in \(V\)
+\begin{gather}
+  E_{ijk} = ℰ₃(λ₀; v_i, v_j, v_k) + ℰ₂(λ₀; v_i, w_{jk}) + ℰ₂(λ₀; v_j, w_{ki}) + ℰ₂(λ₀; v_k, w_{ij}),\\
+  E_{ijkl} = ℰ₄(λ₀ ; v_i, v_j, v_k, v_l) + ℰ₃(λ₀ ; v_i, v_j, w_{kl}) + ℰ₃(λ₀ ; v_i, v_k, w_{lj}) + ℰ₃(λ₀ ; v_i, v_l, w_{jk}),\\
+  F_{ij} = \dot{ℰ}₂(λ₀; v_i, v_j) + \tfrac{1}{2} \bigl[ℰ₂(λ₀; v_i, w_j) + ℰ₂(λ₀; v_j, w_i)\bigr],
+\end{gather}
+as well as the derivatives
+\begin{gather}
+  \mathring{E}_{ijk} = \dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ₂}(λ₀; v_i, w_{jk}) + \dot{ℰ}₂(λ₀; v_j, w_{ki}) + \dot{ℰ}₂(λ₀; v_k, w_{ij}),\\
+  \mathring{F}_{ij} = \ddot{ℰ}₂(λ₀; v_i, v_j) + \tfrac{1}{2} \bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr].
+\end{gather}
+
+Note that, since \(ℰ₂(λ₀; v_i, •) = 0\), the above expressions simplify as follows
+\begin{gather}
+  \label{eq:20220524135619}
+  E_{ijk} = ℰ₃(λ₀; v_i, v_j, v_k),\\
+  \label{eq:20220524135553}
+  E_{ijkl} = ℰ₄(λ₀ ; v_i, v_j, v_k, v_l) + ℰ₃(λ₀ ; v_i, v_j, w_{kl}) + ℰ₃(λ₀ ; v_i, v_k, w_{jl}) + ℰ₃(λ₀ ; v_i, v_l, w_{jk}),\\
+  \label{eq:20220524135643}
+  F_{ij}(λ) = \dot{ℰ}₂(λ₀; v_i, v_j).
+\end{gather}
+
+The tensors \(E_{ijk}\), \(F_{ij}\), \(\mathring{E}_{ijk}\) and
+\(\mathring{F}_{ij}\) are fully symmetric. Furthermore, the following expression
+of \(E_{ijkl}\) result from Eq.~\eqref{eq:20220519164523}
+\begin{equation}
+  E_{ijkl} = ℰ₄(λ₀ ; v_i, v_j, v_k, v_l) - ℰ₂(λ₀ ; w_{ij}, w_{kl}) - ℰ₂(λ₀ ; w_{ik}, w_{jl}) - ℰ₂(λ₀ ; w_{il}, w_{jk}),
+\end{equation}
+which shows that \(E_{ijkl}\) is also fully symmetric.
+
+\section{Analyse de la branche fondamentale}
+
+On s'intéresse dans ce paragraphe à la stabilité du point critique \((u₀,
+λ₀)\). À cet effet, on calcule l'énergie dans un état \(u₀ + ξ v + η w\) voisin
+du point d'équilibre \(u₀\), avec \(ξ, η∈\reals\) {\guillemotleft} petits
+{\guillemotright}, \(v \in V\) et \(w∈W\). On obtient alors, à l'ordre 4 en
+\(ξ\) et \(η\)
 \begin{equation}
   \begin{aligned}[b]
     Δℰ ={} &  ℰ(u₀ + ξv + ηw, λ₀) - ℰ(u₀, λ₀)\\
@@ -140,15 +188,12 @@ minimale lorsque \(w\) satisfait le problème variationnel
   \label{eq:20211109145224}
   2ℰ₂(w, \hat{w}) +ℰ₃(v, v, \hat{w}) = 0 \quad \text{pour tout} \quad \hat{w}∈W.
 \end{equation}
-Soit \(w_{ij}∈W\) l'unique solution du problème variationnel suivant
-\begin{equation}
-  \label{eq:20220519164523}
-  ℰ₂(w_{i j}, \hat{w})+ℰ₃(v_i, v_j, \hat{w}) = 0 \quad \text{pour tout} \quad \hat{w}∈W.
-\end{equation}
+
 Alors, pour \(v = ξ^i v_i\), la solution du problème
-variationnel~\eqref{eq:20211109145224} est \(w = \tfrac{1}{2} ξ^i ξ^j
-w_{ij}\). Pour cette valeur de \(v\), la condition~\eqref{eq:20211109145356}
-s'écrit
+variationnel~\eqref{eq:20211109145224} est \(w = \tfrac{1}{2} ξ^i ξ^j w_{ij}\)
+où \(w_{ij}\) désigne la solution du problème variationnel
+\eqref{eq:20220519164523}. Pour cette valeur de \(v\), la
+condition~\eqref{eq:20211109145356} s'écrit
 \begin{equation}
   \bigl[ℰ₄(v_i, v_j, v_k, v_l) - 3ℰ₂(w_{ij}, w_{kl})\bigr] ξ^i ξ^j ξ^k ξ^l \geq 0,
 \end{equation}
@@ -235,16 +280,10 @@ tel que
   \label{eq:20211210131623}
   ℰ₂(λ₀; \tilde{u}₂, \hat{w}) + ξ₁^i ξ₁^j ℰ₃(λ₀; v_i, v_j, \hat{w}) + 2λ₁ ξ₁^i \dot{ℰ}₂(λ₀; v_i, \hat{w}) = 0,
 \end{equation}
-pour tout \(\hat{w}∈W\). Soient \(w_i∈W\) les solutions des problèmes
-variationnels suivants
-\begin{equation}
-  \label{eq:20220524134525}
-  ℰ₂(λ₀; w_i, \hat{w}) + 2\dot{ℰ}₂(λ₀; v_i, \hat{w}) = 0,
-\end{equation}
 pour tout \(\hat{w}∈W\). La solution du problème~\eqref{eq:20211210131623}
-s'obtient par simple combinaison linéaire des \(w_i\) et \(w_{ij}\) [on rappelle
-que ces derniers sont définis par le problème
-variationnel~\eqref{eq:20220519164523}]
+s'obtient par simple combinaison linéaire des \(w_i\) et \(w_{ij}\) [defined by
+the variational problems~\eqref{eq:20220524134525} and
+\eqref{eq:20220519164523}]
 \begin{equation}
  \tilde{u}₂ = ξ₁^i ξ₁^j w_{ij} + λ₁ ξ₁^i w_i,
 \end{equation}
@@ -277,21 +316,10 @@ forme suivante
   \label{eq:20220601070917}
   \tfrac{1}{3} E_{ijkl}(λ₀) ξ₁^j ξ₁^k ξ₁^l + λ₂ F_{ij}(λ₀) ξ₁^j + A_{ij}(λ₀) ξ₂^j + λ₁ \dot{A}_{ij}(λ₀) ξ₁^j = 0,
 \end{equation}
-où les tenseurs \(E_{i j k}\), \(E_{i j k l}\), \(F_{i j}\) et \(A_{i j}\) sont
-définis comme suit \pdfmargincomment{Je ne suis pas sûr du terme faisant
-  intervenir Ȧᵢⱼ(λ₀)}
-\begin{equation}
-  \label{eq:20220524135619}
-  E_{ijk}(λ) = ℰ₃(λ; v_i, v_j, v_k) + ℰ₂(λ; v_i, w_{jk}) + ℰ₂(λ; v_j, w_{ik}) + ℰ₂(λ ; v_k, w_{ij}),
-\end{equation}
-\begin{equation}
-  \label{eq:20220524135553}
-  E_{i j k l}(λ) = ℰ₄(λ ; v_i, v_j, v_k, v_l) + ℰ₃(λ ; v_i, v_j, w_{k l}) + ℰ₃(λ ; v_i, v_k, w_{l j}) + ℰ₃(λ ; v_i, v_l, w_{j k}),
-\end{equation}
-\begin{equation}
-  \label{eq:20220524135643}
-  F_{ij}(λ) = \dot{ℰ}₂(λ; v_i, v_j) + \tfrac{1}{2} [ℰ₂(λ; v_i, w_j) + ℰ₂(λ; v_j, w_i)],
-\end{equation}
+where the tensors \(E_{i j k}\), \(E_{i j k l}\), \(F_{i j}\) are defined by
+Eqs.~\eqref{eq:20220524135619}, \eqref{eq:20220524135553} and
+\eqref{eq:20220524135643}, while \(A_{ij}\) is defined below
+\pdfmargincomment{Je ne suis pas sûr du terme faisant intervenir Ȧᵢⱼ(λ₀)}
 \begin{equation}
   \label{eq:20220524135705}
   A_{ij}(λ) = E_{ijk}(λ) ξ₁^k + λ₁ F_{ij}(λ) .

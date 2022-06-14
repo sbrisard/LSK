@@ -121,7 +121,7 @@ Note that, since \(ℰ₂(λ₀; v_i, •) = 0\), the above expressions simplify
   \label{eq:20220524135553}
   E_{ijkl} = ℰ₄(λ₀ ; v_i, v_j, v_k, v_l) + ℰ₃(λ₀ ; v_i, v_j, w_{kl}) + ℰ₃(λ₀ ; v_i, v_k, w_{jl}) + ℰ₃(λ₀ ; v_i, v_l, w_{jk}),\\
   \label{eq:20220524135643}
-  F_{ij}(λ) = \dot{ℰ}₂(λ₀; v_i, v_j).
+  F_{ij} = \dot{ℰ}₂(λ₀; v_i, v_j).
 \end{gather}
 
 The tensors \(E_{ijk}\), \(F_{ij}\), \(\mathring{E}_{ijk}\) and
@@ -246,18 +246,21 @@ suivant~: trouver \(u₁∈V\) tel que
   \label{eq:20220524133816}
   \tfrac{1}{2} ℰ₃(λ₀; u₁, u₁, \hat{v}) + λ₁\dot{ℰ}₂(λ₀; u₁, \hat{v}) = 0,
 \end{equation}
-pour tout \(\hat{v}∈V\). Il est commode de transformer l'équation de bifurcation
-\eqref{eq:20220524133816}, intrinsèque, en un système d'équations scalaires. à
-cet effet, on décompose \(u₁∈V\) dans la base \((v_i)_{1 ≤ i ≤ m}\)
+pour tout \(\hat{v}∈V\). The above problem can be transformed into a system of
+scalar equations. Indeed, expanding the \(u₁∈V\) in the basis
+\((v_i)_{1 ≤ i ≤ m}\) as follows
 \begin{equation}
   \label{eq:20220524133944}
-  u₁ = ξ₁^i v_i.
+  u₁ = ξ₁^i v_i
 \end{equation}
-En prenant \(\hat{v} = v_i\), l'équation~\eqref{eq:20220524133816} s'écrit
+and plugging the definitions~\eqref{eq:20220524135619} and
+\eqref{eq:20220524135643} of \(E_{ijk}\) and \(F_{ij}\) into
+Eq.~\eqref{eq:20220524133816}
 \begin{equation}
-  \label{eq:20220524134121}
-  \tfrac{1}{2} ℰ₃(λ₀; v_i, v_j, v_k)ξ₁^j ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j = 0.
+  \label{eq:20220524135036}
+  \tfrac{1}{2} E_{ijk} ξ₁^j ξ₁^k + λ₁ F_{ij} ξ₁^j = 0.
 \end{equation}
+
 On obtient ainsi un système de \(m\) équations quadratiques à \((m + 1)\)
 inconnues, qui permet en général de déterminer les valeurs de \(λ₁\) et
 \(u₁\)(\pdfmarkupcomment{voir discussion ci-après}{Compléter référence}).
@@ -280,21 +283,36 @@ tel que
   \label{eq:20211210131623}
   ℰ₂(λ₀; \tilde{u}₂, \hat{w}) + ξ₁^i ξ₁^j ℰ₃(λ₀; v_i, v_j, \hat{w}) + 2λ₁ ξ₁^i \dot{ℰ}₂(λ₀; v_i, \hat{w}) = 0,
 \end{equation}
-pour tout \(\hat{w}∈W\). La solution du problème~\eqref{eq:20211210131623}
-s'obtient par simple combinaison linéaire des \(w_i\) et \(w_{ij}\) [defined by
-the variational problems~\eqref{eq:20220524134525} and
-\eqref{eq:20220519164523}]
-\begin{equation}
- \tilde{u}₂ = ξ₁^i ξ₁^j w_{ij} + λ₁ ξ₁^i w_i,
-\end{equation}
-de sorte que
+pour tout \(\hat{w}∈W\). The solution to the variational
+problem~\eqref{eq:20211210131623} is expressed as a linear combination of the
+\(w_i\) and \(w_{ij}\) [defined by the variational
+problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}]
 \begin{equation}
   \label{eq:20220524134613}
-  u₂ = ξ₂^i v_i + ξ₁^i ξ₁^j w_{ij} + λ₁ ξ₁^i w_i .
+  \tilde{u}₂ = ξ₁^i ξ₁^j w_{ij} + λ₁ ξ₁^i w_i,
+  \quad\text{and}\quad
+  u₂ = ξ₂^i v_i + ξ₁^i ξ₁^j w_{ij} + λ₁ ξ₁^i w_i.
 \end{equation}
 En introduisant les expressions~\eqref{eq:20220524133944} et
 \eqref{eq:20220524134613} dans l'équation~\eqref{eq:res3} et en prenant de plus
-\(\hat{u} = v_i\), on obtient alors les équations suivantes
+\(\hat{u} = v_i\) (\(ℰ₂(λ₀; v_i, •)\)), on obtient alors les équations suivantes
+\begin{multline*}
+  ℰ₄(λ₀; v_i, ξ₁^j v_j, ξ₁^k v_k, ξ₁^l v_l) + 3ℰ₃(λ₀; v_i, ξ₁^j v_j, ξ₂^k v_k + ξ₁^k ξ₁^l w_{kl} + λ₁ ξ₁^k w_k)\\
+  + 3λ₁ \dot{ℰ}₃(λ₀; v_i, ξ₁^j v_j, ξ₁^k v_k) + 3λ₁ \dot{ℰ}₂(λ₀; v_i, ξ₂^j v_j + ξ₁^j ξ₁^k w_{jk} + λ₁ ξ₁^j w_j)\\
+  + 3λ₁² \ddot{ℰ}₂(λ₀; v_i, ξ₁^j v_j) + 3λ₂ \dot{ℰ}₂(λ₀; v_i, ξ₁^j v_j) = 0
+\end{multline*}
+\begin{multline*}
+  ℰ₄(λ₀; v_i, v_j, v_k, v_l) ξ₁^j ξ₁^k ξ₁^l + 3ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^j ξ₂^k + 3ℰ₃(λ₀; v_i, v_j, w_{kl}) ξ₁^j ξ₁^k ξ₁^l\\
+  + 3λ₁ ℰ₃(λ₀; v_i, v_j, w_k) ξ₁^j ξ₁^k + 3λ₁ \dot{ℰ}₃(λ₀; v_i, v_j, v_k) ξ₁^j ξ₁^k + 3λ₁ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₂^j\\
+  + 3λ₁ \dot{ℰ}₂(λ₀; v_i, w_{jk}) ξ₁^j ξ₁^k + 3λ₁² \dot{ℰ}₂(λ₀; v_i, w_j) ξ₁^j + 3λ₁² \ddot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j + 3λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j = 0
+\end{multline*}
+\begin{multline*}
+  \bigl[ℰ₄(λ₀; v_i, v_j, v_k, v_l) + 3ℰ₃(λ₀; v_i, v_j, w_{kl})\bigr] ξ₁^j ξ₁^k ξ₁^l\\
+  + 3λ₁ \bigl[ℰ₃(λ₀; v_i, v_j, w_k) + \dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ}₂(λ₀; v_i, w_{jk}) \bigr] ξ₁^j ξ₁^k\\
+  + 3\bigl[λ₁² \dot{ℰ}₂(λ₀; v_i, w_j) + λ₁² \ddot{ℰ}₂(λ₀; v_i, v_j) + λ₂ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] ξ₁^j\\
+   + 3\bigl[ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] ξ₂^j = 0
+\end{multline*}
+
 \begin{equation}
   \label{eq:20211112183220}
   \begin{aligned}[b]
@@ -308,10 +326,6 @@ qui permet en principe de déterminer \(λ₂\) ainsi que les \(ξ₂^i\). On mo
 dans le paragraphe \ref{sec:20220524134954} que les équations
 \eqref{eq:20220524134121} et \eqref{eq:20211112183220} peuvent s'écrire sous la
 forme suivante
-\begin{equation}
-  \label{eq:20220524135036}
-  \tfrac{1}{2} E_{ijk}(λ₀) ξ₁^j ξ₁^k + λ₁ F_{ij}(λ₀) ξ₁^j = 0,
-\end{equation}
 \begin{equation}
   \label{eq:20220601070917}
   \tfrac{1}{3} E_{ijkl}(λ₀) ξ₁^j ξ₁^k ξ₁^l + λ₂ F_{ij}(λ₀) ξ₁^j + A_{ij}(λ₀) ξ₂^j + λ₁ \dot{A}_{ij}(λ₀) ξ₁^j = 0,

@@ -110,7 +110,9 @@ the following tensors, defined in \(V\)
 \end{gather}
 as well as the derivatives
 \begin{gather}
+  \label{eq:20220615063626}
   \mathring{E}_{ijk} = \dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ₂}(λ₀; v_i, w_{jk}) + \dot{ℰ}₂(λ₀; v_j, w_{ki}) + \dot{ℰ}₂(λ₀; v_k, w_{ij}),\\
+  \label{eq:20220615063633}
   \mathring{F}_{ij} = \ddot{ℰ}₂(λ₀; v_i, v_j) + \tfrac{1}{2} \bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr].
 \end{gather}
 
@@ -293,128 +295,125 @@ problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}]
   \quad\text{and}\quad
   u₂ = ξ₂^i v_i + ξ₁^i ξ₁^j w_{ij} + λ₁ ξ₁^i w_i.
 \end{equation}
-En introduisant les expressions~\eqref{eq:20220524133944} et
-\eqref{eq:20220524134613} dans l'équation~\eqref{eq:res3} et en prenant de plus
-\(\hat{u} = v_i\) (\(ℰ₂(λ₀; v_i, •)\)), on obtient alors les équations suivantes
-\begin{multline*}
-  ℰ₄(λ₀; v_i, ξ₁^j v_j, ξ₁^k v_k, ξ₁^l v_l) + 3ℰ₃(λ₀; v_i, ξ₁^j v_j, ξ₂^k v_k + ξ₁^k ξ₁^l w_{kl} + λ₁ ξ₁^k w_k)\\
-  + 3λ₁ \dot{ℰ}₃(λ₀; v_i, ξ₁^j v_j, ξ₁^k v_k) + 3λ₁ \dot{ℰ}₂(λ₀; v_i, ξ₂^j v_j + ξ₁^j ξ₁^k w_{jk} + λ₁ ξ₁^j w_j)\\
-  + 3λ₁² \ddot{ℰ}₂(λ₀; v_i, ξ₁^j v_j) + 3λ₂ \dot{ℰ}₂(λ₀; v_i, ξ₁^j v_j) = 0
-\end{multline*}
-\begin{multline*}
-  ℰ₄(λ₀; v_i, v_j, v_k, v_l) ξ₁^j ξ₁^k ξ₁^l + 3ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^j ξ₂^k + 3ℰ₃(λ₀; v_i, v_j, w_{kl}) ξ₁^j ξ₁^k ξ₁^l\\
-  + 3λ₁ ℰ₃(λ₀; v_i, v_j, w_k) ξ₁^j ξ₁^k + 3λ₁ \dot{ℰ}₃(λ₀; v_i, v_j, v_k) ξ₁^j ξ₁^k + 3λ₁ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₂^j\\
-  + 3λ₁ \dot{ℰ}₂(λ₀; v_i, w_{jk}) ξ₁^j ξ₁^k + 3λ₁² \dot{ℰ}₂(λ₀; v_i, w_j) ξ₁^j + 3λ₁² \ddot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j + 3λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j = 0
-\end{multline*}
+
+Plugging expressions~\eqref{eq:20220524133944} and \eqref{eq:20220524134613}
+into Eq.~\eqref{eq:res3} and taking further \(\hat{u} = v_i\) [remember that
+\(ℰ₂(λ₀; v_i, •) = 0\)], we then get
+% \begin{multline*}
+%   ℰ₄(λ₀; v_i, ξ₁^j v_j, ξ₁^k v_k, ξ₁^l v_l) + 3ℰ₃(λ₀; v_i, ξ₁^j v_j, ξ₂^k v_k + ξ₁^k ξ₁^l w_{kl} + λ₁ ξ₁^k w_k)\\
+%   + 3λ₁ \dot{ℰ}₃(λ₀; v_i, ξ₁^j v_j, ξ₁^k v_k) + 3λ₁ \dot{ℰ}₂(λ₀; v_i, ξ₂^j v_j + ξ₁^j ξ₁^k w_{jk} + λ₁ ξ₁^j w_j)\\
+%   + 3λ₁² \ddot{ℰ}₂(λ₀; v_i, ξ₁^j v_j) + 3λ₂ \dot{ℰ}₂(λ₀; v_i, ξ₁^j v_j) = 0
+% \end{multline*}
+% \begin{multline*}
+%   ℰ₄(λ₀; v_i, v_j, v_k, v_l) ξ₁^j ξ₁^k ξ₁^l + 3ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^j ξ₂^k + 3ℰ₃(λ₀; v_i, v_j, w_{kl}) ξ₁^j ξ₁^k ξ₁^l\\
+%   + 3λ₁ ℰ₃(λ₀; v_i, v_j, w_k) ξ₁^j ξ₁^k + 3λ₁ \dot{ℰ}₃(λ₀; v_i, v_j, v_k) ξ₁^j ξ₁^k + 3λ₁ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₂^j\\
+%   + 3λ₁ \dot{ℰ}₂(λ₀; v_i, w_{jk}) ξ₁^j ξ₁^k + 3λ₁² \dot{ℰ}₂(λ₀; v_i, w_j) ξ₁^j + 3λ₁² \ddot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j + 3λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j = 0
+% \end{multline*}
 \begin{multline*}
   \bigl[ℰ₄(λ₀; v_i, v_j, v_k, v_l) + 3ℰ₃(λ₀; v_i, v_j, w_{kl})\bigr] ξ₁^j ξ₁^k ξ₁^l\\
   + 3λ₁ \bigl[ℰ₃(λ₀; v_i, v_j, w_k) + \dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ}₂(λ₀; v_i, w_{jk}) \bigr] ξ₁^j ξ₁^k\\
   + 3\bigl[λ₁² \dot{ℰ}₂(λ₀; v_i, w_j) + λ₁² \ddot{ℰ}₂(λ₀; v_i, v_j) + λ₂ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] ξ₁^j\\
-   + 3\bigl[ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] ξ₂^j = 0
+  + 3\bigl[ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] ξ₂^j = 0
 \end{multline*}
-
-\begin{equation}
-  \label{eq:20211112183220}
+It results from the variational problems \eqref{eq:20220524134525} and
+\eqref{eq:20220519164523} that
+\begin{equation*}
+  ℰ₃(λ₀; v_i, v_j, w_k) = -ℰ₂(λ₀ ; w_{ij}, w_k) = 2\dot{ℰ}₂(λ₀; v_k, w_{ij}),
+\end{equation*}
+therefore
+\begin{equation*}
   \begin{aligned}[b]
-    3[ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j)] ξ₂^j + 3λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j &\\
-    + [ℰ₄(λ₀; v_i, v_j, v_k, v_l) + 3ℰ₃(λ₀; v_i, v_j, w_{kl})] ξ₁^j ξ₁^k ξ₁^l &\\
-    + 3λ₁ [\dot{ℰ}₃(λ₀; v_i, v_j, v_k) + ℰ₃(λ₀; v_i, v_j, w_k) + \dot{ℰ₂}(λ₀; v_i, w_{jk})] ξ₁^j ξ₁^k&\\
-    + 3λ₁² [\ddot{ℰ}₂(λ₀; v_i, v_j) + \dot{ℰ}₂(λ₀ ; v_i, w_j)] ξ₁^j &= 0,
+    ℰ₃(λ₀; v_i, v_j, w_k) ξ₁^j ξ₁^k &= \tfrac{1}{2} \bigl[ ℰ₃(λ₀; v_i, v_j, w_k) + ℰ₃(λ₀; v_i, v_k, w_j)\bigr] ξ₁^j ξ₁^k\\
+                                    &= \bigl[ \dot{ℰ}₂(λ₀; v_k, w_{ij}) + \dot{ℰ}₂(λ₀; v_j, w_{ik}) \bigr] ξ₁^j ξ₁^k.
   \end{aligned}
-\end{equation}
-qui permet en principe de déterminer \(λ₂\) ainsi que les \(ξ₂^i\). On montre
-dans le paragraphe \ref{sec:20220524134954} que les équations
-\eqref{eq:20220524134121} et \eqref{eq:20211112183220} peuvent s'écrire sous la
-forme suivante
+\end{equation*}
+Similarly,
+\begin{equation*}
+  \begin{aligned}[b]
+    \dot{ℰ}₂(λ₀; v_i, w_j) &= - \tfrac{1}{2} ℰ₂(λ₀; w_i, w_j) = - \tfrac{1}{2} ℰ₂(λ₀; w_j, w_i) = \dot{ℰ}₂(λ₀; v_j, w_i)\\
+                           &= \tfrac{1}{2} \bigl[ \dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i) \bigr].
+  \end{aligned}
+\end{equation*}
+% \begin{multline*}
+%   \bigl[ℰ₄(λ₀; v_i, v_j, v_k, v_l) + ℰ₃(λ₀; v_i, v_j, w_{kl}) + ℰ₃(λ₀; v_i, v_k, w_{jl}) + ℰ₃(λ₀; v_i, v_l, w_{jk}) \bigr] ξ₁^j ξ₁^k ξ₁^l\\
+%   + 3λ₁ \bigl[\dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ}₂(λ₀; v_i, w_{jk}) + \dot{ℰ}₂(λ₀; v_j, w_{ik}) + \dot{ℰ}₂(λ₀; v_k, w_{ij}) \bigr] ξ₁^j ξ₁^k\\
+%   + 3λ₁² \bigl\{ \ddot{ℰ}₂(λ₀; v_i, v_j) + \tfrac{1}{2} \bigl[ \dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i) \bigr] \bigr\} ξ₁^j\\
+%   + 3\bigl[ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] ξ₂^j + 3λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j = 0
+% \end{multline*}
+
+Finally, the definitions \eqref{eq:20220615063626}, \eqref{eq:20220615063633},
+\eqref{eq:20220524135619}, \eqref{eq:20220524135553} and
+\eqref{eq:20220524135643} of \(E_{ijk}\), \(E_{ijkl}\), \(F_{ij}\),
+\(\mathring{E}_{ijk}\) and \(\mathring{F}_{ij}\) lead to the following compact
+bifurcation equation
 \begin{equation}
   \label{eq:20220601070917}
-  \tfrac{1}{3} E_{ijkl}(λ₀) ξ₁^j ξ₁^k ξ₁^l + λ₂ F_{ij}(λ₀) ξ₁^j + A_{ij}(λ₀) ξ₂^j + λ₁ \dot{A}_{ij}(λ₀) ξ₁^j = 0,
+  \tfrac{1}{3} E_{ijkl} ξ₁^j ξ₁^k ξ₁^l + λ₁ \bigl( \mathring{E}_{ijk} ξ₁^k + λ₁ \mathring{F}_{ij} \bigr)ξ₁^j + \bigl(E_{ijk} ξ₁^k + λ₁ F_{ij}\bigr) ξ₂^j + λ₂ F_{ij} ξ₁^j = 0.
 \end{equation}
-where the tensors \(E_{i j k}\), \(E_{i j k l}\), \(F_{i j}\) are defined by
-Eqs.~\eqref{eq:20220524135619}, \eqref{eq:20220524135553} and
-\eqref{eq:20220524135643}, while \(A_{ij}\) is defined below
-\pdfmargincomment{Je ne suis pas sûr du terme faisant intervenir Ȧᵢⱼ(λ₀)}
-\begin{equation}
-  \label{eq:20220524135705}
-  A_{ij}(λ) = E_{ijk}(λ) ξ₁^k + λ₁ F_{ij}(λ) .
-\end{equation}
-Noter que tous ces tenseurs sont \emph{symétriques}. On remarque que, puisque
-\(ℰ₂(λ₀ ; v_i, •) = 0\), on a les simplifications suivantes en \(λ = λ₀\) :
-\(E_{ijk}(λ₀) = ℰ₃(λ₀; v_i, v_j, v_k)\) et
-\(F_{ij}(λ₀) = \dot{ℰ}₂(λ₀; v_i, v_j)\).
 
-\paragraph{Si la forme \(ℰ₃(λ₀)\) n'est pas nulle sur \(V\)} L'équation
-\eqref{eq:20220524135036} admet au plus \((2^m - 1)\) paires de solutions
-réelles \((λ₁, u₁)\) et \((- λ₁, - u₁)\). \pdfmargincomment{Je ne sais pas
-  démontrer ce résultat sur le nombre de solutions réelles.}
-
-\paragraph{Si la forme \(ℰ₃(λ₀)\) est nulle sur \(V\)} L'équation
-\eqref{eq:20220524133816} conduit nécessairement à \(λ₁ = 0\), puisque
-\(\dot{ℰ}₂(λ₀)\) est définie négative. Dès lors, l'équation
-\eqref{eq:20220601070917} s'écrit \pdfmargincomment{Expliquer pourquoi la forme
-  quadratique ℰ̇₂(λ₀) bien définie négative}
-\begin{equation}
- \tfrac{1}{3} E_{ijkl}(λ₀) ξ₁^j ξ₁^k ξ₁^l + λ₂ F_{ij}(λ₀) ξ₁^j = 0.
-\end{equation}
-Cette équation admet cette fois au plus \(\frac{3^m - 1}{2}\) paires de
-solutions réelles \((λ₂, u₁)\) et \((- λ₂, - u₁)\). \pdfmargincomment{Je ne sais
-  pas non plus démontrer ce résultat sur le nombre de solutions réelles.}
-\pdfmargincomment{Note du 29/04/2022 – J'ai relu tous les calculs précédents. Il
-  reste à reprendre les calculs des développements asymptotiques de l'énergie et
-  de sa hessienne, pour tenir compte en particulier des factorielles introduites
-  maintenant dans les développements asymptotiques. Il faudrait également
-  introduire les tenseurs précédents dans les expressions de l'énergie et de sa
-  hessienne.}
-
-Le développement limité suivant de l'énergie le long de la branche bifurquée est
-établi dans l'annexe~\ref{sec:20220525053434}
-\begin{multline}
-  \label{eq:20220525053600}
-    ℰ[u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} - \tfrac{1}{6} λ₁ η³ G_{i j} ξ₁^i ξ₁^j\\
-    \tfrac{1}{24} η⁴ \bigl[E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4λ₁ \mathring{E}_{ijk} ξ₁^i ξ₁^j ξ₁^k - 6 \bigl(λ₁² \mathring{G}_{ij} + λ₂ G_{ij}(λ₀)\bigr) ξ₁^i ξ₁^j\bigr] + o(η⁴).
-\end{multline}
-Si \(λ₁ ≠ 0\), le premier terme non-nul du développement limité précédent est
-d'ordre 3
-\begin{equation}
- ℰ [u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} - \tfrac{1}{6} λ₁ η³ G_{ij} ξ₁^i ξ₁^j + o(η³),
-\end{equation}
-tandis que si \(λ₁ = 0\), le premier terme est d'ordre 4 \pdfcomment{07/06/2022
-  — Vérifier le coefficient de η⁴.}
-\begin{equation}
- ℰ[u(η), λ(η)] = ℰ\{u^{\ast} [λ(η)], λ(η)\} - \tfrac{1}{8} λ₂ η⁴ G_{ij} ξ₁^i ξ₁^j + o(η⁴).
-\end{equation}
-\begin{center}
- ***
-\end{center}
-
-Pour analyser la stabilité de la branche bifurquée ainsi trouvée, il faut
-déterminer le signe de la hessienne de l'énergie. On peut d'ores et déjà
-remarquer que, sur la branche fondamentale(\(u₁ = u₂ = 0\)), en prenant
-\(η = λ - λ₀\) (\(λ₁ = 1\))
+In order to analyse the stability of the bifurcated branches thus found, one
+must look at the Hessian of the energy. It is first observed that, on the
+fundamental branch
 \begin{equation}
  ℰ₂(λ; \hat{u}, \hat{v}) = ℰ₂(λ₀; \hat{u}, \hat{v}) + \bigl(λ - λ₀\bigr) \dot{ℰ}₂(λ₀; \hat{u}, \hat{v}) + o(λ - λ₀).
 \end{equation}
 
-Dans ce qui suit, on supposera que \(\dot{ℰ}₂(λ₀) ≠ 0\). Pour \(\hat{v}∈V\),
-l'égalité précédente s'écrit
+In what follows, it will be assumed that \(\dot{ℰ}₂(λ₀)≠0\) and that \(ℰ₂(λ)\)
+(which is positive definite over \(V\) for \(λ<λ₀\) and null for \(λ=λ₀\)) is
+negative definite for \(λ>λ₀\) sufficiently small (the fundamental branch is
+strictly unstable beyond the critical load). From the above expansion, it
+results that \(\dot{ℰ}₂(λ₀)\) is negative definite over \(V\). In other words,
+\(-F_{ij}\) is a positive definite tensor. The asymptotic expansion of the
+Hessian of the energy along the bifurcated branch is derived in
+appendix~\ref{sec:20220616055207}. For all \(\hat{u}, \hat{v}∈U\)
+\begin{multline}
+  \label{eq:20220531054247}
+  ℰ_{, uu}[u(η), λ(η); \hat{u}, \hat{v}] = ℰ₂(λ₀ ; \hat{u}, \hat{v}) + η \bigl[ℰ₃(λ₀ ; u₁, \hat{u}, \hat{v})  + λ₁ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v})\bigr]\\
+  + \tfrac{1}{2} η² \bigl[ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(λ₀; u₂, \hat{u}, \hat{v}) + 2λ₁ \dot{ℰ}₃(λ₀; u₁, \hat{u}, \hat{v})\\
+  + λ₁² \ddot{ℰ}₂(λ₀; \hat{u}, \hat{v}) + λ₂ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v}) \bigr] + o(η²).
+\end{multline}
+
+Stability analysis is performed by means of the eigenvalues \(α ∈ \reals\) and
+eigenvectors \(x ∈ U\) of the Hessian
 \begin{equation}
- ℰ₂(λ₀; \hat{v}, \hat{v}) = \bigl(λ - λ₀\bigr)\dot{ℰ}₂(\hat{v}, \hat{v}) + o(λ - λ₀).
+ ℰ_{, u u} [u(η), λ(η); x, \hat{u}] = α 〈 x, \hat{u} 〉 \quad \text{for all} \quad \hat{u} ∈ V,
+\end{equation}
+where \(α\) and \(x\) are expanded to second order in \(η\)
+\begin{align}
+  α & = α₀ + η α₁ + \tfrac{1}{2} η² α₂ + o(η²),\\
+  x & = x₀ + η x₁ + \tfrac{1}{2} η² x₂ + o(η²).
+\end{align}
+
+It is shown in Appendix~\ref{sec:20220616074108} that \((α₀, x_0)\) is
+necessarily an eigenpair of \(ℰ₂(λ₀)\). Since \(ℰ₂ (λ₀)\) is positive,
+\(α₀ ≥ 0\). If \(α₀>0\), then \(α>0\) in the neighborhood of \(λ₀\). Potentially
+unstable modes are therefore such that \(α₀=0\). In other words, \(x₀ ∈ V\)
+\begin{equation}
+  \label{eq:20220609133608}
+  x₀ &= χ₀^i v_i
+\end{equation}
+and it is further shown in Appendix~\ref{sec:20220616074108} that \((α₁, χ₀^i)\)
+is an eigenpair of the symmetric tensor \((E_{ijk} ξ₁^k + λ₁ F_{ij})\)
+\begin{equation}
+  \label{eq:20220616074501}
+  \bigl(E_{ijk} ξ₁^k + λ₁ F_{ij} \bigr) χ₀^j = α₁ χ₀^i.
 \end{equation}
 
-Comme la branche fondamentale est stable pour \(λ < λ₀\), on doit avoir
-\(\dot{ℰ}₂(λ₀ ; \hat{v}, \hat{v}) < 0\). La forme quadratique \(\dot{ℰ}₂(λ₀)\)
-est donc définie négative sur \(V\). Le développement limité de la hessienne de
-l'énergie le long de la branche bifurquée est établi \pdfmarkupcomment{dans
-  l'annexe}{xref}. Pour tous \(\hat{u}, \hat{v}∈U\), on trouve
+As for the higher order terms, it is found in Appendix~\ref{sec:20220616074108}
+that
 \begin{equation}
-  \label{eq:20220531054247}
-  \begin{aligned}[b]
-    ℰ_{, uu}[u(η), λ(η); \hat{u}, \hat{v}] ={}
-    & ℰ₂(λ₀ ; \hat{u}, \hat{v}) + η \bigl[ℰ₃(λ₀ ; u₁, \hat{u}, \hat{v})  + λ₁ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v})\bigr]\\
-    & + \tfrac{1}{2} η² \bigl[ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(λ₀; u₂, \hat{u}, \hat{v}) \\
-    & + 2 λ₁ \dot{ℰ}₃(λ₀; u₁, \hat{u}, \hat{v}) + λ₁² \ddot{ℰ}₂(λ₀; \hat{u}, \hat{v}) + λ₂ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v}) \bigr] + o(η²).
-  \end{aligned}
+  \label{eq:20220609133629}
+  x₁ &= χ₁^i v_i +  χ₀^i ξ₁^j w_{i j} + \tfrac{1}{2} λ₁ χ₀^i w_i.
 \end{equation}
+and
+\begin{multline}
+  \label{eq:20220616082923}
+  \bigl[E_{ijkl} ξ₁^k ξ₁^l + λ₁\bigl(2 \mathring{E}_{ijk} ξ₁^k + λ₁ \mathring{F}_{ij}\bigr) + E_{ijk} ξ₂^k + λ₂ F_{ij}\bigr] χ₀^j\\
+  + 2\bigl(E_{ijk}  ξ₁^k + λ₁ F_{ij}\bigr) χ₁^j = 2α₁χ₁^i + α₂ χ₀^i.
+\end{multline}
+
+
+
 Pour une analyse de stabilité, on doit prendre \(\hat{u} = \hat{v}\), soit
 \begin{equation}
   \begin{aligned}[b]
@@ -471,6 +470,52 @@ Si \(λ₁ \neq 0\), l'expression précédente peut également s'écrire
 qui est négative pour \(λ < λ₀\): la branche bifurquée est instable sous la
 charge critique. Il reste alors à étudier le signe de la hessienne de la branche
 bifurquée au-delà de la charge critique (\(λ > λ₀\)).
+
+\section{Asymetric bifurcations}
+\paragraph{Si la forme \(ℰ₃(λ₀)\) n'est pas nulle sur \(V\)} L'équation
+\eqref{eq:20220524135036} admet au plus \((2^m - 1)\) paires de solutions
+réelles \((λ₁, u₁)\) et \((- λ₁, - u₁)\). \pdfmargincomment{Je ne sais pas
+  démontrer ce résultat sur le nombre de solutions réelles.}
+
+\paragraph{Si la forme \(ℰ₃(λ₀)\) est nulle sur \(V\)} L'équation
+\eqref{eq:20220524133816} conduit nécessairement à \(λ₁ = 0\), puisque
+\(\dot{ℰ}₂(λ₀)\) est définie négative. Dès lors, l'équation
+\eqref{eq:20220601070917} s'écrit \pdfmargincomment{Expliquer pourquoi la forme
+  quadratique ℰ̇₂(λ₀) bien définie négative}
+\begin{equation}
+ \tfrac{1}{3} E_{ijkl}(λ₀) ξ₁^j ξ₁^k ξ₁^l + λ₂ F_{ij}(λ₀) ξ₁^j = 0.
+\end{equation}
+Cette équation admet cette fois au plus \(\frac{3^m - 1}{2}\) paires de
+solutions réelles \((λ₂, u₁)\) et \((- λ₂, - u₁)\). \pdfmargincomment{Je ne sais
+  pas non plus démontrer ce résultat sur le nombre de solutions réelles.}
+\pdfmargincomment{Note du 29/04/2022 – J'ai relu tous les calculs précédents. Il
+  reste à reprendre les calculs des développements asymptotiques de l'énergie et
+  de sa hessienne, pour tenir compte en particulier des factorielles introduites
+  maintenant dans les développements asymptotiques. Il faudrait également
+  introduire les tenseurs précédents dans les expressions de l'énergie et de sa
+  hessienne.}
+
+Le développement limité suivant de l'énergie le long de la branche bifurquée est
+établi dans l'annexe~\ref{sec:20220525053434}
+\begin{multline}
+  \label{eq:20220525053600}
+    ℰ[u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} - \tfrac{1}{6} λ₁ η³ G_{i j} ξ₁^i ξ₁^j\\
+    \tfrac{1}{24} η⁴ \bigl[E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4λ₁ \mathring{E}_{ijk} ξ₁^i ξ₁^j ξ₁^k - 6 \bigl(λ₁² \mathring{G}_{ij} + λ₂ G_{ij}(λ₀)\bigr) ξ₁^i ξ₁^j\bigr] + o(η⁴).
+\end{multline}
+Si \(λ₁ ≠ 0\), le premier terme non-nul du développement limité précédent est
+d'ordre 3
+\begin{equation}
+ ℰ [u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} - \tfrac{1}{6} λ₁ η³ G_{ij} ξ₁^i ξ₁^j + o(η³),
+\end{equation}
+tandis que si \(λ₁ = 0\), le premier terme est d'ordre 4 \pdfcomment{07/06/2022
+  — Vérifier le coefficient de η⁴.}
+\begin{equation}
+ ℰ[u(η), λ(η)] = ℰ\{u^{\ast} [λ(η)], λ(η)\} - \tfrac{1}{8} λ₂ η⁴ G_{ij} ξ₁^i ξ₁^j + o(η⁴).
+\end{equation}
+\begin{center}
+ ***
+\end{center}
+
 
 \section{Propriétés des formes bilinéaires symétriques, positives}
 
@@ -811,6 +856,7 @@ rassemblant les expressions précédentes de \(f'(0)\), \(f''(0)\), \(f'''(0)\) 
 \(f''''(0)\).
 
 \subsection{Développement limité de la hessienne}
+\label{sec:20220616055207}
 % 08/06/2022 — aea0da72c80440d74d38d8ace59f381061f71c3e
 %
 % Relecture de tous les calculs de ce paragraphe
@@ -857,18 +903,7 @@ qui conduisent finalement au développement limité~\eqref{eq:20220531054247}.
 
 \subsection{Développement limité des valeurs propres et vecteurs
 propres de la Hessienne}
-
-On cherche les vecteurs propres \(x ∈ U\) et valeurs propres \(α ∈ \reals\) de
-la hessienne de l'énergie. En d'autre terme, on cherche \(x\) et \(α\) tels que
-\begin{equation}
- ℰ_{, u u} [u(η), λ(η); x, \hat{u}] = α 〈 x, \hat{u} 〉 \quad \text{pour tout} \quad \hat{u} ∈ V.
-\end{equation}
-
-On cherche les développements limités à l'ordre 2 en \(η\) de \(x\) et \(α\)
-\begin{align*}
- x & = x₀ + η x₁ + \tfrac{1}{2} η² x₂ + o(η²),\\
- α & = α₀ + η α₁ + \tfrac{1}{2} η² α₂ + o(η²).
-\end{align*}
+\label{sec:20220616074108}
 
 Ces développements limités sont tout d'abord insérés dans le développement
 limité \eqref{eq:20220531054247} de la hessienne de l'énergie. D'une part
@@ -897,14 +932,10 @@ tels que, pour tout \(\hat{u}∈U\)
   ℰ₂(x₀, \hat{u}) = α₀ 〈 x₀, \hat{u} 〉.
 \end{equation}
 
-On en déduit que \(x₀\) est le vecteur propre de \(ℰ₂(λ₀)\) associé à la valeur
-propre \(α₀\). Si \(α₀ \neq 0\), \(ℰ₂ (λ₀)\) étant positive par hypothèse, on a
-nécessairement \(α₀ > 0\), et la valeur propre de la hessienne est positive. On
-considère donc dans ce qui suit le cas où \(α₀ = 0\), c'est-à-dire que \(x₀∈V\)
-\begin{equation}
-  \label{eq:20220609133608}
-  x₀ = χ₀^i v_i.
-\end{equation}
+In other words, \((α₀, x₀)\) is an eigenpair of \(ℰ₂(λ₀)\).
+\pdfmarkupcomment{As shown in Sec.}{Reference}, only the case \(α₀\) is
+relevant. Then \(x₀∈V\), which is expressed by the
+expansion~\eqref{eq:20220609133608}.
 
 \paragraph{Problème variationnel d'ordre 1} Trouver \(x₁∈U\) et \(α₁∈\reals\)
 tels que, pour tout \(\hat{u}∈U\)
@@ -920,13 +951,9 @@ En prenant tout d'abord \(\hat{u} = v_i\), on obtient
 \begin{equation}
   \bigl[ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] χ₀^j = α₁ χ₀^i,
 \end{equation}
-soit encore
-\begin{equation}
-  \bigl[E_{ijk}(λ₀) ξ₁^k + λ₁ F_{ij}(λ₀)\bigr] χ₀^j = α₁ χ₀^i.
-\end{equation}
-Ainsi, le vecteur \(χ₀^i\) apparaît comme le vecteur propre de la matrice
-symétrique \([E_{ijk}(λ₀) ξ₁^k + λ₁ F_{ij}(λ₀)]\) associé à la valeur propre
-\(α₁\).  On prend maintenant \(\hat{u} = \hat{w}∈W\) dans le problème
+which reduces to Eq.~\eqref{eq:20220616074501}
+
+On prend maintenant \(\hat{u} = \hat{w}∈W\) dans le problème
 variationnel d'ordre 1~\eqref{eq:20220609131953} et on pose
 \(x₁ = χ₁^i v_i + y₁\), avec \(y₁∈W\). On obtient alors le problème variationnel
 suivant : trouver \(y₁∈W\) tel que, pour tout \(\hat{w}∈W\),
@@ -934,17 +961,11 @@ suivant : trouver \(y₁∈W\) tel que, pour tout \(\hat{w}∈W\),
   ℰ₂(y₁, \hat{w}) + ℰ₃(v_i, v_j, \hat{w}) χ₀^i ξ₁^j + λ₁ \dot{ℰ}₂(v_i, \hat{w}) χ₀^i = 0.
 \end{equation}
 
-La solution de ce problème est exprimée à l'aide des \(w_{i j}\) et \(w_i\)
-définis respectivement par les problèmes variationnels auxiliaires
-\eqref{eq:20220519164523} et \eqref{eq:20220524134525}
-\begin{equation}
-  y₁ =  χ₀^i ξ₁^j w_{i j} + \tfrac{1}{2} λ₁ χ₀^i w_i,
-\end{equation}
-soit
-\begin{equation}
-  \label{eq:20220609133629}
-  x₁ = χ₁^i v_i +  χ₀^i ξ₁^j w_{i j} + \tfrac{1}{2} λ₁ χ₀^i w_i.
-\end{equation}
+The solution to this problem is expressed as a linear combination of the \(w_i\)
+and \(w_{ij}\) defined by the variational problems \eqref{eq:20220524134525} and
+\eqref{eq:20220519164523}, respectively:
+\(y₁ = χ₀^i ξ₁^j w_{i j} + \tfrac{1}{2} λ₁ χ₀^i w_i\), and the
+decomposition~\eqref{eq:20220609133629} is retrieved.
 
 \paragraph{Problème variationnel d'ordre 2} Pour tout \(\hat{u} ∈ U\),
 \begin{multline*}
@@ -999,10 +1020,7 @@ et on remarque que \(〈 v_i, w_{jk} 〉 = 〈 v_i, w_j 〉 = 0\) puisque \(V\) 
   = 2α₁χ₁^i + α₂ χ₀^i,
 \end{multline*}
 
-\begin{multline*}
-  \bigl[E_{ijkl} ξ₁^k ξ₁^l + λ₁\bigl(2 \dot{E}_{ijk} ξ₁^k + λ₁ \dot{F}_{ij}\bigr) + E_{ijk} ξ₂^k + λ₂ F_{ij}\bigr] χ₀^j+ 2\bigl(E_{ijk}  ξ₁^k + λ₁ F_{ij}\bigr) χ₁^j\\
-  = 2α₁χ₁^i + α₂ χ₀^i,
-\end{multline*}
+And Eq.~\eqref{eq:20220616082923} is retrieved.
 
 \begin{equation*}
   \begin{aligned}[b]
@@ -1032,85 +1050,6 @@ d'ordre 1, tandis que le terme dominant de \(x\) est d'ordre 0.
 \paragraph{Cas d'une bifurcation symétrique} Le tenseur \(E_{ijk}\) est
 identiquement nul; de plus, \(λ₁ = 0\). On trouve alors que \(α₁ = 0\), et on ne
 peut déterminer les \(χ₀^i\).
-
-
-\section{Simplification des équations de bifurcation}
-\label{sec:20220524134954}
-
-Dans ce paragraphe, on simplifie les équations de bifurcation
-\eqref{eq:20220524134121} et \eqref{eq:20211112183220} pour obtenir les formes
-\eqref{eq:20220524135036} et \eqref{eq:20220601070917}. On commence par
-symétriser les termes cubique, quadratique et linéaire en \(ξ₁^i\) de l'équation
-\eqref{eq:20220601070917}.
-
-\paragraph{Terme cubique en \(ξ₁^i\)} On observe que
-\begin{equation}
-  ℰ₃(λ₀; v_i, v_j, w_{k l}) ξ₁^j ξ₁^k ξ₁^l = \tfrac{1}{3} \bigl[ℰ₃(λ₀; v_i, v_j, w_{k l}) + ℰ₃(λ₀; v_i, v_k, w_{j l}) + ℰ₃(λ₀; v_i, v_l, w_{j k})\bigr] ξ₁^j ξ₁^k ξ₁^l.
-\end{equation}
-On obtient donc l'expression suivante du terme cubique en \(ξ₁^i\) dans
-l'équation de bifurcation \eqref{eq:20211112183220}
-\begin{equation}
-  ℰ₄(λ₀; v_i, v_j, v_k, v_l) + ℰ₃(λ₀ ; v_i, v_j, w_{k l}) + ℰ₃(λ₀; v_i, v_k, w_{j l}) + ℰ₃(λ₀; v_i, v_l, w_{j k}),
-\end{equation}
-qui suggère d'introduire le tenseur \(E_{ijkl}(λ)\) défini par l'équation
-\eqref{eq:20220524135553}. Le terme cubique en \(ξ₁^i\) dans l'équation de
-bifurcation \eqref{eq:20211112183220} est alors simplement~: \(E_{ijkl}(λ₀)\).
-
-\paragraph{Terme quadratique en \(ξ₁^i\)} On observe de même que
-\begin{equation}
-  ℰ₃(λ₀; v_i, v_j, w_k) ξ₁^j ξ₁^k = \tfrac{1}{2} \bigl[ℰ₃(λ₀; v_i, v_j, w_k) + ℰ₃(λ₀; v_i, w_j, v_k)\bigr] ξ₁^j ξ₁^k.
-\end{equation}
-
-En prenant tout d'abord \(\hat{w} = w_k\) dans le problème variationnel
-\eqref{eq:20220519164523}, on trouve
-\begin{equation}
-  ℰ₃(λ₀; v_i, v_j, w_k) = -ℰ₂(λ₀ ; w_{i j}, w_k),
-\end{equation}
-puis, en prenant cette fois \(\hat{w} = w_{i j}\) dans le problème variationnel
-\eqref{eq:20220524134525}
-\begin{equation}
-  ℰ₂(λ₀; w_k, w_{i j}) = - 2 \dot{ℰ}₂(λ₀; v_k, w_{i j}),
-\end{equation}
-soit finalement
-\begin{equation}
-  ℰ₃(λ₀; v_i, v_j, w_k) ξ₁^j ξ₁^k = \bigl[\dot{ℰ}₂(λ₀; v_j, w_{i k}) + \dot{ℰ}₂(λ₀; v_k, w_{i j})\bigr] ξ₁^j ξ₁^k.
-\end{equation}
-On obtient donc l'expression suivante du terme quadratique en \(ξ₁^i\) dans
-l'équation de bifurcation \eqref{eq:20211112183220}
-\begin{equation}
-  3 λ₁ [\dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ}₂(λ₀; v_i, w_{j k}) + \dot{ℰ}₂(λ₀; v_j, w_{i k}) + \dot{ℰ}₂(λ₀; v_k, w_{i j})],
-\end{equation}
-qui suggère d'introduire le tenseur \(E_{ijk}(λ)\) défini par l'équation
-\eqref{eq:20220524135619}. Le terme quadratique en \(ξ₁^i\) dans l'équation de
-bifurcation \eqref{eq:20211112183220} est alors simplement~:
-\(3 λ₁ \dot{E}_{ijk}(λ₀)\).
-
-\paragraph{Terme linéaire en \(ξ₁^i\)} Par des arguments similaires, on établit
-également que
-\begin{equation}
-  \dot{ℰ}₂(λ₀; v_i, w_j) = - \tfrac{1}{2} ℰ₂(λ₀; w_i, w_j) = - \tfrac{1}{2} ℰ₂(λ₀; w_j, w_i) = \dot{ℰ}₂(λ₀; v_j, w_i).
-\end{equation}
-On obtient donc l'expression suivante du terme linéaire en \(ξ₁^i\) dans
-l'équation de bifurcation \eqref{eq:20211112183220}
-\begin{equation}
-  \ddot{ℰ}₂(λ₀; v_i, v_j) + \tfrac{1}{2}\bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr],
-\end{equation}
-qui suggère d'introduire le tenseur \(F_{i j}(λ)\) défini par l'équation
-\eqref{eq:20220524135643}. Le terme linéaire en \(ξ₁^i\) dans l'équation de
-bifurcation \eqref{eq:20211112183220} est alors simplement~:
-\(3 λ₁² \dot{F}_{i j}(λ₀)\).
-
-\paragraph{Synthèse~: simplification des équations \eqref{eq:20220524133816} et
-  \eqref{eq:20211112183220}} En rassemblant les résultats précédents, on obtient
-tout d'abord pour l'équation \eqref{eq:20211112183220}
-\begin{equation}
-  3 [E_{i j k}(λ₀) + λ₁ F_{i j} (λ₀)] ξ₂^j + 3 λ₂ F_{i j}(λ₀) ξ₁^j + E_{i j k l}(λ₀) ξ₁^j ξ₁^k ξ₁^l + 3 λ₁ \dot{E}_{i j k} (λ₀) ξ₁^j ξ₁^k + 3 λ₁² \dot{F}_{i j}(λ₀) ξ₁^j = 0,
-\end{equation}
-qui suggère d'introduire le tenseur \(A_{i j}(λ)\) défini par l'équation
-\eqref{eq:20220524135705}. On obtient alors finalement l'équation de bifurcation
-\eqref{eq:20220601070917}. Les tenseurs \(F_{i j}\) et \(E_{i j k}\) ainsi
-introduits permettent également de réécrire l'équation de bifurcation
-\eqref{eq:20220524134121} sous la forme compacte \eqref{eq:20220524135036}.
 
 \end{document}
 

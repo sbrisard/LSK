@@ -422,11 +422,53 @@ and
   + 2\bigl(E_{ijk}  ξ₁^k + λ₁ F_{ij} \bigr) χ₁^j = 2α₁χ₁^i + α₂ χ₀^i.
 \end{multline}
 
-\section{Asymetric bifurcations}
-\paragraph{Si la forme \(ℰ₃(λ₀)\) n'est pas nulle sur \(V\)} L'équation
-\eqref{eq:20220524135036} admet au plus \((2^m - 1)\) paires de solutions
-réelles \((λ₁, u₁)\) et \((- λ₁, - u₁)\). \pdfmargincomment{Je ne sais pas
-  démontrer ce résultat sur le nombre de solutions réelles.}
+Finally, to close this analysis of the bifurcated branches, the following
+asymptotic expansion of the energy is derived in
+Appendix~\ref{sec:20220525053434}
+\begin{multline}
+  \label{eq:20220525053600}
+    ℰ[u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{6} λ₁ η³ F_{i j} ξ₁^i ξ₁^j\\
+    +\tfrac{1}{24} η⁴ \bigl[E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4λ₁ \mathring{E}_{ijk} ξ₁^i ξ₁^j ξ₁^k + 6 \bigl(λ₁² \mathring{F}_{ij} + λ₂ F_{ij}\bigr) ξ₁^i ξ₁^j\bigr] + o(η⁴).
+\end{multline}
+Si \(λ₁ ≠ 0\), le premier terme non-nul du développement limité précédent est
+d'ordre 3
+\begin{equation}
+ ℰ [u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} - \tfrac{1}{6} λ₁ η³ G_{ij} ξ₁^i ξ₁^j + o(η³),
+\end{equation}
+tandis que si \(λ₁ = 0\), le premier terme est d'ordre 4 \pdfcomment{07/06/2022
+  — Vérifier le coefficient de η⁴.}
+\begin{equation}
+ ℰ[u(η), λ(η)] = ℰ\{u^{\ast} [λ(η)], λ(η)\} - \tfrac{1}{8} λ₂ η⁴ G_{ij} ξ₁^i ξ₁^j + o(η⁴).
+\end{equation}
+\begin{center}
+ ***
+\end{center}
+
+
+
+\section{Discussion}
+
+\subsection{Asymmetric bifurcations}
+
+When the tensor \(E_{ijk}\) is not identically null,
+Eq.~\eqref{eq:20220524135036} has at most \((2^m - 1)\) pairs of real solutions
+\((λ₁, u₁)\) et \((- λ₁, - u₁)\). \pdfmargincomment{Je ne sais pas démontrer ce
+  résultat sur le nombre de solutions réelles.} Along each of the bifurcated
+branches, we have
+\begin{equation}
+  λ = λ₀ + η λ₁ + o(η)
+  \quad \text{and} \quad
+  u = u_0 + η ξ₁^i v_i + o(η).
+\end{equation}
+
+\pdfmarkupcomment{Assuming that}{Est-ce vraiment une hypothèse ? À un
+  changement de paramètre près, on doit toujours pouvoir se débrouiller pour que
+  ce soit le cas.}  \(λ₁ ≠ 0\), \(η\) can be eliminated
+\begin{equation}
+  u = u_0 + \frac{λ - λ₀}{λ₁} ξ₁^i v_i + o(η).
+\end{equation}
+
+\subsection{Symmetric bifurcations}
 
 \paragraph{Si la forme \(ℰ₃(λ₀)\) est nulle sur \(V\)} L'équation
 \eqref{eq:20220524133816} conduit nécessairement à \(λ₁ = 0\), puisque
@@ -445,27 +487,6 @@ solutions réelles \((λ₂, u₁)\) et \((- λ₂, - u₁)\). \pdfmargincomment
   maintenant dans les développements asymptotiques. Il faudrait également
   introduire les tenseurs précédents dans les expressions de l'énergie et de sa
   hessienne.}
-
-Le développement limité suivant de l'énergie le long de la branche bifurquée est
-établi dans l'annexe~\ref{sec:20220525053434}
-\begin{multline}
-  \label{eq:20220525053600}
-    ℰ[u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} - \tfrac{1}{6} λ₁ η³ G_{i j} ξ₁^i ξ₁^j\\
-    \tfrac{1}{24} η⁴ \bigl[E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4λ₁ \mathring{E}_{ijk} ξ₁^i ξ₁^j ξ₁^k - 6 \bigl(λ₁² \mathring{G}_{ij} + λ₂ G_{ij}(λ₀)\bigr) ξ₁^i ξ₁^j\bigr] + o(η⁴).
-\end{multline}
-Si \(λ₁ ≠ 0\), le premier terme non-nul du développement limité précédent est
-d'ordre 3
-\begin{equation}
- ℰ [u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} - \tfrac{1}{6} λ₁ η³ G_{ij} ξ₁^i ξ₁^j + o(η³),
-\end{equation}
-tandis que si \(λ₁ = 0\), le premier terme est d'ordre 4 \pdfcomment{07/06/2022
-  — Vérifier le coefficient de η⁴.}
-\begin{equation}
- ℰ[u(η), λ(η)] = ℰ\{u^{\ast} [λ(η)], λ(η)\} - \tfrac{1}{8} λ₂ η⁴ G_{ij} ξ₁^i ξ₁^j + o(η⁴).
-\end{equation}
-\begin{center}
- ***
-\end{center}
 
 
 \section{Propriétés des formes bilinéaires symétriques, positives}

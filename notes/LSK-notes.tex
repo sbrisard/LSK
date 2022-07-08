@@ -246,7 +246,7 @@ trouve successivement, pour tout \(\hat{u}∈U\)
   ℰ₃(λ₀; u₁, u₁, \hat{u}) + 2λ₁\dot{ℰ}₂(λ₀; u₁, \hat{u}) + ℰ₂(λ₀; u₂, \hat{u}) = 0,
 \end{equation}
 \begin{equation}
-  \label{eq:res3}
+  \label{eq:20220708060436}
   \begin{aligned}[b]
     ℰ₄(λ₀; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ₀; u₁, u₂, \hat{u}) + ℰ₂(λ₀; u₃, \hat{u})&\\
     + 3λ₁\dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + 3λ₁\dot{ℰ}₂(λ₀;  u₂, \hat{u})&\\
@@ -308,8 +308,8 @@ problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}]: \(\tilde{u}�
 \end{equation}
 
 Plugging expressions~\eqref{eq:20220524133944} and \eqref{eq:20220524134613}
-into Eq.~\eqref{eq:res3} and taking further \(\hat{u} = v_i\) [remember that
-\(ℰ₂(λ₀; v_i, •) = 0\)], we then get
+into Eq.~\eqref{eq:20220708060436} and taking further \(\hat{u} = v_i\)
+[remember that \(ℰ₂(λ₀; v_i, •) = 0\)], we then get
 % \begin{multline*}
 %   ℰ₄(λ₀; v_i, ξ₁^j v_j, ξ₁^k v_k, ξ₁^l v_l) + 3ℰ₃(λ₀; v_i, ξ₁^j v_j, ξ₂^k v_k + ξ₁^k ξ₁^l w_{kl} + λ₁ ξ₁^k w_k)\\
 %   + 3λ₁ \dot{ℰ}₃(λ₀; v_i, ξ₁^j v_j, ξ₁^k v_k) + 3λ₁ \dot{ℰ}₂(λ₀; v_i, ξ₂^j v_j + ξ₁^j ξ₁^k w_{jk} + λ₁ ξ₁^j w_j)\\
@@ -444,31 +444,98 @@ tandis que si \(λ₁ = 0\), le premier terme est d'ordre 4 \pdfcomment{07/06/20
  ***
 \end{center}
 
-
-
 \section{Discussion}
 
-\subsection{Asymmetric bifurcations}
+In this section, we discuss the two main cases of bifurcations, namely
+\emph{asymmetric} and \emph{symmetric}. In each case, we analyse the stability
+of the bifurcated branch.
 
-When the tensor \(E_{ijk}\) is not identically null,
-Eq.~\eqref{eq:20220524135036} has at most \((2^m - 1)\) pairs of real solutions
-\((λ₁, u₁)\) et \((- λ₁, - u₁)\). \pdfmargincomment{Je ne sais pas démontrer ce
-  résultat sur le nombre de solutions réelles.} Along each of the bifurcated
-branches, we have
+\subsection{Asymmetric bifurcations (\(λ₁ ≠ 0\))}
+
+We first consider the situation where \(λ₁ ≠ 0\) on the bifurcated branch. The
+bifurcation equation~\eqref{eq:20220524135036} shows that necessarily,
+\(E_{ijk}\) is not identically nul. This equation has at most \((2^m - 1)\)
+pairs of real solutions \((λ₁, u₁)\) et \((- λ₁, - u₁)\). \pdfmargincomment{Je
+  ne sais pas démontrer ce résultat sur le nombre de solutions réelles.}
+
+From Eq.~\eqref{eq:20220531054247}, we find that
 \begin{equation}
-  λ = λ₀ + η λ₁ + o(η)
-  \quad \text{and} \quad
-  u = u_0 + η ξ₁^i v_i + o(η).
+  \begin{aligned}[b]
+    ℰ_{, uu}[u(η), λ(η); u₁, u₁]
+    &= η \bigl[ℰ₃(λ₀ ; u₁, u₁, u₁)  + λ₁ \dot{ℰ}₂(λ₀; u₁, u₁)\bigr] + o(η)\\
+    &= - η λ₁ \dot{ℰ}₂(λ₀; u₁, u₁) + o(η),
+  \end{aligned}
+\end{equation}
+where we have used~\eqref{eq:20220524133816} in the second line. Along the
+bifurcated branch, we also have \(λ = λ₀ + η λ₁ + o(η)\), and the above equation
+can also be written
+\begin{equation}
+  ℰ_{, uu}[u(η), λ(η); u₁, u₁] = -\bigl( λ - λ₀ \bigr) \dot{ℰ}₂(λ₀; u₁, u₁) + o(λ - λ₀).
 \end{equation}
 
-\pdfmarkupcomment{Assuming that}{Est-ce vraiment une hypothèse ? À un
-  changement de paramètre près, on doit toujours pouvoir se débrouiller pour que
-  ce soit le cas.}  \(λ₁ ≠ 0\), \(η\) can be eliminated
+For \(λ < λ₀\), the above quantity is \emph{negative} (since \(\dot{ℰ}₂\) is
+negative definite). In other words
+
+\begin{center}
+  \framebox{For asymmetric bifurcations, below the critical load, the bifurcated
+    branch is unstable}
+\end{center}
+
+To investigate the stability above the critical load, we need to analyse the
+sign of the eigenvalues \(α\) of the Hessian. At first order,
+\(α = η α₁ + o(η)\), where \(α₁\) is an eigenvalue of
+\((E_{ijk} ξ₁^k + λ₁ F_{ij})\).
+
+If \((E_{ijk} ξ₁^k + λ₁ F_{ij})\) is \emph{positive (resp. negative) definite},
+then \(α₁ > 0\) (resp. \(α₁ < 0\)) and \(α\) has the sign of \(η\)
+(resp. \(-η\)). The bifurcated branch is \emph{stable} (resp. \emph{unstable})
+for \(η > 0\), \emph{unstable} (resp. \emph{stable}) for \(η < 0\). In both
+cases, there is a stability switch at the critical load. Owing to our previous
+result, we therefore conclude in both cases that the bifurcated branch is
+\emph{unstable below the critical load} and \emph{stable above the critical
+  load}. \pdfmargincomment{Cela me semble être en contradiction avec le
+  graphique de la Fig 2.4.7}
+
+If \((E_{ijk} ξ₁^k + λ₁ F_{ij})\) is \emph{undefined}, we cannot conclude.
+
+\subsection{Symmetric bifurcations (\(λ₁ = 0\) and \(λ₂ ≠ 0\))}
+
+We now consider the case \(λ₁ = 0\), the next term of the expansion of \(λ\)
+being non-zero: \(λ₂ ≠ 0\). The bifurcation equations~\eqref{eq:20220524133447}
+and \eqref{eq:20220708060436} therefore reduce to
+\begin{gather}
+  ℰ₃(λ₀; u₁, u₁, \hat{u}) + ℰ₂(λ₀; u₂, \hat{u}) = 0,\\
+  ℰ₄(λ₀; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ₀; u₁, u₂, \hat{u}) + ℰ₂(λ₀; u₃, \hat{u}) + 3λ₂\dot{ℰ}₂(λ₀; u₁, \hat{u}) = 0.
+\end{gather}
+for all \( \hat{u} ∈ U \). Substituting \(\hat{u} = u₂\) in the first equation
+and \(\hat{u} = u₁\) in the second equation, we get
+\begin{gather}
+  ℰ₃(λ₀; u₁, u₁, u₂) + ℰ₂(λ₀; u₂, u₂) = 0,\\
+  \label{eq:20220708062645}
+  ℰ₄(λ₀; u₁, u₁, u₁, u₁) + 3ℰ₃(λ₀; u₁, u₁, u₂) + 3λ₂ \dot{ℰ}₂(λ₀; u₁, u₁) = 0.
+\end{gather}
+
+The quantity \(ℰ₂(λ₀; u₂, u₂)\) has been evaluated in
+Appendix~\ref{sec:20220525053434}; with \(λ₁ = 0\), we have
 \begin{equation}
-  u = u_0 + \frac{λ - λ₀}{λ₁} ξ₁^i v_i + o(η).
+  ℰ₂(λ₀; u₂, u₂) = -ℰ₃(v_i, v_j, w_{kl}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l
+\end{equation}
+and we find
+\begin{equation}
+  \bigl[ℰ₄(λ₀; v_i, v_j, v_k, v_l) + 3 ℰ₃(v_i, v_j, w_{kl}) \bigr] ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 3λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^i ξ₁^j = 0
+\end{equation}
+which reduces to
+\begin{equation}
+  E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 3λ₂ F_{ij} ξ₁^i ξ₁^j = 0.
 \end{equation}
 
-\subsection{Symmetric bifurcations}
+Plugging \(λ₁ = 0\), \(\hat{u} = \hat{v} = u₁\) and
+Eq.~\eqref{eq:20220708062645} into Eq.~\eqref{eq:20220531054247}, we further
+find
+\begin{equation}
+  ℰ_{, uu}[u(η), λ(η); u₁, u₁] = - η² \bigl[ ℰ₃(λ₀; u₁, u₁, u₂) + λ₂ \dot{ℰ}₂(λ₀; u₁, u₁) \bigr] + o(η²).
+\end{equation}
+
 
 \paragraph{Si la forme \(ℰ₃(λ₀)\) est nulle sur \(V\)} L'équation
 \eqref{eq:20220524133816} conduit nécessairement à \(λ₁ = 0\), puisque
@@ -886,7 +953,8 @@ expansions~\eqref{eq:20220617064633} are plugged into the asymptotic expansion
   + \tfrac{1}{2} η² \bigl[ℰ₂(x₂, \hat{u}) + 2ℰ₃(u₁, x₁, \hat{u}) + 2 λ₁ \dot{ℰ}₂(x₁, \hat{u}) + ℰ₄(u₁, u₁, x₀, \hat{u})\\
   + ℰ₃(u₂, x₀, \hat{u}) + 2λ₁ \dot{ℰ}₃(u₁, x₀, \hat{u}) + λ₁² \ddot{ℰ}₂(x₀, \hat{u}) + λ₂ \dot{ℰ}₂(x₀, \hat{u}) \bigr] + o(η²)
 \end{multline*}
-[where the \(\dot{ℰ}_k\) are all evaluated at \(λ=λ₀\)] and into the scalar product \(α 〈 x, \hat{u} 〉\) on the other hand
+(where the \(ℰ_k\) and \(\dot{ℰ}_k\) are all evaluated at \(λ=λ₀\)) and into the
+scalar product \(α 〈 x, \hat{u} 〉\) on the other hand
 \begin{multline*}
     α 〈 x, \hat{u} 〉 = α₀ 〈 x₀, \hat{u} 〉 + η \bigl(α₁ 〈 x₀, \hat{u} 〉 + α₀ 〈 x₁, \hat{u} 〉\bigr)\\
     + \tfrac{1}{2} η² \bigl(α₀ 〈 x₂, \hat{u} 〉 + 2 α₁ 〈 x₁, \hat{u} 〉 + α₂ 〈 x₀, \hat{u} 〉\bigr) + o(η²).

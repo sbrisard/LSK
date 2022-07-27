@@ -484,19 +484,22 @@ negative definite). In other words
 To investigate the stability above the critical load, we need to analyse the
 sign of the eigenvalues \(α\) of the Hessian. At first order,
 \(α = η α₁ + o(η)\), where \(α₁\) is an eigenvalue of
-\((E_{ijk} ξ₁^k + λ₁ F_{ij})\).
-
-If \((E_{ijk} ξ₁^k + λ₁ F_{ij})\) is \emph{positive (resp. negative) definite},
-then \(α₁ > 0\) (resp. \(α₁ < 0\)) and \(α\) has the sign of \(η\)
-(resp. \(-η\)). The bifurcated branch is \emph{stable} (resp. \emph{unstable})
-for \(η > 0\), \emph{unstable} (resp. \emph{stable}) for \(η < 0\). In both
-cases, there is a stability switch at the critical load. Owing to our previous
-result, we therefore conclude in both cases that the bifurcated branch is
-\emph{unstable below the critical load} and \emph{stable above the critical
-  load}. \pdfmargincomment{Cela me semble être en contradiction avec le
-  graphique de la Fig 2.4.7}
-
-If \((E_{ijk} ξ₁^k + λ₁ F_{ij})\) is \emph{undefined}, we cannot conclude.
+\((E_{ijk} ξ₁^k + λ₁ F_{ij})\). Let \(α_{\min}\) and \(α_{\max}\) be the minimum
+and maximum eigenvalues of this second-order tensor. Three cases must be
+discussed
+\begin{enumerate}
+\item If \(α_{\min} α_{\max} > 0\), then \((E_{ijk} ξ₁^k + λ₁ F_{ij})\) is
+  positive or negative definite: all eigenvalues have the same sign,
+  \(\epsilon ∈ \{-1, +1\}\). Then the sign of the eigenvalues \(α\) of the
+  Hessian is \(\epsilon η\) and there is a stability switch at the critical
+  load. Since the bifurcated branch is unstable \emph{below} the critical load,
+  this means that it is \emph{stable} above the critical load.
+\item If \(α_{\min} α_{\max} < 0\), then the extremal eigenvalues of the Hessian
+  are \(η α_{\min}\) and \(η α_{\max}\), the product of which is
+  \(η² α_{\min} α_{\max} < 0\). The bifurcated branch is \emph{unstable} for all
+  values of \(λ\).
+\item If \(α_{\min} α_{\max} = 0\), the analysis is inconclusive.
+\end{enumerate}
 
 \subsection{Symmetric bifurcations (\(λ₁ = 0\) and \(λ₂ ≠ 0\))}
 

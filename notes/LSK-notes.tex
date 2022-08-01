@@ -472,10 +472,23 @@ of the bifurcated branch.
 We first consider the situation where \(λ₁ ≠ 0\) on the bifurcated branch. The
 bifurcation equation~\eqref{eq:20220524135036} shows that necessarily,
 \(E_{ijk}\) is not identically nul. This equation has at most \((2^m - 1)\)
-pairs of real solutions \((λ₁, u₁)\) et \((- λ₁, - u₁)\). \pdfmargincomment{Je
-  ne sais pas démontrer ce résultat sur le nombre de solutions réelles.}
+pairs of real solutions \((λ₁, u₁)\) et \((- λ₁, - u₁)\); furthermore,
+multiplication by \(ξ_1^i\) shows that
+\begin{equation}
+  \label{eq:20220801085236}
+  λ₁ = -\frac{E_{ijk} ξ₁^i ξ₁^j ξ₁^k}{2 F_{ij} ξ₁^i ξ₁^j}.
+\end{equation}
 
-From Eq.~\eqref{eq:20220531054247}, we find that
+\begin{remark}
+  I can't prove that the bifurcation equation~\eqref{eq:20220524135036} has at
+  most \((2^m - 1)\) pairs of real solutions.
+\end{remark}
+
+Along the bifurcated branch, we have \(λ = λ₀ + η λ₁ + o(η)\), and \(η\) can be
+eliminated. In other words, \(η=λ\) (\(λ₁=1\) and \(λ₂ = λ₃ = \cdots = 0\)) can
+be selected as a parameter. It is therefore possible to express the bifurcated
+branch as a function of \(λ\), \(u(λ)\). For example, combining
+Eqs.~\eqref{eq:20220524133816} and \eqref{eq:20220531054247}, we find that
 \begin{equation}
   \begin{aligned}[b]
     ℰ_{, uu}[u(η), λ(η); u₁, u₁]
@@ -483,11 +496,9 @@ From Eq.~\eqref{eq:20220531054247}, we find that
     &= - η λ₁ \dot{ℰ}₂(λ₀; u₁, u₁) + o(η),
   \end{aligned}
 \end{equation}
-where we have used~\eqref{eq:20220524133816} in the second line. Along the
-bifurcated branch, we also have \(λ = λ₀ + η λ₁ + o(η)\), and the above equation
-can also be written
+or
 \begin{equation}
-  ℰ_{, uu}[u(η), λ(η); u₁, u₁] = -\bigl( λ - λ₀ \bigr) \dot{ℰ}₂(λ₀; u₁, u₁) + o(λ - λ₀).
+  ℰ_{, uu}[u(λ), λ; u₁, u₁] = -\bigl( λ - λ₀ \bigr) \dot{ℰ}₂(λ₀; u₁, u₁) + o(λ - λ₀).
 \end{equation}
 
 For \(λ < λ₀\), the above quantity is \emph{negative} (since \(\dot{ℰ}₂\) is
@@ -517,6 +528,30 @@ discussed
   values of \(λ\).
 \item If \(α_{\min} α_{\max} = 0\), the analysis is inconclusive.
 \end{enumerate}
+
+To close this section, it is observed that the dominant term of the
+expansion~\eqref{eq:20220525053600} of the potential energy along the bifurcated
+branch is of the third order in \(η\)
+\begin{equation}
+  ℰ[u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{6} λ₁ η³ F_{i j} ξ₁^i ξ₁^j + o(η³).
+\end{equation}
+
+Eliminating \(λ\) and plugging expression~\eqref{eq:20220801085236} of \(λ₁\)
+delivers the expression of the potential energy, where \(λ\) is the parameter
+\begin{equation}
+  \begin{aligned}[b]
+    ℰ[u(λ), λ] &= ℰ[u^{\ast}(λ), λ] + \frac{\bigl(λ - λ₀\bigr)³}{6λ₁²} F_{i j} ξ₁^i ξ₁^j + o(λ³)\\
+    &= ℰ[u^{\ast}(λ), λ] + \frac{2 \bigl( F_{i j} ξ₁^i ξ₁^j \bigr)³}{3 \bigl( E_{ijk} ξ₁^i ξ₁^j ξ₁^k \bigr)²} \bigl(λ - λ₀\bigr)³ + o(λ³).
+  \end{aligned}
+\end{equation}
+
+Recalling that \(F_{i j} ξ₁^i ξ₁^j < 0\), it is found that, above the critical
+load, the potential energy is \emph{smaller} along the bifurcated branch than
+along the fundamental branch.
+
+\begin{remark}
+  As expected, the above expression does not depend on the scaling of \(u₁\) (of the \(ξ₁^i\)).
+\end{remark}
 
 \subsection{A particular case of symmetric bifurcation \pdfmargincomment{Discuss energy of the system}}
 

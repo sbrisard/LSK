@@ -50,6 +50,10 @@ To do (2022-08-01)
 \item Reparametrization (use \(-F_{ij} ξ₁^i ξ₁^j\) as a measure of the amplitude
   of the bifurcation mode).
 \item Discuss the case \(m = 1\).
+\item J'ai démontré que les conditions nécessaires de stabilité du point
+  critique sont comparables aux conditions de stabilité d'une branche bifurquée
+  dans le cas symétrique. Mais le lien n'est pas complètement fait. Par
+  ailleurs, je n'ai pas montré que la condition était suffisante.
 \end{itemize}
 
 \section{Notations}
@@ -137,6 +141,7 @@ The tensors \(E_{ijk}\), \(F_{ij}\), \(\mathring{E}_{ijk}\) and
 \(\mathring{F}_{ij}\) are fully symmetric. Furthermore, the following expression
 of \(E_{ijkl}\) result from Eq.~\eqref{eq:20220519164523}
 \begin{equation}
+  \label{eq:20220802081116}
   E_{ijkl} = ℰ₄(λ₀ ; v_i, v_j, v_k, v_l) - ℰ₂(λ₀ ; w_{ij}, w_{kl}) - ℰ₂(λ₀ ; w_{ik}, w_{jl}) - ℰ₂(λ₀ ; w_{il}, w_{jk}),
 \end{equation}
 which shows that \(E_{ijkl}\) is also fully symmetric. To close this section,
@@ -153,74 +158,98 @@ Eqs.~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}
   ={}& \dot{ℰ}₃(λ₀; v_i, v_j, v_k) -\tfrac{1}{2}\bigl[ℰ₂(λ₀; w_i, w_{jk}) + ℰ₂(λ₀; w_j, w_{ik}) + ℰ₂(λ₀; w_k, w_{ij})\bigr].
 \end{align}
 
-\section{Analyse de la branche fondamentale}
+\section{Analysis of the critical point}
+\label{sec:20220802061621}
 
-On s'intéresse dans ce paragraphe à la stabilité du point critique \((u₀,
-λ₀)\). À cet effet, on calcule l'énergie dans un état \(u₀ + ξ v + η w\) voisin
-du point d'équilibre \(u₀\), avec \(ξ, η∈\reals\) {\guillemotleft} petits
-{\guillemotright}, \(v \in V\) et \(w∈W\). On obtient alors, à l'ordre 4 en
-\(ξ\) et \(η\)
+In this section, we discuss the stability of the critical point \((u₀, λ₀)\). To
+this end, we evaluate the potential energy in a neighboring state
+\(u₀ + u\), where \(u ∈ U\) is ``small''. We have, to the fourth order
 \begin{equation}
   \begin{aligned}[b]
-    Δℰ ={} &  ℰ(u₀ + ξv + ηw, λ₀) - ℰ(u₀, λ₀)\\
-    ={} & \tfrac{1}{2} ℰ₂(ξv + ηw, ξv + ηw) + \tfrac{1}{6} ℰ₃(ξv + ηw, ξv + ηw, ξv + ηw)\\
-    & + \tfrac{1}{24} ℰ₄(ξv + ηw, ξv + ηw, ξv + ηw, ξv + ηw) + \mathcal{O}\bigl[\bigl(ξ² + η²\bigr)²\bigr],
+    ℰ(u₀ + u, λ₀) - ℰ(u₀, λ₀) ={}
+    &\tfrac{1}{2} ℰ₂(λ₀; u, u) + \tfrac{1}{6} ℰ₃(λ₀; u, u, u)\\
+    &+ \tfrac{1}{24} ℰ₄(λ₀; u, u, u, u) + o(〈 u , u 〉²),
   \end{aligned}
 \end{equation}
-où le terme linéaire a été omis puisque \(u₀\) est un point critique de
-l'énergie. En tenant compte de la multilinéarité et de la symétrie des
-différentielles successives de l'énergie \(ℰ\), ainsi que du fait que
-\(ℰ₂(v, •) = 0\) (puisque \(v∈V\)), l'expression précédente s'écrit
+where the linear term has been omitted, \(u₀\) being a critical point of the
+energy. Since \(v ∈ V\), we have \(ℰ₂(λ₀; v, •) = 0\). We now expand \(u\) as
+\(u = ξ v + η w\), with \(ξ, η ∈ \reals\) and \(v ∈ V\) and \(w ∈ W\) are fixed,
+orthogonal directions. Owing to the multi-linearity and symmetry of the
+successive differential of \(ℰ\), the above expression expands as
+follows
 \begin{equation}
   \begin{aligned}[b]
-    \Delta ℰ ={} & \tfrac{1}{2} η² ℰ₂(w, w) + \tfrac{1}{6} ξ³ ℰ₃(v, v, v) + \tfrac{1}{2} ξ² η ℰ₃(v, v, w)\\
-    & + \tfrac{1}{2} ξ η² ℰ₃(v, w, w) + \tfrac{1}{6} η³ ℰ₃(w, w, w)\\
-    & + \tfrac{1}{24} ξ⁴ ℰ₄(v, v, v, v) + \tfrac{1}{6} ξ³ η ℰ₄(v, v, v, w)\\
-    & + \tfrac{1}{4} ξ² η² ℰ₄(v, v, w, w) + \tfrac{1}{6} ξ η³ ℰ₄(v, w, w, w)\\
-    & + \tfrac{1}{24} η⁴ ℰ₄(w, w, w, w) +\mathcal{O}\bigl[\bigl(ξ² + η²\bigr)²\bigr],
+    ℰ(u₀ + u, λ₀) - ℰ(u₀, λ₀) ={}
+    & \tfrac{1}{2} η² ℰ₂(λ₀; w, w) + \tfrac{1}{6} ξ³ ℰ₃(λ₀; v, v, v)\\
+    & + \tfrac{1}{2} ξ² η ℰ₃(λ₀; v, v, w) + \tfrac{1}{2} ξ η² ℰ₃(λ₀; v, w, w)\\
+    & + \tfrac{1}{6} η³ ℰ₃(λ₀; w, w, w) + \tfrac{1}{24} ξ⁴ ℰ₄(λ₀; v, v, v, v)\\
+    & + \tfrac{1}{6} ξ³ η ℰ₄(λ₀; v, v, v, w) + \tfrac{1}{4} ξ² η² ℰ₄(λ₀; v, v, w, w)\\
+    & + \tfrac{1}{6} ξ η³ ℰ₄(λ₀; v, w, w, w) + \tfrac{1}{24} η⁴ ℰ₄(λ₀; w, w, w, w)\\
+    & + o\bigl[\bigl(ξ² + η²\bigr)²\bigr].
   \end{aligned}
 \end{equation}
-où l'on convient que toutes les différentielles de \(ℰ\) sont évaluées au point
-d'équilibre \(u₀\).
 
-Pour que l'équilibre soit stable, il faut que cette expression soit positive ou
-nulle pour tous \(ξ\) et \(η\) suffisamment petits. En prenant tout d'abord
-\(η = 0\), on obtient les conditions nécessaires
+For the equilibrium to be stable, the above expression must be \(≥ 0\) for all
+\(ξ\) et \(η\) small enough. Taking first \(η = 0\), we get the following necessary conditions
 \begin{equation}
   \label{eq:20211108164416}
-  ℰ₃(v, v, v) = 0 \quad \text{et} \quad ℰ₄(v, v, v, v) \geq 0 \quad \text{pour tout} \quad v∈V.
+  ℰ₃(λ₀; v, v, v) = 0 \quad \text{and} \quad ℰ₄(λ₀; v, v, v, v) \geq 0 \quad \text{for all} \quad v∈V.
 \end{equation}
 
-En d'autres termes, s'il existe \(v∈V\) tel que \(ℰ₃(v, v, v) \neq 0\) ou
-\(ℰ₄(v, v, v, v) < 0\), alors l'équilibre est \emph{instable}. Les conditions
-précédentes ne sont pas suffisantes pour assurer la stabilité. En effet,
-supposant ces conditions remplies, on prend maintenant \(η = ξ²\)
+\begin{remark}
+  Note that, from Theorem~\ref{thr:20220802112835}, the first of these two
+  conditions is equivalent to \(E_{ijk}=0\), for all \(i, j, k = 1, \ldots m\).
+\end{remark}
+
+In other words, if there exists \(v ∈ V\) such that \(ℰ₃(λ₀; v, v, v) \neq 0\)
+or \(ℰ₄(v, v, v, v) < 0\), then the equilibrium is \emph{unstable} at the
+critical point. The above conditions are not sufficient. Indeed, assuming
+conditions~\eqref{eq:20211108164416} to hold, we now take \(η = ξ²\)
 \begin{equation}
-  Δℰ = \tfrac{1}{2} ξ⁴ \bigl[ ℰ₂(w, w) + ℰ₃(v, v, w) + \tfrac{1}{12} ℰ₄(v, v, v, v) \bigr] + o(ξ⁴)
+  \begin{aligned}[b]
+    ℰ(u₀ + u, λ₀) - ℰ(u₀, λ₀) ={} & \tfrac{1}{2} ξ⁴ \bigl[ ℰ₂(λ₀; w, w) + ℰ₃(λ₀; v, v, w)\\
+    & + \tfrac{1}{12} ℰ₄(λ₀; v, v, v, v) \bigr] + o(ξ⁴)
+  \end{aligned}
 \end{equation}
-et on obtient la condition nécessaire supplémentaire
+and we get the further necessary condition
 \begin{equation}
   \label{eq:20211109145356}
-  ℰ₂(w, w) + ℰ₃(v, v, w) + \tfrac{1}{12} ℰ₄(v, v, v, v) \geq 0,
-\end{equation}
-pour tous \(v∈V\) et \(w∈W\). Pour \(v∈V\) fixé, l'expression précédente est
-minimale lorsque \(w\) satisfait le problème variationnel
-\begin{equation}
-  \label{eq:20211109145224}
-  2ℰ₂(w, \hat{w}) +ℰ₃(v, v, \hat{w}) = 0 \quad \text{pour tout} \quad \hat{w}∈W.
+  ℰ₂(w, w) + ℰ₃(v, v, w) + \tfrac{1}{12} ℰ₄(v, v, v, v) \geq 0 \quad \text{for all} \quad v ∈ V \quad \text{and} \quad w ∈ W.
 \end{equation}
 
-Alors, pour \(v = ξ^i v_i\), la solution du problème
-variationnel~\eqref{eq:20211109145224} est \(w = \tfrac{1}{2} ξ^i ξ^j w_{ij}\)
-où \(w_{ij}\) désigne la solution du problème variationnel
-\eqref{eq:20220519164523}. Pour cette valeur de \(v\), la
-condition~\eqref{eq:20211109145356} s'écrit
+The direction \(v∈V\) being fixed, the above expression is minimal when \(w\)
+satisfies the following variational problem
 \begin{equation}
-  \bigl[ℰ₄(v_i, v_j, v_k, v_l) - 3ℰ₂(w_{ij}, w_{kl})\bigr] ξ^i ξ^j ξ^k ξ^l \geq 0,
+  \label{eq:20211109145224}
+  2ℰ₂(w, \hat{w}) +ℰ₃(v, v, \hat{w}) = 0 \quad \text{for all} \quad \hat{w}∈W.
 \end{equation}
-pour tous \(ξ^i, ξ^j, ξ^k, ξ^l∈\reals\). On peut montrer que l'inégalité stricte
-est une condition \emph{suffisante} de
-stabilité. \pdfmargincomment{Est-ce vrai ? Essayer de préciser}
+
+Expanding \(v ∈ V\) in the \((v_i)\) basis, it is observed that the solution to
+the above variational problem is \(w = \tfrac{1}{2} ξ^i ξ^j w_{ij}\), where
+\(w_{ij}\) is the solution to the elementary variational problem
+\eqref{eq:20220519164523}. For this value of \(w\),
+condition~\eqref{eq:20211109145356} reads
+\begin{equation}
+  \bigl[ℰ₄(v_i, v_j, v_k, v_l) - 3ℰ₂(w_{ij}, w_{kl})\bigr] ξ^i ξ^j ξ^k ξ^l \geq 0 \quad \text{for all} \quad ξ¹, \ldots, ξ^m ∈ \reals,
+\end{equation}
+which, in view of definition~\eqref{eq:20220802081116} of \(E_{ijkl}\), is equivalent to
+\begin{equation}
+  E_{ijkl} ξ^i ξ^j ξ^k ξ^l \geq 0 \quad \text{for all} \quad ξ¹, \ldots, ξ^m ∈ \reals.
+\end{equation}
+
+Note that Eq.~\eqref{eq:20211109145224} implies \(ℰ₄(λ₀; v, v, v, v) ≥ 0\),
+which becomes a redundant necessary condition. Indeed, plugging
+\(w= ξ^i ξ^j w_{ij}\) into Eq.~\eqref{eq:20211109145224} cancels the first two
+terms. To sum up, we have the following \emph{necessary} conditions for
+stability
+\begin{equation}
+  E_{ijk} ξ^i ξ^j ξ^k = 0 \quad \text{and} \quad E_{ijkl} ξ^i ξ^j ξ^k ξ^l ≥ 0 \quad \text{for all} \quad ξ¹, \ldots, ξ^m ∈ \reals.
+\end{equation}
+
+\pdfmarkupcomment{Conversely, the following condition is \emph{sufficient} to ensure stability of the critical point}{\`A d\'emontrer}
+\begin{equation}
+  E_{ijk} ξ^i ξ^j ξ^k = 0 \quad \text{and} \quad E_{ijkl} ξ^i ξ^j ξ^k ξ^l > 0 \quad \text{for all} \quad ξ¹, \ldots, ξ^m ∈ \reals.
+\end{equation}
 
 \section{Bifurcations}
 \label{sec:20220617075558}
@@ -461,7 +490,7 @@ of the bifurcated branch.
   of the bifurcated branches is symmetric'' will \emph{not} be discussed.
 \end{remark}
 
-\subsection{Asymmetric bifurcated branch (\(λ₁ ≠ 0\))\pdfmargincomment{Discuss energy of the system and number of solutions}}
+\subsection{Asymmetric bifurcated branch (\(λ₁ ≠ 0\))}
 
 We first consider the situation where \(λ₁ ≠ 0\) on the bifurcated branch. The
 bifurcation equation~\eqref{eq:20220524135036} shows that necessarily,
@@ -545,6 +574,10 @@ along the fundamental branch.
 
 \begin{remark}
   As expected, the above expression does not depend on the scaling of \(u₁\) (of the \(ξ₁^i\)).
+\end{remark}
+\begin{remark}
+  It has been shown in Sec.~\ref{sec:20220802061621} that, when \(E_{ijk}\) is
+  not identically null, the bifurcation point is \emph{unstable}.
 \end{remark}
 
 \subsection{A particular case of symmetric bifurcation}
@@ -664,6 +697,44 @@ de la façon suivante
  est donc nul, soit \(\mathcal{B}(u, v) = 0\).  Réciproquement, si
  \(\mathcal{B}(u, v) = 0\) pour tout \(v∈V\), alors \(\mathcal{B}(u, u) = 0\)(en
  prenant \(v = u\)).
+\end{proof}
+
+\begin{theorem}
+  \label{thr:20220802112835}
+  Let \(𝒯\) be a trilinear, symmetric form, such that
+  \begin{equation}
+    \label{eq:20220802111745}
+    𝒯(u, u, u) = 0 \quad \text{for all} \quad u ∈ U.
+  \end{equation}
+  Then
+  \begin{equation}
+    𝒯(u, v, w) = 0 \quad \text{for all} \quad u, v, w ∈ U.
+  \end{equation}
+\end{theorem}
+\begin{proof}
+  The form \(𝒯\) being trilinear and symmetric, we have, for all \(u, v, w ∈ U\)
+  and \(α, β ∈ ℝ\)
+  \begin{multline}
+    𝒯(u + αv + βw, u + αv + βw, u + αv + βw) = 𝒯(u, u, u) + 3α 𝒯(u, u, v)\\
+    + 3β 𝒯(u, u, w) + 3α² 𝒯(u, u, v) + 6 α β 𝒯(u, v, w) + 3 β² 𝒯(u, u, w)\\
+    + α³ 𝒯(v, v, v) + 3 α² β 𝒯(v, v, w) + 3 α β² 𝒯(v, w, w) + β³ 𝒯(w, w, w)
+  \end{multline}
+  and, upon simplification using Eq.~\eqref{eq:20220802111745}
+  \begin{multline}
+    \label{eq:20220802112309}
+    3α 𝒯(u, u, v) + 3β 𝒯(u, u, w) + 3α² 𝒯(u, v, v) + 6 α β 𝒯(u, v, w)\\
+    + 3 β² 𝒯(u, w, w) + 3 α² β 𝒯(v, v, w) + 3 α β² 𝒯(v, w, w) = 0.
+  \end{multline}
+  In particular taking successively \(α = ±1\), \(β = 0\) and \(w = 0\) delivers
+  \begin{equation}
+    ±3 𝒯(u, u, v) + 3 𝒯(u, u, v) = 0 \quad \text{for all} \quad u, v ∈ U,
+  \end{equation}
+  from which it results that
+  \begin{equation}
+    𝒯(u, u, v) = 0 \quad \text{for all} \quad u, v ∈ U.
+  \end{equation}
+  Plugging into Eq.~\eqref{eq:20220802112309} with \(α = β = 1\) results in:
+  \(𝒯(u, v, w) = 0\) for all \(u, v, w ∈ U\).
 \end{proof}
 
 \appendix

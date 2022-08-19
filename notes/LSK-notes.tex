@@ -521,6 +521,7 @@ Eqs.~\eqref{eq:20220524133816} and \eqref{eq:20220531054247}, we find that
 \end{equation}
 or
 \begin{equation}
+  \label{eq:20220819160235}
   ℰ_{, uu}[u(λ), λ; u₁, u₁] = -\bigl( λ - λ₀ \bigr) \dot{ℰ}₂(λ₀; u₁, u₁) + o(λ - λ₀).
 \end{equation}
 
@@ -623,6 +624,14 @@ exists above the critical load only). If one of the eigenvalues of this tensor
 is \(<0\), then the bifurcated branch is unstable. The stability is undecided
 when all eigenvalues are \(≥ 0\).
 
+\begin{remark}
+  Note that, from Eq.~\eqref{eq:20220801092222},
+  \begin{equation}
+    E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l + λ₂ F_{ij} ξ₁^i ξ₁^j = \tfrac{2}{3} E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l
+  \end{equation}
+
+\end{remark}
+
 To conclude this section, it is observed that, when \(λ₁ = 0\), the dominant
 term of the potential energy along the bifurcated branch is of the fourth order
 [see Eq.~\eqref{eq:20220525053600}]. Combining with Eq.~\eqref{eq:20220801093236},
@@ -648,6 +657,75 @@ Again, the above expression does not depend on the scaling of \(u₁\) (of the
 \(ξ₁^i\)). Note that, if \(E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l > 0\), then only loads
 that are greater than the critical load can be reached on the bifurcated branch,
 where the energy is lower than the fundamental branch.
+
+\medskip
+
+The above discussion simplifies considerably when there is only one buckling
+mode (\(m = 1\)). This is addressed in the next section.
+
+\section{The case of a single mode}
+
+In this section, we discuss the case \(m = 1\); all tensors considered above
+(\(F_{ij}\), \(E_{ijk}\), \(E_{ijkl}\)) then reduce to simple scalars. To avoid
+ambiguity, indices are kept: \(F_{11}\), \(E_{11}\), \(E_{11}\). Since
+\(\dot{ℰ}₂(λ₀)\) is negative definite over \(V\), we have \(F_{11} < 0\).
+
+It is first observed that the following conditions are \emph{necessary} to
+ensure stability of the critical point
+\begin{equation}
+  E_{111} = 0 \quad \text{and} \quad E_{1111} ≥ 0,
+\end{equation}
+which shows that \emph{asymmetric} bifurcation points are always
+\emph{unstable}.
+
+\subsection{Asymmetric bifurcations}
+
+We first consider the case \(E_{111} ≠ 0\). Owing to the discussion above, the
+bifurcation point is unstable. Setting \(λ_1=1\), Eq.~\eqref{eq:20220524135036} delivers
+\begin{equation}
+  E_{111} ξ_1^1 + 2F_{11} = 0 \quad \text{and} \quad u(λ) = u^\ast(λ) - \frac{2F_{11}}{E_{111}} \bigl( λ - λ_0 \bigr) v_1 + o(λ - λ_0).
+\end{equation}
+
+Furthermore, the hessian of the energy along the bifurcated branch is retrieved
+from Eq.~\eqref{eq:20220819160235}
+\begin{equation}
+  \begin{aligned}[b]
+    ℰ_{, uu}[u(η), λ(η), v_1, v_1] &= η \bigl(E_{111} ξ_1^1 + λ₁ F_{11}\bigr) + o(η) = -2 η F_{11} + o(η)\\
+    &= -2 F_{11} \bigl( λ - λ₀ \bigr) + o(λ - λ₀).
+  \end{aligned}
+\end{equation}
+
+Asymmetric bifurcations branches are \emph{unstable} for \(λ ≤ λ_0\) and
+\emph{stable} for \(λ > λ₀\) (stability switch).
+
+\subsection{Symmetric bifurcations}
+
+We now consider the case \(E_{111}=0\). From the general discussion of
+Sec.~\ref{sec:20220802061621}, the bifurcation point is \emph{stable} if
+\(E_{1111} > 0\) and \emph{unstable} if \(E_{1111} < 0\). The bifurcation
+equation~\eqref{eq:20220801092222} reduces to
+\begin{equation}
+  E_{1111} \bigl( ξ_1^1 \bigr)^2 + 3λ_2 F_{11} = 0,
+\end{equation}
+which in particular shows that \(λ_2\) has the same sign as \(E_{1111}\). Since
+the expansion of \(λ\) reads: \(λ = λ_0 + λ_2 η^2\), the bifurcation branch
+exists only for loads \emph{above} the critical load (\(λ ≥ λ_0\)) if
+\(E_{1111} > 0\) and only for loads \emph{below} the critical load (\(λ ≤ λ_0\))
+if \(E_{1111} < 0\).
+
+From Eq.~\eqref{eq:20220531054247}, the hessian of the energy along the
+bifurcated branch reads
+\begin{equation*}
+  ℰ_{, uu}[u(η), λ(η); v_1, v_1] = \tfrac{1}{2} η² \bigl[ E_{1111}\bigl(ξ_1^1\bigr) ^2 + λ₂ F_{11} \bigr] + o(η²) = - η² λ₂ F_{11} + o(η²),
+\end{equation*}
+which has the sign of \(λ_2\). Therefore the Hessian is positive
+(resp. negative) definite if \(E_{1111} > 0\) (resp \(< 0\)).
+
+To sum up, if \(E_{1111} > 0\), then the bifurcation branch (including the
+critical point) is \emph{stable} and exists only for loads greater than the
+critical load. Conversely, if \(E_{1111} < 0\), then the bifurcation branch
+(including the critical point) is \emph{unstable} and exists only for loads
+lower than the critical load.
 
 \section{Propriétés des formes bilinéaires symétriques, positives}
 

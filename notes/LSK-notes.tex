@@ -8,7 +8,7 @@
 %\setkomafont{disposition}{\rmfamily}
 
 \usepackage{polyglossia}
-\setdefaultlanguage{french}
+\setdefaultlanguage{english}
 
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -253,8 +253,59 @@ stability
   E_{ijk} ξ^i ξ^j ξ^k = 0 \quad \text{and} \quad E_{ijkl} ξ^i ξ^j ξ^k ξ^l > 0 \quad \text{for all} \quad ξ¹, \ldots, ξ^m ∈ \reals.
 \end{equation}
 
-\section{Bifurcations}
+\section{Analysis of bifurcated branches}
 \label{sec:20220617075558}
+
+In this section, we show that, besides the fundamental branch \(u^\ast(λ)\),
+other (bifurcated) equilibrium branches may pass through the critical point
+\((u₀, λ₀)\). The starting point is the characterization of an equilibrium by
+the stationarity of the energy. Following the LSK method, the equilibrium state
+\(u ∈ U\) is decomposed as follows
+\begin{equation}
+  u = u^\ast(λ) + ξ^i v_i + w, \quad \text{with} \quad w ∈ W.
+\end{equation}
+
+It follows from the orthogonality of \(V\) and \(W\) that \(〈v_i, w〉 = 0\) for
+all \(i=1, \ldots, m\). Stationarity of the energy is expressed as follows
+\begin{equation}
+  ℰ_{,u}[u^\ast(λ) + ξ^i v_i + w, λ; \hat{u}] = 0 \quad\text{for all }\hat{u} ∈ U
+\end{equation}
+or, equivalently
+\begin{gather}
+  ℰ_{,u}[u^\ast(λ) + ξ^i v_i + w, λ; \hat{v}] = 0 \quad\text{for all }\hat{v} ∈ V,\\
+  \label{eq:20220825143616}
+  ℰ_{,u}[u^\ast(λ) + ξ^i v_i + w, λ; \hat{w}] = 0 \quad\text{for all }\hat{w} ∈ W.
+\end{gather}
+
+From the implicit function theorem, Eq.~\eqref{eq:20220825143616} defines a
+function \((ξ^i, λ) \mapsto w(ξ^i, λ)\) in the neighborhood of
+\((ξ^1, \ldots, ξ^m, λ) = (0, \ldots, 0, λ₀)\). Why the theorem applies will be
+clearer below. Eq.~\eqref{eq:20220825143616} is first derived with respect to
+\(ξ^i\) and \(λ\)
+\begin{gather}
+  ℰ_{,uu}(u^\ast + ξ^i v_i + w, λ; v_i + w_{,i}, \hat{w}) = 0,\\
+  ℰ_{,uu}(u^\ast + ξ^i v_i + w, λ; \dot{u}^\ast + w_{,λ}, \hat{w}) + ℰ_{,uλ}(u^\ast + ξ^i v_i + w, λ; \hat{w}) = 0.
+\end{gather}
+for all \(\hat{w} ∈ W\). At \(ξ^i = 0, λ = λ₀\), the above equations read
+\begin{equation}
+\label{eq:20220825150219}
+  ℰ₂(λ₀; v_i + w_{,i}, \hat{w}) = ℰ₂(λ₀; v_i, \hat{w}) + ℰ₂(λ₀; w_{,i}, \hat{w}) = ℰ₂(λ₀; w_{,i}, \hat{w}) = 0
+\end{equation}
+and
+\begin{equation}
+  \begin{aligned}[b]
+    ℰ_{,uu}(u₀, λ₀; w_{,λ}, \hat{w}) + ℰ_{,uu}(u₀, λ₀; \dot{u}₀, \hat{w}) + ℰ_{,uλ}(u₀, w₀, λ; \hat{w}) &=\\
+    ℰ₂(λ₀; w_{,λ}, \hat{w}) + \dot{ℰ}₂(u₀, λ₀; \hat{w}) &= 0.
+  \end{aligned}
+\end{equation}
+
+Note that in Eq.~\eqref{eq:20220825150219}, \(ℰ₂(λ₀; v_i, \hat{w}) = 0\) since
+\(v_i ∈ V\). Eq.~\eqref{eq:20220825150219} holds for any \(\hat{w} ∈ W\). Since
+\(w ∈ W\) for all \(ξ^i\) and \(λ\), we have \(w_{,i} ∈ W\) and
+Eq.~\eqref{eq:20220825150219} holds for \(\hat{w} = w_{,i} ∈ W\)
+\begin{equation}
+  ℰ₂(λ₀; w_{,i}, w_{,i}) = 0 \quad \text{therefore} \quad w_{,i}(0, \ldots, 0, λ₀) = 0.
+\end{equation}
 
 On écrit toute courbe d'équilibre passant par le point \((u₀, λ₀)\) sous la
 forme paramétrique suivante

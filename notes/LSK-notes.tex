@@ -34,6 +34,7 @@
 \setmathfont{Asana Math}
 
 \newcommand{\reals}{\mathbb{R}}
+\newcommand{\wrt}{w.r.t.}
 
 \begin{document}
 \title{\sbtitle}
@@ -271,41 +272,68 @@ all \(i=1, \ldots, m\). Stationarity of the energy is expressed as follows
   ℰ_{,u}[u^\ast(λ) + ξ^i v_i + w, λ; \hat{u}] = 0 \quad\text{for all }\hat{u} ∈ U
 \end{equation}
 or, equivalently
-\begin{gather}
+\begin{equation}
   ℰ_{,u}[u^\ast(λ) + ξ^i v_i + w, λ; \hat{v}] = 0 \quad\text{for all }\hat{v} ∈ V,\\
+\end{equation}
+and
+\begin{equation}
   \label{eq:20220825143616}
   ℰ_{,u}[u^\ast(λ) + ξ^i v_i + w, λ; \hat{w}] = 0 \quad\text{for all }\hat{w} ∈ W.
-\end{gather}
+\end{equation}
 
 From the implicit function theorem, Eq.~\eqref{eq:20220825143616} defines a
 function \((ξ^i, λ) \mapsto w(ξ^i, λ)\) in the neighborhood of
 \((ξ^1, \ldots, ξ^m, λ) = (0, \ldots, 0, λ₀)\). Why the theorem applies will be
-clearer below. Eq.~\eqref{eq:20220825143616} is first derived with respect to
-\(ξ^i\) and \(λ\)
-\begin{gather}
-  ℰ_{,uu}(u^\ast + ξ^i v_i + w, λ; v_i + w_{,i}, \hat{w}) = 0,\\
-  ℰ_{,uu}(u^\ast + ξ^i v_i + w, λ; \dot{u}^\ast + w_{,λ}, \hat{w}) + ℰ_{,uλ}(u^\ast + ξ^i v_i + w, λ; \hat{w}) = 0.
-\end{gather}
-for all \(\hat{w} ∈ W\). At \(ξ^i = 0, λ = λ₀\), the above equations read
+clearer below. Eq.~\eqref{eq:20220825143616} is first differentiated \wrt{}
+\(ξ^i\)
 \begin{equation}
-\label{eq:20220825150219}
-  ℰ₂(λ₀; v_i + w_{,i}, \hat{w}) = ℰ₂(λ₀; v_i, \hat{w}) + ℰ₂(λ₀; w_{,i}, \hat{w}) = ℰ₂(λ₀; w_{,i}, \hat{w}) = 0
-\end{equation}
-and
-\begin{equation}
-  \begin{aligned}[b]
-    ℰ_{,uu}(u₀, λ₀; w_{,λ}, \hat{w}) + ℰ_{,uu}(u₀, λ₀; \dot{u}₀, \hat{w}) + ℰ_{,uλ}(u₀, w₀, λ; \hat{w}) &=\\
-    ℰ₂(λ₀; w_{,λ}, \hat{w}) + \dot{ℰ}₂(u₀, λ₀; \hat{w}) &= 0.
-  \end{aligned}
+  \label{eq:20220826140926}
+  ℰ_{,uu}(u^\ast + ξ^k v_k + w, λ; v_i + w_{,i}, \hat{w}) = 0\quad\text{for all }\hat{w} ∈ W.
 \end{equation}
 
-Note that in Eq.~\eqref{eq:20220825150219}, \(ℰ₂(λ₀; v_i, \hat{w}) = 0\) since
-\(v_i ∈ V\). Eq.~\eqref{eq:20220825150219} holds for any \(\hat{w} ∈ W\). Since
-\(w ∈ W\) for all \(ξ^i\) and \(λ\), we have \(w_{,i} ∈ W\) and
-Eq.~\eqref{eq:20220825150219} holds for \(\hat{w} = w_{,i} ∈ W\)
+Substituting \(ξ^1 = \cdots = ξ^m = 0, λ = λ₀\) in the above equations and
+observing that \(ℰ₂(λ₀; v_i, \hat{w}) = 0\) since \(v_i ∈ V\), we get
 \begin{equation}
-  ℰ₂(λ₀; w_{,i}, w_{,i}) = 0 \quad \text{therefore} \quad w_{,i}(0, \ldots, 0, λ₀) = 0.
+\label{eq:20220825150219}
+  ℰ₂(λ₀; v_i + w_{,i}, \hat{w}) = ℰ₂(λ₀; w_{,i}, \hat{w}) = 0 \quad \text{for all }\hat{W} ∈ W.
 \end{equation}
+
+Since \(w ∈ W\) for all \(ξ^i\) and \(λ\), we have \(w_{,i} ∈ W\) and
+Eq.~\eqref{eq:20220825150219} holds for \(\hat{w} = w_{,i} ∈ W\), which shows
+that the derivatives of \(w\) \wrt{} the \(ξ^i\) vanish at the point
+\(ξ^1 = 0, \ldots, ξ^m = 0\) and \(λ = λ₀\). Eq.~\eqref{eq:20220825143616} is
+then differentiated \wrt{} \(λ\)
+\begin{equation}
+  ℰ_{,uu}(u^\ast + ξ^i v_i + w, λ; \dot{u}^\ast + w_{,λ}, \hat{w}) + ℰ_{,uλ}(u^\ast + ξ^i v_i + w, λ; \hat{w}) = 0 \quad \text{for all }\hat{W} ∈ W.
+\end{equation}
+At \(ξ^i = 0\), the above equations read and
+\begin{multline}
+  ℰ_{,uu}(u^\ast, λ; w_{,λ}, \hat{w}) + ℰ_{,uu}(u^\ast, λ; \dot{u}^\ast, \hat{w}) + ℰ_{,uλ}(u^\ast, λ; \hat{w})\\
+  = ℰ₂(λ; w_{,λ}, \hat{w}) + \frac{∂}{∂λ}\bigl[ ℰ_{,u}(u^\ast, λ; \hat{w}) \bigr] = 0.
+\end{multline}
+
+Since \(u^\ast(λ)\) is an equilibrium for all \(λ\), the last term is
+identically null, and we find similarly that the derivative of \(w\) \wrt{} \(λ\)
+vanishes at the critical point. We have found so far that
+\begin{equation}
+  \frac{∂w}{∂ξ^1} = \ldots \frac{∂w}{∂ξ^m} = \frac{∂w}{∂λ} = 0 \quad \text{at} \quad ξ^1 = 0, \ldots, ξ^m = 0 \quad \text{and} \quad λ = λ₀.
+\end{equation}
+
+In order to derive a Taylor expansion of \(w\), it is therefore required to look
+at the second order derivatives. To this end, Eq.~\eqref{eq:20220826140926} is
+differentiated \wrt{} \(ξ^j\)
+\begin{multline}
+  ℰ_{,uuu}(u^\ast + ξ^k v_k + w, λ; v_i + w_{,i}, v_j + w_{,j}, \hat{w}) + ℰ_{,uu}(u^\ast + ξ^k v_k + w, λ; w_{,ij}, \hat{w}) = 0\\
+  \text{for all }\hat{w} ∈ W,
+\end{multline}
+and, at \(ξ^1 = \cdots = ξ^m = 0, λ = λ₀\)
+\begin{equation}
+  ℰ_3(λ₀; v_i, v_j, \hat{w}) + ℰ₂(λ₀; w_{,ij}, \hat{w}) = 0 \quad \text{for all } \hat{w} ∈ W,
+\end{equation}
+where it is recalled that \(w_{,i} = w_{,j} = 0\). The variational
+problem~\eqref{eq:20220519164523} is recognized, and we get \(w_{,ij} = w_{ij}\)
+at \(ξ^1 = \cdots = ξ^m = 0, λ = λ₀\).
+
 
 On écrit toute courbe d'équilibre passant par le point \((u₀, λ₀)\) sous la
 forme paramétrique suivante

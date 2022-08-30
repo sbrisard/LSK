@@ -304,10 +304,12 @@ that the derivatives of \(w\) \wrt{} the \(ξ^i\) vanish at the point
 \(ξ^1 = 0, \ldots, ξ^m = 0\) and \(λ = λ₀\). Eq.~\eqref{eq:20220825143616} is
 then differentiated \wrt{} \(λ\)
 \begin{equation}
+  \label{eq:20220830145945}
   ℰ_{,uu}(u^\ast + ξ^i v_i + w, λ; \dot{u}^\ast + w_{,λ}, \hat{w}) + ℰ_{,uλ}(u^\ast + ξ^i v_i + w, λ; \hat{w}) = 0 \quad \text{for all }\hat{W} ∈ W.
 \end{equation}
-At \(ξ^i = 0\), the above equations read and
+At \(ξ^i = 0\), the above equations read
 \begin{multline}
+  \label{eq:20220830151513}
   ℰ_{,uu}(u^\ast, λ; w_{,λ}, \hat{w}) + ℰ_{,uu}(u^\ast, λ; \dot{u}^\ast, \hat{w}) + ℰ_{,uλ}(u^\ast, λ; \hat{w})\\
   = ℰ₂(λ; w_{,λ}, \hat{w}) + \frac{∂}{∂λ}\bigl[ ℰ_{,u}(u^\ast, λ; \hat{w}) \bigr] = 0.
 \end{multline}
@@ -321,19 +323,47 @@ vanishes at the critical point. We have found so far that
 
 In order to derive a Taylor expansion of \(w\), it is therefore required to look
 at the second order derivatives. To this end, Eq.~\eqref{eq:20220826140926} is
-differentiated \wrt{} \(ξ^j\)
-\begin{multline}
-  ℰ_{,uuu}(u^\ast + ξ^k v_k + w, λ; v_i + w_{,i}, v_j + w_{,j}, \hat{w}) + ℰ_{,uu}(u^\ast + ξ^k v_k + w, λ; w_{,ij}, \hat{w}) = 0\\
-  \text{for all }\hat{w} ∈ W,
-\end{multline}
-and, at \(ξ^1 = \cdots = ξ^m = 0, λ = λ₀\)
+differentiated first \wrt{} \(ξ^j\), then \wrt{} \(λ\). This delivers, for all \(\hat{w} ∈ W\)
 \begin{equation}
-  ℰ_3(λ₀; v_i, v_j, \hat{w}) + ℰ₂(λ₀; w_{,ij}, \hat{w}) = 0 \quad \text{for all } \hat{w} ∈ W,
+  ℰ_{,uuu}(u^\ast + ξ^k v_k + w, λ; v_i + w_{,i}, v_j + w_{,j}, \hat{w}) + ℰ_{,uu}(u^\ast + ξ^k v_k + w, λ; w_{,ij}, \hat{w}) &= 0
 \end{equation}
-where it is recalled that \(w_{,i} = w_{,j} = 0\). The variational
-problem~\eqref{eq:20220519164523} is recognized, and we get \(w_{,ij} = w_{ij}\)
-at \(ξ^1 = \cdots = ξ^m = 0, λ = λ₀\).
+and
+\begin{equation}
+  \begin{aligned}[b]
+    ℰ_{,uuu}(u^\ast + ξ^k v_k + w, λ; v_i + w_{,i}, \dot{u}^\ast + w_{,λ}, \hat{w}) + ℰ_{,uuλ}(u^\ast + ξ^k v_k + w, λ; v_i + w_{,i}, \hat{w}) &\\
+    + ℰ_{,uu}(u^\ast + ξ^k v_k + w, λ; w_{,iλ}, \hat{w}) &= 0
+  \end{aligned}
+\end{equation}
+and, at \(ξ^1 = \cdots = ξ^m = 0, λ = λ₀\) (recalling that, at this point,
+\(w_{,1} = \cdots = w_{, m} = w_{,λ} = 0\))
+\begin{equation}
+  ℰ_3(λ₀; v_i, v_j, \hat{w}) + ℰ₂(λ₀; w_{,ij}, \hat{w}) = 0
+  \quad \text{and} \quad
+  \dot{ℰ}₂(λ₀; v_i, \hat{w}) + ℰ₂(λ₀; w_{,iλ}, \hat{w}),
+\end{equation}
+for all \(\hat{w} ∈ W\). The variational problems~\eqref{eq:20220524134525} and
+\eqref{eq:20220519164523} are recognized, \pdfmarkupcomment{leading to}{Check
+  weights}
+\begin{equation}
+  \frac{∂²w}{∂ξ^i ∂ξ^j}\biggr\rvert_{ξ^1 = 0, \cdots, ξ^m = 0, λ = λ₀} = w_{ij}
+  \quad\text{and}\quad
+  \frac{∂²w}{∂λ ∂ξ^i}\biggr\rvert_{ξ^1 = 0, \cdots, ξ^m = 0, λ = λ₀} = w_{i}.
+\end{equation}
 
+Finally, differentiating Eq.~\eqref{eq:20220830151513} \wrt{} \(λ\) leads to
+\begin{equation}
+  \dot{ℰ}₂(λ; w_{,λ}, \hat{w}) + ℰ₂(λ; w_{,λλ}, \hat{w}) = 0 \quad \text{for all } \hat{w} ∈ W
+\end{equation}
+and, at \(λ = λ₀\)
+\begin{equation}
+  \frac{∂²w}{∂λ²}\biggr\rvert_{ξ^1 = 0, \cdots, ξ^m = 0, λ = λ₀} = 0.
+\end{equation}
+
+We have obtained the following Taylor expansion of the component \(w\) of the
+LSK expansion of \(u\)
+\begin{equation}
+  w(ξ^1, \cdots, ξ^m, λ) = \tfrac{1}{2} ξ^i ξ^j w_{ij} + \bigl( λ - λ₀ \bigr) ξ^i w_i + o\Bigl(ξ₁² + \cdots + ξ_m² + \bigl(λ - λ₀\bigr)^2\Bigr)
+\end{equation}
 
 On écrit toute courbe d'équilibre passant par le point \((u₀, λ₀)\) sous la
 forme paramétrique suivante

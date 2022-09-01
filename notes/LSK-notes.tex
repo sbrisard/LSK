@@ -66,8 +66,24 @@ a la structure d'espace vectoriel. L'énergie du système est notée \(ℰ(u, λ
 où \(λ\) désigne un paramètre de chargement. Soit \(u^{\ast}(λ)\) la branche
 fondamentale. Par définition
 \begin{equation}
-  ℰ_{,u}[u^{\ast}(λ), λ; \hat{u}]=0 \quad \text{pour tout} \quad \hat{u}∈U.
+  ℰ_{,u}[u^{\ast}(λ), λ; \hat{u}]=0 \quad \text{pour tout} \quad \hat{u}∈U,
 \end{equation}
+and, deriving twice \wrt{} \(λ\), we find successively, for all \(\hat{u} ∈ U\)
+\begin{equation}
+  \label{eq:20220901143843}
+  ℰ_{,uu}[u^\ast(λ), λ; \dot{u}^\ast(λ), \hat{u}] + ℰ_{,uλ}[u^\ast(λ), λ; \hat{u}] = 0
+\end{equation}
+and
+\begin{multline}
+  \label{eq:20220901143902}
+  ℰ_{,uuu}[u^\ast(λ), λ; \dot{u}^\ast(λ), \dot{u}^\ast(λ), \hat{u}] + 2ℰ_{,uuλ}[u^\ast(λ), λ; \dot{u}^\ast(λ), \hat{u}]\\
+  + ℰ_{,uλλ}[u^\ast(λ), λ; \hat{u}] + ℰ_{,uu}[u^\ast(λ), λ; \ddot{u}^\ast(λ), \hat{u}] = 0
+\end{multline}
+
+
+
+
+
 Il sera commode d'introduire les notations suivantes
 \begin{equation}
   ℰ₂(λ) = ℰ_{,uu}[u^{\ast}(λ), λ], \quad ℰ₃(λ) = ℰ_{,uuu}[u^{\ast}(λ), λ], \quad ℰ₄(λ) = ℰ_{,uuuu} [u^{\ast}(λ), λ].
@@ -81,13 +97,24 @@ formes par rapport à \(λ\) sera notée à l'aide d'un point supérieur
 On suppose que l'équilibre est stable pour des valeurs suffisamment petites de
 \(λ\). Plus précisément, on suppose que \(ℰ₂(λ)\) est définie positive pour tout
 \(λ < λ₀\). Pour \(λ = λ₀\), la forme quadratique \(ℰ₂(λ₀)\) n'est plus que
-positive. En notant \(u₀ = u^{\ast}(λ₀)\) la position d'équilibre obtenue pour
-la valeur critique \(λ₀\) du paramètre de chargement \(λ\), on s'intéresse à
-toutes les courbes d'équilibre qui passent par le point \((u₀, λ₀)\).
+positive. On note \(u₀ = u^{\ast}(λ₀)\), \(\dot{u}₀ = \dot{u}^\ast(λ₀)\) et
+\(\ddot{u}₀ = \ddot{u}^\ast(λ₀)\) de sorte que les
+Éqs.~\eqref{eq:20220901143843} et \eqref{eq:20220901143902} s'écrivent, en
+\(λ = λ₀\)
+\begin{gather}
+  \label{eq:20220901144331}
+  ℰ_{,uu}(u₀, λ₀; \dot{u}₀, \bullet) + ℰ_{,uλ}(u₀, λ₀; \bullet) = 0\\
+  \label{eq:20220901144335}
+  ℰ_{,uuu}(u₀, λ₀; \dot{u}₀, \dot{u}₀, \bullet) + 2ℰ_{,uuλ}(u₀, λ₀; \dot{u}₀, \bullet) + ℰ_{,uλλ}(u₀, λ₀; \bullet) + ℰ_{,uu}(u₀, λ₀; \ddot{u}₀, \bullet) = 0
+\end{gather}
 
-Noter que dans ce qui suit, on convient que les formes \(ℰ₂\), \(ℰ₃\) et \(ℰ₄\)
-sont implicitement évaluées en \(λ₀\) lorsque \(λ\) n'est pas rappelé : ainsi,
-on notera \(ℰ₂(•, •)\) plutôt que \(ℰ₂(λ₀ ; •, •)\).
+On s'intéresse dans ce qui suit à toutes les courbes d'équilibre qui passent par
+le point \((u₀, λ₀)\).
+
+\pdfmarkupcomment{Noter que dans ce qui suit}{Est-ce encore d'actualité ?}, on
+convient que les formes \(ℰ₂\), \(ℰ₃\) et \(ℰ₄\) sont implicitement évaluées en
+\(λ₀\) lorsque \(λ\) n'est pas rappelé : ainsi, on notera \(ℰ₂(•, •)\) plutôt
+que \(ℰ₂(λ₀ ; •, •)\).
 
 Par hypothèse, \(ℰ₂(λ₀)\) est positive, sans être définie
 positive~; soit \(V\) son noyau, qui forme un sous-espace vectoriel de \(U\). On
@@ -263,107 +290,312 @@ other (bifurcated) equilibrium branches may pass through the critical point
 the stationarity of the energy. Following the LSK method, the equilibrium state
 \(u ∈ U\) is decomposed as follows
 \begin{equation}
-  u = u^\ast(λ) + ξ^i v_i + w, \quad \text{with} \quad w ∈ W.
+  u = u^\ast(λ) + ξ_i v_i + w, \quad \text{with} \quad w ∈ W.
 \end{equation}
 
 It follows from the orthogonality of \(V\) and \(W\) that \(〈v_i, w〉 = 0\) for
 all \(i=1, \ldots, m\). Stationarity of the energy is expressed as follows
 \begin{equation}
-  ℰ_{,u}[u^\ast(λ) + ξ^i v_i + w, λ; \hat{u}] = 0 \quad\text{for all }\hat{u} ∈ U
+  ℰ_{,u}[u^\ast(λ) + ξ_i v_i + w, λ; U] = 0
 \end{equation}
 or, equivalently
 \begin{equation}
-  ℰ_{,u}[u^\ast(λ) + ξ^i v_i + w, λ; \hat{v}] = 0 \quad\text{for all }\hat{v} ∈ V,\\
+  \label{eq:20220901120544}
+  ℰ_{,u}[u^\ast(λ) + ξ_i v_i + w, λ; V] = 0
 \end{equation}
 and
 \begin{equation}
   \label{eq:20220825143616}
-  ℰ_{,u}[u^\ast(λ) + ξ^i v_i + w, λ; \hat{w}] = 0 \quad\text{for all }\hat{w} ∈ W.
+  ℰ_{,u}[u^\ast(λ) + ξ_i v_i + w, λ; W] = 0.
 \end{equation}
+These two equations are analysed separately in Secs.~\ref{sec:20220901145441}
+and \ref{sec:20220901145523}.
+
+\subsection{Analysis of Eq.~\eqref{eq:20220825143616}: \(w\) as a function of \(ξ_i\) and \(λ\)}
+\label{sec:20220901145441}
 
 From the implicit function theorem, Eq.~\eqref{eq:20220825143616} defines a
-function \((ξ^i, λ) \mapsto w(ξ^i, λ)\) in the neighborhood of
-\((ξ^1, \ldots, ξ^m, λ) = (0, \ldots, 0, λ₀)\). Why the theorem applies will be
-clearer below. Eq.~\eqref{eq:20220825143616} is first differentiated \wrt{}
-\(ξ^i\)
+function \((ξ_1, \ldots, ξ_m, λ) \mapsto w(ξ_1, \ldots, ξ_m, λ)\) in the
+neighborhood of \((ξ₁, \ldots, ξ_m, λ) = (0, \ldots, 0, λ₀)\). Why the theorem
+applies will be clarified below. Eq.~\eqref{eq:20220825143616} is first
+differentiated \wrt{} \(ξ_i\)
 \begin{equation}
   \label{eq:20220826140926}
-  ℰ_{,uu}(u^\ast + ξ^k v_k + w, λ; v_i + w_{,i}, \hat{w}) = 0\quad\text{for all }\hat{w} ∈ W.
+  ℰ_{,uu}(u^\ast + ξ_k v_k + w, λ; v_i + w_{,i}, W) = 0.
 \end{equation}
 
 Substituting \(ξ^1 = \cdots = ξ^m = 0, λ = λ₀\) in the above equations and
-observing that \(ℰ₂(λ₀; v_i, \hat{w}) = 0\) since \(v_i ∈ V\), we get
+observing that \(ℰ₂(λ₀; v_i, W) = 0\) since \(v_i ∈ V\), we get
 \begin{equation}
 \label{eq:20220825150219}
-  ℰ₂(λ₀; v_i + w_{,i}, \hat{w}) = ℰ₂(λ₀; w_{,i}, \hat{w}) = 0 \quad \text{for all }\hat{W} ∈ W.
+  ℰ₂(λ₀; v_i + w_{,i}, W) = ℰ₂(λ₀; w_{,i}, W) = 0.
 \end{equation}
 
-Since \(w ∈ W\) for all \(ξ^i\) and \(λ\), we have \(w_{,i} ∈ W\) and
-Eq.~\eqref{eq:20220825150219} holds for \(\hat{w} = w_{,i} ∈ W\), which shows
-that the derivatives of \(w\) \wrt{} the \(ξ^i\) vanish at the point
+Since \(w ∈ W\) for all \(ξ^i\) and \(λ\), we have \(w_{,i} ∈ W\) and, from
+Eq.~\eqref{eq:20220825150219}, \(ℰ₂(λ₀; w_{,i}, w_{,i}) = 0\), which shows that
+the derivatives of \(w\) \wrt{} the \(ξ^i\) vanish at the point
 \(ξ^1 = 0, \ldots, ξ^m = 0\) and \(λ = λ₀\). Eq.~\eqref{eq:20220825143616} is
 then differentiated \wrt{} \(λ\)
 \begin{equation}
   \label{eq:20220830145945}
-  ℰ_{,uu}(u^\ast + ξ^i v_i + w, λ; \dot{u}^\ast + w_{,λ}, \hat{w}) + ℰ_{,uλ}(u^\ast + ξ^i v_i + w, λ; \hat{w}) = 0 \quad \text{for all }\hat{W} ∈ W.
+  ℰ_{,uu}(u^\ast + ξ_i v_i + w, λ; \dot{u}^\ast + w_{,λ}, W) + ℰ_{,uλ}(u^\ast + ξ_i v_i + w, λ; W) = 0
 \end{equation}
-At \(ξ^i = 0\), the above equations read
-\begin{multline}
-  \label{eq:20220830151513}
-  ℰ_{,uu}(u^\ast, λ; w_{,λ}, \hat{w}) + ℰ_{,uu}(u^\ast, λ; \dot{u}^\ast, \hat{w}) + ℰ_{,uλ}(u^\ast, λ; \hat{w})\\
-  = ℰ₂(λ; w_{,λ}, \hat{w}) + \frac{∂}{∂λ}\bigl[ ℰ_{,u}(u^\ast, λ; \hat{w}) \bigr] = 0.
-\end{multline}
-
-Since \(u^\ast(λ)\) is an equilibrium for all \(λ\), the last term is
-identically null, and we find similarly that the derivative of \(w\) \wrt{} \(λ\)
-vanishes at the critical point. We have found so far that
+and, at \(ξ₁ = \ldots = ξ_m = 0\)
 \begin{equation}
-  \frac{∂w}{∂ξ^1} = \ldots \frac{∂w}{∂ξ^m} = \frac{∂w}{∂λ} = 0 \quad \text{at} \quad ξ^1 = 0, \ldots, ξ^m = 0 \quad \text{and} \quad λ = λ₀.
+  \label{eq:20220830151513}
+  ℰ_{,uu}(u^\ast, λ; w_{,λ}, W)
+  + \underbrace{ℰ_{,uu}(u^\ast, λ; \dot{u}^\ast, W) + ℰ_{,uλ}(u^\ast, λ; W)}_{=0 \quad \text{see Eq.~\eqref{eq:20220901143843}}}
+  = ℰ₂(λ; w_{,λ}, W) = 0,
+\end{equation}
+which proves similarly that the derivative of \(w\) \wrt{} \(λ\) vanishes at the
+critical point. We have found so far that
+\begin{equation}
+  \frac{∂w}{∂ξ_1} \biggr\rvert_{ξ_1 = \cdots = ξ_m = 0, λ = λ₀}
+  = \ldots =
+  \frac{∂w}{∂ξ_m} \biggr\rvert_{ξ_1 = \cdots = ξ_m = 0, λ = λ₀}
+  = \frac{∂w}{∂λ} \biggr\rvert_{ξ_1 = \cdots = ξ_m = 0, λ = λ₀}= 0.
 \end{equation}
 
 In order to derive a Taylor expansion of \(w\), it is therefore required to look
 at the second order derivatives. To this end, Eq.~\eqref{eq:20220826140926} is
-differentiated first \wrt{} \(ξ^j\), then \wrt{} \(λ\). This delivers, for all \(\hat{w} ∈ W\)
+differentiated first \wrt{} \(ξ_j\), then \wrt{} \(λ\). This delivers,
 \begin{equation}
-  ℰ_{,uuu}(u^\ast + ξ^k v_k + w, λ; v_i + w_{,i}, v_j + w_{,j}, \hat{w}) + ℰ_{,uu}(u^\ast + ξ^k v_k + w, λ; w_{,ij}, \hat{w}) &= 0
+  ℰ_{,uuu}(u^\ast + ξ_k v_k + w, λ; v_i + w_{,i}, v_j + w_{,j}, W) + ℰ_{,uu}(u^\ast + ξ_k v_k + w, λ; w_{,ij}, W) = 0
 \end{equation}
 and
 \begin{equation}
   \begin{aligned}[b]
-    ℰ_{,uuu}(u^\ast + ξ^k v_k + w, λ; v_i + w_{,i}, \dot{u}^\ast + w_{,λ}, \hat{w}) + ℰ_{,uuλ}(u^\ast + ξ^k v_k + w, λ; v_i + w_{,i}, \hat{w}) &\\
-    + ℰ_{,uu}(u^\ast + ξ^k v_k + w, λ; w_{,iλ}, \hat{w}) &= 0
+    ℰ_{,uuu}(u^\ast + ξ_k v_k + w, λ; v_i + w_{,i}, \dot{u}^\ast + w_{,λ}, W) &\\
+    + ℰ_{,uuλ}(u^\ast + ξ_k v_k + w, λ; v_i + w_{,i}, W) + ℰ_{,uu}(u^\ast + ξ_k v_k + w, λ; w_{,iλ}, W) &= 0
   \end{aligned}
 \end{equation}
-and, at \(ξ^1 = \cdots = ξ^m = 0, λ = λ₀\) (recalling that, at this point,
+and, at \(ξ_1 = \cdots = ξ_m = 0, λ = λ₀\) (recalling that, at this point,
 \(w_{,1} = \cdots = w_{, m} = w_{,λ} = 0\))
 \begin{equation}
-  ℰ_3(λ₀; v_i, v_j, \hat{w}) + ℰ₂(λ₀; w_{,ij}, \hat{w}) = 0
+  ℰ_3(λ₀; v_i, v_j, W) + ℰ₂(λ₀; w_{,ij}, W) = 0
   \quad \text{and} \quad
-  \dot{ℰ}₂(λ₀; v_i, \hat{w}) + ℰ₂(λ₀; w_{,iλ}, \hat{w}) = 0,
+  \dot{ℰ}₂(λ₀; v_i, W) + ℰ₂(λ₀; w_{,iλ}, W) = 0.
 \end{equation}
-for all \(\hat{w} ∈ W\). The variational problems~\eqref{eq:20220524134525} and
-\eqref{eq:20220519164523} are recognized, \pdfmarkupcomment{leading to}{Check
-  weights}
+The variational problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}
+are recognized, \pdfmarkupcomment{leading to}{Check weights}
 \begin{equation}
-  \frac{∂²w}{∂ξ^i ∂ξ^j}\biggr\rvert_{ξ^1 = \cdots = ξ^m = 0, λ = λ₀} = w_{ij}
+  \frac{∂²w}{∂ξ_i ∂ξ_j}\biggr\rvert_{ξ_1 = \cdots = ξ_m = 0, λ = λ₀} = w_{ij}
   \quad\text{and}\quad
-  \frac{∂²w}{∂λ ∂ξ^i}\biggr\rvert_{ξ^1 = \cdots = ξ^m = 0, λ = λ₀} = w_{i}.
+  \frac{∂²w}{∂λ ∂ξ_i}\biggr\rvert_{ξ_1 = \cdots = ξ_m = 0, λ = λ₀} = w_{i}.
 \end{equation}
 
 Finally, differentiating Eq.~\eqref{eq:20220830151513} \wrt{} \(λ\) leads to
 \begin{equation}
-  \dot{ℰ}₂(λ; w_{,λ}, \hat{w}) + ℰ₂(λ; w_{,λλ}, \hat{w}) = 0 \quad \text{for all } \hat{w} ∈ W
+  \dot{ℰ}₂(λ; w_{,λ}, W) + ℰ₂(λ; w_{,λλ}, W) = 0
 \end{equation}
 and, at \(λ = λ₀\)
 \begin{equation}
-  \frac{∂²w}{∂λ²}\biggr\rvert_{ξ^1 = \cdots = ξ^m = 0, λ = λ₀} = 0.
+  \frac{∂²w}{∂λ²}\biggr\rvert_{ξ_1 = \cdots = ξ_m = 0, λ = λ₀} = 0.
 \end{equation}
 
 We have obtained the following Taylor expansion of the component \(w\) of the
 LSK expansion of \(u\)
 \begin{equation}
-  w(ξ^1, \ldots, ξ^m, λ) = \tfrac{1}{2} ξ^i ξ^j w_{ij} + \bigl( λ - λ₀ \bigr) ξ^i w_i + o\Bigl(ξ₁² + \cdots + ξ_m² + \bigl(λ - λ₀\bigr)^2\Bigr)
+  w(ξ_1, \ldots, ξ_m, λ) = \tfrac{1}{2} ξ_i ξ_j w_{ij} + \bigl( λ - λ₀ \bigr) ξ_i w_i + o\Bigl(ξ₁² + \cdots + ξ_m² + \bigl(λ - λ₀\bigr)^2\Bigr).
 \end{equation}
+
+\subsection{Analysis of Eq.~\eqref{eq:20220901120544}: \(λ\) as a function of \(ξ_i\)}
+\label{sec:20220901145523}
+
+We now turn to Eq.~\eqref{eq:20220901120544}. Since \(w\) is a function of \(λ\)
+and \(ξ_k\) (\(k = 1, \ldots, m\)) this equation implicitly defines \(λ\) as a
+function of \(ξ_i\). Unless otherwise mentioned, the differentials of the energy
+\(ℰ_{,uu}\), \(ℰ_{,uλ}\), \(ℰ_{,λλ}\), \(ℰ_{,uuu}\) \dots{} are evaluated at
+\(u = u^\ast(λ) + ξ_k v_k + w(ξ_k, λ)\). Differentiating first \wrt{} \(ξ_i\)
+\begin{equation}
+  \label{eq:20220901121940}
+  ℰ_{,uu}[v_i + w_{,i} + λ_{,i} (\dot{u}^\ast + w_{,λ}), V] + λ_{, i} ℰ_{,uλ}(V) = 0,
+\end{equation}
+then \wrt{} \(ξ_j\)
+\begin{equation}
+  \label{eq:20220901125230}
+  \begin{gathered}[b]
+    ℰ_{,uuu}[v_i + w_{,i} + λ_{,i} (\dot{u}^\ast + w_{,λ}), v_j + w_{,j} + λ_{,j} (\dot{u}^\ast + w_{,λ}), V]\\
+    + λ_{,j}ℰ_{,uuλ}[v_i + w_{,i} + λ_{,i} (\dot{u}^\ast + w_{,λ}), V]\\
+    + ℰ_{,uu}[w_{,ij} + λ_{,ij} (\dot{u}^\ast + w_{,λ}) + λ_{,i}λ_{,j} (\ddot{u}^\ast + w_{,λλ}), V]\\
+    + λ_{, ij} ℰ_{,uλ}(V) + λ_{, i} ℰ_{,uuλ}[v_j + w_{,j} + λ_{,j} (\dot{u}^\ast + w_{,λ}), V] + λ_{,i} λ_{,j} ℰ_{,uλλ}(V)= 0,
+  \end{gathered}
+\end{equation}
+
+Plugging \(ξ₁ = \cdots = ξ_m = 0\) in Eqs.~\eqref{eq:20220901121940} and
+\eqref{eq:20220901125230}
+\begin{equation}
+  \label{eq:20220901152056}
+  ℰ_{,uu}(u₀, λ₀; v_i, V) + λ_{, i} \bigl\{ ℰ_{,uu}[u₀, λ₀; \dot{u}^\ast(λ₀), V] +  ℰ_{,uλ}(u₀, λ₀; V) \bigr\} = 0,
+\end{equation}
+% \begin{equation}
+%   \begin{gathered}[b]
+%     ℰ_{,uuu}(u₀, λ₀; v_i + λ_{,i}\dot{u}₀, v_j + λ_{,j} \dot{u}₀, V) + λ_{,j}ℰ_{,uuλ}(u₀, λ₀; v_i + λ_{,i} \dot{u}₀, V)\\
+%     + ℰ_{,uu}(u₀, λ₀; w_{ij} + λ_{,ij} \dot{u}₀ + w_{,λ} + λ_{,i}λ_{,j} \ddot{u}₀, V)\\
+%     + λ_{, ij} ℰ_{,uλ}(u₀, λ₀; V) + λ_{, i} ℰ_{,uuλ}(u₀, λ₀; v_j + λ_{,j} \dot{u}₀, V) + λ_{,i} λ_{,j} ℰ_{,uλλ}(u₀, λ₀; V) = 0
+%   \end{gathered}
+% \end{equation}
+\begin{equation}
+  \label{eq:20220901152145}
+  \begin{gathered}[b]
+    ℰ_{,uuu}(u₀, λ₀; v_i , v_j, V) + ℰ_{,uu}(u₀, λ₀; w_{ij}, V)\\
+    +λ_{,i} \bigl[ℰ_{,uuu}(u₀, λ₀; v_j , \dot{u}₀, V) + ℰ_{,uuλ}[u₀, λ₀; v_j, V]\bigr]\\
+    +λ_{,j} \bigl[ℰ_{,uuu}(u₀, λ₀; v_i , \dot{u}₀, V) + ℰ_{,uuλ}(u₀, λ₀; v_i, V)\bigr]\\
+    +λ_{,ij} \bigl[ℰ_{,uu}(u₀, λ₀;  \dot{u}₀, V) + ℰ_{,uλ}(u₀, λ₀; V)\bigr]\\
+    +λ_{,i} λ_{,j}\bigl[ℰ_{,uuu}(u₀, λ₀; \dot{u}₀ , \dot{u}₀, V) + 2ℰ_{,uuλ}(u₀, λ₀; \dot{u}₀, V) + ℰ_{,uλλ}(u₀, λ₀; V) + ℰ_{,uu}(u₀, λ₀; \ddot{u}₀, V)\bigr] = 0
+  \end{gathered}
+\end{equation}
+
+The first term in Eq.~\eqref{eq:20220901152056} vanishes, since \(v_i ∈ V\);
+besides, the last term also vanishes owing to Eq.~\eqref{eq:20220901143843};
+therefore Eq.~\eqref{eq:20220901152056} is non-informative (identically
+satisfied). Similarly, the terms in \(λ_{,ij}\) and \(λ_{,i} λ_{,j}\) in
+Eq.~\eqref{eq:20220901152145} vanish owing to Eqs.~\eqref{eq:20220901143843} and
+\eqref{eq:20220901143902}. Recognizing that the terms in \(λ_{,i}\) and
+\(λ_{,j}\) are in fact derivatives of \(ℰ₂\) \wrt{} \(λ\) and that
+\(ℰ₂(λ₀; w_{ij}, V)=0\) since \(V = \ker ℰ₂\), we get
+\begin{equation}
+    ℰ₃(λ₀; v_i , v_j, V) + λ_{,i} \dot{ℰ}₂(λ₀; v_j, V) + λ_{,j} \dot{ℰ}₂(λ₀; v_i, V) = 0.
+\end{equation}
+
+Since \(v_k ∈ V\), the above equation reads
+\begin{equation}
+  ℰ₃(λ₀; v_i , v_j, v_k) + λ_{,i} \dot{ℰ}₂(λ₀; v_j, v_k) + λ_{,j} \dot{ℰ}₂(λ₀; v_i, v_k) = 0,
+\end{equation}
+or, with Eqs.~\eqref{eq:20220524135619} and \eqref{eq:20220524135643}
+\begin{equation}
+  E_{ijk} +  F_{jk} \frac{∂λ}{∂ξ_i} \biggr\rvert_{ξ_1 = \cdots = ξ_m = 0} + F_{ik} \frac{∂λ}{∂ξ_j} \biggr\rvert_{ξ_1 = \cdots = ξ_m = 0} = 0.
+\end{equation}
+
+The equation satisfied by \(λ_{,ij}\) is obtained by further differentiation of
+Eq.~\eqref{eq:20220901125230} \wrt{} \(ξ^k\)
+\begin{equation*}
+  \begin{gathered}
+    ℰ_{,uuuu}[v_i + w_{,i} + λ_{,i} (\dot{u}^\ast + w_{,λ}), v_j + w_{,j} + λ_{,j} (\dot{u}^\ast + w_{,λ}), v_k + w_{,k} + λ_{,k} (\dot{u}^\ast + w_{,λ}), \hat{v}]\\
+    + λ_{,k} ℰ_{,uuuλ}[v_i + w_{,i} + λ_{,i} (\dot{u}^\ast + w_{,λ}), v_j + w_{,j} + λ_{,j} (\dot{u}^\ast + w_{,λ}), \hat{v}]\\
+    + ℰ_{,uuu}[w_{,ik} + λ_{,i} w_{,kλ} + λ_{,k} w_{,iλ} + λ_{,ik} (\dot{u}^\ast + w_{,λ}) + λ_{,i} λ_{,k}(\ddot{u}^\ast + w_{,λλ}), v_j + w_{,j} + λ_{,j} (\dot{u}^\ast + w_{,λ}), \hat{v}]\\
+    + ℰ_{,uuu}[v_i + w_{,i} + λ_{,i} (\dot{u}^\ast + w_{,λ}), w_{,jk} + λ_{,j} w_{,kλ} + λ_{,k} w_{,jλ} + λ_{,jk} (\dot{u}^\ast + w_{,λ}) + λ_{,j} λ_{,k}(\ddot{u}^\ast + w_{,λλ}), \hat{v}]\\
+    + λ_{,jk}ℰ_{,uuλ}[v_i + w_{,i} + λ_{,i} (\dot{u}^\ast + w_{,λ}), \hat{v}]\\
+    + λ_{,j}ℰ_{,uuuλ}[v_i + w_{,i} + λ_{,i} (\dot{u}^\ast + w_{,λ}), v_k + w_{,k} + λ_{,k} (\dot{u}^\ast + w_{,λ}), \hat{v}]\\
+    + λ_{,j} λ_{,k} ℰ_{,uuλλ}[v_i + w_{,i} + λ_{,i} (\dot{u}^\ast + w_{,λ}), \hat{v}]\\
+    + λ_{,j} ℰ_{,uuλ}[w_{,ik} + λ_{,i} w_{kλ} + λ_{,k} w_{iλ} + λ_{,ik} (\dot{u}^\ast + w_{,λ}) + λ_{,i} λ_{,k} (\ddot{u}^\ast + w_{,λλ}), \hat{v}]\\
+    + ℰ_{,uuu}[w_{,ij} + λ_{,ij} (\dot{u}^\ast + w_{,λ}) + λ_{,i}λ_{,j} (\ddot{u}^\ast + w_{,λλ}), v_k + w_{,k} + λ_{,k} (\dot{u}^\ast + w_{,λ}), \hat{v}]\\
+    + λ_{,k} ℰ_{,uuλ}[w_{,ij} + λ_{,ij} (\dot{u}^\ast + w_{,λ}) + λ_{,i}λ_{,j} (\ddot{u}^\ast + w_{,λλ}), \hat{v}]\\
+    + ℰ_{,uu}[w_{,ijk} + λ_{,k} w_{,ij} + λ_{,ijk} (\dot{u}^\ast + w_{,λ}) + λ_{,ij} w_{,kλ} + \bigl(λ_{,ij} λ_{, k} + λ_{,ik}λ_{,j} + λ_{,jk} λ_{,i}\bigr) (\ddot{u}^\ast + w_{,λλ})\\
+    + λ_{,i}λ_{,j} λ_{,k}(\dddot{u}^\ast + w_{,λλλ}) + λ_{,i} λ_{,j} w_{,kλλ}, \hat{v}]\\
+    + λ_{, ijk} ℰ_{,uλ}(\hat{v}) + λ_{, ij} ℰ_{,uuλ}[v_k + w_{,k} + λ_{,k} (\dot{u}^\ast + w_{,λ}), \hat{v}] +  λ_{,k} λ_{, ij} ℰ_{,uλλ}(\hat{v})\\
+    + λ_{, ik} ℰ_{,uuλ}[v_j + w_{,j} + λ_{,j} (\dot{u}^\ast + w_{,λ}), \hat{v}]\\
+    + λ_{, i} ℰ_{,uuuλ}[v_j + w_{,j} + λ_{,j} (\dot{u}^\ast + w_{,λ}), v_k + w_{,k} + λ_{,k} (\dot{u}^\ast + w_{,λ}), \hat{v}]\\
+    + λ_{, i} λ_{,k} ℰ_{,uuλλ}[v_j + w_{,j} + λ_{,j} (\dot{u}^\ast + w_{,λ}), \hat{v}]\\
+    + λ_{, i} ℰ_{,uuλ}[w_{,jk} + λ_{,k} w_{,jλ}  + λ_{,j} w_{,kλ} + λ_{,jk} (\dot{u}^\ast + w_{,λ}) + λ_{,j} λ_{,k} (\ddot{u}^\ast + w_{,λλ}), \hat{v}]\\
+    + \bigl(λ_{,ik} λ_{,j} + λ_{,i} λ_{,jk}\bigr) ℰ_{,uλλ}(\hat{v})\\
+    + λ_{,i} λ_{,j} ℰ_{,uuλλ}(v_k + w_{,k} + λ_{,k} (\dot{u}^\ast + w_{,λ}), \hat{v})\\
+    + λ_{,i} λ_{,j} λ_{,k} ℰ_{,uλλ}(\hat{v})= 0
+  \end{gathered}
+\end{equation*}
+\begin{equation*}
+  \begin{gathered}
+    ℰ_{,uuuu}[v_i + λ_{,i} \dot{u}₀, v_j + λ_{,j} \dot{u}₀, v_k + λ_{,k} \dot{u}₀, \hat{v}]\\
+    + λ_{,k} ℰ_{,uuuλ}[v_i + λ_{,i} \dot{u}₀, v_j + λ_{,j} \dot{u}₀, \hat{v}]\\
+    + ℰ_{,uuu}[w_{ik} + λ_{,i} w_{kλ} + λ_{,k} w_i + λ_{,ik} \dot{u}₀ + λ_{,i} λ_{,k}\ddot{u}₀, v_j + λ_{,j} \dot{u}₀, \hat{v}]\\
+    + ℰ_{,uuu}[v_i + λ_{,i} \dot{u}₀, w_{jk} + λ_{,j} w_k + λ_{,k} w_j + λ_{,jk} \dot{u}₀ + λ_{,j} λ_{,k}\ddot{u}₀, \hat{v}]\\
+    + λ_{,jk}ℰ_{,uuλ}[v_i + λ_{,i} \dot{u}₀, \hat{v}]\\
+    + λ_{,j}ℰ_{,uuuλ}[v_i + λ_{,i} \dot{u}₀, v_k + λ_{,k} \dot{u}₀, \hat{v}]\\
+    + λ_{,j} λ_{,k} ℰ_{,uuλλ}[v_i + λ_{,i} \dot{u}₀, \hat{v}]\\
+    + λ_{,j} ℰ_{,uuλ}[w_{ik} + λ_{,i} w_k + λ_{,k} w_i + λ_{,ik} \dot{u}₀ + λ_{,i} λ_{,k} \ddot{u}₀, \hat{v}]\\
+    + ℰ_{,uuu}[w_{ij} + λ_{,ij} \dot{u}^\ast + λ_{,i}λ_{,j} \ddot{u}^\ast, v_k + λ_{,k} \dot{u}₀, \hat{v}]\\
+    + λ_{,k} ℰ_{,uuλ}[w_{ij} + λ_{,ij} \dot{u}₀ + λ_{,i}λ_{,j} \ddot{u}₀, \hat{v}]\\
+    + ℰ_{,uu}[w_{,ijk} + λ_{,k} w_{ij} + λ_{,ijk} \dot{u}₀ + λ_{,ij} w_k + \bigl(λ_{,ij} λ_{, k} + λ_{,ik}λ_{,j} + λ_{,jk} λ_{,i}\bigr) \ddot{u}₀ + λ_{,i}λ_{,j} λ_{,k} \dddot{u}₀ + λ_{,i} λ_{,j} w_{,kλλ}, \hat{v}]\\
+    + λ_{, ijk} ℰ_{,uλ}(\hat{v}) + λ_{, ij} ℰ_{,uuλ}[v_k + λ_{,k} \dot{u}₀, \hat{v}] +  λ_{,k} λ_{, ij} ℰ_{,uλλ}(\hat{v})\\
+    + λ_{, ik} ℰ_{,uuλ}[v_j + λ_{,j} \dot{u}₀, \hat{v}]\\
+    + λ_{, i} ℰ_{,uuuλ}[v_j + λ_{,j} \dot{u}₀, v_k + λ_{,k} \dot{u}₀, \hat{v}]\\
+    + λ_{, i} λ_{,k} ℰ_{,uuλλ}[v_j + λ_{,j} \dot{u}₀, \hat{v}]\\
+    + λ_{, i} ℰ_{,uuλ}[w_{jk} + λ_{,k} w_j  + λ_{,j} w_k + λ_{,jk} \dot{u}₀ + λ_{,j} λ_{,k} \ddot{u}₀, \hat{v}]\\
+    + \bigl(λ_{,ik} λ_{,j} + λ_{,i} λ_{,jk}\bigr) ℰ_{,uλλ}(\hat{v})\\
+    + λ_{,i} λ_{,j} ℰ_{,uuλλ}(v_k  + λ_{,k} \dot{u}₀, \hat{v})\\
+    + λ_{,i} λ_{,j} λ_{,k} ℰ_{,uλλ}(\hat{v})= 0
+  \end{gathered}
+\end{equation*}
+
+\begin{equation*}
+  \begin{gathered}
+    ℰ_{,uuuu}[v_i, v_j, v_k, \hat{v}]\\
+    + ℰ_{,uuu}[v_i, w_{jk}, \hat{v}]\\
+    + ℰ_{,uuu}[v_j, w_{ik}, \hat{v}]\\
+    + ℰ_{,uuu}[v_k, w_{ij}, \hat{v}]\\
+
+    + λ_{,i} \bigl[
+    ℰ_{,uuuu}(v_j, v_k, \dot{u}₀, \hat{v})
+    + ℰ_{,uuuλ}(v_j, v_k, \hat{v})
+    + ℰ_{,uuu}(w_k, v_j, \hat{v})
+    + ℰ_{,uuu}(w_{jk}, \dot{u}₀, \hat{v})
+    + ℰ_{,uuλ}(w_{jk}, \hat{v})
+    \bigr]
+
+    + λ_{,j} \bigl[
+    ℰ_{,uuuu}(v_i, v_k, \dot{u}₀, \hat{v})
+    + ℰ_{,uuuλ}(v_i, v_k, \hat{v})
+    + ℰ_{,uuu}(w_k, v_i, \hat{v})
+    + ℰ_{,uuu}(w_{ik}, \dot{u}₀, \hat{v})
+    + ℰ_{,uuλ}(w_{ik}, \hat{v})
+    \bigr]
+
+    + λ_{,k} \bigl[
+    ℰ_{,uuuu}(v_i, v_j, \dot{u}₀, \hat{v})
+    + ℰ_{,uuuλ}(v_i, v_j, \hat{v})
+    + ℰ_{,uuu}(w_i, v_j, \hat{v})
+    + ℰ_{,uuu}(v_i, w_j, \hat{v})
+    + ℰ_{,uuu}(w_{ij}, \dot{u}₀, \hat{v})
+    + ℰ_{,uuλ}(w_{ij}, \hat{v})
+    \bigr]
+
+    + λ_{,i} λ_{,j} ℰ_{,uuuu}[\dot{u}₀, \dot{u}₀, v_k, \hat{v}]\\
+    + λ_{,i} λ_{,j} ℰ_{,uuu}[w_{kλ}, \dot{u}₀, \hat{v}]\\
+    + λ_{,i} λ_{,j} ℰ_{,uuu}[\dot{u}₀, w_k, \hat{v}]\\
+    + λ_{,i} λ_{,j} ℰ_{,uuλ}[w_k, \hat{v}]\\
+    + λ_{,i} λ_{,j} ℰ_{,uuuλ}[\dot{u}₀, v_k, \hat{v}]\\
+    + λ_{,i} λ_{,j} ℰ_{,uuλ}[w_k, \hat{v}]\\
+    + λ_{,i} λ_{,j} ℰ_{,uuu}[\ddot{u}₀, v_k, \hat{v}]\\
+    + λ_{,i} λ_{,j} ℰ_{,uuuλ}[\dot{u}₀, v_k, \hat{v}]\\
+    + λ_{,i} λ_{,j} ℰ_{,uuλλ}(v_k, \hat{v}) \\
+
+    + λ_{,k} λ_{,j} ℰ_{,uuuλ}[v_i, \dot{u}₀, \hat{v}]\\
+    + λ_{,j} λ_{,k} ℰ_{,uuu}[v_i, \ddot{u}₀, \hat{v}]\\
+    + λ_{,j} λ_{,k} ℰ_{,uuλ}[ w_i, \hat{v}]\\
+    + λ_{,j} λ_{,k} ℰ_{,uuuλ}[v_i, \dot{u}₀, \hat{v}]\\
+    + λ_{,j} λ_{,k} ℰ_{,uuu}[w_i, \dot{u}₀, \hat{v}]\\
+    + λ_{,j} λ_{,k} ℰ_{,uuλλ}(v_k, \hat{v}) \\
+    + λ_{,j} λ_{,k} ℰ_{,uuuu}[v_i, \dot{u}₀, \dot{u}₀, \hat{v}]\\
+
+    + λ_{,i} λ_{,k} ℰ_{,uuu}[\dot{u}₀, w_j, \hat{v}]\\
+    + λ_{,i} λ_{,k} ℰ_{,uuuλ}[v_j,  \dot{u}₀, \hat{v}]\\
+    + λ_{,i} λ_{,k} ℰ_{,uuλ}[w_j, \hat{v}]\\
+    + λ_{,i} λ_{,k} ℰ_{,uuλλ}(v_k, \hat{v}) \\
+    + λ_{,i} λ_{,k} ℰ_{,uuuλ}[\dot{u}₀, v_j, \hat{v}]\\
+    + λ_{,i} λ_{,k} ℰ_{,uuuu}[\dot{u}₀, v_j, \dot{u}₀, \hat{v}]\\
+    + λ_{,i} λ_{,k} ℰ_{,uuu}[\ddot{u}₀, v_j, \hat{v}]\\
+
+    + λ_{,ij} ℰ_{,uuu}[v_k, \dot{u}₀, \hat{v}]\\
+    + λ_{,ij} ℰ_{,uuλ}[v_k, \dot{u}₀, \hat{v}]\\
+
+    + λ_{,jk} ℰ_{,uuu}[v_i, \dot{u}₀, \hat{v}]\\
+    + λ_{,jk} ℰ_{,uuλ}[v_i, \hat{v}]\\
+
+    + λ_{,ik} ℰ_{,uuu}[v_j, \dot{u}₀, \hat{v}]\\
+    + λ_{,ik} ℰ_{,uuλ}[v_j, \hat{v}]\\
+
+    + λ_{,i} λ_{,jk} \bigl[ ℰ_{,uuu}(\dot{u}₀, \dot{u}₀, \hat{v}) + 2ℰ_{,uuλ}(\dot{u}₀, \hat{v}) + ℰ_{,uλλ}(\hat{v}) \bigr]\\
+    + λ_{,j} λ_{,ik} \bigl[ ℰ_{,uuu}(\dot{u}₀, \dot{u}₀, \hat{v}) + 2ℰ_{,uuλ}(\dot{u}₀, \hat{v}) +  ℰ_{,uλλ}(\hat{v})\bigr]\\
+    + λ_{,k} λ_{,ij} \bigl[ ℰ_{,uuu}[\dot{u}₀, \dot{u}₀, \hat{v}] + 2ℰ_{,uuλ}(\dot{u}₀, \hat{v}) + ℰ_{,uλλ}(\hat{v}) \bigr]\\
+
+    + λ_{, ijk} ℰ_{,uλ}(\hat{v})\\
+
+    + λ_{,i} λ_{,j} λ_{,k} \bigl[ℰ_{,uuuu}[\dot{u}₀, \dot{u}₀, \dot{u}₀, \hat{v}] + 3ℰ_{,uuu}(\ddot{u}₀,  \dot{u}₀, \hat{v}) + 3ℰ_{,uuuλ}(\dot{u}₀, \dot{u}₀, \hat{v}) + 3ℰ_{,uuλ}(\ddot{u}₀, \hat{v}) + 3ℰ_{,uuλλ}(\dot{u}₀, \hat{v}) + ℰ_{,uλλ}(\hat{v})\bigr] = 0
+  \end{gathered}
+\end{equation*}
+
+
+\subsection{Alternative route to the asymptotic expansions}
 
 On écrit toute courbe d'équilibre passant par le point \((u₀, λ₀)\) sous la
 forme paramétrique suivante

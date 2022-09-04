@@ -1,6 +1,6 @@
 # Notes on the Lyapunov–Schmidt–Koiter method
 
-- 04/09/2022
+## Notes du 04/09/2022
 
 Il est plus naturel de définir les `wᵢ` par le problème variationnel suivant
 
@@ -14,7 +14,16 @@ Cela revient à remplacer toutes les anciennes occurrence de `wᵢ` par `2wᵢ`
 
     wᵢᵒˡᵈ = 2wᵢⁿᵉʷ
 
-Je crée une branche `new_w_i` dans laquelle les modifications seront apportées.
+Je crée une branche `new_w_i` dans laquelle les modifications seront
+apportées. La dernière version utilisant intégralement l'ancienne convention
+(en-dehors du paragraphe sur la décomposition de Lyapunov–Schmidt) est la
+version
+
+    ca202de (ca202de1d50a6b3e542b873c341e3c17730c5cab)
+
+Je sauvegarde le fichier PDF correspondant sous le nom
+
+    lsk-notes-ca202de.pdf
 
 <!-- Local Variables: -->
 <!-- fill-column: 80 -->

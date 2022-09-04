@@ -34,7 +34,7 @@
 \setmathfont{Asana Math}
 
 \newcommand{\D}{\mathrm{d}}
-\newcommand{\order}[1]{\RN{#1}}
+\newcommand{\order}[2][1]{#2^{(#1)}}
 \newcommand{\reals}{\mathbb{R}}
 \newcommand{\wrt}{w.r.t.}
 
@@ -515,7 +515,7 @@ or, with Eqs.~\eqref{eq:20220524135619} and \eqref{eq:20220524135643}
 
 In order to evaluate the second order partial derivatives of \(λ\),
 Eq.~\eqref{eq:20220901125230} should be further differentiated with respect to
-\(ξ^k\). This leads to extremely tedious derivations, and we will adopt an
+\(ξ_k\). This leads to extremely tedious derivations, and we will adopt an
 alternative approach in Sec.~\ref{sec:20220902092109}.
 
 \paragraph{Step 3: parametrization of the bifurcated branch} The bifurcated
@@ -523,26 +523,26 @@ branch is a curve \((u, λ) ∈ ℝ ^ {m + 1}\), which is parametrized by \(η\)
 \([u(η), λ(η)]\), with \(u(0) = u₀\) and \(λ(0) = λ₀\); primed quantities
 denoting derivatives with respect to \(η\), we introduce
 \begin{equation}
-  ξ_i^{\order{1}} = ξ_i'(0), \quad
-  ξ_i^{\order{2}} = ξ_i''(0), \quad \ldots, \quad
-  λ^{\order{1}} = λ'(0), \quad \ldots
+  \order[1]{ξ_i} = ξ_i'(0), \quad
+  \order[2]{ξ_i} = ξ_i''(0), \quad \ldots, \quad
+  \order[1]{λ} = λ'(0), \quad \ldots
 \end{equation}
 and first observe that
 \begin{equation}
-  λ^{\order{1}} = ξ_i^{\order{1}} \frac{∂λ}{∂ξ_i} \biggr\rvert_{ξ_1 = \cdots = ξ_m = 0}
+  \order[1]{λ} = \order[1]{ξ_i} \frac{∂λ}{∂ξ_i} \biggr\rvert_{ξ_1 = \cdots = ξ_m = 0}
 \end{equation}
 
 Multiplying both sides of Eq.~\eqref{eq:20220902125031} by
-\(ξ_i^{\order{1}}ξ_j^{\order{1}}\) therefore results in the following identity
+\(\order[1]{ξ_i} \order{1}{ξ_j}\) therefore results in the following identity
 \begin{equation}
   \begin{aligned}[b]
-    0 &= E_{ijk} ξ_i^{\order{1}} ξ_j^{\order{1}} +  F_{jk} ξ_i^{\order{1}} ξ_j^{\order{1}} \frac{∂λ}{∂ξ_i} \biggr\rvert_{ξ_1 = \cdots = ξ_m = 0} + F_{ik} ξ_i^{\order{1}} ξ_j^{\order{1}} \frac{∂λ}{∂ξ_j} \biggr\rvert_{ξ_1 = \cdots = ξ_m = 0}\\
-    &= E_{ijk} ξ_i^{\order{1}} ξ_j^{\order{1}} +  F_{jk} λ^{\order{1}} ξ_j^{\order{1}} + F_{ik} ξ_i^{\order{1}} λ^{\order{1}}
+    0 &= E_{ijk} \order[1]{ξ_i} \order[1]{ξ_j} +  F_{jk} \order[1]{ξ_i} \order[1]{ξ_j} \frac{∂λ}{∂ξ_i} \biggr\rvert_{ξ_1 = \cdots = ξ_m = 0} + F_{ik} \order[1]{ξ_i} \order[1]{ξ_j} \frac{∂λ}{∂ξ_j} \biggr\rvert_{ξ_1 = \cdots = ξ_m = 0}\\
+    &= E_{ijk} \order[1]{ξ_i} \order[1]{ξ_j} +  F_{jk} \order[1]{λ} \order[1]{ξ_j} + F_{ik} \order[1]{ξ_i} \order[1]{λ}
   \end{aligned}
 \end{equation}
 and, rearranging
 \begin{equation}
-  E_{ijk} ξ_j^{\order{1}} ξ_k^{\order{1}} +  2 λ^{\order{1}} F_{ij}  ξ_j^{\order{1}} = 0,
+  E_{ijk} \order[1]{ξ_j} \order[1]{ξ_k} +  2 \order[1]{λ} F_{ij}  \order[1]{ξ_j} = 0,
 \end{equation}
 to be compared with Eq.~\eqref{eq:20220524135036}. We now turn to \(w\)
 \begin{equation}
@@ -552,11 +552,11 @@ to be compared with Eq.~\eqref{eq:20220524135036}. We now turn to \(w\)
 \end{equation}
 and, at \(η = 0\)
 \begin{equation}
-  w'(0) = 0 \quad \text{and} \quad w''(0) = ξ_i^{\order{1}} ξ_j^{\order{2}} w_{ij}  + 2 λ^{\order{1}} ξ_i^{\order{1}} w_i
+  w'(0) = 0 \quad \text{and} \quad w''(0) = \order[1]{ξ_i} \order[1]{ξ_j} w_{ij}  + 2 \order[1]{λ} \order[1]{ξ_i} w_i
 \end{equation}
 and we get the Taylor expansion of the bifurcated branch as \(η → 0\)
 \begin{equation}
-  u(η) = u^\ast[λ(η)] + ξ_i^{\order{1}} v_i + \tfrac{1}{2} \bigl( ξ_i^{\order{2}} v_i + ξ_i^{\order{1}} ξ_j^{\order{2}} w_{ij}  + 2λ^{\order{1}} ξ_i^{\order{1}} w_i\bigr) + o(η²),
+  u(η) = u^\ast[λ(η)] + \order[1]{ξ_i} v_i + \tfrac{1}{2} \bigl( \order[2]{ξ_i} v_i + \order[1]{ξ_i} \order[1]{ξ_j} w_{ij}  + 2\order[1]{λ} \order[1]{ξ_i} w_i\bigr) + o(η²),
 \end{equation}
 to be compared with Eq.~\eqref{eq:20220524134613}.
 
@@ -567,15 +567,14 @@ Following the Appendix A of Ref.~\parencite{chak2018}, we introduce the
 following parametrization of the bifurcated branch
 \begin{align}
   \label{eq:20211115075817}
-  λ &=  λ₀ + η λ₁ + \tfrac{1}{2} η² λ₂ + \tfrac{1}{6} η³ λ₃ + \cdots,\\
+  λ &=  λ₀ + η \order[1]{λ} + \tfrac{1}{2} η² \order[2]{λ} + \tfrac{1}{6} η³ \order[3]{λ} + \cdots,\\
   \label{eq:20211115075835}
-  u &= u^{\ast}(λ) + η u₁ + \tfrac{1}{2} η² u₂ + \tfrac{1}{6} η³ u₃ + \cdots,
+  u &= u^{\ast}(λ) + η \order[1]{u} + \tfrac{1}{2} η² \order[2]{u} + \tfrac{1}{6} η³ \order[3]{u} + \cdots,
 \end{align}
 where the parameter \(η\) is not specified, but for the fact that \(η = 0\)
-corresponds to the critical point \((u₀, λ₀)\). Note that, similarly to the
-Lyapunov–Schmidt decomposition~\eqref{eq:20220902174235}, the bifurcated branch
-\(u(λ)\) is compared to the fundamental branch \(u^\ast(λ)\), rather than with
-the critical point \(u₀\).
+corresponds to the critical point \((u₀, λ₀)\). Note that, in
+Eq.~\eqref{eq:20211115075835}, \(u^\ast\) is evaluated at \(λ\) rather than
+\(λ_0\).
 
 Les coefficients \(λ_k\) et \(u_k\) des développements~\eqref{eq:20211115075817}
 et \eqref{eq:20211115075835} sont identifiés en écrivant que l'énergie est
@@ -586,92 +585,92 @@ au voisinage de \(η = 0\) dans l'annexe~\ref{sec:20211112182000} [voir
 trouve successivement, pour tout \(\hat{u}∈U\)
 \begin{equation}
   \label{eq:20211112182917}
-  ℰ₂(λ₀; u₁, \hat{u}) = 0,
+  ℰ₂(λ₀; \order[1]u, \hat{u}) = 0,
 \end{equation}
 \begin{equation}
   \label{eq:20220524133447}
-  ℰ₃(λ₀; u₁, u₁, \hat{u}) + 2λ₁\dot{ℰ}₂(λ₀; u₁, \hat{u}) + ℰ₂(λ₀; u₂, \hat{u}) = 0,
+  ℰ₃(λ₀; \order[1]u, \order[1]u, \hat{u}) + 2\order[1]λ\dot{ℰ}₂(λ₀; \order[1]u, \hat{u}) + ℰ₂(λ₀; \order[2]u, \hat{u}) = 0,
 \end{equation}
 \begin{equation}
   \label{eq:20220708060436}
   \begin{aligned}[b]
-    ℰ₄(λ₀; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ₀; u₁, u₂, \hat{u}) + ℰ₂(λ₀; u₃, \hat{u})&\\
-    + 3λ₁\dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + 3λ₁\dot{ℰ}₂(λ₀;  u₂, \hat{u})&\\
-    + 3λ₁²\ddot{ℰ}₂(λ₀; u₁, \hat{u}) + 3λ₂\dot{ℰ}₂(λ₀; u₁, \hat{u}) & = 0.
+    ℰ₄(λ₀; \order[1]u, \order[1]u, \order[1]u, \hat{u}) + 3ℰ₃(λ₀; \order[1]u, \order[2]u, \hat{u}) + ℰ₂(λ₀; \order[3]u, \hat{u})&\\
+    + 3\order[1]λ\dot{ℰ}₃(λ₀; \order[1]u, \order[1]u, \hat{u}) + 3\order[1]λ\dot{ℰ}₂(λ₀;  \order[2]u, \hat{u})&\\
+    + 3(\order[1]λ)^2\ddot{ℰ}₂(λ₀; \order[1]u, \hat{u}) + 3\order[2]λ\dot{ℰ}₂(λ₀; \order[1]u, \hat{u}) & = 0.
   \end{aligned}
 \end{equation}
-On déduit de l'équation~\eqref{eq:20211112182917} que \(u₁∈V\). En prenant la
+On déduit de l'équation~\eqref{eq:20211112182917} que \(\order[1]u∈V\). En prenant la
 fonction test également dans \(V\), on déduit de
-l'équation~\eqref{eq:20220524133447} que \(u₁\) est solution du problème
-suivant~: trouver \(u₁∈V\) tel que
+l'équation~\eqref{eq:20220524133447} que \(\order[1]u\) est solution du problème
+suivant~: trouver \(\order[1]u∈V\) tel que
 \begin{equation}
   \label{eq:20220524133816}
-  \tfrac{1}{2} ℰ₃(λ₀; u₁, u₁, \hat{v}) + λ₁\dot{ℰ}₂(λ₀; u₁, \hat{v}) = 0,
+  \tfrac{1}{2} ℰ₃(λ₀; \order[1]u, \order[1]u, \hat{v}) + \order[1]λ\dot{ℰ}₂(λ₀; \order[1]u, \hat{v}) = 0,
 \end{equation}
 pour tout \(\hat{v}∈V\). The above problem can be transformed into a system of
-scalar equations. Indeed, expanding the \(u₁∈V\) in the basis
+scalar equations. Indeed, expanding the \(\order[1]u∈V\) in the basis
 \((v_i)_{1 ≤ i ≤ m}\) as follows
 \begin{equation}
   \label{eq:20220524133944}
-  u₁ = ξ₁^i v_i
+  \order[1]u = \order[1]{ξ_i} v_i
 \end{equation}
 and plugging the definitions~\eqref{eq:20220524135619} and
 \eqref{eq:20220524135643} of \(E_{ijk}\) and \(F_{ij}\) into
 Eq.~\eqref{eq:20220524133816}
 \begin{equation}
   \label{eq:20220524135036}
-  \tfrac{1}{2} E_{ijk} ξ₁^j ξ₁^k + λ₁ F_{ij} ξ₁^j = 0.
+  \tfrac{1}{2} E_{ijk} \order[1]{ξ_j} \order[1]{ξ_k} + \order[1]λ F_{ij} \order[1]{ξ_j} = 0.
 \end{equation}
 
 On obtient ainsi un système de \(m\) équations quadratiques à \((m + 1)\)
-inconnues, qui permet en général de déterminer les valeurs de \(λ₁\) et
-\(u₁\)(\pdfmarkupcomment{voir discussion ci-après}{Compléter référence}).
+inconnues, qui permet en général de déterminer les valeurs de \(\order[1]λ\) et
+\(\order[1]u\)(\pdfmarkupcomment{voir discussion ci-après}{Compléter référence}).
 
 Afin de déterminer les termes suivants du développement asymptotique de la
-branche bifurquée, soit \(λ₂\) et \(u₂\), on introduit la décomposition
+branche bifurquée, soit \(\order[2]λ\) et \(\order[2]u\), on introduit la décomposition
 \begin{equation}
-  u₂ = ξ₂^i v_i + \tilde{u}₂,
+  \order[2]u = \order[2]{ξ_i} v_i + \order[2]w,
 \end{equation}
-où \(\tilde{u}₂∈W\) est la projection orthogonale de \(u₂\) sur \(W\). On a
-alors \(ℰ₂(u₂, \hat{u}) =ℰ₂(\tilde{u}₂, \hat{u})\) et
+où \(\order[2]w ∈ W\) est la projection orthogonale de \(\order[2]u\) sur
+\(W\). On a alors \(ℰ₂(\order[2]u, \hat{u}) =ℰ₂(\order[2]{w}, \hat{u})\) et
 l'équation~\eqref{eq:20220524133447} s'écrit
 \begin{equation}
- ℰ₃(λ₀; u₁, u₁, \hat{u}) + 2λ₁ \dot{ℰ}₂(λ₀; u₁, \hat{u}) + ℰ₂(λ₀; \tilde{u}₂, \hat{u}) = 0,
+ ℰ₃(λ₀; \order[1]u, \order[1]u, \hat{u}) + 2\order[1]λ \dot{ℰ}₂(λ₀; \order[1]u, \hat{u}) + ℰ₂(λ₀; \order[2]w, \hat{u}) = 0,
 \end{equation}
 pour tout \(\hat{u}∈U\). En prenant cette fois-ci la fonction test dans l'espace
-\(W\), on obtient le problème variationnel suivant~: trouver \(\tilde{u}₂∈W\)
+\(W\), on obtient le problème variationnel suivant~: trouver \(\order[2]w∈W\)
 tel que
 \begin{equation}
   \label{eq:20211210131623}
-  ℰ₂(λ₀; \tilde{u}₂, \hat{w}) + ξ₁^i ξ₁^j ℰ₃(λ₀; v_i, v_j, \hat{w}) + 2λ₁ ξ₁^i \dot{ℰ}₂(λ₀; v_i, \hat{w}) = 0,
+  ℰ₂(λ₀; \order[2]w, \hat{w}) + \order[1]{ξ_i} \order[1]{ξ_j} ℰ₃(λ₀; v_i, v_j, \hat{w}) + 2\order[1]λ \order[1]{ξ_i} \dot{ℰ}₂(λ₀; v_i, \hat{w}) = 0,
 \end{equation}
 pour tout \(\hat{w}∈W\). The solution to the variational
 problem~\eqref{eq:20211210131623} is expressed as a linear combination of the
 \(w_i\) and \(w_{ij}\) [defined by the variational
-problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}]: \(\tilde{u}₂ = ξ₁^i ξ₁^j w_{ij} + λ₁ ξ₁^i w_i\) and
+problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}]: \(\order[2]w = \order[1]{ξ_i} \order[1]{ξ_j} w_{ij} + 2\order[1]λ \order[1]{ξ_i} w_i\) and
 \begin{equation}
   \label{eq:20220524134613}
-  u₂ = ξ₂^i v_i + ξ₁^i ξ₁^j w_{ij} + λ₁ ξ₁^i w_i.
+  \order[2]u = \order[2]{ξ_i} v_i + \order[1]{ξ_i} \order[1]{ξ_j} w_{ij} + 2\order[1]λ \order[1]{ξ_i} w_i.
 \end{equation}
 
 Plugging expressions~\eqref{eq:20220524133944} and \eqref{eq:20220524134613}
 into Eq.~\eqref{eq:20220708060436} and taking further \(\hat{u} = v_i\)
 [remember that \(ℰ₂(λ₀; v_i, •) = 0\)], we then get
 % \begin{multline*}
-%   ℰ₄(λ₀; v_i, ξ₁^j v_j, ξ₁^k v_k, ξ₁^l v_l) + 3ℰ₃(λ₀; v_i, ξ₁^j v_j, ξ₂^k v_k + ξ₁^k ξ₁^l w_{kl} + λ₁ ξ₁^k w_k)\\
-%   + 3λ₁ \dot{ℰ}₃(λ₀; v_i, ξ₁^j v_j, ξ₁^k v_k) + 3λ₁ \dot{ℰ}₂(λ₀; v_i, ξ₂^j v_j + ξ₁^j ξ₁^k w_{jk} + λ₁ ξ₁^j w_j)\\
-%   + 3λ₁² \ddot{ℰ}₂(λ₀; v_i, ξ₁^j v_j) + 3λ₂ \dot{ℰ}₂(λ₀; v_i, ξ₁^j v_j) = 0
+%   ℰ₄(λ₀; v_i, \order[1]{ξ_j} v_j, \order[1]{ξ_k} v_k, \order[1]{ξ_l} v_l) + 3ℰ₃(λ₀; v_i, \order[1]{ξ_j} v_j, \order[2]{ξ_k} v_k + \order[1]{ξ_k} \order[1]{ξ_l} w_{kl} + \order[1]λ \order[1]{ξ_k} w_k)\\
+%   + 3\order[1]λ \dot{ℰ}₃(λ₀; v_i, \order[1]{ξ_j} v_j, \order[1]{ξ_k} v_k) + 3\order[1]λ \dot{ℰ}₂(λ₀; v_i, \order[2]{ξ_j} v_j + \order[1]{ξ_j} \order[1]{ξ_k} w_{jk} + \order[1]λ \order[1]{ξ_j} w_j)\\
+%   + 3\bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(λ₀; v_i, \order[1]{ξ_j} v_j) + 3\order[2]λ \dot{ℰ}₂(λ₀; v_i, \order[1]{ξ_j} v_j) = 0
 % \end{multline*}
 % \begin{multline*}
-%   ℰ₄(λ₀; v_i, v_j, v_k, v_l) ξ₁^j ξ₁^k ξ₁^l + 3ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^j ξ₂^k + 3ℰ₃(λ₀; v_i, v_j, w_{kl}) ξ₁^j ξ₁^k ξ₁^l\\
-%   + 3λ₁ ℰ₃(λ₀; v_i, v_j, w_k) ξ₁^j ξ₁^k + 3λ₁ \dot{ℰ}₃(λ₀; v_i, v_j, v_k) ξ₁^j ξ₁^k + 3λ₁ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₂^j\\
-%   + 3λ₁ \dot{ℰ}₂(λ₀; v_i, w_{jk}) ξ₁^j ξ₁^k + 3λ₁² \dot{ℰ}₂(λ₀; v_i, w_j) ξ₁^j + 3λ₁² \ddot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j + 3λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j = 0
+%   ℰ₄(λ₀; v_i, v_j, v_k, v_l) \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} + 3ℰ₃(λ₀; v_i, v_j, v_k) \order[1]{ξ_j} \order[2]{ξ_k} + 3ℰ₃(λ₀; v_i, v_j, w_{kl}) \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+%   + 3\order[1]λ ℰ₃(λ₀; v_i, v_j, w_k) \order[1]{ξ_j} \order[1]{ξ_k} + 3\order[1]λ \dot{ℰ}₃(λ₀; v_i, v_j, v_k) \order[1]{ξ_j} \order[1]{ξ_k} + 3\order[1]λ \dot{ℰ}₂(λ₀; v_i, v_j) \order[2]{ξ_j}\\
+%   + 3\order[1]λ \dot{ℰ}₂(λ₀; v_i, w_{jk}) \order[1]{ξ_j} \order[1]{ξ_k} + 3\bigl( \order[1]λ \bigr)^2 \dot{ℰ}₂(λ₀; v_i, w_j) \order[1]{ξ_j} + 3\bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(λ₀; v_i, v_j) \order[1]{ξ_j} + 3\order[2]λ \dot{ℰ}₂(λ₀; v_i, v_j) \order[1]{ξ_j} = 0
 % \end{multline*}
 \begin{multline*}
-  \bigl[ℰ₄(λ₀; v_i, v_j, v_k, v_l) + 3ℰ₃(λ₀; v_i, v_j, w_{kl})\bigr] ξ₁^j ξ₁^k ξ₁^l\\
-  + 3λ₁ \bigl[ℰ₃(λ₀; v_i, v_j, w_k) + \dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ}₂(λ₀; v_i, w_{jk}) \bigr] ξ₁^j ξ₁^k\\
-  + 3\bigl[λ₁² \dot{ℰ}₂(λ₀; v_i, w_j) + λ₁² \ddot{ℰ}₂(λ₀; v_i, v_j) + λ₂ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] ξ₁^j\\
-  + 3\bigl[ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] ξ₂^j = 0
+  \bigl[ℰ₄(λ₀; v_i, v_j, v_k, v_l) + 3ℰ₃(λ₀; v_i, v_j, w_{kl})\bigr] \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+  + 3\order[1]λ \bigl[ℰ₃(λ₀; v_i, v_j, w_k) + \dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ}₂(λ₀; v_i, w_{jk}) \bigr] \order[1]{ξ_j} \order[1]{ξ_k}\\
+  + 3\bigl[\bigl(\order[1]λ\bigr)^2 \dot{ℰ}₂(λ₀; v_i, w_j) + \bigl(\order[1]λ\bigr)^2 \ddot{ℰ}₂(λ₀; v_i, v_j) + \order[2]λ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] \order[1]{ξ_j}\\
+  + 3\bigl[ℰ₃(λ₀; v_i, v_j, v_k) \order[1]{ξ_k} + \order[1]λ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] \order[2]{ξ_j} = 0
 \end{multline*}
 It results from the variational problems \eqref{eq:20220524134525} and
 \eqref{eq:20220519164523} that
@@ -681,8 +680,8 @@ It results from the variational problems \eqref{eq:20220524134525} and
 therefore
 \begin{equation*}
   \begin{aligned}[b]
-    ℰ₃(λ₀; v_i, v_j, w_k) ξ₁^j ξ₁^k &= \tfrac{1}{2} \bigl[ ℰ₃(λ₀; v_i, v_j, w_k) + ℰ₃(λ₀; v_i, v_k, w_j)\bigr] ξ₁^j ξ₁^k\\
-                                    &= \bigl[ \dot{ℰ}₂(λ₀; v_k, w_{ij}) + \dot{ℰ}₂(λ₀; v_j, w_{ik}) \bigr] ξ₁^j ξ₁^k.
+    ℰ₃(λ₀; v_i, v_j, w_k) \order[1]{ξ_j} \order[1]{ξ_k} &= \tfrac{1}{2} \bigl[ ℰ₃(λ₀; v_i, v_j, w_k) + ℰ₃(λ₀; v_i, v_k, w_j)\bigr] \order[1]{ξ_j} \order[1]{ξ_k}\\
+                                    &= \bigl[ \dot{ℰ}₂(λ₀; v_k, w_{ij}) + \dot{ℰ}₂(λ₀; v_j, w_{ik}) \bigr] \order[1]{ξ_j} \order[1]{ξ_k}.
   \end{aligned}
 \end{equation*}
 Similarly,
@@ -693,10 +692,10 @@ Similarly,
   \end{aligned}
 \end{equation*}
 % \begin{multline*}
-%   \bigl[ℰ₄(λ₀; v_i, v_j, v_k, v_l) + ℰ₃(λ₀; v_i, v_j, w_{kl}) + ℰ₃(λ₀; v_i, v_k, w_{jl}) + ℰ₃(λ₀; v_i, v_l, w_{jk}) \bigr] ξ₁^j ξ₁^k ξ₁^l\\
-%   + 3λ₁ \bigl[\dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ}₂(λ₀; v_i, w_{jk}) + \dot{ℰ}₂(λ₀; v_j, w_{ik}) + \dot{ℰ}₂(λ₀; v_k, w_{ij}) \bigr] ξ₁^j ξ₁^k\\
-%   + 3λ₁² \bigl\{ \ddot{ℰ}₂(λ₀; v_i, v_j) + \tfrac{1}{2} \bigl[ \dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i) \bigr] \bigr\} ξ₁^j\\
-%   + 3\bigl[ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] ξ₂^j + 3λ₂ \dot{ℰ}₂(λ₀; v_i, v_j) ξ₁^j = 0
+%   \bigl[ℰ₄(λ₀; v_i, v_j, v_k, v_l) + ℰ₃(λ₀; v_i, v_j, w_{kl}) + ℰ₃(λ₀; v_i, v_k, w_{jl}) + ℰ₃(λ₀; v_i, v_l, w_{jk}) \bigr] \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+%   + 3\order[1]λ \bigl[\dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ}₂(λ₀; v_i, w_{jk}) + \dot{ℰ}₂(λ₀; v_j, w_{ik}) + \dot{ℰ}₂(λ₀; v_k, w_{ij}) \bigr] \order[1]{ξ_j} \order[1]{ξ_k}\\
+%   + 3\bigl( \order[1]λ \bigr)^2 \bigl\{ \ddot{ℰ}₂(λ₀; v_i, v_j) + \tfrac{1}{2} \bigl[ \dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i) \bigr] \bigr\} \order[1]{ξ_j}\\
+%   + 3\bigl[ℰ₃(λ₀; v_i, v_j, v_k) \order[1]{ξ_k} + \order[1]λ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] \order[2]{ξ_j} + 3\order[2]λ \dot{ℰ}₂(λ₀; v_i, v_j) \order[1]{ξ_j} = 0
 % \end{multline*}
 
 Finally, the definitions \eqref{eq:20220615063626}, \eqref{eq:20220615063633},
@@ -706,7 +705,7 @@ Finally, the definitions \eqref{eq:20220615063626}, \eqref{eq:20220615063633},
 bifurcation equation
 \begin{equation}
   \label{eq:20220601070917}
-  \tfrac{1}{3} E_{ijkl} ξ₁^j ξ₁^k ξ₁^l + λ₁ \bigl( \mathring{E}_{ijk} ξ₁^k + λ₁ \mathring{F}_{ij} \bigr)ξ₁^j + \bigl(E_{ijk} ξ₁^k + λ₁ F_{ij}\bigr) ξ₂^j + λ₂ F_{ij} ξ₁^j = 0.
+  \tfrac{1}{3} E_{ijkl} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} + \order[1]λ \bigl( \mathring{E}_{ijk} \order[1]{ξ_k} + \order[1]λ \mathring{F}_{ij} \bigr)\order[1]{ξ_j} + \bigl(E_{ijk} \order[1]{ξ_k} + \order[1]λ F_{ij}\bigr) \order[2]{ξ_j} + \order[2]λ F_{ij} \order[1]{ξ_j} = 0.
 \end{equation}
 
 In order to analyse the stability of the bifurcated branches thus found, one
@@ -726,9 +725,9 @@ Hessian of the energy along the bifurcated branch is derived in
 appendix~\ref{sec:20220616055207}. For all \(\hat{u}, \hat{v}∈U\)
 \begin{multline}
   \label{eq:20220531054247}
-  ℰ_{, uu}[u(η), λ(η); \hat{u}, \hat{v}] = ℰ₂(λ₀ ; \hat{u}, \hat{v}) + η \bigl[ℰ₃(λ₀ ; u₁, \hat{u}, \hat{v})  + λ₁ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v})\bigr]\\
-  + \tfrac{1}{2} η² \bigl[ℰ₄(λ₀; u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(λ₀; u₂, \hat{u}, \hat{v}) + 2λ₁ \dot{ℰ}₃(λ₀; u₁, \hat{u}, \hat{v})\\
-  + λ₁² \ddot{ℰ}₂(λ₀; \hat{u}, \hat{v}) + λ₂ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v}) \bigr] + o(η²).
+  ℰ_{, uu}[u(η), λ(η); \hat{u}, \hat{v}] = ℰ₂(λ₀ ; \hat{u}, \hat{v}) + η \bigl[ℰ₃(λ₀ ; \order[1]u, \hat{u}, \hat{v})  + \order[1]λ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v})\bigr]\\
+  + \tfrac{1}{2} η² \bigl[ℰ₄(λ₀; \order[1]u, \order[1]u, \hat{u}, \hat{v}) + ℰ₃(λ₀; \order[2]u, \hat{u}, \hat{v}) + 2\order[1]λ \dot{ℰ}₃(λ₀; \order[1]u, \hat{u}, \hat{v})\\
+  + \bigl(\order[1]λ\bigr)² \ddot{ℰ}₂(λ₀; \hat{u}, \hat{v}) + \order[2]λ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v}) \bigr] + o(η²).
 \end{multline}
 
 Stability analysis is performed by means of the eigenvalues \(α ∈ \reals\) and
@@ -740,33 +739,36 @@ eigenvectors \(x ∈ U\) of the Hessian
 where \(α\) and \(x\) are expanded to second order in \(η\)
 \begin{equation}
   \label{eq:20220617064633}
-  α = α₀ + η α₁ + \tfrac{1}{2} η² α₂ + o(η²)
+  α = \order[0]α + η \order[1]α + \tfrac{1}{2} η² \order[2]α + o(η²)
   \quad \text{and} \quad
-  x = x₀ + η x₁ + \tfrac{1}{2} η² x₂ + o(η²).
+  x = \order[0]x + η \order[1]x + \tfrac{1}{2} η² \order[2]x + o(η²).
 \end{equation}
 
 The following results are proved in Appendix~\ref{sec:20220616074108}: first,
-\((α₀, x_0)\) is necessarily an eigenpair of \(ℰ₂(λ₀)\). Since \(ℰ₂ (λ₀)\) is
-positive, \(α₀ ≥ 0\). If \(α₀>0\), then \(α>0\) in the neighborhood of
-\(λ₀\). Potentially unstable modes are therefore such that \(α₀=0\). In other
-words, \(x₀ ∈ V\); furthermore, \((α₁, χ₀^i)\) is an eigenpair of the symmetric
-tensor \((E_{ijk} ξ₁^k + λ₁ F_{ij})\)
+\((\order[0]α, x_0)\) is necessarily an eigenpair of \(ℰ₂(λ₀)\). Since \(ℰ₂ (λ₀)\) is
+positive, \(\order[0]α ≥ 0\). If \(\order[0]α>0\), then \(α>0\) in the neighborhood of
+\(λ₀\). Potentially unstable modes are therefore such that \(\order[0]α=0\). In other
+words, \(\order[0]x ∈ V\) and
+\begin{equation}
+  \label{eq:20220904160057}
+  \order[0]x = \order[0]{χ_i} v_i
+\end{equation}
+furthermore, \((\order[1]α, \order[0]{χ_i})\) is an eigenpair of the symmetric
+tensor \((E_{ijk} \order[1]{ξ_k} + \order[1]λ F_{ij})\)
 \begin{equation}
   \label{eq:20220609133608}
-  x₀ = χ₀^i v_i
-  \quad \text{and} \quad
-  \bigl(E_{ijk} ξ₁^k + λ₁ F_{ij} \bigr) χ₀^j = α₁ χ₀^i.
+  \bigl(E_{ijk} \order[1]{ξ_k} + \order[1]λ F_{ij} \bigr) \order[0]{χ_j} = \order[1]α \order[0]{χ_i}.
 \end{equation}
 As for the higher order terms, it is also found that
 \begin{equation}
   \label{eq:20220609133629}
-  x₁ = χ₁^i v_i +  χ₀^i ξ₁^j w_{i j} + \tfrac{1}{2} λ₁ χ₀^i w_i
+  \order[1]x = \order[1]{χ_i} v_i +  \order[0]{χ_i} \order[1]{ξ_j} w_{i j} + \tfrac{1}{2} \order[1]λ \order[0]{χ_i} w_i
 \end{equation}
 and
 \begin{multline}
   \label{eq:20220616082923}
-  \bigl[E_{ijkl} ξ₁^k ξ₁^l + λ₁\bigl(2 \mathring{E}_{ijk} ξ₁^k + λ₁ \mathring{F}_{ij}\bigr) + E_{ijk} ξ₂^k + λ₂ F_{ij} \bigr] χ₀^j\\
-  + 2\bigl(E_{ijk}  ξ₁^k + λ₁ F_{ij} \bigr) χ₁^j = 2α₁χ₁^i + α₂ χ₀^i.
+  \bigl[E_{ijkl} \order[1]{ξ_k} \order[1]{ξ_l} + \order[1]λ\bigl(2 \mathring{E}_{ijk} \order[1]{ξ_k} + \order[1]λ \mathring{F}_{ij}\bigr) + E_{ijk} \order[2]{ξ_k} + \order[2]λ F_{ij} \bigr] \order[0]{χ_j}\\
+  + 2\bigl(E_{ijk}  \order[1]{ξ_k} + \order[1]λ F_{ij} \bigr) χ₁^j = 2\order[1]α\order[1]{χ_i} + \order[2]α \order[0]{χ_i}.
 \end{multline}
 
 Finally, to close this analysis of the bifurcated branches, the following
@@ -774,8 +776,8 @@ asymptotic expansion of the energy is derived in
 Appendix~\ref{sec:20220525053434}
 \begin{multline}
   \label{eq:20220525053600}
-    ℰ[u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{6} λ₁ η³ F_{i j} ξ₁^i ξ₁^j\\
-    +\tfrac{1}{24} η⁴ \bigl[E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4λ₁ \mathring{E}_{ijk} ξ₁^i ξ₁^j ξ₁^k + 6 \bigl(λ₁² \mathring{F}_{ij} + λ₂ F_{ij}\bigr) ξ₁^i ξ₁^j\bigr] + o(η⁴).
+    ℰ[u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{6} \order[1]λ η³ F_{i j} \order[1]{ξ_i} \order[1]{ξ_j}\\
+    +\tfrac{1}{24} η⁴ \bigl[E_{ijkl} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} + 4\order[1]λ \mathring{E}_{ijk} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} + 6 \bigl(\bigl(\order[1]λ\bigr)^2 \mathring{F}_{ij} + \order[2]λ F_{ij}\bigr) \order[1]{ξ_i} \order[1]{ξ_j}\bigr] + o(η⁴).
 \end{multline}
 
 \section{Discussion}
@@ -786,14 +788,14 @@ of the bifurcated branch.
 
 \begin{remark}
   The boundary case is unclear to me. I think that whether a bifurcation is
-  symmetric or asymmetric should depend on the value of \(λ₁\) only. If
-  \(λ₁ ≠ 0\), the bifurcated branch is \emph{asymmetric}. Conversely, if
-  \(λ₁ = 0\) and \(λ₂ ≠ 0\), then the bifurcated branch is \emph{symmetric}.
+  symmetric or asymmetric should depend on the value of \(\order[1]λ\) only. If
+  \(\order[1]λ ≠ 0\), the bifurcated branch is \emph{asymmetric}. Conversely, if
+  \(\order[1]λ = 0\) and \(\order[2]λ ≠ 0\), then the bifurcated branch is \emph{symmetric}.
 
-  In the literature, the discussion is placed on \(E_{ijk}\). If \(λ₁ ≠ 0\),
+  In the literature, the discussion is placed on \(E_{ijk}\). If \(\order[1]λ ≠ 0\),
   surely one of the \(E_{ijk}\) is non-zero also. However, I believe it is
   \emph{not} a sufficient condition: one of the bifurcated branches could be
-  symmetric \((λ₁ = 0)\), even if all \(E_{ijk}\) are not null. It is true
+  symmetric \((\order[1]λ = 0)\), even if all \(E_{ijk}\) are not null. It is true
   however that \emph{all} bifurcated branches are symmetric if, and only if,
   \(E_{ijk}=0\) for all \(i, j, k = 1, \ldots, m\). Therefore, the two cases
   that will be discussed below are: (1) one of the bifurcated branches is
@@ -801,16 +803,17 @@ of the bifurcated branch.
   of the bifurcated branches is symmetric'' will \emph{not} be discussed.
 \end{remark}
 
-\subsection{Asymmetric bifurcated branch (\(λ₁ ≠ 0\))}
+\subsection{Asymmetric bifurcated branch (\(\order[1]λ ≠ 0\))}
 
-We first consider the situation where \(λ₁ ≠ 0\) on the bifurcated branch. The
-bifurcation equation~\eqref{eq:20220524135036} shows that necessarily,
-\(E_{ijk}\) is not identically nul. This equation has at most \((2^m - 1)\)
-pairs of real solutions \((λ₁, u₁)\) et \((- λ₁, - u₁)\); furthermore,
-multiplication by \(ξ_1^i\) shows that
+We first consider the situation where \(\order[1]λ ≠ 0\) on the bifurcated
+branch. The bifurcation equation~\eqref{eq:20220524135036} shows that
+necessarily, \(E_{ijk}\) is not identically nul. This equation has at most
+\((2^m - 1)\) pairs of real solutions \((\order[1]λ, \order[1]u)\) et
+\((- \order[1]λ, - \order[1]u)\); furthermore, multiplication by
+\(\order[1]{ξ_i}\) shows that
 \begin{equation}
   \label{eq:20220801085236}
-  λ₁ = -\frac{E_{ijk} ξ₁^i ξ₁^j ξ₁^k}{2 F_{ij} ξ₁^i ξ₁^j}.
+  \order[1]λ = -\frac{E_{ijk} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}}{2 F_{ij} \order[1]{ξ_i} \order[1]{ξ_j}}.
 \end{equation}
 
 \begin{remark}
@@ -818,22 +821,22 @@ multiplication by \(ξ_1^i\) shows that
   most \((2^m - 1)\) pairs of real solutions.
 \end{remark}
 
-Along the bifurcated branch, we have \(λ = λ₀ + η λ₁ + o(η)\), and \(η\) can be
-eliminated. In other words, \(η=λ\) (\(λ₁=1\) and \(λ₂ = λ₃ = \cdots = 0\)) can
+Along the bifurcated branch, we have \(λ = λ₀ + η \order[1]λ + o(η)\), and \(η\) can be
+eliminated. In other words, \(η=λ\) (\(\order[1]λ=1\) and \(\order[2]λ = \order[3]λ = \cdots = 0\)) can
 be selected as a parameter. It is therefore possible to express the bifurcated
 branch as a function of \(λ\), \(u(λ)\). For example, combining
 Eqs.~\eqref{eq:20220524133816} and \eqref{eq:20220531054247}, we find that
 \begin{equation}
   \begin{aligned}[b]
-    ℰ_{, uu}[u(η), λ(η); u₁, u₁]
-    &= η \bigl[ℰ₃(λ₀ ; u₁, u₁, u₁)  + λ₁ \dot{ℰ}₂(λ₀; u₁, u₁)\bigr] + o(η)\\
-    &= - η λ₁ \dot{ℰ}₂(λ₀; u₁, u₁) + o(η),
+    ℰ_{, uu}[u(η), λ(η); \order[1]u, \order[1]u]
+    &= η \bigl[ℰ₃(λ₀ ; \order[1]u, \order[1]u, \order[1]u)  + \order[1]λ \dot{ℰ}₂(λ₀; \order[1]u, \order[1]u)\bigr] + o(η)\\
+    &= - η \order[1]λ \dot{ℰ}₂(λ₀; \order[1]u, \order[1]u) + o(η),
   \end{aligned}
 \end{equation}
 or
 \begin{equation}
   \label{eq:20220819160235}
-  ℰ_{, uu}[u(λ), λ; u₁, u₁] = -\bigl( λ - λ₀ \bigr) \dot{ℰ}₂(λ₀; u₁, u₁) + o(λ - λ₀).
+  ℰ_{, uu}[u(λ), λ; \order[1]u, \order[1]u] = -\bigl( λ - λ₀ \bigr) \dot{ℰ}₂(λ₀; \order[1]u, \order[1]u) + o(λ - λ₀).
 \end{equation}
 
 For \(λ < λ₀\), the above quantity is \emph{negative} (since \(\dot{ℰ}₂\) is
@@ -846,12 +849,12 @@ negative definite). In other words
 
 To investigate the stability above the critical load, we need to analyse the
 sign of the eigenvalues \(α\) of the Hessian. At first order,
-\(α = η α₁ + o(η)\), where \(α₁\) is an eigenvalue of
-\((E_{ijk} ξ₁^k + λ₁ F_{ij})\). Let \(α_{\min}\) and \(α_{\max}\) be the minimum
+\(α = η \order[1]α + o(η)\), where \(\order[1]α\) is an eigenvalue of
+\((E_{ijk} \order[1]{ξ_k} + \order[1]λ F_{ij})\). Let \(α_{\min}\) and \(α_{\max}\) be the minimum
 and maximum eigenvalues of this second-order tensor. Three cases must be
 discussed
 \begin{enumerate}
-\item If \(α_{\min} α_{\max} > 0\), then \((E_{ijk} ξ₁^k + λ₁ F_{ij})\) is
+\item If \(α_{\min} α_{\max} > 0\), then \((E_{ijk} \order[1]{ξ_k} + \order[1]λ F_{ij})\) is
   positive or negative definite: all eigenvalues have the same sign,
   \(\epsilon ∈ \{-1, +1\}\). Then the sign of the eigenvalues \(α\) of the
   Hessian is \(\epsilon η\) and there is a stability switch at the critical
@@ -868,24 +871,24 @@ To close this section, it is observed that the dominant term of the
 expansion~\eqref{eq:20220525053600} of the potential energy along the bifurcated
 branch is of the third order in \(η\)
 \begin{equation}
-  ℰ[u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{6} λ₁ η³ F_{i j} ξ₁^i ξ₁^j + o(η³).
+  ℰ[u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{6} \order[1]λ η³ F_{i j} \order[1]{ξ_i} \order[1]{ξ_j} + o(η³).
 \end{equation}
 
-Eliminating \(λ\) and plugging expression~\eqref{eq:20220801085236} of \(λ₁\)
+Eliminating \(λ\) and plugging expression~\eqref{eq:20220801085236} of \(\order[1]λ\)
 delivers the expression of the potential energy, where \(λ\) is the parameter
 \begin{equation}
   \begin{aligned}[b]
-    ℰ[u(λ), λ] &= ℰ[u^{\ast}(λ), λ] + \frac{\bigl(λ - λ₀\bigr)³}{6λ₁²} F_{i j} ξ₁^i ξ₁^j + o(λ³)\\
-    &= ℰ[u^{\ast}(λ), λ] + \frac{2 \bigl( F_{i j} ξ₁^i ξ₁^j \bigr)³}{3 \bigl( E_{ijk} ξ₁^i ξ₁^j ξ₁^k \bigr)²} \bigl(λ - λ₀\bigr)³ + o(λ³).
+    ℰ[u(λ), λ] &= ℰ[u^{\ast}(λ), λ] + \frac{\bigl(λ - λ₀\bigr)³}{6\bigl( \order[1]λ \bigr)^2} F_{i j} \order[1]{ξ_i} \order[1]{ξ_j} + o(λ³)\\
+    &= ℰ[u^{\ast}(λ), λ] + \frac{2 \bigl( F_{i j} \order[1]{ξ_i} \order[1]{ξ_j} \bigr)³}{3 \bigl( E_{ijk} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \bigr)²} \bigl(λ - λ₀\bigr)³ + o(λ³).
   \end{aligned}
 \end{equation}
 
-Recalling that \(F_{i j} ξ₁^i ξ₁^j < 0\), it is found that, above the critical
+Recalling that \(F_{i j} \order[1]{ξ_i} \order[1]{ξ_j} < 0\), it is found that, above the critical
 load, the potential energy is \emph{smaller} along the bifurcated branch than
 along the fundamental branch.
 
 \begin{remark}
-  As expected, the above expression does not depend on the scaling of \(u₁\) (of the \(ξ₁^i\)).
+  As expected, the above expression does not depend on the scaling of \(\order[1]u\) (of the \(\order[1]{ξ_i}\)).
 \end{remark}
 \begin{remark}
   It has been shown in Sec.~\ref{sec:20220802061621} that, when \(E_{ijk}\) is
@@ -895,26 +898,26 @@ along the fundamental branch.
 \subsection{A particular case of symmetric bifurcation}
 
 We now consider the case \(E_{ijk}=0\) for all \(i, j, k = 1, \ldots, m\). Then
-[see Eq.~\eqref{eq:20220524135036}] \(λ₁ = 0\) on \emph{all} bifurcated
+[see Eq.~\eqref{eq:20220524135036}] \(\order[1]λ = 0\) on \emph{all} bifurcated
 branches. It is assumed that, on the bifurcated branch under consideration, the
-next term of the expansion of \(λ\) is non-zero: \(λ₂ ≠ 0\). The bifurcation is
+next term of the expansion of \(λ\) is non-zero: \(\order[2]λ ≠ 0\). The bifurcation is
 \emph{symmetric}, and the bifurcation equation~\eqref{eq:20220601070917} reduces
 to
 \begin{equation}
   \label{eq:20220801092222}
-  \tfrac{1}{3} E_{ijkl} ξ₁^j ξ₁^k ξ₁^l  + λ₂ F_{ij} ξ₁^j = 0,
+  \tfrac{1}{3} E_{ijkl} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}  + \order[2]λ F_{ij} \order[1]{ξ_j} = 0,
 \end{equation}
-which has at most \((3^m - 1) / 2\) pairs of real solutions \((λ₂, u₁)\) and
-\((- λ₂, - u₁)\). Upon multiplication by \(ξ₁^i\), the above equation delivers
-the following expression of \(λ₂\)
+which has at most \((3^m - 1) / 2\) pairs of real solutions \((\order[2]λ, \order[1]u)\) and
+\((- \order[2]λ, - \order[1]u)\). Upon multiplication by \(\order[1]{ξ_i}\), the above equation delivers
+the following expression of \(\order[2]λ\)
 \begin{equation}
   \label{eq:20220801093236}
-  λ₂ = -\frac{E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l}{3 F_{ij} ξ₁^i ξ₁^j}.
+  \order[2]λ = -\frac{E_{ijkl} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}}{3 F_{ij} \order[1]{ξ_i} \order[1]{ξ_j}}.
 \end{equation}
 
-Since \(F_{ij} ξ₁^i ξ₁^j < 0\), \(λ₂\) has the same sign as
-\(E_{ijkl}ξ₁^i ξ₁^j ξ₁^k ξ₁^l\). In other words, if
-\(E_{ijkl}ξ₁^i ξ₁^j ξ₁^k ξ₁^l > 0\), (resp. \(<0\)) then the bifurcated branch
+Since \(F_{ij} \order[1]{ξ_i} \order[1]{ξ_j} < 0\), \(\order[2]λ\) has the same sign as
+\(E_{ijkl}\order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\). In other words, if
+\(E_{ijkl}\order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} > 0\), (resp. \(<0\)) then the bifurcated branch
 exists above (resp. below) the critical load \(λ₀\) only.
 
 \begin{remark}
@@ -923,13 +926,13 @@ exists above (resp. below) the critical load \(λ₀\) only.
 \end{remark}
 
 Turning now to the eigenpairs of the Hessian of the energy along
-the bifurcated branch, Eq.~\eqref{eq:20220609133608} shows that \(α₁ = 0\). Then
-\(α = α₂ η² / 2 + o(η²)\) and, from Eq.~\eqref{eq:20220616082923}
+the bifurcated branch, Eq.~\eqref{eq:20220609133608} shows that \(\order[1]α = 0\). Then
+\(α = \order[2]α η² / 2 + o(η²)\) and, from Eq.~\eqref{eq:20220616082923}
 \begin{equation}
-  \bigl(E_{ijkl} ξ₁^k ξ₁^l + λ₂ F_{ij} \bigr) χ₀^j = α₂ χ₀^i.
+  \bigl(E_{ijkl} \order[1]{ξ_k} \order[1]{ξ_l} + \order[2]λ F_{ij} \bigr) \order[0]{χ_j} = \order[2]α \order[0]{χ_i}.
 \end{equation}
 
-If \((E_{ijkl} ξ₁^k ξ₁^l + λ₂ F_{ij} )\) is positive definite, then the
+If \((E_{ijkl} \order[1]{ξ_k} \order[1]{ξ_l} + \order[2]λ F_{ij} )\) is positive definite, then the
 bifurcated branch is stable (note that, in that case, the bifurcated branch
 exists above the critical load only). If one of the eigenvalues of this tensor
 is \(<0\), then the bifurcated branch is unstable. The stability is undecided
@@ -938,34 +941,34 @@ when all eigenvalues are \(≥ 0\).
 \begin{remark}
   Note that, from Eq.~\eqref{eq:20220801092222},
   \begin{equation}
-    E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l + λ₂ F_{ij} ξ₁^i ξ₁^j = \tfrac{2}{3} E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l
+    E_{ijkl} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} + \order[2]λ F_{ij} \order[1]{ξ_i} \order[1]{ξ_j} = \tfrac{2}{3} E_{ijkl} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}
   \end{equation}
 
 \end{remark}
 
-To conclude this section, it is observed that, when \(λ₁ = 0\), the dominant
+To conclude this section, it is observed that, when \(\order[1]λ = 0\), the dominant
 term of the potential energy along the bifurcated branch is of the fourth order
 [see Eq.~\eqref{eq:20220525053600}]. Combining with Eq.~\eqref{eq:20220801093236},
 \begin{equation}
   \label{eq:20220801094437}
   \begin{aligned}[b]
     ℰ[u(η), λ(η)]
-    &= ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{24} η⁴ \bigl(E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l  + 6  λ₂ F_{ij} ξ₁^i ξ₁^j\bigr) + o(η⁴)\\
-    &= ℰ\{u^{\ast}[λ(η)], λ(η)\} - \tfrac{1}{24} η⁴ E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l + o(η⁴).
+    &= ℰ\{u^{\ast}[λ(η)], λ(η)\} + \tfrac{1}{24} η⁴ \bigl(E_{ijkl} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}  + 6  \order[2]λ F_{ij} \order[1]{ξ_i} \order[1]{ξ_j}\bigr) + o(η⁴)\\
+    &= ℰ\{u^{\ast}[λ(η)], λ(η)\} - \tfrac{1}{24} η⁴ E_{ijkl} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} + o(η⁴).
   \end{aligned}
 \end{equation}
 
-The expansion \(λ = λ₀ + λ₂ η² / 2 + o(η²)\) can be inverted as follows
+The expansion \(λ = λ₀ + \order[2]λ η² / 2 + o(η²)\) can be inverted as follows
 \begin{equation}
-  η⁴ = \frac{4 \bigl(λ - λ₀\bigr)²}{λ₂²} + o(λ²) = \frac{36 \bigl( F_{ij} ξ₁^i ξ₁^j \bigr)²}{\bigl( E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l \bigr)²} \bigl( λ - λ₀ \bigr)²
+  η⁴ = \frac{4 \bigl(λ - λ₀\bigr)²}{\bigl( \order[2]λ \bigr)^2} + o(λ²) = \frac{36 \bigl( F_{ij} \order[1]{ξ_i} \order[1]{ξ_j} \bigr)²}{\bigl( E_{ijkl} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} \bigr)²} \bigl( λ - λ₀ \bigr)²
 \end{equation}
 and expression~\eqref{eq:20220801094437} reads
 \begin{equation}
-  ℰ[u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} - \frac{3 \bigl( F_{ij} ξ₁^i ξ₁^j \bigr)²}{2 E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l } \bigl( λ - λ₀ \bigr)²  + o(λ²).
+  ℰ[u(η), λ(η)] = ℰ\{u^{\ast}[λ(η)], λ(η)\} - \frac{3 \bigl( F_{ij} \order[1]{ξ_i} \order[1]{ξ_j} \bigr)²}{2 E_{ijkl} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} } \bigl( λ - λ₀ \bigr)²  + o(λ²).
 \end{equation}
 
-Again, the above expression does not depend on the scaling of \(u₁\) (of the
-\(ξ₁^i\)). Note that, if \(E_{ijkl} ξ₁^i ξ₁^j ξ₁^k ξ₁^l > 0\), then only loads
+Again, the above expression does not depend on the scaling of \(\order[1]u\) (of the
+\(\order[1]{ξ_i}\)). Note that, if \(E_{ijkl} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} > 0\), then only loads
 that are greater than the critical load can be reached on the bifurcated branch,
 where the energy is lower than the fundamental branch.
 
@@ -992,16 +995,17 @@ which shows that \emph{asymmetric} bifurcation points are always
 \subsection{Asymmetric bifurcations}
 
 We first consider the case \(E_{111} ≠ 0\). Owing to the discussion above, the
-bifurcation point is unstable. Setting \(λ_1=1\), Eq.~\eqref{eq:20220524135036} delivers
+bifurcation point is unstable. Setting \(\order[1]λ = 1\),
+Eq.~\eqref{eq:20220524135036} delivers
 \begin{equation}
-  E_{111} ξ_1^1 + 2F_{11} = 0 \quad \text{and} \quad u(λ) = u^\ast(λ) - \frac{2F_{11}}{E_{111}} \bigl( λ - λ_0 \bigr) v_1 + o(λ - λ_0).
+  E_{111} \order[1]ξ_1 + 2F_{11} = 0 \quad \text{and} \quad u(λ) = u^\ast(λ) - \frac{2F_{11}}{E_{111}} \bigl( λ - λ_0 \bigr) v_1 + o(λ - λ_0).
 \end{equation}
 
 Furthermore, the hessian of the energy along the bifurcated branch is retrieved
 from Eq.~\eqref{eq:20220819160235}
 \begin{equation}
   \begin{aligned}[b]
-    ℰ_{, uu}[u(η), λ(η), v_1, v_1] &= η \bigl(E_{111} ξ_1^1 + λ₁ F_{11}\bigr) + o(η) = -2 η F_{11} + o(η)\\
+    ℰ_{, uu}[u(η), λ(η), v_1, v_1] &= η \bigl(E_{111} \order[1]{ξ_1} + \order[1]λ F_{11}\bigr) + o(η) = -2 η F_{11} + o(η)\\
     &= -2 F_{11} \bigl( λ - λ₀ \bigr) + o(λ - λ₀).
   \end{aligned}
 \end{equation}
@@ -1016,20 +1020,20 @@ Sec.~\ref{sec:20220802061621}, the bifurcation point is \emph{stable} if
 \(E_{1111} > 0\) and \emph{unstable} if \(E_{1111} < 0\). The bifurcation
 equation~\eqref{eq:20220801092222} reduces to
 \begin{equation}
-  E_{1111} \bigl( ξ_1^1 \bigr)^2 + 3λ_2 F_{11} = 0,
+  E_{1111} \bigl( \order[1]{ξ_1} \bigr)^2 + 3\order[2]λ F_{11} = 0,
 \end{equation}
-which in particular shows that \(λ_2\) has the same sign as \(E_{1111}\). Since
-the expansion of \(λ\) reads: \(λ = λ_0 + λ_2 η^2\), the bifurcation branch
-exists only for loads \emph{above} the critical load (\(λ ≥ λ_0\)) if
-\(E_{1111} > 0\) and only for loads \emph{below} the critical load (\(λ ≤ λ_0\))
-if \(E_{1111} < 0\).
+which in particular shows that \(\order[2]λ\) has the same sign as
+\(E_{1111}\). Since the expansion of \(λ\) reads:
+\(λ = λ_0 + \order[2]λ η^2 / 2\), the bifurcation branch exists only for loads
+\emph{above} the critical load (\(λ ≥ λ_0\)) if \(E_{1111} > 0\) and only for
+loads \emph{below} the critical load (\(λ ≤ λ_0\)) if \(E_{1111} < 0\).
 
 From Eq.~\eqref{eq:20220531054247}, the hessian of the energy along the
 bifurcated branch reads
 \begin{equation*}
-  ℰ_{, uu}[u(η), λ(η); v_1, v_1] = \tfrac{1}{2} η² \bigl[ E_{1111}\bigl(ξ_1^1\bigr) ^2 + λ₂ F_{11} \bigr] + o(η²) = - η² λ₂ F_{11} + o(η²),
+  ℰ_{, uu}[u(η), λ(η); v_1, v_1] = \tfrac{1}{2} η² \bigl[ E_{1111}\bigl(ξ_1^1\bigr) ^2 + \order[2]λ F_{11} \bigr] + o(η²) = - η² \order[2]λ F_{11} + o(η²),
 \end{equation*}
-which has the sign of \(λ_2\). Therefore the Hessian is positive
+which has the sign of \(\order[2]λ\). Therefore the Hessian is positive
 (resp. negative) definite if \(E_{1111} > 0\) (resp \(< 0\)).
 
 To sum up, if \(E_{1111} > 0\), then the bifurcation branch (including the
@@ -1138,9 +1142,9 @@ de la façon suivante
 On pose dans ce qui suit
 \begin{align}
   \label{eq:20211112155446}
-  Λ(η) & = λ(η) - λ₀ = η λ₁ + \tfrac{1}{2} η² λ₂ + \tfrac{1}{6} η³ λ₃ + \cdots,\\
+  Λ(η) & = λ(η) - λ₀ = η \order[1]λ + \tfrac{1}{2} η² \order[2]λ + \tfrac{1}{6} η³ \order[3]λ + \cdots,\\
   \label{eq:20211112113028}
-  U(η) & = u(η) - u^{\ast}[λ(η)] = η u₁ + \tfrac{1}{2} η² u₂ + \tfrac{1}{6} η³ u₃ + \cdots.
+  U(η) & = u(η) - u^{\ast}[λ(η)] = η \order[1]u + \tfrac{1}{2} η² \order[2]u + \tfrac{1}{6} η³ \order[3]u + \cdots.
 \end{align}
 
 On considère une fonctionnelle \(\mathcal{F}\) de \(u\) et \(λ\)~:
@@ -1185,21 +1189,21 @@ dérivées partielles sont évaluées en \([η, λ₀ + Λ(η)]\). En \(η = 0\)
 relations précédentes s'écrivent
 \begin{gather}
   \label{eq:20220107060454}
-  f'(0) = ∂_{η} F + λ₁ ∂_{λ} F,\\
+  f'(0) = ∂_{η} F + \order[1]λ ∂_{λ} F,\\
   \label{eq:20220107124311}
-  f''(0) = ∂_{ηη}² F + 2 λ₁ ∂_{ηλ}² F + λ₁² ∂_{λλ}² F + λ₂ ∂_{λ} F,\\
+  f''(0) = ∂_{ηη}² F + 2 \order[1]λ ∂_{ηλ}² F + \bigl( \order[1]λ \bigr)^2 ∂_{λλ}² F + \order[2]λ ∂_{λ} F,\\
   \label{eq:20220107060500}
   \begin{aligned}[b]
     f'''(0) ={}
-    & ∂_{ηηη}³ F + 3 λ₁ ∂_{ηηλ}³ F + 3 λ₁² ∂_{ηλλ}³ F + λ₁³ ∂_{λλλ}³ F\\
-    & + 3 λ₂ ∂_{ηλ}² F + 3 λ₁ λ₂ ∂_{λλ}² F + λ₃ ∂_{λ} F,
+    & ∂_{ηηη}³ F + 3 \order[1]λ ∂_{ηηλ}³ F + 3 \bigl( \order[1]λ \bigr)^2 ∂_{ηλλ}³ F + \bigl( \order[1]λ \bigr)^3 ∂_{λλλ}³ F\\
+    & + 3 \order[2]λ ∂_{ηλ}² F + 3 \order[1]λ \order[2]λ ∂_{λλ}² F + \order[3]λ ∂_{λ} F,
   \end{aligned}\\
   \label{eq:20220602185935}
   \begin{aligned}[b]
     f''''(0) ={}
-    & ∂_{ηηηη}⁴F + 4 λ₁ ∂_{ηηηλ}⁴ F + 6 λ₁² ∂_{ηηλλ}⁴ F + 4 λ₁³ ∂_{ηλλλ}⁴ F + λ₁⁴ ∂_{λλλλ}⁴ F\\
-    & + 6 λ₂ ∂_{ηηλ}³ F + 12 λ₁ λ₂ ∂_{ηλλ}³ F + 6 λ₁² λ₂ ∂_{λλλ}³ F\\
-    & + 4 λ₃ ∂_{ηλ}² F + \bigl(3 λ₂² + 4 λ₁ λ₃\bigr) ∂_{λλ}² F + λ₄ ∂_{λ} F,
+    & ∂_{ηηηη}⁴F + 4 \order[1]λ ∂_{ηηηλ}⁴ F + 6 \bigl( \order[1]λ \bigr)^2 ∂_{ηηλλ}⁴ F + 4 \bigl( \order[1]λ \bigr)^3 ∂_{ηλλλ}⁴ F + \bigl( \order[1]λ \bigr)^4 ∂_{λλλλ}⁴ F\\
+    & + 6 \order[2]λ ∂_{ηηλ}³ F + 12 \order[1]λ \order[2]λ ∂_{ηλλ}³ F + 6 \bigl( \order[1]λ \bigr)^2 \order[2]λ ∂_{λλλ}³ F\\
+    & + 4 \order[3]λ ∂_{ηλ}² F + \bigl(3 \bigl( \order[2]λ \bigr)^2 + 4 \order[1]λ \order[3]λ\bigr) ∂_{λλ}² F + λ₄ ∂_{λ} F,
   \end{aligned}
 \end{gather}
 où \(F\) et ses dérivées sont maintenant évaluées en \((η = 0, λ = λ₀)\).
@@ -1248,26 +1252,26 @@ on obtient successivement
   \end{aligned}
 \end{equation*}
 soit, en \(η = 0\)
-\[∂_{η}F(0, λ) = ℰ₂(λ; u₁, \hat{u}),\]
-\[∂_{ηη}² F(0, λ) = ℰ₃(λ; u₁, u₁, \hat{u}) + ℰ₂(λ; u₂, \hat{u}),\]
-\[∂_{ηηη}³ F(0, λ) = ℰ₄(λ; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ; u₁, u₂, \hat{u}) + ℰ₂(λ; u₃, \hat{u}).\]
+\[∂_{η}F(0, λ) = ℰ₂(λ; \order[1]u, \hat{u}),\]
+\[∂_{ηη}² F(0, λ) = ℰ₃(λ; \order[1]u, \order[1]u, \hat{u}) + ℰ₂(λ; \order[2]u, \hat{u}),\]
+\[∂_{ηηη}³ F(0, λ) = ℰ₄(λ; \order[1]u, \order[1]u, \order[1]u, \hat{u}) + 3ℰ₃(λ; \order[1]u, \order[2]u, \hat{u}) + ℰ₂(λ; \order[3]u, \hat{u}).\]
 
 Les dérivées croisées de \(F\) en \((0, λ)\) s'obtiennent par simple dérivation
 des relations précédentes par rapport à \(λ\)
-\[∂_{ηλ}² F(0, λ) = \dot{ℰ}₂(λ; u₁, \hat{u}), \quad ∂_{ηλλ}³ F(0, λ) = \ddot{ℰ}₂(λ; u₁, \hat{u}),\]
-\[∂_{ηηλ}³ F(0, λ) = \dot{ℰ}₃(λ; u₁, u₁, \hat{u}) + \dot{ℰ₂}(λ; u₂, \hat{u}).\]
+\[∂_{ηλ}² F(0, λ) = \dot{ℰ}₂(λ; \order[1]u, \hat{u}), \quad ∂_{ηλλ}³ F(0, λ) = \ddot{ℰ}₂(λ; \order[1]u, \hat{u}),\]
+\[∂_{ηηλ}³ F(0, λ) = \dot{ℰ}₃(λ; \order[1]u, \order[1]u, \hat{u}) + \dot{ℰ₂}(λ; \order[2]u, \hat{u}).\]
 
 En insérant les résultats précédents dans les relations
 générales~\eqref{eq:20220107060454}--\eqref{eq:20220602185935}, on trouve alors
 les expressions suivantes des dérivées successives de \(f\) en \(η = 0\)
 \begin{gather*}
-  f'(0) = ℰ₂(λ₀; u₁, \hat{u}),\\
-  f''(0) = ℰ₃(λ₀; u₁, u₁, \hat{u}) + ℰ₂(λ₀; u₂, \hat{u}) + 2 λ₁ \dot{ℰ}₂(λ₀; u₁, \hat{u}),\\
+  f'(0) = ℰ₂(λ₀; \order[1]u, \hat{u}),\\
+  f''(0) = ℰ₃(λ₀; \order[1]u, \order[1]u, \hat{u}) + ℰ₂(λ₀; \order[2]u, \hat{u}) + 2 \order[1]λ \dot{ℰ}₂(λ₀; \order[1]u, \hat{u}),\\
   \begin{aligned}[b]
     f'''(0) ={}
-    & ℰ₄(λ₀; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ₀; u₁, u₂, \hat{u}) + ℰ₂(λ₀ ; u₃, \hat{u})\\
-    & + 3λ₁ \dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + 3λ₁ \dot{ℰ}₂(λ₀; u₂, \hat{u})\\
-    & + 3 λ₁² \ddot{ℰ}₂(λ₀; u₁, \hat{u}) + 3 λ₂ \dot{ℰ}₂(λ₀; u₁, \hat{u}).
+    & ℰ₄(λ₀; \order[1]u, \order[1]u, \order[1]u, \hat{u}) + 3ℰ₃(λ₀; \order[1]u, \order[2]u, \hat{u}) + ℰ₂(λ₀ ; \order[3]u, \hat{u})\\
+    & + 3\order[1]λ \dot{ℰ}₃(λ₀; \order[1]u, \order[1]u, \hat{u}) + 3\order[1]λ \dot{ℰ}₂(λ₀; \order[2]u, \hat{u})\\
+    & + 3 \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(λ₀; \order[1]u, \hat{u}) + 3 \order[2]λ \dot{ℰ}₂(λ₀; \order[1]u, \hat{u}).
   \end{aligned}
 \end{gather*}
 
@@ -1275,10 +1279,10 @@ On en déduit finalement le développement limité à l'ordre 3 en \(η\) du ré
 \begin{equation}
   \label{eq:20220107080901}
   \begin{gathered}[b]
-    ℰ_{, u}[u(η), λ(η)] ={} η ℰ₂(λ₀; u₁, \hat{u}) + \tfrac{1}{2} η² \bigl[ℰ₃(λ₀; u₁, u₁, \hat{u})  + ℰ₂(λ₀; u₂, \hat{u})\\
-    {} + 2 λ₁ \dot{ℰ}₂(λ₀; u₁, \hat{u})\bigr] + \tfrac{1}{6} η³ \bigl[ ℰ₄(λ₀; u₁, u₁, u₁, \hat{u}) + 3ℰ₃(λ₀; u₁, u₂, \hat{u})\\
-    {} + ℰ₂(λ₀; u₃, \hat{u}) + 3λ₁ \dot{ℰ}₃(λ₀; u₁, u₁, \hat{u}) + 3λ₁ \dot{ℰ}₂(λ₀; u₂, \hat{u})\\
-    {} + 3 λ₁² \ddot{ℰ}₂(λ₀; u₁, \hat{u}) + 3 λ₂ \dot{ℰ}₂(λ₀ ; u₁, \hat{u}) \bigr] + o(η³).
+    ℰ_{, u}[u(η), λ(η)] ={} η ℰ₂(λ₀; \order[1]u, \hat{u}) + \tfrac{1}{2} η² \bigl[ℰ₃(λ₀; \order[1]u, \order[1]u, \hat{u})  + ℰ₂(λ₀; \order[2]u, \hat{u})\\
+    {} + 2 \order[1]λ \dot{ℰ}₂(λ₀; \order[1]u, \hat{u})\bigr] + \tfrac{1}{6} η³ \bigl[ ℰ₄(λ₀; \order[1]u, \order[1]u, \order[1]u, \hat{u}) + 3ℰ₃(λ₀; \order[1]u, \order[2]u, \hat{u})\\
+    {} + ℰ₂(λ₀; \order[3]u, \hat{u}) + 3\order[1]λ \dot{ℰ}₃(λ₀; \order[1]u, \order[1]u, \hat{u}) + 3\order[1]λ \dot{ℰ}₂(λ₀; \order[2]u, \hat{u})\\
+    {} + 3 \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(λ₀; \order[1]u, \hat{u}) + 3 \order[2]λ \dot{ℰ}₂(λ₀ ; \order[1]u, \hat{u}) \bigr] + o(η³).
   \end{gathered}
 \end{equation}
 
@@ -1317,52 +1321,55 @@ où les différentielles successives de \(ℰ\) sont évaluées en
 observant que \(ℰ_{, u}[u^{\ast}(λ), λ] = 0\)
 \begin{gather*}
   ∂_{η} F(0, λ) = 0,\\
-  ∂_{ηη}² F(0, λ) =ℰ₂(λ ; u₁, u₁),\\
-  ∂_{ηηη}³ F(0, λ) = ℰ₃(λ; u₁, u₁, u₁) + 3ℰ₂(λ; u₁, u₂),\\
-  ∂_{ηηηη}⁴ F(η, λ) = ℰ₄(λ; u₁, u₁, u₁, u₁) + 6ℰ₃(λ; u₁, u₁, u₂) + 3ℰ₂(λ; u₂, u₂) + 4ℰ₂(λ; u₁, u₃).
+  ∂_{ηη}² F(0, λ) =ℰ₂(λ ; \order[1]u, \order[1]u),\\
+  ∂_{ηηη}³ F(0, λ) = ℰ₃(λ; \order[1]u, \order[1]u, \order[1]u) + 3ℰ₂(λ; \order[1]u, \order[2]u),\\
+  ∂_{ηηηη}⁴ F(η, λ) = ℰ₄(λ; \order[1]u, \order[1]u, \order[1]u, \order[1]u) + 6ℰ₃(λ; \order[1]u, \order[1]u, \order[2]u) + 3ℰ₂(λ; \order[2]u, \order[2]u) + 4ℰ₂(λ; \order[1]u, \order[3]u).
 \end{gather*}
 
 En dérivant alors par rapport à \(λ\), on en déduit que\\
 \begin{equation*}
   \begin{gathered}
     ∂_{ηλ}² F(0, λ) = 0,\\
-    ∂_{ηηλ}³ F(0, λ) = \dot{ℰ}₂(λ; u₁, u₁),\\
+    ∂_{ηηλ}³ F(0, λ) = \dot{ℰ}₂(λ; \order[1]u, \order[1]u),\\
     ∂_{ηλλ}³ F(0, λ) = 0,\\
   \end{gathered}
   \qquad
   \begin{gathered}
-    ∂_{ηηηλ}⁴ F(0, λ) = \dot{ℰ}₃(λ; u₁, u₁, u₁) + 3\dot{ℰ}₂(λ; u₁, u₂),\\
-    ∂_{ηηλλ}⁴ F(0, λ) = \ddot{ℰ}₂(λ; u₁, u₁),\\
+    ∂_{ηηηλ}⁴ F(0, λ) = \dot{ℰ}₃(λ; \order[1]u, \order[1]u, \order[1]u) + 3\dot{ℰ}₂(λ; \order[1]u, \order[2]u),\\
+    ∂_{ηηλλ}⁴ F(0, λ) = \ddot{ℰ}₂(λ; \order[1]u, \order[1]u),\\
     ∂_{ηλλλ}⁴ F(0, λ) = 0
   \end{gathered}
 \end{equation*}
 et finalement
 \begin{gather*}
-    f'(0) = 0, \qquad f''(0) = ℰ₂(λ₀; u₁, u₁),\\
-    f'''(0) =ℰ₃(λ₀; u₁, u₁, u₁) + 3ℰ₂(λ₀; u₁, u₂) + 3λ₁ \dot{ℰ}₂(λ₀; u₁, u₁),\\
+    f'(0) = 0, \qquad f''(0) = ℰ₂(λ₀; \order[1]u, \order[1]u),\\
+    f'''(0) =ℰ₃(λ₀; \order[1]u, \order[1]u, \order[1]u) + 3ℰ₂(λ₀; \order[1]u, \order[2]u) + 3\order[1]λ \dot{ℰ}₂(λ₀; \order[1]u, \order[1]u),\\
     \begin{aligned}[b]
       f''''(0) ={}
-      & ℰ₄(λ₀; u₁, u₁, u₁, u₁) + 6ℰ₃(λ₀; u₁, u₁, u₂) + 3ℰ₂(λ₀; u₂, u₂) + 4ℰ₂(λ₀; u₁, u₃)\\
-      & + 4 λ₁ \dot{ℰ}₃(λ₀; u₁, u₁, u₁) + 12 λ₁ \dot{ℰ}₂(λ₀; u₁, u₂) + 6λ₁² \ddot{ℰ}₂(λ₀; u₁, u₁) + 6λ₂ \dot{ℰ}₂(λ₀; u₁, u₁).
+      & ℰ₄(λ₀; \order[1]u, \order[1]u, \order[1]u, \order[1]u) + 6ℰ₃(λ₀; \order[1]u, \order[1]u, \order[2]u) + 3ℰ₂(λ₀; \order[2]u, \order[2]u)\\
+      & + 4ℰ₂(λ₀; \order[1]u, \order[3]u) + 4 \order[1]λ \dot{ℰ}₃(λ₀; \order[1]u, \order[1]u, \order[1]u) + 12 \order[1]λ \dot{ℰ}₂(λ₀; \order[1]u, \order[2]u)\\
+      & + 6\bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(λ₀; \order[1]u, \order[1]u) + 6\order[2]λ \dot{ℰ}₂(λ₀; \order[1]u, \order[1]u).
     \end{aligned}
 \end{gather*}
 
 Les relations précédentes se simplifient notamment en tenant compte de ce que
-\(u₁∈V\) : \(ℰ₂(λ₀; u₁, u_i) = 0\) pour \(i = 1, 2, 3\). On trouve ainsi
+\(\order[1]u∈V\) : \(ℰ₂(λ₀; \order[1]u, u_i) = 0\) pour \(i = 1, 2, 3\). On trouve ainsi
 \(f''(0)=0\) et
 \begin{equation}
   \label{eq:20220601055448}
-  f'''(0) = -λ₁ G_{ij} ξ₁^i ξ₁^j,
+  f'''(0) = -\order[1]λ G_{ij} \order[1]{ξ_i} \order[1]{ξ_j},
 \end{equation}
 en utilisant l'équation de bifurcation~\eqref{eq:20220524133816}. En
 introduisant les décompositions \eqref{eq:20220524133944} et
-\eqref{eq:20220524134613} de \(u₁\) et \(u₂\), on trouve tout d'abord, pour
-\(ℰ₃(λ₀; u₁, u₁, u₂)\)
+\eqref{eq:20220524134613} de \(\order[1]u\) et \(\order[2]u\), on trouve tout d'abord, pour
+\(ℰ₃(λ₀; \order[1]u, \order[1]u, \order[2]u)\)
 \begin{equation*}
   \begin{aligned}[b]
-    ℰ₃(λ₀; u₁, u₁, u₂)
-    ={} & ℰ₃(v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k + ℰ₃(v_i, v_j, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + λ₁ ℰ₃(v_i, v_j, w_k) ξ₁^i ξ₁^j ξ₁^k \\
-    ={} & ℰ₃(v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k + ℰ₃(v_i, v_j, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l - λ₁ ℰ₂(w_{ij}, w_k) ξ₁^i ξ₁^j ξ₁^k,
+    ℰ₃(λ₀; \order[1]u, \order[1]u, \order[2]u)
+    ={} & ℰ₃(v_i, v_j, v_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[2]{ξ_k} + ℰ₃(v_i, v_j, w_{k l}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+    & + \order[1]λ ℰ₃(v_i, v_j, w_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \\
+    ={} & ℰ₃(v_i, v_j, v_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[2]{ξ_k} + ℰ₃(v_i, v_j, w_{k l}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+    & - \order[1]λ ℰ₂(w_{ij}, w_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k},
   \end{aligned}
 \end{equation*}
 en tenant compte de la définition~\eqref{eq:20220519164523} des \(w_{ij}\). Dans
@@ -1370,45 +1377,50 @@ le dernier terme de l'expression précédente, les indices \(i\), \(j\) et \(k\)
 sont muets, donc
 \begin{equation*}
   \begin{aligned}[b]
-    ℰ₃(λ₀; u₁, u₁, u₂)
-    ={} & ℰ₃(v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k + ℰ₃(v_i, v_j, w_{kl}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l - λ₁ ℰ₂(w_{i}, w_{jk}) ξ₁^i ξ₁^j ξ₁^k\\
-    ={} & ℰ₃(v_i, v_j, v_k) ξ₁^i ξ₁^j ξ₂^k + ℰ₃(v_i, v_j, w_{kl}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 2 λ₁ \dot{ℰ}₂(v_{i}, w_{jk}) ξ₁^i ξ₁^j ξ₁^k,
+    ℰ₃(λ₀; \order[1]u, \order[1]u, \order[2]u)
+    ={} & ℰ₃(v_i, v_j, v_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[2]{ξ_k} + ℰ₃(v_i, v_j, w_{kl}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+    & - \order[1]λ ℰ₂(w_{i}, w_{jk}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
+    ={} & ℰ₃(v_i, v_j, v_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[2]{ξ_k} + ℰ₃(v_i, v_j, w_{kl}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+    & + 2 \order[1]λ \dot{ℰ}₂(v_{i}, w_{jk}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k},
   \end{aligned}
 \end{equation*}
 en introduisant cette fois-ci la définition~\eqref{eq:20220524134525} de
-\(w_i\). On procède de même pour le terme suivant, soit \(ℰ₂(u₂, u₂)\)
+\(w_i\). On procède de même pour le terme suivant, soit \(ℰ₂(\order[2]u, \order[2]u)\)
 \begin{equation*}
   \begin{aligned}[b]
-    ℰ₂(u₂, u₂)
-    ={} & ℰ₂(ξ₂^i v_i + ξ₁^i ξ₁^j w_{i j} + λ₁ ξ₁^i w_i, ξ₂^k v_k + ξ₁^k ξ₁^l w_{k l} + λ₁ ξ₁^k w_k)\\
-    ={} & ℰ₂(ξ₁^i ξ₁^j w_{i j} + λ₁ ξ₁^i w_i, ξ₁^k ξ₁^l w_{k l} + λ₁ ξ₁^k w_k)\\
-    ={} & ℰ₂(w_{i j}, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 2 λ₁ ℰ₂(w_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k + λ₁² ℰ₂(w_i, w_j) ξ₁^i ξ₁^j\\
-    ={} & ℰ₂(w_{i j}, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 2 λ₁ ℰ₂(w_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k + \tfrac{1}{2} λ₁² \bigl[ℰ₂(w_i, w_j) + ℰ₂(w_j, w_i)\bigr] ξ₁^i ξ₁^j\\
-    ={} & -ℰ₃(v_i, v_j, w_{k l}) ξ₁^i ξ₁^j ξ₁^k ξ₁^l - 4 λ₁ \dot{ℰ}₂ (v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k - λ₁² \bigl[\dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i)\bigr] ξ₁^i ξ₁^j
+    ℰ₂(\order[2]u, \order[2]u)
+    ={} & ℰ₂(\order[2]{ξ_i} v_i + \order[1]{ξ_i} \order[1]{ξ_j} w_{i j} + \order[1]λ \order[1]{ξ_i} w_i, \order[2]{ξ_k} v_k + \order[1]{ξ_k} \order[1]{ξ_l} w_{k l} + \order[1]λ \order[1]{ξ_k} w_k)\\
+    ={} & ℰ₂(\order[1]{ξ_i} \order[1]{ξ_j} w_{i j} + \order[1]λ \order[1]{ξ_i} w_i, \order[1]{ξ_k} \order[1]{ξ_l} w_{k l} + \order[1]λ \order[1]{ξ_k} w_k)\\
+    ={} & ℰ₂(w_{i j}, w_{k l}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} + 2 \order[1]λ ℰ₂(w_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} + \bigl( \order[1]λ \bigr)^2 ℰ₂(w_i, w_j) \order[1]{ξ_i} \order[1]{ξ_j}\\
+    ={} & ℰ₂(w_{i j}, w_{k l}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} + 2 \order[1]λ ℰ₂(w_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
+    &+ \tfrac{1}{2} \bigl( \order[1]λ \bigr)^2 \bigl[ℰ₂(w_i, w_j) + ℰ₂(w_j, w_i)\bigr] \order[1]{ξ_i} \order[1]{ξ_j}\\
+    ={} & -ℰ₃(v_i, v_j, w_{k l}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} - 4 \order[1]λ \dot{ℰ}₂ (v_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
+    & - \bigl( \order[1]λ \bigr)^2 \bigl[\dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i)\bigr] \order[1]{ξ_i} \order[1]{ξ_j}
   \end{aligned}
 \end{equation*}
 et enfin
 \begin{equation*}
   \begin{aligned}[b]
-    \dot{ℰ}₂(u₁, u₂)
-    ={} & \dot{ℰ}₂ (v_i, v_j) ξ₁^i ξ₂^j + \dot{ℰ}₂(v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k + λ₁ \dot{ℰ}₂(v_i, w_j) ξ₁^i ξ₁^j\\
-    ={} & \dot{ℰ}₂(v_i, v_j) ξ₁^i ξ₂^j + \dot{ℰ}₂(v_i, w_{j k}) ξ₁^i ξ₁^j ξ₁^k + \tfrac{1}{2} λ₁ [\dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i)] ξ₁^i ξ₁^j.
+    \dot{ℰ}₂(\order[1]u, \order[2]u)
+    ={} & \dot{ℰ}₂ (v_i, v_j) \order[1]{ξ_i} \order[2]{ξ_j} + \dot{ℰ}₂(v_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} + \order[1]λ \dot{ℰ}₂(v_i, w_j) \order[1]{ξ_i} \order[1]{ξ_j}\\
+    ={} & \dot{ℰ}₂(v_i, v_j) \order[1]{ξ_i} \order[2]{ξ_j} + \dot{ℰ}₂(v_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} + \tfrac{1}{2} \order[1]λ [\dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i)] \order[1]{ξ_i} \order[1]{ξ_j}.
   \end{aligned}
 \end{equation*}
 En rassemblant les résultats précédents, on trouve pour \(f''''(0)\)
 \begin{equation*}
   \begin{aligned}[b]
     f''''(0)
-    ={} & \bigl[ ℰ₄(v_i, v_j, v_k , v_l) + 3ℰ₃(v_i, v_j, w_{k l}) \bigr] ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4 λ₁ \bigl[\dot{ℰ}₃(v_i, v_j, v_k) + 3 \dot{ℰ}₂(v_i, w_{j k})\bigr] ξ₁^i ξ₁^j ξ₁^k\\
-    & + \bigl\{3 λ₁² \bigl[ 2\ddot{ℰ}₂ (v_i, v_j) + \dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i) \bigr] + 6λ₂ \dot{ℰ}₂(v_i, v_j) \bigr\} ξ₁^i ξ₁^j\\
-    & + 6\bigl[ℰ₃(v_i, v_j, v_k) ξ₁^k + 2 λ₁ \dot{ℰ}₂(v_i, v_j)\bigr] ξ₁^i ξ₂^j,
+    ={} & \bigl[ ℰ₄(v_i, v_j, v_k , v_l) + 3ℰ₃(v_i, v_j, w_{k l}) \bigr] \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+    & + 4 \order[1]λ \bigl[\dot{ℰ}₃(v_i, v_j, v_k) + 3 \dot{ℰ}₂(v_i, w_{j k})\bigr] \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
+    & + \bigl\{3 \bigl( \order[1]λ \bigr)^2 \bigl[ 2\ddot{ℰ}₂ (v_i, v_j) + \dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i) \bigr] + 6\order[2]λ \dot{ℰ}₂(v_i, v_j) \bigr\} \order[1]{ξ_i} \order[1]{ξ_j}\\
+    & + 6\bigl[ℰ₃(v_i, v_j, v_k) \order[1]{ξ_k} + 2 \order[1]λ \dot{ℰ}₂(v_i, v_j)\bigr] \order[1]{ξ_i} \order[2]{ξ_j},
   \end{aligned}
 \end{equation*}
-et on observe que le dernier terme(en \(ξ₁^i ξ₂^j\)) est nul, du fait de
+et on observe que le dernier terme(en \(\order[1]{ξ_i} \order[2]{ξ_j}\)) est nul, du fait de
 l'équation de bifurcation~\eqref{eq:20220524135036}. On obtient donc
 \begin{equation}
   \label{eq:20220601055512}
-  f''''(0) = E_{i j k l} ξ₁^i ξ₁^j ξ₁^k ξ₁^l + 4 λ₁ \mathring{E}_{i j k} ξ₁^i ξ₁^j ξ₁^k - 6 \bigl(λ₁² \mathring{G}_{i j} + λ₂ G_{i j}\bigr) ξ₁^i ξ₁^j .
+  f''''(0) = E_{i j k l} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} + 4 \order[1]λ \mathring{E}_{i j k} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} - 6 \bigl(\bigl( \order[1]λ \bigr)^2 \mathring{G}_{i j} + \order[2]λ G_{i j}\bigr) \order[1]{ξ_i} \order[1]{ξ_j} .
 \end{equation}
 
 Le développement limité~\eqref{eq:20220525053600} est alors obtenu en
@@ -1445,19 +1457,19 @@ où les différentielles successives de \(ℰ\) sont évaluées en
 \([u^{\ast}(λ) + U(η), λ]\), tandis que les dérivées successives de \(U\) sont
 évaluées en \(η\). Les relations précédentes s'écrivent en \(η = 0\)
 \begin{gather*}
-  ∂_{η} F(0, λ) = ℰ₃(λ; u₁, \hat{u}, \hat{v}),\\
-  ∂_{ηη}² F(0, λ) = ℰ₄(λ ; u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(λ; u₂, \hat{u}, \hat{v}),
+  ∂_{η} F(0, λ) = ℰ₃(λ; \order[1]u, \hat{u}, \hat{v}),\\
+  ∂_{ηη}² F(0, λ) = ℰ₄(λ ; \order[1]u, \order[1]u, \hat{u}, \hat{v}) + ℰ₃(λ; \order[2]u, \hat{u}, \hat{v}),
 \end{gather*}
 et en dérivant cette fois par rapport à \(λ\)
 \begin{equation*}
-  ∂_{η λ}² F(0, λ) = \dot{ℰ}₃(λ; u₁, \hat{u}, \hat{v}).
+  ∂_{η λ}² F(0, λ) = \dot{ℰ}₃(λ; \order[1]u, \hat{u}, \hat{v}).
 \end{equation*}
 
 En insérant les résultats précédents dans les
 expressions~\eqref{eq:20220107060454} et \eqref{eq:20220107124311}, on trouve
 \begin{gather*}
-  f'(0) = ℰ₃(u₁, \hat{u}, \hat{v}) + λ₁ \dot{ℰ}₂(\hat{u}, \hat{v}),\\
-  f''(0) = ℰ₄(u₁, u₁, \hat{u}, \hat{v}) + ℰ₃(u₂, \hat{u}, \hat{v}) + 2λ₁ \dot{ℰ}₃(u₁, \hat{u}, \hat{v}) + λ₁² \ddot{ℰ}₂(\hat{u}, \hat{v}) + λ₂ \dot{ℰ}₂(\hat{u}, \hat{v}) .
+  f'(0) = ℰ₃(\order[1]u, \hat{u}, \hat{v}) + \order[1]λ \dot{ℰ}₂(\hat{u}, \hat{v}),\\
+  f''(0) = ℰ₄(\order[1]u, \order[1]u, \hat{u}, \hat{v}) + ℰ₃(\order[2]u, \hat{u}, \hat{v}) + 2\order[1]λ \dot{ℰ}₃(\order[1]u, \hat{u}, \hat{v}) + \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(\hat{u}, \hat{v}) + \order[2]λ \dot{ℰ}₂(\hat{u}, \hat{v}) .
 \end{gather*}
 qui conduisent finalement au développement limité~\eqref{eq:20220531054247}.
 
@@ -1469,105 +1481,105 @@ In this appendix, Eqs.~\eqref{eq:20220609133608}, \eqref{eq:20220609133629} and
 expansions~\eqref{eq:20220617064633} are plugged into the asymptotic expansion
 \eqref{eq:20220531054247} of the Hessian on the one hand
 \begin{multline*}
-  ℰ_{, uu} [u(η), λ(η); x, \hat{u}] = ℰ₂(x₀, \hat{u}) + η \bigl[ ℰ₂(x₁, \hat{u}) + ℰ₃(u₁, x₀, \hat{u}) + λ₁ \dot{ℰ}₂(x₀, \hat{u})\bigr]\\
-  + \tfrac{1}{2} η² \bigl[ℰ₂(x₂, \hat{u}) + 2ℰ₃(u₁, x₁, \hat{u}) + 2 λ₁ \dot{ℰ}₂(x₁, \hat{u}) + ℰ₄(u₁, u₁, x₀, \hat{u})\\
-  + ℰ₃(u₂, x₀, \hat{u}) + 2λ₁ \dot{ℰ}₃(u₁, x₀, \hat{u}) + λ₁² \ddot{ℰ}₂(x₀, \hat{u}) + λ₂ \dot{ℰ}₂(x₀, \hat{u}) \bigr] + o(η²)
+  ℰ_{, uu} [u(η), λ(η); x, \hat{u}] = ℰ₂(\order[0]x, \hat{u}) + η \bigl[ ℰ₂(\order[1]x, \hat{u}) + ℰ₃(\order[1]u, \order[0]x, \hat{u}) + \order[1]λ \dot{ℰ}₂(\order[0]x, \hat{u})\bigr]\\
+  + \tfrac{1}{2} η² \bigl[ℰ₂(\order[2]x, \hat{u}) + 2ℰ₃(\order[1]u, \order[1]x, \hat{u}) + 2 \order[1]λ \dot{ℰ}₂(\order[1]x, \hat{u}) + ℰ₄(\order[1]u, \order[1]u, \order[0]x, \hat{u})\\
+  + ℰ₃(\order[2]u, \order[0]x, \hat{u}) + 2\order[1]λ \dot{ℰ}₃(\order[1]u, \order[0]x, \hat{u}) + \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(\order[0]x, \hat{u}) + \order[2]λ \dot{ℰ}₂(\order[0]x, \hat{u}) \bigr] + o(η²)
 \end{multline*}
 (where the \(ℰ_k\) and \(\dot{ℰ}_k\) are all evaluated at \(λ=λ₀\)) and into the
 scalar product \(α 〈 x, \hat{u} 〉\) on the other hand
 \begin{multline*}
-    α 〈 x, \hat{u} 〉 = α₀ 〈 x₀, \hat{u} 〉 + η \bigl(α₁ 〈 x₀, \hat{u} 〉 + α₀ 〈 x₁, \hat{u} 〉\bigr)\\
-    + \tfrac{1}{2} η² \bigl(α₀ 〈 x₂, \hat{u} 〉 + 2 α₁ 〈 x₁, \hat{u} 〉 + α₂ 〈 x₀, \hat{u} 〉\bigr) + o(η²).
+    α 〈 x, \hat{u} 〉 = \order[0]α 〈 \order[0]x, \hat{u} 〉 + η \bigl(\order[1]α 〈 \order[0]x, \hat{u} 〉 + \order[0]α 〈 \order[1]x, \hat{u} 〉\bigr)\\
+    + \tfrac{1}{2} η² \bigl(\order[0]α 〈 \order[2]x, \hat{u} 〉 + 2 \order[1]α 〈 \order[1]x, \hat{u} 〉 + \order[2]α 〈 \order[0]x, \hat{u} 〉\bigr) + o(η²).
 \end{multline*}
 
 Equating both expressions for all \(\hat{u} ∈ U\) [see
 Eq.~\eqref{eq:20220617074949}] leads to three variational problems (for the
 \(η⁰\), \(η¹\) and \(η²\) terms) that are discussed below.
 
-\paragraph{Variational problem of order 0} Find \(x₀∈U\) and \(α₀∈\reals\) such
+\paragraph{Variational problem of order 0} Find \(\order[0]x∈U\) and \(\order[0]α∈\reals\) such
 that, for all \(\hat{u}∈U\)
 \begin{equation*}
-  ℰ₂(x₀, \hat{u}) = α₀ 〈 x₀, \hat{u} 〉.
+  ℰ₂(\order[0]x, \hat{u}) = \order[0]α 〈 \order[0]x, \hat{u} 〉.
 \end{equation*}
 
-The above equation shows that \((α₀, x₀)\) is an eigenpair of \(ℰ₂(λ₀)\). As
-discussed in Sec.~\ref{sec:20220617075558}, only the case \(α₀ = 0\) is
-relevant. Then \(x₀ ∈ V\), which is expressed by the
-expansion~\eqref{eq:20220609133608} of \(x₀\).
+The above equation shows that \((\order[0]α, \order[0]x)\) is an eigenpair of \(ℰ₂(λ₀)\). As
+discussed in Sec.~\ref{sec:20220617075558}, only the case \(\order[0]α = 0\) is
+relevant. Then \(\order[0]x ∈ V\), which is expressed by the
+expansion~\eqref{eq:20220904160057} of \(\order[0]x\).
 
-\paragraph{Variational problem of order 1} Find \(x₁∈U\) and \(α₁∈\reals\) such
+\paragraph{Variational problem of order 1} Find \(\order[1]x∈U\) and \(\order[1]α∈\reals\) such
 that, for all \(\hat{u}∈U\)
 \begin{equation}
   \label{eq:20220609131953}
-  ℰ₂(x₁, \hat{u}) + ℰ₃(u₁, x₀, \hat{u}) + λ₁ \dot{ℰ}₂(x₀, \hat{u}) = α₁ 〈 x₀, \hat{u} 〉,
+  ℰ₂(\order[1]x, \hat{u}) + ℰ₃(\order[1]u, \order[0]x, \hat{u}) + \order[1]λ \dot{ℰ}₂(\order[0]x, \hat{u}) = \order[1]α 〈 \order[0]x, \hat{u} 〉,
 \end{equation}
 or, equivalently, plugging the expansions~\eqref{eq:20220524133944} and
-\eqref{eq:20220609133608} of \(u₁\) and \(x₀\) in the \(v_i\) basis
+\eqref{eq:20220609133608} of \(\order[1]u\) and \(\order[0]x\) in the \(v_i\) basis
 \begin{equation}
   \label{eq:20220617080547}
-  ℰ₂(x₁, \hat{u}) + ℰ₃(v_j, v_k, \hat{u}) χ₀^j ξ₁^k + λ₁ \dot{ℰ}₂(v_j, \hat{u}) χ₀^j = α₁ χ₀^j 〈 v_j, \hat{u} 〉.
+  ℰ₂(\order[1]x, \hat{u}) + ℰ₃(v_j, v_k, \hat{u}) \order[0]{χ_j} \order[1]{ξ_k} + \order[1]λ \dot{ℰ}₂(v_j, \hat{u}) \order[0]{χ_j} = \order[1]α \order[0]{χ_j} 〈 v_j, \hat{u} 〉.
 \end{equation}
 
 For \(\hat{u} = v_i\), observing that \(〈 v_i, v_j 〉 = δ_{ij}\) since
 \((v_i)\) is orthonormal, the above equation reads
 \begin{equation}
-  \bigl[ℰ₃(λ₀; v_i, v_j, v_k) ξ₁^k + λ₁ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] χ₀^j = α₁ χ₀^i,
+  \bigl[ℰ₃(λ₀; v_i, v_j, v_k) \order[1]{ξ_k} + \order[1]λ \dot{ℰ}₂(λ₀; v_i, v_j)\bigr] \order[0]{χ_j} = \order[1]α \order[0]{χ_i},
 \end{equation}
 which reduces to Eq.~\eqref{eq:20220609133608}.
 
-The test function is now picked in \(W = V^\perp\), and \(x₁\) is decomposed as
-the sum of its projections onto \(V\) and \(W\): \(x₁ = χ₁^i v_i + y₁\), where
+The test function is now picked in \(W = V^\perp\), and \(\order[1]x\) is decomposed as
+the sum of its projections onto \(V\) and \(W\): \(\order[1]x = \order[1]{χ_i} v_i + y₁\), where
 \(y₁ ∈ W\). Eq.~\eqref{eq:20220617080547} then delivers the following
 variational problem: find \(y₁ ∈ W\) such that, for all \(\hat{w} ∈ W\),
 \begin{equation}
-  ℰ₂(y₁, \hat{w}) + ℰ₃(v_i, v_j, \hat{w}) χ₀^i ξ₁^j + λ₁ \dot{ℰ}₂(v_i, \hat{w}) χ₀^i = 0,
+  ℰ₂(y₁, \hat{w}) + ℰ₃(v_i, v_j, \hat{w}) \order[0]{χ_i} \order[1]{ξ_j} + \order[1]λ \dot{ℰ}₂(v_i, \hat{w}) \order[0]{χ_i} = 0,
 \end{equation}
 (observe that \(〈 v_j, \hat{w} 〉\) since \(V\) and \(W\) are orthogonal
 subspaces). The solution to the above problem is expressed as a linear
 combination of the \(w_i\) and \(w_{ij}\) defined by the variational problems
 \eqref{eq:20220524134525} and \eqref{eq:20220519164523}, respectively:
-\(y₁ = χ₀^i ξ₁^j w_{i j} + \tfrac{1}{2} λ₁ χ₀^i w_i\), and the
+\(y₁ = \order[0]{χ_i} \order[1]{ξ_j} w_{i j} + \tfrac{1}{2} \order[1]λ \order[0]{χ_i} w_i\), and the
 decomposition~\eqref{eq:20220609133629} is retrieved.
 
 \paragraph{Variational problem of order 2} For all \(\hat{u} ∈ U\),
 \begin{multline*}
-  ℰ₂(x₂, \hat{u}) + 2ℰ₃(u₁, x₁, \hat{u}) + 2 λ₁ \dot{ℰ}₂(x₁, \hat{u}) + ℰ₄(u₁, u₁, x₀, \hat{u}) + ℰ₃(u₂, x₀, \hat{u})\\
-  + 2λ₁ \dot{ℰ}₃(u₁, x₀, \hat{u}) + λ₁² \ddot{ℰ}₂(x₀, \hat{u}) + λ₂ \dot{ℰ}₂(x₀, \hat{u}) = 2 α₁ 〈 x₁, \hat{u} 〉 + α₂ 〈 x₀, \hat{u} 〉.
+  ℰ₂(\order[2]x, \hat{u}) + 2ℰ₃(\order[1]u, \order[1]x, \hat{u}) + 2 \order[1]λ \dot{ℰ}₂(\order[1]x, \hat{u}) + ℰ₄(\order[1]u, \order[1]u, \order[0]x, \hat{u}) + ℰ₃(\order[2]u, \order[0]x, \hat{u})\\
+  + 2\order[1]λ \dot{ℰ}₃(\order[1]u, \order[0]x, \hat{u}) + \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(\order[0]x, \hat{u}) + \order[2]λ \dot{ℰ}₂(\order[0]x, \hat{u}) = 2 \order[1]α 〈 \order[1]x, \hat{u} 〉 + \order[2]α 〈 \order[0]x, \hat{u} 〉.
 \end{multline*}
 
 For \(\hat{u} = \hat{v}_i\), plugging the decompositions
 \eqref{eq:20220524133944}, \eqref{eq:20220524134613}, \eqref{eq:20220609133608}
-and \eqref{eq:20220609133629} of \(u₁\), \(u₂\), \(x₀ \) et \(x₁\) delivers
+and \eqref{eq:20220609133629} of \(\order[1]u\), \(\order[2]u\), \(\order[0]x \) et \(\order[1]x\) delivers
 % \begin{multline*}
-%   2ℰ₃(v_i, x₁, u₁) + 2 λ₁ \dot{ℰ}₂(v_i, x₁) + ℰ₄(v_i, x₀, u₁, u₁) + ℰ₃(v_i, x₀, u₂)\\
-%   + 2λ₁ \dot{ℰ}₃(v_i, x₀, u₁) + λ₁² \ddot{ℰ}₂(v_i, x₀) + λ₂ \dot{ℰ}₂(v_i, x₀) = 2α₁ 〈 v_i, x₁ 〉 + α₂ 〈 v_i, x₀ 〉,
+%   2ℰ₃(v_i, \order[1]x, \order[1]u) + 2 \order[1]λ \dot{ℰ}₂(v_i, \order[1]x) + ℰ₄(v_i, \order[0]x, \order[1]u, \order[1]u) + ℰ₃(v_i, \order[0]x, \order[2]u)\\
+%   + 2\order[1]λ \dot{ℰ}₃(v_i, \order[0]x, \order[1]u) + \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(v_i, \order[0]x) + \order[2]λ \dot{ℰ}₂(v_i, \order[0]x) = 2\order[1]α 〈 v_i, \order[1]x 〉 + \order[2]α 〈 v_i, \order[0]x 〉,
 % \end{multline*}
 % \begin{multline*}
-%   2ℰ₃(v_i, χ₁^jv_j + χ₀^jξ₁^kw_{jk}+\tfrac{1}{2} λ₁ χ₀^j w_j, ξ₁^l v_l) + 2 λ₁ \dot{ℰ}₂(v_i, χ₁^jv_j + χ₀^jξ₁^kw_{jk}+\tfrac{1}{2} λ₁ χ₀^j w_j)\\
-%   + ℰ₄(v_i, χ₀^j v_j, ξ₁^k v_k, ξ₁^l v_l) + ℰ₃(v_i, χ₀^j v_j, ξ₂^k v_k + ξ₁^k ξ₁^l w_{kl} + λ₁ ξ₁^k w_k)\\
-%   + 2λ₁ \dot{ℰ}₃(v_i, χ₀^j v_j, ξ₁^k v_k) + λ₁² \ddot{ℰ}₂(v_i, χ₀^j v_j) + λ₂ \dot{ℰ}₂(v_i, χ₀^j v_j)\\
-%   = 2α₁ 〈 v_i,  χ₁^jv_j + χ₀^jξ₁^kw_{jk}+\tfrac{1}{2} λ₁ χ₀^j w_j 〉 + α₂ 〈 v_i, χ₀^j v_j〉,
+%   2ℰ₃(v_i, χ₁^jv_j + \order[0]{χ_j}\order[1]{ξ_k}w_{jk}+\tfrac{1}{2} \order[1]λ \order[0]{χ_j} w_j, \order[1]{ξ_l} v_l) + 2 \order[1]λ \dot{ℰ}₂(v_i, χ₁^jv_j + \order[0]{χ_j}\order[1]{ξ_k}w_{jk}+\tfrac{1}{2} \order[1]λ \order[0]{χ_j} w_j)\\
+%   + ℰ₄(v_i, \order[0]{χ_j} v_j, \order[1]{ξ_k} v_k, \order[1]{ξ_l} v_l) + ℰ₃(v_i, \order[0]{χ_j} v_j, \order[2]{ξ_k} v_k + \order[1]{ξ_k} \order[1]{ξ_l} w_{kl} + \order[1]λ \order[1]{ξ_k} w_k)\\
+%   + 2\order[1]λ \dot{ℰ}₃(v_i, \order[0]{χ_j} v_j, \order[1]{ξ_k} v_k) + \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(v_i, \order[0]{χ_j} v_j) + \order[2]λ \dot{ℰ}₂(v_i, \order[0]{χ_j} v_j)\\
+%   = 2\order[1]α 〈 v_i,  χ₁^jv_j + \order[0]{χ_j}\order[1]{ξ_k}w_{jk}+\tfrac{1}{2} \order[1]λ \order[0]{χ_j} w_j 〉 + \order[2]α 〈 v_i, \order[0]{χ_j} v_j〉,
 % \end{multline*}
 % \begin{multline*}
-%   2ℰ₃(v_i, v_j,  v_k) χ₁^j ξ₁^k + 2ℰ₃(v_i, w_{jk}, v_l) χ₀^j ξ₁^k ξ₁^l + λ₁ ℰ₃(v_i,  w_j, v_k) χ₀^j ξ₁^k + 2 λ₁ \dot{ℰ}₂(v_i, v_j) χ₁^j\\
-%   + 2 λ₁ \dot{ℰ}₂(v_i, w_{jk}) χ₀^j ξ₁^k+ λ₁² \dot{ℰ}₂(v_i, w_j) χ₀^j + ℰ₄(v_i, v_j,  v_k, v_l) χ₀^j ξ₁^k ξ₁^l\\
-%   + ℰ₃(v_i, v_j, v_k) χ₀^j ξ₂^k + ℰ₃(v_i, v_j, w_{kl}) χ₀^j ξ₁^k ξ₁^l + λ₁ ℰ₃(v_i, v_j, w_k) χ₀^j ξ₁^k\\
-%   + 2λ₁ \dot{ℰ}₃(v_i, v_j,  v_k) χ₀^j ξ₁^k + λ₁² \ddot{ℰ}₂(v_i, v_j) χ₀^j + λ₂ \dot{ℰ}₂(v_i, v_j) χ₀^j = 2α₁χ₁^i + α₂ χ₀^i.
+%   2ℰ₃(v_i, v_j,  v_k) χ₁^j \order[1]{ξ_k} + 2ℰ₃(v_i, w_{jk}, v_l) \order[0]{χ_j} \order[1]{ξ_k} \order[1]{ξ_l} + \order[1]λ ℰ₃(v_i,  w_j, v_k) \order[0]{χ_j} \order[1]{ξ_k} + 2 \order[1]λ \dot{ℰ}₂(v_i, v_j) χ₁^j\\
+%   + 2 \order[1]λ \dot{ℰ}₂(v_i, w_{jk}) \order[0]{χ_j} \order[1]{ξ_k}+ \bigl( \order[1]λ \bigr)^2 \dot{ℰ}₂(v_i, w_j) \order[0]{χ_j} + ℰ₄(v_i, v_j,  v_k, v_l) \order[0]{χ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+%   + ℰ₃(v_i, v_j, v_k) \order[0]{χ_j} \order[2]{ξ_k} + ℰ₃(v_i, v_j, w_{kl}) \order[0]{χ_j} \order[1]{ξ_k} \order[1]{ξ_l} + \order[1]λ ℰ₃(v_i, v_j, w_k) \order[0]{χ_j} \order[1]{ξ_k}\\
+%   + 2\order[1]λ \dot{ℰ}₃(v_i, v_j,  v_k) \order[0]{χ_j} \order[1]{ξ_k} + \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(v_i, v_j) \order[0]{χ_j} + \order[2]λ \dot{ℰ}₂(v_i, v_j) \order[0]{χ_j} = 2\order[1]α\order[1]{χ_i} + \order[2]α \order[0]{χ_i}.
 % \end{multline*}
 \begin{multline*}
-  \bigl[ ℰ₄(v_i, v_j,  v_k, v_l) + 2ℰ₃(v_i, w_{jk}, v_l) + ℰ₃(v_i, v_j, w_{kl})\bigr] χ₀^j ξ₁^k ξ₁^l\\
-  + λ₁ \bigl[ ℰ₃(v_i,  w_j, v_k) + 2 \dot{ℰ}₂(v_i, w_{jk}) + ℰ₃(v_i, v_j, w_k) + 2 \dot{ℰ}₃(v_i, v_j,  v_k) \bigr] χ₀^j ξ₁^k\\
-  + λ₁² \bigl[\dot{ℰ}₂(v_i, w_j) + \ddot{ℰ}₂(v_i, v_j)\bigr] χ₀^j + \bigl[ℰ₃(v_i, v_j, v_k) ξ₂^k + λ₂ \dot{ℰ}₂(v_i, v_j)\bigr] χ₀^j \\
-  +2\bigl[ℰ₃(v_i, v_j,  v_k)  ξ₁^k + λ₁ \dot{ℰ}₂(v_i, v_j)\bigr] χ₁^j = 2α₁χ₁^i + α₂ χ₀^i.
+  \bigl[ ℰ₄(v_i, v_j,  v_k, v_l) + 2ℰ₃(v_i, w_{jk}, v_l) + ℰ₃(v_i, v_j, w_{kl})\bigr] \order[0]{χ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+  + \order[1]λ \bigl[ ℰ₃(v_i,  w_j, v_k) + 2 \dot{ℰ}₂(v_i, w_{jk}) + ℰ₃(v_i, v_j, w_k) + 2 \dot{ℰ}₃(v_i, v_j,  v_k) \bigr] \order[0]{χ_j} \order[1]{ξ_k}\\
+  + \bigl( \order[1]λ \bigr)^2 \bigl[\dot{ℰ}₂(v_i, w_j) + \ddot{ℰ}₂(v_i, v_j)\bigr] \order[0]{χ_j} + \bigl[ℰ₃(v_i, v_j, v_k) \order[2]{ξ_k} + \order[2]λ \dot{ℰ}₂(v_i, v_j)\bigr] \order[0]{χ_j} \\
+  +2\bigl[ℰ₃(v_i, v_j,  v_k)  \order[1]{ξ_k} + \order[1]λ \dot{ℰ}₂(v_i, v_j)\bigr] χ₁^j = 2\order[1]α\order[1]{χ_i} + \order[2]α \order[0]{χ_i}.
 \end{multline*}
 
-The \(χ₀^j ξ₁^k\) term is transformed with Eqs.~\eqref{eq:20220524134525} and
+The \(\order[0]{χ_j} \order[1]{ξ_k}\) term is transformed with Eqs.~\eqref{eq:20220524134525} and
 \eqref{eq:20220519164523}
 \begin{multline*}
-  \bigl[ ℰ₄(v_i, v_j,  v_k, v_l) + ℰ₃(v_i, w_{jk}, v_l) + ℰ₃(v_i, w_{jl}, v_k) + ℰ₃(v_i, v_j, w_{kl})\bigr] χ₀^j ξ₁^k ξ₁^l\\
-  + λ₁ \bigl[ -ℰ₂(w_{ik},  w_j) - ℰ₂(w_i, w_{jk}) - ℰ₂(w_{ij}, w_k) + 2 \dot{ℰ}₃(v_i, v_j,  v_k) \bigr] χ₀^j ξ₁^k\\
-  + λ₁² \bigl[\dot{ℰ}₂(v_i, w_j) + \ddot{ℰ}₂(v_i, v_j)\bigr] χ₀^j + \bigl[ℰ₃(v_i, v_j, v_k) ξ₂^k + λ₂ \dot{ℰ}₂(v_i, v_j)\bigr] χ₀^j \\
-  +2\bigl[ℰ₃(v_i, v_j,  v_k)  ξ₁^k + λ₁ \dot{ℰ}₂(v_i, v_j)\bigr] χ₁^j = 2α₁χ₁^i + α₂ χ₀^i,
+  \bigl[ ℰ₄(v_i, v_j,  v_k, v_l) + ℰ₃(v_i, w_{jk}, v_l) + ℰ₃(v_i, w_{jl}, v_k) + ℰ₃(v_i, v_j, w_{kl})\bigr] \order[0]{χ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+  + \order[1]λ \bigl[ -ℰ₂(w_{ik},  w_j) - ℰ₂(w_i, w_{jk}) - ℰ₂(w_{ij}, w_k) + 2 \dot{ℰ}₃(v_i, v_j,  v_k) \bigr] \order[0]{χ_j} \order[1]{ξ_k}\\
+  + \bigl( \order[1]λ \bigr)^2 \bigl[\dot{ℰ}₂(v_i, w_j) + \ddot{ℰ}₂(v_i, v_j)\bigr] \order[0]{χ_j} + \bigl[ℰ₃(v_i, v_j, v_k) \order[2]{ξ_k} + \order[2]λ \dot{ℰ}₂(v_i, v_j)\bigr] \order[0]{χ_j} \\
+  +2\bigl[ℰ₃(v_i, v_j,  v_k)  \order[1]{ξ_k} + \order[1]λ \dot{ℰ}₂(v_i, v_j)\bigr] χ₁^j = 2\order[1]α\order[1]{χ_i} + \order[2]α \order[0]{χ_i},
 \end{multline*}
 and Eq.~\eqref{eq:20220616082923} results from the application of
 Eqs.~\eqref{eq:20220617084433} and \eqref{eq:20220617085256}.

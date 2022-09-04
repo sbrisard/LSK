@@ -12,7 +12,7 @@ plutôt que le problème initialement retenu
 
 Cela revient à remplacer toutes les anciennes occurrence de `wᵢ` par `2wᵢ`
 
-    wᵢᵒˡᵈ = 2wᵢⁿᵉʷ
+    wᵢᵒˡᵈ = 2wᵢⁿᵉʷ    or    ½ wᵢᵒˡᵈ = wᵢⁿᵉʷ
 
 Je crée une branche `new_w_i` dans laquelle les modifications seront
 apportées. La dernière version utilisant intégralement l'ancienne convention

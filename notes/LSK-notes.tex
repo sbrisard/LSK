@@ -147,7 +147,7 @@ For \(1 ≤ i, j ≤ m\), we introduce the solutions \(w_i, w_{ij} ∈ W\) to th
 following variational problems
 \begin{gather}
   \label{eq:20220524134525}
-  ℰ₂(λ₀; w_i, \hat{w}) + 2\dot{ℰ}₂(λ₀; v_i, \hat{w}) = 0,\\
+  ℰ₂(λ₀; w_i, \hat{w}) + \dot{ℰ}₂(λ₀; v_i, \hat{w}) = 0,\\
   \label{eq:20220519164523}
   ℰ₂(λ₀; w_{i j}, \hat{w})+ℰ₃(λ₀; v_i, v_j, \hat{w}) = 0,
 \end{gather}
@@ -158,14 +158,14 @@ the following tensors, defined in \(V\)
 \begin{gather}
   E_{ijk} = ℰ₃(λ₀; v_i, v_j, v_k) + ℰ₂(λ₀; v_i, w_{jk}) + ℰ₂(λ₀; v_j, w_{ki}) + ℰ₂(λ₀; v_k, w_{ij}),\\
   E_{ijkl} = ℰ₄(λ₀ ; v_i, v_j, v_k, v_l) + ℰ₃(λ₀ ; v_i, v_j, w_{kl}) + ℰ₃(λ₀ ; v_i, v_k, w_{lj}) + ℰ₃(λ₀ ; v_i, v_l, w_{jk}),\\
-  F_{ij} = \dot{ℰ}₂(λ₀; v_i, v_j) + \tfrac{1}{2} \bigl[ℰ₂(λ₀; v_i, w_j) + ℰ₂(λ₀; v_j, w_i)\bigr],
+  F_{ij} = \dot{ℰ}₂(λ₀; v_i, v_j) + ℰ₂(λ₀; v_i, w_j) + ℰ₂(λ₀; v_j, w_i),
 \end{gather}
 as well as the derivatives
 \begin{gather}
   \label{eq:20220615063626}
   \mathring{E}_{ijk} = \dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ₂}(λ₀; v_i, w_{jk}) + \dot{ℰ}₂(λ₀; v_j, w_{ki}) + \dot{ℰ}₂(λ₀; v_k, w_{ij}),\\
   \label{eq:20220615063633}
-  \mathring{F}_{ij} = \ddot{ℰ}₂(λ₀; v_i, v_j) + \tfrac{1}{2} \bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\bigr].
+  \mathring{F}_{ij} = \ddot{ℰ}₂(λ₀; v_i, v_j) + \dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i).
 \end{gather}
 
 Note that, since \(ℰ₂(λ₀; v_i, •) = 0\), the above expressions simplify as follows
@@ -185,19 +185,25 @@ of \(E_{ijkl}\) result from Eq.~\eqref{eq:20220519164523}
   \label{eq:20220802081116}
   E_{ijkl} = ℰ₄(λ₀ ; v_i, v_j, v_k, v_l) - ℰ₂(λ₀ ; w_{ij}, w_{kl}) - ℰ₂(λ₀ ; w_{ik}, w_{jl}) - ℰ₂(λ₀ ; w_{il}, w_{jk}),
 \end{equation}
-which shows that \(E_{ijkl}\) is also fully symmetric. To close this section,
-the following useful identities are derived from applications of
-Eqs.~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}
-\begin{align}
-  \notag
-  \mathring{F}_{ij} ={} & \ddot{ℰ}₂(λ₀; v_i, v_j) + \tfrac{1}{2}\bigl[\dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; w_i, v_j)\bigr] = \ddot{ℰ}₂(λ₀; v_i, v_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\\
+which shows that \(E_{ijkl}\) is also fully symmetric. We close this section,
+with two useful identities
+\begin{equation}
   \label{eq:20220617084433}
-  ={} & \ddot{ℰ}₂(λ₀; v_i, v_j) -\tfrac{1}{2}ℰ₂(λ₀; w_i, w_j) = \ddot{ℰ}₂(λ₀; v_i, v_j) + \dot{ℰ}₂(λ₀; v_i, w_j),\\
-  \notag
-  \mathring{E}_{ijk} ={}& \dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ}₂(λ₀; v_i, w_{jk}) + \dot{ℰ}₂(λ₀; v_j, w_{ik}) + \dot{ℰ}₂(λ₀; v_k, w_{ij})\\
+  \begin{aligned}[b]
+    \mathring{F}_{ij} ={} & \ddot{ℰ}₂(λ₀; v_i, v_j) + \dot{ℰ}₂(λ₀; v_i, w_j) + \dot{ℰ}₂(λ₀; v_j, w_i)\\
+    ={} & \ddot{ℰ}₂(λ₀; v_i, v_j) + \dot{ℰ}₂(λ₀; v_i, w_j) - ℰ₂(λ₀; w_j, w_i) & \text{Eq.~\eqref{eq:20220524134525}, with \(v_i = v_j\) and \(\hat{w} = w_i\)}\\
+    ={} & \ddot{ℰ}₂(λ₀; v_i, v_j)  + 2\dot{ℰ}₂(λ₀; v_i, w_j) & \text{Eq.~\eqref{eq:20220524134525}, with \(\hat{w} = w_j\)}\\
+    ={} & \ddot{ℰ}₂(λ₀; v_i, v_j) + 2\dot{ℰ}₂(λ₀; v_j, w_i), & \text{symmetry w.r.t. \(i\) and \(j\)}
+  \end{aligned}
+\end{equation}
+and, from Eq.~\eqref{eq:20220519164523}
+\begin{equation}
   \label{eq:20220617085256}
-  ={}& \dot{ℰ}₃(λ₀; v_i, v_j, v_k) -\tfrac{1}{2}\bigl[ℰ₂(λ₀; w_i, w_{jk}) + ℰ₂(λ₀; w_j, w_{ik}) + ℰ₂(λ₀; w_k, w_{ij})\bigr].
-\end{align}
+  \begin{aligned}[b]
+  \mathring{E}_{ijk} ={}& \dot{ℰ}₃(λ₀; v_i, v_j, v_k) + \dot{ℰ}₂(λ₀; v_i, w_{jk}) + \dot{ℰ}₂(λ₀; v_j, w_{ik}) + \dot{ℰ}₂(λ₀; v_k, w_{ij})\\
+  ={}& \dot{ℰ}₃(λ₀; v_i, v_j, v_k) - \bigl[ℰ₂(λ₀; w_i, w_{jk}) + ℰ₂(λ₀; w_j, w_{ik}) + ℰ₂(λ₀; w_k, w_{ij})\bigr].
+  \end{aligned}
+\end{equation}
 
 \section{Analysis of the critical point}
 \label{sec:20220802061621}

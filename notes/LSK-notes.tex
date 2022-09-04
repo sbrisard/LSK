@@ -305,17 +305,17 @@ In this section, we show that, besides the fundamental branch \(u^\ast(λ)\),
 other (bifurcated) equilibrium branches may pass through the critical point
 \((u₀, λ₀)\). The starting point is the characterization of an equilibrium by
 the stationarity of the energy, which defines all equilibrium branches as
-implicit functions, which can be expanded with respect to \(ξ_1\), \dots,
-\(ξ_m\) and \((λ - λ₀)\).
+implicit functions, which can be expanded with respect to some perturbation
+parameter.
 
-The first approach (see Sec.~\ref{sec:20220902091527}) is the (historical)
+The first approach (see Sec.~\ref{sec:20220902091527}) relies on the
 Lyapunov–Schmidt decomposition of the equilibrium branch over \(V\) and
 \(W\). However, this approach leads to tedious derivations. This approach has
 historical and pedagogical value: in particular, it provides a meaning to
 \(w_i\) and \(w_{ij}\) defined by Eqs.~\eqref{eq:20220524134525} and
-\eqref{eq:20220519164523}. An alternative, more systematic approach is
-developped in Sec.~\ref{sec:20220902092109}; I discovered this alternative
-approach through the paper by \textcite[][Appendix A]{chak2018}.
+\eqref{eq:20220519164523}. In Sec.~\ref{sec:20220902092109}, a more systematic
+approach is developed, that I found in the paper by \textcite[][Appendix
+A]{chak2018}.
 
 \subsection{The Lyapunov–Schmidt decomposition}
 \label{sec:20220902091527}
@@ -414,12 +414,17 @@ and, at \(ξ_1 = \cdots = ξ_m = 0, λ = λ₀\) (recalling that, at this point,
   \dot{ℰ}₂(λ₀; v_i, \hat{w}) + ℰ₂(λ₀; w_{,iλ}, \hat{w}) = 0.
 \end{equation}
 The variational problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}
-are recognized, \pdfmarkupcomment{leading to}{Check weights}
+are recognized, leading to
 \begin{equation}
   \frac{∂²w}{∂ξ_i ∂ξ_j}\biggr\rvert_{ξ_1 = \cdots = ξ_m = 0, λ = λ₀} = w_{ij}
   \quad\text{and}\quad
   \frac{∂²w}{∂λ ∂ξ_i}\biggr\rvert_{ξ_1 = \cdots = ξ_m = 0, λ = λ₀} = w_{i}.
 \end{equation}
+
+The \(w_i\) and \(w_{ij}\) defined by the variational
+problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523} therefore
+appear as the second-order derivatives of \(w\) at \(ξ_k = 0\) and \(λ = λ_0\),
+with respect to \(λ\), \(ξ_i\) and \(ξ_i\), \(ξ_j\).
 
 Finally, differentiating Eq.~\eqref{eq:20220830151513} \wrt{} \(λ\) leads to
 \begin{equation}

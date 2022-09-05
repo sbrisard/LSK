@@ -1168,44 +1168,39 @@ In this section, \(𝒯\) denotes a trilinear, symmetric form over the vector sp
   \(𝒯(u, v, w) = 0\) for all \(u, v, w ∈ U\).
 \end{proof}
 
-\section{Développements limités le long d'une branche bifurquée du diagramme d'équilibre}
+\section{Asymptotic expansions along a bifurcated branch}
+\label{sec:20220905060440}
 
-\subsection{Principe du calcul}
+In this section, the asymptotic expansions along the bifurcated branch of the
+energy, its residual and its hessian are derived.
+
+\subsection{Principle of the derivation}
 \label{sec:20220107121442}
 % 02/06/2022 — 099042106e938251657847daca64c8fcbaa833c3
 %
 % Validation des calculs de ce paragraphe
 
-On pose dans ce qui suit
+Introducing \(Λ\) and \(U\), which are functions of \(η\) only,
 \begin{align}
   \label{eq:20211112155446}
   Λ(η) & = λ(η) - λ₀ = η \order[1]λ + \tfrac{1}{2} η² \order[2]λ + \tfrac{1}{6} η³ \order[3]λ + \cdots,\\
   \label{eq:20211112113028}
-  U(η) & = u(η) - u^{\ast}[λ(η)] = η \order[1]u + \tfrac{1}{2} η² \order[2]u + \tfrac{1}{6} η³ \order[3]u + \cdots.
+  U(η) & = u(η) - u^{\ast}[λ(η)] = η \order[1]u + \tfrac{1}{2} η² \order[2]u + \tfrac{1}{6} η³ \order[3]u + \cdots,
 \end{align}
-
-On considère une fonctionnelle \(\mathcal{F}\) de \(u\) et \(λ\)~:
-\(\mathcal{F}(u, λ)\). Cette fonctionnelle est évaluée le long de la branche
-bifurquée. En d'autres termes, on considère
+the functional \(\mathcal{F}(u, λ)\) is evaluated along the bifurcated branch,
+thus defining the function \(f(η)\)
 \begin{equation*}
   f(η) = F\{ u^{\ast} [λ₀ + Λ(η)] + U(η), λ₀ + Λ(η) \}.
 \end{equation*}
 
-On souhaite établir un développement limité de \(f\) au voisinage de \(η = 0\),
-ce qui conduit à calculer les dérivées successives de \(f\) en \(η = 0\),
-puisque
-\begin{equation*}
-  f(η) = f(0) + η f'(0) + \tfrac{1}{2} η² f''(0) + \cdots.
-\end{equation*}
-
-Pour calculer ces dérivées, il sera commode d'introduire la fonction auxiliaire
-\(F\)
+We seek the Taylor expansion of \(f\) at \(η = 0\), which requires the
+successive derivatives of \(f\). To this end, it is convenient to introduce the
+function \(F\) defined as follows
 \begin{equation*}
   F(η, λ) =\mathcal{F}[u^{\ast}(λ) + U(η), λ],
 \end{equation*}
-dans laquelle les variables \(λ\) et \(η\) sont provisoirement considérées comme
-indépendantes. On a \(f(η) = F[η, λ₀ + Λ(η)]\), d'où l'on déduit successivement
-que
+where \(λ\) and \(η\) are temporarily seen as independent variables. Since
+\(f(η) = F[η, λ₀ + Λ(η)]\), the following identities hold
 \begin{gather*}
   f'(η) = ∂_{η} F + Λ' ∂_{λ} F,\\
   f''(η) = ∂_{ηη}² F + 2Λ' ∂_{ηλ}²F + Λ'^2 ∂_{λλ}² F + Λ'' ∂_{λ} F,\\
@@ -1221,9 +1216,9 @@ que
     & + 4 Λ''' ∂_{ηλ}² F + \bigl( 3Λ''^2 + 4 Λ' Λ''' \bigr) ∂_{λλ}² F + λ'''' ∂_{λ}F,
   \end{aligned}
 \end{gather*}
-où \(Λ\) et ses dérivées sont évaluées en \(η\), tandis que \(F\) et ses
-dérivées partielles sont évaluées en \([η, λ₀ + Λ(η)]\). En \(η = 0\), les
-relations précédentes s'écrivent
+where \(Λ\) and its derivatives are evaluated at \(η\), whilie \(F\) and its
+partial derivatives are evaluated at \([η, λ₀ + Λ(η)]\). At \(η = 0\), the above
+relations read
 \begin{gather}
   \label{eq:20220107060454}
   f'(0) = ∂_{η} F + \order[1]λ ∂_{λ} F,\\
@@ -1243,33 +1238,33 @@ relations précédentes s'écrivent
     & + 4 \order[3]λ ∂_{ηλ}² F + \bigl(3 \bigl( \order[2]λ \bigr)^2 + 4 \order[1]λ \order[3]λ\bigr) ∂_{λλ}² F + λ₄ ∂_{λ} F,
   \end{aligned}
 \end{gather}
-où \(F\) et ses dérivées sont maintenant évaluées en \((η = 0, λ = λ₀)\).
+where \(F\) and its partial derivatives are now evaluated at
+\((η = 0, λ = λ₀)\). The values of \(f'(0)\), \(f''(0)\), \dots thus found are
+used in the remainder of Sec.~\ref{sec:20220905060440} for various choices of
+the functional \(\mathcal F\).
 
-\subsection{Développement limité du résidu}
+\subsection{Application to the residual}
 \label{sec:20211112182000}
 % 03/06/2022 — b028b234970605720c9022c16c7fc3012997ced7
 %
 % Validation des calculs de ce paragraphe
 
-On cherche un développement limité du résidu (c'est-à-dire de la première
-variation de l'énergie). La fonction test \(\hat{u} ∈ U\) étant fixée, la
-méthode précédente est donc appliquée avec
+In order to derive the Taylor expansion of the residual \(ℰ_{,u}\), the method
+described in Sec.~\ref{sec:20220107121442} is applied to
 \begin{equation}
   \label{eq:20220107054629}
   f(η) = ℰ_{, u} [u(η), λ(η); \hat{u}]
-  \quad \text{et} \quad
-  F(η, λ) = ℰ_{, u}[u^{\ast}(λ) + U(η), λ; \hat{u}].
+  \quad \text{and} \quad
+  F(η, λ) = ℰ_{, u}[u^{\ast}(λ) + U(η), λ; \hat{u}],
 \end{equation}
-
-On remarque tout d'abord que
-\(F(0, λ) =ℰ_{, u} [u^{\ast} (λ), λ; \hat{u}] = 0\), puisque \(u^{\ast}(λ)\) est
-un point d'équilibre. En dérivant par rapport à \(λ\), on obtient
+the test function \(\hat{u}\) being fixed. It is first observed that
+\(F(0, λ) = ℰ_{, u} [u^{\ast} (λ), λ; \hat{u}] = 0\), since \(u^{\ast}(λ)\) is
+an equilibrium point for all \(λ\) close to \(λ₀\). Upon derivation with respect
+to \(λ\), we get
 \begin{equation*}
-  \frac{∂^k F}{∂ λ^k}(0, λ) = 0 \quad \text{pour tout} \quad k ≥ 0.
+  \frac{∂^k F}{∂ λ^k}(0, λ) = 0 \quad \text{for all} \quad k ≥ 0.
 \end{equation*}
-
-En dérivant par rapport à \(η\) l'expression~\eqref{eq:20220107054629} de \(F\),
-on obtient successivement
+From the definition~\eqref{eq:20220107054629} of \(F\), we find successively
 \begin{equation*}
   ∂_{η}F(η, λ) = ℰ_{, u u}[u^{\ast}(λ) + U(η), λ; U'(η), \hat{u}],
 \end{equation*}
@@ -1288,19 +1283,22 @@ on obtient successivement
     & + ℰ_{, uu}[u^{\ast}(λ) + U(η), λ; U'''(η), \hat{u}],
   \end{aligned}
 \end{equation*}
-soit, en \(η = 0\)
-\[∂_{η}F(0, λ) = ℰ₂(λ; \order[1]u, \hat{u}),\]
-\[∂_{ηη}² F(0, λ) = ℰ₃(λ; \order[1]u, \order[1]u, \hat{u}) + ℰ₂(λ; \order[2]u, \hat{u}),\]
-\[∂_{ηηη}³ F(0, λ) = ℰ₄(λ; \order[1]u, \order[1]u, \order[1]u, \hat{u}) + 3ℰ₃(λ; \order[1]u, \order[2]u, \hat{u}) + ℰ₂(λ; \order[3]u, \hat{u}).\]
+and, at \(η = 0\)
+\begin{gather*}
+  ∂_{η}F(0, λ) = ℰ₂(λ; \order[1]u, \hat{u}),\\
+  ∂_{ηη}² F(0, λ) = ℰ₃(λ; \order[1]u, \order[1]u, \hat{u}) + ℰ₂(λ; \order[2]u, \hat{u}),\\
+  ∂_{ηηη}³ F(0, λ) = ℰ₄(λ; \order[1]u, \order[1]u, \order[1]u, \hat{u}) + 3ℰ₃(λ; \order[1]u, \order[2]u, \hat{u}) + ℰ₂(λ; \order[3]u, \hat{u}).
+\end{gather*}
+Upon derivation with respect to \(λ\), we find successively
+\begin{gather*}
+  ∂_{ηλ}² F(0, λ) = \dot{ℰ}₂(λ; \order[1]u, \hat{u}),\\
+  ∂_{ηλλ}³ F(0, λ) = \ddot{ℰ}₂(λ; \order[1]u, \hat{u}),\\
+  ∂_{ηηλ}³ F(0, λ) = \dot{ℰ}₃(λ; \order[1]u, \order[1]u, \hat{u}) + \dot{ℰ₂}(λ; \order[2]u, \hat{u}).
+\end{gather*}
 
-Les dérivées croisées de \(F\) en \((0, λ)\) s'obtiennent par simple dérivation
-des relations précédentes par rapport à \(λ\)
-\[∂_{ηλ}² F(0, λ) = \dot{ℰ}₂(λ; \order[1]u, \hat{u}), \quad ∂_{ηλλ}³ F(0, λ) = \ddot{ℰ}₂(λ; \order[1]u, \hat{u}),\]
-\[∂_{ηηλ}³ F(0, λ) = \dot{ℰ}₃(λ; \order[1]u, \order[1]u, \hat{u}) + \dot{ℰ₂}(λ; \order[2]u, \hat{u}).\]
-
-En insérant les résultats précédents dans les relations
-générales~\eqref{eq:20220107060454}--\eqref{eq:20220602185935}, on trouve alors
-les expressions suivantes des dérivées successives de \(f\) en \(η = 0\)
+Upon insertion into Eqs.~\eqref{eq:20220107060454}--\eqref{eq:20220602185935},
+we get the following expressions of the sucessive derivatives of \(f\) at
+\(η=0\)
 \begin{gather*}
   f'(0) = ℰ₂(λ₀; \order[1]u, \hat{u}),\\
   f''(0) = ℰ₃(λ₀; \order[1]u, \order[1]u, \hat{u}) + ℰ₂(λ₀; \order[2]u, \hat{u}) + 2 \order[1]λ \dot{ℰ}₂(λ₀; \order[1]u, \hat{u}),\\
@@ -1308,40 +1306,39 @@ les expressions suivantes des dérivées successives de \(f\) en \(η = 0\)
     f'''(0) ={}
     & ℰ₄(λ₀; \order[1]u, \order[1]u, \order[1]u, \hat{u}) + 3ℰ₃(λ₀; \order[1]u, \order[2]u, \hat{u}) + ℰ₂(λ₀ ; \order[3]u, \hat{u})\\
     & + 3\order[1]λ \dot{ℰ}₃(λ₀; \order[1]u, \order[1]u, \hat{u}) + 3\order[1]λ \dot{ℰ}₂(λ₀; \order[2]u, \hat{u})\\
-    & + 3 \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(λ₀; \order[1]u, \hat{u}) + 3 \order[2]λ \dot{ℰ}₂(λ₀; \order[1]u, \hat{u}).
+    & + 3 \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(λ₀; \order[1]u, \hat{u}) + 3 \order[2]λ \dot{ℰ}₂(λ₀; \order[1]u, \hat{u}),
   \end{aligned}
 \end{gather*}
-
-On en déduit finalement le développement limité à l'ordre 3 en \(η\) du résidu
+which finally delivers the following expansion of the residual
 \begin{equation}
   \label{eq:20220107080901}
   \begin{gathered}[b]
     ℰ_{, u}[u(η), λ(η)] ={} η ℰ₂(λ₀; \order[1]u, \hat{u}) + \tfrac{1}{2} η² \bigl[ℰ₃(λ₀; \order[1]u, \order[1]u, \hat{u})  + ℰ₂(λ₀; \order[2]u, \hat{u})\\
     {} + 2 \order[1]λ \dot{ℰ}₂(λ₀; \order[1]u, \hat{u})\bigr] + \tfrac{1}{6} η³ \bigl[ ℰ₄(λ₀; \order[1]u, \order[1]u, \order[1]u, \hat{u}) + 3ℰ₃(λ₀; \order[1]u, \order[2]u, \hat{u})\\
     {} + ℰ₂(λ₀; \order[3]u, \hat{u}) + 3\order[1]λ \dot{ℰ}₃(λ₀; \order[1]u, \order[1]u, \hat{u}) + 3\order[1]λ \dot{ℰ}₂(λ₀; \order[2]u, \hat{u})\\
-    {} + 3 \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(λ₀; \order[1]u, \hat{u}) + 3 \order[2]λ \dot{ℰ}₂(λ₀ ; \order[1]u, \hat{u}) \bigr] + o(η³).
+    {} + 3 \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(λ₀; \order[1]u, \hat{u}) + 3 \order[2]λ \dot{ℰ}₂(λ₀ ; \order[1]u, \hat{u}) \bigr] + o(η³),
   \end{gathered}
 \end{equation}
+up to third-order terms.
 
-\subsection{Développement limité de l'énergie}
+\subsection{Application to the energy}
 \label{sec:20220525053434}
 % 07/06/2022 — dd1a4abf18cd94861d754bf3e19a54b8974bb2e8
 %
 % Relecture de tous les calculs de ce paragraphe
 
-On s'intéresse ici à l'écart d'énergie, pour un chargement \(λ\) donné, entre la
-branche bifurquée et la branche fondamentale, soit
+The method described in Sec.~\ref{sec:20220107121442} is applied to the energy
+difference between the fundamental and bifurcated branches
 \begin{equation}
   F(η, λ) = ℰ[u^{\ast}(λ) + U(η), λ] - ℰ[u^{\ast}(λ), λ]
   \quad \text{et} \quad
   f(η) = F [η, λ₀ + Λ(η)].
 \end{equation}
-
-On observe tout d'abord que \(F(0, λ) = 0\) pour tout \(λ\), donc
+Observing that \(F(0, λ) = 0\) for all \(λ\), we first get
 \begin{equation*}
-  \frac{∂^k F}{∂ λ^k}(0, λ) = 0 \quad \text{pour tout} \quad k ≥ 0,
+  \frac{∂^k F}{∂ λ^k}(0, λ) = 0 \quad \text{for all} \quad k ≥ 0,
 \end{equation*}
-tandis que les dérivées de \(F\) par rapport à \(η\) s'écrivent
+while the partial derivatives of \(F\) with respect to \(η\) read
 \begin{gather*}
   ∂_{η} F(η, λ) = ℰ_{, u}(U'),\\
   ∂_{ηη}² F(η, λ) = ℰ_{, uu} (U', U') + ℰ_{, u} (U''),\\
@@ -1350,20 +1347,21 @@ tandis que les dérivées de \(F\) par rapport à \(η\) s'écrivent
     ∂_{ηηηη}⁴ F ={}
     & ℰ_{, uuuu}(U', U', U', U') + 6ℰ_{,uuu}(U', U', U'')\\
     & + 3ℰ_{, uu}(U'', U'') + 4ℰ_{, uu}(U', U''') + ℰ_{, u}(U''''),
-  \end{aligned}\\
+  \end{aligned}
 \end{gather*}
-où les différentielles successives de \(ℰ\) sont évaluées en
-\([u^{\ast}(λ) + U(η), λ]\), tandis que les dérivées successives de \(U\) sont
-évaluées en \(η\).  Les relations précédentes s'écrivent, en \(η = 0\), en
-observant que \(ℰ_{, u}[u^{\ast}(λ), λ] = 0\)
+where the partial derivatives of \(ℰ\) are evaluated at
+\([u^{\ast}(λ) + U(η), λ]\), while the derivatives of \(U\) are evaluated at
+\(η\). For \(η = 0\), observing that \(ℰ_{, u}[u^{\ast}(λ), λ] = 0\)
 \begin{gather*}
   ∂_{η} F(0, λ) = 0,\\
   ∂_{ηη}² F(0, λ) =ℰ₂(λ ; \order[1]u, \order[1]u),\\
   ∂_{ηηη}³ F(0, λ) = ℰ₃(λ; \order[1]u, \order[1]u, \order[1]u) + 3ℰ₂(λ; \order[1]u, \order[2]u),\\
-  ∂_{ηηηη}⁴ F(η, λ) = ℰ₄(λ; \order[1]u, \order[1]u, \order[1]u, \order[1]u) + 6ℰ₃(λ; \order[1]u, \order[1]u, \order[2]u) + 3ℰ₂(λ; \order[2]u, \order[2]u) + 4ℰ₂(λ; \order[1]u, \order[3]u).
+  \begin{aligned}[b]
+    ∂_{ηηηη}⁴ F(η, λ) ={} & ℰ₄(λ; \order[1]u, \order[1]u, \order[1]u, \order[1]u) + 6ℰ₃(λ; \order[1]u, \order[1]u, \order[2]u)\\
+    & + 3ℰ₂(λ; \order[2]u, \order[2]u) + 4ℰ₂(λ; \order[1]u, \order[3]u),
+  \end{aligned}
 \end{gather*}
-
-En dérivant alors par rapport à \(λ\), on en déduit que\\
+and, upon derivation with respect to \(λ\)
 \begin{equation*}
   \begin{gathered}
     ∂_{ηλ}² F(0, λ) = 0,\\
@@ -1377,92 +1375,123 @@ En dérivant alors par rapport à \(λ\), on en déduit que\\
     ∂_{ηλλλ}⁴ F(0, λ) = 0
   \end{gathered}
 \end{equation*}
-et finalement
-\begin{gather*}
-    f'(0) = 0, \qquad f''(0) = ℰ₂(λ₀; \order[1]u, \order[1]u),\\
-    f'''(0) =ℰ₃(λ₀; \order[1]u, \order[1]u, \order[1]u) + 3ℰ₂(λ₀; \order[1]u, \order[2]u) + 3\order[1]λ \dot{ℰ}₂(λ₀; \order[1]u, \order[1]u),\\
-    \begin{aligned}[b]
-      f''''(0) ={}
-      & ℰ₄(λ₀; \order[1]u, \order[1]u, \order[1]u, \order[1]u) + 6ℰ₃(λ₀; \order[1]u, \order[1]u, \order[2]u) + 3ℰ₂(λ₀; \order[2]u, \order[2]u)\\
-      & + 4ℰ₂(λ₀; \order[1]u, \order[3]u) + 4 \order[1]λ \dot{ℰ}₃(λ₀; \order[1]u, \order[1]u, \order[1]u) + 12 \order[1]λ \dot{ℰ}₂(λ₀; \order[1]u, \order[2]u)\\
-      & + 6\bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(λ₀; \order[1]u, \order[1]u) + 6\order[2]λ \dot{ℰ}₂(λ₀; \order[1]u, \order[1]u).
-    \end{aligned}
-\end{gather*}
+and finally
+\begin{gather}
+  f'(0) = 0,\\
+  f''(0) = ℰ₂(λ₀; \order[1]u, \order[1]u),\\
+  f'''(0) =ℰ₃(λ₀; \order[1]u, \order[1]u, \order[1]u) + 3ℰ₂(λ₀; \order[1]u, \order[2]u) + 3\order[1]λ \dot{ℰ}₂(λ₀; \order[1]u, \order[1]u),\\
+  \label{eq:20220905063614}
+  \begin{aligned}[b]
+    f''''(0) ={}
+    & ℰ₄(λ₀; \order[1]u, \order[1]u, \order[1]u, \order[1]u) + 6ℰ₃(λ₀; \order[1]u, \order[1]u, \order[2]u) + 3ℰ₂(λ₀; \order[2]u, \order[2]u)\\
+    & + 4ℰ₂(λ₀; \order[1]u, \order[3]u) + 4 \order[1]λ \dot{ℰ}₃(λ₀; \order[1]u, \order[1]u, \order[1]u) + 12 \order[1]λ \dot{ℰ}₂(λ₀; \order[1]u, \order[2]u)\\
+    & + 6( \order[1]λ )^2 \ddot{ℰ}₂(λ₀; \order[1]u, \order[1]u) + 6\order[2]λ \dot{ℰ}₂(λ₀; \order[1]u, \order[1]u).
+  \end{aligned}
+\end{gather}
 
-Les relations précédentes se simplifient notamment en tenant compte de ce que
-\(\order[1]u∈V\) : \(ℰ₂(λ₀; \order[1]u, u_i) = 0\) pour \(i = 1, 2, 3\). On trouve ainsi
-\(f''(0)=0\) et
+Since \(\order[1]u∈V\), we have \(ℰ₂(λ₀; \order[1]u, \order[k]u) = 0\) for
+\(k = 1, 2, 3\). Therefore \(f''(0)=0\) and, using
+Eq.~\eqref{eq:20220524133816}
 \begin{equation}
   \label{eq:20220601055448}
-  f'''(0) = -\order[1]λ G_{ij} \order[1]{ξ_i} \order[1]{ξ_j},
+  f'''(0) = \order[1]λ F_{ij} \order[1]{ξ_i} \order[1]{ξ_j},
 \end{equation}
-en utilisant l'équation de bifurcation~\eqref{eq:20220524133816}. En
-introduisant les décompositions \eqref{eq:20220524133944} et
-\eqref{eq:20220524134613} de \(\order[1]u\) et \(\order[2]u\), on trouve tout d'abord, pour
-\(ℰ₃(λ₀; \order[1]u, \order[1]u, \order[2]u)\)
+
+Turning now to \(f''''(0)\), we plug the decompositions
+\eqref{eq:20220524133944} and \eqref{eq:20220524134613} of \(\order[1]u\) and
+\(\order[2]u\) successively into each term of Eq.~\eqref{eq:20220905063614}.
 \begin{equation*}
   \begin{aligned}[b]
     ℰ₃(λ₀; \order[1]u, \order[1]u, \order[2]u)
     ={} & ℰ₃(v_i, v_j, v_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[2]{ξ_k} + ℰ₃(v_i, v_j, w_{k l}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
-    & + \order[1]λ ℰ₃(v_i, v_j, w_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \\
+    & + 2\order[1]λ ℰ₃(v_i, v_j, w_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \\
     ={} & ℰ₃(v_i, v_j, v_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[2]{ξ_k} + ℰ₃(v_i, v_j, w_{k l}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
-    & - \order[1]λ ℰ₂(w_{ij}, w_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k},
+    & - 2\order[1]λ ℰ₂(w_{ij}, w_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}, \qquad \text{[using Eq.~\eqref{eq:20220519164523}]}\\
+    ={} & ℰ₃(v_i, v_j, v_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[2]{ξ_k} + ℰ₃(v_i, v_j, w_{kl}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+    & - 2\order[1]λ ℰ₂(w_{i}, w_{jk}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
+    ={} & ℰ₃(v_i, v_j, v_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[2]{ξ_k} + ℰ₃(v_i, v_j, w_{kl}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+    & + 2 \order[1]λ \dot{ℰ}₂(v_{i}, w_{jk}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}. \qquad \text{[using Eq.~\eqref{eq:20220524134525}]}
   \end{aligned}
 \end{equation*}
-en tenant compte de la définition~\eqref{eq:20220519164523} des \(w_{ij}\). Dans
-le dernier terme de l'expression précédente, les indices \(i\), \(j\) et \(k\)
-sont muets, donc
-\begin{equation*}
-  \begin{aligned}[b]
-    ℰ₃(λ₀; \order[1]u, \order[1]u, \order[2]u)
-    ={} & ℰ₃(v_i, v_j, v_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[2]{ξ_k} + ℰ₃(v_i, v_j, w_{kl}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
-    & - \order[1]λ ℰ₂(w_{i}, w_{jk}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
-    ={} & ℰ₃(v_i, v_j, v_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[2]{ξ_k} + ℰ₃(v_i, v_j, w_{kl}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
-    & + 2 \order[1]λ \dot{ℰ}₂(v_{i}, w_{jk}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k},
-  \end{aligned}
-\end{equation*}
-en introduisant cette fois-ci la définition~\eqref{eq:20220524134525} de
-\(w_i\). On procède de même pour le terme suivant, soit \(ℰ₂(\order[2]u, \order[2]u)\)
+Then
 \begin{equation*}
   \begin{aligned}[b]
     ℰ₂(\order[2]u, \order[2]u)
-    ={} & ℰ₂(\order[2]{ξ_i} v_i + \order[1]{ξ_i} \order[1]{ξ_j} w_{i j} + \order[1]λ \order[1]{ξ_i} w_i, \order[2]{ξ_k} v_k + \order[1]{ξ_k} \order[1]{ξ_l} w_{k l} + \order[1]λ \order[1]{ξ_k} w_k)\\
-    ={} & ℰ₂(\order[1]{ξ_i} \order[1]{ξ_j} w_{i j} + \order[1]λ \order[1]{ξ_i} w_i, \order[1]{ξ_k} \order[1]{ξ_l} w_{k l} + \order[1]λ \order[1]{ξ_k} w_k)\\
-    ={} & ℰ₂(w_{i j}, w_{k l}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} + 2 \order[1]λ ℰ₂(w_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} + \bigl( \order[1]λ \bigr)^2 ℰ₂(w_i, w_j) \order[1]{ξ_i} \order[1]{ξ_j}\\
-    ={} & ℰ₂(w_{i j}, w_{k l}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} + 2 \order[1]λ ℰ₂(w_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
-    &+ \tfrac{1}{2} \bigl( \order[1]λ \bigr)^2 \bigl[ℰ₂(w_i, w_j) + ℰ₂(w_j, w_i)\bigr] \order[1]{ξ_i} \order[1]{ξ_j}\\
+    ={} & ℰ₂(\order[2]{ξ_i} v_i + \order[1]{ξ_i} \order[1]{ξ_j} w_{i j} + 2\order[1]λ \order[1]{ξ_i} w_i, \order[2]{ξ_k} v_k + \order[1]{ξ_k} \order[1]{ξ_l} w_{k l} + 2\order[1]λ \order[1]{ξ_k} w_k)\\
+    ={} & ℰ₂(\order[1]{ξ_i} \order[1]{ξ_j} w_{i j} + 2 \order[1]λ \order[1]{ξ_i} w_i, \order[1]{ξ_k} \order[1]{ξ_l} w_{k l} + 2 \order[1]λ \order[1]{ξ_k} w_k)\\
+    ={} & ℰ₂(w_{i j}, w_{k l}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} + 4 \order[1]λ ℰ₂(w_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
+    & + 4 ( \order[1]λ )^2 ℰ₂(w_i, w_j) \order[1]{ξ_i} \order[1]{ξ_j}\\
+    ={} & ℰ₂(w_{i j}, w_{k l}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} + 4 \order[1]λ ℰ₂(w_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
+    &+ 2 ( \order[1]λ )^2 \bigl[ℰ₂(w_i, w_j) + ℰ₂(w_j, w_i)\bigr] \order[1]{ξ_i} \order[1]{ξ_j}\\
     ={} & -ℰ₃(v_i, v_j, w_{k l}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} - 4 \order[1]λ \dot{ℰ}₂ (v_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
-    & - \bigl( \order[1]λ \bigr)^2 \bigl[\dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i)\bigr] \order[1]{ξ_i} \order[1]{ξ_j}
+    & - 2 ( \order[1]λ )^2 \bigl[\dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i)\bigr] \order[1]{ξ_i} \order[1]{ξ_j}
   \end{aligned}
 \end{equation*}
-et enfin
+finally
 \begin{equation*}
   \begin{aligned}[b]
     \dot{ℰ}₂(\order[1]u, \order[2]u)
-    ={} & \dot{ℰ}₂ (v_i, v_j) \order[1]{ξ_i} \order[2]{ξ_j} + \dot{ℰ}₂(v_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} + \order[1]λ \dot{ℰ}₂(v_i, w_j) \order[1]{ξ_i} \order[1]{ξ_j}\\
-    ={} & \dot{ℰ}₂(v_i, v_j) \order[1]{ξ_i} \order[2]{ξ_j} + \dot{ℰ}₂(v_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} + \tfrac{1}{2} \order[1]λ [\dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i)] \order[1]{ξ_i} \order[1]{ξ_j}.
+    ={} & \dot{ℰ}₂ (v_i, v_j) \order[1]{ξ_i} \order[2]{ξ_j} + \dot{ℰ}₂(v_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} + 2\order[1]λ \dot{ℰ}₂(v_i, w_j) \order[1]{ξ_i} \order[1]{ξ_j}\\
+    ={} & \dot{ℰ}₂(v_i, v_j) \order[1]{ξ_i} \order[2]{ξ_j} + \dot{ℰ}₂(v_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} + \order[1]λ [\dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i)] \order[1]{ξ_i} \order[1]{ξ_j}.
   \end{aligned}
 \end{equation*}
-En rassemblant les résultats précédents, on trouve pour \(f''''(0)\)
+Gathering the above results
+% \begin{equation*}
+%   \begin{aligned}[b]
+%     f''''(0) ={}
+%     & ℰ₄(v_i, v_j, v_k, v_l) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+%     & + 6\bigl[ℰ₃(v_i, v_j, v_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[2]{ξ_k}
+%       + ℰ₃(v_i, v_j, w_{kl}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}
+%       + 2 \order[1]λ \dot{ℰ}₂(v_{i}, w_{jk}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\bigr]\\
+%     & -3\bigl\{ ℰ₃(v_i, v_j, w_{k l}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} + 4 \order[1]λ \dot{ℰ}₂ (v_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
+%     & + 2 ( \order[1]λ )^2 \bigl[\dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i)\bigr] \order[1]{ξ_i} \order[1]{ξ_j} \bigr\}\\
+%     & + 4 \order[1]λ \dot{ℰ}₃(v_i, v_j, v_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
+%     & + 12 \order[1]λ \bigl\{ \dot{ℰ}₂(v_i, v_j) \order[1]{ξ_i} \order[2]{ξ_j} + \dot{ℰ}₂(v_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} + \order[1]λ \bigl[\dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i)\bigr] \order[1]{ξ_i} \order[1]{ξ_j} \bigr\}\\
+%     & + 6( \order[1]λ )^2 \ddot{ℰ}₂(v_i, v_j) \order[1]{ξ_i} \order[1]{ξ_j}\\
+%     & + 6\order[2]λ \dot{ℰ}₂(v_i, v_j) \order[1]{ξ_i} \order[1]{ξ_j}.
+%   \end{aligned}
+% \end{equation*}
+% \begin{equation*}
+%   \begin{aligned}[b]
+%     f''''(0) ={}
+%     & ℰ₄(v_i, v_j, v_k, v_l) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}
+%       + 6ℰ₃(v_i, v_j, v_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[2]{ξ_k}
+%       + 6ℰ₃(v_i, v_j, w_{kl}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+%     & + 12 \order[1]λ \dot{ℰ}₂(v_{i}, w_{jk}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} - 3 ℰ₃(v_i, v_j, w_{k l}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} -12 \order[1]λ \dot{ℰ}₂ (v_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
+%     & - 6 ( \order[1]λ )^2 \bigl[\dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i)\bigr] \order[1]{ξ_i} \order[1]{ξ_j}
+%       + 4 \order[1]λ \dot{ℰ}₃(v_i, v_j, v_k) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
+%     & + 12 \order[1]λ \dot{ℰ}₂(v_i, v_j) \order[1]{ξ_i} \order[2]{ξ_j} + 12 \order[1]λ \dot{ℰ}₂(v_i, w_{j k}) \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
+%     & + 12 ( \order[1]λ )^2 \bigl[\dot{ℰ}₂(v_i, w_j)
+%       + \dot{ℰ}₂(v_j, w_i)\bigr] \order[1]{ξ_i} \order[1]{ξ_j}\\
+%     & + 6( \order[1]λ )^2 \ddot{ℰ}₂(v_i, v_j) \order[1]{ξ_i} \order[1]{ξ_j}
+%       + 6\order[2]λ \dot{ℰ}₂(v_i, v_j) \order[1]{ξ_i} \order[1]{ξ_j}.
+%   \end{aligned}
+% \end{equation*}
+% \begin{equation*}
+%   \begin{aligned}[b]
+%     f''''(0) ={}
+%     & \bigl[ ℰ₄(v_i, v_j, v_k, v_l) + 3ℰ₃(v_i, v_j, w_{kl}) \bigr] \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+%     & + \bigl[ 4 \order[1]λ \dot{ℰ}₃(v_i, v_j, v_k) + 12 \order[1]λ  \dot{ℰ}₂(v_i, w_{j k}) \bigr] \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
+%     & + \bigl\{ 6( \order[1]λ )^2 \ddot{ℰ}₂(v_i, v_j) + 6( \order[1]λ )^2 \bigl[\dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i)\bigr] + 6\order[2]λ \dot{ℰ}₂(v_i, v_j) \bigr\} \order[1]{ξ_i} \order[1]{ξ_j}\\
+%     & + \bigl[ 6ℰ₃(v_i, v_j, v_k) \order[1]{ξ_i} \order[1]{ξ_j} + 12 \order[1]λ \dot{ℰ}₂(v_j, v_k) \order[1]{ξ_j} \bigr] \order[2]{ξ_k}
+%   \end{aligned}
+% \end{equation*}
 \begin{equation*}
   \begin{aligned}[b]
-    f''''(0)
-    ={} & \bigl[ ℰ₄(v_i, v_j, v_k , v_l) + 3ℰ₃(v_i, v_j, w_{k l}) \bigr] \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+    f''''(0) ={}
+    & \bigl[ ℰ₄(v_i, v_j, v_k , v_l) + 3ℰ₃(v_i, v_j, w_{k l}) \bigr] \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
     & + 4 \order[1]λ \bigl[\dot{ℰ}₃(v_i, v_j, v_k) + 3 \dot{ℰ}₂(v_i, w_{j k})\bigr] \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k}\\
-    & + \bigl\{3 \bigl( \order[1]λ \bigr)^2 \bigl[ 2\ddot{ℰ}₂ (v_i, v_j) + \dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i) \bigr] + 6\order[2]λ \dot{ℰ}₂(v_i, v_j) \bigr\} \order[1]{ξ_i} \order[1]{ξ_j}\\
-    & + 6\bigl[ℰ₃(v_i, v_j, v_k) \order[1]{ξ_k} + 2 \order[1]λ \dot{ℰ}₂(v_i, v_j)\bigr] \order[1]{ξ_i} \order[2]{ξ_j},
+    & + \bigl\{6 ( \order[1]λ )^2 \bigl[ \ddot{ℰ}₂ (v_i, v_j) + \dot{ℰ}₂(v_i, w_j) + \dot{ℰ}₂(v_j, w_i) \bigr] + 6\order[2]λ \dot{ℰ}₂(v_i, v_j) \bigr\} \order[1]{ξ_i} \order[1]{ξ_j}\\
+    & + 6\bigl[ \underbrace{ℰ₃(v_i, v_j, v_k) \order[1]{ξ_j} \order[1]{ξ_k} + 2 \order[1]λ \dot{ℰ}₂(v_i, v_j) \order[1]{ξ_j}}_{=0\text{ from Eq.~\eqref{eq:20220524135036}}} \bigr] \order[2]{ξ_i},
   \end{aligned}
 \end{equation*}
-et on observe que le dernier terme(en \(\order[1]{ξ_i} \order[2]{ξ_j}\)) est nul, du fait de
-l'équation de bifurcation~\eqref{eq:20220524135036}. On obtient donc
+Upon introduction of the tensors \(E_{ijkl}\), \(\mathring{E}_{ijk}\),
+\(F_{ij}\) and \(\mathring{F}_{ij}\)
 \begin{equation}
   \label{eq:20220601055512}
-  f''''(0) = E_{i j k l} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} + 4 \order[1]λ \mathring{E}_{i j k} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} - 6 \bigl(\bigl( \order[1]λ \bigr)^2 \mathring{G}_{i j} + \order[2]λ G_{i j}\bigr) \order[1]{ξ_i} \order[1]{ξ_j} .
+  f''''(0) = E_{i j k l} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} \order[1]{ξ_l} + 4 \order[1]λ \mathring{E}_{i j k} \order[1]{ξ_i} \order[1]{ξ_j} \order[1]{ξ_k} + 6 \bigl[ ( \order[1]λ )^2 \mathring{F}_{i j} + \order[2]λ F_{i j}\bigr] \order[1]{ξ_i} \order[1]{ξ_j},
 \end{equation}
-
-Le développement limité~\eqref{eq:20220525053600} est alors obtenu en
-rassemblant les expressions précédentes de \(f'(0)\), \(f''(0)\), \(f'''(0)\) et
-\(f''''(0)\).
+which finally leads to the Taylor expansion~\eqref{eq:20220525053600}.
 
 \subsection{Développement limité de la hessienne}
 \label{sec:20220616055207}

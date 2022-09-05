@@ -1069,55 +1069,69 @@ critical load. Conversely, if \(E_{1111} < 0\), then the bifurcation branch
 (including the critical point) is \emph{unstable} and exists only for loads
 lower than the critical load.
 
-\section{Propriétés des formes bilinéaires symétriques, positives}
+\appendix
 
-Dans ce qui suit, \(\mathcal{B}\) désigne une forme bilinéaire symétrique et
-positive sur l'espace vectoriel \(U\). On définit son noyau \(\ker \mathcal{B}\)
-de la façon suivante
+\section{Some useful results from multilinear algebra}
+
+\subsection{Kernel of a bilinear, symmetric, positive form}
+
+In this section, \(\mathcal{B}\) denotes a bilinear, symmetric, positive form
+over the vector space \(U\). Its kernel \(\ker \mathcal{B}\) is defined as
+follows
 \begin{equation}
  \ker \mathcal{B}= \bigl\{ u ∈ U, \mathcal{B}(u, u) = 0 \bigr\} .
 \end{equation}
 
 \begin{theorem}
-  Le noyau d'une forme bilinéaire, symétrique et positive est un sous-espace
-  vectoriel.
+  The kernel of a bilinear, symmetric, positive form is a vector subspace.
 \end{theorem}
 \begin{proof}
-  Soient \(u, v∈\ker \mathcal{B}\), \(α∈\reals\) et \(w = u + α v\). Montrons
-  que \(w ∈ \ker\mathcal{B}\). Il suffit d'évaluer \(\mathcal{B}(w, w)\)
- \begin{equation}
+  We must show that, for all \(u, v ∈\ker \mathcal{B}\) and \(α ∈ \reals\),
+  \(w = u + α v ∈ \ker \mathcal{B}\), in other words, it must be shown that
+  \(\mathcal{B}(w, w) = 0\). From the bilinearity and symmetry of
+  \(\mathcal{B}\)
+ \begin{equation*}
    \mathcal{B}(w, w) = \mathcal{B}(u + α v, u + α v)
    = \mathcal{B}(u, u) + 2 α \mathcal{B}(u, v) + α² \mathcal{B}(v, v),
- \end{equation}
- où l'on a tenu compte de la symétrie de \(\mathcal{B}\) pour écrire que
- \(\mathcal{B}(u, v) =\mathcal{B}(v, u)\). Comme \(u, v ∈ \ker\mathcal{B}\), le
- premier et le dernier terme sont nuls, soit
- \(\mathcal{B}(w, w) = 2α \mathcal{B}(u, v)\). La forme bilinéaire étant
- positive, cette grandeur est positive, \emph{quelle que soit la valeur de
-   \(α∈\reals\)}. On en déduit donc que \(\mathcal{B}(u, v) = 0\), puis que
- \(\mathcal{B}(w, w) = 0\) et donc que \(w ∈ \ker\mathcal{B}\).
+ \end{equation*}
+
+ Since \(u, v ∈ \ker\mathcal{B}\), the first and the last term vanish, and the above identity reduces to
+ \begin{equation*}
+   \mathcal{B}(w, w) = 2α \mathcal{B}(u, v)
+ \end{equation*}
+
+ The bilinear form \(\mathcal{B}\) is positive, therefore the left-hand side is
+ positive, \emph{for all values of \(α ∈ \reals\)}. The quantity
+ \(\mathcal{B}(u, v) = 0\) is necessarily null, and \(\mathcal{B}(w, w) = 0\),
+ which completes the proof.
 \end{proof}
 
 \begin{theorem}
- Soit \(u∈V\). Alors
- \begin{equation}
-  u ∈ \ker\mathcal{B} \quad \text{ssi} \quad \text{pour tout } v ∈ V, \mathcal{B}(u, v) = 0.
- \end{equation}
+  Let \(\mathcal{B}\) be a bilinear, symmetric, positive form over the vector space \(U\) and \(u ∈ U\). Then
+ \begin{equation*}
+  u ∈ \ker\mathcal{B} \quad \text{iff} \quad \text{pour tout } v ∈ U, \mathcal{B}(u, v) = 0.
+ \end{equation*}
 \end{theorem}
 
 \begin{proof}
-  Soient \(u∈\ker \mathcal{B}\), \(v∈V\) et \(α∈\reals\). Comme précédemment, on
-  écrit que \(\mathcal{B}(w, w) ≥ 0\), avec \(w = α u + v\)
- \begin{equation}
-  \mathcal{B}(w, w) = 2 α \mathcal{B}(u, v) +\mathcal{B}(v, v) \geq
-  0,
- \end{equation}
- où l'on a tenu compte de ce que \(\mathcal{B}(u, u) = 0\). L'expression
- précédente, affine en \(α\), a un signe constant. Le terme linéaire en \(α\)
- est donc nul, soit \(\mathcal{B}(u, v) = 0\).  Réciproquement, si
- \(\mathcal{B}(u, v) = 0\) pour tout \(v∈V\), alors \(\mathcal{B}(u, u) = 0\)(en
- prenant \(v = u\)).
+  If for all \(v ∈ U\), \(\mathcal{B}(u, v) = 0\), then in particular
+  \(\mathcal{B}(u, u) = 0\) and \(u ∈ \ker \mathcal{B}\).
+
+  Converely, let \(u ∈ \ker \mathcal{B}\), \(v ∈ U\) et \(α ∈
+  \reals\). Similarly to the previous proof, we write that
+  \(\mathcal{B}(w, w) ≥ 0\), with \(w = α u + v\)
+  \begin{equation*}
+    \mathcal{B}(w, w) = \mathcal{B}(u, u) + 2 α \mathcal{B}(u, v) +\mathcal{B}(v, v) = 2 α \mathcal{B}(u, v) +\mathcal{B}(v, v) ≥ 0,
+  \end{equation*}
+  (\(\mathcal{B}(u, u) = 0\) since \(u ∈ \ker \mathcal{B}\)). The above
+  expression is of degree 1 in \(α\), with a constant sign. Therefore the linear
+  term in \(α\) must vanish: \(\mathcal{B}(u, v) = 0\).
 \end{proof}
+
+\subsection{On trilinear, symmetric forms}
+
+In this section, \(𝒯\) denotes a trilinear, symmetric form over the vector space
+\(U\).
 
 \begin{theorem}
   \label{thr:20220802112835}
@@ -1134,11 +1148,11 @@ de la façon suivante
 \begin{proof}
   The form \(𝒯\) being trilinear and symmetric, we have, for all \(u, v, w ∈ U\)
   and \(α, β ∈ ℝ\)
-  \begin{multline}
+  \begin{multline*}
     𝒯(u + αv + βw, u + αv + βw, u + αv + βw) = 𝒯(u, u, u) + 3α 𝒯(u, u, v)\\
     + 3β 𝒯(u, u, w) + 3α² 𝒯(u, u, v) + 6 α β 𝒯(u, v, w) + 3 β² 𝒯(u, u, w)\\
     + α³ 𝒯(v, v, v) + 3 α² β 𝒯(v, v, w) + 3 α β² 𝒯(v, w, w) + β³ 𝒯(w, w, w)
-  \end{multline}
+  \end{multline*}
   and, upon simplification using Eq.~\eqref{eq:20220802111745}
   \begin{multline}
     \label{eq:20220802112309}
@@ -1146,18 +1160,14 @@ de la façon suivante
     + 3 β² 𝒯(u, w, w) + 3 α² β 𝒯(v, v, w) + 3 α β² 𝒯(v, w, w) = 0.
   \end{multline}
   In particular taking successively \(α = ±1\), \(β = 0\) and \(w = 0\) delivers
-  \begin{equation}
+  \begin{equation*}
     ±3 𝒯(u, u, v) + 3 𝒯(u, u, v) = 0 \quad \text{for all} \quad u, v ∈ U,
-  \end{equation}
-  from which it results that
-  \begin{equation}
-    𝒯(u, u, v) = 0 \quad \text{for all} \quad u, v ∈ U.
-  \end{equation}
-  Plugging into Eq.~\eqref{eq:20220802112309} with \(α = β = 1\) results in:
+  \end{equation*}
+  from which it results that \(𝒯(u, u, v) = 0\) for all \(u, v ∈ U\). Plugging
+  into Eq.~\eqref{eq:20220802112309} with \(α = β = 1\) results in:
   \(𝒯(u, v, w) = 0\) for all \(u, v, w ∈ U\).
 \end{proof}
 
-\appendix
 \section{Développements limités le long d'une branche bifurquée du diagramme d'équilibre}
 
 \subsection{Principe du calcul}

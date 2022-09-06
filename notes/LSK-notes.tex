@@ -790,8 +790,8 @@ and
   \label{eq:20220616082923}
   \begin{aligned}[b]
     \bigl[E_{ijkl} \order[1]{ξ_k} \order[1]{ξ_l} + \order[1]λ\bigl(2 \mathring{E}_{ijk} \order[1]{ξ_k} + \order[1]λ \mathring{F}_{ij}\bigr) + E_{ijk} \order[2]{ξ_k}
-    &\\
-    + \order[2]λ F_{ij} \bigr] \order[0]{χ_j} + 2\bigl(E_{ijk}  \order[1]{ξ_k} + \order[1]λ F_{ij} \bigr) \order[1]{χ_j}
+    + \order[2]λ F_{ij} \bigr] \order[0]{χ_j} &\\
+    + 2\bigl(E_{ijk}  \order[1]{ξ_k} + \order[1]λ F_{ij} \bigr) \order[1]{χ_j}
     & = 2\order[1]α\order[1]{χ_i} + \order[2]α \order[0]{χ_i}.
   \end{aligned}
 \end{equation}
@@ -1493,51 +1493,55 @@ Upon introduction of the tensors \(E_{ijkl}\), \(\mathring{E}_{ijk}\),
 \end{equation}
 which finally leads to the Taylor expansion~\eqref{eq:20220525053600}.
 
-\subsection{Développement limité de la hessienne}
+\subsection{Application to the hessian of the energy}
 \label{sec:20220616055207}
 % 08/06/2022 — aea0da72c80440d74d38d8ace59f381061f71c3e
 %
 % Relecture de tous les calculs de ce paragraphe
 
-On cherche maintenant un développement limité de la hessienne de l'énergie. Les
-fonctions test \(\hat{u}, \hat{v} ∈ U\) étant fixées, on applique la méthode du
-\S\ref{sec:20220107121442} à la fonction \(f(η) = F [η, λ₀ + Λ(η)]\), avec
+The method described in Sec.~\ref{sec:20220107121442} is now applied to
+\(f(η) = F [η, λ₀ + Λ(η)]\), with
 \begin{equation*}
   F(η, λ) = ℰ_{, u u} [u^{\ast}(λ) + U(η), λ; \hat{u}, \hat{v}].
 \end{equation*}
-
-On observe tout d'abord que \(F(0, λ) =ℰ₂(λ; \hat{u}, \hat{v})\), soit, en
-dérivant par rapport à \(λ\)
+where \(\hat{u}, \hat{v} ∈ U\) are fixed. This will deliver a Taylor expansion
+of the hessian of the energy, \(ℰ_{,uu}\). It is first observed that
+\(F(0, λ) = ℰ₂(λ; \hat{u}, \hat{v})\) and, upon derivation with respect to \(λ\)
 \begin{equation*}
   ∂_{λ} F(0, λ) = \dot{ℰ}₂(λ; \hat{u}, \hat{v})
-  \quad \text{et} \quad
+  \quad \text{and} \quad
   ∂_{λλ}² F(0, λ) = \ddot{ℰ}₂(λ; \hat{u}, \hat{v}).
 \end{equation*}
 
-On trouve de même successivement
+Successive differentiation of the definition of \(F\) with respect to \(η\) also
+leads to
 \begin{gather*}
   ∂_{η} F(η, λ) = ℰ_{, uuu}(U', \hat{u}, \hat{v}),\\
   ∂_{ηη}² F(η, λ) = ℰ_{, uuuu}(U', U', \hat{u}, \hat{v}) + ℰ_{, uuu}(U'', \hat{u}, \hat{v}),
 \end{gather*}
-où les différentielles successives de \(ℰ\) sont évaluées en
-\([u^{\ast}(λ) + U(η), λ]\), tandis que les dérivées successives de \(U\) sont
-évaluées en \(η\). Les relations précédentes s'écrivent en \(η = 0\)
+where the differentials of \(ℰ\) are evaluated at \([u^{\ast}(λ) + U(η), λ]\),
+while the dérivatives of \(U\) are evaluated at \(y\). At \(η = 0\), the above
+relations read
 \begin{gather*}
   ∂_{η} F(0, λ) = ℰ₃(λ; \order[1]u, \hat{u}, \hat{v}),\\
   ∂_{ηη}² F(0, λ) = ℰ₄(λ ; \order[1]u, \order[1]u, \hat{u}, \hat{v}) + ℰ₃(λ; \order[2]u, \hat{u}, \hat{v}),
 \end{gather*}
-et en dérivant cette fois par rapport à \(λ\)
+and, upon differentiation with respect to \(λ\)
 \begin{equation*}
   ∂_{η λ}² F(0, λ) = \dot{ℰ}₃(λ; \order[1]u, \hat{u}, \hat{v}).
 \end{equation*}
 
-En insérant les résultats précédents dans les
-expressions~\eqref{eq:20220107060454} et \eqref{eq:20220107124311}, on trouve
+The Taylor expansion~\eqref{eq:20220531054247} of the hessian is finally
+retrieved by plugging the above results into
+expressions~\eqref{eq:20220107060454} and \eqref{eq:20220107124311} of the
+derivatives of \(f\)
 \begin{gather*}
-  f'(0) = ℰ₃(\order[1]u, \hat{u}, \hat{v}) + \order[1]λ \dot{ℰ}₂(\hat{u}, \hat{v}),\\
-  f''(0) = ℰ₄(\order[1]u, \order[1]u, \hat{u}, \hat{v}) + ℰ₃(\order[2]u, \hat{u}, \hat{v}) + 2\order[1]λ \dot{ℰ}₃(\order[1]u, \hat{u}, \hat{v}) + \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(\hat{u}, \hat{v}) + \order[2]λ \dot{ℰ}₂(\hat{u}, \hat{v}) .
+  f'(0) = ℰ₃(λ₀; \order[1]u, \hat{u}, \hat{v}) + \order[1]λ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v}),\\
+  \begin{aligned}[b]
+    f''(0) = {} & ℰ₄(λ₀; \order[1]u, \order[1]u, \hat{u}, \hat{v}) + ℰ₃(λ₀; \order[2]u, \hat{u}, \hat{v}) + 2\order[1]λ \dot{ℰ}₃(λ₀; \order[1]u, \hat{u}, \hat{v})\\
+                & + ( \order[1]λ )^2 \ddot{ℰ}₂(λ₀; \hat{u}, \hat{v}) + \order[2]λ \dot{ℰ}₂(λ₀; \hat{u}, \hat{v}).
+  \end{aligned}
 \end{gather*}
-qui conduisent finalement au développement limité~\eqref{eq:20220531054247}.
 
 \subsection{Asymptotic expansions of the eigenvalues and eigenvectors of the Hessian}
 \label{sec:20220616074108}
@@ -1546,17 +1550,24 @@ In this appendix, Eqs.~\eqref{eq:20220609133608}, \eqref{eq:20220609133629} and
 \eqref{eq:20220616082923} are derived. The postulated
 expansions~\eqref{eq:20220617064633} are plugged into the asymptotic expansion
 \eqref{eq:20220531054247} of the Hessian on the one hand
-\begin{multline*}
-  ℰ_{, uu} [u(η), λ(η); x, \hat{u}] = ℰ₂(\order[0]x, \hat{u}) + η \bigl[ ℰ₂(\order[1]x, \hat{u}) + ℰ₃(\order[1]u, \order[0]x, \hat{u}) + \order[1]λ \dot{ℰ}₂(\order[0]x, \hat{u})\bigr]\\
-  + \tfrac{1}{2} η² \bigl[ℰ₂(\order[2]x, \hat{u}) + 2ℰ₃(\order[1]u, \order[1]x, \hat{u}) + 2 \order[1]λ \dot{ℰ}₂(\order[1]x, \hat{u}) + ℰ₄(\order[1]u, \order[1]u, \order[0]x, \hat{u})\\
-  + ℰ₃(\order[2]u, \order[0]x, \hat{u}) + 2\order[1]λ \dot{ℰ}₃(\order[1]u, \order[0]x, \hat{u}) + \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(\order[0]x, \hat{u}) + \order[2]λ \dot{ℰ}₂(\order[0]x, \hat{u}) \bigr] + o(η²)
-\end{multline*}
+\begin{equation*}
+  \begin{aligned}[b]
+    ℰ_{, uu} [u(η), λ(η); x, \hat{u}] ={}
+    & ℰ₂(\order[0]x, \hat{u}) + η \bigl[ ℰ₂(\order[1]x, \hat{u}) + ℰ₃(\order[1]u, \order[0]x, \hat{u}) + \order[1]λ \dot{ℰ}₂(\order[0]x, \hat{u})\bigr]\\
+    & + \tfrac{1}{2} η² \bigl[ℰ₂(\order[2]x, \hat{u}) + 2ℰ₃(\order[1]u, \order[1]x, \hat{u}) + 2 \order[1]λ \dot{ℰ}₂(\order[1]x, \hat{u})\\
+    & + ℰ₄(\order[1]u, \order[1]u, \order[0]x, \hat{u}) + ℰ₃(\order[2]u, \order[0]x, \hat{u}) + 2\order[1]λ \dot{ℰ}₃(\order[1]u, \order[0]x, \hat{u})\\
+    & + ( \order[1]λ )^2 \ddot{ℰ}₂(\order[0]x, \hat{u}) + \order[2]λ \dot{ℰ}₂(\order[0]x, \hat{u}) \bigr] + o(η²)
+  \end{aligned}
+\end{equation*}
 (where the \(ℰ_k\) and \(\dot{ℰ}_k\) are all evaluated at \(λ=λ₀\)) and into the
 scalar product \(α 〈 x, \hat{u} 〉\) on the other hand
-\begin{multline*}
-    α 〈 x, \hat{u} 〉 = \order[0]α 〈 \order[0]x, \hat{u} 〉 + η \bigl(\order[1]α 〈 \order[0]x, \hat{u} 〉 + \order[0]α 〈 \order[1]x, \hat{u} 〉\bigr)\\
-    + \tfrac{1}{2} η² \bigl(\order[0]α 〈 \order[2]x, \hat{u} 〉 + 2 \order[1]α 〈 \order[1]x, \hat{u} 〉 + \order[2]α 〈 \order[0]x, \hat{u} 〉\bigr) + o(η²).
-\end{multline*}
+\begin{equation*}
+  \begin{aligned}[b]
+    α 〈 x, \hat{u} 〉 ={}
+    & \order[0]α 〈 \order[0]x, \hat{u} 〉 + η \bigl(\order[1]α 〈 \order[0]x, \hat{u} 〉 + \order[0]α 〈 \order[1]x, \hat{u} 〉\bigr)\\
+    & + \tfrac{1}{2} η² \bigl(\order[0]α 〈 \order[2]x, \hat{u} 〉 + 2 \order[1]α 〈 \order[1]x, \hat{u} 〉 + \order[2]α 〈 \order[0]x, \hat{u} 〉\bigr) + o(η²).
+  \end{aligned}
+\end{equation*}
 
 Equating both expressions for all \(\hat{u} ∈ U\) [see
 Eq.~\eqref{eq:20220617074949}] leads to three variational problems (for the
@@ -1565,7 +1576,7 @@ Eq.~\eqref{eq:20220617074949}] leads to three variational problems (for the
 \paragraph{Variational problem of order 0} Find \(\order[0]x∈U\) and \(\order[0]α∈\reals\) such
 that, for all \(\hat{u}∈U\)
 \begin{equation*}
-  ℰ₂(\order[0]x, \hat{u}) = \order[0]α 〈 \order[0]x, \hat{u} 〉.
+  ℰ₂(λ₀; \order[0]x, \hat{u}) = \order[0]α 〈 \order[0]x, \hat{u} 〉.
 \end{equation*}
 
 The above equation shows that \((\order[0]α, \order[0]x)\) is an eigenpair of \(ℰ₂(λ₀)\). As
@@ -1577,13 +1588,15 @@ expansion~\eqref{eq:20220904160057} of \(\order[0]x\).
 that, for all \(\hat{u}∈U\)
 \begin{equation}
   \label{eq:20220609131953}
-  ℰ₂(\order[1]x, \hat{u}) + ℰ₃(\order[1]u, \order[0]x, \hat{u}) + \order[1]λ \dot{ℰ}₂(\order[0]x, \hat{u}) = \order[1]α 〈 \order[0]x, \hat{u} 〉,
+  ℰ₂(λ₀; \order[1]x, \hat{u}) + ℰ₃(λ₀; \order[1]u, \order[0]x, \hat{u}) + \order[1]λ \dot{ℰ}₂(λ₀; \order[0]x, \hat{u})
+  = \order[1]α 〈 \order[0]x, \hat{u} 〉,
 \end{equation}
 or, equivalently, plugging the expansions~\eqref{eq:20220524133944} and
 \eqref{eq:20220609133608} of \(\order[1]u\) and \(\order[0]x\) in the \(v_i\) basis
 \begin{equation}
   \label{eq:20220617080547}
-  ℰ₂(\order[1]x, \hat{u}) + ℰ₃(v_j, v_k, \hat{u}) \order[0]{χ_j} \order[1]{ξ_k} + \order[1]λ \dot{ℰ}₂(v_j, \hat{u}) \order[0]{χ_j} = \order[1]α \order[0]{χ_j} 〈 v_j, \hat{u} 〉.
+  ℰ₂(λ₀; \order[1]x, \hat{u}) + ℰ₃(λ₀; v_j, v_k, \hat{u}) \order[0]{χ_j} \order[1]{ξ_k} + \order[1]λ \dot{ℰ}₂(λ₀; v_j, \hat{u}) \order[0]{χ_j}
+  = \order[1]α \order[0]{χ_j} 〈 v_j, \hat{u} 〉.
 \end{equation}
 
 For \(\hat{u} = v_i\), observing that \(〈 v_i, v_j 〉 = δ_{ij}\) since
@@ -1593,59 +1606,95 @@ For \(\hat{u} = v_i\), observing that \(〈 v_i, v_j 〉 = δ_{ij}\) since
 \end{equation}
 which reduces to Eq.~\eqref{eq:20220609133608}.
 
-The test function is now picked in \(W = V^\perp\), and \(\order[1]x\) is decomposed as
-the sum of its projections onto \(V\) and \(W\): \(\order[1]x = \order[1]{χ_i} v_i + y₁\), where
-\(y₁ ∈ W\). Eq.~\eqref{eq:20220617080547} then delivers the following
-variational problem: find \(y₁ ∈ W\) such that, for all \(\hat{w} ∈ W\),
+The test function is now picked in \(W = V^\perp\), and \(\order[1]x\) is
+decomposed as the sum of its projections onto \(V\) and \(W\):
+\(\order[1]x = \order[1]{χ_i} v_i + \order[1]{y}\), where \(\order[1]y ∈
+W\). Eq.~\eqref{eq:20220617080547} then delivers the following variational
+problem: find \(\order[1]y ∈ W\) such that, for all \(\hat{w} ∈ W\),
 \begin{equation}
-  ℰ₂(y₁, \hat{w}) + ℰ₃(v_i, v_j, \hat{w}) \order[0]{χ_i} \order[1]{ξ_j} + \order[1]λ \dot{ℰ}₂(v_i, \hat{w}) \order[0]{χ_i} = 0,
+  ℰ₂(\order[1]y, \hat{w}) + ℰ₃(v_i, v_j, \hat{w}) \order[0]{χ_i} \order[1]{ξ_j} + \order[1]λ \dot{ℰ}₂(v_i, \hat{w}) \order[0]{χ_i} = 0,
 \end{equation}
-(observe that \(〈 v_j, \hat{w} 〉\) since \(V\) and \(W\) are orthogonal
+(observe that \(〈 v_j, \hat{w} 〉 = 0\) since \(V\) and \(W\) are orthogonal
 subspaces). The solution to the above problem is expressed as a linear
 combination of the \(w_i\) and \(w_{ij}\) defined by the variational problems
 \eqref{eq:20220524134525} and \eqref{eq:20220519164523}, respectively:
-\(y₁ = \order[0]{χ_i} \order[1]{ξ_j} w_{i j} + \tfrac{1}{2} \order[1]λ \order[0]{χ_i} w_i\), and the
-decomposition~\eqref{eq:20220609133629} is retrieved.
+\(\order[1]y = \order[0]{χ_i} \order[1]{ξ_j} w_{i j} + \order[1]λ \order[0]{χ_i}
+w_i\), and the decomposition~\eqref{eq:20220609133629} is retrieved.
 
 \paragraph{Variational problem of order 2} For all \(\hat{u} ∈ U\),
 \begin{multline*}
-  ℰ₂(\order[2]x, \hat{u}) + 2ℰ₃(\order[1]u, \order[1]x, \hat{u}) + 2 \order[1]λ \dot{ℰ}₂(\order[1]x, \hat{u}) + ℰ₄(\order[1]u, \order[1]u, \order[0]x, \hat{u}) + ℰ₃(\order[2]u, \order[0]x, \hat{u})\\
-  + 2\order[1]λ \dot{ℰ}₃(\order[1]u, \order[0]x, \hat{u}) + \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(\order[0]x, \hat{u}) + \order[2]λ \dot{ℰ}₂(\order[0]x, \hat{u}) = 2 \order[1]α 〈 \order[1]x, \hat{u} 〉 + \order[2]α 〈 \order[0]x, \hat{u} 〉.
+    ℰ₂(λ₀; \order[2]x, \hat{u})
+    + 2ℰ₃(λ₀; \order[1]u, \order[1]x, \hat{u})
+    + 2 \order[1]λ \dot{ℰ}₂(λ₀; \order[1]x, \hat{u})\\
+    + ℰ₄(λ₀; \order[1]u, \order[1]u, \order[0]x, \hat{u})
+    + ℰ₃(λ₀; \order[2]u, \order[0]x, \hat{u})
+    + 2\order[1]λ \dot{ℰ}₃(λ₀; \order[1]u, \order[0]x, \hat{u})\\
+    + ( \order[1]λ )^2 \ddot{ℰ}₂(λ₀; \order[0]x, \hat{u})
+    + \order[2]λ \dot{ℰ}₂(λ₀; \order[0]x, \hat{u})
+    = 2 \order[1]α 〈 \order[1]x, \hat{u} 〉
+    + \order[2]α 〈 \order[0]x, \hat{u} 〉.
 \end{multline*}
 
 For \(\hat{u} = \hat{v}_i\), plugging the decompositions
 \eqref{eq:20220524133944}, \eqref{eq:20220524134613}, \eqref{eq:20220609133608}
 and \eqref{eq:20220609133629} of \(\order[1]u\), \(\order[2]u\), \(\order[0]x \) et \(\order[1]x\) delivers
 % \begin{multline*}
-%   2ℰ₃(v_i, \order[1]x, \order[1]u) + 2 \order[1]λ \dot{ℰ}₂(v_i, \order[1]x) + ℰ₄(v_i, \order[0]x, \order[1]u, \order[1]u) + ℰ₃(v_i, \order[0]x, \order[2]u)\\
-%   + 2\order[1]λ \dot{ℰ}₃(v_i, \order[0]x, \order[1]u) + \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(v_i, \order[0]x) + \order[2]λ \dot{ℰ}₂(v_i, \order[0]x) = 2\order[1]α 〈 v_i, \order[1]x 〉 + \order[2]α 〈 v_i, \order[0]x 〉,
+%   2ℰ₃(v_i, \order[1]x, \order[1]u)
+%   + 2 \order[1]λ \dot{ℰ}₂(v_i, \order[1]x)
+%   + ℰ₄(v_i, \order[0]x, \order[1]u, \order[1]u)\\
+%   + ℰ₃(v_i, \order[0]x, \order[2]u)
+%   + 2\order[1]λ \dot{ℰ}₃(v_i, \order[0]x, \order[1]u)
+%   + ( \order[1]λ )^2 \ddot{ℰ}₂(v_i, \order[0]x)\\
+%   + \order[2]λ \dot{ℰ}₂(v_i, \order[0]x)
+%   = 2\order[1]α 〈 v_i, \order[1]x 〉
+%   + \order[2]α 〈 v_i, \order[0]x 〉,
 % \end{multline*}
 % \begin{multline*}
-%   2ℰ₃(v_i, χ₁^jv_j + \order[0]{χ_j}\order[1]{ξ_k}w_{jk}+\tfrac{1}{2} \order[1]λ \order[0]{χ_j} w_j, \order[1]{ξ_l} v_l) + 2 \order[1]λ \dot{ℰ}₂(v_i, χ₁^jv_j + \order[0]{χ_j}\order[1]{ξ_k}w_{jk}+\tfrac{1}{2} \order[1]λ \order[0]{χ_j} w_j)\\
-%   + ℰ₄(v_i, \order[0]{χ_j} v_j, \order[1]{ξ_k} v_k, \order[1]{ξ_l} v_l) + ℰ₃(v_i, \order[0]{χ_j} v_j, \order[2]{ξ_k} v_k + \order[1]{ξ_k} \order[1]{ξ_l} w_{kl} + \order[1]λ \order[1]{ξ_k} w_k)\\
-%   + 2\order[1]λ \dot{ℰ}₃(v_i, \order[0]{χ_j} v_j, \order[1]{ξ_k} v_k) + \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(v_i, \order[0]{χ_j} v_j) + \order[2]λ \dot{ℰ}₂(v_i, \order[0]{χ_j} v_j)\\
-%   = 2\order[1]α 〈 v_i,  χ₁^jv_j + \order[0]{χ_j}\order[1]{ξ_k}w_{jk}+\tfrac{1}{2} \order[1]λ \order[0]{χ_j} w_j 〉 + \order[2]α 〈 v_i, \order[0]{χ_j} v_j〉,
+%   2ℰ₃(v_i, \order[1]{χ_i}v_j + \order[0]{χ_j}\order[1]{ξ_k}w_{jk}+ \order[1]λ \order[0]{χ_j} w_j, \order[1]{ξ_l} v_l)
+%   + 2 \order[1]λ \dot{ℰ}₂(v_i, \order[1]{χ_i}v_j + \order[0]{χ_j}\order[1]{ξ_k}w_{jk} + \order[1]λ \order[0]{χ_j} w_j)\\
+%   + ℰ₄(v_i, \order[0]{χ_j} v_j, \order[1]{ξ_k} v_k, \order[1]{ξ_l} v_l)
+%   + ℰ₃(v_i, \order[0]{χ_j} v_j, \order[2]{ξ_k} v_k + \order[1]{ξ_k} \order[1]{ξ_l} w_{kl} + 2\order[1]λ \order[1]{ξ_k} w_k)\\
+%   + 2\order[1]λ \dot{ℰ}₃(v_i, \order[0]{χ_j} v_j, \order[1]{ξ_k} v_k)
+%   + ( \order[1]λ )^2 \ddot{ℰ}₂(v_i, \order[0]{χ_j} v_j) + \order[2]λ \dot{ℰ}₂(v_i, \order[0]{χ_j} v_j)\\
+%   = 2\order[1]α 〈 v_i,  \order[1]{χ_i}v_j + \order[0]{χ_j}\order[1]{ξ_k}w_{jk} + \order[1]λ \order[0]{χ_j} w_j 〉
+%   + \order[2]α 〈 v_i, \order[0]{χ_j} v_j〉,
 % \end{multline*}
 % \begin{multline*}
-%   2ℰ₃(v_i, v_j,  v_k) χ₁^j \order[1]{ξ_k} + 2ℰ₃(v_i, w_{jk}, v_l) \order[0]{χ_j} \order[1]{ξ_k} \order[1]{ξ_l} + \order[1]λ ℰ₃(v_i,  w_j, v_k) \order[0]{χ_j} \order[1]{ξ_k} + 2 \order[1]λ \dot{ℰ}₂(v_i, v_j) χ₁^j\\
-%   + 2 \order[1]λ \dot{ℰ}₂(v_i, w_{jk}) \order[0]{χ_j} \order[1]{ξ_k}+ \bigl( \order[1]λ \bigr)^2 \dot{ℰ}₂(v_i, w_j) \order[0]{χ_j} + ℰ₄(v_i, v_j,  v_k, v_l) \order[0]{χ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
-%   + ℰ₃(v_i, v_j, v_k) \order[0]{χ_j} \order[2]{ξ_k} + ℰ₃(v_i, v_j, w_{kl}) \order[0]{χ_j} \order[1]{ξ_k} \order[1]{ξ_l} + \order[1]λ ℰ₃(v_i, v_j, w_k) \order[0]{χ_j} \order[1]{ξ_k}\\
-%   + 2\order[1]λ \dot{ℰ}₃(v_i, v_j,  v_k) \order[0]{χ_j} \order[1]{ξ_k} + \bigl( \order[1]λ \bigr)^2 \ddot{ℰ}₂(v_i, v_j) \order[0]{χ_j} + \order[2]λ \dot{ℰ}₂(v_i, v_j) \order[0]{χ_j} = 2\order[1]α\order[1]{χ_i} + \order[2]α \order[0]{χ_i}.
+%   2ℰ₃(v_i, v_j,  v_k) \order[1]{χ_i} \order[1]{ξ_k}
+%   + 2ℰ₃(v_i, w_{jk}, v_l) \order[0]{χ_j} \order[1]{ξ_k} \order[1]{ξ_l}
+%   + 2 \order[1]λ ℰ₃(v_i,  w_j, v_k) \order[0]{χ_j} \order[1]{ξ_k}\\
+%   + 2 \order[1]λ \dot{ℰ}₂(v_i, v_j) \order[1]{χ_i}
+%   + 2 \order[1]λ \dot{ℰ}₂(v_i, w_{jk}) \order[0]{χ_j} \order[1]{ξ_k}
+%   + ( \order[1]λ )^2 \dot{ℰ}₂(v_i, w_j) \order[0]{χ_j}\\
+%   + ℰ₄(v_i, v_j,  v_k, v_l) \order[0]{χ_j} \order[1]{ξ_k} \order[1]{ξ_l}
+%   + ℰ₃(v_i, v_j, v_k) \order[0]{χ_j} \order[2]{ξ_k}
+%   + ℰ₃(v_i, v_j, w_{kl}) \order[0]{χ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+%   + 2\order[1]λ ℰ₃(v_i, v_j, w_k) \order[0]{χ_j} \order[1]{ξ_k}
+%   + 2\order[1]λ \dot{ℰ}₃(v_i, v_j,  v_k) \order[0]{χ_j} \order[1]{ξ_k}
+%   + ( \order[1]λ )^2 \ddot{ℰ}₂(v_i, v_j) \order[0]{χ_j}\\
+%   + \order[2]λ \dot{ℰ}₂(v_i, v_j) \order[0]{χ_j} = 2\order[1]α\order[1]{χ_i} + \order[2]α \order[0]{χ_i}.
 % \end{multline*}
 \begin{multline*}
   \bigl[ ℰ₄(v_i, v_j,  v_k, v_l) + 2ℰ₃(v_i, w_{jk}, v_l) + ℰ₃(v_i, v_j, w_{kl})\bigr] \order[0]{χ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
-  + \order[1]λ \bigl[ ℰ₃(v_i,  w_j, v_k) + 2 \dot{ℰ}₂(v_i, w_{jk}) + ℰ₃(v_i, v_j, w_k) + 2 \dot{ℰ}₃(v_i, v_j,  v_k) \bigr] \order[0]{χ_j} \order[1]{ξ_k}\\
-  + \bigl( \order[1]λ \bigr)^2 \bigl[\dot{ℰ}₂(v_i, w_j) + \ddot{ℰ}₂(v_i, v_j)\bigr] \order[0]{χ_j} + \bigl[ℰ₃(v_i, v_j, v_k) \order[2]{ξ_k} + \order[2]λ \dot{ℰ}₂(v_i, v_j)\bigr] \order[0]{χ_j} \\
-  +2\bigl[ℰ₃(v_i, v_j,  v_k)  \order[1]{ξ_k} + \order[1]λ \dot{ℰ}₂(v_i, v_j)\bigr] χ₁^j = 2\order[1]α\order[1]{χ_i} + \order[2]α \order[0]{χ_i}.
+  + 2 \order[1]λ \bigl[ ℰ₃(v_i,  w_j, v_k) + \dot{ℰ}₂(v_i, w_{jk}) + ℰ₃(v_i, v_j, w_k) + \dot{ℰ}₃(v_i, v_j,  v_k) \bigr] \order[0]{χ_j} \order[1]{ξ_k}\\
+  + ( \order[1]λ )^2 \bigl[\dot{ℰ}₂(v_i, w_j) + \ddot{ℰ}₂(v_i, v_j)\bigr] \order[0]{χ_j} + \bigl[ℰ₃(v_i, v_j, v_k) \order[2]{ξ_k} + \order[2]λ \dot{ℰ}₂(v_i, v_j)\bigr] \order[0]{χ_j} \\
+  +2\bigl[ℰ₃(v_i, v_j,  v_k)  \order[1]{ξ_k} + \order[1]λ \dot{ℰ}₂(v_i, v_j)\bigr] \order[1]{χ_i} = 2\order[1]α\order[1]{χ_i} + \order[2]α \order[0]{χ_i}.
 \end{multline*}
 
 The \(\order[0]{χ_j} \order[1]{ξ_k}\) term is transformed with Eqs.~\eqref{eq:20220524134525} and
 \eqref{eq:20220519164523}
 \begin{multline*}
-  \bigl[ ℰ₄(v_i, v_j,  v_k, v_l) + ℰ₃(v_i, w_{jk}, v_l) + ℰ₃(v_i, w_{jl}, v_k) + ℰ₃(v_i, v_j, w_{kl})\bigr] \order[0]{χ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
-  + \order[1]λ \bigl[ -ℰ₂(w_{ik},  w_j) - ℰ₂(w_i, w_{jk}) - ℰ₂(w_{ij}, w_k) + 2 \dot{ℰ}₃(v_i, v_j,  v_k) \bigr] \order[0]{χ_j} \order[1]{ξ_k}\\
-  + \bigl( \order[1]λ \bigr)^2 \bigl[\dot{ℰ}₂(v_i, w_j) + \ddot{ℰ}₂(v_i, v_j)\bigr] \order[0]{χ_j} + \bigl[ℰ₃(v_i, v_j, v_k) \order[2]{ξ_k} + \order[2]λ \dot{ℰ}₂(v_i, v_j)\bigr] \order[0]{χ_j} \\
-  +2\bigl[ℰ₃(v_i, v_j,  v_k)  \order[1]{ξ_k} + \order[1]λ \dot{ℰ}₂(v_i, v_j)\bigr] χ₁^j = 2\order[1]α\order[1]{χ_i} + \order[2]α \order[0]{χ_i},
+  \bigl[ ℰ₄(v_i, v_j,  v_k, v_l)
+  + ℰ₃(v_i, w_{jk}, v_l)
+  + ℰ₃(v_i, w_{jl}, v_k)
+  + ℰ₃(v_i, v_j, w_{kl})\bigr] \order[0]{χ_j} \order[1]{ξ_k} \order[1]{ξ_l}\\
+  + 2\order[1]λ \bigl[ -ℰ₂(w_{ik},  w_j) - ℰ₂(w_i, w_{jk}) - ℰ₂(w_{ij}, w_k) + \dot{ℰ}₃(v_i, v_j,  v_k) \bigr] \order[0]{χ_j} \order[1]{ξ_k}\\
+  + ( \order[1]λ )^2 \bigl[\dot{ℰ}₂(v_i, w_j) + \ddot{ℰ}₂(v_i, v_j)\bigr] \order[0]{χ_j}
+  + \bigl[ℰ₃(v_i, v_j, v_k) \order[2]{ξ_k} + \order[2]λ \dot{ℰ}₂(v_i, v_j)\bigr] \order[0]{χ_j} \\
+  +2\bigl[ℰ₃(v_i, v_j,  v_k)  \order[1]{ξ_k}
+  + \order[1]λ \dot{ℰ}₂(v_i, v_j)\bigr] \order[1]{χ_i}
+  = 2\order[1]α\order[1]{χ_i}
+  + \order[2]α \order[0]{χ_i},
 \end{multline*}
 and Eq.~\eqref{eq:20220616082923} results from the application of
 Eqs.~\eqref{eq:20220617084433} and \eqref{eq:20220617085256}.

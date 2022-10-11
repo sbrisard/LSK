@@ -122,7 +122,7 @@ Par hypothèse, $\E_2(\lambda_0)$ est positive, sans être définie
 positive~; soit $V$ son noyau, qui forme un sous-espace vectoriel de $U$. On
 suppose que $V$ est de dimension finie $m = \dim V$. Soit
 $(v_1, \ldots, v_m)$ une base orthonormée de ce noyau pour le produit scalaire
-$〈 \bullet, \bullet 〉$(qui n'est pas précisé pour le moment). On introduit le
+$\langle \bullet, \bullet \rangle$(qui n'est pas précisé pour le moment). On introduit le
 sous-espace supplémentaire orthogonal $W$ de $V$ dans $U$
 \begin{equation}
   U = V \overset{\perp}{\otimes} W.
@@ -143,7 +143,7 @@ sous-espace supplémentaire orthogonal $W$ de $V$ dans $U$
   is $w = 0$.
 \end{remark}
 
-For $1 ≤ i, j ≤ m$, we introduce the solutions $w_i, w_{ij} \in W$ to the
+For $1 \leq i, j \leq m$, we introduce the solutions $w_i, w_{ij} \in W$ to the
 following variational problems
 \begin{gather}
   \label{eq:20220524134525}
@@ -152,7 +152,7 @@ following variational problems
   \E_2(\lambda_0; w_{i j}, \hat{w})+\E_3(\lambda_0; v_i, v_j, \hat{w}) = 0,
 \end{gather}
 for all $\hat{w} \in W$. Since $w_{i}$ and $w_{ij}$ belong to $W$, we have
-$〈 w_{i}, v 〉 = 〈 w_{ij}, v 〉 = 0$ for all $v \in V$. Since $\E_2(\lambda_0; \bullet,
+$\langle w_{i}, v \rangle = \langle w_{ij}, v \rangle = 0$ for all $v \in V$. Since $\E_2(\lambda_0; \bullet,
 \bullet)$ is symmetric, it can be verified that $w_{ij}=w_{ji}$. We also introduce
 the following tensors, defined in $V$
 \begin{gather}
@@ -215,7 +215,7 @@ $u_0 + u$, where $u \in U$ is ``small''. We have, to the fourth order
   \begin{aligned}[b]
     \E(u_0 + u, \lambda_0) - \E(u_0, \lambda_0) ={}
     &\tfrac{1}{2} \E_2(\lambda_0; u, u) + \tfrac{1}{6} \E_3(\lambda_0; u, u, u)\\
-    &+ \tfrac{1}{24} \E_4(\lambda_0; u, u, u, u) + o(〈 u , u 〉^2),
+    &+ \tfrac{1}{24} \E_4(\lambda_0; u, u, u, u) + o(\langle u , u \rangle^2),
   \end{aligned}
 \end{equation}
 where the linear term has been omitted, $u_0$ being a critical point of the
@@ -327,7 +327,7 @@ $\lambda$is postulated
   u = u^\ast(\lambda) + ξ_i v_i + w, \quad \text{with} \quad w \in W.
 \end{equation}
 
-It follows from the orthogonality of $V$ and $W$ that $〈v_i, w〉 = 0$ for
+It follows from the orthogonality of $V$ and $W$ that $\langle v_i, w\rangle = 0$ for
 all $i=1, \ldots, m$. Stationarity of the energy is expressed as follows
 \begin{equation}
   \E_{,u}[u^\ast(\lambda) + ξ_i v_i + w, \lambda; \hat{u}] = 0, \quad \text{for all} \quad \hat{u} \in U
@@ -610,7 +610,7 @@ variational problem: find $\order[1]u \in V$ such that
 \end{equation}
 pour tout $\hat{v} \in V$. The above problem can be transformed into a system of
 scalar equations. Indeed, expanding the $\order[1]u \in V$ in the basis
-$(v_i)_{1 ≤ i ≤ m}$ as follows
+$(v_i)_{1 \leq i \leq m}$ as follows
 \begin{equation}
   \label{eq:20220524133944}
   \order[1]u = \order[1]{ξ_i} v_i
@@ -755,7 +755,7 @@ Stability analysis is performed by means of the eigenvalues $α \in \reals$ and
 eigenvectors $x \in U$ of the Hessian
 \begin{equation}
   \label{eq:20220617074949}
-  \E_{, u u} [u(η), \lambda(η); x, \hat{u}] = α 〈 x, \hat{u} 〉 \quad \text{for all} \quad \hat{u} \in V,
+  \E_{, u u} [u(η), \lambda(η); x, \hat{u}] = α \langle x, \hat{u} \rangle \quad \text{for all} \quad \hat{u} \in V,
 \end{equation}
 where $α$ and $x$ are expanded to second order in $η$
 \begin{equation}
@@ -1037,7 +1037,7 @@ from Eq.~\eqref{eq:20220819160235}
   \end{aligned}
 \end{equation}
 
-Asymmetric bifurcations branches are \emph{unstable} for $\lambda ≤ \lambda_0$ and
+Asymmetric bifurcations branches are \emph{unstable} for $\lambda \leq \lambda_0$ and
 \emph{stable} for $\lambda > \lambda_0$ (stability switch).
 
 \subsection{Symmetric bifurcations}
@@ -1053,7 +1053,7 @@ which in particular shows that $\order[2]\lambda$ has the same sign as
 $E_{1111}$. Since the expansion of $\lambda$ reads:
 $\lambda = \lambda_0 + \order[2]\lambda η^2 / 2$, the bifurcation branch exists only for loads
 \emph{above} the critical load ($\lambda ≥ \lambda_0$) if $E_{1111} > 0$ and only for
-loads \emph{below} the critical load ($\lambda ≤ \lambda_0$) if $E_{1111} < 0$.
+loads \emph{below} the critical load ($\lambda \leq \lambda_0$) if $E_{1111} < 0$.
 
 From Eq.~\eqref{eq:20220531054247}, the hessian of the energy along the
 bifurcated branch reads
@@ -1560,12 +1560,12 @@ expansions~\eqref{eq:20220617064633} are plugged into the asymptotic expansion
   \end{aligned}
 \end{equation*}
 (where the $\E_k$ and $\dot{\E}_k$ are all evaluated at $\lambda=\lambda_0$) and into the
-scalar product $α 〈 x, \hat{u} 〉$ on the other hand
+scalar product $α \langle x, \hat{u} \rangle$ on the other hand
 \begin{equation*}
   \begin{aligned}[b]
-    α 〈 x, \hat{u} 〉 ={}
-    & \order[0]α 〈 \order[0]x, \hat{u} 〉 + η \bigl(\order[1]α 〈 \order[0]x, \hat{u} 〉 + \order[0]α 〈 \order[1]x, \hat{u} 〉\bigr)\\
-    & + \tfrac{1}{2} η^2 \bigl(\order[0]α 〈 \order[2]x, \hat{u} 〉 + 2 \order[1]α 〈 \order[1]x, \hat{u} 〉 + \order[2]α 〈 \order[0]x, \hat{u} 〉\bigr) + o(η^2).
+    α \langle x, \hat{u} \rangle ={}
+    & \order[0]α \langle \order[0]x, \hat{u} \rangle + η \bigl(\order[1]α \langle \order[0]x, \hat{u} \rangle + \order[0]α \langle \order[1]x, \hat{u} \rangle\bigr)\\
+    & + \tfrac{1}{2} η^2 \bigl(\order[0]α \langle \order[2]x, \hat{u} \rangle + 2 \order[1]α \langle \order[1]x, \hat{u} \rangle + \order[2]α \langle \order[0]x, \hat{u} \rangle\bigr) + o(η^2).
   \end{aligned}
 \end{equation*}
 
@@ -1576,7 +1576,7 @@ $η^0$, $η^1$ and $η^2$ terms) that are discussed below.
 \paragraph{Variational problem of order 0} Find $\order[0]x \in U$ and $\order[0]α\in\reals$ such
 that, for all $\hat{u} \in U$
 \begin{equation*}
-  \E_2(\lambda_0; \order[0]x, \hat{u}) = \order[0]α 〈 \order[0]x, \hat{u} 〉.
+  \E_2(\lambda_0; \order[0]x, \hat{u}) = \order[0]α \langle \order[0]x, \hat{u} \rangle.
 \end{equation*}
 
 The above equation shows that $(\order[0]α, \order[0]x)$ is an eigenpair of $\E_2(\lambda_0)$. As
@@ -1589,17 +1589,17 @@ that, for all $\hat{u} \in U$
 \begin{equation}
   \label{eq:20220609131953}
   \E_2(\lambda_0; \order[1]x, \hat{u}) + \E_3(\lambda_0; \order[1]u, \order[0]x, \hat{u}) + \order[1]\lambda \dot{\E}_2(\lambda_0; \order[0]x, \hat{u})
-  = \order[1]α 〈 \order[0]x, \hat{u} 〉,
+  = \order[1]α \langle \order[0]x, \hat{u} \rangle,
 \end{equation}
 or, equivalently, plugging the expansions~\eqref{eq:20220524133944} and
 \eqref{eq:20220609133608} of $\order[1]u$ and $\order[0]x$ in the $v_i$ basis
 \begin{equation}
   \label{eq:20220617080547}
   \E_2(\lambda_0; \order[1]x, \hat{u}) + \E_3(\lambda_0; v_j, v_k, \hat{u}) \order[0]{χ_j} \order[1]{ξ_k} + \order[1]\lambda \dot{\E}_2(\lambda_0; v_j, \hat{u}) \order[0]{χ_j}
-  = \order[1]α \order[0]{χ_j} 〈 v_j, \hat{u} 〉.
+  = \order[1]α \order[0]{χ_j} \langle v_j, \hat{u} \rangle.
 \end{equation}
 
-For $\hat{u} = v_i$, observing that $〈 v_i, v_j 〉 = δ_{ij}$ since
+For $\hat{u} = v_i$, observing that $\langle v_i, v_j \rangle = δ_{ij}$ since
 $(v_i)$ is orthonormal, the above equation reads
 \begin{equation}
   \bigl[\E_3(\lambda_0; v_i, v_j, v_k) \order[1]{ξ_k} + \order[1]\lambda \dot{\E}_2(\lambda_0; v_i, v_j)\bigr] \order[0]{χ_j} = \order[1]α \order[0]{χ_i},
@@ -1614,7 +1614,7 @@ problem: find $\order[1]y \in W$ such that, for all $\hat{w} \in W$,
 \begin{equation}
   \E_2(\order[1]y, \hat{w}) + \E_3(v_i, v_j, \hat{w}) \order[0]{χ_i} \order[1]{ξ_j} + \order[1]\lambda \dot{\E}_2(v_i, \hat{w}) \order[0]{χ_i} = 0,
 \end{equation}
-(observe that $〈 v_j, \hat{w} 〉 = 0$ since $V$ and $W$ are orthogonal
+(observe that $\langle v_j, \hat{w} \rangle = 0$ since $V$ and $W$ are orthogonal
 subspaces). The solution to the above problem is expressed as a linear
 combination of the $w_i$ and $w_{ij}$ defined by the variational problems
 \eqref{eq:20220524134525} and \eqref{eq:20220519164523}, respectively:
@@ -1631,8 +1631,8 @@ w_i$, and the decomposition~\eqref{eq:20220609133629} is retrieved.
     + 2\order[1]\lambda \dot{\E}_3(\lambda_0; \order[1]u, \order[0]x, \hat{u})\\
     + ( \order[1]\lambda )^2 \ddot{\E}_2(\lambda_0; \order[0]x, \hat{u})
     + \order[2]\lambda \dot{\E}_2(\lambda_0; \order[0]x, \hat{u})
-    = 2 \order[1]α 〈 \order[1]x, \hat{u} 〉
-    + \order[2]α 〈 \order[0]x, \hat{u} 〉.
+    = 2 \order[1]α \langle \order[1]x, \hat{u} \rangle
+    + \order[2]α \langle \order[0]x, \hat{u} \rangle.
 \end{multline*}
 
 For $\hat{u} = \hat{v}_i$, plugging the decompositions
@@ -1646,8 +1646,8 @@ and \eqref{eq:20220609133629} of $\order[1]u$, $\order[2]u$, $\order[0]x $ et $\
 %   + 2\order[1]\lambda \dot{\E}_3(v_i, \order[0]x, \order[1]u)
 %   + ( \order[1]\lambda )^2 \ddot{\E}_2(v_i, \order[0]x)\\
 %   + \order[2]\lambda \dot{\E}_2(v_i, \order[0]x)
-%   = 2\order[1]α 〈 v_i, \order[1]x 〉
-%   + \order[2]α 〈 v_i, \order[0]x 〉,
+%   = 2\order[1]α \langle v_i, \order[1]x \rangle
+%   + \order[2]α \langle v_i, \order[0]x \rangle,
 % \end{multline*}
 % \begin{multline*}
 %   2\E_3(v_i, \order[1]{χ_i}v_j + \order[0]{χ_j}\order[1]{ξ_k}w_{jk}+ \order[1]\lambda \order[0]{χ_j} w_j, \order[1]{ξ_l} v_l)
@@ -1656,8 +1656,8 @@ and \eqref{eq:20220609133629} of $\order[1]u$, $\order[2]u$, $\order[0]x $ et $\
 %   + \E_3(v_i, \order[0]{χ_j} v_j, \order[2]{ξ_k} v_k + \order[1]{ξ_k} \order[1]{ξ_l} w_{kl} + 2\order[1]\lambda \order[1]{ξ_k} w_k)\\
 %   + 2\order[1]\lambda \dot{\E}_3(v_i, \order[0]{χ_j} v_j, \order[1]{ξ_k} v_k)
 %   + ( \order[1]\lambda )^2 \ddot{\E}_2(v_i, \order[0]{χ_j} v_j) + \order[2]\lambda \dot{\E}_2(v_i, \order[0]{χ_j} v_j)\\
-%   = 2\order[1]α 〈 v_i,  \order[1]{χ_i}v_j + \order[0]{χ_j}\order[1]{ξ_k}w_{jk} + \order[1]\lambda \order[0]{χ_j} w_j 〉
-%   + \order[2]α 〈 v_i, \order[0]{χ_j} v_j〉,
+%   = 2\order[1]α \langle v_i,  \order[1]{χ_i}v_j + \order[0]{χ_j}\order[1]{ξ_k}w_{jk} + \order[1]\lambda \order[0]{χ_j} w_j \rangle
+%   + \order[2]α \langle v_i, \order[0]{χ_j} v_j\rangle,
 % \end{multline*}
 % \begin{multline*}
 %   2\E_3(v_i, v_j,  v_k) \order[1]{χ_i} \order[1]{ξ_k}

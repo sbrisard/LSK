@@ -62,8 +62,9 @@ $U$
   U = V \overset{\perp}{\otimes} W.
 \end{equation}
 
-\begin{remark}
-  \label{rem20220902095055}
+
+```{note}
+  :name: rem20220902095055
   The bilinear form $\E_2$ being elliptic over $W$, variational problems of the
   type: find $w \in W$ such that
   \begin{equation}
@@ -75,7 +76,7 @@ $U$
     \E_2(w, \hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W
   \end{equation}
   is $w = 0$.
-\end{remark}
+```
 
 For $1 \leq i, j \leq m$, we introduce the solutions $w_i, w_{ij} \in W$ to the
 following variational problems
@@ -179,10 +180,10 @@ conditions
   \E_3(\lambda_0; v, v, v) = 0 \quad \text{and} \quad \E_4(\lambda_0; v, v, v, v) \geq 0 \quad \text{for all} \quad v \in V.
 \end{equation}
 
-\begin{remark}
+```{note}
   Note that, from Theorem \ref{thr:20220802112835}, the first of these two
   conditions is equivalent to $E_{ijk}=0$, for all $i, j, k = 1, \ldots m$.
-\end{remark}
+```
 
 In other words, if there exists $v \in V$ such that
 $\E_3(\lambda_0; v, v, v) \neq 0$ or $\E_4(v, v, v, v) < 0$, then the equilibrium is
@@ -309,8 +310,8 @@ that $\E_2(\lambda_0; v_i, W) = 0$ since $v_i \in V$, we get
   \E_2(\lambda_0; v_i + w_{,i}, \hat{w}) = \E_2(\lambda_0; w_{,i}, \hat{w}) = 0.
 \end{equation}
 
-Since $w \in W$ for all $\xi^i$ and $\lambda$, we have $w_{,i} \in W$ and,
-Remark \ref{rem20220902095055} leads to $w_{,i} = 0$ at the point
+Since $w \in W$ for all $\xi^i$ and $\lambda$, we have $w_{,i} \in W$ and
+{ref}`this remark <rem20220902095055>` leads to $w_{,i} = 0$ at the point
 $\xi_1 = 0, \ldots, \xi_m = 0$ and $\lambda = \lambda_0$. Eq. \eqref{eq20220825143616} is then
 differentiated with respect to $\lambda$
 \begin{equation}
@@ -755,7 +756,7 @@ In this section, we discuss the two main cases of bifurcations, namely
 \emph{asymmetric} and \emph{symmetric}. In each case, we analyse the stability
 of the bifurcated branch.
 
-\begin{remark}
+```{note}
   The boundary case is unclear to me. I think that whether a bifurcation is
   symmetric or asymmetric should depend on the value of $\order[1]\lambda$ only. If
   $\order[1]\lambda \neq 0$, the bifurcated branch is \emph{asymmetric}. Conversely, if
@@ -771,7 +772,7 @@ of the bifurcated branch.
   that will be discussed below are: (1) one of the bifurcated branches is
   asymmetric and (2) all bifurcated branches are symmetric. The mixed case ``one
   of the bifurcated branches is symmetric'' will \emph{not} be discussed.
-\end{remark}
+```
 
 ## Asymmetric bifurcated branch
 
@@ -786,10 +787,10 @@ $\order[1]{\xi_i}$ shows that
   \order[1]\lambda = -\frac{E_{ijk} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}}{2 F_{ij} \order[1]{\xi_i} \order[1]{\xi_j}}.
 \end{equation}
 
-\begin{remark}
+```{note}
   I can't prove that the bifurcation equation \eqref{eq20220524135036} has at
   most $(2^m - 1)$ pairs of real solutions.
-\end{remark}
+```
 
 Along the bifurcated branch, we have
 $\lambda = \lambda_0 + \eta \order[1]\lambda + o(\eta)$, and $\eta$ can be eliminated. In other words,
@@ -860,14 +861,15 @@ Recalling that $F_{i j} \order[1]{\xi_i} \order[1]{\xi_j} < 0$, it is found that
 above the critical load, the potential energy is \emph{smaller} along the
 bifurcated branch than along the fundamental branch.
 
-\begin{remark}
+```{note}
   As expected, the above expression does not depend on the scaling of
   $\order[1]u$ (of the $\order[1]{\xi_i}$).
-\end{remark}
-\begin{remark}
+```
+
+```{note}
   It has been shown in Sec. {ref}`sec20220802061621` that, when $E_{ijk}$ is not
   identically null, the bifurcation point is \emph{unstable}.
-\end{remark}
+```
 
 ## A particular case of symmetric bifurcation
 
@@ -895,10 +897,10 @@ $E_{ijkl}\order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}$. I
 $E_{ijkl}\order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} > 0$, (resp. $<0$) then the bifurcated branch
 exists above (resp. below) the critical load $\lambda_0$ only.
 
-\begin{remark}
+```{note}
   I can't prove that the bifurcation equation \eqref{eq20220801092222} has at
   most $(3^m - 1) / 2$ pairs of real solutions.
-\end{remark}
+```
 
 Turning now to the eigenpairs of the Hessian of the energy along the bifurcated
 branch, Eq. \eqref{eq20220609133608} shows that $\order[1]\alpha = 0$. Then
@@ -913,13 +915,12 @@ bifurcated branch exists above the critical load only). If one of the
 eigenvalues of this tensor is $<0$, then the bifurcated branch is unstable. The
 stability is undecided when all eigenvalues are $\geq 0$.
 
-\begin{remark}
+```{note}
   Note that, from Eq. \eqref{eq20220801092222},
   \begin{equation}
     E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} + \order[2]\lambda F_{ij} \order[1]{\xi_i} \order[1]{\xi_j} = \tfrac{2}{3} E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}
   \end{equation}
-
-\end{remark}
+```
 
 To conclude this section, it is observed that, when $\order[1]\lambda = 0$, the
 dominant term of the potential energy along the bifurcated branch is of the

@@ -1147,24 +1147,24 @@ $U$.
 \end{theorem}
 \begin{proof}
   The form $\mathcal T$ being trilinear and symmetric, we have, for all $u, v, w \in U$
-  and $\alpha, β \in \reals$
+  and $\alpha, \beta \in \reals$
   \begin{multline*}
-    \mathcal T(u + \alpha v + βw, u + \alpha v + βw, u + \alpha v + βw) = \mathcal T(u, u, u) + 3\alpha \mathcal T(u, u, v)\\
-    + 3β \mathcal T(u, u, w) + 3\alpha^2 \mathcal T(u, u, v) + 6 \alpha β \mathcal T(u, v, w) + 3 β^2 \mathcal T(u, u, w)\\
-    + \alpha^3 \mathcal T(v, v, v) + 3 \alpha^2 β \mathcal T(v, v, w) + 3 \alpha β^2 \mathcal T(v, w, w) + β^3 \mathcal T(w, w, w)
+    \mathcal T(u + \alpha v + \beta w, u + \alpha v + \beta w, u + \alpha v + \beta w) = \mathcal T(u, u, u) + 3\alpha \mathcal T(u, u, v)\\
+    + 3\beta \mathcal T(u, u, w) + 3\alpha^2 \mathcal T(u, u, v) + 6 \alpha \beta \mathcal T(u, v, w) + 3 \beta^2 \mathcal T(u, u, w)\\
+    + \alpha^3 \mathcal T(v, v, v) + 3 \alpha^2 \beta \mathcal T(v, v, w) + 3 \alpha \beta^2 \mathcal T(v, w, w) + \beta^3 \mathcal T(w, w, w)
   \end{multline*}
   and, upon simplification using Eq.~\eqref{eq:20220802111745}
   \begin{multline}
     \label{eq:20220802112309}
-    3\alpha \mathcal T(u, u, v) + 3β \mathcal T(u, u, w) + 3\alpha^2 \mathcal T(u, v, v) + 6 \alpha β \mathcal T(u, v, w)\\
-    + 3 β^2 \mathcal T(u, w, w) + 3 \alpha^2 β \mathcal T(v, v, w) + 3 \alpha β^2 \mathcal T(v, w, w) = 0.
+    3\alpha \mathcal T(u, u, v) + 3\beta \mathcal T(u, u, w) + 3\alpha^2 \mathcal T(u, v, v) + 6 \alpha \beta \mathcal T(u, v, w)\\
+    + 3 \beta^2 \mathcal T(u, w, w) + 3 \alpha^2 \beta \mathcal T(v, v, w) + 3 \alpha \beta^2 \mathcal T(v, w, w) = 0.
   \end{multline}
-  In particular taking successively $\alpha = ±1$, $β = 0$ and $w = 0$ delivers
+  In particular taking successively $\alpha = ±1$, $\beta = 0$ and $w = 0$ delivers
   \begin{equation*}
     ±3 \mathcal T(u, u, v) + 3 \mathcal T(u, u, v) = 0 \quad \text{for all} \quad u, v \in U,
   \end{equation*}
   from which it results that $\mathcal T(u, u, v) = 0$ for all $u, v \in U$. Plugging
-  into Eq.~\eqref{eq:20220802112309} with $\alpha = β = 1$ results in:
+  into Eq.~\eqref{eq:20220802112309} with $\alpha = \beta = 1$ results in:
   $\mathcal T(u, v, w) = 0$ for all $u, v, w \in U$.
 \end{proof}
 
@@ -1176,7 +1176,7 @@ energy, its residual and its hessian are derived.
 
 \subsection{Principle of the derivation}
 \label{sec:20220107121442}
-% 02/06/2022 — 099042106e938251657847daca64c8fcbaa833c3
+% 02/06/2022 --- 099042106e938251657847daca64c8fcbaa833c3
 %
 % Validation des calculs de ce paragraphe
 
@@ -1245,7 +1245,7 @@ the functional $\mathcal F$.
 
 \subsection{Application to the residual}
 \label{sec:20211112182000}
-% 03/06/2022 — b028b234970605720c9022c16c7fc3012997ced7
+% 03/06/2022 --- b028b234970605720c9022c16c7fc3012997ced7
 %
 % Validation des calculs de ce paragraphe
 
@@ -1323,7 +1323,7 @@ up to third-order terms.
 
 \subsection{Application to the energy}
 \label{sec:20220525053434}
-% 07/06/2022 — dd1a4abf18cd94861d754bf3e19a54b8974bb2e8
+% 07/06/2022 --- dd1a4abf18cd94861d754bf3e19a54b8974bb2e8
 %
 % Relecture de tous les calculs de ce paragraphe
 
@@ -1495,7 +1495,7 @@ which finally leads to the Taylor expansion~\eqref{eq:20220525053600}.
 
 \subsection{Application to the hessian of the energy}
 \label{sec:20220616055207}
-% 08/06/2022 — aea0da72c80440d74d38d8ace59f381061f71c3e
+% 08/06/2022 --- aea0da72c80440d74d38d8ace59f381061f71c3e
 %
 % Relecture de tous les calculs de ce paragraphe
 

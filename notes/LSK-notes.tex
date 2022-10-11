@@ -50,9 +50,9 @@ a la structure d'espace vectoriel. L'énergie du système est notée $\E(u, \lam
 où $\lambda$ désigne un paramètre de chargement. Soit $u^{\ast}(\lambda)$ la branche
 fondamentale. Par définition
 \begin{equation}
-  \E_{,u}[u^{\ast}(\lambda), \lambda; \hat{u}]=0 \quad \text{pour tout} \quad \hat{u}∈U,
+  \E_{,u}[u^{\ast}(\lambda), \lambda; \hat{u}]=0 \quad \text{pour tout} \quad \hat{u}\in U,
 \end{equation}
-and, deriving twice with respect to $\lambda$, we find successively, for all $\hat{u} ∈ U$
+and, deriving twice with respect to $\lambda$, we find successively, for all $\hat{u} \in U$
 \begin{equation}
   \label{eq:20220901143843}
   \E_{,uu}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \hat{u}] + \E_{,u\lambda}[u^\ast(\lambda), \lambda; \hat{u}] = 0
@@ -113,19 +113,19 @@ sous-espace supplémentaire orthogonal $W$ de $V$ dans $U$
 \begin{remark}
   \label{rem:20220902095055}
   The bilinear form $\E₂$ being elliptic over $W$, variational problems of the
-  type: find $w ∈ W$ such that
+  type: find $w \in W$ such that
   \begin{equation}
-    \E₂(w, \hat{w})+\ell(\hat{w}) = 0 \quad \text{for all} \quad \hat{w}∈W
+    \E₂(w, \hat{w})+\ell(\hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W
   \end{equation}
   are well-posed for any linear form $\ell$ over $W$. In particular, for
   $\ell=0$, the unique solution to the variational problem
   \begin{equation}
-    \E₂(w, \hat{w}) = 0 \quad \text{for all} \quad \hat{w}∈W
+    \E₂(w, \hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W
   \end{equation}
   is $w = 0$.
 \end{remark}
 
-For $1 ≤ i, j ≤ m$, we introduce the solutions $w_i, w_{ij} ∈ W$ to the
+For $1 ≤ i, j ≤ m$, we introduce the solutions $w_i, w_{ij} \in W$ to the
 following variational problems
 \begin{gather}
   \label{eq:20220524134525}
@@ -133,8 +133,8 @@ following variational problems
   \label{eq:20220519164523}
   \E₂(\lambda₀; w_{i j}, \hat{w})+\E₃(\lambda₀; v_i, v_j, \hat{w}) = 0,
 \end{gather}
-for all $\hat{w} ∈ W$. Since $w_{i}$ and $w_{ij}$ belong to $W$, we have
-$〈 w_{i}, v 〉 = 〈 w_{ij}, v 〉 = 0$ for all $v ∈ V$. Since $\E₂(\lambda₀; •,
+for all $\hat{w} \in W$. Since $w_{i}$ and $w_{ij}$ belong to $W$, we have
+$〈 w_{i}, v 〉 = 〈 w_{ij}, v 〉 = 0$ for all $v \in V$. Since $\E₂(\lambda₀; •,
 •)$ is symmetric, it can be verified that $w_{ij}=w_{ji}$. We also introduce
 the following tensors, defined in $V$
 \begin{gather}
@@ -192,7 +192,7 @@ and, from Eq.~\eqref{eq:20220519164523}
 
 In this section, we discuss the stability of the critical point $(u₀, \lambda₀)$. To
 this end, we evaluate the potential energy in a neighboring state
-$u₀ + u$, where $u ∈ U$ is ``small''. We have, to the fourth order
+$u₀ + u$, where $u \in U$ is ``small''. We have, to the fourth order
 \begin{equation}
   \begin{aligned}[b]
     \E(u₀ + u, \lambda₀) - \E(u₀, \lambda₀) ={}
@@ -201,8 +201,8 @@ $u₀ + u$, where $u ∈ U$ is ``small''. We have, to the fourth order
   \end{aligned}
 \end{equation}
 where the linear term has been omitted, $u₀$ being a critical point of the
-energy. Since $v ∈ V$, we have $\E₂(\lambda₀; v, •) = 0$. We now expand $u$ as
-$u = ξ v + η w$, with $ξ, η ∈ \reals$ and $v ∈ V$ and $w ∈ W$ are fixed,
+energy. Since $v \in V$, we have $\E₂(\lambda₀; v, •) = 0$. We now expand $u$ as
+$u = ξ v + η w$, with $ξ, η \in \reals$ and $v \in V$ and $w \in W$ are fixed,
 orthogonal directions. Owing to the multi-linearity and symmetry of the
 successive differential of $\E$, the above expression expands as
 follows
@@ -222,7 +222,7 @@ For the equilibrium to be stable, the above expression must be $≥ 0$ for all
 $ξ$ et $η$ small enough. Taking first $η = 0$, we get the following necessary conditions
 \begin{equation}
   \label{eq:20211108164416}
-  \E₃(\lambda₀; v, v, v) = 0 \quad \text{and} \quad \E₄(\lambda₀; v, v, v, v) \geq 0 \quad \text{for all} \quad v∈V.
+  \E₃(\lambda₀; v, v, v) = 0 \quad \text{and} \quad \E₄(\lambda₀; v, v, v, v) \geq 0 \quad \text{for all} \quad v \in V.
 \end{equation}
 
 \begin{remark}
@@ -230,7 +230,7 @@ $ξ$ et $η$ small enough. Taking first $η = 0$, we get the following necessary
   conditions is equivalent to $E_{ijk}=0$, for all $i, j, k = 1, \ldots m$.
 \end{remark}
 
-In other words, if there exists $v ∈ V$ such that $\E₃(\lambda₀; v, v, v) \neq 0$
+In other words, if there exists $v \in V$ such that $\E₃(\lambda₀; v, v, v) \neq 0$
 or $\E₄(v, v, v, v) < 0$, then the equilibrium is \emph{unstable} at the
 critical point. The above conditions are not sufficient. Indeed, assuming
 conditions~\eqref{eq:20211108164416} to hold, we now take $η = ξ²$
@@ -243,27 +243,27 @@ conditions~\eqref{eq:20211108164416} to hold, we now take $η = ξ²$
 and we get the further necessary condition
 \begin{equation}
   \label{eq:20211109145356}
-  \E₂(w, w) + \E₃(v, v, w) + \tfrac{1}{12} \E₄(v, v, v, v) \geq 0 \quad \text{for all} \quad v ∈ V \quad \text{and} \quad w ∈ W.
+  \E₂(w, w) + \E₃(v, v, w) + \tfrac{1}{12} \E₄(v, v, v, v) \geq 0 \quad \text{for all} \quad v \in V \quad \text{and} \quad w \in W.
 \end{equation}
 
-The direction $v∈V$ being fixed, the above expression is minimal when $w$
+The direction $v \in V$ being fixed, the above expression is minimal when $w$
 satisfies the following variational problem
 \begin{equation}
   \label{eq:20211109145224}
-  2\E₂(w, \hat{w}) +\E₃(v, v, \hat{w}) = 0 \quad \text{for all} \quad \hat{w}∈W.
+  2\E₂(w, \hat{w}) +\E₃(v, v, \hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W.
 \end{equation}
 
-Expanding $v ∈ V$ in the $(v_i)$ basis as follows: $v = ξ_i v_i$, it is
+Expanding $v \in V$ in the $(v_i)$ basis as follows: $v = ξ_i v_i$, it is
 observed that the solution to the above variational problem is
 $w = \tfrac{1}{2} ξ_i ξ_j w_{ij}$, where $w_{ij}$ is the solution to the
 elementary variational problem \eqref{eq:20220519164523}. For this value of
 $w$, condition~\eqref{eq:20211109145356} reads
 \begin{equation}
-  \bigl[\E₄(v_i, v_j, v_k, v_l) - 3\E₂(w_{ij}, w_{kl})\bigr] ξ_i ξ_j ξ_k ξ_l \geq 0 \quad \text{for all} \quad ξ_1, \ldots, ξ_m ∈ \reals,
+  \bigl[\E₄(v_i, v_j, v_k, v_l) - 3\E₂(w_{ij}, w_{kl})\bigr] ξ_i ξ_j ξ_k ξ_l \geq 0 \quad \text{for all} \quad ξ_1, \ldots, ξ_m \in \reals,
 \end{equation}
 which, in view of definition~\eqref{eq:20220802081116} of $E_{ijkl}$, is equivalent to
 \begin{equation}
-  E_{ijkl} ξ_i ξ_j ξ_k ξ_l \geq 0 \quad \text{for all} \quad ξ_m, \ldots, ξ_m ∈ \reals.
+  E_{ijkl} ξ_i ξ_j ξ_k ξ_l \geq 0 \quad \text{for all} \quad ξ_m, \ldots, ξ_m \in \reals.
 \end{equation}
 
 Note that Eq.~\eqref{eq:20211109145224} implies $\E₄(\lambda₀; v, v, v, v) ≥ 0$,
@@ -272,12 +272,12 @@ $w= ξ_i ξ_j w_{ij}$ into Eq.~\eqref{eq:20211109145224} cancels the first two
 terms. To sum up, we have the following \emph{necessary} conditions for
 stability
 \begin{equation}
-  E_{ijk} ξ_i ξ_j ξ_k = 0 \quad \text{and} \quad E_{ijkl} ξ_i ξ_j ξ_k ξ_l ≥ 0 \quad \text{for all} \quad ξ_m, \ldots, ξ_m ∈ \reals.
+  E_{ijk} ξ_i ξ_j ξ_k = 0 \quad \text{and} \quad E_{ijkl} ξ_i ξ_j ξ_k ξ_l ≥ 0 \quad \text{for all} \quad ξ_m, \ldots, ξ_m \in \reals.
 \end{equation}
 
 \pdfmarkupcomment{Conversely, the following condition is \emph{sufficient} to ensure stability of the critical point}{\`A d\'emontrer}
 \begin{equation}
-  E_{ijk} ξ_i ξ_j ξ_k = 0 \quad \text{and} \quad E_{ijkl} ξ_i ξ_j ξ_k ξ_l > 0 \quad \text{for all} \quad ξ_m, \ldots, ξ_m ∈ \reals.
+  E_{ijk} ξ_i ξ_j ξ_k = 0 \quad \text{and} \quad E_{ijkl} ξ_i ξ_j ξ_k ξ_l > 0 \quad \text{for all} \quad ξ_m, \ldots, ξ_m \in \reals.
 \end{equation}
 
 \section{Analysis of bifurcated branches}
@@ -306,23 +306,23 @@ The following decomposition of the equilibrium state $u$ at the load-level
 $\lambda$is postulated
 \begin{equation}
   \label{eq:20220902174235}
-  u = u^\ast(\lambda) + ξ_i v_i + w, \quad \text{with} \quad w ∈ W.
+  u = u^\ast(\lambda) + ξ_i v_i + w, \quad \text{with} \quad w \in W.
 \end{equation}
 
 It follows from the orthogonality of $V$ and $W$ that $〈v_i, w〉 = 0$ for
 all $i=1, \ldots, m$. Stationarity of the energy is expressed as follows
 \begin{equation}
-  \E_{,u}[u^\ast(\lambda) + ξ_i v_i + w, \lambda; \hat{u}] = 0, \quad \text{for all} \quad \hat{u} ∈ U
+  \E_{,u}[u^\ast(\lambda) + ξ_i v_i + w, \lambda; \hat{u}] = 0, \quad \text{for all} \quad \hat{u} \in U
 \end{equation}
 or, equivalently
 \begin{equation}
   \label{eq:20220901120544}
-  \E_{,u}[u^\ast(\lambda) + ξ_i v_i + w, \lambda; \hat{v}] = 0, \quad \text{for all} \quad \hat{v} ∈ V
+  \E_{,u}[u^\ast(\lambda) + ξ_i v_i + w, \lambda; \hat{v}] = 0, \quad \text{for all} \quad \hat{v} \in V
 \end{equation}
 and
 \begin{equation}
   \label{eq:20220825143616}
-  \E_{,u}[u^\ast(\lambda) + ξ_i v_i + w, \lambda; \hat{w}] = 0, \quad \text{for all} \quad \hat{w} ∈ W.
+  \E_{,u}[u^\ast(\lambda) + ξ_i v_i + w, \lambda; \hat{w}] = 0, \quad \text{for all} \quad \hat{w} \in W.
 \end{equation}
 The method proceeds in three steps. In \textbf{Step 1},
 Eq.~\eqref{eq:20220825143616} is used to define $w$ as an implicit function of
@@ -345,13 +345,13 @@ $ξ_i$
 \end{equation}
 
 Substituting $ξ_1 = \cdots = ξ_m = 0, \lambda = \lambda₀$ in the above equations and
-observing that $\E₂(\lambda₀; v_i, W) = 0$ since $v_i ∈ V$, we get
+observing that $\E₂(\lambda₀; v_i, W) = 0$ since $v_i \in V$, we get
 \begin{equation}
 \label{eq:20220825150219}
   \E₂(\lambda₀; v_i + w_{,i}, \hat{w}) = \E₂(\lambda₀; w_{,i}, \hat{w}) = 0.
 \end{equation}
 
-Since $w ∈ W$ for all $ξ^i$ and $\lambda$, we have $w_{,i} ∈ W$ and,
+Since $w \in W$ for all $ξ^i$ and $\lambda$, we have $w_{,i} \in W$ and,
 Remark~\ref{rem:20220902095055} leads to $w_{,i} = 0$ at the point
 $ξ₁ = 0, \ldots, ξ_m = 0$ and $\lambda = \lambda₀$. Eq.~\eqref{eq:20220825143616} is
 then differentiated with respect to  $\lambda$
@@ -451,7 +451,7 @@ Eqs.~\eqref{eq:20220901121940} and \eqref{eq:20220901125230} are then evaluated
 at $ξ₁ = \cdots = ξ_m = 0$, delivering
 \begin{equation}
   \label{eq:20220901152056}
-  \underbrace{\E_{,uu}(u₀, \lambda₀; v_i, \hat{v})}_{=0 \text{ since } \hat{v} ∈ V}
+  \underbrace{\E_{,uu}(u₀, \lambda₀; v_i, \hat{v})}_{=0 \text{ since } \hat{v} \in V}
   + \lambda_{, i} \bigl[ \underbrace{\E_{,uu}(u₀, \lambda₀; \dot{u}₀, \hat{v}) +  \E_{,u\lambda}(u₀, \lambda₀; \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143843}}} \bigr] = 0,
 \end{equation}
 and
@@ -465,7 +465,7 @@ and
 \begin{equation}
   \label{eq:20220901152145}
   \begin{gathered}[b]
-    \E_{,uuu}(u₀, \lambda₀; v_i , v_j, \hat{v}) + \underbrace{\E_{,uu}(u₀, \lambda₀; w_{ij}, \hat{v})}_{=0 \text{ since } \hat{v} ∈ V}\\
+    \E_{,uuu}(u₀, \lambda₀; v_i , v_j, \hat{v}) + \underbrace{\E_{,uu}(u₀, \lambda₀; w_{ij}, \hat{v})}_{=0 \text{ since } \hat{v} \in V}\\
     +\lambda_{,i} \bigl[\E_{,uuu}(u₀, \lambda₀; v_j , \dot{u}₀, \hat{v}) + \E_{,uu\lambda}[u₀, \lambda₀; v_j, \hat{v}]\bigr]\\
     +\lambda_{,j} \bigl[\E_{,uuu}(u₀, \lambda₀; v_i , \dot{u}₀, \hat{v}) + \E_{,uu\lambda}(u₀, \lambda₀; v_i, \hat{v})\bigr]\\
     +\lambda_{,ij} \bigl[ \underbrace{\E_{,uu}(u₀, \lambda₀;  \dot{u}₀, \hat{v}) + \E_{,u\lambda}(u₀, \lambda₀; \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143843}}} \bigr]\\
@@ -485,7 +485,7 @@ and, recognizing derivatives of $\E₂$ with respect to $\lambda$, we finally ge
 \begin{equation}
     \E₃(\lambda₀; v_i , v_j, \hat{v}) + \lambda_{,i} \dot{\E}₂(\lambda₀; v_j, \hat{v}) + \lambda_{,j} \dot{\E}₂(\lambda₀; v_i, \hat{v}) = 0.
 \end{equation}
-Testing with $v_k ∈ V$, the above equation reads
+Testing with $v_k \in V$, the above equation reads
 \begin{equation}
   \E₃(\lambda₀; v_i , v_j, v_k) + \lambda_{,i} \dot{\E}₂(\lambda₀; v_j, v_k) + \lambda_{,j} \dot{\E}₂(\lambda₀; v_i, v_k) = 0,
 \end{equation}
@@ -501,7 +501,7 @@ $ξ_k$. This leads to extremely tedious derivations, and we will adopt an
 alternative approach in Sec.~\ref{sec:20220902092109}.
 
 \paragraph{Step 3: parametrization of the bifurcated branch} The bifurcated
-branch is a curve $(u, \lambda) ∈ ℝ ^ {m + 1}$, which is parametrized by $η$:
+branch is a curve $(u, \lambda) \in ℝ ^ {m + 1}$, which is parametrized by $η$:
 $[u(η), \lambda(η)]$, with $u(0) = u₀$ and $\lambda(0) = \lambda₀$; primed quantities
 denoting derivatives with respect to $η$, we introduce
 \begin{equation}
@@ -565,7 +565,7 @@ $\order[k]u$ of the expansions~\eqref{eq:20211115075817} and
 vanishes for all $η$ close to $0$. The residual is expanded with respect to
 the powers of $η$ in Appendix~\ref{sec:20211112182000} [see
 Eq.~\eqref{eq:20220107080901}]. Since all the terms of this expansion must
-vanish, we get successively, for all $\hat{u} ∈ U$
+vanish, we get successively, for all $\hat{u} \in U$
 \begin{equation}
   \label{eq:20211112182917}
   \E₂(\lambda₀; \order[1]u, \hat{u}) = 0,
@@ -582,16 +582,16 @@ vanish, we get successively, for all $\hat{u} ∈ U$
     + 3(\order[1]\lambda)^2\ddot{\E}₂(\lambda₀; \order[1]u, \hat{u}) + 3\order[2]\lambda\dot{\E}₂(\lambda₀; \order[1]u, \hat{u}) & = 0.
   \end{aligned}
 \end{equation}
-It results from Eq.~\eqref{eq:20211112182917} that $\order[1]u ∈ V$. Testing
-with $\hat{v} ∈ V$ (rather than $\hat{u} ∈ U$),
+It results from Eq.~\eqref{eq:20211112182917} that $\order[1]u \in V$. Testing
+with $\hat{v} \in V$ (rather than $\hat{u} \in U$),
 Eq.~\eqref{eq:20220524133447} shows that $\order[1]u$ est solves the following
-variational problem: find $\order[1]u ∈ V$ such that
+variational problem: find $\order[1]u \in V$ such that
 \begin{equation}
   \label{eq:20220524133816}
   \tfrac{1}{2} \E₃(\lambda₀; \order[1]u, \order[1]u, \hat{v}) + \order[1]\lambda\dot{\E}₂(\lambda₀; \order[1]u, \hat{v}) = 0,
 \end{equation}
-pour tout $\hat{v}∈V$. The above problem can be transformed into a system of
-scalar equations. Indeed, expanding the $\order[1]u∈V$ in the basis
+pour tout $\hat{v} \in V$. The above problem can be transformed into a system of
+scalar equations. Indeed, expanding the $\order[1]u \in V$ in the basis
 $(v_i)_{1 ≤ i ≤ m}$ as follows
 \begin{equation}
   \label{eq:20220524133944}
@@ -610,20 +610,20 @@ $\order[2]u$, we postulate the following decomposition
 \begin{equation}
   \order[2]u = \order[2]{ξ_i} v_i + \order[2]w,
 \end{equation}
-where $\order[2]w ∈ W$ is the orthogonal projection of $\order[2]u$ onto
+where $\order[2]w \in W$ is the orthogonal projection of $\order[2]u$ onto
 $W$. Then $\E₂(\order[2]u, \hat{u}) = \E₂(\order[2]{w}, \hat{u})$ and
 Eq.~\eqref{eq:20220524133447} reads
 \begin{equation}
  \E₃(\lambda₀; \order[1]u, \order[1]u, \hat{u}) + 2\order[1]\lambda \dot{\E}₂(\lambda₀; \order[1]u, \hat{u}) + \E₂(\lambda₀; \order[2]w, \hat{u}) = 0,
 \end{equation}
-for all $\hat{u} ∈ U$. Testing now with $\hat{w} ∈ W$ (rather than
-$\hat{u} ∈ U$), we get the following variational problem: find
-$\order[2]w∈W$ such that
+for all $\hat{u} \in U$. Testing now with $\hat{w} \in W$ (rather than
+$\hat{u} \in U$), we get the following variational problem: find
+$\order[2]w \in W$ such that
 \begin{equation}
   \label{eq:20211210131623}
   \E₂(\lambda₀; \order[2]w, \hat{w}) + \order[1]{ξ_i} \order[1]{ξ_j} \E₃(\lambda₀; v_i, v_j, \hat{w}) + 2\order[1]\lambda \order[1]{ξ_i} \dot{\E}₂(\lambda₀; v_i, \hat{w}) = 0,
 \end{equation}
-for all $\hat{w}∈W$. The solution to the variational
+for all $\hat{w} \in W$. The solution to the variational
 problem~\eqref{eq:20211210131623} is expressed as a linear combination of the
 $w_i$ and $w_{ij}$ [defined by the variational
 problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}]:
@@ -721,7 +721,7 @@ strictly unstable beyond the critical load). From the above expansion, it
 results that $\dot{\E}₂(\lambda₀)$ is negative definite over $V$. In other words,
 $-F_{ij}$ is a positive definite tensor. The asymptotic expansion of the
 Hessian of the energy along the bifurcated branch is derived in
-appendix~\ref{sec:20220616055207}. For all $\hat{u}, \hat{v}∈U$
+appendix~\ref{sec:20220616055207}. For all $\hat{u}, \hat{v} \in U$
 \begin{equation}
   \label{eq:20220531054247}
   \begin{aligned}[b]
@@ -733,11 +733,11 @@ appendix~\ref{sec:20220616055207}. For all $\hat{u}, \hat{v}∈U$
   \end{aligned}
 \end{equation}
 
-Stability analysis is performed by means of the eigenvalues $α ∈ \reals$ and
-eigenvectors $x ∈ U$ of the Hessian
+Stability analysis is performed by means of the eigenvalues $α \in \reals$ and
+eigenvectors $x \in U$ of the Hessian
 \begin{equation}
   \label{eq:20220617074949}
-  \E_{, u u} [u(η), \lambda(η); x, \hat{u}] = α 〈 x, \hat{u} 〉 \quad \text{for all} \quad \hat{u} ∈ V,
+  \E_{, u u} [u(η), \lambda(η); x, \hat{u}] = α 〈 x, \hat{u} 〉 \quad \text{for all} \quad \hat{u} \in V,
 \end{equation}
 where $α$ and $x$ are expanded to second order in $η$
 \begin{equation}
@@ -751,7 +751,7 @@ The following results are proved in Appendix~\ref{sec:20220616074108}: first,
 $(\order[0]α, x_0)$ is necessarily an eigenpair of $\E₂(\lambda₀)$. Since $\E₂ (\lambda₀)$ is
 positive, $\order[0]α ≥ 0$. If $\order[0]α>0$, then $α>0$ in the neighborhood of
 $\lambda₀$. Potentially unstable modes are therefore such that $\order[0]α=0$. In other
-words, $\order[0]x ∈ V$ and
+words, $\order[0]x \in V$ and
 \begin{equation}
   \label{eq:20220904160057}
   \order[0]x = \order[0]{χ_i} v_i
@@ -812,7 +812,7 @@ of the bifurcated branch.
   of the bifurcated branches is symmetric'' will \emph{not} be discussed.
 \end{remark}
 
-\subsection{Asymmetric bifurcated branch ($\order[1]\lambda ≠ 0$)}
+\subsection{Asymmetric bifurcated branch}
 
 We first consider the situation where $\order[1]\lambda ≠ 0$ on the bifurcated
 branch. The bifurcation equation~\eqref{eq:20220524135036} shows that
@@ -865,7 +865,7 @@ discussed
 \begin{enumerate}
 \item If $α_{\min} α_{\max} > 0$, then $(E_{ijk} \order[1]{ξ_k} + \order[1]\lambda F_{ij})$ is
   positive or negative definite: all eigenvalues have the same sign,
-  $\epsilon ∈ \{-1, +1\}$. Then the sign of the eigenvalues $α$ of the
+  $\epsilon \in \{-1, +1\}$. Then the sign of the eigenvalues $α$ of the
   Hessian is $\epsilon η$ and there is a stability switch at the critical
   load. Since the bifurcated branch is unstable \emph{below} the critical load,
   this means that it is \emph{stable} above the critical load.
@@ -1061,15 +1061,15 @@ In this section, $\mathcal{B}$ denotes a bilinear, symmetric, positive form
 over the vector space $U$. Its kernel $\ker \mathcal{B}$ is defined as
 follows
 \begin{equation}
- \ker \mathcal{B}= \bigl\{ u ∈ U, \mathcal{B}(u, u) = 0 \bigr\} .
+ \ker \mathcal{B}= \bigl\{ u \in U, \mathcal{B}(u, u) = 0 \bigr\} .
 \end{equation}
 
 \begin{theorem}
   The kernel of a bilinear, symmetric, positive form is a vector subspace.
 \end{theorem}
 \begin{proof}
-  We must show that, for all $u, v ∈\ker \mathcal{B}$ and $α ∈ \reals$,
-  $w = u + α v ∈ \ker \mathcal{B}$, in other words, it must be shown that
+  We must show that, for all $u, v \in\ker \mathcal{B}$ and $α \in \reals$,
+  $w = u + α v \in \ker \mathcal{B}$, in other words, it must be shown that
   $\mathcal{B}(w, w) = 0$. From the bilinearity and symmetry of
   $\mathcal{B}$
  \begin{equation*}
@@ -1077,35 +1077,35 @@ follows
    = \mathcal{B}(u, u) + 2 α \mathcal{B}(u, v) + α² \mathcal{B}(v, v),
  \end{equation*}
 
- Since $u, v ∈ \ker\mathcal{B}$, the first and the last term vanish, and the above identity reduces to
+ Since $u, v \in \ker\mathcal{B}$, the first and the last term vanish, and the above identity reduces to
  \begin{equation*}
    \mathcal{B}(w, w) = 2α \mathcal{B}(u, v)
  \end{equation*}
 
  The bilinear form $\mathcal{B}$ is positive, therefore the left-hand side is
- positive, \emph{for all values of $α ∈ \reals$}. The quantity
+ positive, \emph{for all values of $α \in \reals$}. The quantity
  $\mathcal{B}(u, v) = 0$ is necessarily null, and $\mathcal{B}(w, w) = 0$,
  which completes the proof.
 \end{proof}
 
 \begin{theorem}
-  Let $\mathcal{B}$ be a bilinear, symmetric, positive form over the vector space $U$ and $u ∈ U$. Then
+  Let $\mathcal{B}$ be a bilinear, symmetric, positive form over the vector space $U$ and $u \in U$. Then
  \begin{equation*}
-  u ∈ \ker\mathcal{B} \quad \text{iff} \quad \text{pour tout } v ∈ U, \mathcal{B}(u, v) = 0.
+  u \in \ker\mathcal{B} \quad \text{iff} \quad \text{pour tout } v \in U, \mathcal{B}(u, v) = 0.
  \end{equation*}
 \end{theorem}
 
 \begin{proof}
-  If for all $v ∈ U$, $\mathcal{B}(u, v) = 0$, then in particular
-  $\mathcal{B}(u, u) = 0$ and $u ∈ \ker \mathcal{B}$.
+  If for all $v \in U$, $\mathcal{B}(u, v) = 0$, then in particular
+  $\mathcal{B}(u, u) = 0$ and $u \in \ker \mathcal{B}$.
 
-  Converely, let $u ∈ \ker \mathcal{B}$, $v ∈ U$ et $α ∈
+  Converely, let $u \in \ker \mathcal{B}$, $v \in U$ et $α \in
   \reals$. Similarly to the previous proof, we write that
   $\mathcal{B}(w, w) ≥ 0$, with $w = α u + v$
   \begin{equation*}
     \mathcal{B}(w, w) = \mathcal{B}(u, u) + 2 α \mathcal{B}(u, v) +\mathcal{B}(v, v) = 2 α \mathcal{B}(u, v) +\mathcal{B}(v, v) ≥ 0,
   \end{equation*}
-  ($\mathcal{B}(u, u) = 0$ since $u ∈ \ker \mathcal{B}$). The above
+  ($\mathcal{B}(u, u) = 0$ since $u \in \ker \mathcal{B}$). The above
   expression is of degree 1 in $α$, with a constant sign. Therefore the linear
   term in $α$ must vanish: $\mathcal{B}(u, v) = 0$.
 \end{proof}
@@ -1120,16 +1120,16 @@ $U$.
   Let $𝒯$ be a trilinear, symmetric form, such that
   \begin{equation}
     \label{eq:20220802111745}
-    𝒯(u, u, u) = 0 \quad \text{for all} \quad u ∈ U.
+    𝒯(u, u, u) = 0 \quad \text{for all} \quad u \in U.
   \end{equation}
   Then
   \begin{equation}
-    𝒯(u, v, w) = 0 \quad \text{for all} \quad u, v, w ∈ U.
+    𝒯(u, v, w) = 0 \quad \text{for all} \quad u, v, w \in U.
   \end{equation}
 \end{theorem}
 \begin{proof}
-  The form $𝒯$ being trilinear and symmetric, we have, for all $u, v, w ∈ U$
-  and $α, β ∈ ℝ$
+  The form $𝒯$ being trilinear and symmetric, we have, for all $u, v, w \in U$
+  and $α, β \in ℝ$
   \begin{multline*}
     𝒯(u + αv + βw, u + αv + βw, u + αv + βw) = 𝒯(u, u, u) + 3α 𝒯(u, u, v)\\
     + 3β 𝒯(u, u, w) + 3α² 𝒯(u, u, v) + 6 α β 𝒯(u, v, w) + 3 β² 𝒯(u, u, w)\\
@@ -1143,11 +1143,11 @@ $U$.
   \end{multline}
   In particular taking successively $α = ±1$, $β = 0$ and $w = 0$ delivers
   \begin{equation*}
-    ±3 𝒯(u, u, v) + 3 𝒯(u, u, v) = 0 \quad \text{for all} \quad u, v ∈ U,
+    ±3 𝒯(u, u, v) + 3 𝒯(u, u, v) = 0 \quad \text{for all} \quad u, v \in U,
   \end{equation*}
-  from which it results that $𝒯(u, u, v) = 0$ for all $u, v ∈ U$. Plugging
+  from which it results that $𝒯(u, u, v) = 0$ for all $u, v \in U$. Plugging
   into Eq.~\eqref{eq:20220802112309} with $α = β = 1$ results in:
-  $𝒯(u, v, w) = 0$ for all $u, v, w ∈ U$.
+  $𝒯(u, v, w) = 0$ for all $u, v, w \in U$.
 \end{proof}
 
 \section{Asymptotic expansions along a bifurcated branch}
@@ -1162,17 +1162,17 @@ energy, its residual and its hessian are derived.
 %
 % Validation des calculs de ce paragraphe
 
-Introducing $\LAMBDA$ and $U$, which are functions of $η$ only,
+Introducing $\Lambda$ and $U$, which are functions of $η$ only,
 \begin{align}
   \label{eq:20211112155446}
-  \LAMBDA(η) & = \lambda(η) - \lambda₀ = η \order[1]\lambda + \tfrac{1}{2} η² \order[2]\lambda + \tfrac{1}{6} η³ \order[3]\lambda + \cdots,\\
+  \Lambda(η) & = \lambda(η) - \lambda₀ = η \order[1]\lambda + \tfrac{1}{2} η² \order[2]\lambda + \tfrac{1}{6} η³ \order[3]\lambda + \cdots,\\
   \label{eq:20211112113028}
   U(η) & = u(η) - u^{\ast}[\lambda(η)] = η \order[1]u + \tfrac{1}{2} η² \order[2]u + \tfrac{1}{6} η³ \order[3]u + \cdots,
 \end{align}
 the functional $\mathcal{F}(u, \lambda)$ is evaluated along the bifurcated branch,
 thus defining the function $f(η)$
 \begin{equation*}
-  f(η) = F\{ u^{\ast} [\lambda₀ + \LAMBDA(η)] + U(η), \lambda₀ + \LAMBDA(η) \}.
+  f(η) = F\{ u^{\ast} [\lambda₀ + \Lambda(η)] + U(η), \lambda₀ + \Lambda(η) \}.
 \end{equation*}
 
 We seek the Taylor expansion of $f$ at $η = 0$, which requires the
@@ -1182,24 +1182,24 @@ function $F$ defined as follows
   F(η, \lambda) =\mathcal{F}[u^{\ast}(\lambda) + U(η), \lambda],
 \end{equation*}
 where $\lambda$ and $η$ are temporarily seen as independent variables. Since
-$f(η) = F[η, \lambda₀ + \LAMBDA(η)]$, the following identities hold
+$f(η) = F[η, \lambda₀ + \Lambda(η)]$, the following identities hold
 \begin{gather*}
-  f'(η) = ∂_{η} F + \LAMBDA' ∂_{\lambda} F,\\
-  f''(η) = ∂_{ηη}² F + 2\LAMBDA' ∂_{η\lambda}²F + \LAMBDA'^2 ∂_{\lambda\lambda}² F + \LAMBDA'' ∂_{\lambda} F,\\
+  f'(η) = ∂_{η} F + \Lambda' ∂_{\lambda} F,\\
+  f''(η) = ∂_{ηη}² F + 2\Lambda' ∂_{η\lambda}²F + \Lambda'^2 ∂_{\lambda\lambda}² F + \Lambda'' ∂_{\lambda} F,\\
   \begin{aligned}[b]
     f'''(η) ={}
-    & ∂_{ηηη}³ F + 3\LAMBDA' ∂_{ηη\lambda}³F + 3\LAMBDA'^2 ∂_{η\lambda\lambda}³F + \lambda'^3 ∂_{\lambda\lambda\lambda}³ F\\
-    & + 3\LAMBDA'' ∂_{η\lambda}² F + 3\LAMBDA' \LAMBDA'' ∂_{\lambda \lambda}² F + \LAMBDA''' ∂_{\lambda} F,
+    & ∂_{ηηη}³ F + 3\Lambda' ∂_{ηη\lambda}³F + 3\Lambda'^2 ∂_{η\lambda\lambda}³F + \lambda'^3 ∂_{\lambda\lambda\lambda}³ F\\
+    & + 3\Lambda'' ∂_{η\lambda}² F + 3\Lambda' \Lambda'' ∂_{\lambda \lambda}² F + \Lambda''' ∂_{\lambda} F,
   \end{aligned}\\
   \begin{aligned}[b]
     f''''(η) ={}
-    & ∂_{ηηηη}⁴ F + 4\LAMBDA' ∂_{ηηη\lambda}⁴F + 6\LAMBDA'^2 ∂_{ηη\lambda\lambda}⁴F + 4\LAMBDA'^3 ∂_{η\lambda\lambda\lambda}⁴F + \LAMBDA'^4 ∂_{\lambda\lambda\lambda\lambda}⁴ F\\
-    & + 6\LAMBDA'' ∂_{ηη\lambda}³ F + 12\LAMBDA' \LAMBDA'' ∂_{η\lambda\lambda}³F + 6\LAMBDA'^2 \LAMBDA'' ∂_{\lambda\lambda\lambda}³ F\\
-    & + 4 \LAMBDA''' ∂_{η\lambda}² F + \bigl( 3\LAMBDA''^2 + 4 \LAMBDA' \LAMBDA''' \bigr) ∂_{\lambda\lambda}² F + \lambda'''' ∂_{\lambda}F,
+    & ∂_{ηηηη}⁴ F + 4\Lambda' ∂_{ηηη\lambda}⁴F + 6\Lambda'^2 ∂_{ηη\lambda\lambda}⁴F + 4\Lambda'^3 ∂_{η\lambda\lambda\lambda}⁴F + \Lambda'^4 ∂_{\lambda\lambda\lambda\lambda}⁴ F\\
+    & + 6\Lambda'' ∂_{ηη\lambda}³ F + 12\Lambda' \Lambda'' ∂_{η\lambda\lambda}³F + 6\Lambda'^2 \Lambda'' ∂_{\lambda\lambda\lambda}³ F\\
+    & + 4 \Lambda''' ∂_{η\lambda}² F + \bigl( 3\Lambda''^2 + 4 \Lambda' \Lambda''' \bigr) ∂_{\lambda\lambda}² F + \lambda'''' ∂_{\lambda}F,
   \end{aligned}
 \end{gather*}
-where $\LAMBDA$ and its derivatives are evaluated at $η$, whilie $F$ and its
-partial derivatives are evaluated at $[η, \lambda₀ + \LAMBDA(η)]$. At $η = 0$, the above
+where $\Lambda$ and its derivatives are evaluated at $η$, whilie $F$ and its
+partial derivatives are evaluated at $[η, \lambda₀ + \Lambda(η)]$. At $η = 0$, the above
 relations read
 \begin{gather}
   \label{eq:20220107060454}
@@ -1314,7 +1314,7 @@ difference between the fundamental and bifurcated branches
 \begin{equation}
   F(η, \lambda) = \E[u^{\ast}(\lambda) + U(η), \lambda] - \E[u^{\ast}(\lambda), \lambda]
   \quad \text{et} \quad
-  f(η) = F [η, \lambda₀ + \LAMBDA(η)].
+  f(η) = F [η, \lambda₀ + \Lambda(η)].
 \end{equation}
 Observing that $F(0, \lambda) = 0$ for all $\lambda$, we first get
 \begin{equation*}
@@ -1371,7 +1371,7 @@ and finally
   \end{aligned}
 \end{gather}
 
-Since $\order[1]u∈V$, we have $\E₂(\lambda₀; \order[1]u, \order[k]u) = 0$ for
+Since $\order[1]u \in V$, we have $\E₂(\lambda₀; \order[1]u, \order[k]u) = 0$ for
 $k = 1, 2, 3$. Therefore $f''(0)=0$ and, using
 Eq.~\eqref{eq:20220524133816}
 \begin{equation}
@@ -1482,11 +1482,11 @@ which finally leads to the Taylor expansion~\eqref{eq:20220525053600}.
 % Relecture de tous les calculs de ce paragraphe
 
 The method described in Sec.~\ref{sec:20220107121442} is now applied to
-$f(η) = F [η, \lambda₀ + \LAMBDA(η)]$, with
+$f(η) = F [η, \lambda₀ + \Lambda(η)]$, with
 \begin{equation*}
   F(η, \lambda) = \E_{, u u} [u^{\ast}(\lambda) + U(η), \lambda; \hat{u}, \hat{v}].
 \end{equation*}
-where $\hat{u}, \hat{v} ∈ U$ are fixed. This will deliver a Taylor expansion
+where $\hat{u}, \hat{v} \in U$ are fixed. This will deliver a Taylor expansion
 of the hessian of the energy, $\E_{,uu}$. It is first observed that
 $F(0, \lambda) = \E₂(\lambda; \hat{u}, \hat{v})$ and, upon derivation with respect to $\lambda$
 \begin{equation*}
@@ -1551,23 +1551,23 @@ scalar product $α 〈 x, \hat{u} 〉$ on the other hand
   \end{aligned}
 \end{equation*}
 
-Equating both expressions for all $\hat{u} ∈ U$ [see
+Equating both expressions for all $\hat{u} \in U$ [see
 Eq.~\eqref{eq:20220617074949}] leads to three variational problems (for the
 $η⁰$, $η¹$ and $η²$ terms) that are discussed below.
 
-\paragraph{Variational problem of order 0} Find $\order[0]x∈U$ and $\order[0]α∈\reals$ such
-that, for all $\hat{u}∈U$
+\paragraph{Variational problem of order 0} Find $\order[0]x \in U$ and $\order[0]α\in\reals$ such
+that, for all $\hat{u} \in U$
 \begin{equation*}
   \E₂(\lambda₀; \order[0]x, \hat{u}) = \order[0]α 〈 \order[0]x, \hat{u} 〉.
 \end{equation*}
 
 The above equation shows that $(\order[0]α, \order[0]x)$ is an eigenpair of $\E₂(\lambda₀)$. As
 discussed in Sec.~\ref{sec:20220617075558}, only the case $\order[0]α = 0$ is
-relevant. Then $\order[0]x ∈ V$, which is expressed by the
+relevant. Then $\order[0]x \in V$, which is expressed by the
 expansion~\eqref{eq:20220904160057} of $\order[0]x$.
 
-\paragraph{Variational problem of order 1} Find $\order[1]x∈U$ and $\order[1]α∈\reals$ such
-that, for all $\hat{u}∈U$
+\paragraph{Variational problem of order 1} Find $\order[1]x \in U$ and $\order[1]α\in\reals$ such
+that, for all $\hat{u} \in U$
 \begin{equation}
   \label{eq:20220609131953}
   \E₂(\lambda₀; \order[1]x, \hat{u}) + \E₃(\lambda₀; \order[1]u, \order[0]x, \hat{u}) + \order[1]\lambda \dot{\E}₂(\lambda₀; \order[0]x, \hat{u})
@@ -1590,9 +1590,9 @@ which reduces to Eq.~\eqref{eq:20220609133608}.
 
 The test function is now picked in $W = V^\perp$, and $\order[1]x$ is
 decomposed as the sum of its projections onto $V$ and $W$:
-$\order[1]x = \order[1]{χ_i} v_i + \order[1]{y}$, where $\order[1]y ∈
+$\order[1]x = \order[1]{χ_i} v_i + \order[1]{y}$, where $\order[1]y \in
 W$. Eq.~\eqref{eq:20220617080547} then delivers the following variational
-problem: find $\order[1]y ∈ W$ such that, for all $\hat{w} ∈ W$,
+problem: find $\order[1]y \in W$ such that, for all $\hat{w} \in W$,
 \begin{equation}
   \E₂(\order[1]y, \hat{w}) + \E₃(v_i, v_j, \hat{w}) \order[0]{χ_i} \order[1]{ξ_j} + \order[1]\lambda \dot{\E}₂(v_i, \hat{w}) \order[0]{χ_i} = 0,
 \end{equation}
@@ -1603,7 +1603,7 @@ combination of the $w_i$ and $w_{ij}$ defined by the variational problems
 $\order[1]y = \order[0]{χ_i} \order[1]{ξ_j} w_{i j} + \order[1]\lambda \order[0]{χ_i}
 w_i$, and the decomposition~\eqref{eq:20220609133629} is retrieved.
 
-\paragraph{Variational problem of order 2} For all $\hat{u} ∈ U$,
+\paragraph{Variational problem of order 2} For all $\hat{u} \in U$,
 \begin{multline*}
     \E₂(\lambda₀; \order[2]x, \hat{u})
     + 2\E₃(\lambda₀; \order[1]u, \order[1]x, \hat{u})

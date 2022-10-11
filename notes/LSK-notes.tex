@@ -1130,42 +1130,42 @@ follows
 
 \subsection{On trilinear, symmetric forms}
 
-In this section, $𝒯$ denotes a trilinear, symmetric form over the vector space
+In this section, $\mathcal T$ denotes a trilinear, symmetric form over the vector space
 $U$.
 
 \begin{theorem}
   \label{thr:20220802112835}
-  Let $𝒯$ be a trilinear, symmetric form, such that
+  Let $\mathcal T$ be a trilinear, symmetric form, such that
   \begin{equation}
     \label{eq:20220802111745}
-    𝒯(u, u, u) = 0 \quad \text{for all} \quad u \in U.
+    \mathcal T(u, u, u) = 0 \quad \text{for all} \quad u \in U.
   \end{equation}
   Then
   \begin{equation}
-    𝒯(u, v, w) = 0 \quad \text{for all} \quad u, v, w \in U.
+    \mathcal T(u, v, w) = 0 \quad \text{for all} \quad u, v, w \in U.
   \end{equation}
 \end{theorem}
 \begin{proof}
-  The form $𝒯$ being trilinear and symmetric, we have, for all $u, v, w \in U$
+  The form $\mathcal T$ being trilinear and symmetric, we have, for all $u, v, w \in U$
   and $\alpha, β \in \reals$
   \begin{multline*}
-    𝒯(u + \alpha v + βw, u + \alpha v + βw, u + \alpha v + βw) = 𝒯(u, u, u) + 3\alpha 𝒯(u, u, v)\\
-    + 3β 𝒯(u, u, w) + 3\alpha^2 𝒯(u, u, v) + 6 \alpha β 𝒯(u, v, w) + 3 β^2 𝒯(u, u, w)\\
-    + \alpha^3 𝒯(v, v, v) + 3 \alpha^2 β 𝒯(v, v, w) + 3 \alpha β^2 𝒯(v, w, w) + β^3 𝒯(w, w, w)
+    \mathcal T(u + \alpha v + βw, u + \alpha v + βw, u + \alpha v + βw) = \mathcal T(u, u, u) + 3\alpha \mathcal T(u, u, v)\\
+    + 3β \mathcal T(u, u, w) + 3\alpha^2 \mathcal T(u, u, v) + 6 \alpha β \mathcal T(u, v, w) + 3 β^2 \mathcal T(u, u, w)\\
+    + \alpha^3 \mathcal T(v, v, v) + 3 \alpha^2 β \mathcal T(v, v, w) + 3 \alpha β^2 \mathcal T(v, w, w) + β^3 \mathcal T(w, w, w)
   \end{multline*}
   and, upon simplification using Eq.~\eqref{eq:20220802111745}
   \begin{multline}
     \label{eq:20220802112309}
-    3\alpha 𝒯(u, u, v) + 3β 𝒯(u, u, w) + 3\alpha^2 𝒯(u, v, v) + 6 \alpha β 𝒯(u, v, w)\\
-    + 3 β^2 𝒯(u, w, w) + 3 \alpha^2 β 𝒯(v, v, w) + 3 \alpha β^2 𝒯(v, w, w) = 0.
+    3\alpha \mathcal T(u, u, v) + 3β \mathcal T(u, u, w) + 3\alpha^2 \mathcal T(u, v, v) + 6 \alpha β \mathcal T(u, v, w)\\
+    + 3 β^2 \mathcal T(u, w, w) + 3 \alpha^2 β \mathcal T(v, v, w) + 3 \alpha β^2 \mathcal T(v, w, w) = 0.
   \end{multline}
   In particular taking successively $\alpha = ±1$, $β = 0$ and $w = 0$ delivers
   \begin{equation*}
-    ±3 𝒯(u, u, v) + 3 𝒯(u, u, v) = 0 \quad \text{for all} \quad u, v \in U,
+    ±3 \mathcal T(u, u, v) + 3 \mathcal T(u, u, v) = 0 \quad \text{for all} \quad u, v \in U,
   \end{equation*}
-  from which it results that $𝒯(u, u, v) = 0$ for all $u, v \in U$. Plugging
+  from which it results that $\mathcal T(u, u, v) = 0$ for all $u, v \in U$. Plugging
   into Eq.~\eqref{eq:20220802112309} with $\alpha = β = 1$ results in:
-  $𝒯(u, v, w) = 0$ for all $u, v, w \in U$.
+  $\mathcal T(u, v, w) = 0$ for all $u, v, w \in U$.
 \end{proof}
 
 \section{Asymptotic expansions along a bifurcated branch}

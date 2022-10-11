@@ -115,14 +115,14 @@ le point $(u_0, \lambda_0)$.
 
 \pdfmarkupcomment{Noter que dans ce qui suit}{Est-ce encore d'actualité ?}, on
 convient que les formes $\E_2$, $\E_3$ et $\E_4$ sont implicitement évaluées en
-$\lambda_0$ lorsque $\lambda$ n'est pas rappelé : ainsi, on notera $\E_2(•, •)$ plutôt
-que $\E_2(\lambda_0 ; •, •)$.
+$\lambda_0$ lorsque $\lambda$ n'est pas rappelé : ainsi, on notera $\E_2(\bullet, \bullet)$ plutôt
+que $\E_2(\lambda_0 ; \bullet, \bullet)$.
 
 Par hypothèse, $\E_2(\lambda_0)$ est positive, sans être définie
 positive~; soit $V$ son noyau, qui forme un sous-espace vectoriel de $U$. On
 suppose que $V$ est de dimension finie $m = \dim V$. Soit
 $(v_1, \ldots, v_m)$ une base orthonormée de ce noyau pour le produit scalaire
-$〈 •, • 〉$(qui n'est pas précisé pour le moment). On introduit le
+$〈 \bullet, \bullet 〉$(qui n'est pas précisé pour le moment). On introduit le
 sous-espace supplémentaire orthogonal $W$ de $V$ dans $U$
 \begin{equation}
   U = V \overset{\perp}{\otimes} W.
@@ -152,8 +152,8 @@ following variational problems
   \E_2(\lambda_0; w_{i j}, \hat{w})+\E_3(\lambda_0; v_i, v_j, \hat{w}) = 0,
 \end{gather}
 for all $\hat{w} \in W$. Since $w_{i}$ and $w_{ij}$ belong to $W$, we have
-$〈 w_{i}, v 〉 = 〈 w_{ij}, v 〉 = 0$ for all $v \in V$. Since $\E_2(\lambda_0; •,
-•)$ is symmetric, it can be verified that $w_{ij}=w_{ji}$. We also introduce
+$〈 w_{i}, v 〉 = 〈 w_{ij}, v 〉 = 0$ for all $v \in V$. Since $\E_2(\lambda_0; \bullet,
+\bullet)$ is symmetric, it can be verified that $w_{ij}=w_{ji}$. We also introduce
 the following tensors, defined in $V$
 \begin{gather}
   E_{ijk} = \E_3(\lambda_0; v_i, v_j, v_k) + \E_2(\lambda_0; v_i, w_{jk}) + \E_2(\lambda_0; v_j, w_{ki}) + \E_2(\lambda_0; v_k, w_{ij}),\\
@@ -168,7 +168,7 @@ as well as the derivatives
   \mathring{F}_{ij} = \ddot{\E}_2(\lambda_0; v_i, v_j) + \dot{\E}_2(\lambda_0; v_i, w_j) + \dot{\E}_2(\lambda_0; v_j, w_i).
 \end{gather}
 
-Note that, since $\E_2(\lambda_0; v_i, •) = 0$, the above expressions simplify as follows
+Note that, since $\E_2(\lambda_0; v_i, \bullet) = 0$, the above expressions simplify as follows
 \begin{gather}
   \label{eq:20220524135619}
   E_{ijk} = \E_3(\lambda_0; v_i, v_j, v_k),\\
@@ -219,7 +219,7 @@ $u_0 + u$, where $u \in U$ is ``small''. We have, to the fourth order
   \end{aligned}
 \end{equation}
 where the linear term has been omitted, $u_0$ being a critical point of the
-energy. Since $v \in V$, we have $\E_2(\lambda_0; v, •) = 0$. We now expand $u$ as
+energy. Since $v \in V$, we have $\E_2(\lambda_0; v, \bullet) = 0$. We now expand $u$ as
 $u = ξ v + η w$, with $ξ, η \in \reals$ and $v \in V$ and $w \in W$ are fixed,
 orthogonal directions. Owing to the multi-linearity and symmetry of the
 successive differential of $\E$, the above expression expands as
@@ -654,7 +654,7 @@ w_i$ and
 
 Plugging expressions~\eqref{eq:20220524133944} and \eqref{eq:20220524134613}
 into Eq.~\eqref{eq:20220708060436} and taking further $\hat{u} = v_i$
-[remember that $\E_2(\lambda_0; v_i, •) = 0$], we then get
+[remember that $\E_2(\lambda_0; v_i, \bullet) = 0$], we then get
 % \begin{equation*}
 %   \begin{aligned}[b]
 %     \E_4(\lambda_0; v_i, \order[1]{ξ_j} v_j, \order[1]{ξ_k} v_k, \order[1]{ξ_l} v_l)

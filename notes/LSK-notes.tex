@@ -236,7 +236,7 @@ follows
   \end{aligned}
 \end{equation}
 
-For the equilibrium to be stable, the above expression must be $≥ 0$ for all
+For the equilibrium to be stable, the above expression must be $\geq 0$ for all
 $\xi$ et $\eta$ small enough. Taking first $\eta = 0$, we get the following necessary conditions
 \begin{equation}
   \label{eq:20211108164416}
@@ -284,13 +284,13 @@ which, in view of definition~\eqref{eq:20220802081116} of $E_{ijkl}$, is equival
   E_{ijkl} \xi_i \xi_j \xi_k \xi_l \geq 0 \quad \text{for all} \quad \xi_m, \ldots, \xi_m \in \reals.
 \end{equation}
 
-Note that Eq.~\eqref{eq:20211109145224} implies $\E_4(\lambda_0; v, v, v, v) ≥ 0$,
+Note that Eq.~\eqref{eq:20211109145224} implies $\E_4(\lambda_0; v, v, v, v) \geq 0$,
 which becomes a redundant necessary condition. Indeed, plugging
 $w= \xi_i \xi_j w_{ij}$ into Eq.~\eqref{eq:20211109145224} cancels the first two
 terms. To sum up, we have the following \emph{necessary} conditions for
 stability
 \begin{equation}
-  E_{ijk} \xi_i \xi_j \xi_k = 0 \quad \text{and} \quad E_{ijkl} \xi_i \xi_j \xi_k \xi_l ≥ 0 \quad \text{for all} \quad \xi_m, \ldots, \xi_m \in \reals.
+  E_{ijk} \xi_i \xi_j \xi_k = 0 \quad \text{and} \quad E_{ijkl} \xi_i \xi_j \xi_k \xi_l \geq 0 \quad \text{for all} \quad \xi_m, \ldots, \xi_m \in \reals.
 \end{equation}
 
 \pdfmarkupcomment{Conversely, the following condition is \emph{sufficient} to ensure stability of the critical point}{\`A d\'emontrer}
@@ -767,7 +767,7 @@ where $α$ and $x$ are expanded to second order in $\eta$
 
 The following results are proved in Appendix~\ref{sec:20220616074108}: first,
 $(\order[0]α, x_0)$ is necessarily an eigenpair of $\E_2(\lambda_0)$. Since $\E_2 (\lambda_0)$ is
-positive, $\order[0]α ≥ 0$. If $\order[0]α>0$, then $α>0$ in the neighborhood of
+positive, $\order[0]α \geq 0$. If $\order[0]α>0$, then $α>0$ in the neighborhood of
 $\lambda_0$. Potentially unstable modes are therefore such that $\order[0]α=0$. In other
 words, $\order[0]x \in V$ and
 \begin{equation}
@@ -963,7 +963,7 @@ If $(E_{ijkl} \order[1]{\xi_k} \order[1]{\xi_l} + \order[2]\lambda F_{ij} )$ is 
 bifurcated branch is stable (note that, in that case, the bifurcated branch
 exists above the critical load only). If one of the eigenvalues of this tensor
 is $<0$, then the bifurcated branch is unstable. The stability is undecided
-when all eigenvalues are $≥ 0$.
+when all eigenvalues are $\geq 0$.
 
 \begin{remark}
   Note that, from Eq.~\eqref{eq:20220801092222},
@@ -1014,7 +1014,7 @@ $\dot{\E}_2(\lambda_0)$ is negative definite over $V$, we have $F_{11} < 0$.
 It is first observed that the following conditions are \emph{necessary} to
 ensure stability of the critical point
 \begin{equation}
-  E_{111} = 0 \quad \text{and} \quad E_{1111} ≥ 0,
+  E_{111} = 0 \quad \text{and} \quad E_{1111} \geq 0,
 \end{equation}
 which shows that \emph{asymmetric} bifurcation points are always
 \emph{unstable}.
@@ -1052,7 +1052,7 @@ equation~\eqref{eq:20220801092222} reduces to
 which in particular shows that $\order[2]\lambda$ has the same sign as
 $E_{1111}$. Since the expansion of $\lambda$ reads:
 $\lambda = \lambda_0 + \order[2]\lambda \eta^2 / 2$, the bifurcation branch exists only for loads
-\emph{above} the critical load ($\lambda ≥ \lambda_0$) if $E_{1111} > 0$ and only for
+\emph{above} the critical load ($\lambda \geq \lambda_0$) if $E_{1111} > 0$ and only for
 loads \emph{below} the critical load ($\lambda \leq \lambda_0$) if $E_{1111} < 0$.
 
 From Eq.~\eqref{eq:20220531054247}, the hessian of the energy along the
@@ -1119,9 +1119,9 @@ follows
 
   Converely, let $u \in \ker \mathcal{B}$, $v \in U$ et $α \in
   \reals$. Similarly to the previous proof, we write that
-  $\mathcal{B}(w, w) ≥ 0$, with $w = α u + v$
+  $\mathcal{B}(w, w) \geq 0$, with $w = α u + v$
   \begin{equation*}
-    \mathcal{B}(w, w) = \mathcal{B}(u, u) + 2 α \mathcal{B}(u, v) +\mathcal{B}(v, v) = 2 α \mathcal{B}(u, v) +\mathcal{B}(v, v) ≥ 0,
+    \mathcal{B}(w, w) = \mathcal{B}(u, u) + 2 α \mathcal{B}(u, v) +\mathcal{B}(v, v) = 2 α \mathcal{B}(u, v) +\mathcal{B}(v, v) \geq 0,
   \end{equation*}
   ($\mathcal{B}(u, u) = 0$ since $u \in \ker \mathcal{B}$). The above
   expression is of degree 1 in $α$, with a constant sign. Therefore the linear
@@ -1262,7 +1262,7 @@ $F(0, \lambda) = \E_{, u} [u^{\ast} (\lambda), \lambda; \hat{u}] = 0$, since $u^
 an equilibrium point for all $\lambda$ close to $\lambda_0$. Upon derivation with respect
 to $\lambda$, we get
 \begin{equation*}
-  \frac{∂^k F}{∂ \lambda^k}(0, \lambda) = 0 \quad \text{for all} \quad k ≥ 0.
+  \frac{∂^k F}{∂ \lambda^k}(0, \lambda) = 0 \quad \text{for all} \quad k \geq 0.
 \end{equation*}
 From the definition~\eqref{eq:20220107054629} of $F$, we find successively
 \begin{equation*}
@@ -1336,7 +1336,7 @@ difference between the fundamental and bifurcated branches
 \end{equation}
 Observing that $F(0, \lambda) = 0$ for all $\lambda$, we first get
 \begin{equation*}
-  \frac{∂^k F}{∂ \lambda^k}(0, \lambda) = 0 \quad \text{for all} \quad k ≥ 0,
+  \frac{∂^k F}{∂ \lambda^k}(0, \lambda) = 0 \quad \text{for all} \quad k \geq 0,
 \end{equation*}
 while the partial derivatives of $F$ with respect to $\eta$ read
 \begin{gather*}

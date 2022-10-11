@@ -751,34 +751,34 @@ appendix~\ref{sec:20220616055207}. For all $\hat{u}, \hat{v} \in U$
   \end{aligned}
 \end{equation}
 
-Stability analysis is performed by means of the eigenvalues $α \in \reals$ and
+Stability analysis is performed by means of the eigenvalues $\alpha \in \reals$ and
 eigenvectors $x \in U$ of the Hessian
 \begin{equation}
   \label{eq:20220617074949}
-  \E_{, u u} [u(\eta), \lambda(\eta); x, \hat{u}] = α \langle x, \hat{u} \rangle \quad \text{for all} \quad \hat{u} \in V,
+  \E_{, u u} [u(\eta), \lambda(\eta); x, \hat{u}] = \alpha \langle x, \hat{u} \rangle \quad \text{for all} \quad \hat{u} \in V,
 \end{equation}
-where $α$ and $x$ are expanded to second order in $\eta$
+where $\alpha$ and $x$ are expanded to second order in $\eta$
 \begin{equation}
   \label{eq:20220617064633}
-  α = \order[0]α + \eta \order[1]α + \tfrac{1}{2} \eta^2 \order[2]α + o(\eta^2)
+  \alpha = \order[0]\alpha + \eta \order[1]\alpha + \tfrac{1}{2} \eta^2 \order[2]\alpha + o(\eta^2)
   \quad \text{and} \quad
   x = \order[0]x + \eta \order[1]x + \tfrac{1}{2} \eta^2 \order[2]x + o(\eta^2).
 \end{equation}
 
 The following results are proved in Appendix~\ref{sec:20220616074108}: first,
-$(\order[0]α, x_0)$ is necessarily an eigenpair of $\E_2(\lambda_0)$. Since $\E_2 (\lambda_0)$ is
-positive, $\order[0]α \geq 0$. If $\order[0]α>0$, then $α>0$ in the neighborhood of
-$\lambda_0$. Potentially unstable modes are therefore such that $\order[0]α=0$. In other
+$(\order[0]\alpha, x_0)$ is necessarily an eigenpair of $\E_2(\lambda_0)$. Since $\E_2 (\lambda_0)$ is
+positive, $\order[0]\alpha \geq 0$. If $\order[0]\alpha>0$, then $\alpha>0$ in the neighborhood of
+$\lambda_0$. Potentially unstable modes are therefore such that $\order[0]\alpha=0$. In other
 words, $\order[0]x \in V$ and
 \begin{equation}
   \label{eq:20220904160057}
   \order[0]x = \order[0]{χ_i} v_i
 \end{equation}
-furthermore, $(\order[1]α, \order[0]{χ_i})$ is an eigenpair of the symmetric
+furthermore, $(\order[1]\alpha, \order[0]{χ_i})$ is an eigenpair of the symmetric
 tensor $(E_{ijk} \order[1]{\xi_k} + \order[1]\lambda F_{ij})$
 \begin{equation}
   \label{eq:20220609133608}
-  \bigl(E_{ijk} \order[1]{\xi_k} + \order[1]\lambda F_{ij} \bigr) \order[0]{χ_j} = \order[1]α \order[0]{χ_i}.
+  \bigl(E_{ijk} \order[1]{\xi_k} + \order[1]\lambda F_{ij} \bigr) \order[0]{χ_j} = \order[1]\alpha \order[0]{χ_i}.
 \end{equation}
 As for the higher order terms, it is also found that
 \begin{equation}
@@ -792,7 +792,7 @@ and
     \bigl[E_{ijkl} \order[1]{\xi_k} \order[1]{\xi_l} + \order[1]\lambda\bigl(2 \mathring{E}_{ijk} \order[1]{\xi_k} + \order[1]\lambda \mathring{F}_{ij}\bigr) + E_{ijk} \order[2]{\xi_k}
     + \order[2]\lambda F_{ij} \bigr] \order[0]{χ_j} &\\
     + 2\bigl(E_{ijk}  \order[1]{\xi_k} + \order[1]\lambda F_{ij} \bigr) \order[1]{χ_j}
-    & = 2\order[1]α\order[1]{χ_i} + \order[2]α \order[0]{χ_i}.
+    & = 2\order[1]\alpha\order[1]{χ_i} + \order[2]\alpha \order[0]{χ_i}.
   \end{aligned}
 \end{equation}
 
@@ -875,23 +875,23 @@ negative definite). In other words
 \end{center}
 
 To investigate the stability above the critical load, we need to analyse the
-sign of the eigenvalues $α$ of the Hessian. At first order,
-$α = \eta \order[1]α + o(\eta)$, where $\order[1]α$ is an eigenvalue of
-$(E_{ijk} \order[1]{\xi_k} + \order[1]\lambda F_{ij})$. Let $α_{\min}$ and $α_{\max}$ be the minimum
+sign of the eigenvalues $\alpha$ of the Hessian. At first order,
+$\alpha = \eta \order[1]\alpha + o(\eta)$, where $\order[1]\alpha$ is an eigenvalue of
+$(E_{ijk} \order[1]{\xi_k} + \order[1]\lambda F_{ij})$. Let $\alpha_{\min}$ and $\alpha_{\max}$ be the minimum
 and maximum eigenvalues of this second-order tensor. Three cases must be
 discussed
 \begin{enumerate}
-\item If $α_{\min} α_{\max} > 0$, then $(E_{ijk} \order[1]{\xi_k} + \order[1]\lambda F_{ij})$ is
+\item If $\alpha_{\min} \alpha_{\max} > 0$, then $(E_{ijk} \order[1]{\xi_k} + \order[1]\lambda F_{ij})$ is
   positive or negative definite: all eigenvalues have the same sign,
-  $\epsilon \in \{-1, +1\}$. Then the sign of the eigenvalues $α$ of the
+  $\epsilon \in \{-1, +1\}$. Then the sign of the eigenvalues $\alpha$ of the
   Hessian is $\epsilon \eta$ and there is a stability switch at the critical
   load. Since the bifurcated branch is unstable \emph{below} the critical load,
   this means that it is \emph{stable} above the critical load.
-\item If $α_{\min} α_{\max} < 0$, then the extremal eigenvalues of the Hessian
-  are $\eta α_{\min}$ and $\eta α_{\max}$, the product of which is
-  $\eta^2 α_{\min} α_{\max} < 0$. The bifurcated branch is \emph{unstable} for all
+\item If $\alpha_{\min} \alpha_{\max} < 0$, then the extremal eigenvalues of the Hessian
+  are $\eta \alpha_{\min}$ and $\eta \alpha_{\max}$, the product of which is
+  $\eta^2 \alpha_{\min} \alpha_{\max} < 0$. The bifurcated branch is \emph{unstable} for all
   values of $\lambda$.
-\item If $α_{\min} α_{\max} = 0$, the analysis is inconclusive.
+\item If $\alpha_{\min} \alpha_{\max} = 0$, the analysis is inconclusive.
 \end{enumerate}
 
 To close this section, it is observed that the dominant term of the
@@ -953,10 +953,10 @@ exists above (resp. below) the critical load $\lambda_0$ only.
 \end{remark}
 
 Turning now to the eigenpairs of the Hessian of the energy along
-the bifurcated branch, Eq.~\eqref{eq:20220609133608} shows that $\order[1]α = 0$. Then
-$α = \order[2]α \eta^2 / 2 + o(\eta^2)$ and, from Eq.~\eqref{eq:20220616082923}
+the bifurcated branch, Eq.~\eqref{eq:20220609133608} shows that $\order[1]\alpha = 0$. Then
+$\alpha = \order[2]\alpha \eta^2 / 2 + o(\eta^2)$ and, from Eq.~\eqref{eq:20220616082923}
 \begin{equation}
-  \bigl(E_{ijkl} \order[1]{\xi_k} \order[1]{\xi_l} + \order[2]\lambda F_{ij} \bigr) \order[0]{χ_j} = \order[2]α \order[0]{χ_i}.
+  \bigl(E_{ijkl} \order[1]{\xi_k} \order[1]{\xi_l} + \order[2]\lambda F_{ij} \bigr) \order[0]{χ_j} = \order[2]\alpha \order[0]{χ_i}.
 \end{equation}
 
 If $(E_{ijkl} \order[1]{\xi_k} \order[1]{\xi_l} + \order[2]\lambda F_{ij} )$ is positive definite, then the
@@ -1086,22 +1086,22 @@ follows
   The kernel of a bilinear, symmetric, positive form is a vector subspace.
 \end{theorem}
 \begin{proof}
-  We must show that, for all $u, v \in\ker \mathcal{B}$ and $α \in \reals$,
-  $w = u + α v \in \ker \mathcal{B}$, in other words, it must be shown that
+  We must show that, for all $u, v \in\ker \mathcal{B}$ and $\alpha \in \reals$,
+  $w = u + \alpha v \in \ker \mathcal{B}$, in other words, it must be shown that
   $\mathcal{B}(w, w) = 0$. From the bilinearity and symmetry of
   $\mathcal{B}$
  \begin{equation*}
-   \mathcal{B}(w, w) = \mathcal{B}(u + α v, u + α v)
-   = \mathcal{B}(u, u) + 2 α \mathcal{B}(u, v) + α^2 \mathcal{B}(v, v),
+   \mathcal{B}(w, w) = \mathcal{B}(u + \alpha v, u + \alpha v)
+   = \mathcal{B}(u, u) + 2 \alpha \mathcal{B}(u, v) + \alpha^2 \mathcal{B}(v, v),
  \end{equation*}
 
  Since $u, v \in \ker\mathcal{B}$, the first and the last term vanish, and the above identity reduces to
  \begin{equation*}
-   \mathcal{B}(w, w) = 2α \mathcal{B}(u, v)
+   \mathcal{B}(w, w) = 2\alpha \mathcal{B}(u, v)
  \end{equation*}
 
  The bilinear form $\mathcal{B}$ is positive, therefore the left-hand side is
- positive, \emph{for all values of $α \in \reals$}. The quantity
+ positive, \emph{for all values of $\alpha \in \reals$}. The quantity
  $\mathcal{B}(u, v) = 0$ is necessarily null, and $\mathcal{B}(w, w) = 0$,
  which completes the proof.
 \end{proof}
@@ -1117,15 +1117,15 @@ follows
   If for all $v \in U$, $\mathcal{B}(u, v) = 0$, then in particular
   $\mathcal{B}(u, u) = 0$ and $u \in \ker \mathcal{B}$.
 
-  Converely, let $u \in \ker \mathcal{B}$, $v \in U$ et $α \in
+  Converely, let $u \in \ker \mathcal{B}$, $v \in U$ et $\alpha \in
   \reals$. Similarly to the previous proof, we write that
-  $\mathcal{B}(w, w) \geq 0$, with $w = α u + v$
+  $\mathcal{B}(w, w) \geq 0$, with $w = \alpha u + v$
   \begin{equation*}
-    \mathcal{B}(w, w) = \mathcal{B}(u, u) + 2 α \mathcal{B}(u, v) +\mathcal{B}(v, v) = 2 α \mathcal{B}(u, v) +\mathcal{B}(v, v) \geq 0,
+    \mathcal{B}(w, w) = \mathcal{B}(u, u) + 2 \alpha \mathcal{B}(u, v) +\mathcal{B}(v, v) = 2 \alpha \mathcal{B}(u, v) +\mathcal{B}(v, v) \geq 0,
   \end{equation*}
   ($\mathcal{B}(u, u) = 0$ since $u \in \ker \mathcal{B}$). The above
-  expression is of degree 1 in $α$, with a constant sign. Therefore the linear
-  term in $α$ must vanish: $\mathcal{B}(u, v) = 0$.
+  expression is of degree 1 in $\alpha$, with a constant sign. Therefore the linear
+  term in $\alpha$ must vanish: $\mathcal{B}(u, v) = 0$.
 \end{proof}
 
 \subsection{On trilinear, symmetric forms}
@@ -1147,24 +1147,24 @@ $U$.
 \end{theorem}
 \begin{proof}
   The form $𝒯$ being trilinear and symmetric, we have, for all $u, v, w \in U$
-  and $α, β \in \reals$
+  and $\alpha, β \in \reals$
   \begin{multline*}
-    𝒯(u + αv + βw, u + αv + βw, u + αv + βw) = 𝒯(u, u, u) + 3α 𝒯(u, u, v)\\
-    + 3β 𝒯(u, u, w) + 3α^2 𝒯(u, u, v) + 6 α β 𝒯(u, v, w) + 3 β^2 𝒯(u, u, w)\\
-    + α^3 𝒯(v, v, v) + 3 α^2 β 𝒯(v, v, w) + 3 α β^2 𝒯(v, w, w) + β^3 𝒯(w, w, w)
+    𝒯(u + \alpha v + βw, u + \alpha v + βw, u + \alpha v + βw) = 𝒯(u, u, u) + 3\alpha 𝒯(u, u, v)\\
+    + 3β 𝒯(u, u, w) + 3\alpha^2 𝒯(u, u, v) + 6 \alpha β 𝒯(u, v, w) + 3 β^2 𝒯(u, u, w)\\
+    + \alpha^3 𝒯(v, v, v) + 3 \alpha^2 β 𝒯(v, v, w) + 3 \alpha β^2 𝒯(v, w, w) + β^3 𝒯(w, w, w)
   \end{multline*}
   and, upon simplification using Eq.~\eqref{eq:20220802111745}
   \begin{multline}
     \label{eq:20220802112309}
-    3α 𝒯(u, u, v) + 3β 𝒯(u, u, w) + 3α^2 𝒯(u, v, v) + 6 α β 𝒯(u, v, w)\\
-    + 3 β^2 𝒯(u, w, w) + 3 α^2 β 𝒯(v, v, w) + 3 α β^2 𝒯(v, w, w) = 0.
+    3\alpha 𝒯(u, u, v) + 3β 𝒯(u, u, w) + 3\alpha^2 𝒯(u, v, v) + 6 \alpha β 𝒯(u, v, w)\\
+    + 3 β^2 𝒯(u, w, w) + 3 \alpha^2 β 𝒯(v, v, w) + 3 \alpha β^2 𝒯(v, w, w) = 0.
   \end{multline}
-  In particular taking successively $α = ±1$, $β = 0$ and $w = 0$ delivers
+  In particular taking successively $\alpha = ±1$, $β = 0$ and $w = 0$ delivers
   \begin{equation*}
     ±3 𝒯(u, u, v) + 3 𝒯(u, u, v) = 0 \quad \text{for all} \quad u, v \in U,
   \end{equation*}
   from which it results that $𝒯(u, u, v) = 0$ for all $u, v \in U$. Plugging
-  into Eq.~\eqref{eq:20220802112309} with $α = β = 1$ results in:
+  into Eq.~\eqref{eq:20220802112309} with $\alpha = β = 1$ results in:
   $𝒯(u, v, w) = 0$ for all $u, v, w \in U$.
 \end{proof}
 
@@ -1560,12 +1560,12 @@ expansions~\eqref{eq:20220617064633} are plugged into the asymptotic expansion
   \end{aligned}
 \end{equation*}
 (where the $\E_k$ and $\dot{\E}_k$ are all evaluated at $\lambda=\lambda_0$) and into the
-scalar product $α \langle x, \hat{u} \rangle$ on the other hand
+scalar product $\alpha \langle x, \hat{u} \rangle$ on the other hand
 \begin{equation*}
   \begin{aligned}[b]
-    α \langle x, \hat{u} \rangle ={}
-    & \order[0]α \langle \order[0]x, \hat{u} \rangle + \eta \bigl(\order[1]α \langle \order[0]x, \hat{u} \rangle + \order[0]α \langle \order[1]x, \hat{u} \rangle\bigr)\\
-    & + \tfrac{1}{2} \eta^2 \bigl(\order[0]α \langle \order[2]x, \hat{u} \rangle + 2 \order[1]α \langle \order[1]x, \hat{u} \rangle + \order[2]α \langle \order[0]x, \hat{u} \rangle\bigr) + o(\eta^2).
+    \alpha \langle x, \hat{u} \rangle ={}
+    & \order[0]\alpha \langle \order[0]x, \hat{u} \rangle + \eta \bigl(\order[1]\alpha \langle \order[0]x, \hat{u} \rangle + \order[0]\alpha \langle \order[1]x, \hat{u} \rangle\bigr)\\
+    & + \tfrac{1}{2} \eta^2 \bigl(\order[0]\alpha \langle \order[2]x, \hat{u} \rangle + 2 \order[1]\alpha \langle \order[1]x, \hat{u} \rangle + \order[2]\alpha \langle \order[0]x, \hat{u} \rangle\bigr) + o(\eta^2).
   \end{aligned}
 \end{equation*}
 
@@ -1573,36 +1573,36 @@ Equating both expressions for all $\hat{u} \in U$ [see
 Eq.~\eqref{eq:20220617074949}] leads to three variational problems (for the
 $\eta^0$, $\eta^1$ and $\eta^2$ terms) that are discussed below.
 
-\paragraph{Variational problem of order 0} Find $\order[0]x \in U$ and $\order[0]α\in\reals$ such
+\paragraph{Variational problem of order 0} Find $\order[0]x \in U$ and $\order[0]\alpha\in\reals$ such
 that, for all $\hat{u} \in U$
 \begin{equation*}
-  \E_2(\lambda_0; \order[0]x, \hat{u}) = \order[0]α \langle \order[0]x, \hat{u} \rangle.
+  \E_2(\lambda_0; \order[0]x, \hat{u}) = \order[0]\alpha \langle \order[0]x, \hat{u} \rangle.
 \end{equation*}
 
-The above equation shows that $(\order[0]α, \order[0]x)$ is an eigenpair of $\E_2(\lambda_0)$. As
-discussed in Sec.~\ref{sec:20220617075558}, only the case $\order[0]α = 0$ is
+The above equation shows that $(\order[0]\alpha, \order[0]x)$ is an eigenpair of $\E_2(\lambda_0)$. As
+discussed in Sec.~\ref{sec:20220617075558}, only the case $\order[0]\alpha = 0$ is
 relevant. Then $\order[0]x \in V$, which is expressed by the
 expansion~\eqref{eq:20220904160057} of $\order[0]x$.
 
-\paragraph{Variational problem of order 1} Find $\order[1]x \in U$ and $\order[1]α\in\reals$ such
+\paragraph{Variational problem of order 1} Find $\order[1]x \in U$ and $\order[1]\alpha\in\reals$ such
 that, for all $\hat{u} \in U$
 \begin{equation}
   \label{eq:20220609131953}
   \E_2(\lambda_0; \order[1]x, \hat{u}) + \E_3(\lambda_0; \order[1]u, \order[0]x, \hat{u}) + \order[1]\lambda \dot{\E}_2(\lambda_0; \order[0]x, \hat{u})
-  = \order[1]α \langle \order[0]x, \hat{u} \rangle,
+  = \order[1]\alpha \langle \order[0]x, \hat{u} \rangle,
 \end{equation}
 or, equivalently, plugging the expansions~\eqref{eq:20220524133944} and
 \eqref{eq:20220609133608} of $\order[1]u$ and $\order[0]x$ in the $v_i$ basis
 \begin{equation}
   \label{eq:20220617080547}
   \E_2(\lambda_0; \order[1]x, \hat{u}) + \E_3(\lambda_0; v_j, v_k, \hat{u}) \order[0]{χ_j} \order[1]{\xi_k} + \order[1]\lambda \dot{\E}_2(\lambda_0; v_j, \hat{u}) \order[0]{χ_j}
-  = \order[1]α \order[0]{χ_j} \langle v_j, \hat{u} \rangle.
+  = \order[1]\alpha \order[0]{χ_j} \langle v_j, \hat{u} \rangle.
 \end{equation}
 
 For $\hat{u} = v_i$, observing that $\langle v_i, v_j \rangle = δ_{ij}$ since
 $(v_i)$ is orthonormal, the above equation reads
 \begin{equation}
-  \bigl[\E_3(\lambda_0; v_i, v_j, v_k) \order[1]{\xi_k} + \order[1]\lambda \dot{\E}_2(\lambda_0; v_i, v_j)\bigr] \order[0]{χ_j} = \order[1]α \order[0]{χ_i},
+  \bigl[\E_3(\lambda_0; v_i, v_j, v_k) \order[1]{\xi_k} + \order[1]\lambda \dot{\E}_2(\lambda_0; v_i, v_j)\bigr] \order[0]{χ_j} = \order[1]\alpha \order[0]{χ_i},
 \end{equation}
 which reduces to Eq.~\eqref{eq:20220609133608}.
 
@@ -1631,8 +1631,8 @@ w_i$, and the decomposition~\eqref{eq:20220609133629} is retrieved.
     + 2\order[1]\lambda \dot{\E}_3(\lambda_0; \order[1]u, \order[0]x, \hat{u})\\
     + ( \order[1]\lambda )^2 \ddot{\E}_2(\lambda_0; \order[0]x, \hat{u})
     + \order[2]\lambda \dot{\E}_2(\lambda_0; \order[0]x, \hat{u})
-    = 2 \order[1]α \langle \order[1]x, \hat{u} \rangle
-    + \order[2]α \langle \order[0]x, \hat{u} \rangle.
+    = 2 \order[1]\alpha \langle \order[1]x, \hat{u} \rangle
+    + \order[2]\alpha \langle \order[0]x, \hat{u} \rangle.
 \end{multline*}
 
 For $\hat{u} = \hat{v}_i$, plugging the decompositions
@@ -1646,8 +1646,8 @@ and \eqref{eq:20220609133629} of $\order[1]u$, $\order[2]u$, $\order[0]x $ et $\
 %   + 2\order[1]\lambda \dot{\E}_3(v_i, \order[0]x, \order[1]u)
 %   + ( \order[1]\lambda )^2 \ddot{\E}_2(v_i, \order[0]x)\\
 %   + \order[2]\lambda \dot{\E}_2(v_i, \order[0]x)
-%   = 2\order[1]α \langle v_i, \order[1]x \rangle
-%   + \order[2]α \langle v_i, \order[0]x \rangle,
+%   = 2\order[1]\alpha \langle v_i, \order[1]x \rangle
+%   + \order[2]\alpha \langle v_i, \order[0]x \rangle,
 % \end{multline*}
 % \begin{multline*}
 %   2\E_3(v_i, \order[1]{χ_i}v_j + \order[0]{χ_j}\order[1]{\xi_k}w_{jk}+ \order[1]\lambda \order[0]{χ_j} w_j, \order[1]{\xi_l} v_l)
@@ -1656,8 +1656,8 @@ and \eqref{eq:20220609133629} of $\order[1]u$, $\order[2]u$, $\order[0]x $ et $\
 %   + \E_3(v_i, \order[0]{χ_j} v_j, \order[2]{\xi_k} v_k + \order[1]{\xi_k} \order[1]{\xi_l} w_{kl} + 2\order[1]\lambda \order[1]{\xi_k} w_k)\\
 %   + 2\order[1]\lambda \dot{\E}_3(v_i, \order[0]{χ_j} v_j, \order[1]{\xi_k} v_k)
 %   + ( \order[1]\lambda )^2 \ddot{\E}_2(v_i, \order[0]{χ_j} v_j) + \order[2]\lambda \dot{\E}_2(v_i, \order[0]{χ_j} v_j)\\
-%   = 2\order[1]α \langle v_i,  \order[1]{χ_i}v_j + \order[0]{χ_j}\order[1]{\xi_k}w_{jk} + \order[1]\lambda \order[0]{χ_j} w_j \rangle
-%   + \order[2]α \langle v_i, \order[0]{χ_j} v_j\rangle,
+%   = 2\order[1]\alpha \langle v_i,  \order[1]{χ_i}v_j + \order[0]{χ_j}\order[1]{\xi_k}w_{jk} + \order[1]\lambda \order[0]{χ_j} w_j \rangle
+%   + \order[2]\alpha \langle v_i, \order[0]{χ_j} v_j\rangle,
 % \end{multline*}
 % \begin{multline*}
 %   2\E_3(v_i, v_j,  v_k) \order[1]{χ_i} \order[1]{\xi_k}
@@ -1672,13 +1672,13 @@ and \eqref{eq:20220609133629} of $\order[1]u$, $\order[2]u$, $\order[0]x $ et $\
 %   + 2\order[1]\lambda \E_3(v_i, v_j, w_k) \order[0]{χ_j} \order[1]{\xi_k}
 %   + 2\order[1]\lambda \dot{\E}_3(v_i, v_j,  v_k) \order[0]{χ_j} \order[1]{\xi_k}
 %   + ( \order[1]\lambda )^2 \ddot{\E}_2(v_i, v_j) \order[0]{χ_j}\\
-%   + \order[2]\lambda \dot{\E}_2(v_i, v_j) \order[0]{χ_j} = 2\order[1]α\order[1]{χ_i} + \order[2]α \order[0]{χ_i}.
+%   + \order[2]\lambda \dot{\E}_2(v_i, v_j) \order[0]{χ_j} = 2\order[1]\alpha\order[1]{χ_i} + \order[2]\alpha \order[0]{χ_i}.
 % \end{multline*}
 \begin{multline*}
   \bigl[ \E_4(v_i, v_j,  v_k, v_l) + 2\E_3(v_i, w_{jk}, v_l) + \E_3(v_i, v_j, w_{kl})\bigr] \order[0]{χ_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
   + 2 \order[1]\lambda \bigl[ \E_3(v_i,  w_j, v_k) + \dot{\E}_2(v_i, w_{jk}) + \E_3(v_i, v_j, w_k) + \dot{\E}_3(v_i, v_j,  v_k) \bigr] \order[0]{χ_j} \order[1]{\xi_k}\\
   + ( \order[1]\lambda )^2 \bigl[\dot{\E}_2(v_i, w_j) + \ddot{\E}_2(v_i, v_j)\bigr] \order[0]{χ_j} + \bigl[\E_3(v_i, v_j, v_k) \order[2]{\xi_k} + \order[2]\lambda \dot{\E}_2(v_i, v_j)\bigr] \order[0]{χ_j} \\
-  +2\bigl[\E_3(v_i, v_j,  v_k)  \order[1]{\xi_k} + \order[1]\lambda \dot{\E}_2(v_i, v_j)\bigr] \order[1]{χ_i} = 2\order[1]α\order[1]{χ_i} + \order[2]α \order[0]{χ_i}.
+  +2\bigl[\E_3(v_i, v_j,  v_k)  \order[1]{\xi_k} + \order[1]\lambda \dot{\E}_2(v_i, v_j)\bigr] \order[1]{χ_i} = 2\order[1]\alpha\order[1]{χ_i} + \order[2]\alpha \order[0]{χ_i}.
 \end{multline*}
 
 The $\order[0]{χ_j} \order[1]{\xi_k}$ term is transformed with Eqs.~\eqref{eq:20220524134525} and
@@ -1693,8 +1693,8 @@ The $\order[0]{χ_j} \order[1]{\xi_k}$ term is transformed with Eqs.~\eqref{eq:2
   + \bigl[\E_3(v_i, v_j, v_k) \order[2]{\xi_k} + \order[2]\lambda \dot{\E}_2(v_i, v_j)\bigr] \order[0]{χ_j} \\
   +2\bigl[\E_3(v_i, v_j,  v_k)  \order[1]{\xi_k}
   + \order[1]\lambda \dot{\E}_2(v_i, v_j)\bigr] \order[1]{χ_i}
-  = 2\order[1]α\order[1]{χ_i}
-  + \order[2]α \order[0]{χ_i},
+  = 2\order[1]\alpha\order[1]{χ_i}
+  + \order[2]\alpha \order[0]{χ_i},
 \end{multline*}
 and Eq.~\eqref{eq:20220616082923} results from the application of
 Eqs.~\eqref{eq:20220617084433} and \eqref{eq:20220617085256}.

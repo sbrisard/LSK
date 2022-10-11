@@ -10,12 +10,12 @@ $u^{\ast}(\lambda)$ la branche fondamentale. Par définition
 and, deriving twice with respect to $\lambda$, we find successively, for all
 $\hat{u} \in U$
 \begin{equation}
-  \label{eq:20220901143843}
+  \label{eq20220901143843}
   \E_{,uu}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \hat{u}] + \E_{,u\lambda}[u^\ast(\lambda), \lambda; \hat{u}] = 0
 \end{equation}
 and
 \begin{multline}
-  \label{eq:20220901143902}
+  \label{eq20220901143902}
   \E_{,uuu}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \dot{u}^\ast(\lambda), \hat{u}] + 2\E_{,uu\lambda}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \hat{u}]\\
   + \E_{,u\lambda\lambda}[u^\ast(\lambda), \lambda; \hat{u}] + \E_{,uu}[u^\ast(\lambda), \lambda; \ddot{u}^\ast(\lambda), \hat{u}] = 0
 \end{multline}
@@ -35,12 +35,12 @@ $\lambda$. Plus précisément, on suppose que $\E_2(\lambda)$ est définie posit
 $\lambda < \lambda_0$. Pour $\lambda = \lambda_0$, la forme quadratique
 $\E_2(\lambda_0)$ n'est plus que positive. On note $u_0 = u^{\ast}(\lambda_0)$,
 $\dot{u}_0 = \dot{u}^\ast(\lambda_0)$ et $\ddot{u}_0 = \ddot{u}^\ast(\lambda_0)$ de sorte que les
-Éqs.~\eqref{eq:20220901143843} et \eqref{eq:20220901143902} s'écrivent, en
+Éqs.~\eqref{eq20220901143843} et \eqref{eq20220901143902} s'écrivent, en
 $\lambda = \lambda_0$
 \begin{gather}
-  \label{eq:20220901144331}
+  \label{eq20220901144331}
   \E_{,uu}(u_0, \lambda_0; \dot{u}_0, \bullet) + \E_{,u\lambda}(u_0, \lambda_0; \bullet) = 0\\
-  \label{eq:20220901144335}
+  \label{eq20220901144335}
   \E_{,uuu}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \bullet) + 2\E_{,uu\lambda}(u_0, \lambda_0; \dot{u}_0, \bullet) + \E_{,u\lambda\lambda}(u_0, \lambda_0; \bullet) + \E_{,uu}(u_0, \lambda_0; \ddot{u}_0, \bullet) = 0
 \end{gather}
 
@@ -63,7 +63,7 @@ $U$
 \end{equation}
 
 \begin{remark}
-  \label{rem:20220902095055}
+  \label{rem20220902095055}
   The bilinear form $\E_2$ being elliptic over $W$, variational problems of the
   type: find $w \in W$ such that
   \begin{equation}
@@ -80,9 +80,9 @@ $U$
 For $1 \leq i, j \leq m$, we introduce the solutions $w_i, w_{ij} \in W$ to the
 following variational problems
 \begin{gather}
-  \label{eq:20220524134525}
+  \label{eq20220524134525}
   \E_2(\lambda_0; w_i, \hat{w}) + \dot{\E}_2(\lambda_0; v_i, \hat{w}) = 0,\\
-  \label{eq:20220519164523}
+  \label{eq20220519164523}
   \E_2(\lambda_0; w_{i j}, \hat{w})+\E_3(\lambda_0; v_i, v_j, \hat{w}) = 0,
 \end{gather}
 for all $\hat{w} \in W$. Since $w_{i}$ and $w_{ij}$ belong to $W$, we have
@@ -96,44 +96,44 @@ $w_{ij}=w_{ji}$. We also introduce the following tensors, defined in $V$
 \end{gather}
 as well as the derivatives
 \begin{gather}
-  \label{eq:20220615063626}
+  \label{eq20220615063626}
   \mathring{E}_{ijk} = \dot{\E}_3(\lambda_0; v_i, v_j, v_k) + \dot{\E_2}(\lambda_0; v_i, w_{jk}) + \dot{\E}_2(\lambda_0; v_j, w_{ki}) + \dot{\E}_2(\lambda_0; v_k, w_{ij}),\\
-  \label{eq:20220615063633}
+  \label{eq20220615063633}
   \mathring{F}_{ij} = \ddot{\E}_2(\lambda_0; v_i, v_j) + \dot{\E}_2(\lambda_0; v_i, w_j) + \dot{\E}_2(\lambda_0; v_j, w_i).
 \end{gather}
 
 Note that, since $\E_2(\lambda_0; v_i, \bullet) = 0$, the above expressions simplify as
 follows
 \begin{gather}
-  \label{eq:20220524135619}
+  \label{eq20220524135619}
   E_{ijk} = \E_3(\lambda_0; v_i, v_j, v_k),\\
-  \label{eq:20220524135553}
+  \label{eq20220524135553}
   E_{ijkl} = \E_4(\lambda_0 ; v_i, v_j, v_k, v_l) + \E_3(\lambda_0 ; v_i, v_j, w_{kl}) + \E_3(\lambda_0 ; v_i, v_k, w_{jl}) + \E_3(\lambda_0 ; v_i, v_l, w_{jk}),\\
-  \label{eq:20220524135643}
+  \label{eq20220524135643}
   F_{ij} = \dot{\E}_2(\lambda_0; v_i, v_j).
 \end{gather}
 
 The tensors $E_{ijk}$, $F_{ij}$, $\mathring{E}_{ijk}$ and $\mathring{F}_{ij}$
 are fully symmetric. Furthermore, the following expression of $E_{ijkl}$ result
-from Eq.~\eqref{eq:20220519164523}
+from Eq.~\eqref{eq20220519164523}
 \begin{equation}
-  \label{eq:20220802081116}
+  \label{eq20220802081116}
   E_{ijkl} = \E_4(\lambda_0 ; v_i, v_j, v_k, v_l) - \E_2(\lambda_0 ; w_{ij}, w_{kl}) - \E_2(\lambda_0 ; w_{ik}, w_{jl}) - \E_2(\lambda_0 ; w_{il}, w_{jk}),
 \end{equation}
 which shows that $E_{ijkl}$ is also fully symmetric. We close this section, with
 two useful identities
 \begin{equation}
-  \label{eq:20220617084433}
+  \label{eq20220617084433}
   \begin{aligned}[b]
     \mathring{F}_{ij} ={} & \ddot{\E}_2(\lambda_0; v_i, v_j) + \dot{\E}_2(\lambda_0; v_i, w_j) + \dot{\E}_2(\lambda_0; v_j, w_i)\\
-    ={} & \ddot{\E}_2(\lambda_0; v_i, v_j) + \dot{\E}_2(\lambda_0; v_i, w_j) - \E_2(\lambda_0; w_j, w_i) & \text{Eq.~\eqref{eq:20220524134525}, with $v_i = v_j$ and $\hat{w} = w_i$}\\
-    ={} & \ddot{\E}_2(\lambda_0; v_i, v_j)  + 2\dot{\E}_2(\lambda_0; v_i, w_j) & \text{Eq.~\eqref{eq:20220524134525}, with $\hat{w} = w_j$}\\
+    ={} & \ddot{\E}_2(\lambda_0; v_i, v_j) + \dot{\E}_2(\lambda_0; v_i, w_j) - \E_2(\lambda_0; w_j, w_i) & \text{Eq.~\eqref{eq20220524134525}, with $v_i = v_j$ and $\hat{w} = w_i$}\\
+    ={} & \ddot{\E}_2(\lambda_0; v_i, v_j)  + 2\dot{\E}_2(\lambda_0; v_i, w_j) & \text{Eq.~\eqref{eq20220524134525}, with $\hat{w} = w_j$}\\
     ={} & \ddot{\E}_2(\lambda_0; v_i, v_j) + 2\dot{\E}_2(\lambda_0; v_j, w_i), & \text{symmetry w.r.t. $i$ and $j$}
   \end{aligned}
 \end{equation}
-and, from Eq.~\eqref{eq:20220519164523}
+and, from Eq.~\eqref{eq20220519164523}
 \begin{equation}
-  \label{eq:20220617085256}
+  \label{eq20220617085256}
   \begin{aligned}[b]
   \mathring{E}_{ijk} ={}& \dot{\E}_3(\lambda_0; v_i, v_j, v_k) + \dot{\E}_2(\lambda_0; v_i, w_{jk}) + \dot{\E}_2(\lambda_0; v_j, w_{ik}) + \dot{\E}_2(\lambda_0; v_k, w_{ij})\\
   ={}& \dot{\E}_3(\lambda_0; v_i, v_j, v_k) - \bigl[\E_2(\lambda_0; w_i, w_{jk}) + \E_2(\lambda_0; w_j, w_{ik}) + \E_2(\lambda_0; w_k, w_{ij})\bigr].
@@ -141,7 +141,7 @@ and, from Eq.~\eqref{eq:20220519164523}
 \end{equation}
 
 # Analysis of the critical point
-\label{sec:20220802061621}
+\label{sec20220802061621}
 
 In this section, we discuss the stability of the critical point
 $(u_0, \lambda_0)$. To this end, we evaluate the potential energy in a neighboring
@@ -175,7 +175,7 @@ For the equilibrium to be stable, the above expression must be $\geq 0$ for all
 $\xi$ et $\eta$ small enough. Taking first $\eta = 0$, we get the following necessary
 conditions
 \begin{equation}
-  \label{eq:20211108164416}
+  \label{eq20211108164416}
   \E_3(\lambda_0; v, v, v) = 0 \quad \text{and} \quad \E_4(\lambda_0; v, v, v, v) \geq 0 \quad \text{for all} \quad v \in V.
 \end{equation}
 
@@ -187,7 +187,7 @@ conditions
 In other words, if there exists $v \in V$ such that
 $\E_3(\lambda_0; v, v, v) \neq 0$ or $\E_4(v, v, v, v) < 0$, then the equilibrium is
 \emph{unstable} at the critical point. The above conditions are not
-sufficient. Indeed, assuming conditions~\eqref{eq:20211108164416} to hold, we
+sufficient. Indeed, assuming conditions~\eqref{eq20211108164416} to hold, we
 now take $\eta = \xi^2$
 \begin{equation}
   \begin{aligned}[b]
@@ -197,35 +197,35 @@ now take $\eta = \xi^2$
 \end{equation}
 and we get the further necessary condition
 \begin{equation}
-  \label{eq:20211109145356}
+  \label{eq20211109145356}
   \E_2(w, w) + \E_3(v, v, w) + \tfrac{1}{12} \E_4(v, v, v, v) \geq 0 \quad \text{for all} \quad v \in V \quad \text{and} \quad w \in W.
 \end{equation}
 
 The direction $v \in V$ being fixed, the above expression is minimal when $w$
 satisfies the following variational problem
 \begin{equation}
-  \label{eq:20211109145224}
+  \label{eq20211109145224}
   2\E_2(w, \hat{w}) +\E_3(v, v, \hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W.
 \end{equation}
 
 Expanding $v \in V$ in the $(v_i)$ basis as follows: $v = \xi_i v_i$, it is observed
 that the solution to the above variational problem is
 $w = \tfrac{1}{2} \xi_i \xi_j w_{ij}$, where $w_{ij}$ is the solution to the
-elementary variational problem \eqref{eq:20220519164523}. For this value of $w$,
-condition~\eqref{eq:20211109145356} reads
+elementary variational problem \eqref{eq20220519164523}. For this value of $w$,
+condition~\eqref{eq20211109145356} reads
 \begin{equation}
   \bigl[\E_4(v_i, v_j, v_k, v_l) - 3\E_2(w_{ij}, w_{kl})\bigr] \xi_i \xi_j \xi_k \xi_l \geq 0 \quad \text{for all} \quad \xi_1, \ldots, \xi_m \in \reals,
 \end{equation}
-which, in view of definition~\eqref{eq:20220802081116} of $E_{ijkl}$, is
+which, in view of definition~\eqref{eq20220802081116} of $E_{ijkl}$, is
 equivalent to
 \begin{equation}
   E_{ijkl} \xi_i \xi_j \xi_k \xi_l \geq 0 \quad \text{for all} \quad \xi_m, \ldots, \xi_m \in \reals.
 \end{equation}
 
-Note that Eq.~\eqref{eq:20211109145224} implies
+Note that Eq.~\eqref{eq20211109145224} implies
 $\E_4(\lambda_0; v, v, v, v) \geq 0$, which becomes a redundant necessary
 condition. Indeed, plugging $w= \xi_i \xi_j w_{ij}$ into
-Eq.~\eqref{eq:20211109145224} cancels the first two terms. To sum up, we have
+Eq.~\eqref{eq20211109145224} cancels the first two terms. To sum up, we have
 the following \emph{necessary} conditions for stability
 \begin{equation}
   E_{ijk} \xi_i \xi_j \xi_k = 0 \quad \text{and} \quad E_{ijkl} \xi_i \xi_j \xi_k \xi_l \geq 0 \quad \text{for all} \quad \xi_m, \ldots, \xi_m \in \reals.
@@ -238,7 +238,7 @@ the following \emph{necessary} conditions for stability
 \end{equation}
 
 # Analysis of bifurcated branches
-\label{sec:20220617075558}
+\label{sec20220617075558}
 
 In this section, we show that, besides the fundamental branch $u^\ast(\lambda)$, other
 (bifurcated) equilibrium branches may pass through the critical point
@@ -247,22 +247,22 @@ the stationarity of the energy, which defines all equilibrium branches as
 implicit functions, which can be expanded with respect to some perturbation
 parameter.
 
-The first approach (see Sec.~\ref{sec:20220902091527}) relies on the
+The first approach (see Sec.~\ref{sec20220902091527}) relies on the
 Lyapunov--Schmidt decomposition of the equilibrium branch over $V$ and
 $W$. However, this approach leads to tedious derivations. This approach has
 historical and pedagogical value: in particular, it provides a meaning to $w_i$
-and $w_{ij}$ defined by Eqs.~\eqref{eq:20220524134525} and
-\eqref{eq:20220519164523}. In Sec.~\ref{sec:20220902092109}, a more systematic
+and $w_{ij}$ defined by Eqs.~\eqref{eq20220524134525} and
+\eqref{eq20220519164523}. In Sec.~\ref{sec20220902092109}, a more systematic
 approach is developed, that I found in the paper by \textcite[][Appendix
 A]{chak2018}.
 
 ## The Lyapunov--Schmidt decomposition
-\label{sec:20220902091527}
+\label{sec20220902091527}
 
 The following decomposition of the equilibrium state $u$ at the load-level
 $\lambda$is postulated
 \begin{equation}
-  \label{eq:20220902174235}
+  \label{eq20220902174235}
   u = u^\ast(\lambda) + \xi_i v_i + w, \quad \text{with} \quad w \in W.
 \end{equation}
 
@@ -274,54 +274,54 @@ follows
 \end{equation}
 or, equivalently
 \begin{equation}
-  \label{eq:20220901120544}
+  \label{eq20220901120544}
   \E_{,u}[u^\ast(\lambda) + \xi_i v_i + w, \lambda; \hat{v}] = 0, \quad \text{for all} \quad \hat{v} \in V
 \end{equation}
 and
 \begin{equation}
-  \label{eq:20220825143616}
+  \label{eq20220825143616}
   \E_{,u}[u^\ast(\lambda) + \xi_i v_i + w, \lambda; \hat{w}] = 0, \quad \text{for all} \quad \hat{w} \in W.
 \end{equation}
 The method proceeds in three steps. In \textbf{Step 1},
-Eq.~\eqref{eq:20220825143616} is used to define $w$ as an implicit function of
+Eq.~\eqref{eq20220825143616} is used to define $w$ as an implicit function of
 $\xi_1$, \dots, $\xi_m$ and $\lambda$. Then, in \textbf{Step 2},
-Eq.~\eqref{eq:20220825143616} is used to define $\lambda$ as an implicit function of
+Eq.~\eqref{eq20220825143616} is used to define $\lambda$ as an implicit function of
 $\xi_1$, \dots, $\xi_m$. Finally, a parametrization $\eta$ of $\xi_1$, \dots
 $\xi_m$ is introduced in \textbf{Step 3} and the Taylor expansion of $u$ and
 $\lambda$ with respect to $\eta$ is derived. These steps are presented below.
 
 \paragraph{Step 1: $w$ as a function of $\xi_i$ and $\lambda$} In this paragraph,
 $\hat{w}$ denotes an arbitrary test function in $W$. From the implicit function
-theorem, Eq.~\eqref{eq:20220825143616} defines a function
+theorem, Eq.~\eqref{eq20220825143616} defines a function
 $(\xi_1, \ldots, \xi_m, \lambda) \mapsto w(\xi_1, \ldots, \xi_m, \lambda)$ in the neighborhood of
 $(\xi_1, \ldots, \xi_m, \lambda) = (0, \ldots, 0, \lambda_0)$. Why the theorem applies will be clarified
-below. Eq.~\eqref{eq:20220825143616} is first differentiated with respect to
+below. Eq.~\eqref{eq20220825143616} is first differentiated with respect to
 $\xi_i$
 \begin{equation}
-  \label{eq:20220826140926}
+  \label{eq20220826140926}
   \E_{,uu}(u^\ast + \xi_k v_k + w, \lambda; v_i + w_{,i}, \hat{w}) = 0.
 \end{equation}
 
 Substituting $\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0$ in the above equations and observing
 that $\E_2(\lambda_0; v_i, W) = 0$ since $v_i \in V$, we get
 \begin{equation}
-\label{eq:20220825150219}
+\label{eq20220825150219}
   \E_2(\lambda_0; v_i + w_{,i}, \hat{w}) = \E_2(\lambda_0; w_{,i}, \hat{w}) = 0.
 \end{equation}
 
 Since $w \in W$ for all $\xi^i$ and $\lambda$, we have $w_{,i} \in W$ and,
-Remark~\ref{rem:20220902095055} leads to $w_{,i} = 0$ at the point
-$\xi_1 = 0, \ldots, \xi_m = 0$ and $\lambda = \lambda_0$. Eq.~\eqref{eq:20220825143616} is then
+Remark~\ref{rem20220902095055} leads to $w_{,i} = 0$ at the point
+$\xi_1 = 0, \ldots, \xi_m = 0$ and $\lambda = \lambda_0$. Eq.~\eqref{eq20220825143616} is then
 differentiated with respect to $\lambda$
 \begin{equation}
-  \label{eq:20220830145945}
+  \label{eq20220830145945}
   \E_{,uu}(u^\ast + \xi_i v_i + w, \lambda; \dot{u}^\ast + w_{,\lambda}, \hat{w}) + \E_{,u\lambda}(u^\ast + \xi_i v_i + w, \lambda; \hat{w}) = 0
 \end{equation}
 and, at $\xi_1 = \ldots = \xi_m = 0$
 \begin{equation}
-  \label{eq:20220830151513}
+  \label{eq20220830151513}
   \E_{,uu}(u^\ast, \lambda; w_{,\lambda}, \hat{w})
-  + \underbrace{\E_{,uu}(u^\ast, \lambda; \dot{u}^\ast, \hat{w}) + \E_{,u\lambda}(u^\ast, \lambda; \hat{w})}_{=0 \quad \text{see Eq.~\eqref{eq:20220901143843}}}
+  + \underbrace{\E_{,uu}(u^\ast, \lambda; \dot{u}^\ast, \hat{w}) + \E_{,u\lambda}(u^\ast, \lambda; \hat{w})}_{=0 \quad \text{see Eq.~\eqref{eq20220901143843}}}
   = \E_2(\lambda; w_{,\lambda}, \hat{w}) = 0,
 \end{equation}
 which proves similarly that the derivative of $w$ with respect to $\lambda$ vanishes
@@ -333,7 +333,7 @@ at the critical point. We have found so far that
   = \frac{\partial w}{\partial\lambda} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0}= 0.
 \end{equation}
 
-To express the second-order derivatives of $w$, Eq.~\eqref{eq:20220826140926} is
+To express the second-order derivatives of $w$, Eq.~\eqref{eq20220826140926} is
 differentiated first with respect to $\xi_j$, then with respect to $\lambda$. This
 delivers
 \begin{equation}
@@ -353,7 +353,7 @@ $w_{,1} = \cdots = w_{, m} = w_{,\lambda} = 0$)
   \quad \text{and} \quad
   \dot{\E}_2(\lambda_0; v_i, \hat{w}) + \E_2(\lambda_0; w_{,i\lambda}, \hat{w}) = 0.
 \end{equation}
-The variational problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}
+The variational problems~\eqref{eq20220524134525} and \eqref{eq20220519164523}
 are recognized, leading to
 \begin{equation}
   \frac{\partial^2w}{\partial\xi_i \partial\xi_j}\biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0} = w_{ij}
@@ -362,11 +362,11 @@ are recognized, leading to
 \end{equation}
 
 The $w_i$ and $w_{ij}$ defined by the variational
-problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523} therefore
+problems~\eqref{eq20220524134525} and \eqref{eq20220519164523} therefore
 appear as the second-order derivatives of $w$ at $\xi_k = 0$ and
 $\lambda = \lambda_0$, with respect to $\lambda$, $\xi_i$ and $\xi_i$, $\xi_j$.
 
-Finally, differentiating Eq.~\eqref{eq:20220830151513} with respect to $\lambda$ leads
+Finally, differentiating Eq.~\eqref{eq20220830151513} with respect to $\lambda$ leads
 to
 \begin{equation}
   \dot{\E}_2(\lambda; w_{,\lambda}, \hat{w}) + \E_2(\lambda; w_{,\lambda\lambda}, \hat{w}) = 0
@@ -383,21 +383,21 @@ expansion of $u$
 \end{equation}
 
 \paragraph{Step 2: $\lambda$ as a function of $\xi_i$} We now turn to
-Eq.~\eqref{eq:20220901120544}. Since $w$ is a function of $\lambda$ and $\xi_k$
+Eq.~\eqref{eq20220901120544}. Since $w$ is a function of $\lambda$ and $\xi_k$
 ($k = 1, \ldots, m$) this equation implicitly defines $\lambda$ as a function of
 $\xi_k$, the derivatives of which can be evaluated at
 $\xi_1 = \cdots = \xi_m = 0$. In this paragraph, $\hat{v}$ denotes an arbitrary element
 of $V$. Besides, unless otherwise mentioned, the differentials of the energy
 $\E_{,uu}$, $\E_{,u\lambda}$, $\E_{,\lambda\lambda}$, $\E_{,uuu}$ \dots{} are evaluated at
 $u = u^\ast(\lambda) + \xi_k v_k + w(\xi_k, \lambda)$. Differentiating first
-Eq.~\eqref{eq:20220901120544} with respect to $\xi_i$
+Eq.~\eqref{eq20220901120544} with respect to $\xi_i$
 \begin{equation}
-  \label{eq:20220901121940}
+  \label{eq20220901121940}
   \E_{,uu}[v_i + w_{,i} + \lambda_{,i} (\dot{u}^\ast + w_{,\lambda}), \hat{v}] + \lambda_{, i} \E_{,u\lambda}(\hat{v}) = 0,
 \end{equation}
 then with respect to $\xi_j$
 \begin{equation}
-  \label{eq:20220901125230}
+  \label{eq20220901125230}
   \begin{gathered}[b]
     \E_{,uuu}[v_i + w_{,i} + \lambda_{,i} (\dot{u}^\ast + w_{,\lambda}), v_j + w_{,j} + \lambda_{,j} (\dot{u}^\ast + w_{,\lambda}), \hat{v}]\\
     + \lambda_{,j}\E_{,uu\lambda}[v_i + w_{,i} + \lambda_{,i} (\dot{u}^\ast + w_{,\lambda}), \hat{v}]\\
@@ -406,12 +406,12 @@ then with respect to $\xi_j$
   \end{gathered}
 \end{equation}
 
-Eqs.~\eqref{eq:20220901121940} and \eqref{eq:20220901125230} are then evaluated
+Eqs.~\eqref{eq20220901121940} and \eqref{eq20220901125230} are then evaluated
 at $\xi_1 = \cdots = \xi_m = 0$, delivering
 \begin{equation}
-  \label{eq:20220901152056}
+  \label{eq20220901152056}
   \underbrace{\E_{,uu}(u_0, \lambda_0; v_i, \hat{v})}_{=0 \text{ since } \hat{v} \in V}
-  + \lambda_{, i} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0; \dot{u}_0, \hat{v}) +  \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143843}}} \bigr] = 0,
+  + \lambda_{, i} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0; \dot{u}_0, \hat{v}) +  \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq20220901143843}}} \bigr] = 0,
 \end{equation}
 and
 % \begin{equation}
@@ -422,18 +422,18 @@ and
 %   \end{gathered}
 % \end{equation}
 \begin{equation}
-  \label{eq:20220901152145}
+  \label{eq20220901152145}
   \begin{gathered}[b]
     \E_{,uuu}(u_0, \lambda_0; v_i , v_j, \hat{v}) + \underbrace{\E_{,uu}(u_0, \lambda_0; w_{ij}, \hat{v})}_{=0 \text{ since } \hat{v} \in V}\\
     +\lambda_{,i} \bigl[\E_{,uuu}(u_0, \lambda_0; v_j , \dot{u}_0, \hat{v}) + \E_{,uu\lambda}[u_0, \lambda_0; v_j, \hat{v}]\bigr]\\
     +\lambda_{,j} \bigl[\E_{,uuu}(u_0, \lambda_0; v_i , \dot{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_i, \hat{v})\bigr]\\
-    +\lambda_{,ij} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0;  \dot{u}_0, \hat{v}) + \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143843}}} \bigr]\\
-    +\lambda_{,i} \lambda_{,j}\bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; \dot{u}_0 , \dot{u}_0, \hat{v}) + 2\E_{,uu\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{v}) + \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{v}) + \E_{,uu}(u_0, \lambda_0; \ddot{u}_0, \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143902}}} \bigr] = 0
+    +\lambda_{,ij} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0;  \dot{u}_0, \hat{v}) + \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq20220901143843}}} \bigr]\\
+    +\lambda_{,i} \lambda_{,j}\bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; \dot{u}_0 , \dot{u}_0, \hat{v}) + 2\E_{,uu\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{v}) + \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{v}) + \E_{,uu}(u_0, \lambda_0; \ddot{u}_0, \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq20220901143902}}} \bigr] = 0
   \end{gathered}
 \end{equation}
 
-Eq.~\eqref{eq:20220901152056} is non-informative (identically satisfied), while
-Eq.~\eqref{eq:20220901152145} simplifies as follows
+Eq.~\eqref{eq20220901152056} is non-informative (identically satisfied), while
+Eq.~\eqref{eq20220901152145} simplifies as follows
 \begin{equation}
   \begin{aligned}[b]
     \E_{,uuu}(u_0, \lambda_0; v_i , v_j, \hat{v}) + \lambda_{,i} \bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; v_j , \dot{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_j, \hat{v})}_{=\dot{\E}_2(\lambda_0; v_j, \hat{v})} \bigr]&\\
@@ -448,16 +448,16 @@ Testing with $v_k \in V$, the above equation reads
 \begin{equation}
   \E_3(\lambda_0; v_i , v_j, v_k) + \lambda_{,i} \dot{\E}_2(\lambda_0; v_j, v_k) + \lambda_{,j} \dot{\E}_2(\lambda_0; v_i, v_k) = 0,
 \end{equation}
-or, with Eqs.~\eqref{eq:20220524135619} and \eqref{eq:20220524135643}
+or, with Eqs.~\eqref{eq20220524135619} and \eqref{eq20220524135643}
 \begin{equation}
-  \label{eq:20220902125031}
+  \label{eq20220902125031}
   E_{ijk} +  F_{jk} \frac{\partial\lambda}{\partial\xi_i} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0} + F_{ik} \frac{\partial\lambda}{\partial\xi_j} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0} = 0.
 \end{equation}
 
 In order to evaluate the second order partial derivatives of $\lambda$,
-Eq.~\eqref{eq:20220901125230} should be further differentiated with respect to
+Eq.~\eqref{eq20220901125230} should be further differentiated with respect to
 $\xi_k$. This leads to extremely tedious derivations, and we will adopt an
-alternative approach in Sec.~\ref{sec:20220902092109}.
+alternative approach in Sec.~\ref{sec20220902092109}.
 
 \paragraph{Step 3: parametrization of the bifurcated branch} The bifurcated
 branch is a curve $(u, \lambda) \in \reals ^ {m + 1}$, which is parametrized by
@@ -474,7 +474,7 @@ and first observe that
   \order[1]{\lambda} = \order[1]{\xi_i} \frac{\partial\lambda}{\partial\xi_i} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0}
 \end{equation}
 
-Multiplying both sides of Eq.~\eqref{eq:20220902125031} by
+Multiplying both sides of Eq.~\eqref{eq20220902125031} by
 $\order[1]{\xi_i} \order{1}{\xi_j}$ therefore results in the following identity
 \begin{equation}
   \begin{aligned}[b]
@@ -486,7 +486,7 @@ and, rearranging
 \begin{equation}
   E_{ijk} \order[1]{\xi_j} \order[1]{\xi_k} +  2 \order[1]{\lambda} F_{ij}  \order[1]{\xi_j} = 0,
 \end{equation}
-to be compared with Eq.~\eqref{eq:20220524135036}. We now turn to $w$
+to be compared with Eq.~\eqref{eq20220524135036}. We now turn to $w$
 \begin{equation}
   w'(\eta) = w_{,i} \xi_i' + w_{,\lambda} \lambda'
   \quad \text{and} \quad
@@ -500,67 +500,67 @@ and we get the Taylor expansion of the bifurcated branch as $\eta \to 0$
 \begin{equation}
   u(\eta) = u^\ast[\lambda(\eta)] + \order[1]{\xi_i} v_i + \tfrac{1}{2} \bigl( \order[2]{\xi_i} v_i + \order[1]{\xi_i} \order[1]{\xi_j} w_{ij}  + 2\order[1]{\lambda} \order[1]{\xi_i} w_i\bigr) + o(\eta^2),
 \end{equation}
-to be compared with Eq.~\eqref{eq:20220524134613}.
+to be compared with Eq.~\eqref{eq20220524134613}.
 
 ## Alternative route to the asymptotic expansions
-\label{sec:20220902092109}
+\label{sec20220902092109}
 
 Following the Appendix A of Ref.~\parencite{chak2018}, we introduce the
 following parametrization of the bifurcated branch
 \begin{align}
-  \label{eq:20211115075817}
+  \label{eq20211115075817}
   \lambda &=  \lambda_0 + \eta \order[1]{\lambda} + \tfrac{1}{2} \eta^2 \order[2]{\lambda} + \tfrac{1}{6} \eta^3 \order[3]{\lambda} + \cdots,\\
-  \label{eq:20211115075835}
+  \label{eq20211115075835}
   u &= u^{\ast}(\lambda) + \eta \order[1]{u} + \tfrac{1}{2} \eta^2 \order[2]{u} + \tfrac{1}{6} \eta^3 \order[3]{u} + \cdots,
 \end{align}
 where the parameter $\eta$ is not specified, but for the fact that $\eta = 0$
 corresponds to the critical point $(u_0, \lambda_0)$. Note that, in
-Eq.~\eqref{eq:20211115075835}, $u^\ast$ is evaluated at $\lambda$ rather than $\lambda_0$.
+Eq.~\eqref{eq20211115075835}, $u^\ast$ is evaluated at $\lambda$ rather than $\lambda_0$.
 
 Expressing that the energy is stationary along the bifurcated equilibrium path
 leads to the identification of the coefficients $\order[k]\lambda$ and
-$\order[k]u$ of the expansions~\eqref{eq:20211115075817} and
-\eqref{eq:20211115075835}. In other words, the residual
+$\order[k]u$ of the expansions~\eqref{eq20211115075817} and
+\eqref{eq20211115075835}. In other words, the residual
 $\E_{, u} [u(\eta), \lambda(\eta)]$ vanishes for all $\eta$ close to $0$. The residual is
-expanded with respect to the powers of $\eta$ in Appendix~\ref{sec:20211112182000}
-[see Eq.~\eqref{eq:20220107080901}]. Since all the terms of this expansion must
+expanded with respect to the powers of $\eta$ in Appendix~\ref{sec20211112182000}
+[see Eq.~\eqref{eq20220107080901}]. Since all the terms of this expansion must
 vanish, we get successively, for all $\hat{u} \in U$
 \begin{equation}
-  \label{eq:20211112182917}
+  \label{eq20211112182917}
   \E_2(\lambda_0; \order[1]u, \hat{u}) = 0,
 \end{equation}
 \begin{equation}
-  \label{eq:20220524133447}
+  \label{eq20220524133447}
   \E_3(\lambda_0; \order[1]u, \order[1]u, \hat{u}) + 2\order[1]\lambda\dot{\E}_2(\lambda_0; \order[1]u, \hat{u}) + \E_2(\lambda_0; \order[2]u, \hat{u}) = 0,
 \end{equation}
 \begin{equation}
-  \label{eq:20220708060436}
+  \label{eq20220708060436}
   \begin{aligned}[b]
     \E_4(\lambda_0; \order[1]u, \order[1]u, \order[1]u, \hat{u}) + 3\E_3(\lambda_0; \order[1]u, \order[2]u, \hat{u}) + \E_2(\lambda_0; \order[3]u, \hat{u})&\\
     + 3\order[1]\lambda\dot{\E}_3(\lambda_0; \order[1]u, \order[1]u, \hat{u}) + 3\order[1]\lambda\dot{\E}_2(\lambda_0;  \order[2]u, \hat{u})&\\
     + 3(\order[1]\lambda)^2\ddot{\E}_2(\lambda_0; \order[1]u, \hat{u}) + 3\order[2]\lambda\dot{\E}_2(\lambda_0; \order[1]u, \hat{u}) & = 0.
   \end{aligned}
 \end{equation}
-It results from Eq.~\eqref{eq:20211112182917} that $\order[1]u \in V$. Testing
-with $\hat{v} \in V$ (rather than $\hat{u} \in U$), Eq.~\eqref{eq:20220524133447}
+It results from Eq.~\eqref{eq20211112182917} that $\order[1]u \in V$. Testing
+with $\hat{v} \in V$ (rather than $\hat{u} \in U$), Eq.~\eqref{eq20220524133447}
 shows that $\order[1]u$ est solves the following variational problem: find
 $\order[1]u \in V$ such that
 \begin{equation}
-  \label{eq:20220524133816}
+  \label{eq20220524133816}
   \tfrac{1}{2} \E_3(\lambda_0; \order[1]u, \order[1]u, \hat{v}) + \order[1]\lambda\dot{\E}_2(\lambda_0; \order[1]u, \hat{v}) = 0,
 \end{equation}
 pour tout $\hat{v} \in V$. The above problem can be transformed into a system of
 scalar equations. Indeed, expanding the $\order[1]u \in V$ in the basis
 $(v_i)_{1 \leq i \leq m}$ as follows
 \begin{equation}
-  \label{eq:20220524133944}
+  \label{eq20220524133944}
   \order[1]u = \order[1]{\xi_i} v_i
 \end{equation}
-and plugging the definitions~\eqref{eq:20220524135619} and
-\eqref{eq:20220524135643} of $E_{ijk}$ and $F_{ij}$ into
-Eq.~\eqref{eq:20220524133816}
+and plugging the definitions~\eqref{eq20220524135619} and
+\eqref{eq20220524135643} of $E_{ijk}$ and $F_{ij}$ into
+Eq.~\eqref{eq20220524133816}
 \begin{equation}
-  \label{eq:20220524135036}
+  \label{eq20220524135036}
   \tfrac{1}{2} E_{ijk} \order[1]{\xi_j} \order[1]{\xi_k} + \order[1]\lambda F_{ij} \order[1]{\xi_j} = 0.
 \end{equation}
 
@@ -571,7 +571,7 @@ $\order[2]u$, we postulate the following decomposition
 \end{equation}
 where $\order[2]w \in W$ is the orthogonal projection of $\order[2]u$ onto
 $W$. Then $\E_2(\order[2]u, \hat{u}) = \E_2(\order[2]{w}, \hat{u})$ and
-Eq.~\eqref{eq:20220524133447} reads
+Eq.~\eqref{eq20220524133447} reads
 \begin{equation}
  \E_3(\lambda_0; \order[1]u, \order[1]u, \hat{u}) + 2\order[1]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \hat{u}) + \E_2(\lambda_0; \order[2]w, \hat{u}) = 0,
 \end{equation}
@@ -579,22 +579,22 @@ for all $\hat{u} \in U$. Testing now with $\hat{w} \in W$ (rather than
 $\hat{u} \in U$), we get the following variational problem: find
 $\order[2]w \in W$ such that
 \begin{equation}
-  \label{eq:20211210131623}
+  \label{eq20211210131623}
   \E_2(\lambda_0; \order[2]w, \hat{w}) + \order[1]{\xi_i} \order[1]{\xi_j} \E_3(\lambda_0; v_i, v_j, \hat{w}) + 2\order[1]\lambda \order[1]{\xi_i} \dot{\E}_2(\lambda_0; v_i, \hat{w}) = 0,
 \end{equation}
 for all $\hat{w} \in W$. The solution to the variational
-problem~\eqref{eq:20211210131623} is expressed as a linear combination of the
+problem~\eqref{eq20211210131623} is expressed as a linear combination of the
 $w_i$ and $w_{ij}$ [defined by the variational
-problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}]:
+problems~\eqref{eq20220524134525} and \eqref{eq20220519164523}]:
 $\order[2]w = \order[1]{\xi_i} \order[1]{\xi_j} w_{ij} + 2\order[1]\lambda \order[1]{\xi_i}
 w_i$ and
 \begin{equation}
-  \label{eq:20220524134613}
+  \label{eq20220524134613}
   \order[2]u = \order[2]{\xi_i} v_i + \order[1]{\xi_i} \order[1]{\xi_j} w_{ij} + 2\order[1]\lambda \order[1]{\xi_i} w_i.
 \end{equation}
 
-Plugging expressions~\eqref{eq:20220524133944} and \eqref{eq:20220524134613}
-into Eq.~\eqref{eq:20220708060436} and taking further $\hat{u} = v_i$ [remember
+Plugging expressions~\eqref{eq20220524133944} and \eqref{eq20220524134613}
+into Eq.~\eqref{eq20220708060436} and taking further $\hat{u} = v_i$ [remember
 that $\E_2(\lambda_0; v_i, \bullet) = 0$], we then get
 % \begin{equation*}
 %   \begin{aligned}[b]
@@ -628,8 +628,8 @@ that $\E_2(\lambda_0; v_i, \bullet) = 0$], we then get
     + 3\bigl[\E_3(\lambda_0; v_i, v_j, v_k) \order[1]{\xi_k} + \order[1]\lambda \dot{\E}_2(\lambda_0; v_i, v_j)\bigr] \order[2]{\xi_j} &= 0
   \end{aligned}
 \end{equation*}
-It results from the variational problems \eqref{eq:20220524134525} and
-\eqref{eq:20220519164523} that
+It results from the variational problems \eqref{eq20220524134525} and
+\eqref{eq20220519164523} that
 \begin{equation*}
   \E_3(\lambda_0; v_i, v_j, w_k) = -\E_2(\lambda_0 ; w_{ij}, w_k) = \dot{\E}_2(\lambda_0; v_k, w_{ij}),
 \end{equation*}
@@ -656,13 +656,13 @@ Similarly,
 %   \end{aligned}
 % \end{equation*}
 
-Finally, the definitions \eqref{eq:20220615063626}, \eqref{eq:20220615063633},
-\eqref{eq:20220524135619}, \eqref{eq:20220524135553} and
-\eqref{eq:20220524135643} of $E_{ijk}$, $E_{ijkl}$, $F_{ij}$,
+Finally, the definitions \eqref{eq20220615063626}, \eqref{eq20220615063633},
+\eqref{eq20220524135619}, \eqref{eq20220524135553} and
+\eqref{eq20220524135643} of $E_{ijk}$, $E_{ijkl}$, $F_{ij}$,
 $\mathring{E}_{ijk}$ and $\mathring{F}_{ij}$ lead to the following compact
 bifurcation equation
 \begin{equation}
-  \label{eq:20220601070917}
+  \label{eq20220601070917}
   \tfrac{1}{3} E_{ijkl} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} + \order[1]\lambda \bigl( \mathring{E}_{ijk} \order[1]{\xi_k} + \order[1]\lambda \mathring{F}_{ij} \bigr)\order[1]{\xi_j} + \bigl(E_{ijk} \order[1]{\xi_k} + \order[1]\lambda F_{ij}\bigr) \order[2]{\xi_j} + \order[2]\lambda F_{ij} \order[1]{\xi_j} = 0.
 \end{equation}
 
@@ -680,9 +680,9 @@ branch is strictly unstable beyond the critical load). From the above expansion,
 it results that $\dot{\E}_2(\lambda_0)$ is negative definite over $V$. In other words,
 $-F_{ij}$ is a positive definite tensor. The asymptotic expansion of the Hessian
 of the energy along the bifurcated branch is derived in
-appendix~\ref{sec:20220616055207}. For all $\hat{u}, \hat{v} \in U$
+appendix~\ref{sec20220616055207}. For all $\hat{u}, \hat{v} \in U$
 \begin{equation}
-  \label{eq:20220531054247}
+  \label{eq20220531054247}
   \begin{aligned}[b]
     \E_{, uu}[u(\eta), \lambda(\eta); \hat{u}, \hat{v}] ={}
     & \E_2(\lambda_0 ; \hat{u}, \hat{v}) + \eta \bigl[\E_3(\lambda_0 ; \order[1]u, \hat{u}, \hat{v})  + \order[1]\lambda \dot{\E}_2(\lambda_0; \hat{u}, \hat{v})\bigr]\\
@@ -695,41 +695,41 @@ appendix~\ref{sec:20220616055207}. For all $\hat{u}, \hat{v} \in U$
 Stability analysis is performed by means of the eigenvalues $\alpha \in \reals$ and
 eigenvectors $x \in U$ of the Hessian
 \begin{equation}
-  \label{eq:20220617074949}
+  \label{eq20220617074949}
   \E_{, u u} [u(\eta), \lambda(\eta); x, \hat{u}] = \alpha \langle x, \hat{u} \rangle \quad \text{for all} \quad \hat{u} \in V,
 \end{equation}
 where $\alpha$ and $x$ are expanded to second order in $\eta$
 \begin{equation}
-  \label{eq:20220617064633}
+  \label{eq20220617064633}
   \alpha = \order[0]\alpha + \eta \order[1]\alpha + \tfrac{1}{2} \eta^2 \order[2]\alpha + o(\eta^2)
   \quad \text{and} \quad
   x = \order[0]x + \eta \order[1]x + \tfrac{1}{2} \eta^2 \order[2]x + o(\eta^2).
 \end{equation}
 
-The following results are proved in Appendix~\ref{sec:20220616074108}: first,
+The following results are proved in Appendix~\ref{sec20220616074108}: first,
 $(\order[0]\alpha, x_0)$ is necessarily an eigenpair of $\E_2(\lambda_0)$. Since
 $\E_2 (\lambda_0)$ is positive, $\order[0]\alpha \geq 0$. If
 $\order[0]\alpha>0$, then $\alpha>0$ in the neighborhood of $\lambda_0$. Potentially unstable
 modes are therefore such that $\order[0]\alpha=0$. In other words,
 $\order[0]x \in V$ and
 \begin{equation}
-  \label{eq:20220904160057}
+  \label{eq20220904160057}
   \order[0]x = \order[0]{\chi_i} v_i
 \end{equation}
 furthermore, $(\order[1]\alpha, \order[0]{\chi_i})$ is an eigenpair of the symmetric
 tensor $(E_{ijk} \order[1]{\xi_k} + \order[1]\lambda F_{ij})$
 \begin{equation}
-  \label{eq:20220609133608}
+  \label{eq20220609133608}
   \bigl(E_{ijk} \order[1]{\xi_k} + \order[1]\lambda F_{ij} \bigr) \order[0]{\chi_j} = \order[1]\alpha \order[0]{\chi_i}.
 \end{equation}
 As for the higher order terms, it is also found that
 \begin{equation}
-  \label{eq:20220609133629}
+  \label{eq20220609133629}
   \order[1]x = \order[1]{\chi_i} v_i +  \order[0]{\chi_i} \order[1]{\xi_j} w_{i j} + \order[1]\lambda \order[0]{\chi_i} w_i
 \end{equation}
 and
 \begin{equation}
-  \label{eq:20220616082923}
+  \label{eq20220616082923}
   \begin{aligned}[b]
     \bigl[E_{ijkl} \order[1]{\xi_k} \order[1]{\xi_l} + \order[1]\lambda\bigl(2 \mathring{E}_{ijk} \order[1]{\xi_k} + \order[1]\lambda \mathring{F}_{ij}\bigr) + E_{ijk} \order[2]{\xi_k}
     + \order[2]\lambda F_{ij} \bigr] \order[0]{\chi_j} &\\
@@ -740,9 +740,9 @@ and
 
 Finally, to close this analysis of the bifurcated branches, the following
 asymptotic expansion of the energy is derived in
-Appendix~\ref{sec:20220525053434}
+Appendix~\ref{sec20220525053434}
 \begin{equation}
-  \label{eq:20220525053600}
+  \label{eq20220525053600}
   \begin{aligned}[b]
     \E[u(\eta), \lambda(\eta)] ={} & \E\{u^{\ast}[\lambda(\eta)], \lambda(\eta)\} + \tfrac{1}{6} \order[1]\lambda \eta^3 F_{i j} \order[1]{\xi_i} \order[1]{\xi_j} + \tfrac{1}{24} \eta^4 \bigl\{E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
     & + 4\order[1]\lambda \mathring{E}_{ijk} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} + 6 \bigl[( \order[1]\lambda )^2 \mathring{F}_{ij} + \order[2]\lambda F_{ij}\bigr] \order[1]{\xi_i} \order[1]{\xi_j}\bigr\} + o(\eta^4).
@@ -776,18 +776,18 @@ of the bifurcated branch.
 ## Asymmetric bifurcated branch
 
 We first consider the situation where $\order[1]\lambda \neq 0$ on the bifurcated
-branch. The bifurcation equation~\eqref{eq:20220524135036} shows that
+branch. The bifurcation equation~\eqref{eq20220524135036} shows that
 necessarily, $E_{ijk}$ is not identically nul. This equation has at most
 $(2^m - 1)$ pairs of real solutions $(\order[1]\lambda, \order[1]u)$ et
 $(- \order[1]\lambda, - \order[1]u)$; furthermore, multiplication by
 $\order[1]{\xi_i}$ shows that
 \begin{equation}
-  \label{eq:20220801085236}
+  \label{eq20220801085236}
   \order[1]\lambda = -\frac{E_{ijk} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}}{2 F_{ij} \order[1]{\xi_i} \order[1]{\xi_j}}.
 \end{equation}
 
 \begin{remark}
-  I can't prove that the bifurcation equation~\eqref{eq:20220524135036} has at
+  I can't prove that the bifurcation equation~\eqref{eq20220524135036} has at
   most $(2^m - 1)$ pairs of real solutions.
 \end{remark}
 
@@ -796,8 +796,8 @@ $\lambda = \lambda_0 + \eta \order[1]\lambda + o(\eta)$, and $\eta$ can be elimi
 $\eta=\lambda$ ($\order[1]\lambda=1$ and
 $\order[2]\lambda = \order[3]\lambda = \cdots = 0$) can be selected as a parameter. It is
 therefore possible to express the bifurcated branch as a function of $\lambda$:
-$u(\lambda)$. For example, combining Eqs.~\eqref{eq:20220524133816} and
-\eqref{eq:20220531054247}, we find that
+$u(\lambda)$. For example, combining Eqs.~\eqref{eq20220524133816} and
+\eqref{eq20220531054247}, we find that
 \begin{equation}
   \begin{aligned}[b]
     \E_{, uu}[u(\eta), \lambda(\eta); \order[1]u, \order[1]u]
@@ -807,7 +807,7 @@ $u(\lambda)$. For example, combining Eqs.~\eqref{eq:20220524133816} and
 \end{equation}
 or
 \begin{equation}
-  \label{eq:20220819160235}
+  \label{eq20220819160235}
   \E_{, uu}[u(\lambda), \lambda; \order[1]u, \order[1]u] = -\bigl( \lambda - \lambda_0 \bigr) \dot{\E}_2(\lambda_0; \order[1]u, \order[1]u) + o(\lambda - \lambda_0).
 \end{equation}
 
@@ -840,13 +840,13 @@ tensor. Three cases must be discussed
 \end{enumerate}
 
 To close this section, it is observed that the dominant term of the
-expansion~\eqref{eq:20220525053600} of the potential energy along the bifurcated
+expansion~\eqref{eq20220525053600} of the potential energy along the bifurcated
 branch is of the third order in $\eta$
 \begin{equation}
   \E[u(\eta), \lambda(\eta)] = \E\{u^{\ast}[\lambda(\eta)], \lambda(\eta)\} + \tfrac{1}{6} \order[1]\lambda \eta^3 F_{i j} \order[1]{\xi_i} \order[1]{\xi_j} + o(\eta^3).
 \end{equation}
 
-Eliminating $\lambda$ and plugging expression~\eqref{eq:20220801085236} of
+Eliminating $\lambda$ and plugging expression~\eqref{eq20220801085236} of
 $\order[1]\lambda$ delivers the expression of the potential energy, where
 $\lambda$ is the parameter
 \begin{equation}
@@ -865,20 +865,20 @@ bifurcated branch than along the fundamental branch.
   $\order[1]u$ (of the $\order[1]{\xi_i}$).
 \end{remark}
 \begin{remark}
-  It has been shown in Sec.~\ref{sec:20220802061621} that, when $E_{ijk}$ is not
+  It has been shown in Sec.~\ref{sec20220802061621} that, when $E_{ijk}$ is not
   identically null, the bifurcation point is \emph{unstable}.
 \end{remark}
 
 ## A particular case of symmetric bifurcation
 
 We now consider the case $E_{ijk}=0$ for all $i, j, k = 1, \ldots, m$. Then [see
-Eq.~\eqref{eq:20220524135036}] $\order[1]\lambda = 0$ on \emph{all} bifurcated
+Eq.~\eqref{eq20220524135036}] $\order[1]\lambda = 0$ on \emph{all} bifurcated
 branches. It is assumed that, on the bifurcated branch under consideration, the
 next term of the expansion of $\lambda$ is non-zero: $\order[2]\lambda \neq 0$. The bifurcation
-is \emph{symmetric}, and the bifurcation equation~\eqref{eq:20220601070917}
+is \emph{symmetric}, and the bifurcation equation~\eqref{eq20220601070917}
 reduces to
 \begin{equation}
-  \label{eq:20220801092222}
+  \label{eq20220801092222}
   \tfrac{1}{3} E_{ijkl} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}  + \order[2]\lambda F_{ij} \order[1]{\xi_j} = 0,
 \end{equation}
 which has at most $(3^m - 1) / 2$ pairs of real solutions
@@ -886,7 +886,7 @@ $(\order[2]\lambda, \order[1]u)$ and $(- \order[2]\lambda, - \order[1]u)$. Upon
 multiplication by $\order[1]{\xi_i}$, the above equation delivers the following
 expression of $\order[2]\lambda$
 \begin{equation}
-  \label{eq:20220801093236}
+  \label{eq20220801093236}
   \order[2]\lambda = -\frac{E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}}{3 F_{ij} \order[1]{\xi_i} \order[1]{\xi_j}}.
 \end{equation}
 
@@ -896,13 +896,13 @@ $E_{ijkl}\order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} > 0
 exists above (resp. below) the critical load $\lambda_0$ only.
 
 \begin{remark}
-  I can't prove that the bifurcation equation~\eqref{eq:20220801092222} has at
+  I can't prove that the bifurcation equation~\eqref{eq20220801092222} has at
   most $(3^m - 1) / 2$ pairs of real solutions.
 \end{remark}
 
 Turning now to the eigenpairs of the Hessian of the energy along the bifurcated
-branch, Eq.~\eqref{eq:20220609133608} shows that $\order[1]\alpha = 0$. Then
-$\alpha = \order[2]\alpha \eta^2 / 2 + o(\eta^2)$ and, from Eq.~\eqref{eq:20220616082923}
+branch, Eq.~\eqref{eq20220609133608} shows that $\order[1]\alpha = 0$. Then
+$\alpha = \order[2]\alpha \eta^2 / 2 + o(\eta^2)$ and, from Eq.~\eqref{eq20220616082923}
 \begin{equation}
   \bigl(E_{ijkl} \order[1]{\xi_k} \order[1]{\xi_l} + \order[2]\lambda F_{ij} \bigr) \order[0]{\chi_j} = \order[2]\alpha \order[0]{\chi_i}.
 \end{equation}
@@ -914,7 +914,7 @@ eigenvalues of this tensor is $<0$, then the bifurcated branch is unstable. The
 stability is undecided when all eigenvalues are $\geq 0$.
 
 \begin{remark}
-  Note that, from Eq.~\eqref{eq:20220801092222},
+  Note that, from Eq.~\eqref{eq20220801092222},
   \begin{equation}
     E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} + \order[2]\lambda F_{ij} \order[1]{\xi_i} \order[1]{\xi_j} = \tfrac{2}{3} E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}
   \end{equation}
@@ -923,10 +923,10 @@ stability is undecided when all eigenvalues are $\geq 0$.
 
 To conclude this section, it is observed that, when $\order[1]\lambda = 0$, the
 dominant term of the potential energy along the bifurcated branch is of the
-fourth order [see Eq.~\eqref{eq:20220525053600}]. Combining with
-Eq.~\eqref{eq:20220801093236},
+fourth order [see Eq.~\eqref{eq20220525053600}]. Combining with
+Eq.~\eqref{eq20220801093236},
 \begin{equation}
-  \label{eq:20220801094437}
+  \label{eq20220801094437}
   \begin{aligned}[b]
     \E[u(\eta), \lambda(\eta)]
     &= \E\{u^{\ast}[\lambda(\eta)], \lambda(\eta)\} + \tfrac{1}{24} \eta^4 \bigl(E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}  + 6  \order[2]\lambda F_{ij} \order[1]{\xi_i} \order[1]{\xi_j}\bigr) + o(\eta^4)\\
@@ -938,7 +938,7 @@ The expansion $\lambda = \lambda_0 + \order[2]\lambda \eta^2 / 2 + o(\eta^2)$ ca
 \begin{equation}
   \eta^4 = \frac{4 \bigl(\lambda - \lambda_0\bigr)^2}{\bigl( \order[2]\lambda \bigr)^2} + o(\lambda^2) = \frac{36 \bigl( F_{ij} \order[1]{\xi_i} \order[1]{\xi_j} \bigr)^2}{\bigl( E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} \bigr)^2} \bigl( \lambda - \lambda_0 \bigr)^2
 \end{equation}
-and expression~\eqref{eq:20220801094437} reads
+and expression~\eqref{eq20220801094437} reads
 \begin{equation}
   \E[u(\eta), \lambda(\eta)] = \E\{u^{\ast}[\lambda(\eta)], \lambda(\eta)\} - \frac{3 \bigl( F_{ij} \order[1]{\xi_i} \order[1]{\xi_j} \bigr)^2}{2 E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} } \bigl( \lambda - \lambda_0 \bigr)^2  + o(\lambda^2).
 \end{equation}
@@ -973,13 +973,13 @@ which shows that \emph{asymmetric} bifurcation points are always
 
 We first consider the case $E_{111} \neq 0$. Owing to the discussion above, the
 bifurcation point is unstable. Setting $\order[1]\lambda = 1$,
-Eq.~\eqref{eq:20220524135036} delivers
+Eq.~\eqref{eq20220524135036} delivers
 \begin{equation}
   E_{111} \order[1]\xi_1 + 2F_{11} = 0 \quad \text{and} \quad u(\lambda) = u^\ast(\lambda) - \frac{2F_{11}}{E_{111}} \bigl( \lambda - \lambda_0 \bigr) v_1 + o(\lambda - \lambda_0).
 \end{equation}
 
 Furthermore, the hessian of the energy along the bifurcated branch is retrieved
-from Eq.~\eqref{eq:20220819160235}
+from Eq.~\eqref{eq20220819160235}
 \begin{equation}
   \begin{aligned}[b]
     \E_{, uu}[u(\eta), \lambda(\eta), v_1, v_1] &= \eta \bigl(E_{111} \order[1]{\xi_1} + \order[1]\lambda F_{11}\bigr) + o(\eta) = -2 \eta F_{11} + o(\eta)\\
@@ -993,9 +993,9 @@ $\lambda \leq \lambda_0$ and \emph{stable} for $\lambda > \lambda_0$ (stability 
 ## Symmetric bifurcations
 
 We now consider the case $E_{111}=0$. From the general discussion of
-Sec.~\ref{sec:20220802061621}, the bifurcation point is \emph{stable} if
+Sec.~\ref{sec20220802061621}, the bifurcation point is \emph{stable} if
 $E_{1111} > 0$ and \emph{unstable} if $E_{1111} < 0$. The bifurcation
-equation~\eqref{eq:20220801092222} reduces to
+equation~\eqref{eq20220801092222} reduces to
 \begin{equation}
   E_{1111} \bigl( \order[1]{\xi_1} \bigr)^2 + 3\order[2]\lambda F_{11} = 0,
 \end{equation}
@@ -1005,7 +1005,7 @@ $\lambda = \lambda_0 + \order[2]\lambda \eta^2 / 2$, the bifurcation branch exis
 \emph{above} the critical load ($\lambda \geq \lambda_0$) if $E_{1111} > 0$ and only for loads
 \emph{below} the critical load ($\lambda \leq \lambda_0$) if $E_{1111} < 0$.
 
-From Eq.~\eqref{eq:20220531054247}, the hessian of the energy along the
+From Eq.~\eqref{eq20220531054247}, the hessian of the energy along the
 bifurcated branch reads
 \begin{equation*}
   \E_{, uu}[u(\eta), \lambda(\eta); v_1, v_1] = \tfrac{1}{2} \eta^2 \bigl[ E_{1111}\bigl(\xi_1^1\bigr) ^2 + \order[2]\lambda F_{11} \bigr] + o(\eta^2) = - \eta^2 \order[2]\lambda F_{11} + o(\eta^2),
@@ -1086,7 +1086,7 @@ vector space $U$.
   \label{thr:20220802112835}
   Let $\mathcal T$ be a trilinear, symmetric form, such that
   \begin{equation}
-    \label{eq:20220802111745}
+    \label{eq20220802111745}
     \mathcal T(u, u, u) = 0 \quad \text{for all} \quad u \in U.
   \end{equation}
   Then
@@ -1102,9 +1102,9 @@ vector space $U$.
     + 3\beta \mathcal T(u, u, w) + 3\alpha^2 \mathcal T(u, u, v) + 6 \alpha \beta \mathcal T(u, v, w) + 3 \beta^2 \mathcal T(u, u, w)\\
     + \alpha^3 \mathcal T(v, v, v) + 3 \alpha^2 \beta \mathcal T(v, v, w) + 3 \alpha \beta^2 \mathcal T(v, w, w) + \beta^3 \mathcal T(w, w, w)
   \end{multline*}
-  and, upon simplification using Eq.~\eqref{eq:20220802111745}
+  and, upon simplification using Eq.~\eqref{eq20220802111745}
   \begin{multline}
-    \label{eq:20220802112309}
+    \label{eq20220802112309}
     3\alpha \mathcal T(u, u, v) + 3\beta \mathcal T(u, u, w) + 3\alpha^2 \mathcal T(u, v, v) + 6 \alpha \beta \mathcal T(u, v, w)\\
     + 3 \beta^2 \mathcal T(u, w, w) + 3 \alpha^2 \beta \mathcal T(v, v, w) + 3 \alpha \beta^2 \mathcal T(v, w, w) = 0.
   \end{multline}
@@ -1113,27 +1113,27 @@ vector space $U$.
     ±3 \mathcal T(u, u, v) + 3 \mathcal T(u, u, v) = 0 \quad \text{for all} \quad u, v \in U,
   \end{equation*}
   from which it results that $\mathcal T(u, u, v) = 0$ for all $u, v \in
-  U$. Plugging into Eq.~\eqref{eq:20220802112309} with $\alpha = \beta = 1$ results in:
+  U$. Plugging into Eq.~\eqref{eq20220802112309} with $\alpha = \beta = 1$ results in:
   $\mathcal T(u, v, w) = 0$ for all $u, v, w \in U$.
 \end{proof}
 
 # Asymptotic expansions along a bifurcated branch
-\label{sec:20220905060440}
+\label{sec20220905060440}
 
 In this section, the asymptotic expansions along the bifurcated branch of the
 energy, its residual and its hessian are derived.
 
 ## Principle of the derivation
-\label{sec:20220107121442}
+\label{sec20220107121442}
 % 02/06/2022 --- 099042106e938251657847daca64c8fcbaa833c3
 %
 % Validation des calculs de ce paragraphe
 
 Introducing $\Lambda$ and $U$, which are functions of $\eta$ only,
 \begin{align}
-  \label{eq:20211112155446}
+  \label{eq20211112155446}
   \Lambda(\eta) & = \lambda(\eta) - \lambda_0 = \eta \order[1]\lambda + \tfrac{1}{2} \eta^2 \order[2]\lambda + \tfrac{1}{6} \eta^3 \order[3]\lambda + \cdots,\\
-  \label{eq:20211112113028}
+  \label{eq20211112113028}
   U(\eta) & = u(\eta) - u^{\ast}[\lambda(\eta)] = \eta \order[1]u + \tfrac{1}{2} \eta^2 \order[2]u + \tfrac{1}{6} \eta^3 \order[3]u + \cdots,
 \end{align}
 the functional $\mathcal{F}(u, \lambda)$ is evaluated along the bifurcated branch, thus defining
@@ -1169,17 +1169,17 @@ where $\Lambda$ and its derivatives are evaluated at $\eta$, whilie $F$ and its 
 derivatives are evaluated at $[\eta, \lambda_0 + \Lambda(\eta)]$. At $\eta = 0$, the above relations
 read
 \begin{gather}
-  \label{eq:20220107060454}
+  \label{eq20220107060454}
   f'(0) = \partial_{\eta} F + \order[1]\lambda \partial_{\lambda} F,\\
-  \label{eq:20220107124311}
+  \label{eq20220107124311}
   f''(0) = \partial_{\eta\eta}^2 F + 2 \order[1]\lambda \partial_{\eta\lambda}^2 F + \bigl( \order[1]\lambda \bigr)^2 \partial_{\lambda\lambda}^2 F + \order[2]\lambda \partial_{\lambda} F,\\
-  \label{eq:20220107060500}
+  \label{eq20220107060500}
   \begin{aligned}[b]
     f'''(0) ={}
     & \partial_{\eta\eta\eta}^3 F + 3 \order[1]\lambda \partial_{\eta\eta\lambda}^3 F + 3 \bigl( \order[1]\lambda \bigr)^2 \partial_{\eta\lambda\lambda}^3 F + \bigl( \order[1]\lambda \bigr)^3 \partial_{\lambda\lambda\lambda}^3 F\\
     & + 3 \order[2]\lambda \partial_{\eta\lambda}^2 F + 3 \order[1]\lambda \order[2]\lambda \partial_{\lambda\lambda}^2 F + \order[3]\lambda \partial_{\lambda} F,
   \end{aligned}\\
-  \label{eq:20220602185935}
+  \label{eq20220602185935}
   \begin{aligned}[b]
     f''''(0) ={}
     & \partial_{\eta\eta\eta\eta}^4F + 4 \order[1]\lambda \partial_{\eta\eta\eta\lambda}^4 F + 6 \bigl( \order[1]\lambda \bigr)^2 \partial_{\eta\eta\lambda\lambda}^4 F + 4 \bigl( \order[1]\lambda \bigr)^3 \partial_{\eta\lambda\lambda\lambda}^4 F + \bigl( \order[1]\lambda \bigr)^4 \partial_{\lambda\lambda\lambda\lambda}^4 F\\
@@ -1189,19 +1189,19 @@ read
 \end{gather}
 where $F$ and its partial derivatives are now evaluated at
 $(\eta = 0, \lambda = \lambda_0)$. The values of $f'(0)$, $f''(0)$, \dots thus found are used
-in the remainder of Sec.~\ref{sec:20220905060440} for various choices of the
+in the remainder of Sec.~\ref{sec20220905060440} for various choices of the
 functional $\mathcal F$.
 
 ## Application to the residual
-\label{sec:20211112182000}
+\label{sec20211112182000}
 % 03/06/2022 --- b028b234970605720c9022c16c7fc3012997ced7
 %
 % Validation des calculs de ce paragraphe
 
 In order to derive the Taylor expansion of the residual $\E_{,u}$, the method
-described in Sec.~\ref{sec:20220107121442} is applied to
+described in Sec.~\ref{sec20220107121442} is applied to
 \begin{equation}
-  \label{eq:20220107054629}
+  \label{eq20220107054629}
   f(\eta) = \E_{, u} [u(\eta), \lambda(\eta); \hat{u}]
   \quad \text{and} \quad
   F(\eta, \lambda) = \E_{, u}[u^{\ast}(\lambda) + U(\eta), \lambda; \hat{u}],
@@ -1213,7 +1213,7 @@ $\lambda_0$. Upon derivation with respect to $\lambda$, we get
 \begin{equation*}
   \frac{\partial^k F}{\partial \lambda^k}(0, \lambda) = 0 \quad \text{for all} \quad k \geq 0.
 \end{equation*}
-From the definition~\eqref{eq:20220107054629} of $F$, we find successively
+From the definition~\eqref{eq20220107054629} of $F$, we find successively
 \begin{equation*}
   \partial_{\eta}F(\eta, \lambda) = \E_{, u u}[u^{\ast}(\lambda) + U(\eta), \lambda; U'(\eta), \hat{u}],
 \end{equation*}
@@ -1245,7 +1245,7 @@ Upon derivation with respect to $\lambda$, we find successively
   \partial_{\eta\eta\lambda}^3 F(0, \lambda) = \dot{\E}_3(\lambda; \order[1]u, \order[1]u, \hat{u}) + \dot{\E_2}(\lambda; \order[2]u, \hat{u}).
 \end{gather*}
 
-Upon insertion into Eqs.~\eqref{eq:20220107060454}--\eqref{eq:20220602185935}, we
+Upon insertion into Eqs.~\eqref{eq20220107060454}--\eqref{eq20220602185935}, we
 get the following expressions of the sucessive derivatives of $f$ at $\eta=0$
 \begin{gather*}
   f'(0) = \E_2(\lambda_0; \order[1]u, \hat{u}),\\
@@ -1259,7 +1259,7 @@ get the following expressions of the sucessive derivatives of $f$ at $\eta=0$
 \end{gather*}
 which finally delivers the following expansion of the residual
 \begin{equation}
-  \label{eq:20220107080901}
+  \label{eq20220107080901}
   \begin{gathered}[b]
     \E_{, u}[u(\eta), \lambda(\eta)] ={} \eta \E_2(\lambda_0; \order[1]u, \hat{u}) + \tfrac{1}{2} \eta^2 \bigl[\E_3(\lambda_0; \order[1]u, \order[1]u, \hat{u})  + \E_2(\lambda_0; \order[2]u, \hat{u})\\
     {} + 2 \order[1]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \hat{u})\bigr] + \tfrac{1}{6} \eta^3 \bigl[ \E_4(\lambda_0; \order[1]u, \order[1]u, \order[1]u, \hat{u}) + 3\E_3(\lambda_0; \order[1]u, \order[2]u, \hat{u})\\
@@ -1270,12 +1270,12 @@ which finally delivers the following expansion of the residual
 up to third-order terms.
 
 ## Application to the energy
-\label{sec:20220525053434}
+\label{sec20220525053434}
 % 07/06/2022 --- dd1a4abf18cd94861d754bf3e19a54b8974bb2e8
 %
 % Relecture de tous les calculs de ce paragraphe
 
-The method described in Sec.~\ref{sec:20220107121442} is applied to the energy
+The method described in Sec.~\ref{sec20220107121442} is applied to the energy
 difference between the fundamental and bifurcated branches
 \begin{equation}
   F(\eta, \lambda) = \E[u^{\ast}(\lambda) + U(\eta), \lambda] - \E[u^{\ast}(\lambda), \lambda]
@@ -1328,7 +1328,7 @@ and finally
   f'(0) = 0,\\
   f''(0) = \E_2(\lambda_0; \order[1]u, \order[1]u),\\
   f'''(0) =\E_3(\lambda_0; \order[1]u, \order[1]u, \order[1]u) + 3\E_2(\lambda_0; \order[1]u, \order[2]u) + 3\order[1]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \order[1]u),\\
-  \label{eq:20220905063614}
+  \label{eq20220905063614}
   \begin{aligned}[b]
     f''''(0) ={}
     & \E_4(\lambda_0; \order[1]u, \order[1]u, \order[1]u, \order[1]u) + 6\E_3(\lambda_0; \order[1]u, \order[1]u, \order[2]u) + 3\E_2(\lambda_0; \order[2]u, \order[2]u)\\
@@ -1338,26 +1338,26 @@ and finally
 \end{gather}
 
 Since $\order[1]u \in V$, we have $\E_2(\lambda_0; \order[1]u, \order[k]u) = 0$ for
-$k = 1, 2, 3$. Therefore $f''(0)=0$ and, using Eq.~\eqref{eq:20220524133816}
+$k = 1, 2, 3$. Therefore $f''(0)=0$ and, using Eq.~\eqref{eq20220524133816}
 \begin{equation}
-  \label{eq:20220601055448}
+  \label{eq20220601055448}
   f'''(0) = \order[1]\lambda F_{ij} \order[1]{\xi_i} \order[1]{\xi_j},
 \end{equation}
 
-Turning now to $f''''(0)$, we plug the decompositions \eqref{eq:20220524133944}
-and \eqref{eq:20220524134613} of $\order[1]u$ and $\order[2]u$ successively into
-each term of Eq.~\eqref{eq:20220905063614}.
+Turning now to $f''''(0)$, we plug the decompositions \eqref{eq20220524133944}
+and \eqref{eq20220524134613} of $\order[1]u$ and $\order[2]u$ successively into
+each term of Eq.~\eqref{eq20220905063614}.
 \begin{equation*}
   \begin{aligned}[b]
     \E_3(\lambda_0; \order[1]u, \order[1]u, \order[2]u)
     ={} & \E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[2]{\xi_k} + \E_3(v_i, v_j, w_{k l}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
     & + 2\order[1]\lambda \E_3(v_i, v_j, w_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \\
     ={} & \E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[2]{\xi_k} + \E_3(v_i, v_j, w_{k l}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
-    & - 2\order[1]\lambda \E_2(w_{ij}, w_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}, \qquad \text{[using Eq.~\eqref{eq:20220519164523}]}\\
+    & - 2\order[1]\lambda \E_2(w_{ij}, w_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}, \qquad \text{[using Eq.~\eqref{eq20220519164523}]}\\
     ={} & \E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[2]{\xi_k} + \E_3(v_i, v_j, w_{kl}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
     & - 2\order[1]\lambda \E_2(w_{i}, w_{jk}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}\\
     ={} & \E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[2]{\xi_k} + \E_3(v_i, v_j, w_{kl}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
-    & + 2 \order[1]\lambda \dot{\E}_2(v_{i}, w_{jk}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}. \qquad \text{[using Eq.~\eqref{eq:20220524134525}]}
+    & + 2 \order[1]\lambda \dot{\E}_2(v_{i}, w_{jk}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}. \qquad \text{[using Eq.~\eqref{eq20220524134525}]}
   \end{aligned}
 \end{equation*}
 Then
@@ -1429,24 +1429,24 @@ Gathering the above results
     & \bigl[ \E_4(v_i, v_j, v_k , v_l) + 3\E_3(v_i, v_j, w_{k l}) \bigr] \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
     & + 4 \order[1]\lambda \bigl[\dot{\E}_3(v_i, v_j, v_k) + 3 \dot{\E}_2(v_i, w_{j k})\bigr] \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}\\
     & + \bigl\{6 ( \order[1]\lambda )^2 \bigl[ \ddot{\E}_2 (v_i, v_j) + \dot{\E}_2(v_i, w_j) + \dot{\E}_2(v_j, w_i) \bigr] + 6\order[2]\lambda \dot{\E}_2(v_i, v_j) \bigr\} \order[1]{\xi_i} \order[1]{\xi_j}\\
-    & + 6\bigl[ \underbrace{\E_3(v_i, v_j, v_k) \order[1]{\xi_j} \order[1]{\xi_k} + 2 \order[1]\lambda \dot{\E}_2(v_i, v_j) \order[1]{\xi_j}}_{=0\text{ from Eq.~\eqref{eq:20220524135036}}} \bigr] \order[2]{\xi_i},
+    & + 6\bigl[ \underbrace{\E_3(v_i, v_j, v_k) \order[1]{\xi_j} \order[1]{\xi_k} + 2 \order[1]\lambda \dot{\E}_2(v_i, v_j) \order[1]{\xi_j}}_{=0\text{ from Eq.~\eqref{eq20220524135036}}} \bigr] \order[2]{\xi_i},
   \end{aligned}
 \end{equation*}
 Upon introduction of the tensors $E_{ijkl}$, $\mathring{E}_{ijk}$, $F_{ij}$ and
 $\mathring{F}_{ij}$
 \begin{equation}
-  \label{eq:20220601055512}
+  \label{eq20220601055512}
   f''''(0) = E_{i j k l} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} + 4 \order[1]\lambda \mathring{E}_{i j k} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} + 6 \bigl[ ( \order[1]\lambda )^2 \mathring{F}_{i j} + \order[2]\lambda F_{i j}\bigr] \order[1]{\xi_i} \order[1]{\xi_j},
 \end{equation}
-which finally leads to the Taylor expansion~\eqref{eq:20220525053600}.
+which finally leads to the Taylor expansion~\eqref{eq20220525053600}.
 
 ## Application to the hessian of the energy
-\label{sec:20220616055207}
+\label{sec20220616055207}
 % 08/06/2022 --- aea0da72c80440d74d38d8ace59f381061f71c3e
 %
 % Relecture de tous les calculs de ce paragraphe
 
-The method described in Sec.~\ref{sec:20220107121442} is now applied to
+The method described in Sec.~\ref{sec20220107121442} is now applied to
 $f(\eta) = F [\eta, \lambda_0 + \Lambda(\eta)]$, with
 \begin{equation*}
   F(\eta, \lambda) = \E_{, u u} [u^{\ast}(\lambda) + U(\eta), \lambda; \hat{u}, \hat{v}].
@@ -1478,9 +1478,9 @@ and, upon differentiation with respect to $\lambda$
   \partial_{\eta \lambda}^2 F(0, \lambda) = \dot{\E}_3(\lambda; \order[1]u, \hat{u}, \hat{v}).
 \end{equation*}
 
-The Taylor expansion~\eqref{eq:20220531054247} of the hessian is finally
+The Taylor expansion~\eqref{eq20220531054247} of the hessian is finally
 retrieved by plugging the above results into
-expressions~\eqref{eq:20220107060454} and \eqref{eq:20220107124311} of the
+expressions~\eqref{eq20220107060454} and \eqref{eq20220107124311} of the
 derivatives of $f$
 \begin{gather*}
   f'(0) = \E_3(\lambda_0; \order[1]u, \hat{u}, \hat{v}) + \order[1]\lambda \dot{\E}_2(\lambda_0; \hat{u}, \hat{v}),\\
@@ -1491,12 +1491,12 @@ derivatives of $f$
 \end{gather*}
 
 ## Asymptotic expansions of the eigenvalues and eigenvectors of the Hessian
-\label{sec:20220616074108}
+\label{sec20220616074108}
 
-In this appendix, Eqs.~\eqref{eq:20220609133608}, \eqref{eq:20220609133629} and
-\eqref{eq:20220616082923} are derived. The postulated
-expansions~\eqref{eq:20220617064633} are plugged into the asymptotic expansion
-\eqref{eq:20220531054247} of the Hessian on the one hand
+In this appendix, Eqs.~\eqref{eq20220609133608}, \eqref{eq20220609133629} and
+\eqref{eq20220616082923} are derived. The postulated
+expansions~\eqref{eq20220617064633} are plugged into the asymptotic expansion
+\eqref{eq20220531054247} of the Hessian on the one hand
 \begin{equation*}
   \begin{aligned}[b]
     \E_{, uu} [u(\eta), \lambda(\eta); x, \hat{u}] ={}
@@ -1517,7 +1517,7 @@ scalar product $\alpha \langle x, \hat{u} \rangle$ on the other hand
 \end{equation*}
 
 Equating both expressions for all $\hat{u} \in U$ [see
-Eq.~\eqref{eq:20220617074949}] leads to three variational problems (for the
+Eq.~\eqref{eq20220617074949}] leads to three variational problems (for the
 $\eta^0$, $\eta^1$ and $\eta^2$ terms) that are discussed below.
 
 \paragraph{Variational problem of order 0} Find $\order[0]x \in U$ and $\order[0]\alpha\in\reals$ such
@@ -1527,21 +1527,21 @@ that, for all $\hat{u} \in U$
 \end{equation*}
 
 The above equation shows that $(\order[0]\alpha, \order[0]x)$ is an eigenpair of
-$\E_2(\lambda_0)$. As discussed in Sec.~\ref{sec:20220617075558}, only the case
+$\E_2(\lambda_0)$. As discussed in Sec.~\ref{sec20220617075558}, only the case
 $\order[0]\alpha = 0$ is relevant. Then $\order[0]x \in V$, which is expressed by the
-expansion~\eqref{eq:20220904160057} of $\order[0]x$.
+expansion~\eqref{eq20220904160057} of $\order[0]x$.
 
 \paragraph{Variational problem of order 1} Find $\order[1]x \in U$ and $\order[1]\alpha\in\reals$ such
 that, for all $\hat{u} \in U$
 \begin{equation}
-  \label{eq:20220609131953}
+  \label{eq20220609131953}
   \E_2(\lambda_0; \order[1]x, \hat{u}) + \E_3(\lambda_0; \order[1]u, \order[0]x, \hat{u}) + \order[1]\lambda \dot{\E}_2(\lambda_0; \order[0]x, \hat{u})
   = \order[1]\alpha \langle \order[0]x, \hat{u} \rangle,
 \end{equation}
-or, equivalently, plugging the expansions~\eqref{eq:20220524133944} and
-\eqref{eq:20220609133608} of $\order[1]u$ and $\order[0]x$ in the $v_i$ basis
+or, equivalently, plugging the expansions~\eqref{eq20220524133944} and
+\eqref{eq20220609133608} of $\order[1]u$ and $\order[0]x$ in the $v_i$ basis
 \begin{equation}
-  \label{eq:20220617080547}
+  \label{eq20220617080547}
   \E_2(\lambda_0; \order[1]x, \hat{u}) + \E_3(\lambda_0; v_j, v_k, \hat{u}) \order[0]{\chi_j} \order[1]{\xi_k} + \order[1]\lambda \dot{\E}_2(\lambda_0; v_j, \hat{u}) \order[0]{\chi_j}
   = \order[1]\alpha \order[0]{\chi_j} \langle v_j, \hat{u} \rangle.
 \end{equation}
@@ -1551,12 +1551,12 @@ $(v_i)$ is orthonormal, the above equation reads
 \begin{equation}
   \bigl[\E_3(\lambda_0; v_i, v_j, v_k) \order[1]{\xi_k} + \order[1]\lambda \dot{\E}_2(\lambda_0; v_i, v_j)\bigr] \order[0]{\chi_j} = \order[1]\alpha \order[0]{\chi_i},
 \end{equation}
-which reduces to Eq.~\eqref{eq:20220609133608}.
+which reduces to Eq.~\eqref{eq20220609133608}.
 
 The test function is now picked in $W = V^\perp$, and $\order[1]x$ is decomposed as
 the sum of its projections onto $V$ and $W$:
 $\order[1]x = \order[1]{\chi_i} v_i + \order[1]{y}$, where $\order[1]y \in
-W$. Eq.~\eqref{eq:20220617080547} then delivers the following variational
+W$. Eq.~\eqref{eq20220617080547} then delivers the following variational
 problem: find $\order[1]y \in W$ such that, for all $\hat{w} \in W$,
 \begin{equation}
   \E_2(\order[1]y, \hat{w}) + \E_3(v_i, v_j, \hat{w}) \order[0]{\chi_i} \order[1]{\xi_j} + \order[1]\lambda \dot{\E}_2(v_i, \hat{w}) \order[0]{\chi_i} = 0,
@@ -1564,9 +1564,9 @@ problem: find $\order[1]y \in W$ such that, for all $\hat{w} \in W$,
 (observe that $\langle v_j, \hat{w} \rangle = 0$ since $V$ and $W$ are orthogonal
 subspaces). The solution to the above problem is expressed as a linear
 combination of the $w_i$ and $w_{ij}$ defined by the variational problems
-\eqref{eq:20220524134525} and \eqref{eq:20220519164523}, respectively:
+\eqref{eq20220524134525} and \eqref{eq20220519164523}, respectively:
 $\order[1]y = \order[0]{\chi_i} \order[1]{\xi_j} w_{i j} + \order[1]\lambda \order[0]{\chi_i}
-w_i$, and the decomposition~\eqref{eq:20220609133629} is retrieved.
+w_i$, and the decomposition~\eqref{eq20220609133629} is retrieved.
 
 \paragraph{Variational problem of order 2} For all $\hat{u} \in U$,
 \begin{multline*}
@@ -1583,8 +1583,8 @@ w_i$, and the decomposition~\eqref{eq:20220609133629} is retrieved.
 \end{multline*}
 
 For $\hat{u} = \hat{v}_i$, plugging the decompositions
-\eqref{eq:20220524133944}, \eqref{eq:20220524134613}, \eqref{eq:20220609133608}
-and \eqref{eq:20220609133629} of $\order[1]u$, $\order[2]u$, $\order[0]x $ et
+\eqref{eq20220524133944}, \eqref{eq20220524134613}, \eqref{eq20220609133608}
+and \eqref{eq20220609133629} of $\order[1]u$, $\order[2]u$, $\order[0]x $ et
 $\order[1]x$ delivers
 % \begin{multline*}
 %   2\E_3(v_i, \order[1]x, \order[1]u)
@@ -1630,7 +1630,7 @@ $\order[1]x$ delivers
 \end{multline*}
 
 The $\order[0]{\chi_j} \order[1]{\xi_k}$ term is transformed with
-Eqs.~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}
+Eqs.~\eqref{eq20220524134525} and \eqref{eq20220519164523}
 \begin{multline*}
   \bigl[ \E_4(v_i, v_j,  v_k, v_l)
   + \E_3(v_i, w_{jk}, v_l)
@@ -1644,5 +1644,5 @@ Eqs.~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}
   = 2\order[1]\alpha\order[1]{\chi_i}
   + \order[2]\alpha \order[0]{\chi_i},
 \end{multline*}
-and Eq.~\eqref{eq:20220616082923} results from the application of
-Eqs.~\eqref{eq:20220617084433} and \eqref{eq:20220617085256}.
+and Eq.~\eqref{eq20220616082923} results from the application of
+Eqs.~\eqref{eq20220617084433} and \eqref{eq20220617085256}.

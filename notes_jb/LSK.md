@@ -140,8 +140,8 @@ and, from Eq. \eqref{eq20220519164523}
   \end{aligned}
 \end{equation}
 
+(sec20220802061621)=
 # Analysis of the critical point
-\label{sec20220802061621}
 
 In this section, we discuss the stability of the critical point
 $(u_0, \lambda_0)$. To this end, we evaluate the potential energy in a neighboring
@@ -237,8 +237,8 @@ the following \emph{necessary} conditions for stability
   E_{ijk} \xi_i \xi_j \xi_k = 0 \quad \text{and} \quad E_{ijkl} \xi_i \xi_j \xi_k \xi_l > 0 \quad \text{for all} \quad \xi_m, \ldots, \xi_m \in \reals.
 \end{equation}
 
+(sec20220617075558)=
 # Analysis of bifurcated branches
-\label{sec20220617075558}
 
 In this section, we show that, besides the fundamental branch $u^\ast(\lambda)$, other
 (bifurcated) equilibrium branches may pass through the critical point
@@ -247,17 +247,17 @@ the stationarity of the energy, which defines all equilibrium branches as
 implicit functions, which can be expanded with respect to some perturbation
 parameter.
 
-The first approach (see Sec. \ref{sec20220902091527}) relies on the
+The first approach (see Sec. {ref}`sec20220902091527`) relies on the
 Lyapunov--Schmidt decomposition of the equilibrium branch over $V$ and
 $W$. However, this approach leads to tedious derivations. This approach has
 historical and pedagogical value: in particular, it provides a meaning to $w_i$
 and $w_{ij}$ defined by Eqs. \eqref{eq20220524134525} and
-\eqref{eq20220519164523}. In Sec. \ref{sec20220902092109}, a more systematic
+\eqref{eq20220519164523}. In Sec. {ref}`sec20220902092109`, a more systematic
 approach is developed, that I found in the paper by \textcite[][Appendix
 A]{chak2018}.
 
+(sec20220902091527)=
 ## The Lyapunov--Schmidt decomposition
-\label{sec20220902091527}
 
 The following decomposition of the equilibrium state $u$ at the load-level
 $\lambda$is postulated
@@ -457,7 +457,7 @@ or, with Eqs. \eqref{eq20220524135619} and \eqref{eq20220524135643}
 In order to evaluate the second order partial derivatives of $\lambda$,
 Eq. \eqref{eq20220901125230} should be further differentiated with respect to
 $\xi_k$. This leads to extremely tedious derivations, and we will adopt an
-alternative approach in Sec. \ref{sec20220902092109}.
+alternative approach in Sec. {ref}`sec20220902092109`.
 
 \paragraph{Step 3: parametrization of the bifurcated branch} The bifurcated
 branch is a curve $(u, \lambda) \in \reals ^ {m + 1}$, which is parametrized by
@@ -502,8 +502,8 @@ and we get the Taylor expansion of the bifurcated branch as $\eta \to 0$
 \end{equation}
 to be compared with Eq. \eqref{eq20220524134613}.
 
+(sec20220902092109)=
 ## Alternative route to the asymptotic expansions
-\label{sec20220902092109}
 
 Following the Appendix A of Ref. \parencite{chak2018}, we introduce the
 following parametrization of the bifurcated branch
@@ -522,7 +522,7 @@ leads to the identification of the coefficients $\order[k]\lambda$ and
 $\order[k]u$ of the expansions \eqref{eq20211115075817} and
 \eqref{eq20211115075835}. In other words, the residual
 $\E_{, u} [u(\eta), \lambda(\eta)]$ vanishes for all $\eta$ close to $0$. The residual is
-expanded with respect to the powers of $\eta$ in Appendix \ref{sec20211112182000}
+expanded with respect to the powers of $\eta$ in Appendix {ref}`sec20211112182000`
 [see Eq. \eqref{eq20220107080901}]. Since all the terms of this expansion must
 vanish, we get successively, for all $\hat{u} \in U$
 \begin{equation}
@@ -680,7 +680,7 @@ branch is strictly unstable beyond the critical load). From the above expansion,
 it results that $\dot{\E}_2(\lambda_0)$ is negative definite over $V$. In other words,
 $-F_{ij}$ is a positive definite tensor. The asymptotic expansion of the Hessian
 of the energy along the bifurcated branch is derived in
-appendix \ref{sec20220616055207}. For all $\hat{u}, \hat{v} \in U$
+appendix {ref}`sec20220616055207`. For all $\hat{u}, \hat{v} \in U$
 \begin{equation}
   \label{eq20220531054247}
   \begin{aligned}[b]
@@ -706,7 +706,7 @@ where $\alpha$ and $x$ are expanded to second order in $\eta$
   x = \order[0]x + \eta \order[1]x + \tfrac{1}{2} \eta^2 \order[2]x + o(\eta^2).
 \end{equation}
 
-The following results are proved in Appendix \ref{sec20220616074108}: first,
+The following results are proved in Appendix {ref}`sec20220616074108`: first,
 $(\order[0]\alpha, x_0)$ is necessarily an eigenpair of $\E_2(\lambda_0)$. Since
 $\E_2 (\lambda_0)$ is positive, $\order[0]\alpha \geq 0$. If
 $\order[0]\alpha>0$, then $\alpha>0$ in the neighborhood of $\lambda_0$. Potentially unstable
@@ -740,7 +740,7 @@ and
 
 Finally, to close this analysis of the bifurcated branches, the following
 asymptotic expansion of the energy is derived in
-Appendix \ref{sec20220525053434}
+Appendix {ref}`sec20220525053434`
 \begin{equation}
   \label{eq20220525053600}
   \begin{aligned}[b]
@@ -865,7 +865,7 @@ bifurcated branch than along the fundamental branch.
   $\order[1]u$ (of the $\order[1]{\xi_i}$).
 \end{remark}
 \begin{remark}
-  It has been shown in Sec. \ref{sec20220802061621} that, when $E_{ijk}$ is not
+  It has been shown in Sec. {ref}`sec20220802061621` that, when $E_{ijk}$ is not
   identically null, the bifurcation point is \emph{unstable}.
 \end{remark}
 
@@ -993,7 +993,7 @@ $\lambda \leq \lambda_0$ and \emph{stable} for $\lambda > \lambda_0$ (stability 
 ## Symmetric bifurcations
 
 We now consider the case $E_{111}=0$. From the general discussion of
-Sec. \ref{sec20220802061621}, the bifurcation point is \emph{stable} if
+Sec. {ref}`sec20220802061621`, the bifurcation point is \emph{stable} if
 $E_{1111} > 0$ and \emph{unstable} if $E_{1111} < 0$. The bifurcation
 equation \eqref{eq20220801092222} reduces to
 \begin{equation}
@@ -1117,14 +1117,15 @@ vector space $U$.
   $\mathcal T(u, v, w) = 0$ for all $u, v, w \in U$.
 \end{proof}
 
+(sec20220905060440)=
 # Asymptotic expansions along a bifurcated branch
-\label{sec20220905060440}
 
 In this section, the asymptotic expansions along the bifurcated branch of the
 energy, its residual and its hessian are derived.
 
+(sec20220107121442)=
 ## Principle of the derivation
-\label{sec20220107121442}
+
 % 02/06/2022 --- 099042106e938251657847daca64c8fcbaa833c3
 %
 % Validation des calculs de ce paragraphe
@@ -1189,17 +1190,18 @@ read
 \end{gather}
 where $F$ and its partial derivatives are now evaluated at
 $(\eta = 0, \lambda = \lambda_0)$. The values of $f'(0)$, $f''(0)$, \dots thus found are used
-in the remainder of Sec. \ref{sec20220905060440} for various choices of the
+in the remainder of Sec. {ref}`sec20220905060440` for various choices of the
 functional $\mathcal F$.
 
+(sec20211112182000)=
 ## Application to the residual
-\label{sec20211112182000}
+
 % 03/06/2022 --- b028b234970605720c9022c16c7fc3012997ced7
 %
 % Validation des calculs de ce paragraphe
 
 In order to derive the Taylor expansion of the residual $\E_{,u}$, the method
-described in Sec. \ref{sec20220107121442} is applied to
+described in Sec. {ref}`sec20220107121442` is applied to
 \begin{equation}
   \label{eq20220107054629}
   f(\eta) = \E_{, u} [u(\eta), \lambda(\eta); \hat{u}]
@@ -1269,13 +1271,14 @@ which finally delivers the following expansion of the residual
 \end{equation}
 up to third-order terms.
 
+(sec20220525053434)=
 ## Application to the energy
-\label{sec20220525053434}
+
 % 07/06/2022 --- dd1a4abf18cd94861d754bf3e19a54b8974bb2e8
 %
 % Relecture de tous les calculs de ce paragraphe
 
-The method described in Sec. \ref{sec20220107121442} is applied to the energy
+The method described in Sec. {ref}`sec20220107121442` is applied to the energy
 difference between the fundamental and bifurcated branches
 \begin{equation}
   F(\eta, \lambda) = \E[u^{\ast}(\lambda) + U(\eta), \lambda] - \E[u^{\ast}(\lambda), \lambda]
@@ -1440,13 +1443,14 @@ $\mathring{F}_{ij}$
 \end{equation}
 which finally leads to the Taylor expansion \eqref{eq20220525053600}.
 
+(sec20220616055207)=
 ## Application to the hessian of the energy
-\label{sec20220616055207}
+
 % 08/06/2022 --- aea0da72c80440d74d38d8ace59f381061f71c3e
 %
 % Relecture de tous les calculs de ce paragraphe
 
-The method described in Sec. \ref{sec20220107121442} is now applied to
+The method described in Sec. {ref}`sec20220107121442` is now applied to
 $f(\eta) = F [\eta, \lambda_0 + \Lambda(\eta)]$, with
 \begin{equation*}
   F(\eta, \lambda) = \E_{, u u} [u^{\ast}(\lambda) + U(\eta), \lambda; \hat{u}, \hat{v}].
@@ -1490,8 +1494,8 @@ derivatives of $f$
   \end{aligned}
 \end{gather*}
 
+(sec20220616074108)=
 ## Asymptotic expansions of the eigenvalues and eigenvectors of the Hessian
-\label{sec20220616074108}
 
 In this appendix, Eqs. \eqref{eq20220609133608}, \eqref{eq20220609133629} and
 \eqref{eq20220616082923} are derived. The postulated
@@ -1527,7 +1531,7 @@ that, for all $\hat{u} \in U$
 \end{equation*}
 
 The above equation shows that $(\order[0]\alpha, \order[0]x)$ is an eigenpair of
-$\E_2(\lambda_0)$. As discussed in Sec. \ref{sec20220617075558}, only the case
+$\E_2(\lambda_0)$. As discussed in Sec. {ref}`sec20220617075558`, only the case
 $\order[0]\alpha = 0$ is relevant. Then $\order[0]x \in V$, which is expressed by the
 expansion \eqref{eq20220904160057} of $\order[0]x$.
 

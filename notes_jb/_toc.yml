@@ -4,6 +4,7 @@
 format: jb-book
 root: intro
 chapters:
+- file: LSK
 - file: nomenclature
 - file: perfect
 - file: bibliography

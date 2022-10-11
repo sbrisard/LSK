@@ -1,4 +1,4 @@
-\section{Notations}
+# Notations
 
 L'espace des champs cinématiquement admissibles est noté $U$. On suppose qu'il a
 la structure d'espace vectoriel. L'énergie du système est notée
@@ -140,7 +140,7 @@ and, from Eq.~\eqref{eq:20220519164523}
   \end{aligned}
 \end{equation}
 
-\section{Analysis of the critical point}
+# Analysis of the critical point
 \label{sec:20220802061621}
 
 In this section, we discuss the stability of the critical point
@@ -237,7 +237,7 @@ the following \emph{necessary} conditions for stability
   E_{ijk} \xi_i \xi_j \xi_k = 0 \quad \text{and} \quad E_{ijkl} \xi_i \xi_j \xi_k \xi_l > 0 \quad \text{for all} \quad \xi_m, \ldots, \xi_m \in \reals.
 \end{equation}
 
-\section{Analysis of bifurcated branches}
+# Analysis of bifurcated branches
 \label{sec:20220617075558}
 
 In this section, we show that, besides the fundamental branch $u^\ast(\lambda)$, other
@@ -256,7 +256,7 @@ and $w_{ij}$ defined by Eqs.~\eqref{eq:20220524134525} and
 approach is developed, that I found in the paper by \textcite[][Appendix
 A]{chak2018}.
 
-\subsection{The Lyapunov--Schmidt decomposition}
+## The Lyapunov--Schmidt decomposition
 \label{sec:20220902091527}
 
 The following decomposition of the equilibrium state $u$ at the load-level
@@ -502,7 +502,7 @@ and we get the Taylor expansion of the bifurcated branch as $\eta \to 0$
 \end{equation}
 to be compared with Eq.~\eqref{eq:20220524134613}.
 
-\subsection{Alternative route to the asymptotic expansions}
+## Alternative route to the asymptotic expansions
 \label{sec:20220902092109}
 
 Following the Appendix A of Ref.~\parencite{chak2018}, we introduce the
@@ -749,7 +749,7 @@ Appendix~\ref{sec:20220525053434}
   \end{aligned}
 \end{equation}
 
-\section{Discussion}
+# Discussion
 
 In this section, we discuss the two main cases of bifurcations, namely
 \emph{asymmetric} and \emph{symmetric}. In each case, we analyse the stability
@@ -773,7 +773,7 @@ of the bifurcated branch.
   of the bifurcated branches is symmetric'' will \emph{not} be discussed.
 \end{remark}
 
-\subsection{Asymmetric bifurcated branch}
+## Asymmetric bifurcated branch
 
 We first consider the situation where $\order[1]\lambda \neq 0$ on the bifurcated
 branch. The bifurcation equation~\eqref{eq:20220524135036} shows that
@@ -869,7 +869,7 @@ bifurcated branch than along the fundamental branch.
   identically null, the bifurcation point is \emph{unstable}.
 \end{remark}
 
-\subsection{A particular case of symmetric bifurcation}
+## A particular case of symmetric bifurcation
 
 We now consider the case $E_{ijk}=0$ for all $i, j, k = 1, \ldots, m$. Then [see
 Eq.~\eqref{eq:20220524135036}] $\order[1]\lambda = 0$ on \emph{all} bifurcated
@@ -954,7 +954,7 @@ bifurcated branch, where the energy is lower than the fundamental branch.
 The above discussion simplifies considerably when there is only one buckling
 mode ($m = 1$). This is addressed in the next section.
 
-\section{The case of a single mode}
+# The case of a single mode
 
 In this section, we discuss the case $m = 1$; all tensors considered above
 ($F_{ij}$, $E_{ijk}$, $E_{ijkl}$) then reduce to simple scalars. To avoid
@@ -969,7 +969,7 @@ ensure stability of the critical point
 which shows that \emph{asymmetric} bifurcation points are always
 \emph{unstable}.
 
-\subsection{Asymmetric bifurcations}
+## Asymmetric bifurcations
 
 We first consider the case $E_{111} \neq 0$. Owing to the discussion above, the
 bifurcation point is unstable. Setting $\order[1]\lambda = 1$,
@@ -990,7 +990,7 @@ from Eq.~\eqref{eq:20220819160235}
 Asymmetric bifurcations branches are \emph{unstable} for
 $\lambda \leq \lambda_0$ and \emph{stable} for $\lambda > \lambda_0$ (stability switch).
 
-\subsection{Symmetric bifurcations}
+## Symmetric bifurcations
 
 We now consider the case $E_{111}=0$. From the general discussion of
 Sec.~\ref{sec:20220802061621}, the bifurcation point is \emph{stable} if
@@ -1021,9 +1021,9 @@ lower than the critical load.
 
 \appendix
 
-\section{Some useful results from multilinear algebra}
+# Some useful results from multilinear algebra
 
-\subsection{Kernel of a bilinear, symmetric, positive form}
+## Kernel of a bilinear, symmetric, positive form
 
 In this section, $\mathcal{B}$ denotes a bilinear, symmetric, positive form over the
 vector space $U$. Its kernel $\ker \mathcal{B}$ is defined as follows
@@ -1077,7 +1077,7 @@ vector space $U$. Its kernel $\ker \mathcal{B}$ is defined as follows
   $\mathcal{B}(u, v) = 0$.
 \end{proof}
 
-\subsection{On trilinear, symmetric forms}
+## On trilinear, symmetric forms
 
 In this section, $\mathcal T$ denotes a trilinear, symmetric form over the
 vector space $U$.
@@ -1117,13 +1117,13 @@ vector space $U$.
   $\mathcal T(u, v, w) = 0$ for all $u, v, w \in U$.
 \end{proof}
 
-\section{Asymptotic expansions along a bifurcated branch}
+# Asymptotic expansions along a bifurcated branch
 \label{sec:20220905060440}
 
 In this section, the asymptotic expansions along the bifurcated branch of the
 energy, its residual and its hessian are derived.
 
-\subsection{Principle of the derivation}
+## Principle of the derivation
 \label{sec:20220107121442}
 % 02/06/2022 --- 099042106e938251657847daca64c8fcbaa833c3
 %
@@ -1192,7 +1192,7 @@ $(\eta = 0, \lambda = \lambda_0)$. The values of $f'(0)$, $f''(0)$, \dots thus f
 in the remainder of Sec.~\ref{sec:20220905060440} for various choices of the
 functional $\mathcal F$.
 
-\subsection{Application to the residual}
+## Application to the residual
 \label{sec:20211112182000}
 % 03/06/2022 --- b028b234970605720c9022c16c7fc3012997ced7
 %
@@ -1269,7 +1269,7 @@ which finally delivers the following expansion of the residual
 \end{equation}
 up to third-order terms.
 
-\subsection{Application to the energy}
+## Application to the energy
 \label{sec:20220525053434}
 % 07/06/2022 --- dd1a4abf18cd94861d754bf3e19a54b8974bb2e8
 %
@@ -1440,7 +1440,7 @@ $\mathring{F}_{ij}$
 \end{equation}
 which finally leads to the Taylor expansion~\eqref{eq:20220525053600}.
 
-\subsection{Application to the hessian of the energy}
+## Application to the hessian of the energy
 \label{sec:20220616055207}
 % 08/06/2022 --- aea0da72c80440d74d38d8ace59f381061f71c3e
 %
@@ -1490,7 +1490,7 @@ derivatives of $f$
   \end{aligned}
 \end{gather*}
 
-\subsection{Asymptotic expansions of the eigenvalues and eigenvectors of the Hessian}
+## Asymptotic expansions of the eigenvalues and eigenvectors of the Hessian
 \label{sec:20220616074108}
 
 In this appendix, Eqs.~\eqref{eq:20220609133608}, \eqref{eq:20220609133629} and

@@ -1,0 +1,623 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4. Discussion &#8212; Notes on the Lyapunov–Schmidt–Koiter asymptotic method</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"D": "\\mathrm{d}", "div": "\\operatorname{div}", "vdiv": "\\operatorname{\\mathbf{div}}", "E": "\\mathcal{E}", "grad": "\\operatorname{\\mathbf{grad}}", "tgrad": "\\operatorname{\\mathbfsf{grad}}", "order": ["#2^{(#1)}", 2, 1], "PI": "\\mathup{\\pi}", "vec": ["\\boldsymbol{\\mathrm{#1}}", 1], "reals": "\\mathbb{R}", "tens": ["\\boldsymbol{\\mathbfsf{#1}}", 1], "tr": "\\operatorname{tr}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5. The case of a single mode" href="single_mode.html" />
+    <link rel="prev" title="3. Analysis of bifurcated branches" href="bifurcated_branches.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Notes on the Lyapunov–Schmidt–Koiter asymptotic method</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Foreword
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notations.html">
+   1. Notations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="critical_point.html">
+   2. Analysis of the critical point
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bifurcated_branches.html">
+   3. Analysis of bifurcated branches
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Discussion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="single_mode.html">
+   5. The case of a single mode
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multilinear_algebra.html">
+   6. Some useful results from multilinear algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="asymptotic_expansions.html">
+   7. Asymptotic expansions along a bifurcated branch
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bibliography.html">
+   8. Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdiscussion.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/discussion.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#asymmetric-bifurcated-branch">
+   4.1. Asymmetric bifurcated branch
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-particular-case-of-symmetric-bifurcation">
+   4.2. A particular case of symmetric bifurcation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Discussion</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#asymmetric-bifurcated-branch">
+   4.1. Asymmetric bifurcated branch
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-particular-case-of-symmetric-bifurcation">
+   4.2. A particular case of symmetric bifurcation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="discussion">
+<h1><span class="section-number">4. </span>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">#</a></h1>
+<p>In this section, we discuss the two main cases of bifurcations, namely
+\emph{asymmetric} and \emph{symmetric}. In each case, we analyse the stability
+of the bifurcated branch.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The boundary case is unclear to me. I think that whether a bifurcation is
+symmetric or asymmetric should depend on the value of <span class="math notranslate nohighlight">\(\order[1]\lambda\)</span> only. If
+<span class="math notranslate nohighlight">\(\order[1]\lambda \neq 0\)</span>, the bifurcated branch is \emph{asymmetric}. Conversely, if
+<span class="math notranslate nohighlight">\(\order[1]\lambda = 0\)</span> and <span class="math notranslate nohighlight">\(\order[2]\lambda \neq 0\)</span>, then the bifurcated branch is
+\emph{symmetric}.</p>
+<p>In the literature, the discussion is placed on <span class="math notranslate nohighlight">\(E_{ijk}\)</span>. If
+<span class="math notranslate nohighlight">\(\order[1]\lambda \neq 0\)</span>, surely one of the <span class="math notranslate nohighlight">\(E_{ijk}\)</span> is non-zero also. However, I
+believe it is \emph{not} a sufficient condition: one of the bifurcated
+branches could be symmetric <span class="math notranslate nohighlight">\((\order[1]\lambda = 0)\)</span>, even if all <span class="math notranslate nohighlight">\(E_{ijk}\)</span> are not
+null. It is true however that \emph{all} bifurcated branches are symmetric if,
+and only if, <span class="math notranslate nohighlight">\(E_{ijk}=0\)</span> for all <span class="math notranslate nohighlight">\(i, j, k = 1, \ldots, m\)</span>. Therefore, the two cases
+that will be discussed below are: (1) one of the bifurcated branches is
+asymmetric and (2) all bifurcated branches are symmetric. The mixed case ``one
+of the bifurcated branches is symmetric’’ will \emph{not} be discussed.</p>
+</div>
+<section id="asymmetric-bifurcated-branch">
+<h2><span class="section-number">4.1. </span>Asymmetric bifurcated branch<a class="headerlink" href="#asymmetric-bifurcated-branch" title="Permalink to this headline">#</a></h2>
+<p>We first consider the situation where <span class="math notranslate nohighlight">\(\order[1]\lambda \neq 0\)</span> on the bifurcated
+branch. The bifurcation equation <a class="reference internal" href="bifurcated_branches.html#equation-eq20220524135036">(3.20)</a> shows that
+necessarily, <span class="math notranslate nohighlight">\(E_{ijk}\)</span> is not identically nul. This equation has at most
+<span class="math notranslate nohighlight">\((2^m - 1)\)</span> pairs of real solutions <span class="math notranslate nohighlight">\((\order[1]\lambda, \order[1]u)\)</span> et
+<span class="math notranslate nohighlight">\((- \order[1]\lambda, - \order[1]u)\)</span>; furthermore, multiplication by
+<span class="math notranslate nohighlight">\(\order[1]{\xi_i}\)</span> shows that</p>
+<div class="math notranslate nohighlight" id="equation-eq20220801085236">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-eq20220801085236" title="Permalink to this equation">#</a></span>\[  \order[1]\lambda = -\frac{E_{ijk} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}}{2 F_{ij} \order[1]{\xi_i} \order[1]{\xi_j}}.\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I can’t prove that the bifurcation equation <a class="reference internal" href="bifurcated_branches.html#equation-eq20220524135036">(3.20)</a> has at
+most <span class="math notranslate nohighlight">\((2^m - 1)\)</span> pairs of real solutions.</p>
+</div>
+<p>Along the bifurcated branch, we have
+<span class="math notranslate nohighlight">\(\lambda = \lambda_0 + \eta \order[1]\lambda + o(\eta)\)</span>, and <span class="math notranslate nohighlight">\(\eta\)</span> can be eliminated. In other words,
+<span class="math notranslate nohighlight">\(\eta=\lambda\)</span> (<span class="math notranslate nohighlight">\(\order[1]\lambda=1\)</span> and
+<span class="math notranslate nohighlight">\(\order[2]\lambda = \order[3]\lambda = \cdots = 0\)</span>) can be selected as a parameter. It is
+therefore possible to express the bifurcated branch as a function of <span class="math notranslate nohighlight">\(\lambda\)</span>:
+<span class="math notranslate nohighlight">\(u(\lambda)\)</span>. For example, combining Eqs. <a class="reference internal" href="bifurcated_branches.html#equation-eq20220524133816">(3.18)</a> and
+<a class="reference internal" href="bifurcated_branches.html#equation-eq20220531054247">(3.24)</a>, we find that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}[b]
+    \E_{, uu}[u(\eta), \lambda(\eta); \order[1]u, \order[1]u]
+    &amp;= \eta \bigl[\E_3(\lambda_0 ; \order[1]u, \order[1]u, \order[1]u)  + \order[1]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \order[1]u)\bigr] + o(\eta)\\
+    &amp;= - \eta \order[1]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \order[1]u) + o(\eta),
+  \end{aligned}\end{split}\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight" id="equation-eq20220819160235">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-eq20220819160235" title="Permalink to this equation">#</a></span>\[  \E_{, uu}[u(\lambda), \lambda; \order[1]u, \order[1]u] = -\bigl( \lambda - \lambda_0 \bigr) \dot{\E}_2(\lambda_0; \order[1]u, \order[1]u) + o(\lambda - \lambda_0).\]</div>
+<p>For <span class="math notranslate nohighlight">\(\lambda &lt; \lambda_0\)</span>, the above quantity is \emph{negative} (since
+<span class="math notranslate nohighlight">\(\dot{\E}_2\)</span> is negative definite). In other words</p>
+<p>\begin{center}
+\framebox{For asymmetric bifurcations, below the critical load, the bifurcated
+branch is unstable}
+\end{center}</p>
+<p>To investigate the stability above the critical load, we need to analyse the
+sign of the eigenvalues <span class="math notranslate nohighlight">\(\alpha\)</span> of the Hessian. At first order,
+<span class="math notranslate nohighlight">\(\alpha = \eta \order[1]\alpha + o(\eta)\)</span>, where <span class="math notranslate nohighlight">\(\order[1]\alpha\)</span> is an eigenvalue of
+<span class="math notranslate nohighlight">\((E_{ijk} \order[1]{\xi_k} + \order[1]\lambda F_{ij})\)</span>. Let <span class="math notranslate nohighlight">\(\alpha_{\min}\)</span> and
+<span class="math notranslate nohighlight">\(\alpha_{\max}\)</span> be the minimum and maximum eigenvalues of this second-order
+tensor. Three cases must be discussed
+\begin{enumerate}
+\item If <span class="math notranslate nohighlight">\(\alpha_{\min} \alpha_{\max} &gt; 0\)</span>, then
+<span class="math notranslate nohighlight">\((E_{ijk} \order[1]{\xi_k} + \order[1]\lambda F_{ij})\)</span> is positive or negative
+definite: all eigenvalues have the same sign, <span class="math notranslate nohighlight">\(\epsilon \in \{-1, +1\}\)</span>. Then the sign
+of the eigenvalues <span class="math notranslate nohighlight">\(\alpha\)</span> of the Hessian is <span class="math notranslate nohighlight">\(\epsilon \eta\)</span> and there is a stability switch
+at the critical load. Since the bifurcated branch is unstable \emph{below} the
+critical load, this means that it is \emph{stable} above the critical load.
+\item If <span class="math notranslate nohighlight">\(\alpha_{\min} \alpha_{\max} &lt; 0\)</span>, then the extremal eigenvalues of the Hessian
+are <span class="math notranslate nohighlight">\(\eta \alpha_{\min}\)</span> and <span class="math notranslate nohighlight">\(\eta \alpha_{\max}\)</span>, the product of which is
+<span class="math notranslate nohighlight">\(\eta^2 \alpha_{\min} \alpha_{\max} &lt; 0\)</span>. The bifurcated branch is \emph{unstable} for all
+values of <span class="math notranslate nohighlight">\(\lambda\)</span>.
+\item If <span class="math notranslate nohighlight">\(\alpha_{\min} \alpha_{\max} = 0\)</span>, the analysis is inconclusive.
+\end{enumerate}</p>
+<p>To close this section, it is observed that the dominant term of the
+expansion <a class="reference internal" href="bifurcated_branches.html#equation-eq20220525053600">(3.31)</a> of the potential energy along the bifurcated
+branch is of the third order in <span class="math notranslate nohighlight">\(\eta\)</span></p>
+<div class="math notranslate nohighlight">
+\[  \E[u(\eta), \lambda(\eta)] = \E\{u^{\ast}[\lambda(\eta)], \lambda(\eta)\} + \tfrac{1}{6} \order[1]\lambda \eta^3 F_{i j} \order[1]{\xi_i} \order[1]{\xi_j} + o(\eta^3).\]</div>
+<p>Eliminating <span class="math notranslate nohighlight">\(\lambda\)</span> and plugging expression <a class="reference internal" href="#equation-eq20220801085236">(4.1)</a> of
+<span class="math notranslate nohighlight">\(\order[1]\lambda\)</span> delivers the expression of the potential energy, where
+<span class="math notranslate nohighlight">\(\lambda\)</span> is the parameter</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}[b]
+    \E[u(\lambda), \lambda] &amp;= \E[u^{\ast}(\lambda), \lambda] + \frac{\bigl(\lambda - \lambda_0\bigr)^3}{6\bigl( \order[1]\lambda \bigr)^2} F_{i j} \order[1]{\xi_i} \order[1]{\xi_j} + o(\lambda^3)\\
+    &amp;= \E[u^{\ast}(\lambda), \lambda] + \frac{2 \bigl( F_{i j} \order[1]{\xi_i} \order[1]{\xi_j} \bigr)^3}{3 \bigl( E_{ijk} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \bigr)^2} \bigl(\lambda - \lambda_0\bigr)^3 + o(\lambda^3).
+  \end{aligned}\end{split}\]</div>
+<p>Recalling that <span class="math notranslate nohighlight">\(F_{i j} \order[1]{\xi_i} \order[1]{\xi_j} &lt; 0\)</span>, it is found that,
+above the critical load, the potential energy is \emph{smaller} along the
+bifurcated branch than along the fundamental branch.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As expected, the above expression does not depend on the scaling of
+<span class="math notranslate nohighlight">\(\order[1]u\)</span> (of the <span class="math notranslate nohighlight">\(\order[1]{\xi_i}\)</span>).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It has been shown in <a class="reference internal" href="critical_point.html#sec20220802061621"><span class="std std-numref">Section 2</span></a> that, when <span class="math notranslate nohighlight">\(E_{ijk}\)</span> is not
+identically null, the bifurcation point is \emph{unstable}.</p>
+</div>
+</section>
+<section id="a-particular-case-of-symmetric-bifurcation">
+<h2><span class="section-number">4.2. </span>A particular case of symmetric bifurcation<a class="headerlink" href="#a-particular-case-of-symmetric-bifurcation" title="Permalink to this headline">#</a></h2>
+<p>We now consider the case <span class="math notranslate nohighlight">\(E_{ijk}=0\)</span> for all <span class="math notranslate nohighlight">\(i, j, k = 1, \ldots, m\)</span>. Then [see
+Eq. <a class="reference internal" href="bifurcated_branches.html#equation-eq20220524135036">(3.20)</a>] <span class="math notranslate nohighlight">\(\order[1]\lambda = 0\)</span> on \emph{all} bifurcated
+branches. It is assumed that, on the bifurcated branch under consideration, the
+next term of the expansion of <span class="math notranslate nohighlight">\(\lambda\)</span> is non-zero: <span class="math notranslate nohighlight">\(\order[2]\lambda \neq 0\)</span>. The bifurcation
+is \emph{symmetric}, and the bifurcation equation <a class="reference internal" href="bifurcated_branches.html#equation-eq20220601070917">(3.23)</a>
+reduces to</p>
+<div class="math notranslate nohighlight" id="equation-eq20220801092222">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-eq20220801092222" title="Permalink to this equation">#</a></span>\[  \tfrac{1}{3} E_{ijkl} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}  + \order[2]\lambda F_{ij} \order[1]{\xi_j} = 0,\]</div>
+<p>which has at most <span class="math notranslate nohighlight">\((3^m - 1) / 2\)</span> pairs of real solutions
+<span class="math notranslate nohighlight">\((\order[2]\lambda, \order[1]u)\)</span> and <span class="math notranslate nohighlight">\((- \order[2]\lambda, - \order[1]u)\)</span>. Upon
+multiplication by <span class="math notranslate nohighlight">\(\order[1]{\xi_i}\)</span>, the above equation delivers the following
+expression of <span class="math notranslate nohighlight">\(\order[2]\lambda\)</span></p>
+<div class="math notranslate nohighlight" id="equation-eq20220801093236">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-eq20220801093236" title="Permalink to this equation">#</a></span>\[  \order[2]\lambda = -\frac{E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}}{3 F_{ij} \order[1]{\xi_i} \order[1]{\xi_j}}.\]</div>
+<p>Since <span class="math notranslate nohighlight">\(F_{ij} \order[1]{\xi_i} \order[1]{\xi_j} &lt; 0\)</span>, <span class="math notranslate nohighlight">\(\order[2]\lambda\)</span> has the same sign as
+<span class="math notranslate nohighlight">\(E_{ijkl}\order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\)</span>. In other words, if
+<span class="math notranslate nohighlight">\(E_{ijkl}\order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} &gt; 0\)</span>, (resp. <span class="math notranslate nohighlight">\(&lt;0\)</span>) then the bifurcated branch
+exists above (resp. below) the critical load <span class="math notranslate nohighlight">\(\lambda_0\)</span> only.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I can’t prove that the bifurcation equation <a class="reference internal" href="#equation-eq20220801092222">(4.3)</a> has at
+most <span class="math notranslate nohighlight">\((3^m - 1) / 2\)</span> pairs of real solutions.</p>
+</div>
+<p>Turning now to the eigenpairs of the Hessian of the energy along the bifurcated
+branch, Eq. <a class="reference internal" href="bifurcated_branches.html#equation-eq20220609133608">(3.28)</a> shows that <span class="math notranslate nohighlight">\(\order[1]\alpha = 0\)</span>. Then
+<span class="math notranslate nohighlight">\(\alpha = \order[2]\alpha \eta^2 / 2 + o(\eta^2)\)</span> and, from Eq. <a class="reference internal" href="bifurcated_branches.html#equation-eq20220616082923">(3.30)</a></p>
+<div class="math notranslate nohighlight">
+\[  \bigl(E_{ijkl} \order[1]{\xi_k} \order[1]{\xi_l} + \order[2]\lambda F_{ij} \bigr) \order[0]{\chi_j} = \order[2]\alpha \order[0]{\chi_i}.\]</div>
+<p>If <span class="math notranslate nohighlight">\((E_{ijkl} \order[1]{\xi_k} \order[1]{\xi_l} + \order[2]\lambda F_{ij} )\)</span> is positive
+definite, then the bifurcated branch is stable (note that, in that case, the
+bifurcated branch exists above the critical load only). If one of the
+eigenvalues of this tensor is <span class="math notranslate nohighlight">\(&lt;0\)</span>, then the bifurcated branch is unstable. The
+stability is undecided when all eigenvalues are <span class="math notranslate nohighlight">\(\geq 0\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that, from Eq. <a class="reference internal" href="#equation-eq20220801092222">(4.3)</a>,</p>
+<div class="math notranslate nohighlight">
+\[E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} + \order[2]\lambda F_{ij} \order[1]{\xi_i} \order[1]{\xi_j} = \tfrac{2}{3} E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\]</div>
+</div>
+<p>To conclude this section, it is observed that, when <span class="math notranslate nohighlight">\(\order[1]\lambda = 0\)</span>, the
+dominant term of the potential energy along the bifurcated branch is of the
+fourth order [see Eq. <a class="reference internal" href="bifurcated_branches.html#equation-eq20220525053600">(3.31)</a>]. Combining with
+Eq. <a class="reference internal" href="#equation-eq20220801093236">(4.4)</a>,</p>
+<div class="math notranslate nohighlight" id="equation-eq20220801094437">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-eq20220801094437" title="Permalink to this equation">#</a></span>\[\begin{split}  \begin{aligned}[b]
+    \E[u(\eta), \lambda(\eta)]
+    &amp;= \E\{u^{\ast}[\lambda(\eta)], \lambda(\eta)\} + \tfrac{1}{24} \eta^4 \bigl(E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}  + 6  \order[2]\lambda F_{ij} \order[1]{\xi_i} \order[1]{\xi_j}\bigr) + o(\eta^4)\\
+    &amp;= \E\{u^{\ast}[\lambda(\eta)], \lambda(\eta)\} - \tfrac{1}{24} \eta^4 E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} + o(\eta^4).
+  \end{aligned}\end{split}\]</div>
+<p>The expansion <span class="math notranslate nohighlight">\(\lambda = \lambda_0 + \order[2]\lambda \eta^2 / 2 + o(\eta^2)\)</span> can be inverted as follows</p>
+<div class="math notranslate nohighlight">
+\[  \eta^4 = \frac{4 \bigl(\lambda - \lambda_0\bigr)^2}{\bigl( \order[2]\lambda \bigr)^2} + o(\lambda^2) = \frac{36 \bigl( F_{ij} \order[1]{\xi_i} \order[1]{\xi_j} \bigr)^2}{\bigl( E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} \bigr)^2} \bigl( \lambda - \lambda_0 \bigr)^2\]</div>
+<p>and expression <a class="reference internal" href="#equation-eq20220801094437">(4.5)</a> reads</p>
+<div class="math notranslate nohighlight">
+\[  \E[u(\eta), \lambda(\eta)] = \E\{u^{\ast}[\lambda(\eta)], \lambda(\eta)\} - \frac{3 \bigl( F_{ij} \order[1]{\xi_i} \order[1]{\xi_j} \bigr)^2}{2 E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} } \bigl( \lambda - \lambda_0 \bigr)^2  + o(\lambda^2).\]</div>
+<p>Again, the above expression does not depend on the scaling of <span class="math notranslate nohighlight">\(\order[1]u\)</span> (of
+the <span class="math notranslate nohighlight">\(\order[1]{\xi_i}\)</span>). Note that, if
+<span class="math notranslate nohighlight">\(E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} &gt; 0\)</span>, then
+only loads that are greater than the critical load can be reached on the
+bifurcated branch, where the energy is lower than the fundamental branch.</p>
+<p>The above discussion simplifies considerably when there is only one buckling
+mode (<span class="math notranslate nohighlight">\(m = 1\)</span>). This is addressed in the next section.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="bifurcated_branches.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Analysis of bifurcated branches</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="single_mode.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>The case of a single mode</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Sébastien Brisard<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,882 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>7. Asymptotic expansions along a bifurcated branch &#8212; Notes on the Lyapunov–Schmidt–Koiter asymptotic method</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"D": "\\mathrm{d}", "div": "\\operatorname{div}", "vdiv": "\\operatorname{\\mathbf{div}}", "E": "\\mathcal{E}", "grad": "\\operatorname{\\mathbf{grad}}", "tgrad": "\\operatorname{\\mathbfsf{grad}}", "order": ["#2^{(#1)}", 2, 1], "PI": "\\mathup{\\pi}", "vec": ["\\boldsymbol{\\mathrm{#1}}", 1], "reals": "\\mathbb{R}", "tens": ["\\boldsymbol{\\mathbfsf{#1}}", 1], "tr": "\\operatorname{tr}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="8. Bibliography" href="bibliography.html" />
+    <link rel="prev" title="6. Some useful results from multilinear algebra" href="multilinear_algebra.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Notes on the Lyapunov–Schmidt–Koiter asymptotic method</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Foreword
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notations.html">
+   1. Notations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="critical_point.html">
+   2. Analysis of the critical point
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bifurcated_branches.html">
+   3. Analysis of bifurcated branches
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="discussion.html">
+   4. Discussion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="single_mode.html">
+   5. The case of a single mode
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multilinear_algebra.html">
+   6. Some useful results from multilinear algebra
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   7. Asymptotic expansions along a bifurcated branch
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bibliography.html">
+   8. Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fasymptotic_expansions.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/asymptotic_expansions.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principle-of-the-derivation">
+   7.1. Principle of the derivation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-to-the-residual">
+   7.2. Application to the residual
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-to-the-energy">
+   7.3. Application to the energy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-to-the-hessian-of-the-energy">
+   7.4. Application to the hessian of the energy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#asymptotic-expansions-of-the-eigenvalues-and-eigenvectors-of-the-hessian">
+   7.5. Asymptotic expansions of the eigenvalues and eigenvectors of the Hessian
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Asymptotic expansions along a bifurcated branch</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principle-of-the-derivation">
+   7.1. Principle of the derivation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-to-the-residual">
+   7.2. Application to the residual
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-to-the-energy">
+   7.3. Application to the energy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-to-the-hessian-of-the-energy">
+   7.4. Application to the hessian of the energy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#asymptotic-expansions-of-the-eigenvalues-and-eigenvectors-of-the-hessian">
+   7.5. Asymptotic expansions of the eigenvalues and eigenvectors of the Hessian
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="asymptotic-expansions-along-a-bifurcated-branch">
+<span id="sec20220905060440"></span><h1><span class="section-number">7. </span>Asymptotic expansions along a bifurcated branch<a class="headerlink" href="#asymptotic-expansions-along-a-bifurcated-branch" title="Permalink to this headline">#</a></h1>
+<p>In this section, the asymptotic expansions along the bifurcated branch of the
+energy, its residual and its hessian are derived.</p>
+<section id="principle-of-the-derivation">
+<span id="sec20220107121442"></span><h2><span class="section-number">7.1. </span>Principle of the derivation<a class="headerlink" href="#principle-of-the-derivation" title="Permalink to this headline">#</a></h2>
+<p>Introducing <span class="math notranslate nohighlight">\(\Lambda\)</span> and <span class="math notranslate nohighlight">\(U\)</span>, which are functions of <span class="math notranslate nohighlight">\(\eta\)</span> only,</p>
+<div class="math notranslate nohighlight" id="equation-eq20211112155446">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-eq20211112155446" title="Permalink to this equation">#</a></span>\[  \Lambda(\eta) = \lambda(\eta) - \lambda_0 = \eta \order[1]\lambda + \tfrac{1}{2} \eta^2 \order[2]\lambda + \tfrac{1}{6} \eta^3 \order[3]\lambda + \cdots,\]</div>
+<div class="math notranslate nohighlight" id="equation-eq20211112113028">
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-eq20211112113028" title="Permalink to this equation">#</a></span>\[  U(\eta) = u(\eta) - u^{\ast}[\lambda(\eta)] = \eta \order[1]u + \tfrac{1}{2} \eta^2 \order[2]u + \tfrac{1}{6} \eta^3 \order[3]u + \cdots,\]</div>
+<p>the functional <span class="math notranslate nohighlight">\(\mathcal{F}(u, \lambda)\)</span> is evaluated along the bifurcated branch, thus defining
+the function <span class="math notranslate nohighlight">\(f(\eta)\)</span></p>
+<div class="math notranslate nohighlight">
+\[  f(\eta) = F\{ u^{\ast} [\lambda_0 + \Lambda(\eta)] + U(\eta), \lambda_0 + \Lambda(\eta) \}.\]</div>
+<p>We seek the Taylor expansion of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(\eta = 0\)</span>, which requires the successive
+derivatives of <span class="math notranslate nohighlight">\(f\)</span>. To this end, it is convenient to introduce the function <span class="math notranslate nohighlight">\(F\)</span>
+defined as follows</p>
+<div class="math notranslate nohighlight">
+\[  F(\eta, \lambda) =\mathcal{F}[u^{\ast}(\lambda) + U(\eta), \lambda],\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\eta\)</span> are temporarily seen as independent variables. Since
+<span class="math notranslate nohighlight">\(f(\eta) = F[\eta, \lambda_0 + \Lambda(\eta)]\)</span>, the following identities hold</p>
+<div class="math notranslate nohighlight">
+\[  f'(\eta) = \partial_{\eta} F + \Lambda' \partial_{\lambda} F,\]</div>
+<div class="math notranslate nohighlight">
+\[  f''(\eta) = \partial_{\eta\eta}^2 F + 2\Lambda' \partial_{\eta\lambda}^2F + \Lambda'^2 \partial_{\lambda\lambda}^2 F + \Lambda'' \partial_{\lambda} F,\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}[b]
+    f'''(\eta) ={}
+    &amp; \partial_{\eta\eta\eta}^3 F + 3\Lambda' \partial_{\eta\eta\lambda}^3F + 3\Lambda'^2 \partial_{\eta\lambda\lambda}^3F + \lambda'^3 \partial_{\lambda\lambda\lambda}^3 F\\
+    &amp; + 3\Lambda'' \partial_{\eta\lambda}^2 F + 3\Lambda' \Lambda'' \partial_{\lambda \lambda}^2 F + \Lambda''' \partial_{\lambda} F,
+  \end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}[b]
+    f''''(\eta) ={}
+    &amp; \partial_{\eta\eta\eta\eta}^4 F + 4\Lambda' \partial_{\eta\eta\eta\lambda}^4F + 6\Lambda'^2 \partial_{\eta\eta\lambda\lambda}^4F + 4\Lambda'^3 \partial_{\eta\lambda\lambda\lambda}^4F + \Lambda'^4 \partial_{\lambda\lambda\lambda\lambda}^4 F\\
+    &amp; + 6\Lambda'' \partial_{\eta\eta\lambda}^3 F + 12\Lambda' \Lambda'' \partial_{\eta\lambda\lambda}^3F + 6\Lambda'^2 \Lambda'' \partial_{\lambda\lambda\lambda}^3 F\\
+    &amp; + 4 \Lambda''' \partial_{\eta\lambda}^2 F + \bigl( 3\Lambda''^2 + 4 \Lambda' \Lambda''' \bigr) \partial_{\lambda\lambda}^2 F + \lambda'''' \partial_{\lambda}F,
+  \end{aligned}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Lambda\)</span> and its derivatives are evaluated at <span class="math notranslate nohighlight">\(\eta\)</span>, whilie <span class="math notranslate nohighlight">\(F\)</span> and its partial
+derivatives are evaluated at <span class="math notranslate nohighlight">\([\eta, \lambda_0 + \Lambda(\eta)]\)</span>. At <span class="math notranslate nohighlight">\(\eta = 0\)</span>, the above relations
+read</p>
+<div class="math notranslate nohighlight" id="equation-eq20220107060454">
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-eq20220107060454" title="Permalink to this equation">#</a></span>\[  f'(0) = \partial_{\eta} F + \order[1]\lambda \partial_{\lambda} F,\]</div>
+<div class="math notranslate nohighlight" id="equation-eq20220107124311">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-eq20220107124311" title="Permalink to this equation">#</a></span>\[  f''(0) = \partial_{\eta\eta}^2 F + 2 \order[1]\lambda \partial_{\eta\lambda}^2 F + \bigl( \order[1]\lambda \bigr)^2 \partial_{\lambda\lambda}^2 F + \order[2]\lambda \partial_{\lambda} F,\]</div>
+<div class="math notranslate nohighlight" id="equation-eq20220107060500">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-eq20220107060500" title="Permalink to this equation">#</a></span>\[\begin{split}  \begin{aligned}[b]
+    f'''(0) ={}
+    &amp; \partial_{\eta\eta\eta}^3 F + 3 \order[1]\lambda \partial_{\eta\eta\lambda}^3 F + 3 \bigl( \order[1]\lambda \bigr)^2 \partial_{\eta\lambda\lambda}^3 F + \bigl( \order[1]\lambda \bigr)^3 \partial_{\lambda\lambda\lambda}^3 F\\
+    &amp; + 3 \order[2]\lambda \partial_{\eta\lambda}^2 F + 3 \order[1]\lambda \order[2]\lambda \partial_{\lambda\lambda}^2 F + \order[3]\lambda \partial_{\lambda} F,
+  \end{aligned}\\\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq20220602185935">
+<span class="eqno">(7.6)<a class="headerlink" href="#equation-eq20220602185935" title="Permalink to this equation">#</a></span>\[\begin{split}  \begin{aligned}[b]
+    f''''(0) ={}
+    &amp; \partial_{\eta\eta\eta\eta}^4F + 4 \order[1]\lambda \partial_{\eta\eta\eta\lambda}^4 F + 6 \bigl( \order[1]\lambda \bigr)^2 \partial_{\eta\eta\lambda\lambda}^4 F + 4 \bigl( \order[1]\lambda \bigr)^3 \partial_{\eta\lambda\lambda\lambda}^4 F + \bigl( \order[1]\lambda \bigr)^4 \partial_{\lambda\lambda\lambda\lambda}^4 F\\
+    &amp; + 6 \order[2]\lambda \partial_{\eta\eta\lambda}^3 F + 12 \order[1]\lambda \order[2]\lambda \partial_{\eta\lambda\lambda}^3 F + 6 \bigl( \order[1]\lambda \bigr)^2 \order[2]\lambda \partial_{\lambda\lambda\lambda}^3 F\\
+    &amp; + 4 \order[3]\lambda \partial_{\eta\lambda}^2 F + \bigl(3 \bigl( \order[2]\lambda \bigr)^2 + 4 \order[1]\lambda \order[3]\lambda\bigr) \partial_{\lambda\lambda}^2 F + \lambda_4 \partial_{\lambda} F,
+  \end{aligned}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(F\)</span> and its partial derivatives are now evaluated at
+<span class="math notranslate nohighlight">\((\eta = 0, \lambda = \lambda_0)\)</span>. The values of <span class="math notranslate nohighlight">\(f'(0)\)</span>, <span class="math notranslate nohighlight">\(f''(0), \ldots\)</span> thus found are used
+in the remainder of <a class="reference internal" href="#sec20220905060440"><span class="std std-numref">Section 7</span></a> for various choices of the
+functional <span class="math notranslate nohighlight">\(\mathcal F\)</span>.</p>
+</section>
+<section id="application-to-the-residual">
+<span id="sec20211112182000"></span><h2><span class="section-number">7.2. </span>Application to the residual<a class="headerlink" href="#application-to-the-residual" title="Permalink to this headline">#</a></h2>
+<p>In order to derive the Taylor expansion of the residual <span class="math notranslate nohighlight">\(\E_{,u}\)</span>, the method
+described in <a class="reference internal" href="#sec20220107121442"><span class="std std-numref">Section 7.1</span></a> is applied to</p>
+<div class="math notranslate nohighlight" id="equation-eq20220107054629">
+<span class="eqno">(7.7)<a class="headerlink" href="#equation-eq20220107054629" title="Permalink to this equation">#</a></span>\[  f(\eta) = \E_{, u} [u(\eta), \lambda(\eta); \hat{u}]
+  \quad \text{and} \quad
+  F(\eta, \lambda) = \E_{, u}[u^{\ast}(\lambda) + U(\eta), \lambda; \hat{u}],\]</div>
+<p>the test function <span class="math notranslate nohighlight">\(\hat{u}\)</span> being fixed. It is first observed that
+<span class="math notranslate nohighlight">\(F(0, \lambda) = \E_{, u} [u^{\ast} (\lambda), \lambda; \hat{u}] = 0\)</span>, since
+<span class="math notranslate nohighlight">\(u^{\ast}(\lambda)\)</span> is an equilibrium point for all <span class="math notranslate nohighlight">\(\lambda\)</span> close to
+<span class="math notranslate nohighlight">\(\lambda_0\)</span>. Upon derivation with respect to <span class="math notranslate nohighlight">\(\lambda\)</span>, we get</p>
+<div class="math notranslate nohighlight">
+\[  \frac{\partial^k F}{\partial \lambda^k}(0, \lambda) = 0 \quad \text{for all} \quad k \geq 0.\]</div>
+<p>From the definition <a class="reference internal" href="#equation-eq20220107054629">(7.7)</a> of <span class="math notranslate nohighlight">\(F\)</span>, we find successively</p>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta}F(\eta, \lambda) = \E_{, u u}[u^{\ast}(\lambda) + U(\eta), \lambda; U'(\eta), \hat{u}],\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}[b]
+    \partial_{\eta \eta}^2 F(\eta, \lambda) ={}
+    &amp; \E_{, uuu}[u^{\ast}(\lambda) + U(\eta), \lambda; U'(\eta), U'(\eta), \hat{u}]\\
+    &amp; + \E_{, uu} [u^{\ast}(\lambda) + U(\eta), \lambda; U''(\eta), \hat{u}],
+  \end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}[b]
+    \partial_{\eta\eta\eta}^3 F(\eta, \lambda) ={}
+    &amp; \E_{, uuuu}[u^{\ast}(\lambda) + U(\eta), \lambda; U'(\eta), U'(\eta), U'(\eta), \hat{u}]\\
+    &amp; + 3\E_{, u u u}[u^{\ast}(\lambda) + U(\eta), \lambda; U'(\eta), U''(\eta), \hat{u}]\\
+    &amp; + \E_{, uu}[u^{\ast}(\lambda) + U(\eta), \lambda; U'''(\eta), \hat{u}],
+  \end{aligned}\end{split}\]</div>
+<p>and, at <span class="math notranslate nohighlight">\(\eta = 0\)</span></p>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta}F(0, \lambda) = \E_2(\lambda; \order[1]u, \hat{u}),\]</div>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta\eta}^2 F(0, \lambda) = \E_3(\lambda; \order[1]u, \order[1]u, \hat{u}) + \E_2(\lambda; \order[2]u, \hat{u}),\]</div>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta\eta\eta}^3 F(0, \lambda) = \E_4(\lambda; \order[1]u, \order[1]u, \order[1]u, \hat{u}) + 3\E_3(\lambda; \order[1]u, \order[2]u, \hat{u}) + \E_2(\lambda; \order[3]u, \hat{u}).\]</div>
+<p>Upon derivation with respect to <span class="math notranslate nohighlight">\(\lambda\)</span>, we find successively</p>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta\lambda}^2 F(0, \lambda) = \dot{\E}_2(\lambda; \order[1]u, \hat{u}),\]</div>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta\lambda\lambda}^3 F(0, \lambda) = \ddot{\E}_2(\lambda; \order[1]u, \hat{u}),\]</div>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta\eta\lambda}^3 F(0, \lambda) = \dot{\E}_3(\lambda; \order[1]u, \order[1]u, \hat{u}) + \dot{\E_2}(\lambda; \order[2]u, \hat{u}).\]</div>
+<p>Upon insertion into Eqs. <a class="reference internal" href="#equation-eq20220107060454">(7.3)</a>–<a class="reference internal" href="#equation-eq20220602185935">(7.6)</a>, we
+get the following expressions of the sucessive derivatives of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(\eta=0\)</span></p>
+<div class="math notranslate nohighlight">
+\[  f'(0) = \E_2(\lambda_0; \order[1]u, \hat{u}),\]</div>
+<div class="math notranslate nohighlight">
+\[  f''(0) = \E_3(\lambda_0; \order[1]u, \order[1]u, \hat{u}) + \E_2(\lambda_0; \order[2]u, \hat{u}) + 2 \order[1]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \hat{u}),\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}[b]
+    f'''(0) ={}
+    &amp; \E_4(\lambda_0; \order[1]u, \order[1]u, \order[1]u, \hat{u}) + 3\E_3(\lambda_0; \order[1]u, \order[2]u, \hat{u}) + \E_2(\lambda_0 ; \order[3]u, \hat{u})\\
+    &amp; + 3\order[1]\lambda \dot{\E}_3(\lambda_0; \order[1]u, \order[1]u, \hat{u}) + 3\order[1]\lambda \dot{\E}_2(\lambda_0; \order[2]u, \hat{u})\\
+    &amp; + 3 \bigl( \order[1]\lambda \bigr)^2 \ddot{\E}_2(\lambda_0; \order[1]u, \hat{u}) + 3 \order[2]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \hat{u}),
+  \end{aligned}\end{split}\]</div>
+<p>which finally delivers the following expansion of the residual</p>
+<div class="math notranslate nohighlight" id="equation-eq20220107080901">
+<span class="eqno">(7.8)<a class="headerlink" href="#equation-eq20220107080901" title="Permalink to this equation">#</a></span>\[\begin{split}  \begin{gathered}[b]
+    \E_{, u}[u(\eta), \lambda(\eta)] ={} \eta \E_2(\lambda_0; \order[1]u, \hat{u}) + \tfrac{1}{2} \eta^2 \bigl[\E_3(\lambda_0; \order[1]u, \order[1]u, \hat{u})  + \E_2(\lambda_0; \order[2]u, \hat{u})\\
+    {} + 2 \order[1]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \hat{u})\bigr] + \tfrac{1}{6} \eta^3 \bigl[ \E_4(\lambda_0; \order[1]u, \order[1]u, \order[1]u, \hat{u}) + 3\E_3(\lambda_0; \order[1]u, \order[2]u, \hat{u})\\
+    {} + \E_2(\lambda_0; \order[3]u, \hat{u}) + 3\order[1]\lambda \dot{\E}_3(\lambda_0; \order[1]u, \order[1]u, \hat{u}) + 3\order[1]\lambda \dot{\E}_2(\lambda_0; \order[2]u, \hat{u})\\
+    {} + 3 \bigl( \order[1]\lambda \bigr)^2 \ddot{\E}_2(\lambda_0; \order[1]u, \hat{u}) + 3 \order[2]\lambda \dot{\E}_2(\lambda_0 ; \order[1]u, \hat{u}) \bigr] + o(\eta^3),
+  \end{gathered}\end{split}\]</div>
+<p>up to third-order terms.</p>
+</section>
+<section id="application-to-the-energy">
+<span id="sec20220525053434"></span><h2><span class="section-number">7.3. </span>Application to the energy<a class="headerlink" href="#application-to-the-energy" title="Permalink to this headline">#</a></h2>
+<p>The method described in <a class="reference internal" href="#sec20220107121442"><span class="std std-numref">Section 7.1</span></a> is applied to the energy
+difference between the fundamental and bifurcated branches</p>
+<div class="math notranslate nohighlight">
+\[  F(\eta, \lambda) = \E[u^{\ast}(\lambda) + U(\eta), \lambda] - \E[u^{\ast}(\lambda), \lambda]
+  \quad \text{et} \quad
+  f(\eta) = F [\eta, \lambda_0 + \Lambda(\eta)].\]</div>
+<p>Observing that <span class="math notranslate nohighlight">\(F(0, \lambda) = 0\)</span> for all <span class="math notranslate nohighlight">\(\lambda\)</span>, we first get</p>
+<div class="math notranslate nohighlight">
+\[  \frac{\partial^k F}{\partial \lambda^k}(0, \lambda) = 0 \quad \text{for all} \quad k \geq 0,\]</div>
+<p>while the partial derivatives of <span class="math notranslate nohighlight">\(F\)</span> with respect to <span class="math notranslate nohighlight">\(\eta\)</span> read</p>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta} F(\eta, \lambda) = \E_{, u}(U'),\]</div>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta\eta}^2 F(\eta, \lambda) = \E_{, uu} (U', U') + \E_{, u} (U''),\]</div>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta\eta\eta}^3 F(\eta, \lambda) = \E_{, uuu}(U', U', U') + 3\E_{, uu}(U', U'') + \E_{, u}(U'''),\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}[b]
+    \partial_{\eta\eta\eta\eta}^4 F ={}
+    &amp; \E_{, uuuu}(U', U', U', U') + 6\E_{,uuu}(U', U', U'')\\
+    &amp; + 3\E_{, uu}(U'', U'') + 4\E_{, uu}(U', U''') + \E_{, u}(U''''),
+  \end{aligned}\end{split}\]</div>
+<p>where the partial derivatives of <span class="math notranslate nohighlight">\(\E\)</span> are evaluated at
+<span class="math notranslate nohighlight">\([u^{\ast}(\lambda) + U(\eta), \lambda]\)</span>, while the derivatives of <span class="math notranslate nohighlight">\(U\)</span> are evaluated at
+<span class="math notranslate nohighlight">\(\eta\)</span>. For <span class="math notranslate nohighlight">\(\eta = 0\)</span>, observing that <span class="math notranslate nohighlight">\(\E_{, u}[u^{\ast}(\lambda), \lambda] = 0\)</span></p>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta} F(0, \lambda) = 0,\]</div>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta\eta}^2 F(0, \lambda) =\E_2(\lambda ; \order[1]u, \order[1]u),\]</div>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta\eta\eta}^3 F(0, \lambda) = \E_3(\lambda; \order[1]u, \order[1]u, \order[1]u) + 3\E_2(\lambda; \order[1]u, \order[2]u),\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}[b]
+    \partial_{\eta\eta\eta\eta}^4 F(\eta, \lambda) ={} &amp; \E_4(\lambda; \order[1]u, \order[1]u, \order[1]u, \order[1]u) + 6\E_3(\lambda; \order[1]u, \order[1]u, \order[2]u)\\
+    &amp; + 3\E_2(\lambda; \order[2]u, \order[2]u) + 4\E_2(\lambda; \order[1]u, \order[3]u),
+  \end{aligned}\end{split}\]</div>
+<p>and, upon derivation with respect to <span class="math notranslate nohighlight">\(\lambda\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{gathered}
+    \partial_{\eta\lambda}^2 F(0, \lambda) = 0,\\
+    \partial_{\eta\eta\lambda}^3 F(0, \lambda) = \dot{\E}_2(\lambda; \order[1]u, \order[1]u),\\
+    \partial_{\eta\lambda\lambda}^3 F(0, \lambda) = 0,\\
+  \end{gathered}
+  \qquad
+  \begin{gathered}
+    \partial_{\eta\eta\eta\lambda}^4 F(0, \lambda) = \dot{\E}_3(\lambda; \order[1]u, \order[1]u, \order[1]u) + 3\dot{\E}_2(\lambda; \order[1]u, \order[2]u),\\
+    \partial_{\eta\eta\lambda\lambda}^4 F(0, \lambda) = \ddot{\E}_2(\lambda; \order[1]u, \order[1]u),\\
+    \partial_{\eta\lambda\lambda\lambda}^4 F(0, \lambda) = 0
+  \end{gathered}\end{split}\]</div>
+<p>and finally</p>
+<div class="math notranslate nohighlight">
+\[  f'(0) = 0,\]</div>
+<div class="math notranslate nohighlight">
+\[  f''(0) = \E_2(\lambda_0; \order[1]u, \order[1]u),\]</div>
+<div class="math notranslate nohighlight">
+\[  f'''(0) =\E_3(\lambda_0; \order[1]u, \order[1]u, \order[1]u) + 3\E_2(\lambda_0; \order[1]u, \order[2]u) + 3\order[1]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \order[1]u),\]</div>
+<div class="math notranslate nohighlight" id="equation-eq20220905063614">
+<span class="eqno">(7.9)<a class="headerlink" href="#equation-eq20220905063614" title="Permalink to this equation">#</a></span>\[\begin{split}  \begin{aligned}[b]
+    f''''(0) ={}
+    &amp; \E_4(\lambda_0; \order[1]u, \order[1]u, \order[1]u, \order[1]u) + 6\E_3(\lambda_0; \order[1]u, \order[1]u, \order[2]u) + 3\E_2(\lambda_0; \order[2]u, \order[2]u)\\
+    &amp; + 4\E_2(\lambda_0; \order[1]u, \order[3]u) + 4 \order[1]\lambda \dot{\E}_3(\lambda_0; \order[1]u, \order[1]u, \order[1]u) + 12 \order[1]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \order[2]u)\\
+    &amp; + 6( \order[1]\lambda )^2 \ddot{\E}_2(\lambda_0; \order[1]u, \order[1]u) + 6\order[2]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \order[1]u).
+  \end{aligned}\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\order[1]u \in V\)</span>, we have <span class="math notranslate nohighlight">\(\E_2(\lambda_0; \order[1]u, \order[k]u) = 0\)</span> for
+<span class="math notranslate nohighlight">\(k = 1, 2, 3\)</span>. Therefore <span class="math notranslate nohighlight">\(f''(0)=0\)</span> and, using Eq. <a class="reference internal" href="bifurcated_branches.html#equation-eq20220524133816">(3.18)</a></p>
+<div class="math notranslate nohighlight" id="equation-eq20220601055448">
+<span class="eqno">(7.10)<a class="headerlink" href="#equation-eq20220601055448" title="Permalink to this equation">#</a></span>\[  f'''(0) = \order[1]\lambda F_{ij} \order[1]{\xi_i} \order[1]{\xi_j},\]</div>
+<p>Turning now to <span class="math notranslate nohighlight">\(f''''(0)\)</span>, we plug the decompositions <a class="reference internal" href="bifurcated_branches.html#equation-eq20220524133944">(3.19)</a>
+and <a class="reference internal" href="bifurcated_branches.html#equation-eq20220524134613">(3.22)</a> of <span class="math notranslate nohighlight">\(\order[1]u\)</span> and <span class="math notranslate nohighlight">\(\order[2]u\)</span> successively into
+each term of Eq. <a class="reference internal" href="#equation-eq20220905063614">(7.9)</a>.</p>
+<div class="math notranslate nohighlight">
+\[  \E_3(\lambda_0; \order[1]u, \order[1]u, \order[2]u) = \E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[2]{\xi_k} + \E_3(v_i, v_j, w_{k l}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} + 2\order[1]\lambda \E_3(v_i, v_j, w_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}\]</div>
+<p>using Eq. <a class="reference internal" href="notations.html#equation-eq20220519164523">(1.6)</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}
+  \E_3(\lambda_0; \order[1]u, \order[1]u, \order[2]u) ={} &amp; \E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[2]{\xi_k} + \E_3(v_i, v_j, w_{k l}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} - 2\order[1]\lambda \E_2(w_{ij}, w_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k},\\
+    ={} &amp; \E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[2]{\xi_k} + \E_3(v_i, v_j, w_{kl}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
+    &amp; - 2\order[1]\lambda \E_2(w_{i}, w_{jk}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}
+  \end{aligned}\end{split}\]</div>
+<p>and, from Eq. <a class="reference internal" href="notations.html#equation-eq20220524134525">(1.5)</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}
+    \E_3(\lambda_0; \order[1]u, \order[1]u, \order[2]u) ={} &amp; \E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[2]{\xi_k} + \E_3(v_i, v_j, w_{kl}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
+    &amp; + 2 \order[1]\lambda \dot{\E}_2(v_{i}, w_{jk}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}.
+  \end{aligned}\end{split}\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}[b]
+    \E_2(\order[2]u, \order[2]u)
+    ={} &amp; \E_2(\order[2]{\xi_i} v_i + \order[1]{\xi_i} \order[1]{\xi_j} w_{i j} + 2\order[1]\lambda \order[1]{\xi_i} w_i, \order[2]{\xi_k} v_k + \order[1]{\xi_k} \order[1]{\xi_l} w_{k l} + 2\order[1]\lambda \order[1]{\xi_k} w_k)\\
+    ={} &amp; \E_2(\order[1]{\xi_i} \order[1]{\xi_j} w_{i j} + 2 \order[1]\lambda \order[1]{\xi_i} w_i, \order[1]{\xi_k} \order[1]{\xi_l} w_{k l} + 2 \order[1]\lambda \order[1]{\xi_k} w_k)\\
+    ={} &amp; \E_2(w_{i j}, w_{k l}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} + 4 \order[1]\lambda \E_2(w_i, w_{j k}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}\\
+    &amp; + 4 ( \order[1]\lambda )^2 \E_2(w_i, w_j) \order[1]{\xi_i} \order[1]{\xi_j}\\
+    ={} &amp; \E_2(w_{i j}, w_{k l}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} + 4 \order[1]\lambda \E_2(w_i, w_{j k}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}\\
+    &amp;+ 2 ( \order[1]\lambda )^2 \bigl[\E_2(w_i, w_j) + \E_2(w_j, w_i)\bigr] \order[1]{\xi_i} \order[1]{\xi_j}\\
+    ={} &amp; -\E_3(v_i, v_j, w_{k l}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} - 4 \order[1]\lambda \dot{\E}_2 (v_i, w_{j k}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}\\
+    &amp; - 2 ( \order[1]\lambda )^2 \bigl[\dot{\E}_2(v_i, w_j) + \dot{\E}_2(v_j, w_i)\bigr] \order[1]{\xi_i} \order[1]{\xi_j}
+  \end{aligned}\end{split}\]</div>
+<p>finally</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}[b]
+    \dot{\E}_2(\order[1]u, \order[2]u)
+    ={} &amp; \dot{\E}_2 (v_i, v_j) \order[1]{\xi_i} \order[2]{\xi_j} + \dot{\E}_2(v_i, w_{j k}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} + 2\order[1]\lambda \dot{\E}_2(v_i, w_j) \order[1]{\xi_i} \order[1]{\xi_j}\\
+    ={} &amp; \dot{\E}_2(v_i, v_j) \order[1]{\xi_i} \order[2]{\xi_j} + \dot{\E}_2(v_i, w_{j k}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} + \order[1]\lambda [\dot{\E}_2(v_i, w_j) + \dot{\E}_2(v_j, w_i)] \order[1]{\xi_i} \order[1]{\xi_j}.
+  \end{aligned}\end{split}\]</div>
+<p>Gathering the above results</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}[b]
+    f''''(0) ={}
+    &amp; \bigl[ \E_4(v_i, v_j, v_k , v_l) + 3\E_3(v_i, v_j, w_{k l}) \bigr] \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
+    &amp; + 4 \order[1]\lambda \bigl[\dot{\E}_3(v_i, v_j, v_k) + 3 \dot{\E}_2(v_i, w_{j k})\bigr] \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}\\
+    &amp; + \bigl\{6 ( \order[1]\lambda )^2 \bigl[ \ddot{\E}_2 (v_i, v_j) + \dot{\E}_2(v_i, w_j) + \dot{\E}_2(v_j, w_i) \bigr] + 6\order[2]\lambda \dot{\E}_2(v_i, v_j) \bigr\} \order[1]{\xi_i} \order[1]{\xi_j}\\
+    &amp; + 6\bigl[ \underbrace{\E_3(v_i, v_j, v_k) \order[1]{\xi_j} \order[1]{\xi_k} + 2 \order[1]\lambda \dot{\E}_2(v_i, v_j) \order[1]{\xi_j}}_{ = 0} \bigr] \order[2]{\xi_i},
+  \end{aligned}\end{split}\]</div>
+<p>where we have used Eq. <a class="reference internal" href="bifurcated_branches.html#equation-eq20220524135036">(3.20)</a>. Upon introduction of the tensors <span class="math notranslate nohighlight">\(E_{ijkl}\)</span>, <span class="math notranslate nohighlight">\(\mathring{E}_{ijk}\)</span>, <span class="math notranslate nohighlight">\(F_{ij}\)</span> and
+<span class="math notranslate nohighlight">\(\mathring{F}_{ij}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-eq20220601055512">
+<span class="eqno">(7.11)<a class="headerlink" href="#equation-eq20220601055512" title="Permalink to this equation">#</a></span>\[  f''''(0) = E_{i j k l} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} + 4 \order[1]\lambda \mathring{E}_{i j k} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} + 6 \bigl[ ( \order[1]\lambda )^2 \mathring{F}_{i j} + \order[2]\lambda F_{i j}\bigr] \order[1]{\xi_i} \order[1]{\xi_j},\]</div>
+<p>which finally leads to the Taylor expansion <a class="reference internal" href="bifurcated_branches.html#equation-eq20220525053600">(3.31)</a>.</p>
+</section>
+<section id="application-to-the-hessian-of-the-energy">
+<span id="sec20220616055207"></span><h2><span class="section-number">7.4. </span>Application to the hessian of the energy<a class="headerlink" href="#application-to-the-hessian-of-the-energy" title="Permalink to this headline">#</a></h2>
+<p>The method described in <a class="reference internal" href="#sec20220107121442"><span class="std std-numref">Section 7.1</span></a> is now applied to
+<span class="math notranslate nohighlight">\(f(\eta) = F [\eta, \lambda_0 + \Lambda(\eta)]\)</span>, with</p>
+<div class="math notranslate nohighlight">
+\[  F(\eta, \lambda) = \E_{, u u} [u^{\ast}(\lambda) + U(\eta), \lambda; \hat{u}, \hat{v}].\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{u}, \hat{v} \in U\)</span> are fixed. This will deliver a Taylor expansion
+of the hessian of the energy, <span class="math notranslate nohighlight">\(\E_{,uu}\)</span>. It is first observed that
+<span class="math notranslate nohighlight">\(F(0, \lambda) = \E_2(\lambda; \hat{u}, \hat{v})\)</span> and, upon derivation with respect to <span class="math notranslate nohighlight">\(\lambda\)</span></p>
+<div class="math notranslate nohighlight">
+\[  \partial_{\lambda} F(0, \lambda) = \dot{\E}_2(\lambda; \hat{u}, \hat{v})
+  \quad \text{and} \quad
+  \partial_{\lambda\lambda}^2 F(0, \lambda) = \ddot{\E}_2(\lambda; \hat{u}, \hat{v}).\]</div>
+<p>Successive differentiation of the definition of <span class="math notranslate nohighlight">\(F\)</span> with respect to <span class="math notranslate nohighlight">\(\eta\)</span> also
+leads to</p>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta} F(\eta, \lambda) = \E_{, uuu}(U', \hat{u}, \hat{v}),\]</div>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta\eta}^2 F(\eta, \lambda) = \E_{, uuuu}(U', U', \hat{u}, \hat{v}) + \E_{, uuu}(U'', \hat{u}, \hat{v}),\]</div>
+<p>where the differentials of <span class="math notranslate nohighlight">\(\E\)</span> are evaluated at
+<span class="math notranslate nohighlight">\([u^{\ast}(\lambda) + U(\eta), \lambda]\)</span>, while the dérivatives of <span class="math notranslate nohighlight">\(U\)</span> are evaluated at
+<span class="math notranslate nohighlight">\(y\)</span>. At <span class="math notranslate nohighlight">\(\eta = 0\)</span>, the above relations read</p>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta} F(0, \lambda) = \E_3(\lambda; \order[1]u, \hat{u}, \hat{v}),\]</div>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta\eta}^2 F(0, \lambda) = \E_4(\lambda ; \order[1]u, \order[1]u, \hat{u}, \hat{v}) + \E_3(\lambda; \order[2]u, \hat{u}, \hat{v}),\]</div>
+<p>and, upon differentiation with respect to <span class="math notranslate nohighlight">\(\lambda\)</span></p>
+<div class="math notranslate nohighlight">
+\[  \partial_{\eta \lambda}^2 F(0, \lambda) = \dot{\E}_3(\lambda; \order[1]u, \hat{u}, \hat{v}).\]</div>
+<p>The Taylor expansion <a class="reference internal" href="bifurcated_branches.html#equation-eq20220531054247">(3.24)</a> of the hessian is finally
+retrieved by plugging the above results into
+expressions <a class="reference internal" href="#equation-eq20220107060454">(7.3)</a> and <a class="reference internal" href="#equation-eq20220107124311">(7.4)</a> of the
+derivatives of <span class="math notranslate nohighlight">\(f\)</span></p>
+<div class="math notranslate nohighlight">
+\[  f'(0) = \E_3(\lambda_0; \order[1]u, \hat{u}, \hat{v}) + \order[1]\lambda \dot{\E}_2(\lambda_0; \hat{u}, \hat{v}),\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}[b]
+    f''(0) = {} &amp; \E_4(\lambda_0; \order[1]u, \order[1]u, \hat{u}, \hat{v}) + \E_3(\lambda_0; \order[2]u, \hat{u}, \hat{v}) + 2\order[1]\lambda \dot{\E}_3(\lambda_0; \order[1]u, \hat{u}, \hat{v})\\
+                &amp; + ( \order[1]\lambda )^2 \ddot{\E}_2(\lambda_0; \hat{u}, \hat{v}) + \order[2]\lambda \dot{\E}_2(\lambda_0; \hat{u}, \hat{v}).
+  \end{aligned}\end{split}\]</div>
+</section>
+<section id="asymptotic-expansions-of-the-eigenvalues-and-eigenvectors-of-the-hessian">
+<span id="sec20220616074108"></span><h2><span class="section-number">7.5. </span>Asymptotic expansions of the eigenvalues and eigenvectors of the Hessian<a class="headerlink" href="#asymptotic-expansions-of-the-eigenvalues-and-eigenvectors-of-the-hessian" title="Permalink to this headline">#</a></h2>
+<p>In this appendix, Eqs. <a class="reference internal" href="bifurcated_branches.html#equation-eq20220609133608">(3.28)</a>, <a class="reference internal" href="bifurcated_branches.html#equation-eq20220609133629">(3.29)</a> and
+<a class="reference internal" href="bifurcated_branches.html#equation-eq20220616082923">(3.30)</a> are derived. The postulated
+expansions <a class="reference internal" href="bifurcated_branches.html#equation-eq20220617064633">(3.26)</a> are plugged into the asymptotic expansion
+<a class="reference internal" href="bifurcated_branches.html#equation-eq20220531054247">(3.24)</a> of the Hessian on the one hand</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}[b]
+    \E_{, uu} [u(\eta), \lambda(\eta); x, \hat{u}] ={}
+    &amp; \E_2(\order[0]x, \hat{u}) + \eta \bigl[ \E_2(\order[1]x, \hat{u}) + \E_3(\order[1]u, \order[0]x, \hat{u}) + \order[1]\lambda \dot{\E}_2(\order[0]x, \hat{u})\bigr]\\
+    &amp; + \tfrac{1}{2} \eta^2 \bigl[\E_2(\order[2]x, \hat{u}) + 2\E_3(\order[1]u, \order[1]x, \hat{u}) + 2 \order[1]\lambda \dot{\E}_2(\order[1]x, \hat{u})\\
+    &amp; + \E_4(\order[1]u, \order[1]u, \order[0]x, \hat{u}) + \E_3(\order[2]u, \order[0]x, \hat{u}) + 2\order[1]\lambda \dot{\E}_3(\order[1]u, \order[0]x, \hat{u})\\
+    &amp; + ( \order[1]\lambda )^2 \ddot{\E}_2(\order[0]x, \hat{u}) + \order[2]\lambda \dot{\E}_2(\order[0]x, \hat{u}) \bigr] + o(\eta^2)
+  \end{aligned}\end{split}\]</div>
+<p>(where the <span class="math notranslate nohighlight">\(\E_k\)</span> and <span class="math notranslate nohighlight">\(\dot{\E}_k\)</span> are all evaluated at <span class="math notranslate nohighlight">\(\lambda=\lambda_0\)</span>) and into the
+scalar product <span class="math notranslate nohighlight">\(\alpha \langle x, \hat{u} \rangle\)</span> on the other hand</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{aligned}[b]
+    \alpha \langle x, \hat{u} \rangle ={}
+    &amp; \order[0]\alpha \langle \order[0]x, \hat{u} \rangle + \eta \bigl(\order[1]\alpha \langle \order[0]x, \hat{u} \rangle + \order[0]\alpha \langle \order[1]x, \hat{u} \rangle\bigr)\\
+    &amp; + \tfrac{1}{2} \eta^2 \bigl(\order[0]\alpha \langle \order[2]x, \hat{u} \rangle + 2 \order[1]\alpha \langle \order[1]x, \hat{u} \rangle + \order[2]\alpha \langle \order[0]x, \hat{u} \rangle\bigr) + o(\eta^2).
+  \end{aligned}\end{split}\]</div>
+<p>Equating both expressions for all <span class="math notranslate nohighlight">\(\hat{u} \in U\)</span> [see
+Eq. <a class="reference internal" href="bifurcated_branches.html#equation-eq20220617074949">(3.25)</a>] leads to three variational problems (for the
+<span class="math notranslate nohighlight">\(\eta^0\)</span>, <span class="math notranslate nohighlight">\(\eta^1\)</span> and <span class="math notranslate nohighlight">\(\eta^2\)</span> terms) that are discussed below.</p>
+<p>\paragraph{Variational problem of order 0} Find <span class="math notranslate nohighlight">\(\order[0]x \in U\)</span> and <span class="math notranslate nohighlight">\(\order[0]\alpha\in\reals\)</span> such
+that, for all <span class="math notranslate nohighlight">\(\hat{u} \in U\)</span></p>
+<div class="math notranslate nohighlight">
+\[  \E_2(\lambda_0; \order[0]x, \hat{u}) = \order[0]\alpha \langle \order[0]x, \hat{u} \rangle.\]</div>
+<p>The above equation shows that <span class="math notranslate nohighlight">\((\order[0]\alpha, \order[0]x)\)</span> is an eigenpair of
+<span class="math notranslate nohighlight">\(\E_2(\lambda_0)\)</span>. As discussed in <a class="reference internal" href="bifurcated_branches.html#sec20220617075558"><span class="std std-numref">Section 3</span></a>, only the case
+<span class="math notranslate nohighlight">\(\order[0]\alpha = 0\)</span> is relevant. Then <span class="math notranslate nohighlight">\(\order[0]x \in V\)</span>, which is expressed by the
+expansion <a class="reference internal" href="bifurcated_branches.html#equation-eq20220904160057">(3.27)</a> of <span class="math notranslate nohighlight">\(\order[0]x\)</span>.</p>
+<p>\paragraph{Variational problem of order 1} Find <span class="math notranslate nohighlight">\(\order[1]x \in U\)</span> and <span class="math notranslate nohighlight">\(\order[1]\alpha\in\reals\)</span> such
+that, for all <span class="math notranslate nohighlight">\(\hat{u} \in U\)</span></p>
+<div class="math notranslate nohighlight" id="equation-eq20220609131953">
+<span class="eqno">(7.12)<a class="headerlink" href="#equation-eq20220609131953" title="Permalink to this equation">#</a></span>\[  \E_2(\lambda_0; \order[1]x, \hat{u}) + \E_3(\lambda_0; \order[1]u, \order[0]x, \hat{u}) + \order[1]\lambda \dot{\E}_2(\lambda_0; \order[0]x, \hat{u})
+  = \order[1]\alpha \langle \order[0]x, \hat{u} \rangle,\]</div>
+<p>or, equivalently, plugging the expansions <a class="reference internal" href="bifurcated_branches.html#equation-eq20220524133944">(3.19)</a> and
+<a class="reference internal" href="bifurcated_branches.html#equation-eq20220609133608">(3.28)</a> of <span class="math notranslate nohighlight">\(\order[1]u\)</span> and <span class="math notranslate nohighlight">\(\order[0]x\)</span> in the <span class="math notranslate nohighlight">\(v_i\)</span> basis</p>
+<div class="math notranslate nohighlight" id="equation-eq20220617080547">
+<span class="eqno">(7.13)<a class="headerlink" href="#equation-eq20220617080547" title="Permalink to this equation">#</a></span>\[  \E_2(\lambda_0; \order[1]x, \hat{u}) + \E_3(\lambda_0; v_j, v_k, \hat{u}) \order[0]{\chi_j} \order[1]{\xi_k} + \order[1]\lambda \dot{\E}_2(\lambda_0; v_j, \hat{u}) \order[0]{\chi_j}
+  = \order[1]\alpha \order[0]{\chi_j} \langle v_j, \hat{u} \rangle.\]</div>
+<p>For <span class="math notranslate nohighlight">\(\hat{u} = v_i\)</span>, observing that <span class="math notranslate nohighlight">\(\langle v_i, v_j \rangle = \delta_{ij}\)</span> since
+<span class="math notranslate nohighlight">\((v_i)\)</span> is orthonormal, the above equation reads</p>
+<div class="math notranslate nohighlight">
+\[  \bigl[\E_3(\lambda_0; v_i, v_j, v_k) \order[1]{\xi_k} + \order[1]\lambda \dot{\E}_2(\lambda_0; v_i, v_j)\bigr] \order[0]{\chi_j} = \order[1]\alpha \order[0]{\chi_i},\]</div>
+<p>which reduces to Eq. <a class="reference internal" href="bifurcated_branches.html#equation-eq20220609133608">(3.28)</a>.</p>
+<p>The test function is now picked in <span class="math notranslate nohighlight">\(W = V^\perp\)</span>, and <span class="math notranslate nohighlight">\(\order[1]x\)</span> is decomposed as
+the sum of its projections onto <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span>:
+<span class="math notranslate nohighlight">\(\order[1]x = \order[1]{\chi_i} v_i + \order[1]{y}\)</span>, where <span class="math notranslate nohighlight">\(\order[1]y \in
+W\)</span>. Eq. <a class="reference internal" href="#equation-eq20220617080547">(7.13)</a> then delivers the following variational
+problem: find <span class="math notranslate nohighlight">\(\order[1]y \in W\)</span> such that, for all <span class="math notranslate nohighlight">\(\hat{w} \in W\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[  \E_2(\order[1]y, \hat{w}) + \E_3(v_i, v_j, \hat{w}) \order[0]{\chi_i} \order[1]{\xi_j} + \order[1]\lambda \dot{\E}_2(v_i, \hat{w}) \order[0]{\chi_i} = 0,\]</div>
+<p>(observe that <span class="math notranslate nohighlight">\(\langle v_j, \hat{w} \rangle = 0\)</span> since <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are orthogonal
+subspaces). The solution to the above problem is expressed as a linear
+combination of the <span class="math notranslate nohighlight">\(w_i\)</span> and <span class="math notranslate nohighlight">\(w_{ij}\)</span> defined by the variational problems
+<a class="reference internal" href="notations.html#equation-eq20220524134525">(1.5)</a> and <a class="reference internal" href="notations.html#equation-eq20220519164523">(1.6)</a>, respectively:
+<span class="math notranslate nohighlight">\(\order[1]y = \order[0]{\chi_i} \order[1]{\xi_j} w_{i j} + \order[1]\lambda \order[0]{\chi_i}
+w_i\)</span>, and the decomposition <a class="reference internal" href="bifurcated_branches.html#equation-eq20220609133629">(3.29)</a> is retrieved.</p>
+<p>\paragraph{Variational problem of order 2} For all <span class="math notranslate nohighlight">\(\hat{u} \in U\)</span>,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{multline*}
+    \E_2(\lambda_0; \order[2]x, \hat{u})
+    + 2\E_3(\lambda_0; \order[1]u, \order[1]x, \hat{u})
+    + 2 \order[1]\lambda \dot{\E}_2(\lambda_0; \order[1]x, \hat{u})\\
+    + \E_4(\lambda_0; \order[1]u, \order[1]u, \order[0]x, \hat{u})
+    + \E_3(\lambda_0; \order[2]u, \order[0]x, \hat{u})
+    + 2\order[1]\lambda \dot{\E}_3(\lambda_0; \order[1]u, \order[0]x, \hat{u})\\
+    + ( \order[1]\lambda )^2 \ddot{\E}_2(\lambda_0; \order[0]x, \hat{u})
+    + \order[2]\lambda \dot{\E}_2(\lambda_0; \order[0]x, \hat{u})
+    = 2 \order[1]\alpha \langle \order[1]x, \hat{u} \rangle
+    + \order[2]\alpha \langle \order[0]x, \hat{u} \rangle.
+\end{multline*}\]</div>
+<p>For <span class="math notranslate nohighlight">\(\hat{u} = \hat{v}_i\)</span>, plugging the decompositions
+<a class="reference internal" href="bifurcated_branches.html#equation-eq20220524133944">(3.19)</a>, <a class="reference internal" href="bifurcated_branches.html#equation-eq20220524134613">(3.22)</a>, <a class="reference internal" href="bifurcated_branches.html#equation-eq20220609133608">(3.28)</a>
+and <a class="reference internal" href="bifurcated_branches.html#equation-eq20220609133629">(3.29)</a> of <span class="math notranslate nohighlight">\(\order[1]u\)</span>, <span class="math notranslate nohighlight">\(\order[2]u\)</span>, <span class="math notranslate nohighlight">\(\order[0]x \)</span> et
+<span class="math notranslate nohighlight">\(\order[1]x\)</span> delivers</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{multline*}
+  \bigl[ \E_4(v_i, v_j,  v_k, v_l) + 2\E_3(v_i, w_{jk}, v_l) + \E_3(v_i, v_j, w_{kl})\bigr] \order[0]{\chi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
+  + 2 \order[1]\lambda \bigl[ \E_3(v_i,  w_j, v_k) + \dot{\E}_2(v_i, w_{jk}) + \E_3(v_i, v_j, w_k) + \dot{\E}_3(v_i, v_j,  v_k) \bigr] \order[0]{\chi_j} \order[1]{\xi_k}\\
+  + ( \order[1]\lambda )^2 \bigl[\dot{\E}_2(v_i, w_j) + \ddot{\E}_2(v_i, v_j)\bigr] \order[0]{\chi_j} + \bigl[\E_3(v_i, v_j, v_k) \order[2]{\xi_k} + \order[2]\lambda \dot{\E}_2(v_i, v_j)\bigr] \order[0]{\chi_j} \\
+  +2\bigl[\E_3(v_i, v_j,  v_k)  \order[1]{\xi_k} + \order[1]\lambda \dot{\E}_2(v_i, v_j)\bigr] \order[1]{\chi_i} = 2\order[1]\alpha\order[1]{\chi_i} + \order[2]\alpha \order[0]{\chi_i}.
+\end{multline*}\]</div>
+<p>The <span class="math notranslate nohighlight">\(\order[0]{\chi_j} \order[1]{\xi_k}\)</span> term is transformed with
+Eqs. <a class="reference internal" href="notations.html#equation-eq20220524134525">(1.5)</a> and <a class="reference internal" href="notations.html#equation-eq20220519164523">(1.6)</a></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{multline*}
+  \bigl[ \E_4(v_i, v_j,  v_k, v_l)
+  + \E_3(v_i, w_{jk}, v_l)
+  + \E_3(v_i, w_{jl}, v_k)
+  + \E_3(v_i, v_j, w_{kl})\bigr] \order[0]{\chi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
+  + 2\order[1]\lambda \bigl[ -\E_2(w_{ik},  w_j) - \E_2(w_i, w_{jk}) - \E_2(w_{ij}, w_k) + \dot{\E}_3(v_i, v_j,  v_k) \bigr] \order[0]{\chi_j} \order[1]{\xi_k}\\
+  + ( \order[1]\lambda )^2 \bigl[\dot{\E}_2(v_i, w_j) + \ddot{\E}_2(v_i, v_j)\bigr] \order[0]{\chi_j}
+  + \bigl[\E_3(v_i, v_j, v_k) \order[2]{\xi_k} + \order[2]\lambda \dot{\E}_2(v_i, v_j)\bigr] \order[0]{\chi_j} \\
+  +2\bigl[\E_3(v_i, v_j,  v_k)  \order[1]{\xi_k}
+  + \order[1]\lambda \dot{\E}_2(v_i, v_j)\bigr] \order[1]{\chi_i}
+  = 2\order[1]\alpha\order[1]{\chi_i}
+  + \order[2]\alpha \order[0]{\chi_i},
+\end{multline*}\]</div>
+<p>and Eq. <a class="reference internal" href="bifurcated_branches.html#equation-eq20220616082923">(3.30)</a> results from the application of
+Eqs. <a class="reference internal" href="notations.html#equation-eq20220617084433">(1.13)</a> and <a class="reference internal" href="notations.html#equation-eq20220617085256">(1.14)</a>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="multilinear_algebra.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>Some useful results from multilinear algebra</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="bibliography.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Bibliography</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Sébastien Brisard<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

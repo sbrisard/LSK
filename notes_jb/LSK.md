@@ -976,15 +976,15 @@ stability is undecided when all eigenvalues are $\geq 0$.
 
 ```{note}
   Note that, from Eq. {eq}`eq20220801092222`,
-  ```{math}
-    E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} + \order[2]\lambda F_{ij} \order[1]{\xi_i} \order[1]{\xi_j} = \tfrac{2}{3} E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}
-  ```
+
+  $$E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} + \order[2]\lambda F_{ij} \order[1]{\xi_i} \order[1]{\xi_j} = \tfrac{2}{3} E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}$$
 ```
 
 To conclude this section, it is observed that, when $\order[1]\lambda = 0$, the
 dominant term of the potential energy along the bifurcated branch is of the
 fourth order [see Eq. {eq}`eq20220525053600`]. Combining with
 Eq. {eq}`eq20220801093236`,
+
 ```{math}
   :label: eq20220801094437
   \begin{aligned}[b]
@@ -1008,8 +1008,6 @@ the $\order[1]{\xi_i}$). Note that, if
 $E_{ijkl} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} > 0$, then
 only loads that are greater than the critical load can be reached on the
 bifurcated branch, where the energy is lower than the fundamental branch.
-
-\medskip
 
 The above discussion simplifies considerably when there is only one buckling
 mode ($m = 1$). This is addressed in the next section.

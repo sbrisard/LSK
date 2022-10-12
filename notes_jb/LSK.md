@@ -254,8 +254,8 @@ $W$. However, this approach leads to tedious derivations. This approach has
 historical and pedagogical value: in particular, it provides a meaning to $w_i$
 and $w_{ij}$ defined by Eqs. \eqref{eq20220524134525} and
 \eqref{eq20220519164523}. In {numref}`sec20220902092109`, a more systematic
-approach is developed, that I found in the paper by \textcite[][Appendix
-A]{chak2018}.
+approach is developed, that I found in Appendix A of the paper by Chakrabarti et
+al. {cite}`chak2018`.
 
 (sec20220902091527)=
 ## The Lyapunov--Schmidt decomposition
@@ -506,7 +506,7 @@ to be compared with Eq. \eqref{eq20220524134613}.
 (sec20220902092109)=
 ## Alternative route to the asymptotic expansions
 
-Following the Appendix A of Ref. \parencite{chak2018}, we introduce the
+Following the Appendix A of Ref. {cite}`chak2018`, we introduce the
 following parametrization of the bifurcated branch
 \begin{align}
   \label{eq20211115075817}

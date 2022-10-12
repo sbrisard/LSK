@@ -656,7 +656,7 @@ w_i$ and
 Plugging expressions {eq}`eq20220524133944` and {eq}`eq20220524134613`
 into Eq. {eq}`eq20220708060436` and taking further $\hat{u} = v_i$ [remember
 that $\E_2(\lambda_0; v_i, \bullet) = 0$], we then get
-% \begin{equation*}
+% ```{math}
 %   \begin{aligned}[b]
 %     \E_4(\lambda_0; v_i, \order[1]{\xi_j} v_j, \order[1]{\xi_k} v_k, \order[1]{\xi_l} v_l)
 %     + 3\E_3(\lambda_0; v_i, \order[1]{\xi_j} v_j, \order[2]{\xi_k} v_k + \order[1]{\xi_k} \order[1]{\xi_l} w_{kl}
@@ -665,8 +665,8 @@ that $\E_2(\lambda_0; v_i, \bullet) = 0$], we then get
 %     + 3\order[1]\lambda \dot{\E}_2(\lambda_0; v_i, \order[2]{\xi_j} v_j + \order[1]{\xi_j} \order[1]{\xi_k} w_{jk} + 2\order[1]\lambda \order[1]{\xi_j} w_j)&\\
 %     + 3( \order[1]\lambda )^2 \ddot{\E}_2(\lambda_0; v_i, \order[1]{\xi_j} v_j) + 3\order[2]\lambda \dot{\E}_2(\lambda_0; v_i, \order[1]{\xi_j} v_j) &= 0
 %   \end{aligned}
-% \end{equation*}
-% \begin{equation*}
+% ```
+% ```{math}
 %   \begin{aligned}[b]
 %     \E_4(\lambda_0; v_i, v_j, v_k, v_l) \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}
 %     + 3\E_3(\lambda_0; v_i, v_j, v_k) \order[1]{\xi_j} \order[2]{\xi_k}
@@ -679,42 +679,42 @@ that $\E_2(\lambda_0; v_i, \bullet) = 0$], we then get
 %     + 3( \order[1]\lambda )^2 \ddot{\E}_2(\lambda_0; v_i, v_j) \order[1]{\xi_j}&\\
 %     + 3\order[2]\lambda \dot{\E}_2(\lambda_0; v_i, v_j) \order[1]{\xi_j} &= 0
 %   \end{aligned}
-% \end{equation*}
-\begin{equation*}
+% ```
+```{math}
   \begin{aligned}[b]
     \bigl[\E_4(\lambda_0; v_i, v_j, v_k, v_l) + 3\E_3(\lambda_0; v_i, v_j, w_{kl})\bigr] \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}&\\
     + 3\order[1]\lambda \bigl[2\E_3(\lambda_0; v_i, v_j, w_k) + \dot{\E}_3(\lambda_0; v_i, v_j, v_k) + \dot{\E}_2(\lambda_0; v_i, w_{jk}) \bigr] \order[1]{\xi_j} \order[1]{\xi_k}&\\
     + 3 \bigl\{ ( \order[1]\lambda )^2 \bigl[ 2 \dot{\E}_2(\lambda_0; v_i, w_j) + \ddot{\E}_2(\lambda_0; v_i, v_j) \bigr] + \order[2]\lambda \dot{\E}_2(\lambda_0; v_i, v_j) \bigr\}\order[1]{\xi_j}&\\
     + 3\bigl[\E_3(\lambda_0; v_i, v_j, v_k) \order[1]{\xi_k} + \order[1]\lambda \dot{\E}_2(\lambda_0; v_i, v_j)\bigr] \order[2]{\xi_j} &= 0
   \end{aligned}
-\end{equation*}
+```
 It results from the variational problems {eq}`eq20220524134525` and
 {eq}`eq20220519164523` that
-\begin{equation*}
+```{math}
   \E_3(\lambda_0; v_i, v_j, w_k) = -\E_2(\lambda_0 ; w_{ij}, w_k) = \dot{\E}_2(\lambda_0; v_k, w_{ij}),
-\end{equation*}
+```
 therefore
-\begin{equation*}
+```{math}
   \begin{aligned}[b]
     \E_3(\lambda_0; v_i, v_j, w_k) \order[1]{\xi_j} \order[1]{\xi_k} &= \tfrac{1}{2} \bigl[ \E_3(\lambda_0; v_i, v_j, w_k) + \E_3(\lambda_0; v_i, v_k, w_j)\bigr] \order[1]{\xi_j} \order[1]{\xi_k}\\
                                     &= \tfrac{1}{2} \bigl[ \dot{\E}_2(\lambda_0; v_k, w_{ij}) + \dot{\E}_2(\lambda_0; v_j, w_{ik}) \bigr] \order[1]{\xi_j} \order[1]{\xi_k}.
   \end{aligned}
-\end{equation*}
+```
 Similarly,
-\begin{equation*}
+```{math}
   \begin{aligned}[b]
     \dot{\E}_2(\lambda_0; v_i, w_j) &= -\E_2(\lambda_0; w_i, w_j) = -\E_2(\lambda_0; w_j, w_i) = \dot{\E}_2(\lambda_0; v_j, w_i)\\
                            &= \tfrac{1}{2} \bigl[ \dot{\E}_2(\lambda_0; v_i, w_j) + \dot{\E}_2(\lambda_0; v_j, w_i) \bigr].
   \end{aligned}
-\end{equation*}
-% \begin{equation*}
+```
+% ```{math}
 %   \begin{aligned}[b]
 %     \bigl[\E_4(\lambda_0; v_i, v_j, v_k, v_l) + \E_3(\lambda_0; v_i, v_j, w_{kl}) + \E_3(\lambda_0; v_i, v_k, w_{jl}) + \E_3(\lambda_0; v_i, v_l, w_{jk}) \bigr] \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}&\\
 %   + 3\order[1]\lambda \bigl[\dot{\E}_3(\lambda_0; v_i, v_j, v_k) + \dot{\E}_2(\lambda_0; v_i, w_{jk}) + \dot{\E}_2(\lambda_0; v_j, w_{ik}) + \dot{\E}_2(\lambda_0; v_k, w_{ij}) \bigr] \order[1]{\xi_j} \order[1]{\xi_k}&\\
 %   + 3( \order[1]\lambda )^2 \bigl[ \ddot{\E}_2(\lambda_0; v_i, v_j) + \dot{\E}_2(\lambda_0; v_i, w_j) + \dot{\E}_2(\lambda_0; v_j, w_i) \bigr] \order[1]{\xi_j}&\\
 %   + 3\bigl[\E_3(\lambda_0; v_i, v_j, v_k) \order[1]{\xi_k} + \order[1]\lambda \dot{\E}_2(\lambda_0; v_i, v_j)\bigr] \order[2]{\xi_j} + 3\order[2]\lambda \dot{\E}_2(\lambda_0; v_i, v_j) \order[1]{\xi_j} &= 0
 %   \end{aligned}
-% \end{equation*}
+% ```
 
 Finally, the definitions {eq}`eq20220615063626`, {eq}`eq20220615063633`,
 {eq}`eq20220524135619`, {eq}`eq20220524135553` and
@@ -1065,9 +1065,9 @@ $\lambda = \lambda_0 + \order[2]\lambda \eta^2 / 2$, the bifurcation branch exis
 
 From Eq. {eq}`eq20220531054247`, the hessian of the energy along the
 bifurcated branch reads
-\begin{equation*}
+```{math}
   \E_{, uu}[u(\eta), \lambda(\eta); v_1, v_1] = \tfrac{1}{2} \eta^2 \bigl[ E_{1111}\bigl(\xi_1^1\bigr) ^2 + \order[2]\lambda F_{11} \bigr] + o(\eta^2) = - \eta^2 \order[2]\lambda F_{11} + o(\eta^2),
-\end{equation*}
+```
 which has the sign of $\order[2]\lambda$. Therefore the Hessian is positive
 (resp. negative) definite if $E_{1111} > 0$ (resp $< 0$).
 
@@ -1076,8 +1076,6 @@ critical point) is \emph{stable} and exists only for loads greater than the
 critical load. Conversely, if $E_{1111} < 0$, then the bifurcation branch
 (including the critical point) is \emph{unstable} and exists only for loads
 lower than the critical load.
-
-\appendix
 
 # Some useful results from multilinear algebra
 
@@ -1096,16 +1094,16 @@ vector space $U$. Its kernel $\ker \mathcal{B}$ is defined as follows
   We must show that, for all $u, v \in\ker \mathcal{B}$ and $\alpha \in \reals$,
   $w = u + \alpha v \in \ker \mathcal{B}$, in other words, it must be shown that
   $\mathcal{B}(w, w) = 0$. From the bilinearity and symmetry of $\mathcal{B}$
- \begin{equation*}
+ ```{math}
    \mathcal{B}(w, w) = \mathcal{B}(u + \alpha v, u + \alpha v)
    = \mathcal{B}(u, u) + 2 \alpha \mathcal{B}(u, v) + \alpha^2 \mathcal{B}(v, v),
- \end{equation*}
+ ```
 
  Since $u, v \in \ker\mathcal{B}$, the first and the last term vanish, and the above
  identity reduces to
- \begin{equation*}
+ ```{math}
    \mathcal{B}(w, w) = 2\alpha \mathcal{B}(u, v)
- \end{equation*}
+ ```
 
  The bilinear form $\mathcal{B}$ is positive, therefore the left-hand side is positive,
  \emph{for all values of $\alpha \in \reals$}. The quantity
@@ -1116,9 +1114,9 @@ vector space $U$. Its kernel $\ker \mathcal{B}$ is defined as follows
 \begin{theorem}
   Let $\mathcal{B}$ be a bilinear, symmetric, positive form over the vector space
   $U$ and $u \in U$. Then
- \begin{equation*}
+ ```{math}
   u \in \ker\mathcal{B} \quad \text{iff} \quad \text{pour tout } v \in U, \mathcal{B}(u, v) = 0.
- \end{equation*}
+ ```
 \end{theorem}
 
 \begin{proof}
@@ -1127,9 +1125,9 @@ vector space $U$. Its kernel $\ker \mathcal{B}$ is defined as follows
 
   Converely, let $u \in \ker \mathcal{B}$, $v \in U$ et $\alpha \in \reals$. Similarly to the
   previous proof, we write that $\mathcal{B}(w, w) \geq 0$, with $w = \alpha u + v$
-  \begin{equation*}
+  ```{math}
     \mathcal{B}(w, w) = \mathcal{B}(u, u) + 2 \alpha \mathcal{B}(u, v) +\mathcal{B}(v, v) = 2 \alpha \mathcal{B}(u, v) +\mathcal{B}(v, v) \geq 0,
-  \end{equation*}
+  ```
   ($\mathcal{B}(u, u) = 0$ since $u \in \ker \mathcal{B}$). The above expression is of degree 1 in
   $\alpha$, with a constant sign. Therefore the linear term in $\alpha$ must vanish:
   $\mathcal{B}(u, v) = 0$.
@@ -1155,21 +1153,28 @@ vector space $U$.
 \begin{proof}
   The form $\mathcal T$ being trilinear and symmetric, we have, for all
   $u, v, w \in U$ and $\alpha, \beta \in \reals$
+
+  ```{math}
   \begin{multline*}
     \mathcal T(u + \alpha v + \beta w, u + \alpha v + \beta w, u + \alpha v + \beta w) = \mathcal T(u, u, u) + 3\alpha \mathcal T(u, u, v)\\
     + 3\beta \mathcal T(u, u, w) + 3\alpha^2 \mathcal T(u, u, v) + 6 \alpha \beta \mathcal T(u, v, w) + 3 \beta^2 \mathcal T(u, u, w)\\
     + \alpha^3 \mathcal T(v, v, v) + 3 \alpha^2 \beta \mathcal T(v, v, w) + 3 \alpha \beta^2 \mathcal T(v, w, w) + \beta^3 \mathcal T(w, w, w)
   \end{multline*}
+  ```
+
   and, upon simplification using Eq. {eq}`eq20220802111745`
-  \begin{multline}
-    :label: eq20220802112309
-    3\alpha \mathcal T(u, u, v) + 3\beta \mathcal T(u, u, w) + 3\alpha^2 \mathcal T(u, v, v) + 6 \alpha \beta \mathcal T(u, v, w)\\
-    + 3 \beta^2 \mathcal T(u, w, w) + 3 \alpha^2 \beta \mathcal T(v, v, w) + 3 \alpha \beta^2 \mathcal T(v, w, w) = 0.
-  \end{multline}
+  ```{math}
+  :label: eq20220802112309
+  \begin{aligned}[b]
+    3\alpha \mathcal T(u, u, v) + 3\beta \mathcal T(u, u, w) + 3\alpha^2 \mathcal T(u, v, v) + 6 \alpha \beta \mathcal T(u, v, w) &\\
+    + 3 \beta^2 \mathcal T(u, w, w) + 3 \alpha^2 \beta \mathcal T(v, v, w) + 3 \alpha \beta^2 \mathcal T(v, w, w) &= 0.
+  \end{aligned}
+  ```
+
   In particular taking successively $\alpha = ±1$, $\beta = 0$ and $w = 0$ delivers
-  \begin{equation*}
+  ```{math}
     ±3 \mathcal T(u, u, v) + 3 \mathcal T(u, u, v) = 0 \quad \text{for all} \quad u, v \in U,
-  \end{equation*}
+  ```
   from which it results that $\mathcal T(u, u, v) = 0$ for all $u, v \in
   U$. Plugging into Eq. {eq}`eq20220802112309` with $\alpha = \beta = 1$ results in:
   $\mathcal T(u, v, w) = 0$ for all $u, v, w \in U$.
@@ -1189,55 +1194,82 @@ energy, its residual and its hessian are derived.
 % Validation des calculs de ce paragraphe
 
 Introducing $\Lambda$ and $U$, which are functions of $\eta$ only,
-\begin{align}
+
+```{math}
   :label: eq20211112155446
-  \Lambda(\eta) & = \lambda(\eta) - \lambda_0 = \eta \order[1]\lambda + \tfrac{1}{2} \eta^2 \order[2]\lambda + \tfrac{1}{6} \eta^3 \order[3]\lambda + \cdots,\\
+  \Lambda(\eta) = \lambda(\eta) - \lambda_0 = \eta \order[1]\lambda + \tfrac{1}{2} \eta^2 \order[2]\lambda + \tfrac{1}{6} \eta^3 \order[3]\lambda + \cdots,
+```
+
+```{math}
   :label: eq20211112113028
-  U(\eta) & = u(\eta) - u^{\ast}[\lambda(\eta)] = \eta \order[1]u + \tfrac{1}{2} \eta^2 \order[2]u + \tfrac{1}{6} \eta^3 \order[3]u + \cdots,
-\end{align}
+  U(\eta) = u(\eta) - u^{\ast}[\lambda(\eta)] = \eta \order[1]u + \tfrac{1}{2} \eta^2 \order[2]u + \tfrac{1}{6} \eta^3 \order[3]u + \cdots,
+```
+
 the functional $\mathcal{F}(u, \lambda)$ is evaluated along the bifurcated branch, thus defining
 the function $f(\eta)$
-\begin{equation*}
+
+```{math}
   f(\eta) = F\{ u^{\ast} [\lambda_0 + \Lambda(\eta)] + U(\eta), \lambda_0 + \Lambda(\eta) \}.
-\end{equation*}
+```
 
 We seek the Taylor expansion of $f$ at $\eta = 0$, which requires the successive
 derivatives of $f$. To this end, it is convenient to introduce the function $F$
 defined as follows
-\begin{equation*}
+```{math}
   F(\eta, \lambda) =\mathcal{F}[u^{\ast}(\lambda) + U(\eta), \lambda],
-\end{equation*}
+```
 where $\lambda$ and $\eta$ are temporarily seen as independent variables. Since
 $f(\eta) = F[\eta, \lambda_0 + \Lambda(\eta)]$, the following identities hold
-\begin{gather*}
-  f'(\eta) = \partial_{\eta} F + \Lambda' \partial_{\lambda} F,\\
-  f''(\eta) = \partial_{\eta\eta}^2 F + 2\Lambda' \partial_{\eta\lambda}^2F + \Lambda'^2 \partial_{\lambda\lambda}^2 F + \Lambda'' \partial_{\lambda} F,\\
+
+```{math}
+  f'(\eta) = \partial_{\eta} F + \Lambda' \partial_{\lambda} F,
+```
+
+```{math}
+  f''(\eta) = \partial_{\eta\eta}^2 F + 2\Lambda' \partial_{\eta\lambda}^2F + \Lambda'^2 \partial_{\lambda\lambda}^2 F + \Lambda'' \partial_{\lambda} F,
+```
+
+```{math}
   \begin{aligned}[b]
     f'''(\eta) ={}
     & \partial_{\eta\eta\eta}^3 F + 3\Lambda' \partial_{\eta\eta\lambda}^3F + 3\Lambda'^2 \partial_{\eta\lambda\lambda}^3F + \lambda'^3 \partial_{\lambda\lambda\lambda}^3 F\\
     & + 3\Lambda'' \partial_{\eta\lambda}^2 F + 3\Lambda' \Lambda'' \partial_{\lambda \lambda}^2 F + \Lambda''' \partial_{\lambda} F,
-  \end{aligned}\\
+  \end{aligned}
+```
+
+```{math}
   \begin{aligned}[b]
     f''''(\eta) ={}
     & \partial_{\eta\eta\eta\eta}^4 F + 4\Lambda' \partial_{\eta\eta\eta\lambda}^4F + 6\Lambda'^2 \partial_{\eta\eta\lambda\lambda}^4F + 4\Lambda'^3 \partial_{\eta\lambda\lambda\lambda}^4F + \Lambda'^4 \partial_{\lambda\lambda\lambda\lambda}^4 F\\
     & + 6\Lambda'' \partial_{\eta\eta\lambda}^3 F + 12\Lambda' \Lambda'' \partial_{\eta\lambda\lambda}^3F + 6\Lambda'^2 \Lambda'' \partial_{\lambda\lambda\lambda}^3 F\\
     & + 4 \Lambda''' \partial_{\eta\lambda}^2 F + \bigl( 3\Lambda''^2 + 4 \Lambda' \Lambda''' \bigr) \partial_{\lambda\lambda}^2 F + \lambda'''' \partial_{\lambda}F,
   \end{aligned}
-\end{gather*}
+```
+
 where $\Lambda$ and its derivatives are evaluated at $\eta$, whilie $F$ and its partial
 derivatives are evaluated at $[\eta, \lambda_0 + \Lambda(\eta)]$. At $\eta = 0$, the above relations
 read
-\begin{gather}
+
+```{math}
   :label: eq20220107060454
-  f'(0) = \partial_{\eta} F + \order[1]\lambda \partial_{\lambda} F,\\
+  f'(0) = \partial_{\eta} F + \order[1]\lambda \partial_{\lambda} F,
+```
+
+```{math}
   :label: eq20220107124311
-  f''(0) = \partial_{\eta\eta}^2 F + 2 \order[1]\lambda \partial_{\eta\lambda}^2 F + \bigl( \order[1]\lambda \bigr)^2 \partial_{\lambda\lambda}^2 F + \order[2]\lambda \partial_{\lambda} F,\\
+  f''(0) = \partial_{\eta\eta}^2 F + 2 \order[1]\lambda \partial_{\eta\lambda}^2 F + \bigl( \order[1]\lambda \bigr)^2 \partial_{\lambda\lambda}^2 F + \order[2]\lambda \partial_{\lambda} F,
+```
+
+```{math}
   :label: eq20220107060500
   \begin{aligned}[b]
     f'''(0) ={}
     & \partial_{\eta\eta\eta}^3 F + 3 \order[1]\lambda \partial_{\eta\eta\lambda}^3 F + 3 \bigl( \order[1]\lambda \bigr)^2 \partial_{\eta\lambda\lambda}^3 F + \bigl( \order[1]\lambda \bigr)^3 \partial_{\lambda\lambda\lambda}^3 F\\
     & + 3 \order[2]\lambda \partial_{\eta\lambda}^2 F + 3 \order[1]\lambda \order[2]\lambda \partial_{\lambda\lambda}^2 F + \order[3]\lambda \partial_{\lambda} F,
   \end{aligned}\\
+```
+
+```{math}
   :label: eq20220602185935
   \begin{aligned}[b]
     f''''(0) ={}
@@ -1245,9 +1277,10 @@ read
     & + 6 \order[2]\lambda \partial_{\eta\eta\lambda}^3 F + 12 \order[1]\lambda \order[2]\lambda \partial_{\eta\lambda\lambda}^3 F + 6 \bigl( \order[1]\lambda \bigr)^2 \order[2]\lambda \partial_{\lambda\lambda\lambda}^3 F\\
     & + 4 \order[3]\lambda \partial_{\eta\lambda}^2 F + \bigl(3 \bigl( \order[2]\lambda \bigr)^2 + 4 \order[1]\lambda \order[3]\lambda\bigr) \partial_{\lambda\lambda}^2 F + \lambda_4 \partial_{\lambda} F,
   \end{aligned}
-\end{gather}
+```
+
 where $F$ and its partial derivatives are now evaluated at
-$(\eta = 0, \lambda = \lambda_0)$. The values of $f'(0)$, $f''(0)$, \dots thus found are used
+$(\eta = 0, \lambda = \lambda_0)$. The values of $f'(0)$, $f''(0), \ldots$ thus found are used
 in the remainder of {numref}`sec20220905060440` for various choices of the
 functional $\mathcal F$.
 
@@ -1270,53 +1303,76 @@ the test function $\hat{u}$ being fixed. It is first observed that
 $F(0, \lambda) = \E_{, u} [u^{\ast} (\lambda), \lambda; \hat{u}] = 0$, since
 $u^{\ast}(\lambda)$ is an equilibrium point for all $\lambda$ close to
 $\lambda_0$. Upon derivation with respect to $\lambda$, we get
-\begin{equation*}
+```{math}
   \frac{\partial^k F}{\partial \lambda^k}(0, \lambda) = 0 \quad \text{for all} \quad k \geq 0.
-\end{equation*}
+```
 From the definition {eq}`eq20220107054629` of $F$, we find successively
-\begin{equation*}
+```{math}
   \partial_{\eta}F(\eta, \lambda) = \E_{, u u}[u^{\ast}(\lambda) + U(\eta), \lambda; U'(\eta), \hat{u}],
-\end{equation*}
-\begin{equation*}
+```
+```{math}
   \begin{aligned}[b]
     \partial_{\eta \eta}^2 F(\eta, \lambda) ={}
     & \E_{, uuu}[u^{\ast}(\lambda) + U(\eta), \lambda; U'(\eta), U'(\eta), \hat{u}]\\
     & + \E_{, uu} [u^{\ast}(\lambda) + U(\eta), \lambda; U''(\eta), \hat{u}],
   \end{aligned}
-\end{equation*}
-\begin{equation*}
+```
+```{math}
   \begin{aligned}[b]
     \partial_{\eta\eta\eta}^3 F(\eta, \lambda) ={}
     & \E_{, uuuu}[u^{\ast}(\lambda) + U(\eta), \lambda; U'(\eta), U'(\eta), U'(\eta), \hat{u}]\\
     & + 3\E_{, u u u}[u^{\ast}(\lambda) + U(\eta), \lambda; U'(\eta), U''(\eta), \hat{u}]\\
     & + \E_{, uu}[u^{\ast}(\lambda) + U(\eta), \lambda; U'''(\eta), \hat{u}],
   \end{aligned}
-\end{equation*}
+```
 and, at $\eta = 0$
-\begin{gather*}
-  \partial_{\eta}F(0, \lambda) = \E_2(\lambda; \order[1]u, \hat{u}),\\
-  \partial_{\eta\eta}^2 F(0, \lambda) = \E_3(\lambda; \order[1]u, \order[1]u, \hat{u}) + \E_2(\lambda; \order[2]u, \hat{u}),\\
+
+```{math}
+  \partial_{\eta}F(0, \lambda) = \E_2(\lambda; \order[1]u, \hat{u}),
+```
+
+```{math}
+  \partial_{\eta\eta}^2 F(0, \lambda) = \E_3(\lambda; \order[1]u, \order[1]u, \hat{u}) + \E_2(\lambda; \order[2]u, \hat{u}),
+```
+
+```{math}
   \partial_{\eta\eta\eta}^3 F(0, \lambda) = \E_4(\lambda; \order[1]u, \order[1]u, \order[1]u, \hat{u}) + 3\E_3(\lambda; \order[1]u, \order[2]u, \hat{u}) + \E_2(\lambda; \order[3]u, \hat{u}).
-\end{gather*}
+```
+
 Upon derivation with respect to $\lambda$, we find successively
-\begin{gather*}
-  \partial_{\eta\lambda}^2 F(0, \lambda) = \dot{\E}_2(\lambda; \order[1]u, \hat{u}),\\
-  \partial_{\eta\lambda\lambda}^3 F(0, \lambda) = \ddot{\E}_2(\lambda; \order[1]u, \hat{u}),\\
+
+```{math}
+  \partial_{\eta\lambda}^2 F(0, \lambda) = \dot{\E}_2(\lambda; \order[1]u, \hat{u}),
+```
+
+```{math}
+  \partial_{\eta\lambda\lambda}^3 F(0, \lambda) = \ddot{\E}_2(\lambda; \order[1]u, \hat{u}),
+```
+
+```{math}
   \partial_{\eta\eta\lambda}^3 F(0, \lambda) = \dot{\E}_3(\lambda; \order[1]u, \order[1]u, \hat{u}) + \dot{\E_2}(\lambda; \order[2]u, \hat{u}).
-\end{gather*}
+```
 
 Upon insertion into Eqs. {eq}`eq20220107060454`--{eq}`eq20220602185935`, we
 get the following expressions of the sucessive derivatives of $f$ at $\eta=0$
-\begin{gather*}
-  f'(0) = \E_2(\lambda_0; \order[1]u, \hat{u}),\\
-  f''(0) = \E_3(\lambda_0; \order[1]u, \order[1]u, \hat{u}) + \E_2(\lambda_0; \order[2]u, \hat{u}) + 2 \order[1]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \hat{u}),\\
+
+```{math}
+  f'(0) = \E_2(\lambda_0; \order[1]u, \hat{u}),
+```
+
+```{math}
+  f''(0) = \E_3(\lambda_0; \order[1]u, \order[1]u, \hat{u}) + \E_2(\lambda_0; \order[2]u, \hat{u}) + 2 \order[1]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \hat{u}),
+```
+
+```{math}
   \begin{aligned}[b]
     f'''(0) ={}
     & \E_4(\lambda_0; \order[1]u, \order[1]u, \order[1]u, \hat{u}) + 3\E_3(\lambda_0; \order[1]u, \order[2]u, \hat{u}) + \E_2(\lambda_0 ; \order[3]u, \hat{u})\\
     & + 3\order[1]\lambda \dot{\E}_3(\lambda_0; \order[1]u, \order[1]u, \hat{u}) + 3\order[1]\lambda \dot{\E}_2(\lambda_0; \order[2]u, \hat{u})\\
     & + 3 \bigl( \order[1]\lambda \bigr)^2 \ddot{\E}_2(\lambda_0; \order[1]u, \hat{u}) + 3 \order[2]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \hat{u}),
   \end{aligned}
-\end{gather*}
+```
+
 which finally delivers the following expansion of the residual
 ```{math}
   :label: eq20220107080901
@@ -1344,34 +1400,56 @@ difference between the fundamental and bifurcated branches
   f(\eta) = F [\eta, \lambda_0 + \Lambda(\eta)].
 ```
 Observing that $F(0, \lambda) = 0$ for all $\lambda$, we first get
-\begin{equation*}
+```{math}
   \frac{\partial^k F}{\partial \lambda^k}(0, \lambda) = 0 \quad \text{for all} \quad k \geq 0,
-\end{equation*}
+```
 while the partial derivatives of $F$ with respect to $\eta$ read
-\begin{gather*}
-  \partial_{\eta} F(\eta, \lambda) = \E_{, u}(U'),\\
-  \partial_{\eta\eta}^2 F(\eta, \lambda) = \E_{, uu} (U', U') + \E_{, u} (U''),\\
-  \partial_{\eta\eta\eta}^3 F(\eta, \lambda) = \E_{, uuu}(U', U', U') + 3\E_{, uu}(U', U'') + \E_{, u}(U'''),\\
+
+```{math}
+  \partial_{\eta} F(\eta, \lambda) = \E_{, u}(U'),
+```
+
+```{math}
+  \partial_{\eta\eta}^2 F(\eta, \lambda) = \E_{, uu} (U', U') + \E_{, u} (U''),
+```
+
+```{math}
+  \partial_{\eta\eta\eta}^3 F(\eta, \lambda) = \E_{, uuu}(U', U', U') + 3\E_{, uu}(U', U'') + \E_{, u}(U'''),
+```
+
+```{math}
   \begin{aligned}[b]
     \partial_{\eta\eta\eta\eta}^4 F ={}
     & \E_{, uuuu}(U', U', U', U') + 6\E_{,uuu}(U', U', U'')\\
     & + 3\E_{, uu}(U'', U'') + 4\E_{, uu}(U', U''') + \E_{, u}(U''''),
   \end{aligned}
-\end{gather*}
+```
+
 where the partial derivatives of $\E$ are evaluated at
 $[u^{\ast}(\lambda) + U(\eta), \lambda]$, while the derivatives of $U$ are evaluated at
 $\eta$. For $\eta = 0$, observing that $\E_{, u}[u^{\ast}(\lambda), \lambda] = 0$
-\begin{gather*}
-  \partial_{\eta} F(0, \lambda) = 0,\\
-  \partial_{\eta\eta}^2 F(0, \lambda) =\E_2(\lambda ; \order[1]u, \order[1]u),\\
-  \partial_{\eta\eta\eta}^3 F(0, \lambda) = \E_3(\lambda; \order[1]u, \order[1]u, \order[1]u) + 3\E_2(\lambda; \order[1]u, \order[2]u),\\
+
+```{math}
+  \partial_{\eta} F(0, \lambda) = 0,
+```
+
+```{math}
+  \partial_{\eta\eta}^2 F(0, \lambda) =\E_2(\lambda ; \order[1]u, \order[1]u),
+```
+
+```{math}
+  \partial_{\eta\eta\eta}^3 F(0, \lambda) = \E_3(\lambda; \order[1]u, \order[1]u, \order[1]u) + 3\E_2(\lambda; \order[1]u, \order[2]u),
+```
+
+```{math}
   \begin{aligned}[b]
     \partial_{\eta\eta\eta\eta}^4 F(\eta, \lambda) ={} & \E_4(\lambda; \order[1]u, \order[1]u, \order[1]u, \order[1]u) + 6\E_3(\lambda; \order[1]u, \order[1]u, \order[2]u)\\
     & + 3\E_2(\lambda; \order[2]u, \order[2]u) + 4\E_2(\lambda; \order[1]u, \order[3]u),
   \end{aligned}
-\end{gather*}
+```
+
 and, upon derivation with respect to $\lambda$
-\begin{equation*}
+```{math}
   \begin{gathered}
     \partial_{\eta\lambda}^2 F(0, \lambda) = 0,\\
     \partial_{\eta\eta\lambda}^3 F(0, \lambda) = \dot{\E}_2(\lambda; \order[1]u, \order[1]u),\\
@@ -1383,12 +1461,21 @@ and, upon derivation with respect to $\lambda$
     \partial_{\eta\eta\lambda\lambda}^4 F(0, \lambda) = \ddot{\E}_2(\lambda; \order[1]u, \order[1]u),\\
     \partial_{\eta\lambda\lambda\lambda}^4 F(0, \lambda) = 0
   \end{gathered}
-\end{equation*}
+```
 and finally
-\begin{gather}
-  f'(0) = 0,\\
-  f''(0) = \E_2(\lambda_0; \order[1]u, \order[1]u),\\
-  f'''(0) =\E_3(\lambda_0; \order[1]u, \order[1]u, \order[1]u) + 3\E_2(\lambda_0; \order[1]u, \order[2]u) + 3\order[1]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \order[1]u),\\
+```{math}
+  f'(0) = 0,
+```
+
+```{math}
+  f''(0) = \E_2(\lambda_0; \order[1]u, \order[1]u),
+```
+
+```{math}
+  f'''(0) =\E_3(\lambda_0; \order[1]u, \order[1]u, \order[1]u) + 3\E_2(\lambda_0; \order[1]u, \order[2]u) + 3\order[1]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \order[1]u),
+```
+
+```{math}
   :label: eq20220905063614
   \begin{aligned}[b]
     f''''(0) ={}
@@ -1396,7 +1483,7 @@ and finally
     & + 4\E_2(\lambda_0; \order[1]u, \order[3]u) + 4 \order[1]\lambda \dot{\E}_3(\lambda_0; \order[1]u, \order[1]u, \order[1]u) + 12 \order[1]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \order[2]u)\\
     & + 6( \order[1]\lambda )^2 \ddot{\E}_2(\lambda_0; \order[1]u, \order[1]u) + 6\order[2]\lambda \dot{\E}_2(\lambda_0; \order[1]u, \order[1]u).
   \end{aligned}
-\end{gather}
+```
 
 Since $\order[1]u \in V$, we have $\E_2(\lambda_0; \order[1]u, \order[k]u) = 0$ for
 $k = 1, 2, 3$. Therefore $f''(0)=0$ and, using Eq. {eq}`eq20220524133816`
@@ -1408,21 +1495,32 @@ $k = 1, 2, 3$. Therefore $f''(0)=0$ and, using Eq. {eq}`eq20220524133816`
 Turning now to $f''''(0)$, we plug the decompositions {eq}`eq20220524133944`
 and {eq}`eq20220524134613` of $\order[1]u$ and $\order[2]u$ successively into
 each term of Eq. {eq}`eq20220905063614`.
-\begin{equation*}
-  \begin{aligned}[b]
-    \E_3(\lambda_0; \order[1]u, \order[1]u, \order[2]u)
-    ={} & \E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[2]{\xi_k} + \E_3(v_i, v_j, w_{k l}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
-    & + 2\order[1]\lambda \E_3(v_i, v_j, w_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \\
-    ={} & \E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[2]{\xi_k} + \E_3(v_i, v_j, w_{k l}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
-    & - 2\order[1]\lambda \E_2(w_{ij}, w_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}, \qquad \text{[using Eq. {eq}`eq20220519164523`]}\\
+
+```{math}
+  \E_3(\lambda_0; \order[1]u, \order[1]u, \order[2]u) = \E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[2]{\xi_k} + \E_3(v_i, v_j, w_{k l}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} + 2\order[1]\lambda \E_3(v_i, v_j, w_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}
+```
+
+using Eq. {eq}`eq20220519164523`
+
+```{math}
+  \begin{aligned}
+  \E_3(\lambda_0; \order[1]u, \order[1]u, \order[2]u) ={} & \E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[2]{\xi_k} + \E_3(v_i, v_j, w_{k l}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} - 2\order[1]\lambda \E_2(w_{ij}, w_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k},\\
     ={} & \E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[2]{\xi_k} + \E_3(v_i, v_j, w_{kl}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
-    & - 2\order[1]\lambda \E_2(w_{i}, w_{jk}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}\\
-    ={} & \E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[2]{\xi_k} + \E_3(v_i, v_j, w_{kl}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
-    & + 2 \order[1]\lambda \dot{\E}_2(v_{i}, w_{jk}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}. \qquad \text{[using Eq. {eq}`eq20220524134525`]}
+    & - 2\order[1]\lambda \E_2(w_{i}, w_{jk}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}
   \end{aligned}
-\end{equation*}
+```
+
+and, from Eq. {eq}`eq20220524134525`
+
+```{math}
+  \begin{aligned}
+    \E_3(\lambda_0; \order[1]u, \order[1]u, \order[2]u) ={} & \E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} \order[2]{\xi_k} + \E_3(v_i, v_j, w_{kl}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
+    & + 2 \order[1]\lambda \dot{\E}_2(v_{i}, w_{jk}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}.
+  \end{aligned}
+```
+
 Then
-\begin{equation*}
+```{math}
   \begin{aligned}[b]
     \E_2(\order[2]u, \order[2]u)
     ={} & \E_2(\order[2]{\xi_i} v_i + \order[1]{\xi_i} \order[1]{\xi_j} w_{i j} + 2\order[1]\lambda \order[1]{\xi_i} w_i, \order[2]{\xi_k} v_k + \order[1]{\xi_k} \order[1]{\xi_l} w_{k l} + 2\order[1]\lambda \order[1]{\xi_k} w_k)\\
@@ -1434,17 +1532,17 @@ Then
     ={} & -\E_3(v_i, v_j, w_{k l}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} - 4 \order[1]\lambda \dot{\E}_2 (v_i, w_{j k}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}\\
     & - 2 ( \order[1]\lambda )^2 \bigl[\dot{\E}_2(v_i, w_j) + \dot{\E}_2(v_j, w_i)\bigr] \order[1]{\xi_i} \order[1]{\xi_j}
   \end{aligned}
-\end{equation*}
+```
 finally
-\begin{equation*}
+```{math}
   \begin{aligned}[b]
     \dot{\E}_2(\order[1]u, \order[2]u)
     ={} & \dot{\E}_2 (v_i, v_j) \order[1]{\xi_i} \order[2]{\xi_j} + \dot{\E}_2(v_i, w_{j k}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} + 2\order[1]\lambda \dot{\E}_2(v_i, w_j) \order[1]{\xi_i} \order[1]{\xi_j}\\
     ={} & \dot{\E}_2(v_i, v_j) \order[1]{\xi_i} \order[2]{\xi_j} + \dot{\E}_2(v_i, w_{j k}) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} + \order[1]\lambda [\dot{\E}_2(v_i, w_j) + \dot{\E}_2(v_j, w_i)] \order[1]{\xi_i} \order[1]{\xi_j}.
   \end{aligned}
-\end{equation*}
+```
 Gathering the above results
-% \begin{equation*}
+% ```{math}
 %   \begin{aligned}[b]
 %     f''''(0) ={}
 %     & \E_4(v_i, v_j, v_k, v_l) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
@@ -1458,8 +1556,8 @@ Gathering the above results
 %     & + 6( \order[1]\lambda )^2 \ddot{\E}_2(v_i, v_j) \order[1]{\xi_i} \order[1]{\xi_j}\\
 %     & + 6\order[2]\lambda \dot{\E}_2(v_i, v_j) \order[1]{\xi_i} \order[1]{\xi_j}.
 %   \end{aligned}
-% \end{equation*}
-% \begin{equation*}
+% ```
+% ```{math}
 %   \begin{aligned}[b]
 %     f''''(0) ={}
 %     & \E_4(v_i, v_j, v_k, v_l) \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}
@@ -1474,8 +1572,8 @@ Gathering the above results
 %     & + 6( \order[1]\lambda )^2 \ddot{\E}_2(v_i, v_j) \order[1]{\xi_i} \order[1]{\xi_j}
 %       + 6\order[2]\lambda \dot{\E}_2(v_i, v_j) \order[1]{\xi_i} \order[1]{\xi_j}.
 %   \end{aligned}
-% \end{equation*}
-% \begin{equation*}
+% ```
+% ```{math}
 %   \begin{aligned}[b]
 %     f''''(0) ={}
 %     & \bigl[ \E_4(v_i, v_j, v_k, v_l) + 3\E_3(v_i, v_j, w_{kl}) \bigr] \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
@@ -1483,18 +1581,20 @@ Gathering the above results
 %     & + \bigl\{ 6( \order[1]\lambda )^2 \ddot{\E}_2(v_i, v_j) + 6( \order[1]\lambda )^2 \bigl[\dot{\E}_2(v_i, w_j) + \dot{\E}_2(v_j, w_i)\bigr] + 6\order[2]\lambda \dot{\E}_2(v_i, v_j) \bigr\} \order[1]{\xi_i} \order[1]{\xi_j}\\
 %     & + \bigl[ 6\E_3(v_i, v_j, v_k) \order[1]{\xi_i} \order[1]{\xi_j} + 12 \order[1]\lambda \dot{\E}_2(v_j, v_k) \order[1]{\xi_j} \bigr] \order[2]{\xi_k}
 %   \end{aligned}
-% \end{equation*}
-\begin{equation*}
+% ```
+```{math}
   \begin{aligned}[b]
     f''''(0) ={}
     & \bigl[ \E_4(v_i, v_j, v_k , v_l) + 3\E_3(v_i, v_j, w_{k l}) \bigr] \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l}\\
     & + 4 \order[1]\lambda \bigl[\dot{\E}_3(v_i, v_j, v_k) + 3 \dot{\E}_2(v_i, w_{j k})\bigr] \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k}\\
     & + \bigl\{6 ( \order[1]\lambda )^2 \bigl[ \ddot{\E}_2 (v_i, v_j) + \dot{\E}_2(v_i, w_j) + \dot{\E}_2(v_j, w_i) \bigr] + 6\order[2]\lambda \dot{\E}_2(v_i, v_j) \bigr\} \order[1]{\xi_i} \order[1]{\xi_j}\\
-    & + 6\bigl[ \underbrace{\E_3(v_i, v_j, v_k) \order[1]{\xi_j} \order[1]{\xi_k} + 2 \order[1]\lambda \dot{\E}_2(v_i, v_j) \order[1]{\xi_j}}_{=0\text{ from Eq. {eq}`eq20220524135036`}} \bigr] \order[2]{\xi_i},
+    & + 6\bigl[ \underbrace{\E_3(v_i, v_j, v_k) \order[1]{\xi_j} \order[1]{\xi_k} + 2 \order[1]\lambda \dot{\E}_2(v_i, v_j) \order[1]{\xi_j}}_{ = 0} \bigr] \order[2]{\xi_i},
   \end{aligned}
-\end{equation*}
-Upon introduction of the tensors $E_{ijkl}$, $\mathring{E}_{ijk}$, $F_{ij}$ and
+```
+
+where we have used Eq. {eq}`eq20220524135036`. Upon introduction of the tensors $E_{ijkl}$, $\mathring{E}_{ijk}$, $F_{ij}$ and
 $\mathring{F}_{ij}$
+
 ```{math}
   :label: eq20220601055512
   f''''(0) = E_{i j k l} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} \order[1]{\xi_l} + 4 \order[1]\lambda \mathring{E}_{i j k} \order[1]{\xi_i} \order[1]{\xi_j} \order[1]{\xi_k} + 6 \bigl[ ( \order[1]\lambda )^2 \mathring{F}_{i j} + \order[2]\lambda F_{i j}\bigr] \order[1]{\xi_i} \order[1]{\xi_j},
@@ -1510,47 +1610,60 @@ which finally leads to the Taylor expansion {eq}`eq20220525053600`.
 
 The method described in {numref}`sec20220107121442` is now applied to
 $f(\eta) = F [\eta, \lambda_0 + \Lambda(\eta)]$, with
-\begin{equation*}
+```{math}
   F(\eta, \lambda) = \E_{, u u} [u^{\ast}(\lambda) + U(\eta), \lambda; \hat{u}, \hat{v}].
-\end{equation*}
+```
 where $\hat{u}, \hat{v} \in U$ are fixed. This will deliver a Taylor expansion
 of the hessian of the energy, $\E_{,uu}$. It is first observed that
 $F(0, \lambda) = \E_2(\lambda; \hat{u}, \hat{v})$ and, upon derivation with respect to $\lambda$
-\begin{equation*}
+```{math}
   \partial_{\lambda} F(0, \lambda) = \dot{\E}_2(\lambda; \hat{u}, \hat{v})
   \quad \text{and} \quad
   \partial_{\lambda\lambda}^2 F(0, \lambda) = \ddot{\E}_2(\lambda; \hat{u}, \hat{v}).
-\end{equation*}
+```
 
 Successive differentiation of the definition of $F$ with respect to $\eta$ also
 leads to
-\begin{gather*}
-  \partial_{\eta} F(\eta, \lambda) = \E_{, uuu}(U', \hat{u}, \hat{v}),\\
+```{math}
+  \partial_{\eta} F(\eta, \lambda) = \E_{, uuu}(U', \hat{u}, \hat{v}),
+```
+
+```{math}
   \partial_{\eta\eta}^2 F(\eta, \lambda) = \E_{, uuuu}(U', U', \hat{u}, \hat{v}) + \E_{, uuu}(U'', \hat{u}, \hat{v}),
-\end{gather*}
+```
+
 where the differentials of $\E$ are evaluated at
 $[u^{\ast}(\lambda) + U(\eta), \lambda]$, while the dérivatives of $U$ are evaluated at
 $y$. At $\eta = 0$, the above relations read
-\begin{gather*}
-  \partial_{\eta} F(0, \lambda) = \E_3(\lambda; \order[1]u, \hat{u}, \hat{v}),\\
+
+```{math}
+  \partial_{\eta} F(0, \lambda) = \E_3(\lambda; \order[1]u, \hat{u}, \hat{v}),
+```
+
+```{math}
   \partial_{\eta\eta}^2 F(0, \lambda) = \E_4(\lambda ; \order[1]u, \order[1]u, \hat{u}, \hat{v}) + \E_3(\lambda; \order[2]u, \hat{u}, \hat{v}),
-\end{gather*}
+```
+
 and, upon differentiation with respect to $\lambda$
-\begin{equation*}
+```{math}
   \partial_{\eta \lambda}^2 F(0, \lambda) = \dot{\E}_3(\lambda; \order[1]u, \hat{u}, \hat{v}).
-\end{equation*}
+```
 
 The Taylor expansion {eq}`eq20220531054247` of the hessian is finally
 retrieved by plugging the above results into
 expressions {eq}`eq20220107060454` and {eq}`eq20220107124311` of the
 derivatives of $f$
-\begin{gather*}
-  f'(0) = \E_3(\lambda_0; \order[1]u, \hat{u}, \hat{v}) + \order[1]\lambda \dot{\E}_2(\lambda_0; \hat{u}, \hat{v}),\\
+
+```{math}
+  f'(0) = \E_3(\lambda_0; \order[1]u, \hat{u}, \hat{v}) + \order[1]\lambda \dot{\E}_2(\lambda_0; \hat{u}, \hat{v}),
+```
+
+```{math}
   \begin{aligned}[b]
     f''(0) = {} & \E_4(\lambda_0; \order[1]u, \order[1]u, \hat{u}, \hat{v}) + \E_3(\lambda_0; \order[2]u, \hat{u}, \hat{v}) + 2\order[1]\lambda \dot{\E}_3(\lambda_0; \order[1]u, \hat{u}, \hat{v})\\
                 & + ( \order[1]\lambda )^2 \ddot{\E}_2(\lambda_0; \hat{u}, \hat{v}) + \order[2]\lambda \dot{\E}_2(\lambda_0; \hat{u}, \hat{v}).
   \end{aligned}
-\end{gather*}
+```
 
 (sec20220616074108)=
 ## Asymptotic expansions of the eigenvalues and eigenvectors of the Hessian
@@ -1559,7 +1672,8 @@ In this appendix, Eqs. {eq}`eq20220609133608`, {eq}`eq20220609133629` and
 {eq}`eq20220616082923` are derived. The postulated
 expansions {eq}`eq20220617064633` are plugged into the asymptotic expansion
 {eq}`eq20220531054247` of the Hessian on the one hand
-\begin{equation*}
+
+```{math}
   \begin{aligned}[b]
     \E_{, uu} [u(\eta), \lambda(\eta); x, \hat{u}] ={}
     & \E_2(\order[0]x, \hat{u}) + \eta \bigl[ \E_2(\order[1]x, \hat{u}) + \E_3(\order[1]u, \order[0]x, \hat{u}) + \order[1]\lambda \dot{\E}_2(\order[0]x, \hat{u})\bigr]\\
@@ -1567,16 +1681,18 @@ expansions {eq}`eq20220617064633` are plugged into the asymptotic expansion
     & + \E_4(\order[1]u, \order[1]u, \order[0]x, \hat{u}) + \E_3(\order[2]u, \order[0]x, \hat{u}) + 2\order[1]\lambda \dot{\E}_3(\order[1]u, \order[0]x, \hat{u})\\
     & + ( \order[1]\lambda )^2 \ddot{\E}_2(\order[0]x, \hat{u}) + \order[2]\lambda \dot{\E}_2(\order[0]x, \hat{u}) \bigr] + o(\eta^2)
   \end{aligned}
-\end{equation*}
+```
+
 (where the $\E_k$ and $\dot{\E}_k$ are all evaluated at $\lambda=\lambda_0$) and into the
 scalar product $\alpha \langle x, \hat{u} \rangle$ on the other hand
-\begin{equation*}
+
+```{math}
   \begin{aligned}[b]
     \alpha \langle x, \hat{u} \rangle ={}
     & \order[0]\alpha \langle \order[0]x, \hat{u} \rangle + \eta \bigl(\order[1]\alpha \langle \order[0]x, \hat{u} \rangle + \order[0]\alpha \langle \order[1]x, \hat{u} \rangle\bigr)\\
     & + \tfrac{1}{2} \eta^2 \bigl(\order[0]\alpha \langle \order[2]x, \hat{u} \rangle + 2 \order[1]\alpha \langle \order[1]x, \hat{u} \rangle + \order[2]\alpha \langle \order[0]x, \hat{u} \rangle\bigr) + o(\eta^2).
   \end{aligned}
-\end{equation*}
+```
 
 Equating both expressions for all $\hat{u} \in U$ [see
 Eq. {eq}`eq20220617074949`] leads to three variational problems (for the
@@ -1584,9 +1700,9 @@ $\eta^0$, $\eta^1$ and $\eta^2$ terms) that are discussed below.
 
 \paragraph{Variational problem of order 0} Find $\order[0]x \in U$ and $\order[0]\alpha\in\reals$ such
 that, for all $\hat{u} \in U$
-\begin{equation*}
+```{math}
   \E_2(\lambda_0; \order[0]x, \hat{u}) = \order[0]\alpha \langle \order[0]x, \hat{u} \rangle.
-\end{equation*}
+```
 
 The above equation shows that $(\order[0]\alpha, \order[0]x)$ is an eigenpair of
 $\E_2(\lambda_0)$. As discussed in {numref}`sec20220617075558`, only the case

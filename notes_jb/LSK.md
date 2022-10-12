@@ -206,14 +206,15 @@ state $u_0 + u$, where $u \in U$ is ``small''. We have, to the fourth order
 ```
 where the linear term has been omitted, $u_0$ being a critical point of the
 energy. Since $v \in V$, we have $\E_2(\lambda_0; v, \bullet) = 0$. We now expand
-$u$ as $u = \xi v + \eta w$, with $\xi, \eta \in \reals$ and $v \in V$ and
+$u$ as $u = \xi \, v + \eta \, w$, with $\xi, \eta \in \reals$ and $v \in V$ and
 $w \in W$ are fixed, orthogonal directions. Owing to the multi-linearity and
 symmetry of the successive differential of $\E$, the above expression expands as
 follows
+
 ```{math}
   \begin{aligned}[b]
     \E(u_0 + u, \lambda_0) - \E(u_0, \lambda_0) ={}
-    & \tfrac{1}{2} \eta^2 \E_2(\lambda_0; w, w) + \tfrac{1}{6} \xi^3 \E_3(\lambda_0; v, v, v)\\
+    & \tfrac{1}{2} \eta^2 \, \E_2(\lambda_0; w, w) + \tfrac{1}{6} \xi^3 \, \E_3(\lambda_0; v, v, v)\\
     & + \tfrac{1}{2} \xi^2 \eta \E_3(\lambda_0; v, v, w) + \tfrac{1}{2} \xi \eta^2 \E_3(\lambda_0; v, w, w)\\
     & + \tfrac{1}{6} \eta^3 \E_3(\lambda_0; w, w, w) + \tfrac{1}{24} \xi^4 \E_4(\lambda_0; v, v, v, v)\\
     & + \tfrac{1}{6} \xi^3 \eta \E_4(\lambda_0; v, v, v, w) + \tfrac{1}{4} \xi^2 \eta^2 \E_4(\lambda_0; v, v, w, w)\\
@@ -225,6 +226,7 @@ follows
 For the equilibrium to be stable, the above expression must be $\geq 0$ for all
 $\xi$ et $\eta$ small enough. Taking first $\eta = 0$, we get the following necessary
 conditions
+
 ```{math}
   :label: eq20211108164416
   \E_3(\lambda_0; v, v, v) = 0 \quad \text{and} \quad \E_4(\lambda_0; v, v, v, v) \geq 0 \quad \text{for all} \quad v \in V.
@@ -368,11 +370,11 @@ differentiated with respect to $\lambda$
   :label: eq20220830145945
   \E_{,uu}(u^\ast + \xi_i v_i + w, \lambda; \dot{u}^\ast + w_{,\lambda}, \hat{w}) + \E_{,u\lambda}(u^\ast + \xi_i v_i + w, \lambda; \hat{w}) = 0
 ```
-and, at $\xi_1 = \ldots = \xi_m = 0$
+and, at $\xi_1 = \ldots = \xi_m = 0$, using Eq. {eq}`eq20220901143843`
 ```{math}
   :label: eq20220830151513
   \E_{,uu}(u^\ast, \lambda; w_{,\lambda}, \hat{w})
-  + \underbrace{\E_{,uu}(u^\ast, \lambda; \dot{u}^\ast, \hat{w}) + \E_{,u\lambda}(u^\ast, \lambda; \hat{w})}_{=0 \quad \text{see Eq. {eq}`eq20220901143843`}}
+  + \underbrace{\E_{,uu}(u^\ast, \lambda; \dot{u}^\ast, \hat{w}) + \E_{,u\lambda}(u^\ast, \lambda; \hat{w})}_{=0}
   = \E_2(\lambda; w_{,\lambda}, \hat{w}) = 0,
 ```
 which proves similarly that the derivative of $w$ with respect to $\lambda$ vanishes
@@ -458,13 +460,15 @@ then with respect to $\xi_j$
 ```
 
 Eqs. {eq}`eq20220901121940` and {eq}`eq20220901125230` are then evaluated
-at $\xi_1 = \cdots = \xi_m = 0$, delivering
+at $\xi_1 = \cdots = \xi_m = 0$. Observing that $\E_{,uu}(u_0, \lambda_0; \bullet, \hat{v}) = 0$ since $\hat{v} \in V$ and using Eqs. {eq}`eq20220901143843` and {eq}`eq20220901143902`, we get
+
 ```{math}
   :label: eq20220901152056
-  \underbrace{\E_{,uu}(u_0, \lambda_0; v_i, \hat{v})}_{=0 \text{ since } \hat{v} \in V}
-  + \lambda_{, i} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0; \dot{u}_0, \hat{v}) +  \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0 \text{ from Eq. {eq}`eq20220901143843`}} \bigr] = 0,
+  \underbrace{\E_{,uu}(u_0, \lambda_0; v_i, \hat{v})}_{=0}
+  + \lambda_{, i} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0; \dot{u}_0, \hat{v}) +  \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0} \bigr] = 0,
 ```
 and
+
 % ```{math}
 %   \begin{gathered}[b]
 %     \E_{,uuu}(u_0, \lambda_0; v_i + \lambda_{,i}\dot{u}_0, v_j + \lambda_{,j} \dot{u}_0, \hat{v}) + \lambda_{,j}\E_{,uu\lambda}(u_0, \lambda_0; v_i + \lambda_{,i} \dot{u}_0, \hat{v})\\
@@ -475,11 +479,11 @@ and
 ```{math}
   :label: eq20220901152145
   \begin{gathered}[b]
-    \E_{,uuu}(u_0, \lambda_0; v_i , v_j, \hat{v}) + \underbrace{\E_{,uu}(u_0, \lambda_0; w_{ij}, \hat{v})}_{=0 \text{ since } \hat{v} \in V}\\
+    \E_{,uuu}(u_0, \lambda_0; v_i , v_j, \hat{v}) + \underbrace{\E_{,uu}(u_0, \lambda_0; w_{ij}, \hat{v})}_{ = 0}\\
     +\lambda_{,i} \bigl[\E_{,uuu}(u_0, \lambda_0; v_j , \dot{u}_0, \hat{v}) + \E_{,uu\lambda}[u_0, \lambda_0; v_j, \hat{v}]\bigr]\\
     +\lambda_{,j} \bigl[\E_{,uuu}(u_0, \lambda_0; v_i , \dot{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_i, \hat{v})\bigr]\\
-    +\lambda_{,ij} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0;  \dot{u}_0, \hat{v}) + \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0 \text{ from Eq. {eq}`eq20220901143843`}} \bigr]\\
-    +\lambda_{,i} \lambda_{,j}\bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; \dot{u}_0 , \dot{u}_0, \hat{v}) + 2\E_{,uu\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{v}) + \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{v}) + \E_{,uu}(u_0, \lambda_0; \ddot{u}_0, \hat{v})}_{ = 0 \text{ from Eq. {eq}`eq20220901143902`}} \bigr] = 0
+    +\lambda_{,ij} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0;  \dot{u}_0, \hat{v}) + \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0} \bigr]\\
+    +\lambda_{,i} \lambda_{,j}\bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; \dot{u}_0 , \dot{u}_0, \hat{v}) + 2\E_{,uu\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{v}) + \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{v}) + \E_{,uu}(u_0, \lambda_0; \ddot{u}_0, \hat{v})}_{ = 0 \text{ from Eq. }} \bigr] = 0
   \end{gathered}
 ```
 
@@ -558,12 +562,17 @@ to be compared with Eq. {eq}`eq20220524134613`.
 
 Following the Appendix A of Ref. {cite}`chak2018`, we introduce the
 following parametrization of the bifurcated branch
-\begin{align}
+
+```{math}
   :label: eq20211115075817
-  \lambda &=  \lambda_0 + \eta \order[1]{\lambda} + \tfrac{1}{2} \eta^2 \order[2]{\lambda} + \tfrac{1}{6} \eta^3 \order[3]{\lambda} + \cdots,\\
+  \lambda =  \lambda_0 + \eta \order[1]{\lambda} + \tfrac{1}{2} \eta^2 \order[2]{\lambda} + \tfrac{1}{6} \eta^3 \order[3]{\lambda} + \cdots,
+```
+
+```{math}
   :label: eq20211115075835
-  u &= u^{\ast}(\lambda) + \eta \order[1]{u} + \tfrac{1}{2} \eta^2 \order[2]{u} + \tfrac{1}{6} \eta^3 \order[3]{u} + \cdots,
-\end{align}
+  u = u^{\ast}(\lambda) + \eta \order[1]{u} + \tfrac{1}{2} \eta^2 \order[2]{u} + \tfrac{1}{6} \eta^3 \order[3]{u} + \cdots,
+```
+
 where the parameter $\eta$ is not specified, but for the fact that $\eta = 0$
 corresponds to the critical point $(u_0, \lambda_0)$. Note that, in
 Eq. {eq}`eq20211115075835`, $u^\ast$ is evaluated at $\lambda$ rather than $\lambda_0$.

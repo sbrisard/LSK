@@ -229,7 +229,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book"
+        <a href="https://github.com/sbrisard/LSK"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -246,7 +246,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotations.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/sbrisard/LSK/issues/new?title=Issue%20on%20page%20%2Fnotations.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -337,67 +337,80 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="notations">
 <h1><span class="section-number">1. </span>Notations<a class="headerlink" href="#notations" title="Permalink to this headline">#</a></h1>
-<p>L’espace des champs cinématiquement admissibles est noté <span class="math notranslate nohighlight">\(U\)</span>. On suppose qu’il a
-la structure d’espace vectoriel. L’énergie du système est notée
-<span class="math notranslate nohighlight">\(\E(u, \lambda)\)</span>, où <span class="math notranslate nohighlight">\(\lambda\)</span> désigne un paramètre de chargement. Soit
-<span class="math notranslate nohighlight">\(u^{\ast}(\lambda)\)</span> la branche fondamentale. Par définition</p>
+<p>The space of admissible states of the system under consideration is denoted <span class="math notranslate nohighlight">\(U\)</span>. It has the structure of a real vector
+space.  The energy of the system is <span class="math notranslate nohighlight">\(\E(u, \lambda)\)</span>, where <span class="math notranslate nohighlight">\(\lambda\)</span> denotes a loading parameter. It is assumed that
+the fundamental branch of the equilibrium diagram, <span class="math notranslate nohighlight">\(u^{\ast}(\lambda)\)</span> is known. Then the energy is stationary with
+respect to the state <span class="math notranslate nohighlight">\(u\)</span> along the whole branch. In other words,</p>
 <div class="math notranslate nohighlight">
-\[  \E_{,u}[u^{\ast}(\lambda), \lambda; \hat{u}]=0 \quad \text{pour tout} \quad \hat{u}\in U,\]</div>
-<p>and, deriving twice with respect to <span class="math notranslate nohighlight">\(\lambda\)</span>, we find successively, for all
-<span class="math notranslate nohighlight">\(\hat{u} \in U\)</span></p>
+\[  \E_{,u}[u^{\ast}(\lambda), \lambda; \hat{u}]=0 \quad \text{for all} \quad \hat{u} \in U \quad \text{and} \quad \lambda \in \reals,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\E_{,u}(u, \lambda; \hat{u})\)</span> denotes the (real) value of the differential of the energy <span class="math notranslate nohighlight">\(\E\)</span> with respect to the
+state <span class="math notranslate nohighlight">\(u\)</span>, evaluated at <span class="math notranslate nohighlight">\((u, \lambda)\)</span>, for the test function <span class="math notranslate nohighlight">\(\hat{u}\)</span>. Similarly, evaluation of the second-, third-,
+etc., order differential of the energy will be denoted <span class="math notranslate nohighlight">\(\E_{,uu}(u, \lambda; \hat{u}, \hat{v})\)</span>, <span class="math notranslate nohighlight">\(\E_{,uuu}(u, \lambda;
+\hat{u}, \hat{v}, \hat{w})\)</span>, etc.</p>
+<p>Upon derivation of the above stationarity condition with respect to <span class="math notranslate nohighlight">\(\lambda\)</span>, it is found that, for all <span class="math notranslate nohighlight">\(\hat{u} \in U\)</span>
+and <span class="math notranslate nohighlight">\(\lambda \in \reals\)</span></p>
 <div class="math notranslate nohighlight" id="equation-eq20220901143843">
 <span class="eqno">(1.1)<a class="headerlink" href="#equation-eq20220901143843" title="Permalink to this equation">#</a></span>\[  \E_{,uu}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \hat{u}] + \E_{,u\lambda}[u^\ast(\lambda), \lambda; \hat{u}] = 0\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-eq20220901143902">
 <span class="eqno">(1.2)<a class="headerlink" href="#equation-eq20220901143902" title="Permalink to this equation">#</a></span>\[\begin{split}  \begin{aligned}[b]
   \E_{,uuu}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \dot{u}^\ast(\lambda), \hat{u}] + 2\E_{,uu\lambda}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \hat{u}] &amp; \\
-  + \E_{,u\lambda\lambda}[u^\ast(\lambda), \lambda; \hat{u}] + \E_{,uu}[u^\ast(\lambda), \lambda; \ddot{u}^\ast(\lambda), \hat{u}] &amp; = 0
+  + \E_{,u\lambda\lambda}[u^\ast(\lambda), \lambda; \hat{u}] + \E_{,uu}[u^\ast(\lambda), \lambda; \ddot{u}^\ast(\lambda), \hat{u}] &amp; = 0.
   \end{aligned}\end{split}\]</div>
-<p>Il sera commode d’introduire les notations suivantes</p>
+<p>It will be convenient to introduce special notations for the derivatives of the energy <span class="math notranslate nohighlight">\(\E\)</span> with respect to the state
+<span class="math notranslate nohighlight">\(u\)</span>, evaluated along the bifurcated branch.</p>
 <div class="math notranslate nohighlight">
-\[  \E_2(\lambda) = \E_{,uu}[u^{\ast}(\lambda), \lambda], \quad \E_3(\lambda) = \E_{,uuu}[u^{\ast}(\lambda), \lambda], \quad \E_4(\lambda) = \E_{,uuuu} [u^{\ast}(\lambda), \lambda].\]</div>
-<p>Noter que <span class="math notranslate nohighlight">\(\E_2\)</span>, <span class="math notranslate nohighlight">\(\E_3\)</span> et <span class="math notranslate nohighlight">\(\E_4\)</span> sont des formes bi-, tri- et
-quadri-linéaires, respectivement. L’application de ces formes à des éléments de
-<span class="math notranslate nohighlight">\(U\)</span> sera notée <span class="math notranslate nohighlight">\(\E_2(\lambda; u, v)\)</span>, <span class="math notranslate nohighlight">\(\E_3(\lambda; u, v, w)\)</span>, etc. La dérivée de ces
-formes par rapport à <span class="math notranslate nohighlight">\(\lambda\)</span> sera notée à l’aide d’un point supérieur
-(<span class="math notranslate nohighlight">\(\dot{\E}_2\)</span>, <span class="math notranslate nohighlight">\(\dot{\E}_3\)</span>, \dots).</p>
-<p>On suppose que l’équilibre est stable pour des valeurs suffisamment petites de
-<span class="math notranslate nohighlight">\(\lambda\)</span>. Plus précisément, on suppose que <span class="math notranslate nohighlight">\(\E_2(\lambda)\)</span> est définie positive pour tout
-<span class="math notranslate nohighlight">\(\lambda &lt; \lambda_0\)</span>. Pour <span class="math notranslate nohighlight">\(\lambda = \lambda_0\)</span>, la forme quadratique
-<span class="math notranslate nohighlight">\(\E_2(\lambda_0)\)</span> n’est plus que positive. On note <span class="math notranslate nohighlight">\(u_0 = u^{\ast}(\lambda_0)\)</span>,
-<span class="math notranslate nohighlight">\(\dot{u}_0 = \dot{u}^\ast(\lambda_0)\)</span> et <span class="math notranslate nohighlight">\(\ddot{u}_0 = \ddot{u}^\ast(\lambda_0)\)</span> de sorte que les
-Éqs. <a class="reference internal" href="#equation-eq20220901143843">(1.1)</a> et <a class="reference internal" href="#equation-eq20220901143902">(1.2)</a> s’écrivent, en
-<span class="math notranslate nohighlight">\(\lambda = \lambda_0\)</span></p>
+\[  \E_2(\lambda) = \E_{,uu}[u^{\ast}(\lambda), \lambda], \quad \E_3(\lambda) = \E_{,uuu}[u^{\ast}(\lambda), \lambda], \quad \text{etc.}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(\E_2\)</span> and <span class="math notranslate nohighlight">\(\E_3\)</span> are bi- and trilinear forms, respectively.  Evaluation of these forms over <span class="math notranslate nohighlight">\(U\)</span> will be
+denoted <span class="math notranslate nohighlight">\(\E_2(\lambda; u, v)\)</span>, <span class="math notranslate nohighlight">\(\E_3(\lambda; u, v, w)\)</span>, etc.  Derivatives of these forms with respect to <span class="math notranslate nohighlight">\(\lambda\)</span> will
+be denoted <span class="math notranslate nohighlight">\(\dot{\E}_2\)</span>, <span class="math notranslate nohighlight">\(\dot{\E}_3\)</span>, etc.</p>
+<p>It is assumed that a finite value <span class="math notranslate nohighlight">\(\lambda_0 &gt; 0\)</span> of <span class="math notranslate nohighlight">\(\lambda\)</span> can be found, such that</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\E_2(\lambda) &gt; 0\)</span> for all <span class="math notranslate nohighlight">\(0 &lt; \lambda &lt; \lambda_0\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\E_2(\lambda_0) \geq 0\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\E_2(\lambda) &lt; 0\)</span> for <span class="math notranslate nohighlight">\(\lambda &gt; \lambda_0\)</span>, close enough to <span class="math notranslate nohighlight">\(\lambda_0\)</span>.</p></li>
+</ol>
+<p>It will be convenient to introduce the following notations</p>
+<div class="math notranslate nohighlight">
+\[u_0 = u^\ast(\lambda_0), \quad \mathring{u}_0 = \dot{u}^\ast(\lambda_0).\]</div>
+<p>The load <span class="math notranslate nohighlight">\(\lambda_0\)</span> will be referred to as the <em>critical load</em>; similarly, the state <span class="math notranslate nohighlight">\(u_0\)</span> of the system at the
+critical load will be referred to the <em>critical state</em>; finally, the pair <span class="math notranslate nohighlight">\((u_0, \lambda_0)\)</span> is the <em>critical state</em> of
+the system. Assumption 1 implies that equilibria along the fundamental branch are <em>stable</em> below the critical
+load*. Conversely, it results from assumption 3 that equilibrium points on the fundamental branch are <em>unstable</em> above
+the critical load. Stability at the critical load is yet unknown.</p>
+<p>It results from the above definitions that Eqs. <a class="reference internal" href="#equation-eq20220901143843">(1.1)</a> and <a class="reference internal" href="#equation-eq20220901143902">(1.2)</a> read, at the critical load</p>
 <div class="math notranslate nohighlight" id="equation-eq20220901144331">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-eq20220901144331" title="Permalink to this equation">#</a></span>\[  \E_{,uu}(u_0, \lambda_0; \dot{u}_0, \bullet) + \E_{,u\lambda}(u_0, \lambda_0; \bullet) = 0\]</div>
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-eq20220901144331" title="Permalink to this equation">#</a></span>\[  \E_{,uu}(u_0, \lambda_0; \mathring{u}_0, \hat{u}) + \E_{,u\lambda}(u_0, \lambda_0; \hat{u}) = 0\]</div>
+<p>and</p>
 <div class="math notranslate nohighlight" id="equation-eq20220901144335">
-<span class="eqno">(1.4)<a class="headerlink" href="#equation-eq20220901144335" title="Permalink to this equation">#</a></span>\[  \E_{,uuu}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \bullet) + 2\E_{,uu\lambda}(u_0, \lambda_0; \dot{u}_0, \bullet) + \E_{,u\lambda\lambda}(u_0, \lambda_0; \bullet) + \E_{,uu}(u_0, \lambda_0; \ddot{u}_0, \bullet) = 0\]</div>
-<p>On s’intéresse dans ce qui suit à toutes les courbes d’équilibre qui passent par
-le point <span class="math notranslate nohighlight">\((u_0, \lambda_0)\)</span>.</p>
-<p>\pdfmarkupcomment{Noter que dans ce qui suit}{Est-ce encore d’actualité ?}, on
-convient que les formes <span class="math notranslate nohighlight">\(\E_2\)</span>, <span class="math notranslate nohighlight">\(\E_3\)</span> et <span class="math notranslate nohighlight">\(\E_4\)</span> sont implicitement évaluées en
-<span class="math notranslate nohighlight">\(\lambda_0\)</span> lorsque <span class="math notranslate nohighlight">\(\lambda\)</span> n’est pas rappelé : ainsi, on notera
-<span class="math notranslate nohighlight">\(\E_2(\bullet, \bullet)\)</span> plutôt que <span class="math notranslate nohighlight">\(\E_2(\lambda_0 ; \bullet, \bullet)\)</span>.</p>
-<p>Par hypothèse, <span class="math notranslate nohighlight">\(\E_2(\lambda_0)\)</span> est positive, sans être définie positive ; soit
-<span class="math notranslate nohighlight">\(V\)</span> son noyau, qui forme un sous-espace vectoriel de <span class="math notranslate nohighlight">\(U\)</span>. On suppose que <span class="math notranslate nohighlight">\(V\)</span> est
-de dimension finie <span class="math notranslate nohighlight">\(m = \dim V\)</span>. Soit <span class="math notranslate nohighlight">\((v_1, \ldots, v_m)\)</span> une base orthonormée de ce
-noyau pour le produit scalaire <span class="math notranslate nohighlight">\(\langle \bullet, \bullet \rangle\)</span> (qui n’est pas précisé pour le
-moment). On introduit le sous-espace supplémentaire orthogonal <span class="math notranslate nohighlight">\(W\)</span> de <span class="math notranslate nohighlight">\(V\)</span> dans
-<span class="math notranslate nohighlight">\(U\)</span></p>
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-eq20220901144335" title="Permalink to this equation">#</a></span>\[  \E_{,uuu}(u_0, \lambda_0; \mathring{u}_0, \mathring{u}_0, \hat{u}) + 2\E_{,uu\lambda}(u_0, \lambda_0; \mathring{u}_0, \hat{u})
+  + \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{u}) + \E_{,uu}[u_0, \lambda_0; \ddot{u}^\ast(\lambda_0), \hat{u}] = 0,\]</div>
+<p>for all <span class="math notranslate nohighlight">\(\hat{u} \in U\)</span>.</p>
+<p>The goal of these notes is to analyse <em>all</em> equilibrium paths that pass through the critical point <span class="math notranslate nohighlight">\((u_0, \lambda_0)\)</span>.</p>
+<p>From assumption 2, <span class="math notranslate nohighlight">\(\E_2(\lambda_0)\)</span> is positive indefinite. Let <span class="math notranslate nohighlight">\(V = \ker \E_2(\lambda_0)\)</span> is kernel; <span class="math notranslate nohighlight">\(V\)</span> is a vector
+subspace of <span class="math notranslate nohighlight">\(U\)</span> (see <a class="reference internal" href="multilinear_algebra.html#sec20221013223647"><span class="std std-numref">Section 6</span></a>) and we define the supplementary subspace <span class="math notranslate nohighlight">\(W\)</span>, orthogonal to <span class="math notranslate nohighlight">\(V\)</span> for
+the (yet unspecified) scalar product <span class="math notranslate nohighlight">\(\langle \bullet, \bullet \rangle\)</span></p>
 <div class="math notranslate nohighlight">
-\[  U = V \overset{\perp}{\otimes} W.\]</div>
+\[  \E_2(\lambda_0; \hat{u}, \hat{v}) = 0 \quad \text{for all} \quad \hat{u} \in U \quad \text{and} \quad \hat{v} \in V.\]</div>
+<div class="math notranslate nohighlight">
+\[  U = V \overset{\perp}{\otimes} W \quad \text{and} \quad \langle \hat{v}, \hat{w} \rangle = 0
+  \quad \text{for all} \quad \hat{v} \in V \quad \text{and} \quad \hat{w} \in W.\]</div>
 <div class="admonition note" id="rem20220902095055">
 <p class="admonition-title">Note</p>
-<p>The bilinear form <span class="math notranslate nohighlight">\(\E_2\)</span> being elliptic over <span class="math notranslate nohighlight">\(W\)</span>, variational problems of the
-type: find <span class="math notranslate nohighlight">\(w \in W\)</span> such that</p>
+<p>The bilinear form <span class="math notranslate nohighlight">\(\E_2\)</span> being elliptic over <span class="math notranslate nohighlight">\(W\)</span>, variational problems of the type: find <span class="math notranslate nohighlight">\(w \in W\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\E_2(w, \hat{w})+\ell(\hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W\]</div>
-<p>are well-posed for any linear form <span class="math notranslate nohighlight">\(\ell\)</span> over <span class="math notranslate nohighlight">\(W\)</span>. In particular, for
-<span class="math notranslate nohighlight">\(\ell=0\)</span>, the unique solution to the variational problem</p>
+<p>are well-posed for any linear form <span class="math notranslate nohighlight">\(\ell\)</span> over <span class="math notranslate nohighlight">\(W\)</span>. In particular, for <span class="math notranslate nohighlight">\(\ell=0\)</span>, the unique solution to the
+variational problem</p>
 <div class="math notranslate nohighlight">
 \[\E_2(w, \hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W\]</div>
 <p>is <span class="math notranslate nohighlight">\(w = 0\)</span>.</p>
 </div>
+<p>It is assumed that the dimension of <span class="math notranslate nohighlight">\(V\)</span> is finite: <span class="math notranslate nohighlight">\(m = \dim V &lt; +\infty\)</span>; <span class="math notranslate nohighlight">\(m\)</span> is the <em>multiplicity</em> of the critical
+point. A (finite) basis <span class="math notranslate nohighlight">\((v_1, \ldots, v_m)\)</span> of <span class="math notranslate nohighlight">\(V\)</span> can therefore be introduced, that is orthonormal in the sense of
+<span class="math notranslate nohighlight">\(\langle \bullet, \bullet \rangle\)</span></p>
+<div class="math notranslate nohighlight">
+\[\langle v_i, v_j \rangle = \delta_{ij} \quad \text{for all} \quad i, j = 1, \ldots, m.\]</div>
 <p>For <span class="math notranslate nohighlight">\(1 \leq i, j \leq m\)</span>, we introduce the solutions <span class="math notranslate nohighlight">\(w_i, w_{ij} \in W\)</span> to the
 following variational problems</p>
 <div class="math notranslate nohighlight" id="equation-eq20220524134525">
@@ -432,8 +445,8 @@ are fully symmetric. Furthermore, the following expression of <span class="math 
 from Eq. <a class="reference internal" href="#equation-eq20220519164523">(1.6)</a></p>
 <div class="math notranslate nohighlight" id="equation-eq20220802081116">
 <span class="eqno">(1.12)<a class="headerlink" href="#equation-eq20220802081116" title="Permalink to this equation">#</a></span>\[  E_{ijkl} = \E_4(\lambda_0 ; v_i, v_j, v_k, v_l) - \E_2(\lambda_0 ; w_{ij}, w_{kl}) - \E_2(\lambda_0 ; w_{ik}, w_{jl}) - \E_2(\lambda_0 ; w_{il}, w_{jk}),\]</div>
-<p>which shows that <span class="math notranslate nohighlight">\(E_{ijkl}\)</span> is also fully symmetric. We close this section, with
-two useful identities. First, starting from the definition of <span class="math notranslate nohighlight">\(\mathring{F}_{ij}, and usinag {eq}`eq20220524134525`, with \)</span>v_i = v_j<span class="math notranslate nohighlight">\( and \)</span>\hat{w} = w_i$</p>
+<p>which shows that <span class="math notranslate nohighlight">\(E_{ijkl}\)</span> is also fully symmetric. We close this section, with two useful identities. First, starting
+from the definition of <span class="math notranslate nohighlight">\(\mathring{F}_{ij}\)</span>, and using <a class="reference internal" href="#equation-eq20220524134525">(1.5)</a>, with <span class="math notranslate nohighlight">\(v_i = v_j\)</span> and <span class="math notranslate nohighlight">\(\hat{w} = w_i\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}  \begin{aligned}[b]
     \mathring{F}_{ij} ={} &amp; \ddot{\E}_2(\lambda_0; v_i, v_j) + \dot{\E}_2(\lambda_0; v_i, w_j) + \dot{\E}_2(\lambda_0; v_j, w_i)\\
@@ -444,7 +457,7 @@ two useful identities. First, starting from the definition of <span class="math 
 \[  \mathring{F}_{ij} = \ddot{\E}_2(\lambda_0; v_i, v_j)  + 2\dot{\E}_2(\lambda_0; v_i, w_j)\]</div>
 <p>which delivers, from the symmetry with respect to <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span></p>
 <div class="math notranslate nohighlight" id="equation-eq20220617084433">
-<span class="eqno">(1.13)<a class="headerlink" href="#equation-eq20220617084433" title="Permalink to this equation">#</a></span>\[  \mathring{F}_{ij} = \ddot{\E}_2(\lambda_0; v_i, v_j) + 2\dot{\E}_2(\lambda_0; v_j, w_i).\]</div>
+<span class="eqno">(1.13)<a class="headerlink" href="#equation-eq20220617084433" title="Permalink to this equation">#</a></span>\[  \mathring{F}_{ij} = \ddot{\E}_2(\lambda_0; v_i, v_j) + \dot{\E}_2(\lambda_0; v_i, w_j) + \dot{\E}_2(\lambda_0; v_j, w_i).\]</div>
 <p>We also have the following identity on <span class="math notranslate nohighlight">\(\mathring{E}_{ijk}\)</span>, which results from Eq. <a class="reference internal" href="#equation-eq20220519164523">(1.6)</a></p>
 <div class="math notranslate nohighlight" id="equation-eq20220617085256">
 <span class="eqno">(1.14)<a class="headerlink" href="#equation-eq20220617085256" title="Permalink to this equation">#</a></span>\[\begin{split}  \begin{aligned}[b]

@@ -10,7 +10,7 @@ issues.
 
 These notes by Sébastien Brisard are licensed under a Creative Commons
 Attribution 4.0 International License. To view a copy of this license, visit
-[http://creativecommons.org/licenses/by/4.0/].
+[https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/).
 
 I hope the reader will find these notes useful, even though there are still a
 few points which I do not fully understand (they are clearly indicated in the

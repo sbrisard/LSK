@@ -1,3 +1,4 @@
+(sec20221013223647)=
 # Some useful results from multilinear algebra
 
 ## Kernel of a bilinear, symmetric, positive form

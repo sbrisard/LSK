@@ -63,15 +63,20 @@
 
 \section{Notations}
 
-L'espace des champs cinématiquement admissibles est noté $U$. On suppose qu'il a
-la structure d'espace vectoriel. L'énergie du système est notée
-$\E(u, \lambda)$, où $\lambda$ désigne un paramètre de chargement. Soit
-$u^{\ast}(\lambda)$ la branche fondamentale. Par définition
+The space of admissible states of the system under consideration is denoted $U$. It has the structure of a real vector
+space. The energy of the system is \(\E(u, \lambda)\), where \(\lambda\) denotes a loading parameter. It is assumed that
+the fundamental branch of the equilibrium diagram, \(u^{\ast}(\lambda)\) is known. Then the energy is stationary with
+respect to the state \(u\) along the whole branch. In other words,
 \begin{equation}
-  \E_{,u}[u^{\ast}(\lambda), \lambda; \hat{u}]=0 \quad \text{pour tout} \quad \hat{u}\in U,
+  \E_{,u}[u^{\ast}(\lambda), \lambda; \hat{u}]=0 \quad \text{for all} \quad \hat{u}\in U,
 \end{equation}
-and, deriving twice with respect to $\lambda$, we find successively, for all
-$\hat{u} \in U$
+where \(\E_{,u}(u, \lambda; \hat{u})\) denotes the (real) value of the differential of the energy \(\E\) with respect to the
+state \(u\), evaluated at \((u, \lambda)\), for the test function \(\hat{u}\). Similarly, evaluation of the second-, third-,
+etc., order differential of the energy will be denoted \(\E_{,uu}(u, \lambda; \hat{u}, \hat{v})\), \(\E_{,uuu}(u, \lambda;
+\hat{u}, \hat{v}, \hat{w})\), etc.
+
+Upon derivation of the above stationarity condition with respect to \(\lambda\), it is found that, for all \(\hat{u} \in U\)
+and \(\lambda \in \reals\)
 \begin{equation}
   \label{eq:20220901143843}
   \E_{,uu}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \hat{u}] + \E_{,u\lambda}[u^\ast(\lambda), \lambda; \hat{u}] = 0
@@ -83,47 +88,52 @@ and
   + \E_{,u\lambda\lambda}[u^\ast(\lambda), \lambda; \hat{u}] + \E_{,uu}[u^\ast(\lambda), \lambda; \ddot{u}^\ast(\lambda), \hat{u}] = 0
 \end{multline}
 
-Il sera commode d'introduire les notations suivantes
+It will be convenient to introduce special notations for the derivatives of the energy $\E$ with respect to the state
+\(u\), evaluated along the bifurcated branch
 \begin{equation}
   \E_2(\lambda) = \E_{,uu}[u^{\ast}(\lambda), \lambda], \quad \E_3(\lambda) = \E_{,uuu}[u^{\ast}(\lambda), \lambda], \quad \E_4(\lambda) = \E_{,uuuu} [u^{\ast}(\lambda), \lambda].
 \end{equation}
-Noter que $\E_2$, $\E_3$ et $\E_4$ sont des formes bi-, tri- et
-quadri-linéaires, respectivement. L'application de ces formes à des éléments de
-$U$ sera notée $\E_2(\lambda; u, v)$, $\E_3(\lambda; u, v, w)$, etc. La dérivée de ces
-formes par rapport à $\lambda$ sera notée à l'aide d'un point supérieur
-($\dot{\E}_2$, $\dot{\E}_3$, \dots).
+Note that $\E_2$ and $\E_3$ are bi- and trilinear forms, respectively.  Evaluation of these forms over $U$ will be
+denoted $\E_2(\lambda; u, v)$, $\E_3(\lambda; u, v, w)$, etc.  Derivatives of these forms with respect to $\lambda$ will
+be denoted $\dot{\E}_2$, $\dot{\E}_3$, etc.
 
-On suppose que l'équilibre est stable pour des valeurs suffisamment petites de
-$\lambda$. Plus précisément, on suppose que $\E_2(\lambda)$ est définie positive pour tout
-$\lambda < \lambda_0$. Pour $\lambda = \lambda_0$, la forme quadratique
-$\E_2(\lambda_0)$ n'est plus que positive. On note $u_0 = u^{\ast}(\lambda_0)$,
-$\dot{u}_0 = \dot{u}^\ast(\lambda_0)$ et $\ddot{u}_0 = \ddot{u}^\ast(\lambda_0)$ de sorte que les
-Éqs.~\eqref{eq:20220901143843} et \eqref{eq:20220901143902} s'écrivent, en
-$\lambda = \lambda_0$
+It is assumed that a finite value $\lambda_0 > 0$ of $\lambda$ can be found, such that
+\begin{enumerate}
+\item \label{item:20221017185946} $\E_2(\lambda) > 0$ for all $0 < \lambda < \lambda_0$,
+\item \label{item:20221017190357} $\E_2(\lambda_0) \geq 0$,
+\item \label{item:20221017190003} $\E_2(\lambda) < 0$ for $\lambda > \lambda_0$, close enough to $\lambda_0$.
+\end{enumerate}
+
+It will be convenient to introduce the following notations
+\begin{equation}
+  u_0 = u^\ast(\lambda_0), \quad \mathring{u}_0 = \dot{u}^\ast(\lambda_0).
+\end{equation}
+
+The load $\lambda_0$ will be referred to as the \emph{critical load}; similarly, the state $u_0$ of the system at the
+critical load will be referred to the \emph{critical state}; finally, the pair $(u_0, \lambda_0)$ is the \emph{critical
+  point} of the system. Assumption~\ref{item:20221017185946} implies that equilibria along the fundamental branch are
+\emph{stable below the critical load}. Conversely, it results from assumption~\ref{item:20221017190003} that equilibrium
+points on the fundamental branch are \emph{unstable above the critical load}. Stability at the critical load is yet
+unknown.
+
+It results from the above definitions that Eqs.~\eqref{eq:20220901143843} and \eqref{eq:20220901143902} read, at the
+critical load
 \begin{gather}
   \label{eq:20220901144331}
-  \E_{,uu}(u_0, \lambda_0; \dot{u}_0, \bullet) + \E_{,u\lambda}(u_0, \lambda_0; \bullet) = 0\\
+  \E_{,uu}(u_0, \lambda_0; \mathring{u}_0, \bullet) + \E_{,u\lambda}(u_0, \lambda_0; \bullet) = 0\\
   \label{eq:20220901144335}
-  \E_{,uuu}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \bullet) + 2\E_{,uu\lambda}(u_0, \lambda_0; \dot{u}_0, \bullet) + \E_{,u\lambda\lambda}(u_0, \lambda_0; \bullet) + \E_{,uu}(u_0, \lambda_0; \ddot{u}_0, \bullet) = 0
+  \E_{,uuu}(u_0, \lambda_0; \mathring{u}_0, \mathring{u}_0, \bullet) + 2\E_{,uu\lambda}(u_0, \lambda_0; \mathring{u}_0, \bullet) + \E_{,u\lambda\lambda}(u_0, \lambda_0; \bullet) + \E_{,uu}(u_0, \lambda_0; \ddot{u}_0, \bullet) = 0
 \end{gather}
 
-On s'intéresse dans ce qui suit à toutes les courbes d'équilibre qui passent par
-le point $(u_0, \lambda_0)$.
+The goal of these notes is to analyse \emph{all} equilibrium paths that pass through the critical point $(u_0, \lambda_0)$.
 
-\pdfmarkupcomment{Noter que dans ce qui suit}{Est-ce encore d'actualité ?}, on
-convient que les formes $\E_2$, $\E_3$ et $\E_4$ sont implicitement évaluées en
-$\lambda_0$ lorsque $\lambda$ n'est pas rappelé : ainsi, on notera
-$\E_2(\bullet, \bullet)$ plutôt que $\E_2(\lambda_0 ; \bullet, \bullet)$.
-
-Par hypothèse, $\E_2(\lambda_0)$ est positive, sans être définie positive~; soit
-$V$ son noyau, qui forme un sous-espace vectoriel de $U$. On suppose que $V$ est
-de dimension finie $m = \dim V$. Soit $(v_1, \ldots, v_m)$ une base orthonormée de ce
-noyau pour le produit scalaire $\langle \bullet, \bullet \rangle$ (qui n'est pas précisé pour le
-moment). On introduit le sous-espace supplémentaire orthogonal $W$ de $V$ dans
-$U$
-\begin{equation}
-  U = V \overset{\perp}{\otimes} W.
-\end{equation}
+From assumption~\ref{item:20221017190357}, $\E_2(\lambda_0)$ is positive indefinite. Let $V = \ker \E_2(\lambda_0)$ be its
+kernel; $V$ is a vector subspace of $U$ (see \S \ref{sec:20221013223647}) and we define the supplementary subspace $W$,
+orthogonal to $V$ for the (yet unspecified) scalar product $\langle \bullet, \bullet \rangle$
+\begin{gather}
+  \E_2(\lambda_0; \hat{u}, \hat{v}) = 0 \quad \text{for all} \quad \hat{u} \in U \quad \text{and} \quad \hat{v} \in V.\\
+  U = V \overset{\perp}{\otimes} W \quad \text{and} \quad \langle \hat{v}, \hat{w} \rangle = 0 \quad \text{for all} \quad \hat{v} \in V \quad \text{and} \quad \hat{w} \in W.
+\end{gather}
 
 \begin{remark}
   \label{rem:20220902095055}
@@ -140,8 +150,14 @@ $U$
   is $w = 0$.
 \end{remark}
 
-For $1 \leq i, j \leq m$, we introduce the solutions $w_i, w_{ij} \in W$ to the
-following variational problems
+It is assumed that the dimension of $V$ is finite: $m = \dim V < +\infty$; $m$ is the \emph{multiplicity} of the
+critical point. A (finite) basis $(v_1, \ldots, v_m)$ of $V$ can therefore be introduced, that is orthonormal in the
+sense of $\langle \bullet, \bullet \rangle$
+\begin{equation}
+  \langle v_i, v_j \rangle = \delta_{ij} \quad \text{for all} \quad i, j = 1, \ldots, m.
+\end{equation}
+
+For $1 \leq i, j \leq m$, we introduce the solutions $w_i, w_{ij} \in W$ to the following variational problems
 \begin{gather}
   \label{eq:20220524134525}
   \E_2(\lambda_0; w_i, \hat{w}) + \dot{\E}_2(\lambda_0; v_i, \hat{w}) = 0,\\
@@ -157,7 +173,7 @@ $w_{ij}=w_{ji}$. We also introduce the following tensors, defined in $V$
   E_{ijkl} = \E_4(\lambda_0 ; v_i, v_j, v_k, v_l) + \E_3(\lambda_0 ; v_i, v_j, w_{kl}) + \E_3(\lambda_0 ; v_i, v_k, w_{lj}) + \E_3(\lambda_0 ; v_i, v_l, w_{jk}),\\
   F_{ij} = \dot{\E}_2(\lambda_0; v_i, v_j) + \E_2(\lambda_0; v_i, w_j) + \E_2(\lambda_0; v_j, w_i),
 \end{gather}
-as well as the derivatives
+\pdfmarkupcomment{as well as the derivatives}{à reprendre ici}
 \begin{gather}
   \label{eq:20220615063626}
   \mathring{E}_{ijk} = \dot{\E}_3(\lambda_0; v_i, v_j, v_k) + \dot{\E_2}(\lambda_0; v_i, w_{jk}) + \dot{\E}_2(\lambda_0; v_j, w_{ki}) + \dot{\E}_2(\lambda_0; v_k, w_{ij}),\\
@@ -474,24 +490,24 @@ at $\xi_1 = \cdots = \xi_m = 0$, delivering
 \begin{equation}
   \label{eq:20220901152056}
   \underbrace{\E_{,uu}(u_0, \lambda_0; v_i, \hat{v})}_{=0 \text{ since } \hat{v} \in V}
-  + \lambda_{, i} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0; \dot{u}_0, \hat{v}) +  \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143843}}} \bigr] = 0,
+  + \lambda_{, i} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0; \mathring{u}_0, \hat{v}) +  \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143843}}} \bigr] = 0,
 \end{equation}
 and
 % \begin{equation}
 %   \begin{gathered}[b]
-%     \E_{,uuu}(u_0, \lambda_0; v_i + \lambda_{,i}\dot{u}_0, v_j + \lambda_{,j} \dot{u}_0, \hat{v}) + \lambda_{,j}\E_{,uu\lambda}(u_0, \lambda_0; v_i + \lambda_{,i} \dot{u}_0, \hat{v})\\
-%     + \E_{,uu}(u_0, \lambda_0; w_{ij} + \lambda_{,ij} \dot{u}_0 + w_{,\lambda} + \lambda_{,i}\lambda_{,j} \ddot{u}_0, \hat{v})\\
-%     + \lambda_{, ij} \E_{,u\lambda}(u_0, \lambda_0; \hat{v}) + \lambda_{, i} \E_{,uu\lambda}(u_0, \lambda_0; v_j + \lambda_{,j} \dot{u}_0, \hat{v}) + \lambda_{,i} \lambda_{,j} \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{v}) = 0
+%     \E_{,uuu}(u_0, \lambda_0; v_i + \lambda_{,i}\mathring{u}_0, v_j + \lambda_{,j} \mathring{u}_0, \hat{v}) + \lambda_{,j}\E_{,uu\lambda}(u_0, \lambda_0; v_i + \lambda_{,i} \mathring{u}_0, \hat{v})\\
+%     + \E_{,uu}(u_0, \lambda_0; w_{ij} + \lambda_{,ij} \mathring{u}_0 + w_{,\lambda} + \lambda_{,i}\lambda_{,j} \ddot{u}_0, \hat{v})\\
+%     + \lambda_{, ij} \E_{,u\lambda}(u_0, \lambda_0; \hat{v}) + \lambda_{, i} \E_{,uu\lambda}(u_0, \lambda_0; v_j + \lambda_{,j} \mathring{u}_0, \hat{v}) + \lambda_{,i} \lambda_{,j} \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{v}) = 0
 %   \end{gathered}
 % \end{equation}
 \begin{equation}
   \label{eq:20220901152145}
   \begin{gathered}[b]
     \E_{,uuu}(u_0, \lambda_0; v_i , v_j, \hat{v}) + \underbrace{\E_{,uu}(u_0, \lambda_0; w_{ij}, \hat{v})}_{=0 \text{ since } \hat{v} \in V}\\
-    +\lambda_{,i} \bigl[\E_{,uuu}(u_0, \lambda_0; v_j , \dot{u}_0, \hat{v}) + \E_{,uu\lambda}[u_0, \lambda_0; v_j, \hat{v}]\bigr]\\
-    +\lambda_{,j} \bigl[\E_{,uuu}(u_0, \lambda_0; v_i , \dot{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_i, \hat{v})\bigr]\\
-    +\lambda_{,ij} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0;  \dot{u}_0, \hat{v}) + \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143843}}} \bigr]\\
-    +\lambda_{,i} \lambda_{,j}\bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; \dot{u}_0 , \dot{u}_0, \hat{v}) + 2\E_{,uu\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{v}) + \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{v}) + \E_{,uu}(u_0, \lambda_0; \ddot{u}_0, \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143902}}} \bigr] = 0
+    +\lambda_{,i} \bigl[\E_{,uuu}(u_0, \lambda_0; v_j , \mathring{u}_0, \hat{v}) + \E_{,uu\lambda}[u_0, \lambda_0; v_j, \hat{v}]\bigr]\\
+    +\lambda_{,j} \bigl[\E_{,uuu}(u_0, \lambda_0; v_i , \mathring{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_i, \hat{v})\bigr]\\
+    +\lambda_{,ij} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0;  \mathring{u}_0, \hat{v}) + \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143843}}} \bigr]\\
+    +\lambda_{,i} \lambda_{,j}\bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; \mathring{u}_0 , \mathring{u}_0, \hat{v}) + 2\E_{,uu\lambda}(u_0, \lambda_0; \mathring{u}_0, \hat{v}) + \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{v}) + \E_{,uu}(u_0, \lambda_0; \ddot{u}_0, \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143902}}} \bigr] = 0
   \end{gathered}
 \end{equation}
 
@@ -499,8 +515,8 @@ Eq.~\eqref{eq:20220901152056} is non-informative (identically satisfied), while
 Eq.~\eqref{eq:20220901152145} simplifies as follows
 \begin{equation}
   \begin{aligned}[b]
-    \E_{,uuu}(u_0, \lambda_0; v_i , v_j, \hat{v}) + \lambda_{,i} \bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; v_j , \dot{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_j, \hat{v})}_{=\dot{\E}_2(\lambda_0; v_j, \hat{v})} \bigr]&\\
-    +\lambda_{,j} \bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; v_i , \dot{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_i, \hat{v})}_{\lambda_{,j} \dot{\E}_2(\lambda_0; v_i, \hat{v})} \bigr] &= 0
+    \E_{,uuu}(u_0, \lambda_0; v_i , v_j, \hat{v}) + \lambda_{,i} \bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; v_j , \mathring{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_j, \hat{v})}_{=\dot{\E}_2(\lambda_0; v_j, \hat{v})} \bigr]&\\
+    +\lambda_{,j} \bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; v_i , \mathring{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_i, \hat{v})}_{\lambda_{,j} \dot{\E}_2(\lambda_0; v_i, \hat{v})} \bigr] &= 0
   \end{aligned}
 \end{equation}
 and, recognizing derivatives of $\E_2$ with respect to $\lambda$, we finally get

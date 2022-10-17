@@ -199,18 +199,26 @@ from Eq.~\eqref{eq:20220519164523}
   \label{eq:20220802081116}
   E_{ijkl} = \E_4(\lambda_0 ; v_i, v_j, v_k, v_l) - \E_2(\lambda_0 ; w_{ij}, w_{kl}) - \E_2(\lambda_0 ; w_{ik}, w_{jl}) - \E_2(\lambda_0 ; w_{il}, w_{jk}),
 \end{equation}
-which shows that $E_{ijkl}$ is also fully symmetric. We close this section, with
-two useful identities
+which shows that $E_{ijkl}$ is also fully symmetric. We close this section, with two useful identities. First, starting
+from the definition of $\mathring{F}_{ij}$, and using Eq.~\eqref{eq:20220524134525}, with $v_i = v_j$ and
+$\hat{w} = w_i$
 \begin{equation}
   \label{eq:20220617084433}
   \begin{aligned}[b]
     \mathring{F}_{ij} ={} & \ddot{\E}_2(\lambda_0; v_i, v_j) + \dot{\E}_2(\lambda_0; v_i, w_j) + \dot{\E}_2(\lambda_0; v_j, w_i)\\
-    ={} & \ddot{\E}_2(\lambda_0; v_i, v_j) + \dot{\E}_2(\lambda_0; v_i, w_j) - \E_2(\lambda_0; w_j, w_i) & \text{Eq.~\eqref{eq:20220524134525}, with $v_i = v_j$ and $\hat{w} = w_i$}\\
-    ={} & \ddot{\E}_2(\lambda_0; v_i, v_j)  + 2\dot{\E}_2(\lambda_0; v_i, w_j) & \text{Eq.~\eqref{eq:20220524134525}, with $\hat{w} = w_j$}\\
-    ={} & \ddot{\E}_2(\lambda_0; v_i, v_j) + 2\dot{\E}_2(\lambda_0; v_j, w_i), & \text{symmetry w.r.t. $i$ and $j$}
+    ={} & \ddot{\E}_2(\lambda_0; v_i, v_j) + \dot{\E}_2(\lambda_0; v_i, w_j) - \E_2(\lambda_0; w_j, w_i),
   \end{aligned}
 \end{equation}
-and, from Eq.~\eqref{eq:20220519164523}
+then, using Eq.~\eqref{eq:20220524134525}, with $\hat{w} = w_j$
+\begin{equation}
+  \mathring{F}_{ij} = \ddot{\E}_2(\lambda_0; v_i, v_j)  + 2\dot{\E}_2(\lambda_0; v_i, w_j),
+\end{equation}
+which delivers, from the symmetry with respect to $i$ and $j$
+\begin{equation}
+  \mathring{F}_{ij} = \ddot{\E}_2(\lambda_0; v_i, v_j) + 2\dot{\E}_2(\lambda_0; v_j, w_i).
+\end{equation}
+
+We also have the following identity on $\mathring{E}_{ijk}$, which results from Eq.~\eqref{eq:20220519164523}
 \begin{equation}
   \label{eq:20220617085256}
   \begin{aligned}[b]

@@ -1,0 +1,16 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+options:
+  numbered: true
+chapters:
+- file: notations
+- file: critical_point
+- file: bifurcated_branches
+- file: discussion
+- file: single_mode
+- file: multilinear_algebra
+- file: asymptotic_expansions
+- file: bibliography

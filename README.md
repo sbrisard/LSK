@@ -1,8 +1,7 @@
 # Notes on the Lyapunov–Schmidt–Koiter asymptotic method
 
-This repository hosts the [Jupyter Book](https://jupyterbook.org/) sources of my
-[Notes on the Lyapunov–Schmidt–Koiter asymptotic
-method](https://sbrisard.github.io/LSK/).
+This repository hosts the LaTeX sources of my *Notes on the
+Lyapunov–Schmidt–Koiter asymptotic method*.
 
 Code in this repository is released under a MIT license.
 

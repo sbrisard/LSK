@@ -34,9 +34,11 @@
 \setmathfont{Asana Math}
 
 \newcommand{\E}{\mathcal E}
+\newcommand{\EE}{\mathcal E ^ \dagger}
 \newcommand{\D}{\mathrm{d}}
 \newcommand{\order}[2][1]{#2^{(#1)}}
 \newcommand{\reals}{\mathbb{R}}
+\newcommand{\uu}{u^\dagger}
 
 \begin{document}
 \title{\sbtitle}
@@ -334,266 +336,17 @@ the stationarity of the energy, which defines all equilibrium branches as
 implicit functions, which can be expanded with respect to some perturbation
 parameter.
 
-The first approach (see Sec.~\ref{sec:20220902091527}) relies on the
-Lyapunov--Schmidt decomposition of the equilibrium branch over $V$ and
-$W$. However, this approach leads to tedious derivations. This approach has
-historical and pedagogical value: in particular, it provides a meaning to $w_i$
-and $w_{ij}$ defined by Eqs.~\eqref{eq:20220524134525} and
-\eqref{eq:20220519164523}. In Sec.~\ref{sec:20220902092109}, a more systematic
-approach is developed, that I found in the paper by \textcite[][Appendix
-A]{chak2018}.
+Two approaches are possible. The first approach relies on the Lyapunov--Schmidt
+decomposition of the equilibrium branch over $V$ and $W$. However, this approach
+leads to tedious derivations. Still, this approach has historical and
+pedagogical value: in particular, it provides a meaning to $w_i$ and $w_{ij}$
+defined by Eqs.~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}. The
+Lyapunov--Schmidt decomposition will be used in Sec.~\ref{sec:20221018083712} for
+the analysis of imperfect systems.
 
-\subsection{The Lyapunov--Schmidt decomposition}
-\label{sec:20220902091527}
-
-The following decomposition of the equilibrium state $u$ at the load-level
-$\lambda$is postulated
-\begin{equation}
-  \label{eq:20220902174235}
-  u = u^\ast(\lambda) + \xi_i v_i + w, \quad \text{with} \quad w \in W.
-\end{equation}
-
-It follows from the orthogonality of $V$ and $W$ that
-$\langle v_i, w\rangle = 0$ for all $i=1, \ldots, m$. Stationarity of the energy is expressed as
-follows
-\begin{equation}
-  \E_{,u}[u^\ast(\lambda) + \xi_i v_i + w, \lambda; \hat{u}] = 0, \quad \text{for all} \quad \hat{u} \in U
-\end{equation}
-or, equivalently
-\begin{equation}
-  \label{eq:20220901120544}
-  \E_{,u}[u^\ast(\lambda) + \xi_i v_i + w, \lambda; \hat{v}] = 0, \quad \text{for all} \quad \hat{v} \in V
-\end{equation}
-and
-\begin{equation}
-  \label{eq:20220825143616}
-  \E_{,u}[u^\ast(\lambda) + \xi_i v_i + w, \lambda; \hat{w}] = 0, \quad \text{for all} \quad \hat{w} \in W.
-\end{equation}
-The method proceeds in three steps. In \textbf{Step 1},
-Eq.~\eqref{eq:20220825143616} is used to define $w$ as an implicit function of
-$\xi_1$, \dots, $\xi_m$ and $\lambda$. Then, in \textbf{Step 2},
-Eq.~\eqref{eq:20220825143616} is used to define $\lambda$ as an implicit function of
-$\xi_1$, \dots, $\xi_m$. Finally, a parametrization $\eta$ of $\xi_1$, \dots
-$\xi_m$ is introduced in \textbf{Step 3} and the Taylor expansion of $u$ and
-$\lambda$ with respect to $\eta$ is derived. These steps are presented below.
-
-\paragraph{Step 1: $w$ as a function of $\xi_i$ and $\lambda$} In this paragraph,
-$\hat{w}$ denotes an arbitrary test function in $W$. From the implicit function
-theorem, Eq.~\eqref{eq:20220825143616} defines a function
-$(\xi_1, \ldots, \xi_m, \lambda) \mapsto w(\xi_1, \ldots, \xi_m, \lambda)$ in the neighborhood of
-$(\xi_1, \ldots, \xi_m, \lambda) = (0, \ldots, 0, \lambda_0)$. Why the theorem applies will be clarified
-below. Eq.~\eqref{eq:20220825143616} is first differentiated with respect to
-$\xi_i$
-\begin{equation}
-  \label{eq:20220826140926}
-  \E_{,uu}(u^\ast + \xi_k v_k + w, \lambda; v_i + w_{,i}, \hat{w}) = 0.
-\end{equation}
-
-Substituting $\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0$ in the above equations and observing
-that $\E_2(\lambda_0; v_i, W) = 0$ since $v_i \in V$, we get
-\begin{equation}
-\label{eq:20220825150219}
-  \E_2(\lambda_0; v_i + w_{,i}, \hat{w}) = \E_2(\lambda_0; w_{,i}, \hat{w}) = 0.
-\end{equation}
-
-Since $w \in W$ for all $\xi^i$ and $\lambda$, we have $w_{,i} \in W$ and,
-Remark~\ref{rem:20220902095055} leads to $w_{,i} = 0$ at the point
-$\xi_1 = 0, \ldots, \xi_m = 0$ and $\lambda = \lambda_0$. Eq.~\eqref{eq:20220825143616} is then
-differentiated with respect to $\lambda$
-\begin{equation}
-  \label{eq:20220830145945}
-  \E_{,uu}(u^\ast + \xi_i v_i + w, \lambda; \dot{u}^\ast + w_{,\lambda}, \hat{w}) + \E_{,u\lambda}(u^\ast + \xi_i v_i + w, \lambda; \hat{w}) = 0
-\end{equation}
-and, at $\xi_1 = \ldots = \xi_m = 0$
-\begin{equation}
-  \label{eq:20220830151513}
-  \E_{,uu}(u^\ast, \lambda; w_{,\lambda}, \hat{w})
-  + \underbrace{\E_{,uu}(u^\ast, \lambda; \dot{u}^\ast, \hat{w}) + \E_{,u\lambda}(u^\ast, \lambda; \hat{w})}_{=0 \quad \text{see Eq.~\eqref{eq:20220901143843}}}
-  = \E_2(\lambda; w_{,\lambda}, \hat{w}) = 0,
-\end{equation}
-which proves similarly that the derivative of $w$ with respect to $\lambda$ vanishes
-at the critical point. We have found so far that
-\begin{equation}
-  \frac{\partial w}{\partial\xi_1} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0}
-  = \ldots =
-  \frac{\partial w}{\partial\xi_m} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0}
-  = \frac{\partial w}{\partial\lambda} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0}= 0.
-\end{equation}
-
-To express the second-order derivatives of $w$, Eq.~\eqref{eq:20220826140926} is
-differentiated first with respect to $\xi_j$, then with respect to $\lambda$. This
-delivers
-\begin{equation}
-  \E_{,uuu}(u^\ast + \xi_k v_k + w, \lambda; v_i + w_{,i}, v_j + w_{,j}, \hat{w}) + \E_{,uu}(u^\ast + \xi_k v_k + w, \lambda; w_{,ij}, \hat{w}) = 0
-\end{equation}
-and
-\begin{equation}
-  \begin{aligned}[b]
-    \E_{,uuu}(u^\ast + \xi_k v_k + w, \lambda; v_i + w_{,i}, \dot{u}^\ast + w_{,\lambda}, \hat{w}) &\\
-    + \E_{,uu\lambda}(u^\ast + \xi_k v_k + w, \lambda; v_i + w_{,i}, \hat{w}) + \E_{,uu}(u^\ast + \xi_k v_k + w, \lambda; w_{,i\lambda}, \hat{w}) &= 0
-  \end{aligned}
-\end{equation}
-and, at $\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0$ (recalling that, at this point,
-$w_{,1} = \cdots = w_{, m} = w_{,\lambda} = 0$)
-\begin{equation}
-  \E_3(\lambda_0; v_i, v_j, \hat{w}) + \E_2(\lambda_0; w_{,ij}, \hat{w}) = 0
-  \quad \text{and} \quad
-  \dot{\E}_2(\lambda_0; v_i, \hat{w}) + \E_2(\lambda_0; w_{,i\lambda}, \hat{w}) = 0.
-\end{equation}
-The variational problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}
-are recognized, leading to
-\begin{equation}
-  \frac{\partial^2w}{\partial\xi_i \partial\xi_j}\biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0} = w_{ij}
-  \quad\text{and}\quad
-  \frac{\partial^2w}{\partial\lambda \partial\xi_i}\biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0} = w_{i}.
-\end{equation}
-
-The $w_i$ and $w_{ij}$ defined by the variational
-problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523} therefore
-appear as the second-order derivatives of $w$ at $\xi_k = 0$ and
-$\lambda = \lambda_0$, with respect to $\lambda$, $\xi_i$ and $\xi_i$, $\xi_j$.
-
-Finally, differentiating Eq.~\eqref{eq:20220830151513} with respect to $\lambda$ leads
-to
-\begin{equation}
-  \dot{\E}_2(\lambda; w_{,\lambda}, \hat{w}) + \E_2(\lambda; w_{,\lambda\lambda}, \hat{w}) = 0
-\end{equation}
-and, at $\lambda = \lambda_0$
-\begin{equation}
-  \frac{\partial^2w}{\partial\lambda^2}\biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0} = 0.
-\end{equation}
-
-We have obtained the following Taylor expansion of the component $w$ of the LSK
-expansion of $u$
-\begin{equation}
-  w(\xi_1, \ldots, \xi_m, \lambda) = \tfrac{1}{2} \xi_i \xi_j w_{ij} + \bigl( \lambda - \lambda_0 \bigr) \xi_i w_i + o\Bigl(\xi_1^2 + \cdots + \xi_m^2 + \bigl(\lambda - \lambda_0\bigr)^2\Bigr).
-\end{equation}
-
-\paragraph{Step 2: $\lambda$ as a function of $\xi_i$} We now turn to
-Eq.~\eqref{eq:20220901120544}. Since $w$ is a function of $\lambda$ and $\xi_k$
-($k = 1, \ldots, m$) this equation implicitly defines $\lambda$ as a function of
-$\xi_k$, the derivatives of which can be evaluated at
-$\xi_1 = \cdots = \xi_m = 0$. In this paragraph, $\hat{v}$ denotes an arbitrary element
-of $V$. Besides, unless otherwise mentioned, the differentials of the energy
-$\E_{,uu}$, $\E_{,u\lambda}$, $\E_{,\lambda\lambda}$, $\E_{,uuu}$ \dots{} are evaluated at
-$u = u^\ast(\lambda) + \xi_k v_k + w(\xi_k, \lambda)$. Differentiating first
-Eq.~\eqref{eq:20220901120544} with respect to $\xi_i$
-\begin{equation}
-  \label{eq:20220901121940}
-  \E_{,uu}[v_i + w_{,i} + \lambda_{,i} (\dot{u}^\ast + w_{,\lambda}), \hat{v}] + \lambda_{, i} \E_{,u\lambda}(\hat{v}) = 0,
-\end{equation}
-then with respect to $\xi_j$
-\begin{equation}
-  \label{eq:20220901125230}
-  \begin{gathered}[b]
-    \E_{,uuu}[v_i + w_{,i} + \lambda_{,i} (\dot{u}^\ast + w_{,\lambda}), v_j + w_{,j} + \lambda_{,j} (\dot{u}^\ast + w_{,\lambda}), \hat{v}]\\
-    + \lambda_{,j}\E_{,uu\lambda}[v_i + w_{,i} + \lambda_{,i} (\dot{u}^\ast + w_{,\lambda}), \hat{v}]\\
-    + \E_{,uu}[w_{,ij} + \lambda_{,ij} (\dot{u}^\ast + w_{,\lambda}) + \lambda_{,i}\lambda_{,j} (\ddot{u}^\ast + w_{,\lambda\lambda}), \hat{v}]\\
-    + \lambda_{, ij} \E_{,u\lambda}(\hat{v}) + \lambda_{, i} \E_{,uu\lambda}[v_j + w_{,j} + \lambda_{,j} (\dot{u}^\ast + w_{,\lambda}), \hat{v}] + \lambda_{,i} \lambda_{,j} \E_{,u\lambda\lambda}(\hat{v})= 0,
-  \end{gathered}
-\end{equation}
-
-Eqs.~\eqref{eq:20220901121940} and \eqref{eq:20220901125230} are then evaluated
-at $\xi_1 = \cdots = \xi_m = 0$, delivering
-\begin{equation}
-  \label{eq:20220901152056}
-  \underbrace{\E_{,uu}(u_0, \lambda_0; v_i, \hat{v})}_{=0 \text{ since } \hat{v} \in V}
-  + \lambda_{, i} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0; \mathring{u}_0, \hat{v}) +  \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143843}}} \bigr] = 0,
-\end{equation}
-and
-% \begin{equation}
-%   \begin{gathered}[b]
-%     \E_{,uuu}(u_0, \lambda_0; v_i + \lambda_{,i}\mathring{u}_0, v_j + \lambda_{,j} \mathring{u}_0, \hat{v}) + \lambda_{,j}\E_{,uu\lambda}(u_0, \lambda_0; v_i + \lambda_{,i} \mathring{u}_0, \hat{v})\\
-%     + \E_{,uu}(u_0, \lambda_0; w_{ij} + \lambda_{,ij} \mathring{u}_0 + w_{,\lambda} + \lambda_{,i}\lambda_{,j} \ddot{u}_0, \hat{v})\\
-%     + \lambda_{, ij} \E_{,u\lambda}(u_0, \lambda_0; \hat{v}) + \lambda_{, i} \E_{,uu\lambda}(u_0, \lambda_0; v_j + \lambda_{,j} \mathring{u}_0, \hat{v}) + \lambda_{,i} \lambda_{,j} \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{v}) = 0
-%   \end{gathered}
-% \end{equation}
-\begin{equation}
-  \label{eq:20220901152145}
-  \begin{gathered}[b]
-    \E_{,uuu}(u_0, \lambda_0; v_i , v_j, \hat{v}) + \underbrace{\E_{,uu}(u_0, \lambda_0; w_{ij}, \hat{v})}_{=0 \text{ since } \hat{v} \in V}\\
-    +\lambda_{,i} \bigl[\E_{,uuu}(u_0, \lambda_0; v_j , \mathring{u}_0, \hat{v}) + \E_{,uu\lambda}[u_0, \lambda_0; v_j, \hat{v}]\bigr]\\
-    +\lambda_{,j} \bigl[\E_{,uuu}(u_0, \lambda_0; v_i , \mathring{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_i, \hat{v})\bigr]\\
-    +\lambda_{,ij} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0;  \mathring{u}_0, \hat{v}) + \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143843}}} \bigr]\\
-    +\lambda_{,i} \lambda_{,j}\bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; \mathring{u}_0 , \mathring{u}_0, \hat{v}) + 2\E_{,uu\lambda}(u_0, \lambda_0; \mathring{u}_0, \hat{v}) + \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{v}) + \E_{,uu}(u_0, \lambda_0; \ddot{u}_0, \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143902}}} \bigr] = 0
-  \end{gathered}
-\end{equation}
-
-Eq.~\eqref{eq:20220901152056} is non-informative (identically satisfied), while
-Eq.~\eqref{eq:20220901152145} simplifies as follows
-\begin{equation}
-  \begin{aligned}[b]
-    \E_{,uuu}(u_0, \lambda_0; v_i , v_j, \hat{v}) + \lambda_{,i} \bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; v_j , \mathring{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_j, \hat{v})}_{=\dot{\E}_2(\lambda_0; v_j, \hat{v})} \bigr]&\\
-    +\lambda_{,j} \bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; v_i , \mathring{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_i, \hat{v})}_{\lambda_{,j} \dot{\E}_2(\lambda_0; v_i, \hat{v})} \bigr] &= 0
-  \end{aligned}
-\end{equation}
-and, recognizing derivatives of $\E_2$ with respect to $\lambda$, we finally get
-\begin{equation}
-    \E_3(\lambda_0; v_i , v_j, \hat{v}) + \lambda_{,i} \dot{\E}_2(\lambda_0; v_j, \hat{v}) + \lambda_{,j} \dot{\E}_2(\lambda_0; v_i, \hat{v}) = 0.
-\end{equation}
-Testing with $v_k \in V$, the above equation reads
-\begin{equation}
-  \E_3(\lambda_0; v_i , v_j, v_k) + \lambda_{,i} \dot{\E}_2(\lambda_0; v_j, v_k) + \lambda_{,j} \dot{\E}_2(\lambda_0; v_i, v_k) = 0,
-\end{equation}
-or, with Eqs.~\eqref{eq:20220524135619} and \eqref{eq:20220524135643}
-\begin{equation}
-  \label{eq:20220902125031}
-  E_{ijk} +  F_{jk} \frac{\partial\lambda}{\partial\xi_i} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0} + F_{ik} \frac{\partial\lambda}{\partial\xi_j} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0} = 0.
-\end{equation}
-
-In order to evaluate the second order partial derivatives of $\lambda$,
-Eq.~\eqref{eq:20220901125230} should be further differentiated with respect to
-$\xi_k$. This leads to extremely tedious derivations, and we will adopt an
-alternative approach in Sec.~\ref{sec:20220902092109}.
-
-\paragraph{Step 3: parametrization of the bifurcated branch} The bifurcated
-branch is a curve $(u, \lambda) \in \reals ^ {m + 1}$, which is parametrized by
-$\eta$: $[u(\eta), \lambda(\eta)]$, with $u(0) = u_0$ and
-$\lambda(0) = \lambda_0$; primed quantities denoting derivatives with respect to
-$\eta$, we introduce
-\begin{equation}
-  \order[1]{\xi_i} = \xi_i'(0), \quad
-  \order[2]{\xi_i} = \xi_i''(0), \quad \ldots, \quad
-  \order[1]{\lambda} = \lambda'(0), \quad \ldots
-\end{equation}
-and first observe that
-\begin{equation}
-  \order[1]{\lambda} = \order[1]{\xi_i} \frac{\partial\lambda}{\partial\xi_i} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0}
-\end{equation}
-
-Multiplying both sides of Eq.~\eqref{eq:20220902125031} by
-$\order[1]{\xi_i} \order{1}{\xi_j}$ therefore results in the following identity
-\begin{equation}
-  \begin{aligned}[b]
-    0 &= E_{ijk} \order[1]{\xi_i} \order[1]{\xi_j} +  F_{jk} \order[1]{\xi_i} \order[1]{\xi_j} \frac{\partial\lambda}{\partial\xi_i} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0} + F_{ik} \order[1]{\xi_i} \order[1]{\xi_j} \frac{\partial\lambda}{\partial\xi_j} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0}\\
-    &= E_{ijk} \order[1]{\xi_i} \order[1]{\xi_j} +  F_{jk} \order[1]{\lambda} \order[1]{\xi_j} + F_{ik} \order[1]{\xi_i} \order[1]{\lambda}
-  \end{aligned}
-\end{equation}
-and, rearranging
-\begin{equation}
-  E_{ijk} \order[1]{\xi_j} \order[1]{\xi_k} +  2 \order[1]{\lambda} F_{ij}  \order[1]{\xi_j} = 0,
-\end{equation}
-to be compared with Eq.~\eqref{eq:20220524135036}. We now turn to $w$
-\begin{equation}
-  w'(\eta) = w_{,i} \xi_i' + w_{,\lambda} \lambda'
-  \quad \text{and} \quad
-  w''(\eta) = w_{,ij} \xi_i' \xi_j' + 2 w_{,i\lambda} \xi_i' \lambda' + w_{,i} \xi_i'' + w_{,\lambda\lambda} \lambda^{'2} + w_{,\lambda} \lambda''
-\end{equation}
-and, at $\eta = 0$
-\begin{equation}
-  w'(0) = 0 \quad \text{and} \quad w''(0) = \order[1]{\xi_i} \order[1]{\xi_j} w_{ij}  + 2 \order[1]{\lambda} \order[1]{\xi_i} w_i
-\end{equation}
-and we get the Taylor expansion of the bifurcated branch as $\eta \to 0$
-\begin{equation}
-  u(\eta) = u^\ast[\lambda(\eta)] + \order[1]{\xi_i} v_i + \tfrac{1}{2} \bigl( \order[2]{\xi_i} v_i + \order[1]{\xi_i} \order[1]{\xi_j} w_{ij}  + 2\order[1]{\lambda} \order[1]{\xi_i} w_i\bigr) + o(\eta^2),
-\end{equation}
-to be compared with Eq.~\eqref{eq:20220524134613}.
-
-\subsection{Alternative route to the asymptotic expansions}
-\label{sec:20220902092109}
-
-Following the Appendix A of Ref.~\parencite{chak2018}, we introduce the
-following parametrization of the bifurcated branch
+In the present section, a more systematic approach is followed, that I first
+found in the paper by \textcite[][Appendix A]{chak2018}. Following this paper,
+we postulate the following parametrization of the bifurcated branch
 \begin{align}
   \label{eq:20211115075817}
   \lambda &=  \lambda_0 + \eta \order[1]{\lambda} + \tfrac{1}{2} \eta^2 \order[2]{\lambda} + \tfrac{1}{6} \eta^3 \order[3]{\lambda} + \cdots,\\
@@ -1105,6 +858,270 @@ critical point) is \emph{stable} and exists only for loads greater than the
 critical load. Conversely, if $E_{1111} < 0$, then the bifurcation branch
 (including the critical point) is \emph{unstable} and exists only for loads
 lower than the critical load.
+
+\section{Imperfect systems}
+\label{sec:20221018083712}
+
+This section is devoted to \emph{imperfect systems}. Such a system is described
+by the energy \(\EE(u, \lambda, \epsilon)\), where \(\epsilon\) is the \emph{imperfection parameter},
+assumed to be small. It is assumed that for \(\epsilon = 0\), the previous energy is recovered
+\begin{equation}
+  \EE(u, \lambda, 0) = \E(u, \lambda).
+\end{equation}
+
+Our goal in this section is to analyze equilibria of the imperfect system close
+to the critical point \((u_0, \lambda_0)\) of the perfect system. In other words, we
+aim to find an asymptotic expansion of the equilibrium path
+\(u(\lambda, \epsilon)\) such that
+\begin{equation}
+  \label{eq:20221018085038}
+  \EE_{,u}(u(\lambda, \epsilon), \lambda, \epsilon; \hat{u}) = 0 \quad \text{for all} \quad \hat{u} \in U.
+\end{equation}
+
+To this end, we follow the Lyapunov--Schmidt approach, where the equilibrium
+point of the imperfect system is projected onto the orthogonal subspaces \(V\)
+and \(W\).
+\begin{equation}
+  \label{eq:20220902174235}
+  u = u^\ast(\lambda) + \xi_i \, v_i + w, \quad \text{with} \quad w \in W.
+\end{equation}
+
+It follows from the orthogonality of $V$ and $W$ that
+$\langle v_i, w \rangle = 0$ for all $i=1, \ldots, m$. Eq.~\eqref{eq:20221018085038} is then expressed as follows
+\begin{equation}
+  \label{eq:20220901120544}
+  \EE_{,u}[u^\ast(\lambda) + \xi_i v_i + w, \lambda, \epsilon; \hat{v}] = 0, \quad \text{for all} \quad \hat{v} \in V
+\end{equation}
+and
+\begin{equation}
+  \label{eq:20220825143616}
+  \EE_{,u}[u^\ast(\lambda) + \xi_i v_i + w, \lambda, \epsilon; \hat{w}] = 0, \quad \text{for all} \quad \hat{w} \in W.
+\end{equation}
+
+The method proceeds in three steps. In \textbf{Step 1},
+Eq.~\eqref{eq:20220825143616} is used to define $w$ as an implicit function of
+$\xi_1$, \dots, $\xi_m$, $\lambda$ and \(\epsilon\). Then, in \textbf{Step 2},
+Eq.~\eqref{eq:20220825143616} is used to define $\lambda$ as an implicit function of
+$\xi_1$, \dots, $\xi_m$ and \(\epsilon\). Finally, a parametrization $\eta$ of
+$\xi_1$, \dots $\xi_m$ is introduced in \textbf{Step 3} and the Taylor expansion of
+$u$ and $\lambda$ with respect to $\eta$ is derived. These steps are presented below. In
+particular, it will be shown that the method in general fails to deliver the
+seeked asymptotic expansion, put for two particular cases, that will be
+discussed more thoroughly: simple modes (\(m = 1\)) and geometric imperfections
+\(\EE(u, \lambda, \epsilon) = \E(u - \epsilon \, \uu, \lambda, \epsilon)\), where
+\(\uu\) denotes the shape of the geometric imperfection.
+
+\paragraph{Step 1: $w$ as a function of $\xi_i$ and $\lambda$} In this paragraph,
+$\hat{w}$ denotes an arbitrary test function in $W$. From the implicit function
+theorem, Eq.~\eqref{eq:20220825143616} defines a function
+$(\xi_1, \ldots, \xi_m, \lambda) \mapsto w(\xi_1, \ldots, \xi_m, \lambda)$ in the neighborhood of
+$(\xi_1, \ldots, \xi_m, \lambda) = (0, \ldots, 0, \lambda_0)$. Why the theorem applies will be clarified
+below. Eq.~\eqref{eq:20220825143616} is first differentiated with respect to
+$\xi_i$
+\begin{equation}
+  \label{eq:20220826140926}
+  \E_{,uu}(u^\ast + \xi_k v_k + w, \lambda; v_i + w_{,i}, \hat{w}) = 0.
+\end{equation}
+
+Substituting $\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0$ in the above equations and observing
+that $\E_2(\lambda_0; v_i, W) = 0$ since $v_i \in V$, we get
+\begin{equation}
+\label{eq:20220825150219}
+  \E_2(\lambda_0; v_i + w_{,i}, \hat{w}) = \E_2(\lambda_0; w_{,i}, \hat{w}) = 0.
+\end{equation}
+
+Since $w \in W$ for all $\xi^i$ and $\lambda$, we have $w_{,i} \in W$ and,
+Remark~\ref{rem:20220902095055} leads to $w_{,i} = 0$ at the point
+$\xi_1 = 0, \ldots, \xi_m = 0$ and $\lambda = \lambda_0$. Eq.~\eqref{eq:20220825143616} is then
+differentiated with respect to $\lambda$
+\begin{equation}
+  \label{eq:20220830145945}
+  \E_{,uu}(u^\ast + \xi_i v_i + w, \lambda; \dot{u}^\ast + w_{,\lambda}, \hat{w}) + \E_{,u\lambda}(u^\ast + \xi_i v_i + w, \lambda; \hat{w}) = 0
+\end{equation}
+and, at $\xi_1 = \ldots = \xi_m = 0$
+\begin{equation}
+  \label{eq:20220830151513}
+  \E_{,uu}(u^\ast, \lambda; w_{,\lambda}, \hat{w})
+  + \underbrace{\E_{,uu}(u^\ast, \lambda; \dot{u}^\ast, \hat{w}) + \E_{,u\lambda}(u^\ast, \lambda; \hat{w})}_{=0 \quad \text{see Eq.~\eqref{eq:20220901143843}}}
+  = \E_2(\lambda; w_{,\lambda}, \hat{w}) = 0,
+\end{equation}
+which proves similarly that the derivative of $w$ with respect to $\lambda$ vanishes
+at the critical point. We have found so far that
+\begin{equation}
+  \frac{\partial w}{\partial\xi_1} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0}
+  = \ldots =
+  \frac{\partial w}{\partial\xi_m} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0}
+  = \frac{\partial w}{\partial\lambda} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0}= 0.
+\end{equation}
+
+To express the second-order derivatives of $w$, Eq.~\eqref{eq:20220826140926} is
+differentiated first with respect to $\xi_j$, then with respect to $\lambda$. This
+delivers
+\begin{equation}
+  \E_{,uuu}(u^\ast + \xi_k v_k + w, \lambda; v_i + w_{,i}, v_j + w_{,j}, \hat{w}) + \E_{,uu}(u^\ast + \xi_k v_k + w, \lambda; w_{,ij}, \hat{w}) = 0
+\end{equation}
+and
+\begin{equation}
+  \begin{aligned}[b]
+    \E_{,uuu}(u^\ast + \xi_k v_k + w, \lambda; v_i + w_{,i}, \dot{u}^\ast + w_{,\lambda}, \hat{w}) &\\
+    + \E_{,uu\lambda}(u^\ast + \xi_k v_k + w, \lambda; v_i + w_{,i}, \hat{w}) + \E_{,uu}(u^\ast + \xi_k v_k + w, \lambda; w_{,i\lambda}, \hat{w}) &= 0
+  \end{aligned}
+\end{equation}
+and, at $\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0$ (recalling that, at this point,
+$w_{,1} = \cdots = w_{, m} = w_{,\lambda} = 0$)
+\begin{equation}
+  \E_3(\lambda_0; v_i, v_j, \hat{w}) + \E_2(\lambda_0; w_{,ij}, \hat{w}) = 0
+  \quad \text{and} \quad
+  \dot{\E}_2(\lambda_0; v_i, \hat{w}) + \E_2(\lambda_0; w_{,i\lambda}, \hat{w}) = 0.
+\end{equation}
+The variational problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523}
+are recognized, leading to
+\begin{equation}
+  \frac{\partial^2w}{\partial\xi_i \partial\xi_j}\biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0} = w_{ij}
+  \quad\text{and}\quad
+  \frac{\partial^2w}{\partial\lambda \partial\xi_i}\biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0} = w_{i}.
+\end{equation}
+
+The $w_i$ and $w_{ij}$ defined by the variational
+problems~\eqref{eq:20220524134525} and \eqref{eq:20220519164523} therefore
+appear as the second-order derivatives of $w$ at $\xi_k = 0$ and
+$\lambda = \lambda_0$, with respect to $\lambda$, $\xi_i$ and $\xi_i$, $\xi_j$.
+
+Finally, differentiating Eq.~\eqref{eq:20220830151513} with respect to $\lambda$ leads
+to
+\begin{equation}
+  \dot{\E}_2(\lambda; w_{,\lambda}, \hat{w}) + \E_2(\lambda; w_{,\lambda\lambda}, \hat{w}) = 0
+\end{equation}
+and, at $\lambda = \lambda_0$
+\begin{equation}
+  \frac{\partial^2w}{\partial\lambda^2}\biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0} = 0.
+\end{equation}
+
+We have obtained the following Taylor expansion of the component $w$ of the LSK
+expansion of $u$
+\begin{equation}
+  w(\xi_1, \ldots, \xi_m, \lambda) = \tfrac{1}{2} \xi_i \xi_j w_{ij} + \bigl( \lambda - \lambda_0 \bigr) \xi_i w_i + o\Bigl(\xi_1^2 + \cdots + \xi_m^2 + \bigl(\lambda - \lambda_0\bigr)^2\Bigr).
+\end{equation}
+
+\paragraph{Step 2: $\lambda$ as a function of $\xi_i$} We now turn to
+Eq.~\eqref{eq:20220901120544}. Since $w$ is a function of $\lambda$ and $\xi_k$
+($k = 1, \ldots, m$) this equation implicitly defines $\lambda$ as a function of
+$\xi_k$, the derivatives of which can be evaluated at
+$\xi_1 = \cdots = \xi_m = 0$. In this paragraph, $\hat{v}$ denotes an arbitrary element
+of $V$. Besides, unless otherwise mentioned, the differentials of the energy
+$\E_{,uu}$, $\E_{,u\lambda}$, $\E_{,\lambda\lambda}$, $\E_{,uuu}$ \dots{} are evaluated at
+$u = u^\ast(\lambda) + \xi_k v_k + w(\xi_k, \lambda)$. Differentiating first
+Eq.~\eqref{eq:20220901120544} with respect to $\xi_i$
+\begin{equation}
+  \label{eq:20220901121940}
+  \E_{,uu}[v_i + w_{,i} + \lambda_{,i} (\dot{u}^\ast + w_{,\lambda}), \hat{v}] + \lambda_{, i} \E_{,u\lambda}(\hat{v}) = 0,
+\end{equation}
+then with respect to $\xi_j$
+\begin{equation}
+  \label{eq:20220901125230}
+  \begin{gathered}[b]
+    \E_{,uuu}[v_i + w_{,i} + \lambda_{,i} (\dot{u}^\ast + w_{,\lambda}), v_j + w_{,j} + \lambda_{,j} (\dot{u}^\ast + w_{,\lambda}), \hat{v}]\\
+    + \lambda_{,j}\E_{,uu\lambda}[v_i + w_{,i} + \lambda_{,i} (\dot{u}^\ast + w_{,\lambda}), \hat{v}]\\
+    + \E_{,uu}[w_{,ij} + \lambda_{,ij} (\dot{u}^\ast + w_{,\lambda}) + \lambda_{,i}\lambda_{,j} (\ddot{u}^\ast + w_{,\lambda\lambda}), \hat{v}]\\
+    + \lambda_{, ij} \E_{,u\lambda}(\hat{v}) + \lambda_{, i} \E_{,uu\lambda}[v_j + w_{,j} + \lambda_{,j} (\dot{u}^\ast + w_{,\lambda}), \hat{v}] + \lambda_{,i} \lambda_{,j} \E_{,u\lambda\lambda}(\hat{v})= 0,
+  \end{gathered}
+\end{equation}
+
+Eqs.~\eqref{eq:20220901121940} and \eqref{eq:20220901125230} are then evaluated
+at $\xi_1 = \cdots = \xi_m = 0$, delivering
+\begin{equation}
+  \label{eq:20220901152056}
+  \underbrace{\E_{,uu}(u_0, \lambda_0; v_i, \hat{v})}_{=0 \text{ since } \hat{v} \in V}
+  + \lambda_{, i} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0; \mathring{u}_0, \hat{v}) +  \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143843}}} \bigr] = 0,
+\end{equation}
+and
+% \begin{equation}
+%   \begin{gathered}[b]
+%     \E_{,uuu}(u_0, \lambda_0; v_i + \lambda_{,i}\mathring{u}_0, v_j + \lambda_{,j} \mathring{u}_0, \hat{v}) + \lambda_{,j}\E_{,uu\lambda}(u_0, \lambda_0; v_i + \lambda_{,i} \mathring{u}_0, \hat{v})\\
+%     + \E_{,uu}(u_0, \lambda_0; w_{ij} + \lambda_{,ij} \mathring{u}_0 + w_{,\lambda} + \lambda_{,i}\lambda_{,j} \ddot{u}_0, \hat{v})\\
+%     + \lambda_{, ij} \E_{,u\lambda}(u_0, \lambda_0; \hat{v}) + \lambda_{, i} \E_{,uu\lambda}(u_0, \lambda_0; v_j + \lambda_{,j} \mathring{u}_0, \hat{v}) + \lambda_{,i} \lambda_{,j} \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{v}) = 0
+%   \end{gathered}
+% \end{equation}
+\begin{equation}
+  \label{eq:20220901152145}
+  \begin{gathered}[b]
+    \E_{,uuu}(u_0, \lambda_0; v_i , v_j, \hat{v}) + \underbrace{\E_{,uu}(u_0, \lambda_0; w_{ij}, \hat{v})}_{=0 \text{ since } \hat{v} \in V}\\
+    +\lambda_{,i} \bigl[\E_{,uuu}(u_0, \lambda_0; v_j , \mathring{u}_0, \hat{v}) + \E_{,uu\lambda}[u_0, \lambda_0; v_j, \hat{v}]\bigr]\\
+    +\lambda_{,j} \bigl[\E_{,uuu}(u_0, \lambda_0; v_i , \mathring{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_i, \hat{v})\bigr]\\
+    +\lambda_{,ij} \bigl[ \underbrace{\E_{,uu}(u_0, \lambda_0;  \mathring{u}_0, \hat{v}) + \E_{,u\lambda}(u_0, \lambda_0; \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143843}}} \bigr]\\
+    +\lambda_{,i} \lambda_{,j}\bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; \mathring{u}_0 , \mathring{u}_0, \hat{v}) + 2\E_{,uu\lambda}(u_0, \lambda_0; \mathring{u}_0, \hat{v}) + \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{v}) + \E_{,uu}(u_0, \lambda_0; \ddot{u}_0, \hat{v})}_{ = 0 \text{ from Eq.~\eqref{eq:20220901143902}}} \bigr] = 0
+  \end{gathered}
+\end{equation}
+
+Eq.~\eqref{eq:20220901152056} is non-informative (identically satisfied), while
+Eq.~\eqref{eq:20220901152145} simplifies as follows
+\begin{equation}
+  \begin{aligned}[b]
+    \E_{,uuu}(u_0, \lambda_0; v_i , v_j, \hat{v}) + \lambda_{,i} \bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; v_j , \mathring{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_j, \hat{v})}_{=\dot{\E}_2(\lambda_0; v_j, \hat{v})} \bigr]&\\
+    +\lambda_{,j} \bigl[ \underbrace{\E_{,uuu}(u_0, \lambda_0; v_i , \mathring{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_i, \hat{v})}_{\lambda_{,j} \dot{\E}_2(\lambda_0; v_i, \hat{v})} \bigr] &= 0
+  \end{aligned}
+\end{equation}
+and, recognizing derivatives of $\E_2$ with respect to $\lambda$, we finally get
+\begin{equation}
+    \E_3(\lambda_0; v_i , v_j, \hat{v}) + \lambda_{,i} \dot{\E}_2(\lambda_0; v_j, \hat{v}) + \lambda_{,j} \dot{\E}_2(\lambda_0; v_i, \hat{v}) = 0.
+\end{equation}
+Testing with $v_k \in V$, the above equation reads
+\begin{equation}
+  \E_3(\lambda_0; v_i , v_j, v_k) + \lambda_{,i} \dot{\E}_2(\lambda_0; v_j, v_k) + \lambda_{,j} \dot{\E}_2(\lambda_0; v_i, v_k) = 0,
+\end{equation}
+or, with Eqs.~\eqref{eq:20220524135619} and \eqref{eq:20220524135643}
+\begin{equation}
+  \label{eq:20220902125031}
+  E_{ijk} +  F_{jk} \frac{\partial\lambda}{\partial\xi_i} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0} + F_{ik} \frac{\partial\lambda}{\partial\xi_j} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0} = 0.
+\end{equation}
+
+In order to evaluate the second order partial derivatives of $\lambda$,
+Eq.~\eqref{eq:20220901125230} should be further differentiated with respect to
+$\xi_k$. This leads to extremely tedious derivations, and we will adopt an
+alternative approach in Sec.~\ref{sec:20220902092109}.
+
+\paragraph{Step 3: parametrization of the bifurcated branch} The bifurcated
+branch is a curve $(u, \lambda) \in \reals ^ {m + 1}$, which is parametrized by
+$\eta$: $[u(\eta), \lambda(\eta)]$, with $u(0) = u_0$ and
+$\lambda(0) = \lambda_0$; primed quantities denoting derivatives with respect to
+$\eta$, we introduce
+\begin{equation}
+  \order[1]{\xi_i} = \xi_i'(0), \quad
+  \order[2]{\xi_i} = \xi_i''(0), \quad \ldots, \quad
+  \order[1]{\lambda} = \lambda'(0), \quad \ldots
+\end{equation}
+and first observe that
+\begin{equation}
+  \order[1]{\lambda} = \order[1]{\xi_i} \frac{\partial\lambda}{\partial\xi_i} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0}
+\end{equation}
+
+Multiplying both sides of Eq.~\eqref{eq:20220902125031} by
+$\order[1]{\xi_i} \order{1}{\xi_j}$ therefore results in the following identity
+\begin{equation}
+  \begin{aligned}[b]
+    0 &= E_{ijk} \order[1]{\xi_i} \order[1]{\xi_j} +  F_{jk} \order[1]{\xi_i} \order[1]{\xi_j} \frac{\partial\lambda}{\partial\xi_i} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0} + F_{ik} \order[1]{\xi_i} \order[1]{\xi_j} \frac{\partial\lambda}{\partial\xi_j} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0}\\
+    &= E_{ijk} \order[1]{\xi_i} \order[1]{\xi_j} +  F_{jk} \order[1]{\lambda} \order[1]{\xi_j} + F_{ik} \order[1]{\xi_i} \order[1]{\lambda}
+  \end{aligned}
+\end{equation}
+and, rearranging
+\begin{equation}
+  E_{ijk} \order[1]{\xi_j} \order[1]{\xi_k} +  2 \order[1]{\lambda} F_{ij}  \order[1]{\xi_j} = 0,
+\end{equation}
+to be compared with Eq.~\eqref{eq:20220524135036}. We now turn to $w$
+\begin{equation}
+  w'(\eta) = w_{,i} \xi_i' + w_{,\lambda} \lambda'
+  \quad \text{and} \quad
+  w''(\eta) = w_{,ij} \xi_i' \xi_j' + 2 w_{,i\lambda} \xi_i' \lambda' + w_{,i} \xi_i'' + w_{,\lambda\lambda} \lambda^{'2} + w_{,\lambda} \lambda''
+\end{equation}
+and, at $\eta = 0$
+\begin{equation}
+  w'(0) = 0 \quad \text{and} \quad w''(0) = \order[1]{\xi_i} \order[1]{\xi_j} w_{ij}  + 2 \order[1]{\lambda} \order[1]{\xi_i} w_i
+\end{equation}
+and we get the Taylor expansion of the bifurcated branch as $\eta \to 0$
+\begin{equation}
+  u(\eta) = u^\ast[\lambda(\eta)] + \order[1]{\xi_i} v_i + \tfrac{1}{2} \bigl( \order[2]{\xi_i} v_i + \order[1]{\xi_i} \order[1]{\xi_j} w_{ij}  + 2\order[1]{\lambda} \order[1]{\xi_i} w_i\bigr) + o(\eta^2),
+\end{equation}
+to be compared with Eq.~\eqref{eq:20220524134613}.
 
 \appendix
 

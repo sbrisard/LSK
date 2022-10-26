@@ -939,21 +939,54 @@ and, at the critical point
 \begin{equation}
   \E_2(\lambda_0; w_{,i\epsilon}, \hat{w}) + \E_3(\lambda_0; v_i, w_{,\epsilon}, \hat{w}) + \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_i, \hat{w}) = 0,
 \end{equation}
-\pdfmarkupcomment{which determines uniquely}{À reprendre ici 20/10/2022} \(w_{,i\epsilon}(0, \ldots, 0, \lambda_0, 0)\).
+which determines uniquely \(w_{,i\epsilon}(0, \ldots, 0, \lambda_0, 0)\).
 
-Finally, differentiating Eq.~\eqref{eq:20220830151513} with respect to $\lambda$ leads to
+In order to find \(w_{,\lambda\lambda}(0, \ldots, 0, \lambda_0, 0)\), it is sufficient to differentiate Eq.~\eqref{eq:20220830151513} (rather
+than Eq.~\eqref{eq:20220830145945}) with respect to \(\lambda\), leading to
 \begin{equation}
-  \dot{\E}_2(\lambda; w_{,\lambda}, \hat{w}) + \E_2(\lambda; w_{,\lambda\lambda}, \hat{w}) = 0
+  \frac{\partial^2 w}{\partial\lambda^2} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0}= 0,
 \end{equation}
-and, at $\lambda = \lambda_0$
+and \(w_{,\lambda\epsilon}\) is retrieved from the differentiation of Eq.~\eqref{eq:20220830145945} with respect to \(\epsilon\)
 \begin{equation}
-  \frac{\partial^2w}{\partial\lambda^2}\biggr\rvert_{\xi_1 = \cdots = \xi_m = 0, \lambda = \lambda_0} = 0.
+  \begin{aligned}[b]
+    \EE_{,uuu}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda}, \hat{w}) + \EE_{,uu\epsilon}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda}, \hat{w}) &\\
+    + \EE_{,uu}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; w_{,\lambda\epsilon}, \hat{w}) + \EE_{,uu\lambda}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; w_{,\epsilon}\hat{w})&\\
+    + \EE_{,u\lambda\epsilon}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; \hat{w}) &= 0
+  \end{aligned}
+\end{equation}
+and, at the critical point
+\begin{equation}
+  \E_2(\lambda_0; w_{,\lambda\epsilon}, \hat{w}) + \dot{\E}_2(\lambda_0; w_{,\epsilon}, \hat{w})  + \EE_{,uu\epsilon}(u_0, \lambda_0, 0; \mathring{u}_0, \hat{w}) + \EE_{,u\lambda\epsilon}(u_0, \lambda_0, 0; \hat{w}) = 0,
+\end{equation}
+which determines \(w_{,\lambda\epsilon}(0, \ldots, 0, \lambda_0, 0)\) uniquely. Finally, derivation of Eq.~\eqref{eq:20221020142808} with
+respect to \(\epsilon\) delivers \(w_{,\epsilon\epsilon}\)
+\begin{equation}
+  \begin{aligned}[b]
+    \EE_{,uuu}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; w_{,\epsilon}, w_{,\epsilon}, \hat{w}) + 2\EE_{,uu\epsilon}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; w_{,\epsilon}, \hat{w}) &\\
+    + \EE_{,uu}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; w_{,\epsilon\epsilon}, \hat{w}) + \EE_{,u\epsilon\epsilon}(u^\ast + \xi_i v_i + w, \lambda, \epsilon; \hat{w}) &= 0,
+  \end{aligned}
+\end{equation}
+and, at the critical point
+\begin{equation}
+  \begin{aligned}[b]
+    \E_2(\lambda_0; w_{,\epsilon\epsilon}, \hat{w}) + \E_3(\lambda_0; w_{,\epsilon}, w_{,\epsilon}, \hat{w}) + 2\EE_{,uu\epsilon}(u_0, \lambda_0, 0; w_{,\epsilon}, \hat{w})&\\
+    + \EE_{,u\epsilon\epsilon}(u_0, \lambda_0, 0; \hat{w}) &= 0,
+  \end{aligned}
+\end{equation}
+which again determines \(w_{,\epsilon\epsilon}(0, \ldots, 0, \lambda_0, 0)\).
+
+To summarize the above derivation, we have obtained the following Taylor expansion of the component $w$ of the LSK
+expansion of $u$
+\begin{equation}
+  \begin{aligned}[b]
+    w(\xi_1, \ldots, \xi_m, \lambda) ={}& \epsilon \, w_{,\epsilon} + \tfrac{1}{2} \xi_i \, \xi_j \, w_{ij} + \bigl( \lambda - \lambda_0 \bigr) \xi_i \, w_i + \epsilon \, \xi_i \, w_{,i\epsilon} + \epsilon \bigl( \lambda - \lambda_0\bigr) w_{,\lambda\epsilon}\\
+    &+ \tfrac{1}{2} \epsilon^2 \, w_{,\epsilon\epsilon} + o\Bigl(\xi_1^2 + \cdots + \xi_m^2 + \bigl(\lambda - \lambda_0\bigr)^2\Bigr).
+  \end{aligned}
 \end{equation}
 
-We have obtained the following Taylor expansion of the component $w$ of the LSK expansion of $u$
-\begin{equation}
-  w(\xi_1, \ldots, \xi_m, \lambda) = \tfrac{1}{2} \xi_i \xi_j w_{ij} + \bigl( \lambda - \lambda_0 \bigr) \xi_i w_i + o\Bigl(\xi_1^2 + \cdots + \xi_m^2 + \bigl(\lambda - \lambda_0\bigr)^2\Bigr).
-\end{equation}
+à reprendre ici 26/10/2022.
+
+\hrule
 
 \subsection{Step 2: elimination of \(λ\)}
 \label{sec:20221020140252}

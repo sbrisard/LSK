@@ -984,23 +984,49 @@ expansion of $u$
   \end{aligned}
 \end{equation}
 
-à reprendre ici 26/10/2022.
-
-\hrule
-
 \subsection{Step 2: elimination of \(λ\)}
 \label{sec:20221020140252}
 
-We now turn to Eq.~\eqref{eq:20220901120544}. Since $w$ is a function of $\lambda$ and $\xi_k$ ($k = 1, \ldots, m$) this
-equation implicitly defines $\lambda$ as a function of $\xi_k$, the derivatives of which can be evaluated at
-$\xi_1 = \cdots = \xi_m = 0$. In this paragraph, $\hat{v}$ denotes an arbitrary element of $V$. Besides, unless
-otherwise mentioned, the differentials of the energy $\E_{,uu}$, $\E_{,u\lambda}$, $\E_{,\lambda\lambda}$, $\E_{,uuu}$
-\dots{} are evaluated at $u = u^\ast(\lambda) + \xi_k v_k + w(\xi_k, \lambda)$. Differentiating first
-Eq.~\eqref{eq:20220901120544} with respect to $\xi_i$
+We now turn to Eq.~\eqref{eq:20220901120544}. Since $w$ is a function of \(\xi_1\), \dots, \(\xi_m\), \(\lambda\) and
+\(\epsilon\), this equation implicitly defines $\lambda$ as a function of \(\xi_1\), \dots, \(\xi_m\) and \(\epsilon\), the derivatives of which
+can be evaluated at $\xi_1 = \cdots = \xi_m = 0$ and \(\epsilon = 0\). In this paragraph, $\hat{v}$ denotes an arbitrary element of
+$V$.
+
+\paragraph{Differentiation of Eq.~\eqref{eq:20220901120544} with respect to \(\xi_i\)}
 \begin{equation}
   \label{eq:20220901121940}
-  \E_{,uu}[v_i + w_{,i} + \lambda_{,i} (\dot{u}^\ast + w_{,\lambda}), \hat{v}] + \lambda_{, i} \E_{,u\lambda}(\hat{v}) = 0,
+  \begin{aligned}[b]
+    \EE_{,uu}[u^\ast(\lambda) + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \lambda_{,i} \, \dot{u}^\ast + \lambda_{,i} \, w_{,\lambda}, \hat{v}] &\\
+    + \lambda_{, i} \, \EE_{,u\lambda}[u^\ast(\lambda) + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}] &= 0,
+  \end{aligned}
 \end{equation}
+and at the critical point
+\begin{equation}
+  \E_{uu}[u_0, λ_0; v_i + w_{,i} + \lambda_{,i} \, \dot{u}^\ast + \lambda_{,i} \, w_{,\lambda}, \hat{v}] + \lambda_{, i} \, \E_{,u\lambda}(u_0, \lambda_0; \hat{v}) = 0,
+\end{equation}
+which is identically satisfied. The derivatives of \(\lambda\) with respect to \(\xi_i\) can therefore not be retrieved from
+Eq.~\eqref{eq:20220901121940}.
+
+\paragraph{Differentiation of Eq.~\eqref{eq:20220901120544} with respect to \(\epsilon\)}
+\begin{equation}
+  \begin{aligned}[b]
+    \EE_{,uu}[u^\ast(\lambda) + \xi_k \, v_k + w, \lambda, \epsilon; \lambda_{,\epsilon} \, \dot{u}^\ast(\lambda) + \lambda_{,\epsilon} \, w_{,\lambda} + w_{,\epsilon}, \hat{v}] &\\
+    + \lambda_{,\epsilon} \, \EE_{,u\lambda}[u^\ast(\lambda) + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}] + \EE_{,u\epsilon}[u^\ast(\lambda) + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}] &= 0.
+  \end{aligned}
+\end{equation}
+At the critical point
+\begin{equation}
+  \E_2(\lambda_0; w_{,\epsilon}, \hat{v}) + \lambda_{,\epsilon} \, \dot{\E}_1(\lambda_0; \hat{v}) + \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) = 0.
+\end{equation}
+
+In the above equation, the first term vanishes since \(\hat{v} \in V = \ker \E_2(\lambda_0)\), while the second term also
+vanishes because \(\E_1(\lambda; \hat{v}) = 0\) for all \(\lambda\). We therefore get
+\begin{equation}
+  \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) = 0.
+\end{equation}
+
+\hrule
+
 then with respect to $\xi_j$
 \begin{equation}
   \label{eq:20220901125230}

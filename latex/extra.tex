@@ -1,0 +1,401 @@
+\pdfmarkupcomment{Move elsewhere} --- It will be convenient to introduce the following \(n\)-linear forms
+\begin{equation}
+  \E_1'(\lambda; \bullet) = \E_{,u\epsilon}(u(\lambda), \lambda, 0; \bullet), \quad \E_2'(\lambda; \bullet, \bullet) = \E_{,uu\epsilon}(u(\lambda), \lambda, 0; \bullet, \bullet), \quad  \text{etc.}
+\end{equation}
+where the derivative with respect to \(\epsilon\) is evaluated at \(\epsilon = 0\). We then define
+\(w_\epsilon, w_{i\epsilon}, w_{\lambda\epsilon}, w_{\epsilon\epsilon} \in W\) as the solutions to the following variational problems
+\begin{gather}
+  \label{eq:20221030175016}
+  \E_2(\lambda_0, w_\epsilon, \hat{w}) + \E_1'(\lambda_0; \hat{w}) = 0,\\
+  \label{eq:20221030180004}
+  \E_2(\lambda_0; w_{i\epsilon}, \hat{w}) + \E_3(\lambda_0; v_i, w_\epsilon, \hat{w}) + \E_2'(\lambda_0; v_i, \hat{w}) = 0,\\
+  \label{eq:20221030180909}
+  \E_2(\lambda_0; w_{\lambda\epsilon}, \hat{w}) + \dot{\E}_2(\lambda_0; w_\epsilon, \hat{w})  + \E_2'(\lambda_0; \mathring{u}_0, \hat{w}) + \dot{\E}_1'(\lambda_0; \hat{w}) = 0,\\
+  \label{eq:20221030181711}
+  \E_2(\lambda_0; w_{\epsilon\epsilon}, \hat{w}) + \E_3(\lambda_0; w_\epsilon, w_\epsilon, \hat{w}) + 2\E_2'(\lambda_0; w_\epsilon, \hat{w}) + \E_1''(\lambda_0; \hat{w}) = 0,
+\end{gather}
+for all \(\hat{w} \in W\).
+
+In this paragraph, $\hat{w}$ denotes an arbitrary test function in $W$. Eq.~\eqref{eq:20220825143616} defines a function
+$(\xi_1, \ldots, \xi_m, \lambda, \epsilon) \mapsto w(\xi_1, \ldots, \xi_m, \lambda)$ in the neighborhood of the critical point
+$(\xi_1, \ldots, \xi_m, \lambda, \epsilon) = (0, \ldots, 0, \lambda_0, 0)$. A formal proof of this result is proposed by \textcite{poti1987}; in the
+present note, existence of such mapping will be assumed, and its first- and second-order partial derivatives are
+evaluated at the critical point from the derivatives of Eq.~\eqref{eq:20220825143616}.
+
+\paragraph{Derivative of Eq.~\eqref{eq:20220825143616} with respect to \(\xi_i\)}
+\begin{equation}
+  \label{eq:20220826140926}
+  \EE_{,uu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i}, \hat{w}) = 0,
+\end{equation}
+and, at the critical point
+\begin{equation}
+  \label{eq:20220825150219}
+  0 = \E_2(\lambda_0; v_i + w_{,i}, \hat{w}) = \E_2(\lambda_0; w_{,i}, \hat{w}),
+\end{equation}
+where it was observed that \(\E_2(\lambda_0; v_i, \hat{w}) = 0\) since \(v_i \in V = \ker \E_2\). Since $w \in W$ for all
+$\xi^i$, $\lambda$ and \(\epsilon\) (in a neighborhood of the critical point), we have $w_{,i} \in W$ and,
+Remark~\ref{rem:20220902095055} leads to $w_{,i}(0, \ldots, 0, \lambda_0, 0) = 0$ at the critical point.
+
+\paragraph{Derivative of Eq.~\eqref{eq:20220825143616} with respect to $\lambda$}
+\begin{equation}
+  \label{eq:20220830145945}
+  \EE_{,uu}(u^\ast + \xi_i v_i + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda}, \hat{w}) + \EE_{,u\lambda}(u^\ast + \xi_i v_i + w, \lambda, \epsilon; \hat{w}) = 0,
+\end{equation}
+and, at \(\xi_1 = \cdots = \xi_m = \epsilon = 0\), using Eq.~\eqref{eq:20220901143843}
+\begin{equation}
+  \label{eq:20220830151513}
+  0 = \E_{,uu}(u^\ast, \lambda; w_{,\lambda}, \hat{w})
+  + \E_{,uu}(u^\ast, \lambda; \dot{u}^\ast, \hat{w}) + \E_{,u\lambda}(u^\ast, \lambda; \hat{w})
+  = \E_2(\lambda; w_{,\lambda}, \hat{w}),
+\end{equation}
+which proves similarly that \(w_{,\lambda}(0, \ldots, 0, \lambda_0, 0) = 0\).
+
+\paragraph{Derivative of Eq.~\eqref{eq:20220825143616} with respect to $\epsilon$}
+\begin{equation}
+  \label{eq:20221020142808}
+  \EE_{,uu}(u^\ast + \xi_i v_i + w, \lambda, \epsilon; w_{,\epsilon}, \hat{w}) + \EE_{,u\epsilon}(u^\ast + \xi_i v_i + w, \lambda, \epsilon; \hat{w}) = 0.
+\end{equation}
+The variational problem~\eqref{eq:20221030175016} is recognized at the critical point: \(w_{,\epsilon}(0, \ldots, 0, \lambda_0, 0) = w_\epsilon\).
+
+\bigskip
+
+To express the second-order derivatives of $w$, Eqs.~\eqref{eq:20220826140926}, \eqref{eq:20220830145945} and
+\eqref{eq:20221020142808} are again derived with respect to $\xi_j$, $\lambda$ and \(\epsilon\).
+
+\bigskip
+
+\paragraph{Derivative of Eq.~\eqref{eq:20220826140926} with respect to \(\xi_j\)}
+\begin{equation}
+  \EE_{,uuu}(u^\ast + \xi_k v_k + w, \lambda, \epsilon; v_i + w_{,i}, v_j + w_{,j}, \hat{w}) + \EE_{,uu}(u^\ast + \xi_k v_k + w, \lambda, \epsilon; w_{,ij}, \hat{w}) = 0
+\end{equation}
+and, at the critical point, the variational problem~\eqref{eq:20220519164523} is recognized:
+\(w_{,ij}(0, \ldots, 0, \lambda_0, \epsilon = 0) = w_{ij}\).
+
+\paragraph{Derivative of Eq.~\eqref{eq:20220826140926} with respect to \(\lambda\)}
+\begin{equation}
+  \begin{aligned}[b]
+    \EE_{,uuu}(u^\ast + \xi_k v_k + w, \lambda, \epsilon; v_i + w_{,i}, \dot{u}^\ast + w_{,\lambda}, \hat{w}) &\\
+    + \EE_{,uu\lambda}(u^\ast + \xi_k v_k + w, \lambda, \epsilon; v_i + w_{,i}, \hat{w}) + \EE_{,uu}(u^\ast + \xi_k v_k + w, \lambda, \epsilon; w_{,i\lambda}, \hat{w}) &= 0.
+  \end{aligned}
+\end{equation}
+Recalling that $w_{,1} = \cdots = w_{,m} = w_{,\lambda} = 0$ at the critical point, the variational
+problem~\eqref{eq:20220524134525} is recognized: \(w_{,i\lambda}(0, \ldots, 0, \lambda_0, 0)=w_i\).
+
+\paragraph{Derivative of Eq.~\eqref{eq:20220826140926} with respect to \(\epsilon\)}
+\begin{equation}
+  \begin{aligned}[b]
+    \EE_{,uuu}(u^\ast + \xi_k v_k + w, \lambda, \epsilon; w_{,\epsilon}, v_i + w_{,i}, \hat{w}) + \EE_{,uu\epsilon}(u^\ast + \xi_k v_k + w, \lambda, \epsilon; v_i + w_{,i}, \hat{w}) &\\
+    + \EE_{,uu}(u^\ast + \xi_k v_k + w, \lambda, \epsilon; v_i + w_{,i\epsilon}, \hat{w}) &= 0.
+  \end{aligned}
+\end{equation}
+The variational problem~\eqref{eq:20221030180004} is recognized at the critical point : \(w_{,i\epsilon}(0, \ldots, 0, \lambda_0, 0)=w_{i\epsilon}\).
+
+\paragraph{Derivative of Eq.~\eqref{eq:20220830151513} with respect to \(\lambda\)}
+In order to find \(w_{,\lambda\lambda}(0, \ldots, 0, \lambda_0, 0)\), it is sufficient to differentiate Eq.~\eqref{eq:20220830151513} [rather
+than Eq.~\eqref{eq:20220830145945}] with respect to \(\lambda\), delivering \(w_{,\lambda\lambda}(0, \ldots, 0, \lambda_0, 0)=0\).
+
+\paragraph{Derivative of Eq.~\eqref{eq:20220830145945} with respect to \(\epsilon\)}
+\begin{equation}
+  \begin{aligned}[b]
+    \EE_{,uuu}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda}, \hat{w}) + \EE_{,uu\epsilon}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda}, \hat{w}) &\\
+    + \EE_{,uu}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; w_{,\lambda\epsilon}, \hat{w}) + \EE_{,uu\lambda}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; w_{,\epsilon}\hat{w})&\\
+    + \EE_{,u\lambda\epsilon}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; \hat{w}) &= 0
+  \end{aligned}
+\end{equation}
+The variational problem~\eqref{eq:20221030180909} is recognized at the critical point: \(w_{,\lambda\epsilon}(0, \ldots, 0, \lambda_0, 0) = w_{\lambda\epsilon}\).
+
+\paragraph{Derivative of Eq.~\eqref{eq:20221020142808} with respect to \(\epsilon\)}
+\begin{equation}
+  \begin{aligned}[b]
+    \EE_{,uuu}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; w_{,\epsilon}, w_{,\epsilon}, \hat{w}) + 2\EE_{,uu\epsilon}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; w_{,\epsilon}, \hat{w}) &\\
+    + \EE_{,uu}(u^\ast + \xi_i \, v_i + w, \lambda, \epsilon; w_{,\epsilon\epsilon}, \hat{w}) + \EE_{,u\epsilon\epsilon}(u^\ast + \xi_i v_i + w, \lambda, \epsilon; \hat{w}) &= 0.
+  \end{aligned}
+\end{equation}
+The variational problem~\eqref{eq:20221030181711} is recognized at the critical point: \(w_{,\epsilon\epsilon}(0, \ldots, 0, \lambda_0, 0) = w_{\epsilon\epsilon}\).
+
+\paragraph{Conclusion} To summarize the above derivation, we have obtained the following Taylor expansion of the
+component $w$ of the LSK expansion of $u$
+\begin{equation}
+  \begin{aligned}[b]
+    w(\xi_1, \ldots, \xi_m, \lambda) ={}& \epsilon \, w_\epsilon + \tfrac{1}{2} \xi_i \, \xi_j \, w_{ij} + \bigl( \lambda - \lambda_0 \bigr) \xi_i \, w_i + \epsilon \, \xi_i \, w_{i\epsilon} + \epsilon \bigl( \lambda - \lambda_0\bigr) w_{\lambda\epsilon}\\
+    &+ \tfrac{1}{2} \epsilon^2 \, w_{\epsilon\epsilon} + o\Bigl(\xi_1^2 + \cdots + \xi_m^2 + \bigl(\lambda - \lambda_0\bigr)^2\Bigr).
+  \end{aligned}
+\end{equation}
+
+\subsection{Elimination of \(λ\)}
+\label{sec:20221020140252}
+
+We now turn to Eq.~\eqref{eq:20220901120544}. Since $w$ is a function of \(\xi_1\), \dots, \(\xi_m\), \(\lambda\) and
+\(\epsilon\), this equation implicitly defines $\lambda$ as a function of \(\xi_1\), \dots, \(\xi_m\) and \(\epsilon\), the derivatives of which
+can be evaluated at $\xi_1 = \cdots = \xi_m = 0$ and \(\epsilon = 0\). In this paragraph, $\hat{v}$ denotes an arbitrary element of $V$.
+
+\paragraph{Derivative of Eq.~\eqref{eq:20220901120544} with respect to \(\xi_i\)}
+\begin{equation}
+  \label{eq:20220901121940}
+  \begin{aligned}[b]
+    \EE_{,uu}[u^\ast(\lambda) + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \lambda_{,i} \, \dot{u}^\ast + \lambda_{,i} \, w_{,\lambda}, \hat{v}] &\\
+    + \lambda_{, i} \, \EE_{,u\lambda}[u^\ast(\lambda) + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}] &= 0,
+  \end{aligned}
+\end{equation}
+and at the critical point
+\begin{equation}
+  \E_{,uu}[u_0, λ_0; v_i + w_{,i} + \lambda_{,i} \, \dot{u}^\ast + \lambda_{,i} \, w_{,\lambda}, \hat{v}] + \lambda_{, i} \, \E_{,u\lambda}(u_0, \lambda_0; \hat{v}) = 0,
+\end{equation}
+which reduces to
+\begin{equation}
+  \E_2(\lambda_0; v_i + w_{,i} + \lambda_{,i} \, w_{,\lambda}, \hat{v}) + \lambda_{,i} \, \dot{\E}
+\end{equation}
+which is identically satisfied. The derivatives of \(\lambda\) with respect to \(\xi_i\) can therefore not be retrieved from
+Eq.~\eqref{eq:20220901121940}.
+
+\paragraph{Derivative of Eq.~\eqref{eq:20220901120544} with respect to \(\epsilon\)}
+\begin{equation}
+  \begin{aligned}[b]
+    \EE_{,uu}[u^\ast(\lambda) + \xi_k \, v_k + w, \lambda, \epsilon; \lambda_{,\epsilon} \, \dot{u}^\ast(\lambda) + \lambda_{,\epsilon} \, w_{,\lambda} + w_{,\epsilon}, \hat{v}] &\\
+    + \lambda_{,\epsilon} \, \EE_{,u\lambda}[u^\ast(\lambda) + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}] + \EE_{,u\epsilon}[u^\ast(\lambda) + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}] &= 0.
+  \end{aligned}
+\end{equation}
+At the critical point
+\begin{equation}
+  \E_2(\lambda_0; w_\epsilon, \hat{v}) + \lambda_{,\epsilon} \, \dot{\E}_1(\lambda_0; \hat{v}) + \E_1'(\lambda_0; \hat{v}) = 0.
+\end{equation}
+
+In the above equation, the first term vanishes since \(\hat{v} \in V = \ker \E_2(\lambda_0)\), while the second term also
+vanishes because \(\E_1(\lambda; \hat{v}) = 0\) for all \(\lambda\). We therefore have a contradiction if \(\E_1'(\lambda_0) \neq 0\).
+
+\begin{remark}
+  This contradiction probably invalidates the above determination of \(\lambda\) as a function of \(\xi_k\) and
+  \(\epsilon\). In \S~\ref{sec:20221102134138}, it will be shown that it is possible to express \(\epsilon\) as a function of
+  \(\xi_k\) and \(\lambda\). Still the present derivation is instructive (and valid!) for a perfect system. In the remainder of
+  this section, the analysis will therefore be restricted to \(\epsilon=0\).
+\end{remark}
+
+\paragraph{Derivative of Eq.~\eqref{eq:20220901121940} with respect to \(\xi_j\)}
+\begin{equation}
+  \label{eq:20220901125230}
+  \begin{gathered}[b]
+    \E_{,uuu}[u^\ast + \xi_k \, v_k + w, \lambda; v_i + w_{,i} + \lambda_{,i} \, ( \dot{u}^\ast + w_{,\lambda} ), v_j + w_{,j} + \lambda_{,j} \, ( \dot{u}^\ast + \lambda_{,j} \, w_{,\lambda} ), \hat{v}]\\
+    + \lambda_{,j} \, \E_{,uu\lambda}[u^\ast + \xi_k \, v_k + w, \lambda; v_i + w_{,i} + \lambda_{,i} \, ( \dot{u}^\ast + w_{,\lambda} ), \hat{v}]\\
+    + \E_{,uu}[u^\ast + \xi_k \, v_k + w, \lambda; w_{,ij} + \lambda_{, j} \, w_{,i\lambda} + \lambda_{, i} \, w_{,j\lambda} + \lambda_{,ij} \, ( \dot{u}^\ast + w_{,\lambda} ) + \lambda_{,i}\, \lambda_{,j} \, ( \ddot{u}^\ast + w_{,\lambda\lambda} ), \hat{v}]\\
+    + \lambda_{, ij} \, \E_{,u\lambda}(u^\ast + \xi_k \, v_k + w, \lambda; \hat{v}) + \lambda_{, i} \, \E_{,uu\lambda}[u^\ast + \xi_k \, v_k + w, \lambda; v_j + w_{,j} + \lambda_{,j} \, (\dot{u}^\ast + w_{,\lambda}), \hat{v}]\\
+    + \lambda_{,i} \, \lambda_{,j} \, \E_{,u\lambda\lambda}(u^\ast + \xi_k \, v_k + w, \lambda; \hat{v})= 0.
+  \end{gathered}
+\end{equation}
+At the critical point
+% \begin{equation*}
+%   \begin{gathered}[b]
+%     \E_{,uuu}(u_0, \lambda_0; v_i + \lambda_{,i} \, \mathring{u}_0, v_j + \lambda_{,j} \, \mathring{u}_0, \hat{v}) + \lambda_{,j} \, \E_{,uu\lambda}(u_0, \lambda_0; v_i + \lambda_{,i} \, \mathring{u}_0, \hat{v})\\
+%     + \E_{,uu}(u_0, \lambda_0; w_{ij} + \lambda_{,i} \, w_j + \lambda_{,j} \, w_i + \lambda_{,ij} \, \mathring{u}_0 + w_{,\lambda} + \lambda_{,i} \, \lambda_{,j} \, \ddot{u}_0, \hat{v})\\
+%     + \lambda_{, ij} \, \E_{,u\lambda}(u_0, \lambda_0; \hat{v}) + \lambda_{, i} \, \E_{,uu\lambda}(u_0, \lambda_0; v_j + \lambda_{,j} \, \mathring{u}_0, \hat{v}) + \lambda_{,i} \, \lambda_{,j} \, \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{v}) = 0
+%   \end{gathered}
+% \end{equation*}
+
+% \begin{equation*}
+%   \begin{gathered}[b]
+%     \E_{,uuu}(u_0, \lambda_0; v_i , v_j, \hat{v}) + \E_{,uu}(u_0, \lambda_0; w_{ij}, \hat{v})\\
+%     +\lambda_{,i} \bigl[\E_{,uuu}(u_0, \lambda_0; v_j , \mathring{u}_0, \hat{v}) + \E_{,uu\lambda}[u_0, \lambda_0; v_j, \hat{v}]\bigr]\\
+%     +\lambda_{,j} \bigl[\E_{,uuu}(u_0, \lambda_0; v_i , \mathring{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_i, \hat{v})\bigr]\\
+%     +\lambda_{,ij} \bigl[ \E_{,uu}(u_0, \lambda_0;  \mathring{u}_0, \hat{v}) + \E_{,u\lambda}(u_0, \lambda_0; \hat{v}) \bigr]\\
+%     +\lambda_{,i} \lambda_{,j}\bigl[ \E_{,uuu}(u_0, \lambda_0; \mathring{u}_0 , \mathring{u}_0, \hat{v}) + 2\E_{,uu\lambda}(u_0, \lambda_0; \mathring{u}_0, \hat{v}) + \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{v}) + \E_{,uu}(u_0, \lambda_0; \ddot{u}_0, \hat{v}) \bigr] = 0
+%   \end{gathered}
+% \end{equation*}
+
+% \begin{equation*}
+%   \begin{gathered}[b]
+%     \E_3(\lambda_0; v_i , v_j, \hat{v}) + \E_2(\lambda_0; w_{ij}, \hat{v}) + \lambda_{,i} \, \dot{\E}_2(\lambda_0; v_j, \hat{v}) + \lambda_{,j} \, \dot{\E}_2(\lambda_0; v_i, \hat{v})\\
+%     +\lambda_{,ij} \, \dot{\E}_1(\lambda_0; \hat{v}) + \lambda_{,i} \, \lambda_{,j} \, \ddot{\E}_1(\lambda_0; \hat{v}) = 0
+%   \end{gathered}
+% \end{equation*}
+
+\begin{equation}
+    \E_3(\lambda_0; v_i , v_j, \hat{v}) + \lambda_{,i} \, \dot{\E}_2(\lambda_0; v_j, \hat{v}) + \lambda_{,j} \, \dot{\E}_2(\lambda_0; v_i, \hat{v}) = 0.
+\end{equation}
+Testing with $v_k \in V$, the above equation reads
+\begin{equation}
+  \E_3(\lambda_0; v_i , v_j, v_k) + \lambda_{,i} \dot{\E}_2(\lambda_0; v_j, v_k) + \lambda_{,j} \dot{\E}_2(\lambda_0; v_i, v_k) = 0,
+\end{equation}
+or, with Eqs.~\eqref{eq:20220524135619} and \eqref{eq:20220524135643}
+\begin{equation}
+  \label{eq:20220902125031}
+  E_{ijk} +  F_{jk} \frac{\partial\lambda}{\partial\xi_i} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0} + F_{ik} \frac{\partial\lambda}{\partial\xi_j} \biggr\rvert_{\xi_1 = \cdots = \xi_m = 0} = 0.
+\end{equation}
+
+In order to evaluate the second order partial derivatives of $\lambda$, Eq.~\eqref{eq:20220901125230} should be further
+differentiated with respect to $\xi_k$. This leads to extremely tedious derivations, that will not be pursued here.
+
+To close this paragraph, a parametrization of the bifurcated branch is introduced. This branch is a curve
+$(u, \lambda) \in \reals ^ {m + 1}$, which is parametrized by $\eta$: $[u(\eta), \lambda(\eta)]$, with $u(0) = u_0$ and
+$\lambda(0) = \lambda_0$; primed quantities denoting derivatives with respect to $\eta$, we introduce
+\begin{equation}
+  \order[1]{\xi_i} = \xi_i'(0), \quad
+  \order[2]{\xi_i} = \xi_i''(0), \quad \ldots, \quad
+  \order[1]{\lambda} = \lambda'(0), \quad \ldots
+\end{equation}
+and first observe that
+\begin{equation}
+  \order[1]{\lambda} = \order[1]{\xi_i} \, \lambda_{,i}(\xi_1 = 0, \ldots, \xi_ m = 0)
+\end{equation}
+
+Multiplying both sides of Eq.~\eqref{eq:20220902125031} by $\order[1]{\xi_i} \order[1]{\xi_j}$ therefore results in the
+following identity
+\begin{equation}
+  \begin{aligned}[b]
+    0 &= E_{ijk} \, \order[1]{\xi_i} \, \order[1]{\xi_j} +  F_{jk} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \, \lambda_{, i}(0, \ldots, 0) + F_{ik} \order[1]{\xi_i} \, \order[1]{\xi_j} \, \lambda_{, j}(0, \ldots, 0)\\
+    &= E_{ijk} \order[1]{\xi_i} \order[1]{\xi_j} +  F_{jk} \order[1]{\lambda} \order[1]{\xi_j} + F_{ik} \order[1]{\xi_i} \order[1]{\lambda}
+  \end{aligned}
+\end{equation}
+and, rearranging
+\begin{equation}
+  E_{ijk} \, \order[1]{\xi_j} \, \order[1]{\xi_k} +  2 \order[1]{\lambda} \, F_{ij}  \, \order[1]{\xi_j} = 0,
+\end{equation}
+to be compared with Eq.~\eqref{eq:20220524135036}. We now turn to $w$
+\begin{equation}
+  w'(\eta) = w_{,i} \, \xi_i' + w_{,\lambda} \, \lambda'
+  \quad \text{and} \quad
+  w''(\eta) = w_{,ij} \, \xi_i' \, \xi_j' + 2w_{,i\lambda} \, \xi_i' \, \lambda' + w_{,i} \, \xi_i'' + w_{,\lambda\lambda} \, \lambda^{'2} + w_{,\lambda} \, \lambda''
+\end{equation}
+and, at $\eta = 0$
+\begin{equation}
+  w'(0) = 0 \quad \text{and} \quad w''(0) = \order[1]{\xi_i} \, \order[1]{\xi_j} \, w_{ij}  + 2 \order[1]{\lambda} \, \order[1]{\xi_i} \, w_i
+\end{equation}
+and we get the Taylor expansion of the bifurcated branch as $\eta \to 0$
+\begin{equation}
+  u(\eta) = u^\ast[\lambda(\eta)] + \order[1]{\xi_i} \, v_i + \tfrac{1}{2} \bigl( \order[2]{\xi_i} \, v_i + \order[1]{\xi_i} \, \order[1]{\xi_j} \, w_{ij}  + 2\order[1]{\lambda} \, \order[1]{\xi_i} \, w_i\bigr) + o(\eta^2),
+\end{equation}
+to be compared with Eq.~\eqref{eq:20220524134613}.
+
+\subsection{Elimination of}
+\label{sec:20221102134138}
+
+We again turn to Eq.~\eqref{eq:20220901120544}; \(\epsilon\) is now expressed as an implicit function of \(\xi_1\), \dots,
+\(\xi_m\) and \(\lambda\). In this paragraph, $\hat{v}$ denotes an arbitrary element of $V$.
+
+\paragraph{Derivative of Eq.~\eqref{eq:20220901120544} with respect to \(\xi_i\)}
+\begin{equation}
+  \label{eq:20221102205016}
+  \EE_{,uu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \hat{v}) + \epsilon_{,i} \, \EE_{,u\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) = 0.
+\end{equation}
+At the critical point
+\begin{equation}
+  \E_{,uu}(u_0, \lambda_0; v_i + \epsilon_{,i} \, w_\epsilon, \hat{v}) + \epsilon_{,i} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) = 0,
+\end{equation}
+and the first term vanishes. We assume that \(\EE_{,u\epsilon}(u_0, \lambda_0, 0)\) is not uniformly null. Then
+\(\epsilon_{,i}(0, \ldots, 0, \lambda_0) = 0\).
+
+\paragraph{Derivative of Eq.~\eqref{eq:20220901120544} with respect to \(\lambda\)}
+\begin{equation}
+  \label{eq:20221103054732}
+  \begin{aligned}[b]
+    \EE_{,uu}(u + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v})
+    + \EE_{,u\lambda}(u + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v})&\\
+    + \epsilon_{,\lambda} \, \EE_{,u\epsilon}(u + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &= 0
+  \end{aligned}
+\end{equation}
+At the critical point
+% \begin{equation}
+%   \E_{,uu}(u_0, \lambda_0; \dot{u}_0 + \epsilon_{,\lambda} \, w_\epsilon, \hat{v}) + \E_{,u\lambda}(u_0, \lambda_0; \hat{v}) + \epsilon_{,\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0; \hat{v}) = 0
+% \end{equation}
+
+% \begin{equation}
+%   \dot{\E}_1(\lambda_0; \hat{v}) + \epsilon_{,\lambda} \bigl[ \E_2(\lambda_0; w_\epsilon, \hat{v}) + \EE_{,u\epsilon}(u_0, \lambda_0; \hat{v}) \bigr] = 0
+% \end{equation}
+\begin{equation}
+  \epsilon_{,\lambda} \EE_{,u\epsilon}(u_0, \lambda_0; \hat{v}) = 0,
+\end{equation}
+which delivers \(\epsilon_{,\lambda}(0, \ldots, 0, \lambda_0) = 0\).
+
+\paragraph{Derivative of Eq.~\eqref{eq:20221102205016} with respect to \(\xi_j\)}
+\begin{equation}
+  \begin{aligned}[b]
+    \EE_{,uuu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \,  w_{,\epsilon}, v_j + w_{,j} + \epsilon_{,j} \, w_{,\epsilon}, \hat{v})&\\
+    + \epsilon_{,j} \, \EE_{,uu\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + w_{,\epsilon} \, \epsilon_{,i}, \hat{v})&\\
+    + \EE_{,uu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; w_{,ij} + \epsilon_{,j} \, w_{,i\epsilon} + \epsilon_{,ij} \, w_{,\epsilon} + \epsilon_{,i} \, w_{,j\epsilon} + \epsilon_{,i} \, \epsilon_{,j} \, w_{,\epsilon\epsilon} , \hat{v})&\\
+    + \epsilon_{,ij} \, \EE_{,u\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v})&\\
+    + \epsilon_{,i} \, \EE_{,uu\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_j + w_{,j} + \epsilon_{,j} \, w_{,\epsilon}, \hat{v})&\\
+    + \epsilon_{,i} \, \epsilon_{,j} \, \EE_{,u\epsilon\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &= 0
+  \end{aligned}
+\end{equation}
+At the critical point
+\begin{equation}
+  \E_{,uuu}(u_0, \lambda_0; v_i, v_j, \hat{v}) + \epsilon_{,ij} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) = 0
+\end{equation}
+and, testing with \(v_k\)
+\begin{equation}
+  E_{ijk} + \epsilon_{,ij} \, E_k' = 0 \quad \text{for all} \quad k = 1, \ldots, m.
+\end{equation}
+
+\paragraph{Derivative of Eq.~\eqref{eq:20221102205016} with respect to \(\lambda\)}
+\begin{equation}
+  \begin{aligned}[b]
+    \EE_{,uuu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v})&\\
+    + \EE_{,uu\lambda}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \hat{v})&\\
+    + \epsilon_{,\lambda} \, \EE_{,uu\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \hat{v})&\\
+    + \EE_{,uu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon;  w_{,i\lambda} + \epsilon_{,\lambda} \, w_{,i\epsilon} + \epsilon_{,i\lambda} \, w_{,\epsilon} + \epsilon_{,i} \, w_{,\lambda\lambda} + \epsilon_{,i} \, \epsilon_{,j} \, w_{,\lambda\epsilon} , \hat{v})&\\
+    + \epsilon_{,i\lambda} \, \EE_{,u\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v})&\\
+    + \epsilon_{,i} \, \EE_{,uu\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    + \epsilon_{,i} \, \EE_{,u\lambda\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &\\
+    + \epsilon_{,i} \, \epsilon_{,j} \, \EE_{,u\epsilon\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) = 0.
+  \end{aligned}
+\end{equation}
+At the critical point
+% \begin{equation}
+%   \begin{aligned}[b]
+%     \E_{,uuu}(u_0, \lambda_0; v_i, \dot{u}^\ast, \hat{v}) + \EE_{,uu\lambda}(u_0, \lambda_0; v_i, \hat{v})&\\
+%     + \E_{,uu}(u_0, \lambda_0;  w_{,i\lambda} + \epsilon_{,\lambda} \, w_{,i\epsilon} + \epsilon_{,i\lambda} \, w_{,\epsilon} + \epsilon_{,i} \, w_{,\lambda\lambda} + \epsilon_{,i} \, \epsilon_{,j} \, w_{,\lambda\epsilon} , \hat{v})&\\
+%     + \epsilon_{,i\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) &= 0\\
+%   \end{aligned}
+% \end{equation}
+
+\begin{equation}
+  \dot{\E}_2(\lambda_0; v_i, \hat{v}) + \epsilon_{,i\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) = 0
+\end{equation}
+and, testing with \(v_j\)
+\begin{equation}
+  F_{ij} + \epsilon_{,i\lambda} \, E_j' = 0 \quad \text{for all} \quad j = 1, \ldots, m.
+\end{equation}
+
+
+\paragraph{Derivative of Eq.~\eqref{eq:20221103054732} with respect to \(\lambda\)}
+\begin{equation}
+  \begin{aligned}[b]
+    \EE_{,uuu}(u + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    + 2\EE_{,uu\lambda}(u + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    + 2\epsilon_{,\lambda} \, \EE_{,uu\epsilon}(u + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    + \EE_{,uu}(u + \xi_k \, v_k + w, \lambda, \epsilon; \ddot{u}^\ast + w_{,\lambda\lambda} + 2\epsilon_{,\lambda} \, w_{,\lambda\epsilon} + \epsilon_{,\lambda\lambda} \, w_{,\epsilon} + \epsilon_{,\lambda}^2 \, w_{,\epsilon\epsilon}, \hat{v}) &\\
+    + \EE_{,u\lambda\lambda}(u + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v})&\\
+    + 2\epsilon_{,\lambda} \, \EE_{,u\lambda\epsilon}(u + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &\\
+    + \epsilon_{,\lambda\lambda} \, \EE_{,u\epsilon}(u + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &\\
+    + \epsilon_{,\lambda}^2 \, \EE_{,u\epsilon\epsilon}(u + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &= 0.
+  \end{aligned}
+\end{equation}
+At the critical point
+\begin{equation*}
+  \begin{aligned}[b]
+    \E_{,uuu}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{v}) + 2\E_{,uu\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{v}) + \E_{,uu}(u_0, \lambda_0; \ddot{u}_0 + \epsilon_{,\lambda\lambda} \, w_\epsilon + \epsilon_{,\lambda}^2 \, w_{\epsilon\epsilon}, \hat{v}) &\\
+    + \E_{,u\lambda\lambda}(u_0, \lambda_0; \hat{v}) + \epsilon_{,\lambda\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) &= 0
+  \end{aligned}
+\end{equation*}
+\begin{equation*}
+  \underbrace{\ddot{\E}_1(\lambda_0; \hat{v})}_{=0}
+  + \underbrace{\E_2(\lambda_0; \epsilon_{,\lambda\lambda} \, w_\epsilon + \epsilon_{,\lambda}^2 \, w_{\epsilon\epsilon}, \hat{v})}_{=0}
+  + \epsilon_{,\lambda\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) = 0
+\end{equation*}
+\begin{equation}
+  \epsilon_{,\lambda\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) = 0,
+\end{equation}
+which delivers \(\epsilon_{,\lambda\lambda}(0, \ldots, 0, \lambda_0) = 0\).
+
+\begin{equation*}
+  \dot{\E}_1(\lambda; \bullet) = \E_{,uu}(u^\ast, \lambda; \dot{u}^\ast, \bullet) + \E_{,u\lambda}(u^\ast, \lambda; \bullet)
+\end{equation*}
+\begin{equation*}
+  \ddot{\E}_1(\lambda; \bullet) = \E_{,uuu}(u^\ast, \lambda; \dot{u}^\ast, \dot{u}^\ast, \bullet) + 2\E_{,uu\lambda}(u^\ast, \lambda; \dot{u}^\ast, \bullet) + \E_{,uu}(u^\ast, \lambda; \ddot{u}^\ast, \bullet) + \E_{,u\lambda\lambda}(u^\ast, \lambda; \bullet)
+\end{equation*}
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% fill-column: 120
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-master: "./LSK-notes.tex"
+%%% End:

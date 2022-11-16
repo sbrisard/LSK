@@ -1171,25 +1171,25 @@ and, testing with \(v_k\)
 \paragraph{Derivative of Eq.~\eqref{eq:20221102205016} with respect to \(\lambda\)}
 \begin{equation}
   \begin{aligned}[b]
-    \EE_{,uuu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v})&\\
+    % \EE_{,uu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \hat{v})
+    + \EE_{,uuu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v})&\\
     + \EE_{,uu\lambda}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \hat{v})&\\
     + \epsilon_{,\lambda} \, \EE_{,uu\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \hat{v})&\\
-    + \EE_{,uu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon;  w_{,i\lambda} + \epsilon_{,\lambda} \, w_{,i\epsilon} + \epsilon_{,i\lambda} \, w_{,\epsilon} + \epsilon_{,i} \, w_{,\lambda\lambda} + \epsilon_{,i} \, \epsilon_{,j} \, w_{,\lambda\epsilon} , \hat{v})&\\
-    + \epsilon_{,i\lambda} \, \EE_{,u\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v})&\\
+    + \EE_{,uu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; w_{,i\lambda} + \epsilon_{,\lambda} \, w_{,i\epsilon} + \epsilon_{,i\lambda} \, w_{,\epsilon} + \epsilon_{,i} \, w_{,\lambda\epsilon} + \epsilon_{,i} \, \epsilon_{,\lambda} \, w_{,\epsilon\epsilon}, \hat{v}) &\\
+    % + \epsilon_{,i} \, \EE_{,u\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v})
+    + \epsilon_{,i\lambda} \, \EE_{,u\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &\\
     + \epsilon_{,i} \, \EE_{,uu\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
     + \epsilon_{,i} \, \EE_{,u\lambda\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &\\
-    + \epsilon_{,i} \, \epsilon_{,j} \, \EE_{,u\epsilon\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) = 0.
+    + \epsilon_{,i} \, \epsilon_{,\lambda} \, \EE_{,u\epsilon\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &= 0.
   \end{aligned}
 \end{equation}
 At the critical point
 % \begin{equation}
 %   \begin{aligned}[b]
-%     \E_{,uuu}(u_0, \lambda_0; v_i, \dot{u}^\ast, \hat{v}) + \EE_{,uu\lambda}(u_0, \lambda_0; v_i, \hat{v})&\\
-%     + \E_{,uu}(u_0, \lambda_0;  w_{,i\lambda} + \epsilon_{,\lambda} \, w_{,i\epsilon} + \epsilon_{,i\lambda} \, w_{,\epsilon} + \epsilon_{,i} \, w_{,\lambda\lambda} + \epsilon_{,i} \, \epsilon_{,j} \, w_{,\lambda\epsilon} , \hat{v})&\\
+%     \E_{,uuu}(u_0, \lambda_0; v_i, \dot{u}_0, \hat{v})  + \E_{,uu\lambda}(u_0, \lambda_0; v_i, \hat{v}) + \E_{,uu}(u_0, \lambda_0; w_i + \epsilon_{,i\lambda} \, w_{\epsilon}, \hat{v}) &\\
 %     + \epsilon_{,i\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) &= 0\\
 %   \end{aligned}
 % \end{equation}
-
 \begin{equation}
   \dot{\E}_2(\lambda_0; v_i, \hat{v}) + \epsilon_{,i\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) = 0
 \end{equation}

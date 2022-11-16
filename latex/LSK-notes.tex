@@ -1170,9 +1170,10 @@ and, testing with \(v_k\)
 
 \paragraph{Derivative of Eq.~\eqref{eq:20221102205016} with respect to \(\lambda\)}
 \begin{equation}
+  \label{eq:20221116061057}
   \begin{aligned}[b]
     % \EE_{,uu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \hat{v})
-    + \EE_{,uuu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v})&\\
+    \EE_{,uuu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v})&\\
     + \EE_{,uu\lambda}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \hat{v})&\\
     + \epsilon_{,\lambda} \, \EE_{,uu\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \hat{v})&\\
     + \EE_{,uu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; w_{,i\lambda} + \epsilon_{,\lambda} \, w_{,i\epsilon} + \epsilon_{,i\lambda} \, w_{,\epsilon} + \epsilon_{,i} \, w_{,\lambda\epsilon} + \epsilon_{,i} \, \epsilon_{,\lambda} \, w_{,\epsilon\epsilon}, \hat{v}) &\\
@@ -1201,6 +1202,7 @@ and, testing with \(v_j\)
 
 \paragraph{Derivative of Eq.~\eqref{eq:20221103054732} with respect to \(\lambda\)}
 \begin{equation}
+  \label{eq:20221116070255}
   \begin{aligned}[b]
     \EE_{,uuu}(u + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
     + 2\EE_{,uu\lambda}(u + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
@@ -1329,12 +1331,142 @@ At the critical point
   \end{aligned}
 \end{equation}
 
+\paragraph{Derivative of Eq.~\eqref{eq:20221116061057} with respect to \(\lambda\)}
+\begin{equation}
+  \begin{aligned}[b]
+    % \EE_{,uuu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v})
+    \EE_{,uuuu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    + \EE_{,uuu\lambda}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    + \epsilon_{,\lambda} \, \EE_{,uuu\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    + \EE_{,uuu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; w_{,i\lambda} + \epsilon_{,\lambda} \, w_{,i\epsilon} + \epsilon_{,i\lambda} \, w_{,\epsilon} + \epsilon_{,i} \, w_{,\lambda\epsilon} + \epsilon_{,i} \, \epsilon_{,\lambda} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    + \EE_{,uuu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \ddot{u}^\ast + w_{,\lambda\lambda} + \epsilon_{,\lambda} \, w_{,\lambda\epsilon} + \epsilon_{,\lambda\lambda} \, w_{, \epsilon} + \epsilon_{,\lambda} \, w_{,\lambda\epsilon} + \epsilon_{,\lambda}^2 \, w_{,\epsilon\epsilon}, \hat{v}) &\\
+    % + \EE_{,uu\lambda}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \hat{v})
+    + \EE_{,uuu\lambda}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \hat{v}) &\\
+    + \EE_{,uu\lambda\lambda}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \hat{v}) &\\
+    + \epsilon_{,\lambda} \, \EE_{,uu\lambda\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \hat{v}) &\\
+    + \EE_{,uu\lambda}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i\lambda} + \epsilon_{,\lambda} \, w_{,i\epsilon} + \epsilon_{,i\lambda} \, w_{,\epsilon} + \epsilon_{,i} \, w_{,\lambda\epsilon}  + \epsilon_{,i} \, \epsilon_{,\lambda} \, w_{,\epsilon\epsilon}, \hat{v}) &\\
+    % + \epsilon_{,\lambda} \, \EE_{,uu\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \hat{v})
+    + \epsilon_{,\lambda\lambda} \, \EE_{,uu\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_i + w_{,i} + \epsilon_{,i} \, w_{,\epsilon}, \hat{v}) &\\
+    + \epsilon_{,\lambda} \ldots &\\
+    % + \EE_{,uu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; w_{,i\lambda} + \epsilon_{,\lambda} \, w_{,i\epsilon} + \epsilon_{,i\lambda} \, w_{,\epsilon} + \epsilon_{,i} \, w_{,\lambda\epsilon} + \epsilon_{,i} \, \epsilon_{,\lambda} \, w_{,\epsilon\epsilon}, \hat{v})
+    + \EE_{,uuu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, w_{,i\lambda} + \epsilon_{,\lambda} \, w_{,i\epsilon} + \epsilon_{,i\lambda} \, w_{,\epsilon} + \epsilon_{,i} \, w_{,\lambda\epsilon} + \epsilon_{,i} \, \epsilon_{,\lambda} \, w_{,\epsilon\epsilon}, \hat{v}) &\\
+    + \EE_{,uu\lambda}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; w_{,i\lambda} + \epsilon_{,\lambda} \, w_{,i\epsilon} + \epsilon_{,i\lambda} \, w_{,\epsilon} + \epsilon_{,i} \, w_{,\lambda\epsilon} + \epsilon_{,i} \, \epsilon_{,\lambda} \, w_{,\epsilon\epsilon}, \hat{v}) &\\
+    + \epsilon_{,\lambda} \ldots &\\
+    + \EE_{,uu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon;\ldots, \hat{v})
+    % + \epsilon_{,i\lambda} \, \EE_{,u\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v})
+    + \epsilon_{,i\lambda\lambda} \, \EE_{,u\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &\\
+    + \epsilon_{,i\lambda} \, \EE_{,uu\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    + \epsilon_{,i\lambda} \, \EE_{,u\lambda\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &\\
+    + \epsilon_{,\lambda} \ldots &\\
+    % + \epsilon_{,i} \, \EE_{,uu\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v})
+    + \epsilon_{,i\lambda} \, \EE_{,uu\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    + \epsilon_{,i} \ldots &\\
+    % + \epsilon_{,i} \, \EE_{,u\lambda\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v})
+    + \epsilon_{,i\lambda} \, \EE_{,u\lambda\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &\\
+    + \epsilon_{,i} \ldots &\\
+    % + \epsilon_{,i} \, \epsilon_{,\lambda} \, \EE_{,u\epsilon\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v})
+    + \epsilon_{,i\lambda} \, \epsilon_{,\lambda} \ldots &\\
+    + \epsilon_{,i} \ldots
+  \end{aligned}
+\end{equation}
+At the critical point
+\begin{equation}
+  \begin{aligned}[b]
+    \E_{,uuuu}(u_0, \lambda_0; v_i, \dot{u}_0, \dot{u}_0, \hat{v}) + \E_{,uuu\lambda}(u_0, \lambda_0; v_i, \dot{u}_0, \hat{v}) &\\
+    + \E_{,uuu}(u_0, \lambda_0; w_i + \epsilon_{,i\lambda} \, w_{\epsilon}, \dot{u}_0, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; v_i, \ddot{u}_0 + \epsilon_{,\lambda\lambda} \, w_{\epsilon}, \hat{v}) &\\
+    %
+    + \E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, v_i, \hat{v})
+    + \E_{,uu\lambda\lambda}(u_0, \lambda_0; v_i, \hat{v}) &\\
+    + \E_{,uu\lambda}(u_0, \lambda_0; v_i + w_{i} + \epsilon_{,i\lambda} \, w_{\epsilon}, \hat{v})
+    %
+    + \epsilon_{,\lambda\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_i, \hat{v}) &\\
+    %
+    + \epsilon_{,i\lambda\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v})
+    + \epsilon_{,i\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; \dot{u}_0, \hat{v})
+    + \epsilon_{,i\lambda} \, \EE_{,u\lambda\epsilon}(u_0, \lambda_0, 0; \hat{v}) &\\
+    %
+    + \epsilon_{,i\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; \dot{u}_0, \hat{v})
+    %
+    + \epsilon_{,i\lambda} \, \EE_{,u\lambda\epsilon}(u_0, \lambda_0, 0; \hat{v}) &= 0
+  \end{aligned}
+\end{equation}
+
+\paragraph{Derivative of Eq.~\eqref{eq:20221116070255} with respect to \(\lambda\)}
+\begin{equation}
+  \begin{aligned}[b]
+    % \EE_{,uuu}(u + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v})
+    \EE_{,uuuu}(u + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    + \EE_{,uuu\lambda}(u + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    + \epsilon_{,\lambda} \ldots &\\
+    + 2\EE_{,uuu}(u + \xi_k \, v_k + w, \lambda, \epsilon; \ddot{u}^\ast + w_{,\lambda\lambda} + \epsilon_{,\lambda} w_{,\lambda\epsilon} + \epsilon_{,\lambda\lambda} \, w_{,\epsilon} + \epsilon_{,\lambda} \ldots, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    % + 2\EE_{,uu\lambda}(u + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v})
+    + 2\EE_{,uuu\lambda}(u + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    + 2\EE_{,uu\lambda\lambda}(u + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    + 2\epsilon_{,\lambda} \EE_{,uu\lambda\epsilon}(\ldots) &\\
+     + 2\EE_{,uu\lambda}(u + \xi_k \, v_k + w, \lambda, \epsilon; \ddot{u}^\ast + w_{,\lambda\lambda} + \epsilon_{,\lambda} \, w_{,\lambda\epsilon} + \epsilon_{,\lambda\lambda} \, w_{,\epsilon} + \epsilon_{,\lambda} \ldots, \hat{v}) &\\
+     % + 2\epsilon_{,\lambda} \, \EE_{,uu\epsilon}(u + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v})
+    + 2\epsilon_{,\lambda\lambda} \ldots + 2\epsilon_{,\lambda} \ldots &\\
+    % + \EE_{,uu}(u + \xi_k \, v_k + w, \lambda, \epsilon; \ddot{u}^\ast + w_{,\lambda\lambda} + 2\epsilon_{,\lambda} \, w_{,\lambda\epsilon} + \epsilon_{,\lambda\lambda} \, w_{,\epsilon} + \epsilon_{,\lambda}^2 \, w_{,\epsilon\epsilon}, \hat{v})
+    + \EE_{,uuu}(u + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \ddot{u}^\ast + w_{,\lambda\lambda} + 2\epsilon_{,\lambda} \, w_{,\lambda\epsilon} + \epsilon_{,\lambda\lambda} \, w_{,\epsilon} + \epsilon_{,\lambda}^2 \, w_{,\epsilon\epsilon}, \hat{v}) &\\
+    + \EE_{,uu\lambda}(u + \xi_k \, v_k + w, \lambda, \epsilon; \ddot{u}^\ast + w_{,\lambda\lambda} + 2\epsilon_{,\lambda} \, w_{,\lambda\epsilon} + \epsilon_{,\lambda\lambda} \, w_{,\epsilon} + \epsilon_{,\lambda}^2 \, w_{,\epsilon\epsilon}, \hat{v}) &\\
+    + \epsilon_{,\lambda} \ldots &\\
+     + \EE_{,uu}(u + \xi_k \, v_k + w, \lambda, \epsilon; \ldots, \hat{v}) &\\
+     % + \EE_{,u\lambda\lambda}(u + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v})
+    + \EE_{,uu\lambda\lambda}(u + \xi_k \, v_k + w, \lambda, \epsilon; \dot{u}^\ast + w_{,\lambda} + \epsilon_{,\lambda} \, w_{,\epsilon}, \hat{v}) &\\
+    + \EE_{,u\lambda\lambda\lambda}(u + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &\\
+    + \epsilon_{,\lambda} \ldots &\\
+    % + 2\epsilon_{,\lambda} \, \EE_{,u\lambda\epsilon}(u + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v})
+    +2\epsilon_{,\lambda\lambda} \ldots + 2\epsilon_{,\lambda} \ldots &\\
+    % + \epsilon_{,\lambda\lambda} \, \EE_{,u\epsilon}(u + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v})
+    + \epsilon_{,\lambda\lambda\lambda} \, \EE_{,u\epsilon}(u + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v})
+    + \epsilon_{,\lambda\lambda} \ldots &\\
+    % + \epsilon_{,\lambda}^2 \, \EE_{,u\epsilon\epsilon}(u + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v})
+    + 2 \epsilon_{,\lambda} \, \epsilon_{,\lambda\lambda} \ldots
+    + \epsilon_{,\lambda}^2 \ldots &= 0
+  \end{aligned}
+\end{equation}
+At the critical point
+\begin{equation}
+  \begin{aligned}[b]
+    \E_{,uuuu}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \dot{u}_0, \hat{v}) + \E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{v}) + 2\E_{,uuu}(u_0, \lambda_0; \ddot{u}_0, \dot{u}_0, \hat{v}) &\\
+    %
+    + 2\E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{v}) + 2\E_{,uu\lambda\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{v}) + 2\E_{,uu\lambda}(u_0, \lambda_0; \ddot{u}_0, \hat{v}) &\\
+    %
+    + \epsilon_{,\lambda\lambda\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v})
+    %
+    + \E_{,uuu}(u_0, \lambda_0; \dot{u}_0, \ddot{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; \ddot{u}_0, \hat{v}) &\\
+     %
+    + \E_{,uu\lambda\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{v}) + \E_{,u\lambda\lambda\lambda}(u_0, \lambda_0; \hat{v}) &= 0
+  \end{aligned}
+\end{equation}
+\begin{equation}
+  \begin{aligned}[b]
+    \E_{,uuuu}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \dot{u}_0, \hat{v})
+    + 3\E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{v})
+    + 3\E_{,uu\lambda\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{v}) &\\
+    + \E_{,u\lambda\lambda\lambda}(u_0, \lambda_0; \hat{v})
+    + 3\E_{,uuu}(u_0, \lambda_0; \ddot{u}_0, \dot{u}_0, \hat{v})
+    + 3\E_{,uu\lambda}(u_0, \lambda_0; \ddot{u}_0, \hat{v}) &\\
+    + \epsilon_{,\lambda\lambda\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) &= 0
+  \end{aligned}
+\end{equation}
+which reduces to
+\begin{equation}
+  \dddot{\E}_1(\lambda; \hat{v}) + \epsilon_{,\lambda\lambda\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) = 0,
+\end{equation}
+and \(\epsilon_{,\lambda\lambda\lambda}(0, \ldots, 0, \lambda_0) = 0\) since the first term vanishes.
 
 \begin{equation*}
   \dot{\E}_1(\lambda; \bullet) = \E_{,uu}(u^\ast, \lambda; \dot{u}^\ast, \bullet) + \E_{,u\lambda}(u^\ast, \lambda; \bullet)
 \end{equation*}
 \begin{equation*}
   \ddot{\E}_1(\lambda; \bullet) = \E_{,uuu}(u^\ast, \lambda; \dot{u}^\ast, \dot{u}^\ast, \bullet) + 2\E_{,uu\lambda}(u^\ast, \lambda; \dot{u}^\ast, \bullet) + \E_{,uu}(u^\ast, \lambda; \ddot{u}^\ast, \bullet) + \E_{,u\lambda\lambda}(u^\ast, \lambda; \bullet)
+\end{equation*}
+\begin{equation*}
+  \begin{aligned}[b]
+    \dddot{\E}_1(\lambda; \bullet) ={} & \E_{,uuuu}(u^\ast, \lambda; \dot{u}^\ast, \dot{u}^\ast, \dot{u}^\ast, \bullet) + 3\E_{,uuu\lambda}(u^\ast, \lambda; \dot{u}^\ast, \dot{u}^\ast, \bullet) + 3\E_{,uu\lambda\lambda}(u^\ast, \lambda; \dot{u}, \bullet) + \E_{,u\lambda\lambda\lambda}(u^\ast, \lambda; \bullet)\\
+                           &+ 3\E_{,uuu}(u^\ast, \lambda; \dot{u}^\ast, \ddot{u}^\ast, \bullet) + 3\E_{,uu\lambda}(u^\ast, \lambda; \ddot{u}^\ast, \bullet) + \E_{,uu}(u^\ast, \lambda; \dddot{u}^\ast, \bullet)
+  \end{aligned}
 \end{equation*}
 
 \appendix

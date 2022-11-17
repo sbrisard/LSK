@@ -167,6 +167,7 @@ $\langle w_{i}, v \rangle = \langle w_{ij}, v \rangle = 0$ for all $v \in V$. Si
 is symmetric, it can be verified that $w_{ij}=w_{ji}$. We also introduce the following tensors, defined in $V$
 \begin{gather}
   E_{ijk} = \E_3(\lambda_0; v_i, v_j, v_k) + \E_2(\lambda_0; v_i, w_{jk}) + \E_2(\lambda_0; v_j, w_{ki}) + \E_2(\lambda_0; v_k, w_{ij}),\\
+  \label{eq:20221116155507}
   E_{ijkl} = \E_4(\lambda_0 ; v_i, v_j, v_k, v_l) + \E_3(\lambda_0 ; v_i, v_j, w_{kl}) + \E_3(\lambda_0 ; v_i, v_k, w_{lj}) + \E_3(\lambda_0 ; v_i, v_l, w_{jk}),\\
   F_{ij} = \dot{\E}_2(\lambda_0; v_i, v_j) + \E_2(\lambda_0; v_i, w_j) + \E_2(\lambda_0; v_j, w_i),
 \end{gather}
@@ -1156,17 +1157,10 @@ which delivers \(\epsilon_{,\lambda}(0, \ldots, 0, \lambda_0) = 0\).
     + \EE_{,uu}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; w_{,ij} + \epsilon_{,j} \, w_{,i\epsilon} + \epsilon_{,ij} \, w_{,\epsilon} + \epsilon_{,i} \, w_{,j\epsilon} + \epsilon_{,i} \, \epsilon_{,j} \, w_{,\epsilon\epsilon} , \hat{v})&\\
     + \epsilon_{,ij} \, \EE_{,u\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v})&\\
     + \epsilon_{,i} \, \EE_{,uu\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; v_j + w_{,j} + \epsilon_{,j} \, w_{,\epsilon}, \hat{v})&\\
-    + \epsilon_{,i} \, \epsilon_{,j} \, \EE_{,u\epsilon\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &= 0
+    + \epsilon_{,i} \, \epsilon_{,j} \, \EE_{,u\epsilon\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &= 0.
   \end{aligned}
 \end{equation}
-At the critical point
-\begin{equation}
-  \E_{,uuu}(u_0, \lambda_0; v_i, v_j, \hat{v}) + \epsilon_{,ij} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) = 0
-\end{equation}
-and, testing with \(v_k\)
-\begin{equation}
-  E_{ijk} + \epsilon_{,ij} \, E_k' = 0 \quad \text{for all} \quad k = 1, \ldots, m.
-\end{equation}
+At the critical point, the above equation reduces to Eq.~\eqref{eq:20221116151527}.
 
 \paragraph{Derivative of Eq.~\eqref{eq:20221102205016} with respect to \(\lambda\)}
 \begin{equation}
@@ -1184,21 +1178,13 @@ and, testing with \(v_k\)
     + \epsilon_{,i} \, \epsilon_{,\lambda} \, \EE_{,u\epsilon\epsilon}(u^\ast + \xi_k \, v_k + w, \lambda, \epsilon; \hat{v}) &= 0.
   \end{aligned}
 \end{equation}
-At the critical point
+At the critical point, the above equation reduces to Eq.~\eqref{eq:20221116151638}.
 % \begin{equation}
 %   \begin{aligned}[b]
 %     \E_{,uuu}(u_0, \lambda_0; v_i, \dot{u}_0, \hat{v})  + \E_{,uu\lambda}(u_0, \lambda_0; v_i, \hat{v}) + \E_{,uu}(u_0, \lambda_0; w_i + \epsilon_{,i\lambda} \, w_{\epsilon}, \hat{v}) &\\
 %     + \epsilon_{,i\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) &= 0\\
 %   \end{aligned}
 % \end{equation}
-\begin{equation}
-  \dot{\E}_2(\lambda_0; v_i, \hat{v}) + \epsilon_{,i\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) = 0
-\end{equation}
-and, testing with \(v_j\)
-\begin{equation}
-  F_{ij} + \epsilon_{,i\lambda} \, E_j' = 0 \quad \text{for all} \quad j = 1, \ldots, m.
-\end{equation}
-
 
 \paragraph{Derivative of Eq.~\eqref{eq:20221103054732} with respect to \(\lambda\)}
 \begin{equation}
@@ -1260,32 +1246,14 @@ which delivers \(\epsilon_{,\lambda\lambda}(0, \ldots, 0, \lambda_0) = 0\).
     + \epsilon_{,i} \, \epsilon_{,j} \, \epsilon_{,k} \, \EE_{,u\epsilon\epsilon\epsilon}(u^\ast + \xi_l \, v_l + w, \lambda, \epsilon; \hat{v}) &= 0
   \end{aligned}
 \end{equation}
-At the critical point
-\begin{equation}
-  \begin{aligned}[b]
-    \E_{,uuuu}(u_0, \lambda_0; v_i, v_j, v_k, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; w_{ik} + \epsilon_{,ik} \,  w_{,\epsilon}, v_j, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; v_i, w_{jk} + \epsilon_{,jk} \,  w_{,\epsilon}, \hat{v})&\\
-    + \epsilon_{,jk} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_i, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; w_{ij} + \epsilon_{,ij} \, w_{,\epsilon},  v_k, \hat{v})&\\
-    + \E_{,uu}(u_0, \lambda_0; w_{,ijk} + \epsilon_{,jk} \, w_{i\epsilon} + \epsilon_{,ijk} \, w_{\epsilon}  + \epsilon_{,ij} \, w_{k\epsilon} + \epsilon_{,ik} \, w_{j\epsilon}, \hat{v}) + \epsilon_{,ijk} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v})&\\
-    + \epsilon_{,ij} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_k, \hat{v}) + \epsilon_{,ik} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_j, \hat{v}) &= 0
-  \end{aligned}
-\end{equation}
-\begin{equation}
-  \begin{aligned}[b]
-    \E_{,uuuu}(u_0, \lambda_0; v_i, v_j, v_k, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; w_{ij} + \epsilon_{,ij} \, w_{,\epsilon},  v_k, \hat{v})&\\
-    + \E_{,uuu}(u_0, \lambda_0; w_{ik} + \epsilon_{,ik} \,  w_{,\epsilon}, v_j, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; v_i, w_{jk} + \epsilon_{,jk} \,  w_{,\epsilon}, \hat{v})&\\
-    + \underbrace{\E_{,uu}(u_0, \lambda_0; w_{,ijk} + \epsilon_{,jk} \, w_{i\epsilon} + \epsilon_{,ijk} \, w_{\epsilon}  + \epsilon_{,ij} \, w_{k\epsilon} + \epsilon_{,ik} \, w_{j\epsilon}, \hat{v})}_{=0} &\\
-    + \epsilon_{,ijk} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) + \epsilon_{,ij} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_k, \hat{v}) &\\
-    + \epsilon_{,ik} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_j, \hat{v}) + \epsilon_{,jk} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_i, \hat{v}) &= 0
-  \end{aligned}
-\end{equation}
-\begin{equation}
-  \begin{aligned}[b]
-    \epsilon_{,ijk} \, E_l' + \epsilon_{,ij} \, E'_{kl} + \epsilon_{,ik} \, E'_{jl} + \epsilon_{,jk} \, E'_{il} + E_{ijkl} &\\
-    + \E_{,uuu}(u_0, \lambda_0; w_{ij} + \epsilon_{,ij} \, w_{,\epsilon},  v_k, v_l) &\\
-    + \E_{,uuu}(u_0, \lambda_0; w_{ik} + \epsilon_{,ik} \,  w_{,\epsilon}, v_j, v_l) &\\
-    + \E_{,uuu}(u_0, \lambda_0; v_i, w_{jk} + \epsilon_{,jk} \,  w_{,\epsilon}, v_l) &= 0
-  \end{aligned}
-\end{equation}
+At the critical point, the above equation reduces to Eq.~\eqref{eq:20221116152151}.
+% \begin{equation}
+%   \begin{aligned}[b]
+%     \E_{,uuuu}(u_0, \lambda_0; v_i, v_j, v_k, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; w_{ik} + \epsilon_{,ik} \,  w_{,\epsilon}, v_j, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; v_i, w_{jk} + \epsilon_{,jk} \,  w_{,\epsilon}, \hat{v})&\\
+%     + \epsilon_{,jk} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_i, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; w_{ij} + \epsilon_{,ij} \, w_{,\epsilon},  v_k, \hat{v}) + \E_{,uu}(u_0, \lambda_0; \ldots, \hat{v}) &\\
+%     + \epsilon_{,ijk} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) + \epsilon_{,ij} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_k, \hat{v}) + \epsilon_{,ik} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_j, \hat{v}) &= 0
+%   \end{aligned}
+% \end{equation}
 
 \paragraph{Derivative of Eq.~\eqref{eq:20221109062643} with respect to \(\lambda\)}
 
@@ -1311,25 +1279,16 @@ At the critical point
     + \epsilon_{,i\lambda} \, \epsilon_{,j} \ldots + \epsilon_{,i} \, \epsilon_{,j\lambda} \ldots + \epsilon_{,i} \, \epsilon_{,j} \ldots &= 0
   \end{aligned}
 \end{equation}
-At the critical point
-\begin{equation}
-  \begin{aligned}[b]
-    \E_{,uuuu}(u_0, \lambda_0; \dot{u}_0, v_i, v_j, \hat{v}) + \E_{,uuu\lambda}(u_0, \lambda_0; v_i, v_j, \hat{v}) &\\
-    + \E_{,uuu}(u_0, \lambda_0; w_i + \epsilon_{,i\lambda} \,  w_\epsilon, v_j, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; v_i, w_j + \epsilon_{,j\lambda} \,  w_\epsilon, \hat{v}) &\\
-    + \E_{,uuu}(u_0, \lambda_0; \dot{u}_0, w_{ij} + \epsilon_{,ij} \, w_\epsilon , \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; w_{ij} + \epsilon_{,ij} \, w_\epsilon, \hat{v}) &\\
-    + \epsilon_{,ij\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) + \epsilon_{,ij} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; \dot{u}_0, \hat{v}) + \epsilon_{,ij} \, \EE_{,u\lambda\epsilon}(u_0, \lambda_0, 0; \hat{v}) &\\
-    + \epsilon_{,i\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_j, \hat{v}) + \epsilon_{,j\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_i, \hat{v}) &= 0
-  \end{aligned}
-\end{equation}
-
-\begin{equation}
-  \begin{aligned}[b]
-    \dot{\E}_3(\lambda_0; v_i, v_j, \hat{v}) + \dot{\E}_2(\lambda_0; w_{ij} + \epsilon_{,ij} \, w_\epsilon, \hat{v}) &\\
-    + \E_{,uuu}(u_0, \lambda_0; w_i + \epsilon_{,i\lambda} \,  w_\epsilon, v_j, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; v_i, w_j + \epsilon_{,j\lambda} \,  w_\epsilon, \hat{v}) &\\
-    + \epsilon_{,ij\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) + \epsilon_{,ij} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; \dot{u}_0, \hat{v}) + \epsilon_{,ij} \, \EE_{,u\lambda\epsilon}(u_0, \lambda_0, 0; \hat{v}) &\\
-    + \epsilon_{,i\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_j, \hat{v}) + \epsilon_{,j\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_i, \hat{v}) &= 0
-  \end{aligned}
-\end{equation}
+At the critical point, the above equation reduces to Eq.~\eqref{eq:20221116152457}.
+% \begin{equation}
+%   \begin{aligned}[b]
+%     \E_{,uuuu}(u_0, \lambda_0; \dot{u}_0, v_i, v_j, \hat{v}) + \E_{,uuu\lambda}(u_0, \lambda_0; v_i, v_j, \hat{v}) &\\
+%     + \E_{,uuu}(u_0, \lambda_0; w_i + \epsilon_{,i\lambda} \,  w_\epsilon, v_j, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; v_i, w_j + \epsilon_{,j\lambda} \,  w_\epsilon, \hat{v}) &\\
+%     + \E_{,uuu}(u_0, \lambda_0; \dot{u}_0, w_{ij} + \epsilon_{,ij} \, w_\epsilon , \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; w_{ij} + \epsilon_{,ij} \, w_\epsilon, \hat{v}) &\\
+%     + \epsilon_{,ij\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) + \epsilon_{,ij} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; \dot{u}_0, \hat{v}) + \epsilon_{,ij} \, \EE_{,u\lambda\epsilon}(u_0, \lambda_0, 0; \hat{v}) &\\
+%     + \epsilon_{,i\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_j, \hat{v}) + \epsilon_{,j\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_i, \hat{v}) &= 0
+%   \end{aligned}
+% \end{equation}
 
 \paragraph{Derivative of Eq.~\eqref{eq:20221116061057} with respect to \(\lambda\)}
 \begin{equation}
@@ -1369,27 +1328,7 @@ At the critical point
     + \epsilon_{,i} \ldots
   \end{aligned}
 \end{equation}
-At the critical point
-\begin{equation}
-  \begin{aligned}[b]
-    \E_{,uuuu}(u_0, \lambda_0; v_i, \dot{u}_0, \dot{u}_0, \hat{v}) + \E_{,uuu\lambda}(u_0, \lambda_0; v_i, \dot{u}_0, \hat{v}) &\\
-    + \E_{,uuu}(u_0, \lambda_0; w_i + \epsilon_{,i\lambda} \, w_{\epsilon}, \dot{u}_0, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; v_i, \ddot{u}_0 + \epsilon_{,\lambda\lambda} \, w_{\epsilon}, \hat{v}) &\\
-    %
-    + \E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, v_i, \hat{v})
-    + \E_{,uu\lambda\lambda}(u_0, \lambda_0; v_i, \hat{v}) &\\
-    + \E_{,uu\lambda}(u_0, \lambda_0; v_i + w_{i} + \epsilon_{,i\lambda} \, w_{\epsilon}, \hat{v})
-    %
-    + \epsilon_{,\lambda\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_i, \hat{v}) &\\
-    %
-    + \epsilon_{,i\lambda\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v})
-    + \epsilon_{,i\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; \dot{u}_0, \hat{v})
-    + \epsilon_{,i\lambda} \, \EE_{,u\lambda\epsilon}(u_0, \lambda_0, 0; \hat{v}) &\\
-    %
-    + \epsilon_{,i\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; \dot{u}_0, \hat{v})
-    %
-    + \epsilon_{,i\lambda} \, \EE_{,u\lambda\epsilon}(u_0, \lambda_0, 0; \hat{v}) &= 0
-  \end{aligned}
-\end{equation}
+At the critical point, the above equation reduces to Eq.~\eqref{eq:20221116152647}.
 
 \paragraph{Derivative of Eq.~\eqref{eq:20221116070255} with respect to \(\lambda\)}
 \begin{equation}
@@ -1426,19 +1365,19 @@ At the critical point
   \end{aligned}
 \end{equation}
 At the critical point
-\begin{equation}
-  \begin{aligned}[b]
-    \E_{,uuuu}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \dot{u}_0, \hat{v}) + \E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{v}) + 2\E_{,uuu}(u_0, \lambda_0; \ddot{u}_0, \dot{u}_0, \hat{v}) &\\
-    %
-    + 2\E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{v}) + 2\E_{,uu\lambda\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{v}) + 2\E_{,uu\lambda}(u_0, \lambda_0; \ddot{u}_0, \hat{v}) &\\
-    %
-    + \epsilon_{,\lambda\lambda\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v})
-    %
-    + \E_{,uuu}(u_0, \lambda_0; \dot{u}_0, \ddot{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; \ddot{u}_0, \hat{v}) &\\
-     %
-    + \E_{,uu\lambda\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{v}) + \E_{,u\lambda\lambda\lambda}(u_0, \lambda_0; \hat{v}) &= 0
-  \end{aligned}
-\end{equation}
+% \begin{equation}
+%   \begin{aligned}[b]
+%     \E_{,uuuu}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \dot{u}_0, \hat{v}) + \E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{v}) + 2\E_{,uuu}(u_0, \lambda_0; \ddot{u}_0, \dot{u}_0, \hat{v}) &\\
+%     %
+%     + 2\E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{v}) + 2\E_{,uu\lambda\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{v}) + 2\E_{,uu\lambda}(u_0, \lambda_0; \ddot{u}_0, \hat{v}) &\\
+%     %
+%     + \epsilon_{,\lambda\lambda\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v})
+%     %
+%     + \E_{,uuu}(u_0, \lambda_0; \dot{u}_0, \ddot{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; \ddot{u}_0, \hat{v}) &\\
+%      %
+%     + \E_{,uu\lambda\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{v}) + \E_{,u\lambda\lambda\lambda}(u_0, \lambda_0; \hat{v}) &= 0
+%   \end{aligned}
+% \end{equation}
 \begin{equation}
   \begin{aligned}[b]
     \E_{,uuuu}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \dot{u}_0, \hat{v})
@@ -1450,11 +1389,136 @@ At the critical point
     + \epsilon_{,\lambda\lambda\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) &= 0
   \end{aligned}
 \end{equation}
-which reduces to
+which reduces
 \begin{equation}
   \dddot{\E}_1(\lambda; \hat{v}) + \epsilon_{,\lambda\lambda\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) = 0,
 \end{equation}
 and \(\epsilon_{,\lambda\lambda\lambda}(0, \ldots, 0, \lambda_0) = 0\) since the first term vanishes.
+
+\paragraph{Summary}
+
+It has been found that
+\begin{equation}
+  \epsilon_{,i}(0, \ldots 0, \lambda_0) = 0, \quad  \epsilon_{,\lambda}(0, \ldots 0, \lambda_0) = 0, \quad \epsilon_{,\lambda\lambda}(0, \ldots 0, \lambda_0) = 0, \quad \epsilon_{,\lambda\lambda\lambda}(0, \ldots 0, \lambda_0) = 0,
+\end{equation}
+and, for all \(\hat{v} \in V\)
+\begin{equation}
+  \label{eq:20221116151527}
+  \E_{,uuu}(u_0, \lambda_0; v_i, v_j, \hat{v}) + \epsilon_{,ij} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) = 0,\\
+\end{equation}
+\begin{equation}
+  \label{eq:20221116151638}
+  \dot{\E}_2(\lambda_0; v_i, \hat{v}) + \epsilon_{,i\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) = 0,\\
+\end{equation}
+\begin{equation}
+  \label{eq:20221116152151}
+  \begin{aligned}[b]
+    \E_{,uuuu}(u_0, \lambda_0; v_i, v_j, v_k, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; w_{ij} + \epsilon_{,ij} \, w_{,\epsilon},  v_k, \hat{v})&\\
+    + \E_{,uuu}(u_0, \lambda_0; w_{ik} + \epsilon_{,ik} \,  w_{,\epsilon}, v_j, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; v_i, w_{jk} + \epsilon_{,jk} \,  w_{,\epsilon}, \hat{v})&\\
+    + \epsilon_{,ijk} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) + \epsilon_{,ij} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_k, \hat{v}) &\\
+    + \epsilon_{,ik} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_j, \hat{v}) + \epsilon_{,jk} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_i, \hat{v}) &= 0,
+  \end{aligned}
+\end{equation}
+\begin{equation}
+  \label{eq:20221116152457}
+  \begin{aligned}[b]
+    \dot{\E}_3(\lambda_0; v_i, v_j, \hat{v}) + \dot{\E}_2(\lambda_0; w_{ij} + \epsilon_{,ij} \, w_\epsilon, \hat{v}) &\\
+    + \E_{,uuu}(u_0, \lambda_0; w_i + \epsilon_{,i\lambda} \,  w_\epsilon, v_j, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; v_i, w_j + \epsilon_{,j\lambda} \,  w_\epsilon, \hat{v}) &\\
+    + \epsilon_{,ij\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) + \epsilon_{,ij} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; \dot{u}_0, \hat{v}) + \epsilon_{,ij} \, \EE_{,u\lambda\epsilon}(u_0, \lambda_0, 0; \hat{v}) &\\
+    + \epsilon_{,i\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_j, \hat{v}) + \epsilon_{,j\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_i, \hat{v}) &= 0,
+  \end{aligned}
+\end{equation}
+% \begin{equation}
+%   \begin{aligned}[b]
+%     \E_{,uuuu}(u_0, \lambda_0; v_i, \dot{u}_0, \dot{u}_0, \hat{v}) + \E_{,uuu\lambda}(u_0, \lambda_0; v_i, \dot{u}_0, \hat{v}) &\\
+%     + \E_{,uuu}(u_0, \lambda_0; w_i + \epsilon_{,i\lambda} \, w_{\epsilon}, \dot{u}_0, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; v_i, \ddot{u}_0 + \epsilon_{,\lambda\lambda} \, w_{\epsilon}, \hat{v}) &\\
+%     %
+%     + \E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, v_i, \hat{v})
+%     + \E_{,uu\lambda\lambda}(u_0, \lambda_0; v_i, \hat{v}) &\\
+%     + \E_{,uu\lambda}(u_0, \lambda_0; v_i + w_{i} + \epsilon_{,i\lambda} \, w_{\epsilon}, \hat{v})
+%     %
+%     + \epsilon_{,\lambda\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_i, \hat{v}) &\\
+%     %
+%     + \epsilon_{,i\lambda\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v})
+%     + 2\epsilon_{,i\lambda} \, \EE_{,uu\epsilon}(u_0, \lambda_0, 0; \dot{u}_0, \hat{v})
+%     + 2\epsilon_{,i\lambda} \, \EE_{,u\lambda\epsilon}(u_0, \lambda_0, 0; \hat{v}) &= 0.
+%   \end{aligned}
+% \end{equation}
+\begin{equation}
+  \label{eq:20221116152647}
+  \begin{aligned}[b]
+    \E_{,uuuu}(u_0, \lambda_0; v_i, \dot{u}_0, \dot{u}_0, \hat{v}) + 2\E_{,uuu\lambda}(u_0, \lambda_0; v_i, \dot{u}_0, \hat{v}) &\\
+    + \E_{,uu\lambda\lambda}(u_0, \lambda_0; v_i, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; w_i + \epsilon_{,i\lambda} \, w_{\epsilon}, \dot{u}_0, \hat{v}) &\\
+    + \E_{,uuu}(u_0, \lambda_0; v_i, \ddot{u}_0, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; v_i + w_{i} + \epsilon_{,i\lambda} \, w_{\epsilon}, \hat{v}) &\\
+    + \epsilon_{,i\lambda\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) + 2\epsilon_{,i\lambda} \bigl[ \EE_{,uu\epsilon}(u_0, \lambda_0, 0; \dot{u}_0, \hat{v}) + \EE_{,u\lambda\epsilon}(u_0, \lambda_0, 0; \hat{v}) \bigr] &= 0.
+  \end{aligned}
+\end{equation}
+
+\begin{equation*}
+  \ddot{\E}_1(\lambda; \bullet) = \E_{,uuu}(u^\ast, \lambda; \dot{u}^\ast, \dot{u}^\ast, \bullet) + 2\E_{,uu\lambda}(u^\ast, \lambda; \dot{u}^\ast, \bullet) + \E_{,uu}(u^\ast, \lambda; \ddot{u}^\ast, \bullet) + \E_{,u\lambda\lambda}(u^\ast, \lambda; \bullet)
+\end{equation*}
+
+
+Introducing
+\begin{equation}
+  E'_i = \EE_{u\epsilon}(u_0, \lambda_0, 0; v_i)
+\end{equation}
+and testing Eq.~\eqref{eq:20221116151527} with \(v_k\) and Eq.~\eqref{eq:20221116151638} with \(v_j\), leads to the
+following equations
+\begin{equation}
+  \label{eq:20221116153503}
+  E_k' \, \epsilon_{,ij} + E_{ijk} = 0 \quad \text{and} \quad   E_j' \, \epsilon_{,i\lambda} + F_{ij} = 0.
+\end{equation}
+
+Testing Eq.~\eqref{eq:20221116152151} with \(v_l\) leads to
+\begin{equation}
+  \begin{aligned}[b]
+     E_l' \, \epsilon_{,ijk} + E_{ijkl} + \bigl[ \E_3(\lambda_0; w_\epsilon, v_k, v_l) + E_{kl}' \bigr] \epsilon_{,ij} &\\
+    + \bigl[ \E_3(\lambda_0;  w_\epsilon, v_j, v_l) + E_{jl}' \bigr] \epsilon_{,ik} + \bigl[ \E_3(\lambda_0; w_\epsilon, v_i, v_l) + E_{il}' \bigr] \epsilon_{,jk} &= 0\\
+  \end{aligned}
+\end{equation}
+
+Testing Eq.~\eqref{eq:20221116152457} with \(v_k\) leads to
+\begin{equation}
+  \begin{aligned}[b]
+    \epsilon_{,ij\lambda} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; v_k) + \dot{\E}_3(\lambda_0; v_i, v_j, v_k) + \dot{\E}_2(\lambda_0; w_{ij}, v_k) &\\
+    + \E_3(\lambda_0; w_i, v_j, v_k) + \E_3(\lambda_0; v_i, w_j, v_k) &\\
+    + \epsilon_{,ij} \bigl[ \dot{\E}_2(\lambda_0; w_\epsilon, v_k) + \EE_{,uu\epsilon}(u_0, \lambda_0, 0; \dot{u}_0, v_k) + \EE_{,u\lambda\epsilon}(u_0, \lambda_0, 0; v_k)\bigr] &\\
+    + \epsilon_{,i\lambda} \bigl[ \E_3(\lambda_0; w_\epsilon, v_j, v_k) + \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_j, v_k) \bigr] &\\
+    + \epsilon_{,j\lambda} \bigl[ \E_3(\lambda_0; w_\epsilon, v_i, v_k) + \EE_{,uu\epsilon}(u_0, \lambda_0, 0; v_i, v_k) \bigr] &= 0,
+  \end{aligned}
+\end{equation}
+
+
+If \(m \neq 1\), Eq.~\eqref{eq:20221116153503}\textsubscript{2} can in general not be satisfied. We therefore consider
+below the case of a single mode, \(m=1\). The following expressions are found
+\begin{equation}
+  \label{eq:20221116153503}
+   \epsilon_{,11}(0, \lambda_0) = -\frac{E_{111}}{E_1'} \quad \text{and} \quad \epsilon_{,1\lambda}(0, \lambda_0) = -\frac{F_{11}}{E_1'}.
+\end{equation}
+
+For an asymmetric bifurcation, \(E_{111} \neq 0\) and the following expansion of \(\epsilon\) as a function of \(\xi_1\) and \(\lambda\) is obtained
+\begin{equation}
+  \epsilon(\xi_1, \lambda) = -\frac{E_{111}}{2E_1'}\xi_1^2-\frac{F_{11}}{E_1'}\xi_1\bigl( \lambda - \lambda_0 \bigr) + o\bigl[ \xi_1^2 + \bigl( \lambda - \lambda_0 \bigr)^2 \bigr].
+\end{equation}
+
+For a symmetric bifurcation, \(E_{111} = 0\) and \(\epsilon_{,11}(0, \lambda_0) = 0\). Equation~\eqref{eq:20221116152151} then reads
+\begin{equation}
+  \begin{aligned}[b]
+    \E_{,uuuu}(u_0, \lambda_0; v_i, v_j, v_k, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; w_{ij}, v_k, \hat{v}) + \E_{,uuu}(u_0, \lambda_0; w_{ik}, v_j, \hat{v}) &\\
+    + \E_{,uuu}(u_0, \lambda_0; v_i, w_{jk}, \hat{v}) + \epsilon_{,ijk} \, \EE_{,u\epsilon}(u_0, \lambda_0, 0; \hat{v}) &= 0
+  \end{aligned}
+\end{equation}
+which, upon testing with \(v_l\), reduces to [see Eq.~\eqref{eq:20221116155507}]
+\begin{equation}
+  E_{ijkl} + \epsilon_{,ijk} \, F_l' = 0
+\end{equation}
+and
+\begin{equation}
+  \epsilon_{,111} = - \frac{E_{1111}}{F_1'}.
+\end{equation}
+
+
 
 \begin{equation*}
   \dot{\E}_1(\lambda; \bullet) = \E_{,uu}(u^\ast, \lambda; \dot{u}^\ast, \bullet) + \E_{,u\lambda}(u^\ast, \lambda; \bullet)

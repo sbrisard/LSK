@@ -1,0 +1,41 @@
+kill(all);
+
+/*dotexptsimp : false;*/
+dotscrules : true;
+declare(".", commutative);
+
+ORDER : 4;
+mytaylor(expr) := taylor(expr, t, 0, ORDER);
+
+declare([p, t], scalar);
+declare([E_p, E_uu, E_up, E_pp, E_uuu, E_uup, E_upp, E_ppp, E_uuuu, E_uuup, E_uupp, E_uppp, E_pppp, p0, u0, u1, u2, u3, u4, w_x, w_p, w_xx, w_xp, w_pp], constant);
+
+u_star : u0 + u1 * p + u2 * p^2 / 2 + u3 * p^3 / 6 + u4 * p^4 / 24;
+U : u - u0;
+
+E : (E_p * p
+  + (E_uu * U^2 + 2 * E_up * U * p + E_pp * p^2) / 2
+  + (E_uuu * U^3 + 3 * E_uup * U^2 * p + 3 * E_upp * U * p^2 + E_ppp * p^3) / 6
+  + (E_uuuu * U^4 + 4 * E_uuup * U^3 * p + 6 * E_uupp * U^2 * p^2 + 4 * E_uppp * U * p^3 + E_pppp * p^4) / 24);
+
+w : x * w_x + p * w_p + (x^2 * w_xx + 2 * x * p * w_xp + p^2 * w_pp) / 2;
+
+eq1 : expand(subst([del(u) = du, del(p) = 0, u = u_star], diff(E))) = 0;
+eq2 : first(solve(coeff(eq1, p, 1), E_up));
+eq3 : first(solve(coeff(eq1, p, 2), E_upp));
+eq4 : first(solve(coeff(eq1, p, 3), E_uppp));
+
+eq5 : expand(subst([del(u) = du, del(p) = 0, u = u_star + x * v + w, du = 1], diff(E)));
+
+identities : [eq1, eq2, eq3, eq4, x = 0, p = 0, E_uu * v = 0];
+eq6 : subst(identities, diff(eq5, x)) = 0;
+eq7 : first(solve(eq6, w_x));
+identities : endcons(eq7, identities);
+eq8 : subst(identities, diff(eq5, p)) = 0;
+eq9 : first(solve(eq8, w_p));
+identities : endcons(eq9, identities);
+eq10 : subst(identities, diff(eq5, x, 2)) = 0;
+eq11 : subst(identities, diff(eq5, x, 1, p, 1)) = 0;
+eq12 : subst(identities, diff(eq5, p, 2)) = 0;
+eq13 : first(solve(eq12, w_pp));
+identities : endcons(eq13, identities);

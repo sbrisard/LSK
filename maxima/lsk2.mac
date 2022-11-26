@@ -1,41 +1,112 @@
 kill(all);
 
-/*dotexptsimp : false;*/
+/*dotexptsimp : false;
 dotscrules : true;
-declare(".", commutative);
+declare(".", commutative);*/
 
-ORDER : 4;
-mytaylor(expr) := taylor(expr, t, 0, ORDER);
+E_(u, p, order) := block(
+  [_p1, _p2, _p3, _p4, _u1, _u2, _u3, _u4, _E1, _E2, _E3, _E4],
+  _p1 : taylor(p, t, 0, order),
+  _p2 : taylor(_p1^2, t, 0, order),
+  _p3 : taylor(_p1 * _p2, t, 0, order),
+  _p4 : taylor(_p2 * _p2, t, 0, order),
+  _u1 : taylor(u, t, 0, order),
+  _u2 : taylor(_u1^2, t, 0, order),
+  _u3 : taylor(_u1 * _u2, t, 0, order),
+  _u4 : taylor(_u2 * _u2, t, 0, order),
+  _E1 : taylor(_p1 * E_p, t, 0, order),
+  _E2 : taylor(E_uu * _u2 + 2 * _p1 * E_up * _u1 + _p2 * E_pp, t, 0, order),
+  _E3 : taylor(E_uuu * _u3 + 3 * _p1 * E_uup * _u2 + 3 * _p2 * E_upp * _u1 + _p3 * E_ppp, t, 0, order),
+  _E4 : taylor(E_uuuu * _u4 + 4 * _p1 * E_uuup * _u3 + 6 * _p2 * E_uupp * _u2 + 4 * _p3 * E_uppp * _u1 + _p4 * E_pppp, t, 0, order),
+  expand(_E1 + _E2 / 2 + _E3 / 6 + _E4 / 24));
 
-declare([p, t], scalar);
-declare([E_p, E_uu, E_up, E_pp, E_uuu, E_uup, E_upp, E_ppp, E_uuuu, E_uuup, E_uupp, E_uppp, E_pppp, p0, u0, u1, u2, u3, u4, w_x, w_p, w_xx, w_xp, w_pp], constant);
 
-u_star : u0 + u1 * p + u2 * p^2 / 2 + u3 * p^3 / 6 + u4 * p^4 / 24;
-U : u - u0;
+/*E : (p * E_p + (E_uu * u^2 + 2 * p * E_up * u + p^2 * E_pp) / 2 + (E_uuu * u^3 + 3 * p * E_uup * u^2 + 3 * p^2 * E_upp * u + p^3 * E_ppp) / 6 + (E_uuuu * u^4 + 4 * p * E_uuup * u^3 + 6 * p^2 * E_uupp * u^2 + 4 * p^3 * E_uppp * u + p^4 * E_pppp) / 24);*/
 
-E : (E_p * p
-  + (E_uu * U^2 + 2 * E_up * U * p + E_pp * p^2) / 2
-  + (E_uuu * U^3 + 3 * E_uup * U^2 * p + 3 * E_upp * U * p^2 + E_ppp * p^3) / 6
-  + (E_uuuu * U^4 + 4 * E_uuup * U^3 * p + 6 * E_uupp * U^2 * p^2 + 4 * E_uppp * U * p^3 + E_pppp * p^4) / 24);
+E : E_(u, p, 0);
 
-w : x * w_x + p * w_p + (x^2 * w_xx + 2 * x * p * w_xp + p^2 * w_pp) / 2;
+u_star : u1 * p + u2 * p^2 / 2 + u3 * p^3 / 6 + u4 * p^4 / 24;
 
-eq1 : expand(subst([del(u) = du, del(p) = 0, u = u_star], diff(E))) = 0;
-eq2 : first(solve(coeff(eq1, p, 1), E_up));
-eq3 : first(solve(coeff(eq1, p, 2), E_upp));
-eq4 : first(solve(coeff(eq1, p, 3), E_uppp));
+res : expand(diff(E, u) * du);
+identities : [];
 
-eq5 : expand(subst([del(u) = du, del(p) = 0, u = u_star + x * v + w, du = 1], diff(E)));
+res1 : expand(subst(u_star, u, res));
 
-identities : [eq1, eq2, eq3, eq4, x = 0, p = 0, E_uu * v = 0];
-eq6 : subst(identities, diff(eq5, x)) = 0;
-eq7 : first(solve(eq6, w_x));
-identities : endcons(eq7, identities);
-eq8 : subst(identities, diff(eq5, p)) = 0;
-eq9 : first(solve(eq8, w_p));
-identities : endcons(eq9, identities);
-eq10 : subst(identities, diff(eq5, x, 2)) = 0;
-eq11 : subst(identities, diff(eq5, x, 1, p, 1)) = 0;
-eq12 : subst(identities, diff(eq5, p, 2)) = 0;
-eq13 : first(solve(eq12, w_pp));
-identities : endcons(eq13, identities);
+eq1 : first(solve(coeff(res1, p, 1), E_up));
+identities : endcons(expand(eq1), identities);
+
+eq2 : first(solve(coeff(res1, p, 2), E_upp));
+identities : endcons(expand(eq2), identities);
+
+eq3 : first(solve(coeff(res1, p, 3), E_uppp));
+identities : endcons(expand(eq3), identities);
+
+identities : endcons(E_uup = E_dot_uu - E_uuu * u1, identities);
+
+w : expand(w_x * x + p * w_p + (x^2 * w_xx + 2 * p * x * w_xp + p^2 * w_pp) / 2);
+
+res2 : expand(subst(append([du = dw, u = u_star + x * v + w], identities), res));
+
+res2_x : subst([x = 0, p = 0], diff(res2, x));
+identities : endcons(w_x = 0, identities);
+
+res2_p : subst([x = 0, p = 0], diff(res2, p)) = 0;
+identities : endcons(w_p = 0, identities);
+
+res2_xx : subst(append([x = 0, p = 0], identities), diff(res2, x, 2)) = 0;
+print(res2_xx);
+
+res2_xp: subst(append([x = 0, p = 0], identities), diff(res2, x, 1, p, 1)) = 0;
+print(res2_xp);
+
+res2_pp : expand(subst(append([x = 0, p = 0], identities), diff(res2, p, 2))) = 0;
+identities : endcons(w_pp = 0, identities);
+
+w : expand((x^2 * w_xx + 2 * x * p * w_xp) / 2);
+
+res3 : expand(subst(append(identities, [du = dv, u = u_star + x * v + w, p = p_x * x + 1/2 * p_xx * x^2]), res));
+
+res3_x : coeff(res3, x);
+
+res3_xx : coeff(res3, x, 2);
+
+res3_xxx : coeff(res3, x, 3);
+
+res3_xxxx : coeff(res3, x, 3);
+
+print(res3_x);
+print(res3_xx);
+print(res3_xxx);
+print(res3_xxxx);
+
+w_(x, y, p) := (x^2 * w_xx + 2 * x * y * w_xy + y^2 * w_yy + 2 * p * (x * w_xp + y * w_yp))/2;
+p_(x, y) := x * p_x + y * p_y + (x^2 * p_xx + 2 * x * y * p_xy + y^2 * p_yy) / 2;
+
+/* We want to express w as a function of x and y only. Besides, we keep only second order terms in x and y. Therefore, we introduce t, which is a scale, and expand to second order w.r.t. t.*/
+ORDER : 2;
+
+p_exp : expand(taylor(p_(t * x, t * y), t, 0, ORDER));
+
+w_exp : expand(taylor(w_(t * x, t * y, p_(t * x, t * y)), t, 0, ORDER));
+
+u_exp : u_star + t * (x * v_x + y * v_y) + w_exp;
+
+u_pow2_exp : expand(taylor(u_exp^2, t, 0, ORDER));
+
+u_pow3_exp : expand(taylor(u_exp * u_pow2_exp, t, 0, ORDER));
+
+u_pow4_exp : expand(taylor(u_pow2_exp * u_pow2_exp, t, 0, ORDER));
+
+p_pow2_exp : expand(taylor(p_exp^2, t, 0, ORDER));
+
+p_pow3_exp : expand(taylor(p_pow2_exp * p_exp, t, 0, ORDER));
+
+p_pow4_exp : expand(taylor(p_pow2_exp * p_pow2_exp, t, 0, ORDER));
+
+res4 : subst([du = dv, u^4 = u_pow4_exp, u^3 = u_pow3_exp, u^2 = u_pow2_exp, u = u_exp, p^4 = p_pow4_exp, p^3 = p_pow3_exp, p^2 = p_pow2_exp, p = p_exp, t = 1], res);
+
+res4_x : expand(subst(append([x = 0, y = 0], identities), diff(res4, x)));
+res4_y : expand(subst(append([x = 0, y = 0], identities), diff(res4, y)));
+res4_xx : expand(subst(append([x = 0, y = 0], identities), diff(res4, x, 2)));
+res4_xy : expand(subst(append([x = 0, y = 0], identities), diff(res4, x, 1, y, 1)));
+res4_xx : expand(subst(append([x = 0, y = 0], identities), diff(res4, y, 2)));

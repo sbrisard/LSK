@@ -1,9 +1,11 @@
 kill(all);
+load(itensor);
 
 /*dotexptsimp : false;
 dotscrules : true;
 declare(".", commutative);*/
 
+/*
 E_(u, p, order) := block(
   [_p1, _p2, _p3, _p4, _u1, _u2, _u3, _u4, _E1, _E2, _E3, _E4],
   _p1 : taylor(p, t, 0, order),
@@ -19,11 +21,10 @@ E_(u, p, order) := block(
   _E3 : taylor(E_uuu * _u3 + 3 * _p1 * E_uup * _u2 + 3 * _p2 * E_upp * _u1 + _p3 * E_ppp, t, 0, order),
   _E4 : taylor(E_uuuu * _u4 + 4 * _p1 * E_uuup * _u3 + 6 * _p2 * E_uupp * _u2 + 4 * _p3 * E_uppp * _u1 + _p4 * E_pppp, t, 0, order),
   expand(_E1 + _E2 / 2 + _E3 / 6 + _E4 / 24));
-
-
-/*E : (p * E_p + (E_uu * u^2 + 2 * p * E_up * u + p^2 * E_pp) / 2 + (E_uuu * u^3 + 3 * p * E_uup * u^2 + 3 * p^2 * E_upp * u + p^3 * E_ppp) / 6 + (E_uuuu * u^4 + 4 * p * E_uuup * u^3 + 6 * p^2 * E_uupp * u^2 + 4 * p^3 * E_uppp * u + p^4 * E_pppp) / 24);*/
-
 E : E_(u, p, 0);
+*/
+
+E : (p * E_p + (E_uu * u^2 + 2 * p * E_up * u + p^2 * E_pp) / 2 + (E_uuu * u^3 + 3 * p * E_uup * u^2 + 3 * p^2 * E_upp * u + p^3 * E_ppp) / 6 + (E_uuuu * u^4 + 4 * p * E_uuup * u^3 + 6 * p^2 * E_uupp * u^2 + 4 * p^3 * E_uppp * u + p^4 * E_pppp) / 24);
 
 u_star : u1 * p + u2 * p^2 / 2 + u3 * p^3 / 6 + u4 * p^4 / 24;
 
@@ -62,7 +63,21 @@ print(res2_xp);
 res2_pp : expand(subst(append([x = 0, p = 0], identities), diff(res2, p, 2))) = 0;
 identities : endcons(w_pp = 0, identities);
 
-w : expand((x^2 * w_xx + 2 * x * p * w_xp) / 2);
+coord(x);
+
+declare(v, constant);
+w : expand((t**2 * x([], [i]) * x([], [j]) * w_xx([i, j], []) + 2 * t * x([], [i]) * p * w_xp([i], [])) / 2);
+
+u_exp : u_star + t * x([], [i]) * v([i], []) + w;
+p_exp : t * x([], [i]) * p_x([i], []) + 1/2 * t**2 * x([], [i]) * x([], [j]) * p_xx([i, j], []);
+
+ishow(u_exp);
+ishow(p_exp);
+ORDER : 2;
+
+res3 : expand(taylor(subst(append(identities, [du = dv, u = u_exp, p = p_exp]), res), t, 0, ORDER));
+
+error();
 
 res3 : expand(subst(append(identities, [du = dv, u = u_star + x * v + w, p = p_x * x + 1/2 * p_xx * x^2]), res));
 
@@ -78,6 +93,8 @@ print(res3_x);
 print(res3_xx);
 print(res3_xxx);
 print(res3_xxxx);
+
+error();
 
 w_(x, y, p) := (x^2 * w_xx + 2 * x * y * w_xy + y^2 * w_yy + 2 * p * (x * w_xp + y * w_yp))/2;
 p_(x, y) := x * p_x + y * p_y + (x^2 * p_xx + 2 * x * y * p_xy + y^2 * p_yy) / 2;

@@ -69,7 +69,14 @@ declare(v, constant);
 w : expand((t**2 * x([], [i]) * x([], [j]) * w_xx([i, j], []) + 2 * t * x([], [i]) * p * w_xp([i], [])) / 2);
 
 u_exp : u_star + t * x([], [i]) * v([i], []) + w;
-p_exp : t * x([], [i]) * p_x([i], []) + 1/2 * t**2 * x([], [i]) * x([], [j]) * p_xx([i, j], []);
+components(p_exp([], []), t * x([], [i]) * p_x([i], []) + 1/2 * t**2 * x([], [i]) * x([], [j]) * p_xx([i, j], []));
+
+remcomps(xy);
+components(xy([], []), x([], [i]) * y([i], []));
+xy : x([], [i]) * y([i], []);
+ishow(xy([], []));
+expand(xy([], []) ^2);
+expand(xy([], []) * xy([], []));
 
 ishow(u_exp);
 ishow(p_exp);

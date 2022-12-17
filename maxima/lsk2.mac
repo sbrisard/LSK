@@ -1,5 +1,4 @@
 kill(all);
-load(itensor);
 
 /*dotexptsimp : false;
 dotscrules : true;
@@ -63,26 +62,17 @@ print(res2_xp);
 res2_pp : expand(subst(append([x = 0, p = 0], identities), diff(res2, p, 2))) = 0;
 identities : endcons(w_pp = 0, identities);
 
-coord(x);
+/* Elimination of v */
 
-declare(v, constant);
-w : expand((t**2 * x([], [i]) * x([], [j]) * w_xx([i, j], []) + 2 * t * x([], [i]) * p * w_xp([i], [])) / 2);
+w : t**2 / 2 * transpose(x) . w_xx . x + t * p * transpose(x) . w_xp;
+u_exp : u_star + t * transpose(x) . v;
+p_exp : t * transpose(x) . p_x + 1/2 * t**2 * transpose(x) . p_xx . x;
 
-u_exp : u_star + t * x([], [i]) * v([i], []) + w;
-components(p_exp([], []), t * x([], [i]) * p_x([i], []) + 1/2 * t**2 * x([], [i]) * x([], [j]) * p_xx([i, j], []));
+ORDER : 4;
 
-remcomps(xy);
-components(xy([], []), x([], [i]) * y([i], []));
-xy : x([], [i]) * y([i], []);
-ishow(xy([], []));
-expand(xy([], []) ^2);
-expand(xy([], []) * xy([], []));
-
-ishow(u_exp);
-ishow(p_exp);
-ORDER : 2;
-
-res3 : expand(taylor(subst(append(identities, [du = dv, u = u_exp, p = p_exp]), res), t, 0, ORDER));
+res3a : subst(append(identities, [du = dv, u = u_exp, p = p_exp]), res);
+res3b : taylor(res3a, t, 0, ORDER);
+res3 : expand(res3b);
 
 error();
 

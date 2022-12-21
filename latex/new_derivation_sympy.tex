@@ -1,0 +1,44 @@
+New derivation with sympy.
+
+\begin{equation}
+  \xi_n \, \xi_p \, E_{npk} + 2\lambda_n \, \xi_n \, \xi_p \, \dot{E}_{pk} = 0 \quad \text{for all} \quad \xi_1, \dots, \xi_m.
+\end{equation}
+
+Derivation with respect to \(\xi_i\)
+
+\begin{equation}
+  \xi_p \, E_{ipk} + \xi_n \, E_{nik} + 2\lambda_i \, \xi_p \, \dot{E}_{pk} + 2\lambda_n \, \xi_n \, \dot{E}_{ik} = 0
+\end{equation}
+
+Derivation with respect to \(\xi_j\)
+\begin{equation}
+  E_{ijk} + \lambda_i \, \dot{E}_{jk} + \lambda_j \, \dot{E}_{ik} = 0
+\end{equation}
+
+SEcond equation
+
+\begin{equation}
+  \begin{aligned}
+    & \xi_i \, \xi_j \, \xi_k \, \xi_l \, \lambda_l \, E_3(w_{ij}, v_k, \hat{v})
+    + \tfrac{1}{2} \, \xi_i \, \xi_j \, E_3(w_{i\lambda}, v_j, \hat{v})
+    + \tfrac{1}{6} \, \xi_i \, \xi_j \, \xi_k \, E_4(v_i, v_j, v_k, \hat{v})\\
+    &+ \tfrac{1}{2} \, \xi_i \, \xi_j \, \xi_k \, \lambda_j \, \lambda_k \, \ddot{E}_2(v_i, \hat{v})
+    + \xi_i \, \xi_j \, \xi_k \, \xi_l \, \lambda_k \, \lambda_l \, \dot{E}_2(w_{ij}, \hat{v})
+    + \tfrac{1}{2} \, \xi_i \, \xi_j \, \lambda_j \, \dot{E}_2(w_{i\lambda}, \hat{v})\\
+    &+ \tfrac{1}{2} \xi_i \, \xi_j \, \xi_k \, \lambda_{jk} \, \dot{E}_2(v_i, \hat{v})
+    + \tfrac{1}{2} \xi_i \, \xi_j \, \xi_k \, \lambda_k \, \dot{E}_3(v_i, v_j, \hat{v}) = 0
+  \end{aligned}
+\end{equation}
+
+\begin{equation}
+  \begin{aligned}
+    & \xi_i \, \xi_j \, \xi_k \, \xi_l \, \lambda_l \, E_3(w_{ij}, v_k, \hat{v})\\
+    &+ \tfrac{1}{2} \, \xi_i \, \xi_j \, E_3(w_{i\lambda}, v_j, \hat{v})
+    + \tfrac{1}{6} \, \xi_i \, \xi_j \, \xi_k \, E_4(v_i, v_j, v_k, \hat{v})\\
+    &+ \tfrac{1}{2} \, \xi_i \, \xi_j \, \xi_k \, \lambda_j \, \lambda_k \, \ddot{E}_2(v_i, \hat{v})
+    + \xi_i \, \xi_j \, \xi_k \, \xi_l \, \lambda_k \, \lambda_l \, \dot{E}_2(w_{ij}, \hat{v})
+    + \tfrac{1}{2} \, \xi_i \, \xi_j \, \lambda_j \, \dot{E}_2(w_{i\lambda}, \hat{v})\\
+    &+ \tfrac{1}{2} \xi_i \, \xi_j \, \xi_k \, \lambda_{jk} \, \dot{E}_2(v_i, \hat{v})
+    + \tfrac{1}{2} \xi_i \, \xi_j \, \xi_k \, \lambda_k \, \dot{E}_3(v_i, v_j, \hat{v}) = 0
+  \end{aligned}
+\end{equation}

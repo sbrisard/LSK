@@ -11,3 +11,4 @@
 *.upb
 
 auto
+.ipynb_checkpoints

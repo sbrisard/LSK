@@ -1,0 +1,17 @@
+# Bifurcations of the perfect system
+
+## First bifurcation equation
+
+The sympy analysis delivers Eq. (@eq-20221221154153), which is reproduced below
+
+$$\xi_n \, \xi_p \, E_{npk} + 2\lambda_n \, \xi_n \, \xi_p \, \dot{E}_{pk} = 0,$$
+
+for all $\xi_1, \dots, \xi_m$. The above equation is first derived with respect to $\xi_i$
+
+$$\xi_p \, E_{ipk} + \xi_n \, E_{nik} + 2\lambda_i \, \xi_p \, \dot{E}_{pk} + 2\lambda_n \, \xi_n \, \dot{E}_{ik} = 0,$$
+
+then to $\xi_j$, delivering the following bifurcation equation
+
+$$E_{ijk} + \lambda_i \, \dot{E}_{jk} + \lambda_j \, \dot{E}_{ik} = 0.$${#eq-20221221153708}
+
+## Second bifurcation equation

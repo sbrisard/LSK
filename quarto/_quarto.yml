@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: "Notes on the Lyapunov–Schmidt–Koiter asymptotic method"
+  author: "Sébastien Brisard"
+  date: "21/12/2022"
+  chapters:
+    - index.qmd
+    - stability_of_the_critical_point.qmd
+    - bifurcations_of_the_perfect_system.qmd
+    - references.qmd
+  appendices:
+    - perfect_system-sympy.ipynb
+
+bibliography: LSK.bib
+
+format:
+  html:
+    theme: cosmo
+    html-math-method: mathjax
+  pdf:
+    documentclass: scrreprt
+
+crossref:
+  eq-prefix: ""

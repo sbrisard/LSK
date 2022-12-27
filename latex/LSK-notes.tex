@@ -61,11 +61,12 @@
 
 \section{Problem setting}
 
-The space of admissible states of the system under consideration is denoted $U$. It has the structure of a real vector
+The space of admissible states of the system under consideration is denoted \(U\). It has the structure of a real vector
 space. The energy of the system is \(\E(u, \lambda)\), where \(\lambda\) denotes a loading parameter. It is assumed that the
 fundamental branch of the equilibrium diagram, \(u^\ast(\lambda)\) is known. Then the energy is stationary with respect to the
 state \(u\) along the whole branch. In other words, for all \(\hat{u} \in U\)
 \begin{equation}
+  \label{eq:20221227184138}
   \E_{,u}[u^{\ast}(\lambda), \lambda; \hat{u}]=0,
 \end{equation}
 where \(\E_{,u}(u, \lambda; \hat{u})\) denotes the (real) value of the differential of the energy \(\E\) with respect to the
@@ -73,54 +74,35 @@ state \(u\), evaluated at \((u, \lambda)\), for the test function \(\hat{u}\). S
 etc., order differential of the energy will be denoted \(\E_{,uu}(u, \lambda; \hat{u}, \hat{v})\),
 \(\E_{,uuu}(u, \lambda; \hat{u}, \hat{v}, \hat{w})\), etc.
 
-Upon derivation of the above stationarity condition with respect to \(\lambda\), it is found that, for all
-\(\hat{u} \in U\) and \(\lambda \in \reals\)
-\begin{equation}
-  \label{eq:20220901143843}
-  \E_{,uu}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \hat{u}] + \E_{,u\lambda}[u^\ast(\lambda), \lambda; \hat{u}] = 0
-\end{equation}
-and
-\begin{equation}
-  \label{eq:20220901143902}
-  \begin{aligned}[b]
-    \E_{,uuu}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \dot{u}^\ast(\lambda), \hat{u}] + 2\E_{,uu\lambda}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \hat{u}] &\\
-    + \E_{,u\lambda\lambda}[u^\ast(\lambda), \lambda; \hat{u}] + \E_{,uu}[u^\ast(\lambda), \lambda; \ddot{u}^\ast(\lambda), \hat{u}] &= 0,
-  \end{aligned}
-\end{equation}
-where dotted quantities refer to derivatives with respect to \(\lambda\).
 
 It is assumed that a finite value \(\lambda_0 > 0\) of \(\lambda\) can be found (critical load), such that
 \begin{enumerate}
-\item \label{item:20221017185946} $\E_{,uu}[u(\lambda), \lambda] > 0$ for all $0 < \lambda < \lambda_0$,
-\item \label{item:20221017190357} $\E_{,uu}(u_0, \lambda_0) \geq 0$ but \(\E_{,uu}(u_0, \lambda_0) \ngtr 0\),
-\item \label{item:20221017190003} $\E_{,uu}[u(\lambda), \lambda] < 0$ for $\lambda > \lambda_0$, close enough to $\lambda_0$.
+\item \label{item:20221017185946} \(\E_{,uu}[u(\lambda), \lambda] > 0\) for all \(0 < \lambda < \lambda_0\),
+\item \label{item:20221017190357} \(\E_{,uu}(u_0, \lambda_0) \geq 0\) but \(\E_{,uu}(u_0, \lambda_0) \ngtr 0\),
+\item \label{item:20221017190003} \(\E_{,uu}[u(\lambda), \lambda] < 0\) for \(\lambda > \lambda_0\), close enough to \(\lambda_0\).
 \end{enumerate}
 
-We introduce the following notations
+Dotted quantities referring to derivatives with respect to \(\lambda\), we introduce the following notations
 \begin{equation}
-  u_0 = u^\ast(\lambda_0), \quad
-  \dot{u}_0 = \dot{u}^\ast(\lambda_0), \quad
-  \ddot{u}_0 = \ddot{u}^\ast(\lambda_0), \quad
-  \dddot{u}_0 = \dddot{u}^\ast(\lambda_0), \quad
-  \ddddot{u}_0 = \ddddot{u}^\ast(\lambda_0)
+  u_0 = u^\ast(\lambda_0), \quad \dot{u}_0 = \frac{\D u^\ast}{\D \lambda} \biggr \rvert_{\lambda=\lambda_0}, \quad \ddot{u}_0 = \frac{\D^2 u^\ast}{\D \lambda^2} \biggr \rvert_{\lambda=\lambda_0}, \quad \dddot{u}_0 = \ldots, \quad \ddddot{u}_0 = \ldots
 \end{equation}
 and
 \begin{equation}
   \E_2 = \E_{,uu}(u_0, \lambda_0), \quad \E_3 = \E_{,uuu}(u_0, \lambda_0), \quad \E_4 = \E_{,uuuu}(u_0, \lambda_0).
 \end{equation}
 
-Note that \(\E_2\), \(\E_3\) and \(E_4\) thus defined are bi-, tri- and quadrilinear forms, respectively. Evaluation of
-these forms over $U$ will be denoted \(\E_2(u, v)\), \(\E_3(u, v, w)\), etc. The following derivatives are also
-introduced
+Note that \(\E_2\), \(\E_3\) and \(\E_4\) thus defined are bi-, tri- and quadrilinear forms, respectively. The following
+derivatives are also introduced
 \begin{equation}
+  \label{eq:20221227184821}
   \dot{\E}_2(\hat{u}, \hat{v}) = \frac{\D}{\D\lambda} \E_{,uu}[ u^\ast(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0}
-  = \E_{,uuu}[u_0, \lambda_0; \dot{u}_0, \hat{u}, \hat{v}] + \E_{,uu\lambda}[ u_0, \lambda_0; \hat{u}, \hat{v}]
+  = \E_{,uuu}(u_0, \lambda_0; \dot{u}_0, \hat{u}, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; \hat{u}, \hat{v})
 \end{equation}
 \begin{equation}
   \begin{aligned}[b]
     \ddot{\E}_2(\hat{u}, \hat{v})
     ={} & \frac{\D^2}{\D\lambda^2} \E_{,uu}[ u^\ast(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0}\\
-    ={} & \E_{,uuuu}[u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{u}, \hat{v}] + 2\E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{u}, \hat{v}) + \E_{,uu\lambda\lambda}[ u_0, \lambda_0; \hat{u}, \hat{v}]\\
+    ={} & \E_{,uuuu}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{u}, \hat{v}) + 2\E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{u}, \hat{v}) + \E_{,uu\lambda\lambda}( u_0, \lambda_0; \hat{u}, \hat{v})\\
     & +\E_{,uuu}(u_0, \lambda_0, \ddot{u}_0),
   \end{aligned}
 \end{equation}
@@ -135,17 +117,48 @@ undetermined.
 
 The goal of these notes is to analyze \emph{all} equilibrium paths that pass through the critical point \((u_0, \lambda_0)\).
 
-It results from the above definitions that Eqs.~\eqref{eq:20220901143843} and \eqref{eq:20220901143902} read, at the
-critical load
+\section{Stationarity of the energy along the fundamental branch}
+
+Eq.~\eqref{eq:20221227184138} holds for all \(\lambda\). Upon successive derivations with respect to \(\lambda\), it is found that,
+for all \(\hat{u} \in U\) and \(\lambda \in \reals\)
+\begin{equation}
+  \label{eq:20220901143843}
+  \E_{,uu}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \hat{u}] + \E_{,u\lambda}[u^\ast(\lambda), \lambda; \hat{u}] = 0
+\end{equation}
+and
+\begin{equation}
+  \label{eq:20220901143902}
+  \begin{aligned}[b]
+    \E_{,uuu}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \dot{u}^\ast(\lambda), \hat{u}] + 2\E_{,uu\lambda}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \hat{u}] &\\
+    + \E_{,u\lambda\lambda}[u^\ast(\lambda), \lambda; \hat{u}] + \E_{,uu}[u^\ast(\lambda), \lambda; \ddot{u}^\ast(\lambda), \hat{u}] &= 0
+  \end{aligned}
+\end{equation}
+and, at the critical point
 \begin{gather}
   \label{eq:20220901144331}
-  \E_{,uu}(u_0, \lambda_0; \mathring{u}_0, \bullet) + \E_{,u\lambda}(u_0, \lambda_0; \bullet) = 0\\
+  \E_2(\dot{u}_0, \bullet) + \E_{,u\lambda}(u_0, \lambda_0; \bullet) = 0,\\
   \label{eq:20220901144335}
-  \E_{,uuu}(u_0, \lambda_0; \mathring{u}_0, \mathring{u}_0, \bullet) + 2\E_{,uu\lambda}(u_0, \lambda_0; \mathring{u}_0, \bullet) + \E_{,u\lambda\lambda}(u_0, \lambda_0; \bullet) + \E_{,uu}(u_0, \lambda_0; \ddot{u}_0, \bullet) = 0
+  \E_3(\dot{u}_0, \dot{u}_0, \bullet) + 2\E_{,uu\lambda}(u_0, \lambda_0; \dot{u}_0, \bullet) + \E_{,u\lambda\lambda}(u_0, \lambda_0; \bullet) + \E_2(\ddot{u}_0, \bullet) = 0.
 \end{gather}
 
+Combining with Eq.~\eqref{eq:20221227184821}, the mixed derivatives \(\E_{,u\lambda}(u_0, \lambda_0; \bullet)\),
+\(\E_{,uu\lambda}(u_0, \lambda_0; \bullet, \bullet)\) and \(\E_{,u\lambda\lambda}(u_0, \lambda_0; \bullet)\) can be expressed as functions of
+\(u_0\), \(\dot{u}_0\), \(\ddot{u}_0\), \(\E_2\) and \(\E_3\). More generally, it is shown in
+\pdfmarkupcomment{Appendix}{} that the following mixed derivatives can be thus expressed
+\begin{align}
+  \E_{,u\lambda}(u_0, \lambda_0; \bullet) ={} & -\E_2(\dot{u}_0, \bullet),\\
+  \E_{,uu\lambda}(u_0, \lambda_0; \bullet, \bullet) ={} & -\E_3(\dot{u}_0, \bullet, \bullet) + \dot{\E}_2(\bullet, \bullet),\\
+  \E_{,u\lambda\lambda}(u_0, \lambda_0; \bullet) ={} &  - \E_2(\ddot{u}_0, \bullet) - 2\dot{\E}_2(\dot{u}_0, \bullet) + \E_3(\dot{u}_0, \dot{u}_0, \bullet),\\
+  \E_{,uuu\lambda}(u_0, \lambda_0; \bullet, \bullet, \bullet) ={} & -\E_4(\dot{u}_0, \bullet, \bullet, \bullet) + \dot{\E}_3(\bullet, \bullet, \bullet),\\
+  \E_{,uu\lambda\lambda}(u_0, \lambda_0; \bullet, \bullet) ={} & - \E_3(\ddot{u}_0, \bullet, \bullet) + \ddot{\E}_2(\bullet, \bullet) - 2\dot{\E}_3(\dot{u}_0, \bullet, \bullet) + \E_4(\dot{u}_0, \dot{u}_0, \bullet, \bullet),\\
+  \notag
+  \E_{,u\lambda\lambda\lambda}(u_0, \lambda_0; \bullet) ={} & -\E_2(\dddot{u}_0, \bullet) + 3\E_3(\dot{u}_0, \ddot{u}_0, \bullet) - \E_4(\dot{u}_0, \dot{u}_0, \dot{u}_0, \bullet) - 3\ddot{\E}_2(\dot{u}_0, \bullet)\\
+  &-3\dot{\E}_2(\ddot{u}_0, \bullet)+ 3\dot{\E}_3(\dot{u}_0, \dot{u}_0, \bullet).
+\end{align}
 
+\medskip
 \hrule
+\medskip
 
 
 From assumption~\ref{item:20221017190357}, $\E_2(\lambda_0)$ is positive indefinite. Let $V = \ker \E_2(\lambda_0)$ be

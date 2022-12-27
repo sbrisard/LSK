@@ -1,0 +1,68 @@
+# Problem setting
+
+$$
+\newcommand{\D}{\mathrm{d}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\reals}{\mathbb{R}}
+$$
+
+The space of admissible states of the system under consideration is denoted $U$. It has the structure of a real vector
+space. The energy of the system is $\E(u, \lambda)$, where $\lambda$ denotes a loading parameter. It is assumed that the
+fundamental branch of the equilibrium diagram, $u^{\ast}(\lambda)$ is known. Then the energy is stationary with respect
+to the state $u$ along the whole branch. In other words, for all $\hat{u} \in U$,
+
+$$\E_{,u}[u^{\ast}(\lambda), \lambda; \hat{u}]=0,$$
+
+where $\E_{,u}(u, \lambda; \hat{u})$ denotes the (real) value of the differential of the energy $\E$ with respect to the
+state $u$, evaluated at $(u, \lambda)$, for the test function $\hat{u}$. Similarly, evaluation of the second-, third-,
+etc., order differential of the energy will be denoted $\E_{,uu}(u, \lambda; \hat{u}, \hat{v})$, $\E_{,uuu}(u, \lambda;
+\hat{u}, \hat{v}, \hat{w})$, etc.
+
+Upon derivation of the above stationarity condition with respect to $\lambda$, it is found that, for all $\hat{u} \in U$
+and $\lambda \in \reals$
+
+$$\E_{,uu}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \hat{u}] + \E_{,u\lambda}[u^\ast(\lambda), \lambda; \hat{u}] = 0$${#eq-20220901143843}
+
+and
+
+$$
+\begin{aligned}[b]
+  \E_{,uuu}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \dot{u}^\ast(\lambda), \hat{u}] + 2\E_{,uu\lambda}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \hat{u}] &\\
+  + \E_{,u\lambda\lambda}[u^\ast(\lambda), \lambda; \hat{u}] + \E_{,uu}[u^\ast(\lambda), \lambda; \ddot{u}^\ast(\lambda), \hat{u}] &= 0.
+\end{aligned}
+$${#eq-20220901143902}
+
+It is assumed that a finite value $\lambda_0 > 0$ of $\lambda$ can be found (critical load), such that
+
+1. $\E_{,uu}(\lambda) > 0$ for all $0 < \lambda < \lambda_0$: equilibrium is *stable* along the fundamental branch below the critical load,
+2. $\E_{,uu}(\lambda_0) \geq 0$: stability is undetermined at the critical load,
+3. $\E_{,uu}(\lambda) < 0$ for $\lambda > \lambda_0$, close enough to $\lambda_0$: equilibrium becomes *unstable* above the critical load.
+
+The *critical state* $u_0$ is the state of the system along the fundamental branch, for the critical load: $u_0 =
+u^\ast(\lambda_0)$. The point $(u_0, \lambda_0)$ will be referred to as the *critical point* and the derivatives of $u^\star$ at the critival point are noted
+
+It will be convenient to introduce the following notations
+
+$$
+\dot{u}_0 = \frac{\D u^\ast}{\D \lambda} \biggr \rvert_{\lambda = \lambda_0}, \quad
+\ddot{u}_0 = \frac{\D^2 u^\ast}{\D \lambda^2} \biggr \rvert_{\lambda = \lambda_0}, \quad
+\dddot{u}_0 = \frac{\D^3 u^\ast}{\D \lambda^3} \biggr \rvert_{\lambda = \lambda_0}, \quad
+\ddddot{u}_0 = \frac{\D^4 u^\ast}{\D \lambda^4} \biggr \rvert_{\lambda = \lambda_0}
+$$
+
+and
+
+$$\E_2 = \E_{,uu}(u_0, \lambda_0), \quad \E_3 = \E_{,uuu}(u_0, \lambda_0), \quad \E_4 = \E_{,uuuu}(u_0, \lambda_0).$$
+
+Note that $\E_2$, $\E_3$ and $E_4$ are bi-, tri- and quadrilinear forms, respectively. Evaluation of these forms over
+$U$ will be denoted $\E_2(u, v)$, $\E_3(u, v, w)$, etc. The following derivatives are also introduced
+
+$$
+\dot{\E}_2(\hat{u}, \hat{v}) = \frac{\D}{\D\lambda} \E_{,uu}[ u^\ast(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0}
+= \E_{,uuu}[u_0, \lambda_0; \dot{u}_0, \hat{u}, \hat{v}] + \E_{,uu\lambda}[ u_0, \lambda_0; \hat{u}, \hat{v}]
+$$
+
+$$
+\ddot{\E}_2(\hat{u}, \hat{v}) = \frac{\D^2}{\D\lambda^2} \E_{,uu}[ u^\ast(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0}
+= \E_{,uuu}(u_0, \lambda_0, \ddot{u}_0) + \E_{,uuuu}[u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{u}, \hat{v}] + 2\E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{u}, \hat{v}) + \E_{,uu\lambda\lambda}[ u_0, \lambda_0; \hat{u}, \hat{v}]
+$$

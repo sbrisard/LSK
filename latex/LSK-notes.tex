@@ -72,17 +72,15 @@ state \(u\) along the whole branch. In other words, for all \(\hat{u} \in U\)
 where \(\E_{,u}(u, \lambda; \hat{u})\) denotes the (real) value of the differential of the energy \(\E\) with respect to the
 state \(u\), evaluated at \((u, \lambda)\), for the test function \(\hat{u}\). Similarly, evaluation of the second-, third-,
 etc., order differential of the energy will be denoted \(\E_{,uu}(u, \lambda; \hat{u}, \hat{v})\),
-\(\E_{,uuu}(u, \lambda; \hat{u}, \hat{v}, \hat{w})\), etc.
-
-
-It is assumed that a finite value \(\lambda_0 > 0\) of \(\lambda\) can be found (critical load), such that
+\(\E_{,uuu}(u, \lambda; \hat{u}, \hat{v}, \hat{w})\), etc. It is assumed that a finite value \(\lambda_0 > 0\) of
+\(\lambda\) can be found (critical load), such that
 \begin{enumerate}
 \item \label{item:20221017185946} \(\E_{,uu}[u(\lambda), \lambda] > 0\) for all \(0 < \lambda < \lambda_0\),
 \item \label{item:20221017190357} \(\E_{,uu}(u_0, \lambda_0) \geq 0\) but \(\E_{,uu}(u_0, \lambda_0) \ngtr 0\),
 \item \label{item:20221017190003} \(\E_{,uu}[u(\lambda), \lambda] < 0\) for \(\lambda > \lambda_0\), close enough to \(\lambda_0\).
 \end{enumerate}
 
-Dotted quantities referring to derivatives with respect to \(\lambda\), we introduce the following notations
+We introduce the following notations
 \begin{equation}
   u_0 = u^\ast(\lambda_0), \quad \dot{u}_0 = \frac{\D u^\ast}{\D \lambda} \biggr \rvert_{\lambda=\lambda_0}, \quad \ddot{u}_0 = \frac{\D^2 u^\ast}{\D \lambda^2} \biggr \rvert_{\lambda=\lambda_0}, \quad \dddot{u}_0 = \ldots, \quad \ddddot{u}_0 = \ldots
 \end{equation}
@@ -101,9 +99,8 @@ derivatives are also introduced
 \begin{equation}
   \begin{aligned}[b]
     \ddot{\E}_2(\hat{u}, \hat{v})
-    ={} & \frac{\D^2}{\D\lambda^2} \E_{,uu}[ u^\ast(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0}\\
-    ={} & \E_{,uuuu}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{u}, \hat{v}) + 2\E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{u}, \hat{v}) + \E_{,uu\lambda\lambda}( u_0, \lambda_0; \hat{u}, \hat{v})\\
-    & +\E_{,uuu}(u_0, \lambda_0, \ddot{u}_0),
+    ={} & \frac{\D^2}{\D\lambda^2} \E_{,uu}[ u^\ast(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0} = \E_{,uuuu}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{u}, \hat{v}) + 2\E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{u}, \hat{v})\\
+    & + \E_{,uu\lambda\lambda}( u_0, \lambda_0; \hat{u}, \hat{v}) + \E_{,uuu}(u_0, \lambda_0, \ddot{u}_0),
   \end{aligned}
 \end{equation}
 and, similarly, \(\dot{\E}_3\), \(\ddot{\E}_3\), etc.

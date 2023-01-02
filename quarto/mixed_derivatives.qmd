@@ -5,8 +5,8 @@ $$
 \newcommand{\reals}{\mathbb{R}}
 $$
 
-Eq. @eq-20221227184138 holds for all $\lambda$. Upon successive derivations with respect to $\lambda$, it is found that,
-for all $\hat{u} \in U$ and $\lambda \in \reals$
+Eq. (@eq-20221227184138) holds for all $\lambda$. Upon successive derivations with respect to $\lambda$, it is found
+that, for all $\hat{u} \in U$ and $\lambda \in \reals$
 
 $$
 \E_{,uu}[u^\ast(\lambda), \lambda; \dot{u}^\ast(\lambda), \hat{u}] + \E_{,u\lambda}[u^\ast(\lambda), \lambda; \hat{u}] = 0
@@ -30,7 +30,7 @@ $$
 \end{gather}
 $$
 
-Combining with Eq. @eq-20221227184821, the mixed derivatives $\E_{,u\lambda}(u_0, \lambda_0; \bullet)$,
+Combining with Eq. (@eq-20221227184821), the mixed derivatives $\E_{,u\lambda}(u_0, \lambda_0; \bullet)$,
 $\E_{,uu\lambda}(u_0, \lambda_0; \bullet, \bullet)$ and $\E_{,u\lambda\lambda}(u_0, \lambda_0; \bullet)$ can be
 expressed as functions of $u_0$, $\dot{u}_0$, $\ddot{u}_0$, $\E_2$ and $\E_3$. More generally, it is shown in Appendix
 **compléter référence** that the following mixed derivatives can be thus expressed

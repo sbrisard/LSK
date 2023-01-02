@@ -1,0 +1,27 @@
+project:
+  type: book
+
+book:
+  title: "Notes on the Lyapunov–Schmidt–Koiter asymptotic method"
+  author: "Sébastien Brisard"
+  date: "21/12/2022"
+  chapters:
+    - index.qmd
+    - problem_setting.qmd
+    - mixed_derivatives.qmd
+    - kernel_hessian.qmd
+    - references.qmd
+  appendices:
+    - perfect_system-sympy.ipynb
+
+bibliography: LSK-notes.bib
+
+format:
+  html:
+    theme: cosmo
+    html-math-method: mathjax
+  pdf:
+    documentclass: scrreprt
+
+crossref:
+  eq-prefix: ""

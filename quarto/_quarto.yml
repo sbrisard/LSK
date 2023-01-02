@@ -10,6 +10,7 @@ book:
     - problem_setting.qmd
     - mixed_derivatives.qmd
     - kernel_hessian.qmd
+    - bifurcation_equations.qmd
     - references.qmd
   appendices:
     - perfect_system-sympy.ipynb
@@ -25,3 +26,4 @@ format:
 
 crossref:
   eq-prefix: ""
+  sec-prefix: ""

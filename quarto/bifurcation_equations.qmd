@@ -1,0 +1,52 @@
+# Bifurcation equations
+
+$$
+\newcommand{\E}{\mathcal{E}}
+$$
+
+In this section, we show that, besides the fundamental branch $u^\ast(\lambda)$, other (bifurcated) equilibrium branches
+may pass through the critical point $(u_0, \lambda_0)$. The starting point is the characterization of an equilibrium by
+the stationarity of the energy, which defines all equilibrium branches as implicit functions, which can be expanded with
+respect to some perturbation parameter.
+
+The approach adopted here relies on the Lyapunov--Schmidt decomposition of the equilibrium branch over $V$ and
+$W$. Other approaches are possible, see e.g. @chack2018.
+
+For a given value of $\lambda$ (close to the critical value $\lambda_0$), We seek an equilibrium point $u$ of the
+system, such that
+
+$$
+\E_{,u}(u, \lambda; \hat{u}) = 0 \quad \text{for all} \quad \hat{u} \in U.
+$$ {#eq-20230102025737}
+
+This equilibrium point is projected onto the orthogonal subspaces $V$ and $W$.
+
+$$
+u = u^\ast(\lambda) + \xi_i \, v_i + w, \quad \text{with} \quad w \in W.
+$$ {#eq-20220902174235}
+
+It follows from the orthogonality of $V$ and $W$ that $\langle v_i, w \rangle = 0$ for all $i=1, \ldots,
+m$. Eq. (@eq-20230102025737) is then expressed as follows
+
+$$
+\E_{,u}[u^\ast(\lambda) + \xi_i \, v_i + w, \lambda; \hat{v}] = 0, \quad \text{for all} \quad \hat{v} \in V
+$$ {#eq-20220901120544}
+
+and
+
+$$
+\E_{,u}[u^\ast(\lambda) + \xi_i \, v_i + w, \lambda; \hat{w}] = 0, \quad \text{for all} \quad \hat{w} \in W.
+$$ {#eq-20220825143616}
+
+The method proceeds in three steps. In @sec-20230102030010, Eq. (@eq-20220825143616) is used to define $w$ as an
+implicit function of $\xi_1$, \dots, $\xi_m$ and $\lambda$. Then, in @sec-20230102030125, Eq. (@eq-20220901120544) is
+used to define $\lambda$ as an implicit function of $\xi_1$, \dots, $\xi_m$. Finally, a parametrization $\eta$ of
+$\xi_1$, \dots $\xi_m$ is introduced in @sec-20230102030224 and the Taylor expansion of $u$ and $\lambda$ with respect
+to $\eta$ is derived.
+
+
+## Elimination of $w$ {#sec-20230102030010}
+
+## Elimination of $\lambda$ {#sec-20230102030125}
+
+## Parametrization of the bifurcated branch {#sec-20230102030224}

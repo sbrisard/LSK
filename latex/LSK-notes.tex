@@ -33,6 +33,8 @@
 \setmainfont{Asana Math}
 \setmathfont{Asana Math}
 
+\usepackage{xcolor}
+
 \newcommand{\E}{\mathcal E}
 \newcommand{\EE}{\mathcal E ^ \dagger}
 \newcommand{\D}{\mathrm{d}}
@@ -44,6 +46,8 @@
 \title{\sbtitle}
 \author{\sbauthor\thanks{\sbaddress~--- \sbemail}}
 \maketitle
+
+\color{gray}
 
 \begin{abstract}
   These are my notes on the LSK method for the analysis of the stability and bifurcation(s) of a conservative
@@ -153,11 +157,6 @@ Combining with Eq.~\eqref{eq:20221227184821}, the mixed derivatives \(\E_{,u\lam
   &-3\dot{\E}_2(\ddot{u}_0, \bullet)+ 3\dot{\E}_3(\dot{u}_0, \dot{u}_0, \bullet).
 \end{align}
 
-\medskip
-\hrule
-\medskip
-
-
 From assumption~\ref{item:20221017190357}, $\E_2(\lambda_0)$ is positive indefinite. Let $V = \ker \E_2(\lambda_0)$ be
 its kernel; $V$ is a vector subspace of $U$ (see \S \ref{sec:20221013223647}) and we define the supplementary subspace
 $W$, orthogonal to $V$ for the (yet unspecified) scalar product $\langle \bullet, \bullet \rangle$
@@ -186,6 +185,8 @@ sense of $\langle \bullet, \bullet \rangle$
 \begin{equation}
   \langle v_i, v_j \rangle = \delta_{ij} \quad \text{for all} \quad i, j = 1, \ldots, m.
 \end{equation}
+
+\color{black}
 
 For $1 \leq i, j \leq m$, we introduce the solutions $w_i, w_{ij} \in W$ to the following variational problems
 \begin{gather}
@@ -1569,6 +1570,8 @@ and
 
 \section{Some useful results from multilinear algebra}
 
+\color{gray}
+
 \subsection{Kernel of a bilinear, symmetric, positive form}
 
 In this section, $\mathcal{B}$ denotes a bilinear, symmetric, positive form over the vector space $U$. Its kernel
@@ -1618,6 +1621,8 @@ $\ker \mathcal{B}$ is defined as follows
   ($\mathcal{B}(u, u) = 0$ since $u \in \ker \mathcal{B}$). The above expression is of degree 1 in $\alpha$, with a
   constant sign. Therefore the linear term in $\alpha$ must vanish: $\mathcal{B}(u, v) = 0$.
 \end{proof}
+
+\color{black}
 
 \subsection{On trilinear, symmetric forms}
 

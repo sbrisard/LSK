@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: ../docs
 
 book:
   title: "Notes on the Lyapunov–Schmidt–Koiter asymptotic method"

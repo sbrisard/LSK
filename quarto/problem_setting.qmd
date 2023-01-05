@@ -1,4 +1,4 @@
-# Problem setting
+# Problem setting {#sec-20230105101657}
 
 $$
 \newcommand{\D}{\mathrm{d}}

@@ -20,25 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 
@@ -163,15 +144,7 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#sec-20230102030010" id="toc-sec-20230102030010" class="nav-link active" data-scroll-target="#sec-20230102030010"><span class="toc-section-number">5.1</span>  Elimination of <span class="math inline">\(w\)</span></a></li>
-  <li><a href="#sec-20230102030125" id="toc-sec-20230102030125" class="nav-link" data-scroll-target="#sec-20230102030125"><span class="toc-section-number">5.2</span>  Elimination of <span class="math inline">\(\lambda\)</span></a></li>
-  <li><a href="#sec-20230102030224" id="toc-sec-20230102030224" class="nav-link" data-scroll-target="#sec-20230102030224"><span class="toc-section-number">5.3</span>  Parametrization of the bifurcated branch</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -196,64 +169,8 @@ div.csl-indent {
 <p><span class="math display">\[
 \newcommand{\E}{\mathcal{E}}
 \]</span></p>
-<p>In this section, we show that, besides the fundamental branch <span class="math inline">\(u^\ast(\lambda)\)</span>, other (bifurcated) equilibrium branches may pass through the critical point <span class="math inline">\((u_0, \lambda_0)\)</span>. The starting point is the characterization of an equilibrium by the stationarity of the energy, which defines all equilibrium branches as implicit functions, which can be expanded with respect to some perturbation parameter.</p>
-<p>The approach adopted here relies on the Lyapunov–Schmidt decomposition of the equilibrium branch over <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span>. Other approaches are possible, see e.g. <span class="citation" data-cites="chak2018">Chakrabarti et al. (<a href="references.html#ref-chak2018" role="doc-biblioref">2018</a>)</span>.</p>
-<p>For a given value of <span class="math inline">\(\lambda\)</span> (close to the critical value <span class="math inline">\(\lambda_0\)</span>), We seek an equilibrium point <span class="math inline">\(u\)</span> of the system, such that</p>
-<p><span id="eq-20230102025737"><span class="math display">\[
-\E_{,u}(u, \lambda; \hat{u}) = 0 \quad \text{for all} \quad \hat{u} \in U.
-\tag{5.1}\]</span></span></p>
-<p>This equilibrium point is projected onto the orthogonal subspaces <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span>.</p>
-<p><span id="eq-20220902174235"><span class="math display">\[
-u = u^\ast(\lambda) + \xi_i \, v_i + w, \quad \text{with} \quad w \in W.
-\tag{5.2}\]</span></span></p>
-<p>It follows from the orthogonality of <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> that <span class="math inline">\(\langle v_i, w \rangle = 0\)</span> for all <span class="math inline">\(i=1, \ldots, m\)</span>. Eq. (<a href="#eq-20230102025737"><span>5.1</span></a>) is then expressed as follows</p>
-<p><span id="eq-20220901120544"><span class="math display">\[
-\E_{,u}[u^\ast(\lambda) + \xi_i \, v_i + w, \lambda; \hat{v}] = 0, \quad \text{for all} \quad \hat{v} \in V
-\tag{5.3}\]</span></span></p>
-<p>and</p>
-<p><span id="eq-20220825143616"><span class="math display">\[
-\E_{,u}[u^\ast(\lambda) + \xi_i \, v_i + w, \lambda; \hat{w}] = 0, \quad \text{for all} \quad \hat{w} \in W.
-\tag{5.4}\]</span></span></p>
-<p>The method proceeds in three steps. In <a href="#sec-20230102030010"><span>Section&nbsp;5.1</span></a>, Eq. (<a href="#eq-20220825143616"><span>5.4</span></a>) is used to define <span class="math inline">\(w\)</span> as an implicit function of <span class="math inline">\(\xi_1\)</span>, , <span class="math inline">\(\xi_m\)</span> and <span class="math inline">\(\lambda\)</span>. Then, in <a href="#sec-20230102030125"><span>Section&nbsp;5.2</span></a>, Eq. (<a href="#eq-20220901120544"><span>5.3</span></a>) is used to define <span class="math inline">\(\lambda\)</span> as an implicit function of <span class="math inline">\(\xi_1\)</span>, , <span class="math inline">\(\xi_m\)</span>. Finally, a parametrization <span class="math inline">\(\eta\)</span> of <span class="math inline">\(\xi_1\)</span>, <span class="math inline">\(\xi_m\)</span> is introduced in <a href="#sec-20230102030224"><span>Section&nbsp;5.3</span></a> and the Taylor expansion of <span class="math inline">\(u\)</span> and <span class="math inline">\(\lambda\)</span> with respect to <span class="math inline">\(\eta\)</span> is derived.</p>
-<section id="sec-20230102030010" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="sec-20230102030010"><span class="header-section-number">5.1</span> Elimination of <span class="math inline">\(w\)</span></h2>
-<p>We first use Eq. (<a href="#eq-20220825143616"><span>5.4</span></a>) to define <span class="math inline">\(w(\xi_1, \ldots, \xi_m, \lambda)\)</span>. The following asymptotic expansion about <span class="math inline">\(\xi_1 = \cdots = \xi_m = 0\)</span> and <span class="math inline">\(\lambda = \lambda_0\)</span> is postulated</p>
-<p><span class="math display">\[
-\begin{aligned}
-w(\xi_1, \ldots, \xi_m, \lambda) ={} &amp; \xi_i \, w_i + \bigl( \lambda - \lambda_0 \bigr) \, w_\lambda\\
-&amp;+ \tfrac{1}{2} \xi_i \, \xi_j \, w_{ij} + \tfrac{1}{2} \bigl( \lambda - \lambda_0 \bigr)^2 w_{\lambda\lambda} + \xi_i \, \bigl( \lambda - \lambda_0 \bigr) w_{i\lambda} + \cdots,
-\end{aligned}
-\]</span></p>
-<p>where <span class="math inline">\(w_i\)</span>, <span class="math inline">\(w_\lambda\)</span>, <span class="math inline">\(w_{ij}\)</span>, <span class="math inline">\(w_{\lambda\lambda}\)</span> and <span class="math inline">\(w_{i\lambda}\)</span> are elements of <span class="math inline">\(W\)</span> to be defined. It is shown in <a href="perfect_system-sympy.html"><span>Appendix&nbsp;A</span></a> that</p>
-<p><span class="math display">\[
-w_1 = \cdots = w_m = w_\lambda = w_{\lambda\lambda} = 0,
-\]</span></p>
-<p>and the Taylor expansion of <span class="math inline">\(w\)</span> reduces to</p>
-<p><span class="math display">\[
-w(\xi_1, \ldots, \xi_m, \lambda) = \tfrac{1}{2} \xi_i \, \xi_j \, w_{ij} + \xi_i \, \bigl( \lambda - \lambda_0 \bigr) w_{i\lambda} + \cdots,
-\]</span></p>
-<p>where <span class="math inline">\(w_{ij}\)</span> and <span class="math inline">\(w_{i\lambda}\)</span> are the solutions to the following variational problems</p>
-<p><span class="math display">\[
-\E_2(w_{ij}, \hat{w}) + \E_3(v_i, v_j, \hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W
-\]</span></p>
-<p>and</p>
-<p><span class="math display">\[
-\E_2(w_{i\lambda}, \hat{w}) + \dot{\E}_2(v_i, \hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W.
-\]</span></p>
-</section>
-<section id="sec-20230102030125" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="sec-20230102030125"><span class="header-section-number">5.2</span> Elimination of <span class="math inline">\(\lambda\)</span></h2>
-</section>
-<section id="sec-20230102030224" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="sec-20230102030224"><span class="header-section-number">5.3</span> Parametrization of the bifurcated branch</h2>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-chak2018" class="csl-entry" role="doc-biblioentry">
-Chakrabarti, Aditi, Serge Mora, Franck Richard, Ty Phou, Jean-Marc Fromental, Yves Pomeau, and Basile Audoly. 2018. <span>“Selection of Hexagonal Buckling Patterns by the Elastic <span>Rayleigh-Taylor</span> Instability.”</span> <em>Journal of the Mechanics and Physics of Solids</em> 121 (December): 234–57. <a href="https://doi.org/10.1016/j.jmps.2018.07.024">https://doi.org/10.1016/j.jmps.2018.07.024</a>.
-</div>
-</div>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

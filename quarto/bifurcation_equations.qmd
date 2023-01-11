@@ -1,5 +1,0 @@
-# Bifurcation equations
-
-$$
-\newcommand{\E}{\mathcal{E}}
-$$

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.2.313">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -193,11 +193,6 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./kernel_hessian.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kernel of the hessian of the energy</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -753,34 +748,18 @@ Note
 <p><span class="math inline">\(\displaystyle \E_{3} \bigl(\xi_k\,w_{k\lambda}\bigr) \bigl(\xi_{l}\,v_{l}\bigr) \bigl(\xi_{p}\,\lambda_{p}\bigr) \hat{v} + \frac{\E_{4} \bigl(\xi_{l}\,v_{l}\bigr)^{3} \hat{v}}{6} + \bigl(\xi_k\,w_{k\lambda}\bigr) \bigl(\xi_{p}\,\lambda_{p}\bigr)^{2} \dot{\E}_2 \hat{v} + \frac{\bigl(\xi_m\,\xi_n\,\lambda_{mn}\bigr) \bigl(\xi_{l}\,v_{l}\bigr) \dot{\E}_2 \hat{v}}{2} + \frac{\bigl(\xi_{l}\,v_{l}\bigr)^{2} \bigl(\xi_{p}\,\lambda_{p}\bigr) \dot{\E}_3 \hat{v}}{2} + \frac{\bigl(\xi_{l}\,v_{l}\bigr) \bigl(\xi_{p}\,\lambda_{p}\bigr)^{2} \ddot{\E}_2 \hat{v}}{2}=0\)</span></p>
 </div>
 </div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Start refactoring from here!</p>
-</div>
-</div>
-<div class="cell" data-execution_count="37">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> <span class="va">False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>AssertionError: </code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span>(E_uu_star, E_uuu_star)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The first equation should be understood as follows</p>
-<p><span class="math display">\[\begin{equation}
-\tfrac{1}{2} \, \xi_n \, \xi_p \, E_3(v_n, v_p, \hat{v}) + \lambda_n \, \xi_n \, \xi_p \, \dot{E}_2(\xi_p, \hat{v}) = 0,
-\end{equation}\]</span></p>
-<p>and, testing with <span class="math inline">\(\hat{v} = v_k\)</span></p>
-<p><span id="eq-20221221154153"><span class="math display">\[\xi_n \, \xi_p \, E_{npk} + 2\lambda_n \, \xi_n \, \xi_p \, \dot{E}_{pk} = 0. \tag{A.10}\]</span></span></p>
+<p>The above bifurcation equations should be understood as follows <span id="eq-20230115101130"><span class="math display">\[
+\xi_j \, \xi_k \, \bigl[ \E_3(v_j, v_k, \hat{v}) + \lambda_k \, \dot{\E}_2(v_j, \hat{v}) \bigr] = 0
+\tag{A.10}\]</span></span> and <span id="eq-20230115101147"><span class="math display">\[
+\begin{aligned}
+\xi_j \, \xi_k \, \xi_l \, \bigl[ \lambda_l \, \E_3(w_{j\lambda}, v_k, \hat{v}) + \tfrac{1}{6} \E_4(v_j, v_k, v_l, \hat{v}) + \lambda_k \, \lambda_l \, \dot{\E}_2(w_{j\lambda}, \hat{v}) &amp;\\
++ \tfrac{1}{2} \, \lambda_{kl} \, \dot{\E}_2(v_j, \hat{v}) + \tfrac{1}{2} \, \lambda_l \, \dot{\E}_3(v_j, v_k, \hat{v}) + \tfrac{1}{2} \, \lambda_k \, \lambda_l \, \ddot{\E}_2(v_j, \hat{v})\bigr] &amp;= 0.
+\end{aligned}
+\tag{A.11}\]</span></span></p>
+<p>Testing Eq. (<a href="#eq-20230115101130"><span>A.10</span></a>) with <span class="math inline">\(\hat{v} = v_i\)</span> leads to <span class="math display">\[
+\xi_j \, \xi_k \, \bigl( E_{ijk} + \lambda_k \, \dot{E}_{ij} \bigr) = 0,
+\]</span> which shows that the quantity between square brackets must be antisymmetric with respect to <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, for all <span class="math inline">\(i = 1, \ldots, m\)</span> <span id="eq-20230115101653"><span class="math display">\[2E_{ijk} + \lambda_k \, \dot{E}_{ij} + \lambda_j \, \dot{E}_{ik} = 0. \tag{A.12}\]</span></span></p>
+<p>Eq. (<a href="#eq-20230115101653"><span>A.12</span></a>) is the first bifurcation equation of the perfect system.</p>
 </section>
 <section id="sec-20230102030224" class="level3" data-number="A.4.3">
 <h3 data-number="A.4.3" class="anchored" data-anchor-id="sec-20230102030224"><span class="header-section-number">A.4.3</span> Parametrization of the bifurcated branch</h3>

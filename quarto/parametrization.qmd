@@ -17,7 +17,20 @@ $$
 + \tfrac{1}{2} \lambda_{kl} \, \dot{\E}_2(v_i, v_j) + \tfrac{1}{2} \lambda_l \, \dot{\E}_3(v_i, v_j, v_k) + \tfrac{1}{2} \lambda_k \, \lambda_l \, \ddot{\E}_2(v_i, v_j)\bigr] &= 0,
 \end{aligned}
 $$ {#eq-20230117071620}
-for all $\xi_1, \ldots, \xi_m \in \reals$.
+for all $\xi_1, \ldots, \xi_m \in \reals$. For fixed $i = 1, \ldots, m$, Eq. @eq-20230116205638 is of the form
+$L_{jk} \, \xi_j \, \xi_k = 0$ for all $\xi_1, \ldots, \xi_m$. Derivation with respect to $\xi_l$ leads to
+$$
+0 = L_{jk} \, \delta_{jl} \, \xi_k + L_{jk} \, \xi_j \, \delta_{kl} = L_{lk} \, \xi_k + L_{jl} \, \xi_j = \bigl(L_{kl} +L_{lk} \bigr) \, \xi_l,
+$$
+for all $\xi_1, \ldots, \xi_m \in \reals$. The above identity leads to: $L_{kl} + L_{lk} = 0$. Application to
+Eq. @eq-20230116205638 leads to
+$$
+E_{ijk} + \lambda_k \, \dot{E}_{ij} + \lambda_j \, \dot{E}_{ik} = 0,
+$$ {#eq-20230120210008}
+with
+$$
+\dot{E}_{ij} = \dot{\E}_2(v_i, v_j) \quad \text{and} \quad E_{ijk} = \E_3(v_i, v_j, v_k).
+$$
 
 To transform the above equations, a parametrization of the bifurcated branch is introduced. The bifurcated branch is a
 curve $(u, \lambda) \in \reals ^ {m + 1}$, which is parametrized by $\eta$: $[u(\eta), \lambda(\eta)]$, with $u(0) =
@@ -28,13 +41,15 @@ $$
 
 In @sec-20230102030125, $\lambda$ was defined as a function of $\xi_1, \ldots, \xi_m$. Therefore, from the chain rule $$
 \lambda'(\eta) = \frac{\partial\lambda}{\partial\xi_i} \, \xi_i'(\eta) \quad \text{and} \quad \lambda''(\eta)  = \frac{\partial^2\lambda}{\partial\xi_i \, \partial\xi_j} \, \xi_i'(\eta) \, \xi_j'(\eta) + \frac{\partial\lambda}{\partial\xi_i} \, \xi_i''(\eta)
-$$ and, at $\eta = 0$ $$
+$$ and, at $\eta = 0$
+$$
 \order[1]{\lambda} = \lambda_i \, \order[1]{\xi_i} \quad \text{and} \quad \order[2]{\lambda} = \lambda_{ij} \, \order[1]{\xi_i} \, \order[1]{\xi_j} + \lambda_i \, \order[2]{\xi_i}.
 $$ {#eq-20230116205753}
 
-Since Eq. (@eq-20230116205638) holds for all $\xi_1, \ldots, \xi_m$. Plugging $\xi_i = \order[1]{\xi_i}$ and using Eq. (@eq-20230116205753) delivers $$
+Eq. (@eq-20230116205638) holds for all $\xi_1, \ldots, \xi_m$. Plugging $\xi_i = \order[1]{\xi_i}$ and using Eq. (@eq-20230116205753) delivers
+$$
 E_{ijk} \, \order[1]{\xi_j} \, \order[1]{\xi_k} + \order[1]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi_j} = 0
-$$ with $$\dot{E}_{ij} = \dot{\E}_2(v_i, v_j) \quad \text{and} \quad \dot{E}_{ijk} = \E_3(v_i, v_j, v_k).$$
+$$
 
 Eq. (@eq-20230117071620) is transformed similarly
 $$
@@ -44,14 +59,87 @@ $$
 + \tfrac{1}{6} \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \E_4(v_i, v_j, v_k, v_l) + \tfrac{1}{2} \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \lambda_{kl} \, \dot{\E}_2(v_i, v_j) &= 0,
 \end{aligned}
 $$
-and, substituting $\order[1]{\xi}_k \, \order[1]{\xi}_l \, \lambda_{kl}$ with $\order[2]{\lambda} - \lambda_i \, \order[2]{\xi_i}$ \[see Eq. (@eq-20230116205753)\]
+substituting $\order[1]{\xi}_k \, \order[1]{\xi}_l \, \lambda_{kl}$ with $\order[2]{\lambda} - \lambda_k \, \order[2]{\xi_k}$ \[see Eq. (@eq-20230116205753)\]
 $$
 \begin{aligned}[b]
 \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\lambda} \, \bigl[ \tfrac{1}{2} \dot{\E}_3(v_i, v_j, v_k) + \E_3(v_i, w_{j\lambda}, v_k) \bigr] &\\
 + \order[1]{\xi}_j \, \bigl[ \order[1]{\lambda} \bigr] ^2 \, \bigl[ \tfrac{1}{2} \, \ddot{\E}_2(v_i, v_j) + \dot{\E}_2(v_i, w_{j\lambda}) \bigr] &\\
-+ \tfrac{1}{6} \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \E_4(v_i, v_j, v_k, v_l) + \tfrac{1}{2} \order[1]{\xi}_j \, \bigl( \order[2]{\lambda} - \lambda_i \, \order[2]{\xi_i} \bigr) \, \dot{\E}_2(v_i, v_j) &= 0.
++ \tfrac{1}{6} \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \E_4(v_i, v_j, v_k, v_l) + \tfrac{1}{2} \order[1]{\xi}_j \, \bigl( \order[2]{\lambda} - \lambda_k \, \order[2]{\xi_k} \bigr) \, \dot{\E}_2(v_i, v_j) &= 0
 \end{aligned}
 $$
+and rearranging
+$$
+\begin{aligned}[b]
+\tfrac{1}{3} \E_4(v_i, v_j, v_k, v_l) \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l
++ \order[1]{\lambda} \, \bigl[ \dot{\E}_3(v_i, v_j, v_k) + 2\E_3(v_i, w_{j\lambda}, v_k) \bigr] \, \order[1]{\xi}_j \, \order[1]{\xi}_k &\\
++ \bigl[ \order[1]{\lambda} \bigr]^2 \, \bigl[ \ddot{\E}_2(v_i, v_j) + 2\dot{\E}_2(v_i, w_{j\lambda}) \bigr] \, \order[1]{\xi}_j
++ \order[2]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi}_j - \lambda_k \, \dot{E}_{ij} \, \order[1]{\xi}_j \order[2]{\xi_k}
+&= 0.
+\end{aligned}
+$$
+
+Testing Eq. (@eq-20230107180501), with $\hat{w} = w_{j\lambda}$ and $\hat{w} = w_{i\lambda}$, successively, we get
+$$
+\dot{\E}_2(w_{j\lambda}, v_i) = -\E_2(w_{i\lambda}, w_{j\lambda}) = -\E_2(w_{j\lambda}, w_{i\lambda}) = \dot{\E}_2(w_{i\lambda}, v_j)
+$$
+and
+$$
+\begin{aligned}[b]
+\tfrac{1}{3} \E_4(v_i, v_j, v_k, v_l) \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l
++ \order[1]{\lambda} \, \bigl[ \dot{\E}_3(v_i, v_j, v_k) + 2\E_3(v_i, w_{j\lambda}, v_k) \bigr] \, \order[1]{\xi}_j \, \order[1]{\xi}_k &\\
++ \bigl[ \order[1]{\lambda} \bigr]^2 \, \ddot{E}_{ij} \, \order[1]{\xi}_j + \order[2]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi}_j - \lambda_k \, \dot{E}_{ij} \, \order[1]{\xi}_j \order[2]{\xi_k}
+&= 0.
+\end{aligned}
+$$
+with
+$$
+\ddot{E}_{ij} = \ddot{\E}_2(v_i, v_j) + \dot{\E}_2(v_i, w_{j\lambda}) + \dot{\E}_2(w_{i\lambda}, v_j).
+$$
+
+Owing to contraction with $\order[1]{\xi}_j$ and $\order[1]{\xi}_k$, the second term can be symmetrized with respect to $j$ and $k$. More precisely, testing Eq. (@eq-20230107180501) with $\hat{w} = w_{j\lambda}$ and $\hat{w} = w_{k\lambda}$, successively,
+$$
+\begin{aligned}[b]
+2\E_3(v_i, v_j, w_k) \, \order[1]{\xi_j} \order[1]{\xi_k} &= \bigl[ \E_3(v_i, v_j, w_k) + \E_3(v_i, w_j, v_k) \bigr] \, \order[1]{\xi_j} \order[1]{\xi_k}\\
+&= \bigl[ \dot{\E}_2(v_k, w_{ij}) + \dot{\E}_2(v_j, w_{ik}) \bigr] \, \order[1]{\xi_j} \order[1]{\xi_k}.
+\end{aligned}
+$$
+
+$$
+\dot{E}_{ijk} = \dot{\E}_3(v_i, v_j, v_k) + \dot{\E}_2(v_i, w_{jk}) + \dot{\E}_2(v_j, w_{ik}) + \dot{\E}_2(v_k, w_{ij}).
+$$
+
+$$
+\begin{aligned}[b]
+\tfrac{1}{3} \E_4(v_i, v_j, v_k, v_l) \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l
+- \order[1]{\lambda} \, \dot{\E}_2(v_i, w_{jk}) \, \order[1]{\xi}_j \, \order[1]{\xi}_k
+- \lambda_k \, \dot{E}_{ij} \, \order[1]{\xi}_j \order[2]{\xi_k} &\\
++ \order[1]{\lambda} \, \bigl[ \dot{E}_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \ddot{E}_{ij} \bigr] \, \order[1]{\xi}_j
++ \order[1]{\xi}_j \, \order[2]{\lambda} \, \dot{E}_{ij} &= 0.
+\end{aligned}
+$$
+
+Eq. @eq-20230120210008 is used to eliminate $\lambda_k \, \dot{E}_{ij}$
+$$
+\begin{aligned}[b]
+\tfrac{1}{3} \E_4(v_i, v_j, v_k, v_l) \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l
+- \order[1]{\lambda} \, \dot{\E}_2(v_i, w_{jk}) \, \order[1]{\xi}_j \, \order[1]{\xi}_k
++ \bigl( E_{ijk} + \lambda_j \, \dot{E}_{ik} \bigr) \, \order[1]{\xi}_j \, \order[2]{\xi_k} &\\
++ \order[1]{\lambda} \, \bigl[ \dot{E}_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \ddot{E}_{ij} \bigr] \, \order[1]{\xi}_j
++ \order[1]{\xi}_j \, \order[2]{\lambda} \, \dot{E}_{ij} &= 0,
+\end{aligned}
+$$
+and, using Eq. @eq-20230116205753
+$$
+\begin{aligned}[b]
+\tfrac{1}{3} \E_4(v_i, v_j, v_k, v_l) \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l
+- \order[1]{\lambda} \, \dot{\E}_2(v_i, w_{jk}) \, \order[1]{\xi}_j \, \order[1]{\xi}_k
+ &\\
++ \order[1]{\lambda} \, \bigl[ \dot{E}_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \ddot{E}_{ij} \bigr] \, \order[1]{\xi}_j
+  + \bigl( E_{ijk}  \, \order[1]{\xi}_k  + \order[1]{\lambda} \, \dot{E}_{ij} \bigr) \, \order[2]{\xi}_j + \order[2]{\lambda} \, \dot{E}_{ij}  \, \order[1]{\xi}_j&= 0,
+\end{aligned}
+$$
+
+## Bookmark
 
 We now turn to $w$ \begin{equation}
   w'(\eta) = w_{,i} \, \xi_i' + w_{,\lambda} \, \lambda'

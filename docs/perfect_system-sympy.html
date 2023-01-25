@@ -112,6 +112,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./technical_proofs.html" rel="next">
 <link href="./references.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -218,6 +219,11 @@ div.csl-indent {
   <a href="./perfect_system-sympy.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Bifurcation equations of the perfect system</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./technical_proofs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Technical proofs</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -236,7 +242,6 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#sec-20230102030010" id="toc-sec-20230102030010" class="nav-link" data-scroll-target="#sec-20230102030010"><span class="toc-section-number">A.4.1</span>  Elimination of <span class="math inline">\(w\)</span></a></li>
   <li><a href="#sec-20230102030125" id="toc-sec-20230102030125" class="nav-link" data-scroll-target="#sec-20230102030125"><span class="toc-section-number">A.4.2</span>  Elimination of <span class="math inline">\(\lambda\)</span></a></li>
-  <li><a href="#sec-20230102030224" id="toc-sec-20230102030224" class="nav-link" data-scroll-target="#sec-20230102030224"><span class="toc-section-number">A.4.3</span>  Parametrization of the bifurcated branch</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -552,7 +557,7 @@ u = u^\ast(\lambda) + \xi_i \, v_i + w, \quad \text{with} \quad w \in W.
 <ol type="1">
 <li>Eq. (<a href="#eq-20230107164346"><span>A.3</span></a>) is first expressed for <span class="math inline">\(\hat{u} \in W\)</span> which leads to a definition of <span class="math inline">\(w\)</span> as an implicit function of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> and <span class="math inline">\(\lambda\)</span> (see <a href="#sec-20230102030010"><span>Section&nbsp;A.4.1</span></a>),</li>
 <li>Eq. (<a href="#eq-20230107164346"><span>A.3</span></a>) is then expressed for <span class="math inline">\(\hat{u} \in V\)</span> which leads to a definition of <span class="math inline">\(\lambda\)</span> as an implicit function of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> (see <a href="#sec-20230102030125"><span>Section&nbsp;A.4.2</span></a>),</li>
-<li>finally, a parametrization <span class="math inline">\(\eta\)</span> of <span class="math inline">\(\xi_1\)</span>, <span class="math inline">\(\xi_m\)</span> is introduced and the Taylor expansion of <span class="math inline">\(u\)</span> and <span class="math inline">\(\lambda\)</span> with respect to <span class="math inline">\(\eta\)</span> is derived (see <a href="#sec-20230102030224"><span>Section&nbsp;A.4.3</span></a>).</li>
+<li>finally, a parametrization <span class="math inline">\(\eta\)</span> of <span class="math inline">\(\xi_1\)</span>, <span class="math inline">\(\xi_m\)</span> is introduced and the Taylor expansion of <span class="math inline">\(u\)</span> and <span class="math inline">\(\lambda\)</span> with respect to <span class="math inline">\(\eta\)</span> is derived (see <span class="quarto-unresolved-ref">?sec-20230102030224</span>).</li>
 </ol>
 <section id="sec-20230102030010" class="level3" data-number="A.4.1">
 <h3 data-number="A.4.1" class="anchored" data-anchor-id="sec-20230102030010"><span class="header-section-number">A.4.1</span> Elimination of <span class="math inline">\(w\)</span></h3>
@@ -692,7 +697,7 @@ Important
 <p>We first introduce the asymptotic expansion, of <span class="math inline">\((\xi_1, \ldots, \xi_m, \lambda) \mapsto w(\xi_1, \ldots, \xi_m, \lambda)\)</span>, <span class="math inline">\((\xi_1, \ldots, \xi_m) \mapsto \lambda(\xi_1, \ldots, \xi_m)\)</span> and finally <span class="math inline">\((\xi_1, \ldots, \xi_m) \mapsto u(\xi_1, \ldots, \xi_m)\)</span> see Eqs. (<a href="#eq-20230107172048"><span>A.5</span></a>), (<a href="#eq-20230110091031"><span>A.9</span></a>) and (<a href="#eq-20220902174235"><span>A.2</span></a>).</p>
 <div class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>w_bif <span class="op">=</span> (t <span class="op">*</span> λ <span class="op">*</span> sp.Symbol(<span class="vs">r"\bigl(\xi_k\,w_{k\lambda}\bigr)"</span>) </span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>         <span class="op">+</span> (t <span class="op">*</span> λ)<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> sp.Symbol(<span class="vs">r"\bigl(\xi_i\,\xi_j\,w_</span><span class="sc">{ij}</span><span class="vs">\bigr)"</span>))</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>         <span class="op">+</span> t <span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> sp.Symbol(<span class="vs">r"\bigl(\xi_i\,\xi_j\,w_</span><span class="sc">{ij}</span><span class="vs">\bigr)"</span>))</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>λ_bif <span class="op">=</span> (t <span class="op">*</span> sp.Symbol(<span class="vs">r"\bigl(\xi_</span><span class="sc">{p}</span><span class="vs">\,\lambda_</span><span class="sc">{p}</span><span class="vs">\bigr)"</span>)</span>
 <span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>         <span class="op">+</span> t<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> sp.Symbol(<span class="vs">r"\bigl(\xi_m\,\xi_n\,\lambda_</span><span class="sc">{mn}</span><span class="vs">\bigr)"</span>))</span>
@@ -707,13 +712,13 @@ Important
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>display_latex_equation(<span class="vs">r"u(\xi_1, \ldots, \xi_m)"</span>, u_bif)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle w(\xi_1, \ldots, \xi_m, \lambda)=\frac{\bigl(\xi_i\,\xi_j\,w_{ij}\bigr) \lambda^{2} t^{2}}{2} + \bigl(\xi_k\,w_{k\lambda}\bigr) \lambda t\)</span></p>
+<p><span class="math inline">\(\displaystyle w(\xi_1, \ldots, \xi_m, \lambda)=\frac{\bigl(\xi_i\,\xi_j\,w_{ij}\bigr) t^{2}}{2} + \bigl(\xi_k\,w_{k\lambda}\bigr) \lambda t\)</span></p>
 </div>
 <div class="cell-output cell-output-display">
 <p><span class="math inline">\(\displaystyle \lambda(\xi_1, \ldots, \xi_m)=\frac{\bigl(\xi_m\,\xi_n\,\lambda_{mn}\bigr) t^{2}}{2} + \bigl(\xi_{p}\,\lambda_{p}\bigr) t\)</span></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle u(\xi_1, \ldots, \xi_m)=\frac{\bigl(\xi_i\,\xi_j\,w_{ij}\bigr) \lambda^{2} t^{2}}{2} + \bigl(\xi_k\,w_{k\lambda}\bigr) \lambda t + \bigl(\xi_{l}\,v_{l}\bigr) t + \frac{\ddddot{u}_0 \lambda^{4}}{24} + \frac{\dddot{u}_0 \lambda^{3}}{6} + \frac{\ddot{u}_0 \lambda^{2}}{2} + \dot{u}_0 \lambda\)</span></p>
+<p><span class="math inline">\(\displaystyle u(\xi_1, \ldots, \xi_m)=\frac{\bigl(\xi_i\,\xi_j\,w_{ij}\bigr) t^{2}}{2} + \bigl(\xi_k\,w_{k\lambda}\bigr) \lambda t + \bigl(\xi_{l}\,v_{l}\bigr) t + \frac{\ddddot{u}_0 \lambda^{4}}{24} + \frac{\dddot{u}_0 \lambda^{3}}{6} + \frac{\ddot{u}_0 \lambda^{2}}{2} + \dot{u}_0 \lambda\)</span></p>
 </div>
 </div>
 <p>The above expansions are plugged in the general expression of <span class="math inline">\(\E_{,u}(u, \lambda; \bullet)\)</span> and tested with <span class="math inline">\(\hat{v} \in V\)</span>, see Eq. (<a href="#eq-20230110092313"><span>A.8</span></a>).</p>
@@ -750,94 +755,29 @@ Note
 <p><span class="math inline">\(\displaystyle \frac{\E_{3} \bigl(\xi_{l}\,v_{l}\bigr)^{2} \hat{v}}{2} + \bigl(\xi_{l}\,v_{l}\bigr) \bigl(\xi_{p}\,\lambda_{p}\bigr) \dot{\E}_2 \hat{v}=0\)</span></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \E_{3} \bigl(\xi_k\,w_{k\lambda}\bigr) \bigl(\xi_{l}\,v_{l}\bigr) \bigl(\xi_{p}\,\lambda_{p}\bigr) \hat{v} + \frac{\E_{4} \bigl(\xi_{l}\,v_{l}\bigr)^{3} \hat{v}}{6} + \bigl(\xi_k\,w_{k\lambda}\bigr) \bigl(\xi_{p}\,\lambda_{p}\bigr)^{2} \dot{\E}_2 \hat{v} + \frac{\bigl(\xi_m\,\xi_n\,\lambda_{mn}\bigr) \bigl(\xi_{l}\,v_{l}\bigr) \dot{\E}_2 \hat{v}}{2} + \frac{\bigl(\xi_{l}\,v_{l}\bigr)^{2} \bigl(\xi_{p}\,\lambda_{p}\bigr) \dot{\E}_3 \hat{v}}{2} + \frac{\bigl(\xi_{l}\,v_{l}\bigr) \bigl(\xi_{p}\,\lambda_{p}\bigr)^{2} \ddot{\E}_2 \hat{v}}{2}=0\)</span></p>
+<p><span class="math inline">\(\displaystyle \frac{\E_{3} \bigl(\xi_i\,\xi_j\,w_{ij}\bigr) \bigl(\xi_{l}\,v_{l}\bigr) \hat{v}}{2} + \E_{3} \bigl(\xi_k\,w_{k\lambda}\bigr) \bigl(\xi_{l}\,v_{l}\bigr) \bigl(\xi_{p}\,\lambda_{p}\bigr) \hat{v} + \frac{\E_{4} \bigl(\xi_{l}\,v_{l}\bigr)^{3} \hat{v}}{6} + \frac{\bigl(\xi_i\,\xi_j\,w_{ij}\bigr) \bigl(\xi_{p}\,\lambda_{p}\bigr) \dot{\E}_2 \hat{v}}{2} + \bigl(\xi_k\,w_{k\lambda}\bigr) \bigl(\xi_{p}\,\lambda_{p}\bigr)^{2} \dot{\E}_2 \hat{v} + \frac{\bigl(\xi_m\,\xi_n\,\lambda_{mn}\bigr) \bigl(\xi_{l}\,v_{l}\bigr) \dot{\E}_2 \hat{v}}{2} + \frac{\bigl(\xi_{l}\,v_{l}\bigr)^{2} \bigl(\xi_{p}\,\lambda_{p}\bigr) \dot{\E}_3 \hat{v}}{2} + \frac{\bigl(\xi_{l}\,v_{l}\bigr) \bigl(\xi_{p}\,\lambda_{p}\bigr)^{2} \ddot{\E}_2 \hat{v}}{2}=0\)</span></p>
 </div>
 </div>
 <p>The above bifurcation equations should be understood as follows <span id="eq-20230115101130"><span class="math display">\[
-\xi_j \, \xi_k \, \bigl[ \tfrac{1}{2} \, \E_3(v_j, v_k, \hat{v}) + \lambda_k \, \dot{\E}_2(v_j, \hat{v}) \bigr] = 0
+\xi_j \, \xi_k \, \bigl[
+\tfrac{1}{2} \E_3(v_j, v_k, \hat{v})
++ \lambda_k \, \dot{\E}_2(v_j, \hat{v})
+\bigr] = 0
 \tag{A.10}\]</span></span> and <span id="eq-20230115101147"><span class="math display">\[
 \begin{aligned}[b]
-\xi_j \, \xi_k \, \xi_l \, \bigl[ \lambda_l \, \E_3(w_{j\lambda}, v_k, \hat{v}) + \tfrac{1}{6} \E_4(v_j, v_k, v_l, \hat{v}) + \lambda_k \, \lambda_l \, \dot{\E}_2(w_{j\lambda}, \hat{v}) &amp;\\
-+ \tfrac{1}{2} \lambda_{kl} \, \dot{\E}_2(v_j, \hat{v}) + \tfrac{1}{2} \lambda_l \, \dot{\E}_3(v_j, v_k, \hat{v}) + \tfrac{1}{2} \lambda_k \, \lambda_l \, \ddot{\E}_2(v_j, \hat{v})\bigr] &amp;= 0.
+\xi_j \, \xi_k \, \xi_l \, \bigl[
+\tfrac{1}{2} \E_3(v_j, w_{kl}, \hat{v})
++ \lambda_l \, \E_3(v_j, w_{k\lambda}, \hat{v})
++ \tfrac{1}{6} \E_4(v_j, v_k, v_l, \hat{v}) &amp;\\
++ \tfrac{1}{2} \lambda_l \, \dot{\E}_2(w_{jk}, \hat{v})
++ \lambda_k \, \lambda_l \, \dot{\E}_2(w_{j\lambda}, \hat{v})
++ \tfrac{1}{2} \lambda_{kl} \, \dot{\E}_2(v_j, \hat{v}) &amp;\\
++ \tfrac{1}{2} \lambda_l \, \dot{\E}_3(v_j, v_k, \hat{v})
++ \tfrac{1}{2} \lambda_k \, \lambda_l \, \ddot{\E}_2(v_j, \hat{v})
+\bigr] &amp;= 0.
 \end{aligned}
 \tag{A.11}\]</span></span></p>
-<p>Note that the above equations are in fact <em>asymptotic expansions</em>. As such, they should hold for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> sufficiently small. Since both equations are homogeneous in <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>, it is equivalent to require these to hold for all <span class="math inline">\(\xi_1, \ldots, \xi_m \in \reals\)</span>.</p>
-<p>Owing to the contraction with <span class="math inline">\(\xi_j\)</span> and <span class="math inline">\(\xi_k\)</span>, Eq. (<a href="#eq-20230115101130"><span>A.10</span></a>) can be symmetrized with respect to these two indices, leading to <span class="math display">\[
-\xi_j \, \xi_k \, \bigl[ 2\E_3(v_j, v_k, \hat{v}) + \lambda_k \, \dot{\E}_2(v_j, \hat{v}) + \lambda_j \, \dot{\E}_2(v_k, \hat{v}) \bigr] = 0
-\]</span> and, testing with <span class="math inline">\(\hat{v} = v_i\)</span> <span id="eq-20230115101653"><span class="math display">\[
-2E_{ijk} + \lambda_k \, \dot{E}_{ij} + \lambda_j \, \dot{E}_{ik} = 0,
-\tag{A.12}\]</span></span> with <span class="math display">\[
-E_{ijk} = \E_3(v_i, v_j, v_k) \quad \text{and} \quad \dot{E}_{ij} = \dot{\E}_2(v_i, v_j).
-\]</span></p>
-<p>Similarly, testing Eq. (<a href="#eq-20230115101147"><span>A.11</span></a>) with <span class="math inline">\(\hat{v} = v_i\)</span> delivers <span class="math display">\[
-\begin{aligned}
-\xi_j \, \xi_k \, \xi_l \, \bigl[ \lambda_l \, \E_3(w_{j\lambda}, v_k, v_i) + \tfrac{1}{6} \E_4(v_i, v_j, v_k, v_l) + \lambda_k \, \lambda_l \, \dot{\E}_2(w_{j\lambda}, v_i) &amp;\\
-+ \tfrac{1}{2} \lambda_{kl} \, \dot{E}_{ij} + \tfrac{1}{2} \lambda_l \, \dot{\E}_2(v_i, v_j, v_k) + \tfrac{1}{2} \lambda_k \, \lambda_l \, \ddot{\E}(v_i, v_j) \bigr] &amp;= 0,
-\end{aligned}
-\]</span></p>
-<p><span id="eq-20230115150229"><span class="math display">\[
-\begin{aligned}
-\xi_j \, \xi_k \, \xi_l \, \bigl\{ \tfrac{1}{3} \E_4(v_i, v_j, v_k, v_l) + \lambda_l \, \bigl[ 2\E_3(w_{j\lambda}, v_k, v_i) + \dot{\E}_3(v_i, v_j, v_k)\bigr] &amp;\\
-+ \lambda_k \, \lambda_l \, \bigl[ 2\dot{\E}_2(w_{j\lambda}, v_i) + \ddot{\E}_2(v_i, v_j)\bigr] + \lambda_{kl} \, \dot{E}_{ij} \bigr\} &amp;= 0,
-\end{aligned}
-\tag{A.13}\]</span></span></p>
-<p><span class="math display">\[
-\begin{aligned}
-\xi_j \, \xi_k \, \xi_l \, \bigl\{ \tfrac{1}{3} \E_4(v_i, v_j, v_k, v_l) + \lambda_l \, \bigl[ 2\E_3(w_{j\lambda}, v_k, v_i) + \dot{\E}_3(v_i, v_j, v_k)\bigr] &amp;\\
-+ \lambda_k \, \lambda_l \, \ddot{E}_{ij} + \lambda_{kl} \, \dot{E}_{ij} \bigr\} &amp;= 0,
-\end{aligned}
-\]</span></p>
-<p>Similarly, from Eq. (#eq-20230107180410) with <span class="math inline">\(\hat{w} = w_{j\lambda}\)</span> <span class="math display">\[
-\E_3(w_{j\lambda}, v_k, v_i) = \E_3(v_i, v_k, w_{j\lambda}) = -\E_2(w_{ik}, w_{j\lambda}) = -\E_2(w_{j\lambda}, w_{ik}),
-\]</span> and applying again Eq. (#eq-20230107180501) with <span class="math inline">\(\hat{w} = w_{ij}\)</span> <span class="math display">\[
-\E_3(w_{j\lambda}, v_k, v_i) = \dot{\E}_2(v_j, w_{ik}).
-\]</span></p>
-<p>Finally, contraction with <span class="math inline">\(\xi_j\)</span> and <span class="math inline">\(\xi_k\)</span> will allow for symmetrization with respect to <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span> <span class="math display">\[
-\begin{aligned}[b]
-2\xi_j \, \xi_k \, \E_3(w_{j\lambda}, v_k, v_i) &amp;= \xi_j \, \xi_k \, \bigl[ \dot{\E}_2(v_j, w_{ik}) + \dot{\E}_2(v_k, w_{ij}) \big]\\
-&amp;= \xi_j \, \xi_k \, \bigl[ \dot{\E}_2(v_i, w_{jk}) + \dot{\E}_2(v_j, w_{ik}) + \dot{\E}_2(v_k, w_{ij}) - \dot{\E}_2(v_i, w_{jk}) \big]
-\end{aligned}
-\]</span></p>
-<p>So far, Eq. (<a href="#eq-20230115150229"><span>A.13</span></a>) has been transformed as follows <span class="math display">\[
-\begin{aligned}
-\xi_j \, \xi_k \, \xi_l \, \bigl\{ \tfrac{1}{3} \E_4(v_i, v_j, v_k, v_l) + \lambda_k \, \lambda_l \, \ddot{E}_{ij} + \lambda_{kl} \, \dot{E}_{ij} + \lambda_l \, \bigl[ \dot{E}_{ijk} - \dot{\E}_2(v_i, w_{jk}) \bigr] \bigr\} &amp;=0
-\end{aligned}
-\]</span> where</p>
-<p><span class="math display">\[
-\begin{aligned}
-\E_4(v_i, v_j, v_k, v_l)
-+ \lambda_k \, \lambda_l \, \ddot{E}_{ij} + \lambda_j \, \lambda_l \, \ddot{E}_{ik} + \lambda_j \, \lambda_k \, \ddot{E}_{il}
-+ \lambda_{kl} \, \dot{E}_{ij} + \lambda_{jl} \, \dot{E}_{ik} + \lambda_{jk} \, \dot{E}_{il}\\
-+ \lambda_j \, \bigl[ \dot{E}_{ikl} - \dot{\E}_2(v_i, w_{kl}) \bigr] + \lambda_k \, \bigl[ \dot{E}_{ijl} - \dot{\E}_2(v_i, w_{jl}) \bigr] + \lambda_l \, \bigl[ \dot{E}_{ijk} - \dot{\E}_2(v_i, w_{jk}) \bigr] &amp;=0
-\end{aligned}
-\]</span></p>
-</section>
-<section id="sec-20230102030224" class="level3" data-number="A.4.3">
-<h3 data-number="A.4.3" class="anchored" data-anchor-id="sec-20230102030224"><span class="header-section-number">A.4.3</span> Parametrization of the bifurcated branch</h3>
-<p><span class="math display">\[
-T_{mnp} \, \xi_m \, \xi_n \, \xi_p = 0
-\]</span></p>
-<p>Derivation with respect to <span class="math inline">\(\xi_i\)</span></p>
-<p><span class="math display">\[
-T_{mnp} \, \delta_{im} \, \xi_n \, \xi_p + T_{mnp} \, \xi_m \, \delta_{in} \, \xi_p + T_{mnp} \, \xi_m \, \xi_n \, \delta_{ip} = 0
-\]</span></p>
-<p><span class="math display">\[
-T_{inp} \, \xi_n \, \xi_p + T_{mip} \, \xi_m \, \xi_p + T_{mni} \, \xi_m \, \xi_n = 0
-\]</span></p>
-<p><span class="math display">\[
-\xi_m \, \xi_n \, \bigl( T_{imn} + T_{min} + T_{mni} \bigr) = 0
-\]</span></p>
-<p>Derivation with respect to <span class="math inline">\(\xi_j\)</span></p>
-<p><span class="math display">\[
-\xi_n \, \bigl( T_{ijn} + T_{jin} + T_{jni} \bigr) + \xi_m \, \bigl( T_{imj} + T_{mij} + T_{mji} \bigr) = 0
-\]</span></p>
-<p><span class="math display">\[
-\xi_m \, \bigl( T_{ijm} + T_{jim} + T_{jmi} + T_{imj} + T_{mij} + T_{mji} \bigr) = 0
-\]</span></p>
-<p>Derivation with respect to <span class="math inline">\(\xi_k\)</span></p>
-<p><span class="math display">\[
-T_{ijk} + T_{ikj} + T_{jik} + T_{jki} + T_{kij} + T_{kji} = 0
-\]</span></p>
+<p>Note that these equations are in fact <em>asymptotic expansions</em>. As such, they should hold for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> sufficiently small. Since both equations are homogeneous in <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>, it is equivalent to require these to hold for all <span class="math inline">\(\xi_1, \ldots, \xi_m \in \reals\)</span>.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
@@ -989,6 +929,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./technical_proofs.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Technical proofs</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

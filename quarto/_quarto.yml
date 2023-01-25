@@ -15,6 +15,7 @@ book:
     - references.qmd
   appendices:
     - perfect_system-sympy.ipynb
+    - technical_proofs.qmd
 
 bibliography: LSK-notes.bib
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 2&nbsp; Problem setting</title>
+<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 2&nbsp; Setting up the stage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -30,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./mixed_derivatives.html" rel="next">
+<link href="./parametrization.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -71,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Problem setting</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up the stage</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -101,22 +164,17 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./problem_setting.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Problem setting</span></a>
+  <a href="./problem_setting.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up the stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mixed_derivatives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Expression of the mixed derivatives of the energy</span></a>
+  <a href="./parametrization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./parametrization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./kernel_hessian.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Kernel of the hessian of the energy</span></a>
+  <a href="./kernel_hessian.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kernel of the hessian of the energy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -149,14 +207,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-20230208081323" id="toc-sec-20230208081323" class="nav-link active" data-scroll-target="#sec-20230208081323"><span class="toc-section-number">2.1</span>  Mathematical setting</a></li>
+  <li><a href="#sec-20230103084732" id="toc-sec-20230103084732" class="nav-link" data-scroll-target="#sec-20230103084732"><span class="toc-section-number">2.2</span>  Computational setting</a></li>
+  <li><a href="#sec-20230208081549" id="toc-sec-20230208081549" class="nav-link" data-scroll-target="#sec-20230208081549"><span class="toc-section-number">2.3</span>  Elimination of the mixed derivatives of the energy</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-20230105101657" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Problem setting</span></span></h1>
+<h1 class="title"><span id="sec-20230105101657" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up the stage</span></span></h1>
 </div>
 
 
@@ -175,41 +241,271 @@ ul.task-list li input[type="checkbox"] {
 \newcommand{\D}{\mathrm{d}}
 \newcommand{\E}{\mathcal{E}}
 \]</span></p>
-<p>The space of admissible states of the system under consideration is denoted <span class="math inline">\(U\)</span>. It has the structure of a real vector space. The energy of the system is <span class="math inline">\(\E(u, \lambda)\)</span>, where <span class="math inline">\(\lambda\)</span> denotes a loading parameter. It is assumed that the fundamental branch of the equilibrium diagram, <span class="math inline">\(u^\ast(\lambda)\)</span> is known. Then the energy is stationary with respect to the state <span class="math inline">\(u\)</span> along the whole branch. In other words, for all <span class="math inline">\(\hat{u} \in U\)</span></p>
-<p><span id="eq-20221227184138"><span class="math display">\[
+<p>In this chapter, we define the general framework for the analysis of a perfect mechanical system. Notations are defined in <a href="#sec-20230208081323"><span>Section&nbsp;2.1</span></a>. Then, the <a href="https://www.sympy.org">SymPy</a> library is set up in <a href="#sec-20230103084732"><span>Section&nbsp;2.2</span></a>. Finally, the energy of the system is rewritten in a more convenient form in <a href="#sec-20230208081549"><span>Section&nbsp;2.3</span></a>.</p>
+<section id="sec-20230208081323" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="sec-20230208081323"><span class="header-section-number">2.1</span> Mathematical setting</h2>
+<p>The space of admissible states of the system under consideration is denoted <span class="math inline">\(U\)</span>. It has the structure of a real vector space. The energy of the system is <span class="math inline">\(\E(u, \lambda)\)</span>, where <span class="math inline">\(\lambda\)</span> denotes a loading parameter. It is assumed that the fundamental branch of the equilibrium diagram, <span class="math inline">\(u^\ast(\lambda)\)</span> is known. Then the energy is stationary with respect to the state <span class="math inline">\(u\)</span> along the whole branch. In other words, for all <span class="math inline">\(\hat{u} \in U\)</span> <span id="eq-20221227184138"><span class="math display">\[
 \E_{,u}[u^{\ast}(\lambda), \lambda; \hat{u}]=0,
-\tag{2.1}\]</span></span></p>
-<p>where <span class="math inline">\(\E_{,u}(u, \lambda; \hat{u})\)</span> denotes the (real) value of the differential of the energy <span class="math inline">\(\E\)</span> with respect to the state <span class="math inline">\(u\)</span>, evaluated at <span class="math inline">\((u, \lambda)\)</span>, for the test function <span class="math inline">\(\hat{u}\)</span>. Similarly, evaluation of the second-, third-, etc., order differential of the energy will be denoted <span class="math inline">\(\E_{,uu}(u, \lambda; \hat{u}, \hat{v})\)</span>, <span class="math inline">\(\E_{,uuu}(u, \lambda; \hat{u}, \hat{v}, \hat{w})\)</span>, etc. It is assumed that a finite value <span class="math inline">\(\lambda_0 &gt; 0\)</span> of <span class="math inline">\(\lambda\)</span> can be found (critical load), such that</p>
+\tag{2.1}\]</span></span> where <span class="math inline">\(\E_{,u}(u, \lambda; \hat{u})\)</span> denotes the (real) value of the differential of the energy <span class="math inline">\(\E\)</span> with respect to the state <span class="math inline">\(u\)</span>, evaluated at <span class="math inline">\((u, \lambda)\)</span>, for the test function <span class="math inline">\(\hat{u}\)</span>. Similarly, evaluation of the second-, third-, etc., order differential of the energy will be denoted <span class="math inline">\(\E_{,uu}(u, \lambda; \hat{u}, \hat{v})\)</span>, <span class="math inline">\(\E_{,uuu}(u, \lambda; \hat{u}, \hat{v}, \hat{w})\)</span>, etc. It is assumed that a finite value <span class="math inline">\(\lambda_0 &gt; 0\)</span> of <span class="math inline">\(\lambda\)</span> can be found (critical load), such that</p>
 <ol type="1">
 <li><span class="math inline">\(\E_{,uu}[u(\lambda), \lambda] &gt; 0\)</span> for all <span class="math inline">\(0 &lt; \lambda &lt; \lambda_0\)</span>,</li>
 <li><span class="math inline">\(\E_{,uu}(u_0, \lambda_0) \geq 0\)</span> but <span class="math inline">\(\E_{,uu}(u_0, \lambda_0) \ngtr 0\)</span>,</li>
 <li><span class="math inline">\(\E_{,uu}[u(\lambda), \lambda] &lt; 0\)</span> for <span class="math inline">\(\lambda &gt; \lambda_0\)</span>, close enough to <span class="math inline">\(\lambda_0\)</span>.</li>
 </ol>
-<p>We introduce the following notations</p>
-<p><span class="math display">\[
+<p>The load <span class="math inline">\(\lambda_0\)</span> will be referred to as the <em>critical load</em>; similarly, the state <span class="math inline">\(u_0\)</span> of the system at the critical load will be referred to as the <em>critical state</em>; finally, the pair <span class="math inline">\((u_0, \lambda_0)\)</span> is the <em>critical point</em> of the system. Assumption 1 implies that equilibria along the fundamental branch are <em>stable below the critical load</em>. Conversely, it results from assumption 3 that equilibrium points on the fundamental branch are <em>unstable above the critical load</em>. Stability at the critical load is yet undetermined.</p>
+<p>The goal of these notes is to analyze <em>all</em> equilibrium paths that pass through the critical point <span class="math inline">\((u_0, \lambda_0)\)</span>.</p>
+<p>We introduce the following notations <span class="math display">\[
 u_0 = u^\ast(\lambda_0), \quad \dot{u}_0 = \frac{\D u^\ast}{\D \lambda} \biggr \rvert_{\lambda=\lambda_0}, \quad \ddot{u}_0 = \frac{\D^2 u^\ast}{\D \lambda^2} \biggr \rvert_{\lambda=\lambda_0}, \quad \dddot{u}_0 = \ldots, \quad \ddddot{u}_0 = \ldots
-\]</span></p>
-<p>and</p>
-<p><span class="math display">\[
+\]</span> and <span class="math display">\[
 \E_2 = \E_{,uu}(u_0, \lambda_0), \quad \E_3 = \E_{,uuu}(u_0, \lambda_0), \quad \E_4 = \E_{,uuuu}(u_0, \lambda_0).
 \]</span></p>
-<p>Note that <span class="math inline">\(\E_2\)</span>, <span class="math inline">\(\E_3\)</span> and <span class="math inline">\(\E_4\)</span> thus defined are bi-, tri- and quadrilinear forms, respectively. The following derivatives are also introduced</p>
-<p><span id="eq-20221227184821"><span class="math display">\[
+<p>Note that <span class="math inline">\(\E_2\)</span>, <span class="math inline">\(\E_3\)</span> and <span class="math inline">\(\E_4\)</span> thus defined are bi-, tri- and quadrilinear forms, respectively. The following derivatives are also introduced <span id="eq-20221227184821"><span class="math display">\[
 \dot{\E}_2(\hat{u}, \hat{v}) = \frac{\D}{\D\lambda} \E_{,uu}[ u^\ast(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0}
 = \E_{,uuu}(u_0, \lambda_0; \dot{u}_0, \hat{u}, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; \hat{u}, \hat{v})
-\tag{2.2}\]</span></span></p>
-<p><span class="math display">\[
+\tag{2.2}\]</span></span> <span class="math display">\[
   \begin{aligned}[b]
     \ddot{\E}_2(\hat{u}, \hat{v}) = \frac{\D^2}{\D\lambda^2} \E_{,uu}[ u^\ast(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0}
     ={} &amp; \E_{,uuuu}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{u}, \hat{v}) + 2\E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{u}, \hat{v})\\
     &amp; + \E_{,uu\lambda\lambda}( u_0, \lambda_0; \hat{u}, \hat{v}) + \E_{,uuu}(u_0, \lambda_0, \ddot{u}_0),
   \end{aligned}
+\]</span> and, similarly, <span class="math inline">\(\dot{\E}_3\)</span>, <span class="math inline">\(\ddot{\E}_3\)</span>, etc.</p>
+</section>
+<section id="sec-20230103084732" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-20230103084732"><span class="header-section-number">2.2</span> Computational setting</h2>
+<p>We will use the <a href="https://www.python.org">Python</a> library <a href="https://www.sympy.org">SymPy</a> for symbolic mathematics and rely also on the <a href="https://ipython.org/">IPython</a> library (in particular, <a href="https://ipython.readthedocs.io/en/stable/api/generated/IPython.display.html#IPython.display.Math">IPython.display.Math</a>) for pretty <span class="math inline">\(\LaTeX\)</span> output. Some useful functions are defined in the <code>lsk.py</code> module, which will be systematically imported.</p>
+<p>Without loss of generality, it will be assumed in all symbolic calculations that <span class="math inline">\(\lambda_0 = 0\)</span> and <span class="math inline">\(u_0 = 0\)</span>. The general case <span class="math inline">\(\lambda_0 \neq 0\)</span> and <span class="math inline">\(u_0 \neq 0\)</span> is readily recovered through the substitution <span class="math inline">\(\lambda \leftrightarrow \lambda - \lambda_0\)</span> and <span class="math inline">\(u \leftrightarrow u - u_0\)</span>.</p>
+<p>The following developments involve the energy <span class="math inline">\((u, \lambda) \mapsto \E(u, \lambda)\)</span> and its differentials at the critical point <span class="math inline">\((u_0, \lambda_0)\)</span>, as well as the fundamental path <span class="math inline">\(\lambda \mapsto u^\ast(\lambda)\)</span> and its derivatives at <span class="math inline">\(\lambda = \lambda_0\)</span>. It will therefore be convenient to express <span class="math inline">\(\E\)</span> and <span class="math inline">\(u^\star\)</span> as Taylor expansions with respect to <span class="math inline">\(u\)</span> and <span class="math inline">\(\lambda\)</span>.</p>
+<p>We start with the Taylor expansion of the energy <span class="math inline">\(\E\)</span>. We define its differentials at the critical point. These differentials are stored in a dictionary. Values are indexed with the order of the differentials with respect to <span class="math inline">\(u\)</span> and <span class="math inline">\(\lambda\)</span>.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the following code blocks, <code>n</code> is the total order of the differential, <code>p</code> is the order of the differential with respect to <span class="math inline">\(u\)</span> and <code>q = n - p</code> is the order of the differential with respect to <span class="math inline">\(\lambda\)</span>.</p>
+</div>
+</div>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lsk <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>λ, u, v, u_hat, v_hat, w_hat <span class="op">=</span> sympy.symbols(<span class="vs">r"\lambda u v \hat</span><span class="sc">{u}</span><span class="vs"> \hat</span><span class="sc">{v}</span><span class="vs"> \hat</span><span class="sc">{w}</span><span class="vs">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dE <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">5</span>):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> p <span class="kw">in</span> <span class="bu">range</span>(n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        q <span class="op">=</span> n <span class="op">-</span> p</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> q <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>            dE[p, q] <span class="op">=</span> sympy.Symbol(<span class="vs">r"\E_</span><span class="sc">{}</span><span class="vs">"</span>.<span class="bu">format</span>(p))</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>            dE[p, q] <span class="op">=</span> sympy.Symbol(<span class="vs">r"\E_{"</span> <span class="op">+</span> p <span class="op">*</span> <span class="st">"u"</span> <span class="op">+</span> q <span class="op">*</span> <span class="st">"\lambda"</span> <span class="op">+</span> <span class="st">"}"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Remember that the energy is stationary at the critical point (equilibrium)</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>dE[<span class="dv">1</span>, <span class="dv">0</span>] <span class="op">=</span> zero</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The dictionary <code>dE</code> should be understood as follows: <code>dE[(2, 1)] == dE[2, 1]</code> is the symbol <span class="math inline">\(\E_{uu\lambda}\)</span>, which stands for <span class="math inline">\(\E_{,uu\lambda}(u_0, \lambda_0; \bullet, \bullet)\)</span>. The following symbols have been defined.</p>
+<div class="cell" data-execution_count="3">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>_dict <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">5</span>):</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> p <span class="kw">in</span> <span class="bu">range</span>(n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        q <span class="op">=</span> n <span class="op">-</span> p</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        _dict[dE[p, q]] <span class="op">=</span> (<span class="st">"</span><span class="ch">\\</span><span class="st">E_{,"</span> <span class="op">+</span> p <span class="op">*</span> <span class="st">"u"</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                           <span class="op">+</span> q <span class="op">*</span> <span class="st">"</span><span class="ch">\\</span><span class="st">lambda"</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                           <span class="op">+</span> <span class="st">"}(u_0, \lambda_0)"</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>display_latex_dict(_dict, num_cols<span class="op">=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><span class="math inline">\(\displaystyle \begin{align}\E_{\lambda}&amp;=\E_{,\lambda}(u_0, \lambda_0)&amp;0&amp;=\E_{,u}(u_0, \lambda_0)&amp;\E_{\lambda\lambda}&amp;=\E_{,\lambda\lambda}(u_0, \lambda_0)\\\E_{u\lambda}&amp;=\E_{,u\lambda}(u_0, \lambda_0)&amp;\E_{2}&amp;=\E_{,uu}(u_0, \lambda_0)&amp;\E_{\lambda\lambda\lambda}&amp;=\E_{,\lambda\lambda\lambda}(u_0, \lambda_0)\\\E_{u\lambda\lambda}&amp;=\E_{,u\lambda\lambda}(u_0, \lambda_0)&amp;\E_{uu\lambda}&amp;=\E_{,uu\lambda}(u_0, \lambda_0)&amp;\E_{3}&amp;=\E_{,uuu}(u_0, \lambda_0)\\\E_{\lambda\lambda\lambda\lambda}&amp;=\E_{,\lambda\lambda\lambda\lambda}(u_0, \lambda_0)&amp;\E_{u\lambda\lambda\lambda}&amp;=\E_{,u\lambda\lambda\lambda}(u_0, \lambda_0)&amp;\E_{uu\lambda\lambda}&amp;=\E_{,uu\lambda\lambda}(u_0, \lambda_0)\\\E_{uuu\lambda}&amp;=\E_{,uuu\lambda}(u_0, \lambda_0)&amp;\E_{4}&amp;=\E_{,uuuu}(u_0, \lambda_0)&amp;\end{align}\)</span></p>
+</div>
+</div>
+<p>where</p>
+<ul>
+<li><span class="math inline">\(\E_\lambda\)</span>, <span class="math inline">\(\E_{\lambda\lambda}\)</span>, <span class="math inline">\(\E_{\lambda\lambda\lambda}\)</span> and <span class="math inline">\(\E_{\lambda\lambda\lambda\lambda}\)</span> are <em>scalar quantities</em>,</li>
+<li><span class="math inline">\(\E_{u\lambda}\)</span>, <span class="math inline">\(\E_{u\lambda\lambda}\)</span> and <span class="math inline">\(\E_{u\lambda\lambda\lambda}\)</span> are <em>linear forms</em>,</li>
+<li><span class="math inline">\(\E_2\)</span>, <span class="math inline">\(\E_{uu\lambda}\)</span> and <span class="math inline">\(\E_{uu\lambda\lambda}\)</span> are <em>bilinear forms</em>,</li>
+<li><span class="math inline">\(\E_3\)</span> and <span class="math inline">\(\E_{uuu\lambda}\)</span> are <em>trilinear forms</em>,</li>
+<li><span class="math inline">\(\E_4\)</span> is a <em>quadrilinear form</em>.</li>
+</ul>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that all these differentials are defined as SymPy <em>scalars</em>. A definition as a SymPy <em>function</em> (e.g.&nbsp;<code>E2 = Function(r"\E_2")</code>) would be more appropriate. However, SymPy would fail to account for multilinearity or symmetry of these forms. Therefore, we use the following trick: all multi-linear forms are defined as scalars, and the standard multiplication operator <code>*</code> means function application. In other words, <code>E2 * (α * u + β * v) * w</code> (resp. <code>E2 * u * v - E2 * v * u</code>) should be understood as <code>E2(α * u + β * v, w)</code> (resp. <code>E2(u, v) - E2(v, u)</code>). In both cases, the expressions would are correctly simplified.</p>
+<p>Whether the symbols in an expression are true scalars or vectors (elements of <span class="math inline">\(U\)</span>) should be clear from the context. For example, in the expression: <code>λ * E2 * u * v</code>, the first <code>*</code> is a true multiplication, while the other <code>*</code> refer to function application.</p>
+</div>
+</div>
+<p>The energy <span class="math inline">\(\E(u, \lambda)\)</span> is now expressed as a Taylor expansion about the critical point.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>_f <span class="op">=</span> <span class="kw">lambda</span> p, q: sympy.binomial(p <span class="op">+</span> q, p) <span class="op">/</span> sympy.factorial(p <span class="op">+</span> q)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> <span class="bu">sum</span>(_f(p, q) <span class="op">*</span> dE_pq <span class="op">*</span> u<span class="op">**</span>p <span class="op">*</span> λ<span class="op">**</span>q <span class="cf">for</span> (p, q), dE_pq <span class="kw">in</span> dE.items())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="5">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>display_latex_equation(<span class="vs">r"\E(u, \lambda)"</span>, E)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><span class="math inline">\(\displaystyle \E(u, \lambda)=\frac{\E_{2} u^{2}}{2} + \frac{\E_{3} u^{3}}{6} + \frac{\E_{4} u^{4}}{24} + \frac{\E_{\lambda\lambda\lambda\lambda} \lambda^{4}}{24} + \frac{\E_{\lambda\lambda\lambda} \lambda^{3}}{6} + \frac{\E_{\lambda\lambda} \lambda^{2}}{2} + \E_{\lambda} \lambda + \frac{\E_{u\lambda\lambda\lambda} \lambda^{3} u}{6} + \frac{\E_{u\lambda\lambda} \lambda^{2} u}{2} + \E_{u\lambda} \lambda u + \frac{\E_{uu\lambda\lambda} \lambda^{2} u^{2}}{4} + \frac{\E_{uu\lambda} \lambda u^{2}}{2} + \frac{\E_{uuu\lambda} \lambda u^{3}}{6}\)</span></p>
+</div>
+</div>
+<p>We now turn to the definition of the fundamental path <span class="math inline">\(\lambda \mapsto u^\star(\lambda)\)</span>. We first define in a dictionary the derivatives of <span class="math inline">\(u^\star\)</span> with respect to <span class="math inline">\(\lambda\)</span>, at <span class="math inline">\(\lambda = \lambda_0 = 0\)</span>. For example, <code>du_0[2]</code> is the symbol <span class="math inline">\(\ddot{u}_0\)</span>, which stands for <span class="math inline">\(\D^2 u^\star / \D \lambda^2 \rvert_{\lambda=\lambda_0}\)</span>.</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>du_0 <span class="op">=</span> {n: sympy.Symbol(<span class="st">"</span><span class="ch">\\</span><span class="st">"</span> <span class="op">+</span> <span class="st">""</span>.join(n <span class="op">*</span> (<span class="st">"d"</span>,)) <span class="op">+</span> <span class="st">"ot</span><span class="sc">{u}</span><span class="st">_0"</span>) <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">5</span>)}</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>_dict <span class="op">=</span> {<span class="ss">f"</span><span class="ch">\\</span><span class="ss">frac</span><span class="ch">{{\\</span><span class="ss">D^</span><span class="sc">{</span>k<span class="sc">}</span><span class="ss">u^</span><span class="ch">\\</span><span class="ss">ast</span><span class="ch">}}{{\\</span><span class="ss">D </span><span class="ch">\\</span><span class="ss">lambda^</span><span class="sc">{</span>k<span class="sc">}</span><span class="ch">}}</span><span class="ss">"</span> : v <span class="cf">for</span> k, v <span class="kw">in</span> du_0.items()}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="7">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>display_latex_dict(_dict, num_cols<span class="op">=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><span class="math inline">\(\displaystyle \begin{align}\frac{\D^1u^\ast}{\D \lambda^1}&amp;=\dot{u}_0&amp;\frac{\D^2u^\ast}{\D \lambda^2}&amp;=\ddot{u}_0&amp;\frac{\D^3u^\ast}{\D \lambda^3}&amp;=\dddot{u}_0&amp;\frac{\D^4u^\ast}{\D \lambda^4}&amp;=\ddddot{u}_0\\\end{align}\)</span></p>
+</div>
+</div>
+<p>The fundamental path is then defined through its Taylor expansion.</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>u_star <span class="op">=</span> <span class="bu">sum</span>(λ<span class="op">**</span>n <span class="op">/</span> sympy.factorial(n) <span class="op">*</span> v <span class="cf">for</span> n, v <span class="kw">in</span> du_0.items())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="9">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>display_latex_equation(<span class="vs">r"u^\star(\lambda)"</span>, u_star)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><span class="math inline">\(\displaystyle u^\star(\lambda)=\frac{\ddddot{u}_0 \lambda^{4}}{24} + \frac{\dddot{u}_0 \lambda^{3}}{6} + \frac{\ddot{u}_0 \lambda^{2}}{2} + \dot{u}_0 \lambda\)</span></p>
+</div>
+</div>
+<p>It will be assumed in the following that <span class="math inline">\(v, \hat{v} \in V\)</span>, therefore terms of the form <span class="math inline">\(\E_2(\bullet, v)\)</span> and <span class="math inline">\(\E_2(\bullet, \hat{v})\)</span> should vanish. The following function performs this simplification.</p>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's define a convenient alias to the Hessian</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>E2 <span class="op">=</span> dE[<span class="dv">2</span>, <span class="dv">0</span>]</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simplify_E2(expr):</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    expr <span class="op">=</span> expr.expand()</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    coeff_E2 <span class="op">=</span> expr.coeff(E2).expand()</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    coeff_E2_v <span class="op">=</span> coeff_E2.coeff(v)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    coeff_E2_v_hat <span class="op">=</span> (coeff_E2 <span class="op">-</span> coeff_E2_v <span class="op">*</span> v).expand().coeff(v_hat)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (expr <span class="op">-</span> (coeff_E2_v <span class="op">*</span> E2 <span class="op">*</span> v <span class="op">+</span> coeff_E2_v_hat <span class="op">*</span> E2 <span class="op">*</span> v_hat)).expand()</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> simplify_E2(E2 <span class="op">*</span> v) <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> simplify_E2(E2 <span class="op">*</span> v_hat) <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> simplify_E2(<span class="dv">3</span> <span class="op">*</span> v <span class="op">+</span> <span class="dv">4</span> <span class="op">*</span> v_hat <span class="op">+</span> <span class="dv">5</span> <span class="op">*</span> v <span class="op">*</span> v_hat <span class="op">+</span> <span class="dv">6</span> <span class="op">*</span> E2 <span class="op">*</span> v <span class="op">+</span> <span class="dv">7</span> <span class="op">*</span> E2 <span class="op">*</span> v_hat <span class="op">+</span> <span class="dv">8</span> <span class="op">*</span> E2 <span class="op">*</span> v <span class="op">*</span> v_hat) <span class="op">==</span> <span class="dv">3</span> <span class="op">*</span> v <span class="op">+</span> <span class="dv">4</span> <span class="op">*</span> v_hat <span class="op">+</span> <span class="dv">5</span> <span class="op">*</span> v <span class="op">*</span> v_hat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="sec-20230208081549" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-20230208081549"><span class="header-section-number">2.3</span> Elimination of the mixed derivatives of the energy</h2>
+<p>Since the fundamental path <span class="math inline">\(\lambda \mapsto u^\ast(\lambda)\)</span> is an equilibrium path, the various differentials of the energy at the critical point are not linearly independent. To express the relationships between these forms, we define <span class="math inline">\(\mathcal R^\ast(\lambda; \bullet)\)</span> as the jacobian of the energy along the fundamental path <span class="math inline">\(u^\ast(\lambda)\)</span> <span class="math display">\[
+\mathcal R^\ast(\lambda; \bullet) = \E_{,u}[u^\ast(\lambda), \lambda; \bullet].
 \]</span></p>
-<p>and, similarly, <span class="math inline">\(\dot{\E}_3\)</span>, <span class="math inline">\(\ddot{\E}_3\)</span>, etc.</p>
-<p>The load <span class="math inline">\(\lambda_0\)</span> will be referred to as the <em>critical load</em>; similarly, the state <span class="math inline">\(u_0\)</span> of the system at the critical load will be referred to as the <em>critical state</em>; finally, the pair <span class="math inline">\((u_0, \lambda_0)\)</span> is the <em>critical point</em> of the system. Assumption 1 implies that equilibria along the fundamental branch are <em>stable below the critical load</em>. Conversely, it results from assumption 3 that equilibrium points on the fundamental branch are <em>unstable above the critical load</em>. Stability at the critical load is yet undetermined.</p>
-<p>The goal of these notes is to analyze <em>all</em> equilibrium paths that pass through the critical point <span class="math inline">\((u_0, \lambda_0)\)</span>.</p>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>R_star <span class="op">=</span> (E.diff(u) <span class="op">*</span> u_hat).subs(u, u_star).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="12">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>display_latex_equation(<span class="vs">r"\mathcal</span><span class="sc">{R}</span><span class="vs">^\ast(\lambda;"</span> <span class="op">+</span> sympy.latex(u_hat) <span class="op">+</span> <span class="st">")"</span>,</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>                       R_star.series(λ, <span class="dv">0</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><span class="math inline">\(\displaystyle \mathcal{R}^\ast(\lambda;\hat{u})=\lambda \left(\E_{2} \dot{u}_0 \hat{u} + \E_{u\lambda} \hat{u}\right) + \lambda^{2} \left(\frac{\E_{2} \ddot{u}_0 \hat{u}}{2} + \frac{\E_{3} \dot{u}_0^{2} \hat{u}}{2} + \frac{\E_{u\lambda\lambda} \hat{u}}{2} + \E_{uu\lambda} \dot{u}_0 \hat{u}\right) + \lambda^{3} \left(\frac{\E_{2} \dddot{u}_0 \hat{u}}{6} + \frac{\E_{3} \ddot{u}_0 \dot{u}_0 \hat{u}}{2} + \frac{\E_{4} \dot{u}_0^{3} \hat{u}}{6} + \frac{\E_{u\lambda\lambda\lambda} \hat{u}}{6} + \frac{\E_{uu\lambda\lambda} \dot{u}_0 \hat{u}}{2} + \frac{\E_{uu\lambda} \ddot{u}_0 \hat{u}}{2} + \frac{\E_{uuu\lambda} \dot{u}_0^{2} \hat{u}}{2}\right) + \lambda^{4} \left(\frac{\E_{2} \ddddot{u}_0 \hat{u}}{24} + \frac{\E_{3} \dddot{u}_0 \dot{u}_0 \hat{u}}{6} + \frac{\E_{3} \ddot{u}_0^{2} \hat{u}}{8} + \frac{\E_{4} \ddot{u}_0 \dot{u}_0^{2} \hat{u}}{4} + \frac{\E_{uu\lambda\lambda} \ddot{u}_0 \hat{u}}{4} + \frac{\E_{uu\lambda} \dddot{u}_0 \hat{u}}{6} + \frac{\E_{uuu\lambda} \ddot{u}_0 \dot{u}_0 \hat{u}}{2}\right) + O\left(\lambda^{5}\right)\)</span></p>
+</div>
+</div>
+<p>Of course, since <span class="math inline">\(\lambda \mapsto u^\ast(\lambda)\)</span> is an equilibrium path, we have <span class="math inline">\(\mathcal R^\ast(\lambda; \bullet) = 0\)</span> for all <span class="math inline">\(\lambda\)</span>. Therefore, all coefficients of the above polynomial in <span class="math inline">\(\lambda\)</span> are null, which delivers expressions of <span class="math inline">\(\E_{u\lambda}\)</span>, <span class="math inline">\(\E_{u\lambda\lambda}\)</span> and <span class="math inline">\(\E_{u\lambda\lambda\lambda}\)</span></p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>mixed1 <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> q <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">4</span>):</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> dE[<span class="dv">1</span>, q]</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    eq <span class="op">=</span> R_star.coeff(λ, q)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    sol <span class="op">=</span> sympy.solve(eq, x)[<span class="dv">0</span>]</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    mixed1[x] <span class="op">=</span> sol</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="14">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>display_latex_dict(mixed1, num_cols<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><span class="math inline">\(\displaystyle \begin{align}\E_{u\lambda}&amp;=- \E_{2} \dot{u}_0\\\E_{u\lambda\lambda}&amp;=- \E_{2} \ddot{u}_0 - \E_{3} \dot{u}_0^{2} - 2 \E_{uu\lambda} \dot{u}_0\\\E_{u\lambda\lambda\lambda}&amp;=- \E_{2} \dddot{u}_0 - 3 \E_{3} \ddot{u}_0 \dot{u}_0 - \E_{4} \dot{u}_0^{3} - 3 \E_{uu\lambda\lambda} \dot{u}_0 - 3 \E_{uu\lambda} \ddot{u}_0 - 3 \E_{uuu\lambda} \dot{u}_0^{2}\\\end{align}\)</span></p>
+</div>
+</div>
+<p>We want to get rid of the remaining mixed derivatives, namely: <span class="math inline">\(\E_{uu\lambda}\)</span>, <span class="math inline">\(\E_{uuu\lambda}\)</span> and <span class="math inline">\(\E_{uu\lambda\lambda}\)</span>. To do so, we introduce the derivatives <span class="math inline">\(\dot{\E}_2\)</span>, <span class="math inline">\(\ddot{\E}_2\)</span> and <span class="math inline">\(\dot{\E}_3\)</span> defined in <a href="#sec-20230105101657"><span>Chapter&nbsp;2</span></a>.</p>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>E2_dot, E2_ddot, E3_dot <span class="op">=</span> sympy.symbols(<span class="st">"\dot{\E}_2 \ddot{\E}_2 \dot{\E}_3"</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>E_uu_star <span class="op">=</span> E.diff(u, <span class="dv">2</span>).subs(u, u_star).expand()</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>E_uuu_star <span class="op">=</span> E.diff(u, <span class="dv">3</span>).subs(u, u_star).expand()</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>eqs <span class="op">=</span> [sympy.Eq(E2_dot, E_uu_star.coeff(λ, <span class="dv">1</span>)),</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>       sympy.Eq(E3_dot, E_uuu_star.coeff(λ, <span class="dv">1</span>)),</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>       sympy.Eq(E2_ddot, <span class="dv">2</span> <span class="op">*</span> E_uu_star.coeff(λ, <span class="dv">2</span>))]</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>unknowns <span class="op">=</span> [dE[<span class="dv">2</span>, <span class="dv">1</span>], dE[<span class="dv">3</span>, <span class="dv">1</span>], dE[<span class="dv">2</span>, <span class="dv">2</span>]] <span class="co"># E_uuλ, E_uuuλ, E_uuλλ</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>mixed2 <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> eq, x <span class="kw">in</span> <span class="bu">zip</span>(eqs, unknowns):</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    mixed2[x] <span class="op">=</span> sympy.solve(eq, x)[<span class="dv">0</span>].subs(mixed2).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We get the following expressions</p>
+<div class="cell" data-execution_count="16">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>display_latex_dict(mixed2, num_cols<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><span class="math inline">\(\displaystyle \begin{align}\E_{uu\lambda}&amp;=- \E_{3} \dot{u}_0 + \dot{\E}_2\\\E_{uuu\lambda}&amp;=- \E_{4} \dot{u}_0 + \dot{\E}_3\\\E_{uu\lambda\lambda}&amp;=- \E_{3} \ddot{u}_0 + \E_{4} \dot{u}_0^{2} + \ddot{\E}_2 - 2 \dot{\E}_3 \dot{u}_0\\\end{align}\)</span></p>
+</div>
+</div>
+<p>Combining the above results allows to fully eliminate the mixed derivatives</p>
+<div class="cell" data-execution_count="17">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>mixed <span class="op">=</span> {k: v.subs(mixed2).expand() <span class="cf">for</span> k, v <span class="kw">in</span> mixed1.items()}</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>mixed.update(mixed2)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>display_latex_dict(mixed, num_cols<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><span class="math inline">\(\displaystyle \begin{align}\E_{u\lambda}&amp;=- \E_{2} \dot{u}_0\\\E_{u\lambda\lambda}&amp;=- \E_{2} \ddot{u}_0 + \E_{3} \dot{u}_0^{2} - 2 \dot{\E}_2 \dot{u}_0\\\E_{u\lambda\lambda\lambda}&amp;=- \E_{2} \dddot{u}_0 + 3 \E_{3} \ddot{u}_0 \dot{u}_0 - \E_{4} \dot{u}_0^{3} - 3 \ddot{\E}_2 \dot{u}_0 - 3 \ddot{u}_0 \dot{\E}_2 + 3 \dot{\E}_3 \dot{u}_0^{2}\\\E_{uu\lambda}&amp;=- \E_{3} \dot{u}_0 + \dot{\E}_2\\\E_{uuu\lambda}&amp;=- \E_{4} \dot{u}_0 + \dot{\E}_3\\\E_{uu\lambda\lambda}&amp;=- \E_{3} \ddot{u}_0 + \E_{4} \dot{u}_0^{2} + \ddot{\E}_2 - 2 \dot{\E}_3 \dot{u}_0\\\end{align}\)</span></p>
+</div>
+</div>
+<p>These expressions can be plugged into the expansion of the energy.</p>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> E.subs(mixed).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="19">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>display_latex_equation(<span class="vs">r"\E(u, \lambda)"</span>, E)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><span class="math inline">\(\displaystyle \E(u, \lambda)=- \frac{\E_{2} \dddot{u}_0 \lambda^{3} u}{6} - \frac{\E_{2} \ddot{u}_0 \lambda^{2} u}{2} - \E_{2} \dot{u}_0 \lambda u + \frac{\E_{2} u^{2}}{2} + \frac{\E_{3} \ddot{u}_0 \dot{u}_0 \lambda^{3} u}{2} - \frac{\E_{3} \ddot{u}_0 \lambda^{2} u^{2}}{4} + \frac{\E_{3} \dot{u}_0^{2} \lambda^{2} u}{2} - \frac{\E_{3} \dot{u}_0 \lambda u^{2}}{2} + \frac{\E_{3} u^{3}}{6} - \frac{\E_{4} \dot{u}_0^{3} \lambda^{3} u}{6} + \frac{\E_{4} \dot{u}_0^{2} \lambda^{2} u^{2}}{4} - \frac{\E_{4} \dot{u}_0 \lambda u^{3}}{6} + \frac{\E_{4} u^{4}}{24} + \frac{\E_{\lambda\lambda\lambda\lambda} \lambda^{4}}{24} + \frac{\E_{\lambda\lambda\lambda} \lambda^{3}}{6} + \frac{\E_{\lambda\lambda} \lambda^{2}}{2} + \E_{\lambda} \lambda - \frac{\ddot{\E}_2 \dot{u}_0 \lambda^{3} u}{2} + \frac{\ddot{\E}_2 \lambda^{2} u^{2}}{4} - \frac{\ddot{u}_0 \dot{\E}_2 \lambda^{3} u}{2} - \dot{\E}_2 \dot{u}_0 \lambda^{2} u + \frac{\dot{\E}_2 \lambda u^{2}}{2} + \frac{\dot{\E}_3 \dot{u}_0^{2} \lambda^{3} u}{2} - \frac{\dot{\E}_3 \dot{u}_0 \lambda^{2} u^{2}}{2} + \frac{\dot{\E}_3 \lambda u^{3}}{6}\)</span></p>
+</div>
+</div>
+<p>Some of the previous symbolic results are now saved for further use in the subsequent notebooks.</p>
+<div class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {<span class="st">"E"</span> : sympy.srepr(E)}</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"problem_setting.out.json"</span>, <span class="st">"w"</span>) <span class="im">as</span> f:</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    json.dump(data, f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -352,8 +648,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./mixed_derivatives.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Expression of the mixed derivatives of the energy</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./parametrization.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

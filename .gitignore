@@ -13,4 +13,6 @@
 auto
 .ipynb_checkpoints
 
+__pycache__
+
 LSK-notes.pdf

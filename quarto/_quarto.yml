@@ -8,7 +8,7 @@ book:
   date: "2023-01-03"
   chapters:
     - index.qmd
-    - problem_setting.qmd
+    - problem_setting.ipynb
     - mixed_derivatives.qmd
     - parametrization.qmd
     - kernel_hessian.qmd

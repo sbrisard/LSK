@@ -9,7 +9,6 @@ book:
   chapters:
     - index.qmd
     - problem_setting.ipynb
-    - mixed_derivatives.qmd
     - parametrization.qmd
     - kernel_hessian.qmd
     - references.qmd

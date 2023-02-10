@@ -1,10 +1,5 @@
-import json
-
 import IPython.display
-import pygments
 import sympy
-
-zero = sympy.Number(0)
 
 def latex(x):
     return x if str(x) == x else sympy.latex(x)

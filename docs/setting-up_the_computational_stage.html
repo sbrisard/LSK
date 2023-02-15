@@ -169,7 +169,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./problem_setting.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
+  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -211,7 +211,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-20230103084732" id="toc-sec-20230103084732" class="nav-link active" data-scroll-target="#sec-20230103084732"><span class="toc-section-number">3.1</span>  Computational setting</a></li>
+  <li><a href="#sec-20230103084732" id="toc-sec-20230103084732" class="nav-link active" data-scroll-target="#sec-20230103084732"><span class="toc-section-number">3.1</span>  Importing <code>Sympy</code></a></li>
   <li><a href="#sec-20230208081549" id="toc-sec-20230208081549" class="nav-link" data-scroll-target="#sec-20230208081549"><span class="toc-section-number">3.2</span>  Elimination of the mixed derivatives of the energy</a></li>
   </ul>
 </nav>
@@ -239,7 +239,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This notebook uses <span class="math inline">\(\LaTeX\newcommand{\D}{\mathrm{d}}\newcommand{\E}{\mathcal{E}}\)</span> custom macros.</p>
 <p>This chapter lays the ground for all symbolic calculations that are to follow. The <a href="https://www.sympy.org">SymPy</a> library is imported and initialized in <a href="#sec-20230103084732"><span>Section&nbsp;3.1</span></a>. Then, the energy of the system is rewritten in a more convenient form in <a href="#sec-20230208081549"><span>Section&nbsp;3.2</span></a>.</p>
 <section id="sec-20230103084732" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="sec-20230103084732"><span class="header-section-number">3.1</span> Computational setting</h2>
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-20230103084732"><span class="header-section-number">3.1</span> Importing <code>Sympy</code></h2>
 <p>We will use the <a href="https://www.python.org">Python</a> library <a href="https://www.sympy.org">SymPy</a> for symbolic mathematics and rely also on the <a href="https://ipython.org/">IPython</a> library (in particular, <a href="https://ipython.readthedocs.io/en/stable/api/generated/IPython.display.html#IPython.display.Math">IPython.display.Math</a>) for pretty <span class="math inline">\(\LaTeX\)</span> output. Some useful functions are defined in the <code>lsk.py</code> module, which will be systematically imported.</p>
 <p>Without loss of generality, it will be assumed in all symbolic calculations that <span class="math inline">\(\lambda_0 = 0\)</span> and <span class="math inline">\(u_0 = 0\)</span>. The general case <span class="math inline">\(\lambda_0 \neq 0\)</span> and <span class="math inline">\(u_0 \neq 0\)</span> is readily recovered through the substitution <span class="math inline">\(\lambda \leftrightarrow \lambda - \lambda_0\)</span> and <span class="math inline">\(u \leftrightarrow u - u_0\)</span>.</p>
 <p>The following developments involve the energy <span class="math inline">\((u, \lambda) \mapsto \E(u, \lambda)\)</span> and its differentials at the critical point <span class="math inline">\((u_0, \lambda_0)\)</span>, as well as the fundamental path <span class="math inline">\(\lambda \mapsto u^\ast(\lambda)\)</span> and its derivatives at <span class="math inline">\(\lambda = \lambda_0\)</span>. It will therefore be convenient to express <span class="math inline">\(\E\)</span> and <span class="math inline">\(u^\star\)</span> as Taylor expansions with respect to <span class="math inline">\(u\)</span> and <span class="math inline">\(\lambda\)</span>.</p>

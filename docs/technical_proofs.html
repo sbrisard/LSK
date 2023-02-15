@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - Appendix B — Technical proofs</title>
+<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - Appendix A — Technical proofs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./perfect_system-sympy.html" rel="prev">
+<link href="./references.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Appendix B — Technical proofs</h1>
+      <h1 class="quarto-secondary-nav-title">Appendix A — Technical proofs</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -100,17 +100,22 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./problem_setting.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up the stage</span></a>
+  <a href="./setting-up_the_mathematical_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./parametrization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></a>
+  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./kernel_hessian.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kernel of the hessian of the energy</span></a>
+  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./parametrization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -128,12 +133,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./perfect_system-sympy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Bifurcation equations of the perfect system</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./technical_proofs.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Technical proofs</span></a>
+  <a href="./technical_proofs.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Technical proofs</span></a>
   </div>
 </li>
       </ul>
@@ -147,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-20230124212008" id="toc-sec-20230124212008" class="nav-link active" data-scroll-target="#sec-20230124212008"><span class="toc-section-number">B.1</span>  Proof of Eq.&nbsp;(<span>3.5</span>)</a></li>
+  <li><a href="#sec-20230124212008" id="toc-sec-20230124212008" class="nav-link active" data-scroll-target="#sec-20230124212008"><span class="toc-section-number">A.1</span>  Proof of Eq.&nbsp;(<span>5.5</span>)</a></li>
   </ul>
 </nav>
     </div>
@@ -156,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Appendix B — Technical proofs</h1>
+<h1 class="title d-none d-lg-block">Appendix A — Technical proofs</h1>
 </div>
 
 
@@ -177,14 +177,14 @@ ul.task-list li input[type="checkbox"] {
 \newcommand{\reals}{\mathbb{R}}
 \]</span></p>
 <p>This appendix gathers some proofs that are too long to sit in the main text.</p>
-<section id="sec-20230124212008" class="level2" data-number="B.1">
-<h2 data-number="B.1" class="anchored" data-anchor-id="sec-20230124212008"><span class="header-section-number">B.1</span> Proof of Eq.&nbsp;(<a href="parametrization.html#eq-20230124205642"><span>3.5</span></a>)</h2>
-<p>We first prove a preliminary identity. For fixed <span class="math inline">\(i = 1, \ldots, m\)</span>, Eq.&nbsp;(<a href="parametrization.html#eq-20230116205638"><span>3.2</span></a>) is of the form <span class="math inline">\(L_{jk} \, \xi_j \, \xi_k = 0\)</span> for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Derivation with respect to <span class="math inline">\(\xi_l\)</span> leads to <span class="math display">\[
+<section id="sec-20230124212008" class="level2" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="sec-20230124212008"><span class="header-section-number">A.1</span> Proof of Eq.&nbsp;(<a href="parametrization.html#eq-20230124205642"><span>5.5</span></a>)</h2>
+<p>We first prove a preliminary identity. For fixed <span class="math inline">\(i = 1, \ldots, m\)</span>, Eq.&nbsp;(<a href="parametrization.html#eq-20230116205638"><span>5.2</span></a>) is of the form <span class="math inline">\(L_{jk} \, \xi_j \, \xi_k = 0\)</span> for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Derivation with respect to <span class="math inline">\(\xi_l\)</span> leads to <span class="math display">\[
 0 = L_{jk} \, \delta_{jl} \, \xi_k + L_{jk} \, \xi_j \, \delta_{kl} = L_{lk} \, \xi_k + L_{jl} \, \xi_j = \bigl(L_{kl} +L_{lk} \bigr) \, \xi_l,
-\]</span> for all <span class="math inline">\(\xi_1, \ldots, \xi_m \in \reals\)</span>. The above identity leads to: <span class="math inline">\(L_{kl} + L_{lk} = 0\)</span>. Application to Eq.&nbsp;(<a href="parametrization.html#eq-20230116205638"><span>3.2</span></a>) leads to <span id="eq-20230120210008"><span class="math display">\[
+\]</span> for all <span class="math inline">\(\xi_1, \ldots, \xi_m \in \reals\)</span>. The above identity leads to: <span class="math inline">\(L_{kl} + L_{lk} = 0\)</span>. Application to Eq.&nbsp;(<a href="parametrization.html#eq-20230116205638"><span>5.2</span></a>) leads to <span id="eq-20230120210008"><span class="math display">\[
 E_{ijk} + \lambda_k \, \dot{E}_{ij} + \lambda_j \, \dot{E}_{ik} = 0,
-\tag{B.1}\]</span></span></p>
-<p>We now turn to Eq.&nbsp;(<a href="parametrization.html#eq-20230117071620"><span>3.3</span></a>), wich holds for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Plugging <span class="math inline">\(\xi_i = \order[1]{\xi_i}\)</span> and using Eq.&nbsp;(<a href="parametrization.html#eq-20230116205753"><span>3.1</span></a>) delivers <span id="eq-20230124210722"><span class="math display">\[
+\tag{A.1}\]</span></span></p>
+<p>We now turn to Eq.&nbsp;(<a href="parametrization.html#eq-20230117071620"><span>5.3</span></a>), wich holds for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Plugging <span class="math inline">\(\xi_i = \order[1]{\xi_i}\)</span> and using Eq.&nbsp;(<a href="parametrization.html#eq-20230116205753"><span>5.1</span></a>) delivers <span id="eq-20230124210722"><span class="math display">\[
 \begin{aligned}[b]
 \tfrac{1}{3} \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \bigl[ \E_4(v_i, v_j, v_k, v_l)
 + 3\E_3(v_i, v_j, w_{kl}) \bigr] &amp;\\
@@ -194,30 +194,30 @@ E_{ijk} + \lambda_k \, \dot{E}_{ij} + \lambda_j \, \dot{E}_{ik} = 0,
 + \ddot{\E}_2(v_i, v_j) \bigr]
 + \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \lambda_{kl} \, \dot{\E}_2(v_i, v_j) &amp;= 0.
 \end{aligned}
-\tag{B.2}\]</span></span></p>
+\tag{A.2}\]</span></span></p>
 <p>Owing to the contraction with <span class="math inline">\(\order[1]{\xi}_j\)</span>, <span class="math inline">\(\order[1]{\xi}_k\)</span> and <span class="math inline">\(\order[1]{\xi}_l\)</span>, the first term can be symmetrized with respect to <span class="math inline">\(j\)</span>, <span class="math inline">\(k\)</span> and <span class="math inline">\(l\)</span> <span class="math display">\[
 \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \bigl[ \E_4(v_i, v_j, v_k, v_l) + 3\E_3(v_i, v_j, w_{kl}) \bigr]
 = E_{ijkl} \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l,
-\]</span> where <span class="math inline">\(E_{ijkl}\)</span> is defined by Eq.&nbsp;(<a href="parametrization.html#eq-20230124210049"><span>3.10</span></a>). Similarly, the second term can be symmetrized with respect to <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span> <span class="math display">\[
+\]</span> where <span class="math inline">\(E_{ijkl}\)</span> is defined by Eq.&nbsp;(<a href="parametrization.html#eq-20230124210049"><span>5.10</span></a>). Similarly, the second term can be symmetrized with respect to <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span> <span class="math display">\[
 \begin{aligned}
 2 \order[1]{\xi}_j \, \order[1]{\xi}_k \, \E_3(v_i, v_j, w_{k\lambda})
 &amp;= \order[1]{\xi}_j \, \order[1]{\xi}_k \, \bigl[ \E_3(v_i, v_j, w_{k\lambda}) + \E_3(v_i, v_k, w_{j\lambda}) \bigr]\\
 &amp;= -\order[1]{\xi}_j \, \order[1]{\xi}_k \, \bigl[ \E_2(w_{ij}, w_{k\lambda}) + \E_2(w_{ik}, w_{j\lambda}) \bigr]\\
 &amp;= \order[1]{\xi}_j \, \order[1]{\xi}_k \, \bigl[ \dot{\E}_2(v_k, w_{ij}) + \dot{\E}_2(v_j, w_{ik}) \bigr],
 \end{aligned}
-\]</span> where we have been testing Eq.&nbsp;(<a href="perfect_system-sympy.html#eq-20230107180410"><span>A.6</span></a>) with <span class="math inline">\(\hat{w} = w_{k\lambda}\)</span> and <span class="math inline">\(\hat{w} = w_{j\lambda}\)</span> and Eq.&nbsp;(<a href="perfect_system-sympy.html#eq-20230107180501"><span>A.7</span></a>) with <span class="math inline">\(\hat{w} = w_{ij}\)</span> and <span class="math inline">\(\hat{w} = w_{ik}\)</span>, successively. Introducing <span class="math inline">\(\dot{E}_{ijk}\)</span> defined by Eq.&nbsp;(<a href="parametrization.html#eq-20230124210649"><span>3.9</span></a>), the second term of Eq.&nbsp;(<a href="#eq-20230124210722"><span>B.2</span></a>) reduces to <span class="math display">\[
+\]</span> where we have been testing Eq.&nbsp;(<a href="bifurcation_equations.html#eq-20230107180410"><span>4.8</span></a>) with <span class="math inline">\(\hat{w} = w_{k\lambda}\)</span> and <span class="math inline">\(\hat{w} = w_{j\lambda}\)</span> and Eq.&nbsp;(<a href="bifurcation_equations.html#eq-20230107180501"><span>4.9</span></a>) with <span class="math inline">\(\hat{w} = w_{ij}\)</span> and <span class="math inline">\(\hat{w} = w_{ik}\)</span>, successively. Introducing <span class="math inline">\(\dot{E}_{ijk}\)</span> defined by Eq.&nbsp;(<a href="parametrization.html#eq-20230124210649"><span>5.9</span></a>), the second term of Eq.&nbsp;(<a href="#eq-20230124210722"><span>A.2</span></a>) reduces to <span class="math display">\[
 \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\lambda} \, \bigl[
 \dot{\E}_3(v_i, v_j, v_k) + 2\E_3(v_i, v_j, w_{k\lambda}) + \dot{\E}_2(v_i, w_{jk})
 \bigr] = \order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_j \, \order[1]{\xi}_k.
 \]</span></p>
-<p>The third term of Eq.&nbsp;(<a href="#eq-20230124210722"><span>B.2</span></a>) is simplified by testing Eq. (<a href="perfect_system-sympy.html#eq-20230107180501"><span>A.7</span></a>), with <span class="math inline">\(\hat{w} = w_{j\lambda}\)</span> and <span class="math inline">\(\hat{w} = w_{i\lambda}\)</span>, successively <span class="math display">\[
+<p>The third term of Eq.&nbsp;(<a href="#eq-20230124210722"><span>A.2</span></a>) is simplified by testing Eq. (<a href="bifurcation_equations.html#eq-20230107180501"><span>4.9</span></a>), with <span class="math inline">\(\hat{w} = w_{j\lambda}\)</span> and <span class="math inline">\(\hat{w} = w_{i\lambda}\)</span>, successively <span class="math display">\[
 \begin{aligned}[b]
 \ddot{\E}_2(v_i, v_j) + 2\dot{\E}_2(v_i, w_{j\lambda})
 &amp;= \ddot{\E}_2(v_i, v_j) + \dot{\E}_2(v_i, w_{j\lambda}) -\E_2(w_{i\lambda}, w_{j\lambda})\\
 &amp;= \ddot{\E}_2(v_i, v_j) + \dot{\E}_2(v_i, w_{j\lambda}) + \E_2(v_j, w_{i\lambda})\\
 &amp;= \ddot{E}_{ij},
 \end{aligned}
-\]</span> where <span class="math inline">\(\ddot{E}_{ij}\)</span> is defined by Eq.&nbsp;(<a href="parametrization.html#eq-20230124211207"><span>3.8</span></a>). Gathering the above results delivers the following equation <span class="math display">\[
+\]</span> where <span class="math inline">\(\ddot{E}_{ij}\)</span> is defined by Eq.&nbsp;(<a href="parametrization.html#eq-20230124211207"><span>5.8</span></a>). Gathering the above results delivers the following equation <span class="math display">\[
 \begin{aligned}
 \tfrac{1}{3} E_{ijkl} \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l
 + \order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_j \, \order[1]{\xi}_k
@@ -225,7 +225,7 @@ E_{ijk} + \lambda_k \, \dot{E}_{ij} + \lambda_j \, \dot{E}_{ik} = 0,
 + \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \lambda_{kl} \, \dot{E}_{ij} &amp;= 0.
 \end{aligned}
 \]</span></p>
-<p>Upon susbtitution of <span class="math inline">\(\order[1]{\xi}_k \, \order[1]{\xi}_l \, \lambda_{kl}\)</span> with <span class="math inline">\(\order[2]{\lambda} - \lambda_k \, \order[2]{\xi_k}\)</span> [see Eq. (<a href="parametrization.html#eq-20230116205753"><span>3.1</span></a>)] <span class="math display">\[
+<p>Upon susbtitution of <span class="math inline">\(\order[1]{\xi}_k \, \order[1]{\xi}_l \, \lambda_{kl}\)</span> with <span class="math inline">\(\order[2]{\lambda} - \lambda_k \, \order[2]{\xi_k}\)</span> [see Eq. (<a href="parametrization.html#eq-20230116205753"><span>5.1</span></a>)] <span class="math display">\[
 \begin{aligned}[b]
 \tfrac{1}{3} E_{ijkl} \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l
 + \order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_j \, \order[1]{\xi}_k
@@ -233,7 +233,7 @@ E_{ijk} + \lambda_k \, \dot{E}_{ij} + \lambda_j \, \dot{E}_{ik} = 0,
 + \order[2]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi}_j - \order[1]{\xi}_j \, \order[2]{\xi}_k \, \lambda_k \, \dot{E}_{ij} &amp;= 0.
 \end{aligned}
 \]</span></p>
-<p>Eq.&nbsp;(<a href="#eq-20230120210008"><span>B.1</span></a>) is used to eliminate <span class="math inline">\(\lambda_k \, \dot{E}_{ij}\)</span> <span class="math display">\[
+<p>Eq.&nbsp;(<a href="#eq-20230120210008"><span>A.1</span></a>) is used to eliminate <span class="math inline">\(\lambda_k \, \dot{E}_{ij}\)</span> <span class="math display">\[
 \begin{aligned}[b]
 \tfrac{1}{3} E_{ijkl} \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l
 + \order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_j \, \order[1]{\xi}_k
@@ -241,7 +241,7 @@ E_{ijk} + \lambda_k \, \dot{E}_{ij} + \lambda_j \, \dot{E}_{ik} = 0,
 + \order[2]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi}_j
 + \order[1]{\xi}_j \, \order[2]{\xi}_k \, \bigl( E_{ijk} + \lambda_j \, \dot{E}_{ik} \bigr) &amp;= 0
 \end{aligned}
-\]</span> and Eq.&nbsp;(<a href="parametrization.html#eq-20230124205642"><span>3.5</span></a>) is retrieved.</p>
+\]</span> and Eq.&nbsp;(<a href="parametrization.html#eq-20230124205642"><span>5.5</span></a>) is retrieved.</p>
 
 
 </section>
@@ -382,8 +382,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./perfect_system-sympy.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Bifurcation equations of the perfect system</span></span>
+      <a href="./references.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">References</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

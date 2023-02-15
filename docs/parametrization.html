@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 3&nbsp; Parametrization of the bifurcated branch</title>
+<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 5&nbsp; Parametrization of the bifurcated branch</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./kernel_hessian.html" rel="next">
-<link href="./problem_setting.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./bifurcation_equations.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -101,17 +101,22 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./problem_setting.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up the stage</span></a>
+  <a href="./setting-up_the_mathematical_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./parametrization.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></a>
+  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./kernel_hessian.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kernel of the hessian of the energy</span></a>
+  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./parametrization.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -129,12 +134,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./perfect_system-sympy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Bifurcation equations of the perfect system</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./technical_proofs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Technical proofs</span></a>
+  <a href="./technical_proofs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Technical proofs</span></a>
   </div>
 </li>
       </ul>
@@ -148,8 +148,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#simplification-of-the-bifurcation-equations" id="toc-simplification-of-the-bifurcation-equations" class="nav-link active" data-scroll-target="#simplification-of-the-bifurcation-equations"><span class="toc-section-number">3.1</span>  Simplification of the bifurcation equations</a></li>
-  <li><a href="#taylor-expansion-of-the-bifurcated-branch" id="toc-taylor-expansion-of-the-bifurcated-branch" class="nav-link" data-scroll-target="#taylor-expansion-of-the-bifurcated-branch"><span class="toc-section-number">3.2</span>  Taylor expansion of the bifurcated branch</a></li>
+  <li><a href="#simplification-of-the-bifurcation-equations" id="toc-simplification-of-the-bifurcation-equations" class="nav-link active" data-scroll-target="#simplification-of-the-bifurcation-equations"><span class="toc-section-number">5.1</span>  Simplification of the bifurcation equations</a></li>
+  <li><a href="#taylor-expansion-of-the-bifurcated-branch" id="toc-taylor-expansion-of-the-bifurcated-branch" class="nav-link" data-scroll-target="#taylor-expansion-of-the-bifurcated-branch"><span class="toc-section-number">5.2</span>  Taylor expansion of the bifurcated branch</a></li>
   </ul>
 </nav>
     </div>
@@ -158,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></h1>
+<h1 class="title"><span id="sec-20230102030224" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span></h1>
 </div>
 
 
@@ -181,16 +181,16 @@ ul.task-list li input[type="checkbox"] {
 <p>In the present section, a parametrization of the bifurcated branch is introduced. This branch is a curve <span class="math inline">\((u, \lambda) \in \reals ^ {m + 1}\)</span>, which is parametrized by <span class="math inline">\(\eta\)</span>: <span class="math inline">\([u(\eta), \lambda(\eta)]\)</span>, with <span class="math inline">\(u(0) = u_0\)</span> and <span class="math inline">\(\lambda(0) = \lambda_0\)</span>; primed quantities denoting derivatives with respect to <span class="math inline">\(\eta\)</span>, we introduce <span class="math display">\[
 \order[1]{\xi_i} = \xi_i'(0), \quad \order[2]{\xi_i} = \xi_i''(0), \quad \ldots, \quad \order[1]{\lambda} = \lambda'(0), \quad \ldots
 \]</span></p>
-<p>In <a href="perfect_system-sympy.html#sec-20230102030125"><span>Section&nbsp;A.2.2</span></a>, <span class="math inline">\(\lambda\)</span> was defined as a function of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Therefore, from the chain rule <span class="math display">\[
+<p>In <a href="bifurcation_equations.html#sec-20230102030125"><span>Section&nbsp;4.3</span></a>, <span class="math inline">\(\lambda\)</span> was defined as a function of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Therefore, from the chain rule <span class="math display">\[
 \lambda'(\eta) = \frac{\partial\lambda}{\partial\xi_i} \, \xi_i'(\eta) \quad \text{and} \quad \lambda''(\eta)  = \frac{\partial^2\lambda}{\partial\xi_i \, \partial\xi_j} \, \xi_i'(\eta) \, \xi_j'(\eta) + \frac{\partial\lambda}{\partial\xi_i} \, \xi_i''(\eta)
 \]</span> and, at <span class="math inline">\(\eta = 0\)</span> <span id="eq-20230116205753"><span class="math display">\[
 \order[1]{\lambda} = \lambda_i \, \order[1]{\xi_i} \quad \text{and} \quad \order[2]{\lambda} = \lambda_{ij} \, \order[1]{\xi_i} \, \order[1]{\xi_j} + \lambda_i \, \order[2]{\xi_i}.
-\tag{3.1}\]</span></span></p>
-<section id="simplification-of-the-bifurcation-equations" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="simplification-of-the-bifurcation-equations"><span class="header-section-number">3.1</span> Simplification of the bifurcation equations</h2>
-<p>The bifurcation equations (<a href="perfect_system-sympy.html#eq-20230115101130"><span>A.10</span></a>) and (<a href="perfect_system-sympy.html#eq-20230115101147"><span>A.11</span></a>) have been derived in <a href="perfect_system-sympy.html"><span>Appendix&nbsp;A</span></a>. Testing these equations with <span class="math inline">\(\hat{v} = v_i\)</span> delivers <span id="eq-20230116205638"><span class="math display">\[
+\tag{5.1}\]</span></span></p>
+<section id="simplification-of-the-bifurcation-equations" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="simplification-of-the-bifurcation-equations"><span class="header-section-number">5.1</span> Simplification of the bifurcation equations</h2>
+<p>The bifurcation equations (<a href="bifurcation_equations.html#eq-20230115101130"><span>4.10</span></a>) and (<a href="bifurcation_equations.html#eq-20230115101147"><span>4.11</span></a>) have been derived in <a href="bifurcation_equations.html"><span>Chapter&nbsp;4</span></a>. Testing these equations with <span class="math inline">\(\hat{v} = v_i\)</span> delivers <span id="eq-20230116205638"><span class="math display">\[
 \xi_j \, \xi_k \, \bigl[ \tfrac{1}{2} \, \E_3(v_i, v_j, v_k) + \lambda_k \, \dot{\E}_2(v_i, v_j) \bigr] = 0
-\tag{3.2}\]</span></span> and <span id="eq-20230117071620"><span class="math display">\[
+\tag{5.2}\]</span></span> and <span id="eq-20230117071620"><span class="math display">\[
 \begin{aligned}[b]
 \xi_j \, \xi_k \, \xi_l \, \bigl[
 \tfrac{1}{2} \E_3(v_i, v_j, w_{kl})
@@ -202,33 +202,33 @@ ul.task-list li input[type="checkbox"] {
 + \tfrac{1}{2} \lambda_l \, \dot{\E}_3(v_i, v_j, v_k)
 + \tfrac{1}{2} \lambda_k \, \lambda_l \, \ddot{\E}_2(v_i, v_j) \bigr] &amp;= 0.
 \end{aligned}
-\tag{3.3}\]</span></span> for all <span class="math inline">\(\xi_1, \ldots, \xi_m \in \reals\)</span> and <span class="math inline">\(i = 1, \ldots, m\)</span>.</p>
-<p>Eq.&nbsp;(<a href="#eq-20230116205638"><span>3.2</span></a>) holds for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Plugging <span class="math inline">\(\xi_i = \order[1]{\xi_i}\)</span> and using Eq.&nbsp;(<a href="#eq-20230116205753"><span>3.1</span></a>) delivers the first bifurcation equation <span id="eq-20230125062336"><span class="math display">\[
+\tag{5.3}\]</span></span> for all <span class="math inline">\(\xi_1, \ldots, \xi_m \in \reals\)</span> and <span class="math inline">\(i = 1, \ldots, m\)</span>.</p>
+<p>Eq.&nbsp;(<a href="#eq-20230116205638"><span>5.2</span></a>) holds for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Plugging <span class="math inline">\(\xi_i = \order[1]{\xi_i}\)</span> and using Eq.&nbsp;(<a href="#eq-20230116205753"><span>5.1</span></a>) delivers the first bifurcation equation <span id="eq-20230125062336"><span class="math display">\[
 E_{ijk} \, \order[1]{\xi_j} \, \order[1]{\xi_k} + \order[1]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi_j} = 0.
-\tag{3.4}\]</span></span></p>
-<p>Similarly, Eq.&nbsp;(<a href="#eq-20230117071620"><span>3.3</span></a>) is simplified as follows (see proof in <a href="technical_proofs.html#sec-20230124212008"><span>Section&nbsp;B.1</span></a>) <span id="eq-20230124205642"><span class="math display">\[
+\tag{5.4}\]</span></span></p>
+<p>Similarly, Eq.&nbsp;(<a href="#eq-20230117071620"><span>5.3</span></a>) is simplified as follows (see proof in <a href="technical_proofs.html#sec-20230124212008"><span>Section&nbsp;B.1</span></a>) <span id="eq-20230124205642"><span class="math display">\[
 \begin{aligned}[b]
 \tfrac{1}{3} E_{ijkl} \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l
 + \order[1]{\lambda} \, \bigl( \dot{E}_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \ddot{E}_{ij} \bigr) \, \order[1]{\xi}_j &amp;\\
 + \bigl( E_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \dot{E}_{ij} \bigr) \order[2]{\xi}_j
 + \order[2]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi}_j &amp; = 0.
 \end{aligned}
-\tag{3.5}\]</span></span></p>
-<p>In Eqs.&nbsp;(<a href="#eq-20230125062336"><span>3.4</span></a>) and (<a href="#eq-20230124205642"><span>3.5</span></a>), the following quantities have been introduced</p>
+\tag{5.5}\]</span></span></p>
+<p>In Eqs.&nbsp;(<a href="#eq-20230125062336"><span>5.4</span></a>) and (<a href="#eq-20230124205642"><span>5.5</span></a>), the following quantities have been introduced</p>
 <p><span id="eq-20230125062505"><span class="math display">\[
 \dot{E}_{ij} = \dot{\E}_2(v_i, v_j),
-\tag{3.6}\]</span></span> <span id="eq-20230125062510"><span class="math display">\[
+\tag{5.6}\]</span></span> <span id="eq-20230125062510"><span class="math display">\[
 E_{ijk} = \E_3(v_i, v_j, v_k),
-\tag{3.7}\]</span></span> <span id="eq-20230124211207"><span class="math display">\[
+\tag{5.7}\]</span></span> <span id="eq-20230124211207"><span class="math display">\[
 \ddot{E}_{ij} = \ddot{\E}_2(v_i, v_j) + \dot{\E}_2(v_i, w_{j\lambda}) + \dot{\E}_2(v_j, w_{i\lambda}),
-\tag{3.8}\]</span></span> <span id="eq-20230124210649"><span class="math display">\[
+\tag{5.8}\]</span></span> <span id="eq-20230124210649"><span class="math display">\[
 \dot{E}_{ijk} = \dot{\E}_3(v_i, v_j, v_k) + \dot{\E}_2(v_i, w_{jk}) + \dot{\E}_2(v_j, w_{ik}) + \dot{\E}_2(v_k, w_{ij}),
-\tag{3.9}\]</span></span> <span id="eq-20230124210049"><span class="math display">\[
+\tag{5.9}\]</span></span> <span id="eq-20230124210049"><span class="math display">\[
 \begin{aligned}[b]
 E_{ijkl} ={}&amp; \E_4(v_i, v_j, v_k, v_l) + \E_3(v_i, v_j, w_{kl})\\
 &amp;+ \E_3(v_i, v_k, w_{jl}) + \E_3(v_i, v_l, w_{jk}).
 \end{aligned}
-\tag{3.10}\]</span></span></p>
+\tag{5.10}\]</span></span></p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -239,17 +239,17 @@ Consistency of the above definitions
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Since <span class="math inline">\(\E_2(v, \bullet) = 0\)</span> for all <span class="math inline">\(v \in V\)</span>, definitions (<a href="#eq-20230125062505"><span>3.6</span></a>) and (<a href="#eq-20230125062510"><span>3.7</span></a>) of <span class="math inline">\(\dot{E}_{ij}\)</span> and <span class="math inline">\(E_{ijk}\)</span> can also be written <span class="math display">\[
+<p>Since <span class="math inline">\(\E_2(v, \bullet) = 0\)</span> for all <span class="math inline">\(v \in V\)</span>, definitions (<a href="#eq-20230125062505"><span>5.6</span></a>) and (<a href="#eq-20230125062510"><span>5.7</span></a>) of <span class="math inline">\(\dot{E}_{ij}\)</span> and <span class="math inline">\(E_{ijk}\)</span> can also be written <span class="math display">\[
 \dot{E}_{ij} = \dot{\E}_2(v_i, v_j) + \E_2(v_i, w_{j\lambda}) + \E_2(v_j, w_{i\lambda})
 \]</span> and <span class="math display">\[
 E_{ijk} = \E_3(v_i, v_j, v_k)  + \E_2(v_i, w_{jk}) + \E_2(v_j, w_{ik}) + \E_2(v_k, w_{ij}),
-\]</span> wich shows the consistency with definitions (<a href="#eq-20230124211207"><span>3.8</span></a>) and (<a href="#eq-20230124210649"><span>3.9</span></a>) of <span class="math inline">\(\ddot{E}_{ij}\)</span> and <span class="math inline">\(\dot{E}_{ijk}\)</span>.</p>
+\]</span> wich shows the consistency with definitions (<a href="#eq-20230124211207"><span>5.8</span></a>) and (<a href="#eq-20230124210649"><span>5.9</span></a>) of <span class="math inline">\(\ddot{E}_{ij}\)</span> and <span class="math inline">\(\dot{E}_{ijk}\)</span>.</p>
 </div>
 </div>
 </section>
-<section id="taylor-expansion-of-the-bifurcated-branch" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="taylor-expansion-of-the-bifurcated-branch"><span class="header-section-number">3.2</span> Taylor expansion of the bifurcated branch</h2>
-<p>We now turn to <span class="math inline">\(w\)</span>, which was defined in <a href="perfect_system-sympy.html#sec-20230102030010"><span>Section&nbsp;A.2.1</span></a> as an implicit function of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> and <span class="math inline">\(\lambda\)</span>. It is now defined as a function of the arc parameter <span class="math inline">\(\eta\)</span> as follows: <span class="math inline">\(w(n) = w[\xi_1(\eta), \ldots, \xi_m(\eta), \lambda(\eta)]\)</span>. From the chain rule <span class="math display">\[
+<section id="taylor-expansion-of-the-bifurcated-branch" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="taylor-expansion-of-the-bifurcated-branch"><span class="header-section-number">5.2</span> Taylor expansion of the bifurcated branch</h2>
+<p>We now turn to <span class="math inline">\(w\)</span>, which was defined in <a href="bifurcation_equations.html#sec-20230102030010"><span>Section&nbsp;4.2</span></a> as an implicit function of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> and <span class="math inline">\(\lambda\)</span>. It is now defined as a function of the arc parameter <span class="math inline">\(\eta\)</span> as follows: <span class="math inline">\(w(n) = w[\xi_1(\eta), \ldots, \xi_m(\eta), \lambda(\eta)]\)</span>. From the chain rule <span class="math display">\[
 w'(\eta) = \frac{\partial w}{\partial \xi_i} \, \xi_i' + \frac{\partial w}{\partial \lambda} \, \lambda'
 \]</span> and <span class="math display">\[
 w''(\eta) = \frac{\partial^2 w}{\partial \xi_i \, \partial \xi_j} \, \xi_i' \, \xi_j'
@@ -407,13 +407,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./problem_setting.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up the stage</span></span>
+      <a href="./bifurcation_equations.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./kernel_hessian.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kernel of the hessian of the energy</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

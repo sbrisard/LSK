@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 4&nbsp; Kernel of the hessian of the energy</title>
+<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method – kernel_hessian</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,17 +61,16 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kernel of the hessian of the energy</span></h1>
+      <h1 class="quarto-secondary-nav-title">Notes on the Lyapunov–Schmidt–Koiter asymptotic method</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -101,17 +100,27 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./problem_setting.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up the stage</span></a>
+  <a href="./setting-up_the_mathematical_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./parametrization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></a>
+  <a href="./problem_setting.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting up the stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./kernel_hessian.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kernel of the hessian of the energy</span></a>
+  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./parametrization.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kernel_hessian.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">kernel_hessian.html</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -129,12 +138,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./perfect_system-sympy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Bifurcation equations of the perfect system</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./technical_proofs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Technical proofs</span></a>
+  <a href="./technical_proofs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Technical proofs</span></a>
   </div>
 </li>
       </ul>
@@ -143,84 +147,12 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </nav>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><span id="sec-20230107173921" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kernel of the hessian of the energy</span></span></h1>
-</div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<p><span class="math display">\[
-\newcommand{\E}{\mathcal{E}}
-\newcommand{\reals}{\mathbb{R}}
-\]</span></p>
-<p>The <em>kernel</em> of the hessian of the energy, <span class="math inline">\(\E_2\)</span>, is defined as follows</p>
-<p><span class="math display">\[
-V = \bigl\{ u \in U, \E_2(u, u) = 0 \bigr\}.
-\]</span></p>
-<p>Since <span class="math inline">\(\E_2\)</span> is a bilinear, symmetric and positive (but not poitive definite!) form, <span class="math inline">\(V\)</span> is a vector subspace of <span class="math inline">\(U\)</span>.</p>
-<p>To prove this result, we must show that, for all <span class="math inline">\(u, v \in V\)</span> and <span class="math inline">\(\alpha \in \reals\)</span>, <span class="math inline">\(w = u + \alpha \, v \in V\)</span>. From the bilinearity and symmetry of <span class="math inline">\(\E_2\)</span></p>
-<p><span class="math display">\[
-\E_2(w, w) = \E_2(u + \alpha \, v, u + \alpha \, v) = \E_2(u, u) + 2\alpha \, \E_2(u, v) + \alpha^2 \, \E_2(v, v),
-\]</span></p>
-<p>Since <span class="math inline">\(u, v \in \ker\E_2\)</span>, the first and the last term vanish, and the above identity reduces to</p>
-<p><span class="math display">\[
-\E_2(w, w) = 2\alpha \, \E_2(u, v)
-\]</span></p>
-<p>The bilinear form <span class="math inline">\(\E_2\)</span> is positive, therefore the left-hand side is positive, <em>for all values of</em> <span class="math inline">\(\alpha \in \reals\)</span>. The quantity <span class="math inline">\(\E_2(u, v) = 0\)</span> is necessarily null, and <span class="math inline">\(\E_2(w, w) = 0\)</span>, which proves that <span class="math inline">\(w \in V\)</span> and that <span class="math inline">\(V\)</span> is a vector subspace of <span class="math inline">\(U\)</span>. The following characterization of <span class="math inline">\(V\)</span> holds</p>
-<p><span id="eq-20230102023246"><span class="math display">\[
-v \in V \quad \iff \quad \E_2(v, \hat{u}) = 0 \quad \text{for all} \quad \hat{u} \in U.
-\tag{4.1}\]</span></span></p>
-<p>Indeed, if for all <span class="math inline">\(\hat{u} \in U\)</span>, <span class="math inline">\(\E_2(v, \hat{u}) = 0\)</span>, then in particular <span class="math inline">\(\E_2(v, v) = 0\)</span> and <span class="math inline">\(v \in V\)</span>. Conversely, let <span class="math inline">\(v \in V\)</span>, <span class="math inline">\(\hat{u} \in U\)</span> and <span class="math inline">\(\alpha \in \reals\)</span>. Similarly to the previous proof, we write that <span class="math inline">\(\E_2(w, w) \geq 0\)</span>, with <span class="math inline">\(w = \hat{u} + \alpha \, v\)</span></p>
-<p><span class="math display">\[
-\E_2(w, w) = \E_2(\hat{u}, \hat{u}) + 2\alpha \, \E_2(\hat{u}, v) + \alpha^2 \, \E_2(v, v) = 2\alpha \, \E_2(\hat{u}, v) + \E_2(\hat{u}, \hat{u}) \geq 0,
-\]</span></p>
-<p>(<span class="math inline">\(\E_2(v, v) = 0\)</span> since <span class="math inline">\(v \in V\)</span>). The above expression is of degree 1 in <span class="math inline">\(\alpha\)</span>, with a constant sign. Therefore the linear term in <span class="math inline">\(\alpha\)</span> must vanish: <span class="math inline">\(\E_2(\hat{u}, v) = 0\)</span>, which proves the characterization (<a href="#eq-20230102023246"><span>4.1</span></a>) of <span class="math inline">\(V\)</span>.</p>
-<p>It will be assumed in the remainder of these notes the dimension of <span class="math inline">\(V\)</span> is finite: <span class="math inline">\(m = \dim V &lt; +\infty\)</span>; <span class="math inline">\(m\)</span> is the <em>multiplicity</em> of the critical point. A (finite) basis <span class="math inline">\((v_1, \ldots, v_m)\)</span> of <span class="math inline">\(V\)</span> can therefore be introduced, that is orthonormal in the sense of <span class="math inline">\(\langle \bullet, \bullet \rangle\)</span></p>
-<p><span class="math display">\[
-\langle v_i, v_j \rangle = \delta_{ij} \quad \text{for all} \quad i, j = 1, \ldots, m.
-\]</span></p>
-<p>To close this section, we define the complementary subspace <span class="math inline">\(W\)</span>, orthogonal to <span class="math inline">\(V\)</span> for the scalar product <span class="math inline">\(\langle \bullet, \bullet \rangle\)</span></p>
-<p><span class="math display">\[
-U = V \overset{\perp}{\otimes} W \quad \text{and} \quad \langle \hat{v}, \hat{w} \rangle = 0 \quad \text{for all} \quad \hat{v} \in V \quad \text{and} \quad \hat{w} \in W.
-\]</span></p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The bilinear form <span class="math inline">\(\E_2\)</span> is elliptic over <span class="math inline">\(W\)</span>. Therefore, variational problems of the type: find <span class="math inline">\(w \in W\)</span> such that</p>
-<p><span class="math display">\[
-\E_2(w, \hat{w})+\ell(\hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W
-\]</span></p>
-<p>are well-posed for any linear form <span class="math inline">\(\ell\)</span> over <span class="math inline">\(W\)</span>. In particular, for <span class="math inline">\(\ell=0\)</span>, the unique solution to the variational problem</p>
-<p><span class="math display">\[
-\E_2(w, \hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W
-\]</span></p>
-<p>is <span class="math inline">\(w = 0\)</span>.</p>
-</div>
-</div>
 
 
 
@@ -361,7 +293,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./parametrization.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

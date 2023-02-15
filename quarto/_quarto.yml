@@ -8,10 +8,10 @@ book:
   date: "2023-01-03"
   chapters:
     - index.qmd
+    - setting-up_the_mathematical_stage.qmd
     - problem_setting.ipynb
     - bifurcation_equations.ipynb
     - parametrization.qmd
-    - kernel_hessian.qmd
     - references.qmd
   appendices:
     - technical_proofs.qmd

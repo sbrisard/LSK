@@ -1,4 +1,4 @@
-# Parametrization of the bifurcated branch
+# Parametrization of the bifurcated branch {#sec-20230102030224}
 
 $$
 \newcommand{\E}{\mathcal{E}}

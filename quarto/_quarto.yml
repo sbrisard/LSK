@@ -12,6 +12,7 @@ book:
     - setting-up_the_computational_stage.ipynb
     - bifurcation_equations.ipynb
     - parametrization.qmd
+    - energy.ipynb
     - references.qmd
   appendices:
     - technical_proofs.qmd

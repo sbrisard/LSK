@@ -47,7 +47,7 @@ for all $\xi_1, \ldots, \xi_m \in \reals$ and $i = 1, \ldots, m$.
 Eq. (@eq-20230116205638) holds for all $\xi_1, \ldots, \xi_m$. Plugging $\xi_i = \order[1]{\xi_i}$ and using
 Eq. (@eq-20230116205753) delivers the first bifurcation equation
 $$
-E_{ijk} \, \order[1]{\xi_j} \, \order[1]{\xi_k} + \order[1]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi_j} = 0.
+\tfrac{1}{2} \, E_{ijk} \, \order[1]{\xi_j} \, \order[1]{\xi_k} + \order[1]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi_j} = 0.
 $$ {#eq-20230125062336}
 
 Similarly, Eq. (@eq-20230117071620) is simplified as follows (see proof in @sec-20230124212008)

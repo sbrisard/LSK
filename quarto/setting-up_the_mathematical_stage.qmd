@@ -1,4 +1,4 @@
-# Setting-up the mathematical stage
+# Setting-up the mathematical stage {#sec-20230402152824}
 
 In this chapter, we define the problem mathematically. Symbols and notation are introduced in @sec-20230208081323, as well as the fundamental assumptions that we make. Then, the *kernel* of the hessian of the energy is introduced in @sec-20230107173921 as a subspace of the space of admissible states.
 

@@ -102,3 +102,40 @@ $$
 \end{aligned}
 $$
 and Eq. (@eq-20230124205642) is retrieved.
+
+## Proof of Eq. (@eq-20230402101651) {#sec-20230402101835}
+
+Reordering Eq. (eq-20230402102020) delivers
+
+$$
+\begin{aligned}
+\order[4]{\Delta\E} ={} & \tfrac{1}{24} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \bigl\{ \E_4(v_i, v_j, v_k, v_l) + 3\E_3(v_i, v_j, w_{kl}) + 3\bigl[\E_2(w_{ij}, w_{kl}) + \E_3(v_i, v_j, w_{kl}) \bigr] \bigr\}\\
+&+ \tfrac{1}{6} \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k  \, \bigl\{ \dot{\E}_3(v_i, v_j, v_k) + 3\dot{\E}_2(v_i, w_{jk}) + 3 \bigl[ \E_2(w_{ij}, w_{k\lambda}) + \E_3(v_i, v_j, w_{k\lambda}) \bigr] \bigr\}\\
+&+ \tfrac{1}{4} \bigl( \order[1]{\lambda} \bigr)^2 \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \bigl\{ \ddot{\E}_2(v_i, v_j) + 2\dot{\E}_2(v_i, w_{j\lambda}) + 2\bigl[ \E_2(w_{i\lambda}, w_{j\lambda}) + \dot{\E}_2(v_i, w_{j\lambda}) \bigr] \bigr\}\\
+&+ \tfrac{1}{4} \order[1]{\xi}_i \, \order[2]{\xi}_j \, \bigl[ \E_3(v_i, v_j, v_k) \, \order[1]{\xi}_k + 2\order[1]{\lambda} \, \dot{\E}_2(v_i, v_j) \bigl]\\
+&+ \tfrac{1}{4} \order[2]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{\E}_2(v_i, v_j).
+\end{aligned}
+$$
+
+Testing Eq. (@eq-20230107180410) with $w_{kl}$ and $w_{k\lambda}$, successively and Eq. (@eq-20230107180501) with $w_{j\lambda}$ and further using the first bifurcation equation (@eq-20230125062336)
+
+$$
+\begin{aligned}
+\order[4]{\Delta\E} ={} & \tfrac{1}{24} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \bigl[ \E_4(v_i, v_j, v_k, v_l) + 3\E_3(v_i, v_j, w_{kl}) \bigr]\\
+&+ \tfrac{1}{6} \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k  \, \bigl[ \dot{\E}_3(v_i, v_j, v_k) + 3\dot{\E}_2(v_i, w_{jk}) \bigr]\\
+&+ \tfrac{1}{4} \bigl( \order[1]{\lambda} \bigr)^2 \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \bigl[\ddot{\E}_2(v_i, v_j) + 2\dot{\E}_2(v_i, w_{j\lambda}) \bigr]\\
+&+ \tfrac{1}{4} \order[2]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{\E}_2(v_i, v_j).
+\end{aligned}
+$$
+
+Now, recognizing the definitions (@eq-20230125062505), (@eq-20230124211207), (@eq-20230124210649) and (@eq-20230124210049)
+
+$$
+\begin{aligned}
+\order[4]{\Delta\E} ={} & \tfrac{1}{24} E_{ijkl} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l + \tfrac{1}{6} \order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k\\
+&+ \tfrac{1}{4} \bigl( \order[1]{\lambda} \bigr)^2 \, \ddot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j
++ \tfrac{1}{4} \order[2]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j,
+\end{aligned}
+$$
+
+and Eq. (@eq-20230402101651) is finally retrieved.

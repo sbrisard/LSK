@@ -105,7 +105,7 @@ and Eq. (@eq-20230124205642) is retrieved.
 
 ## Proof of Eq. (@eq-20230402101651) {#sec-20230402101835}
 
-Reordering Eq. (eq-20230402102020) delivers
+Reordering Eq. (@eq-20230402102020) delivers
 
 $$
 \begin{aligned}

@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./energy.html" rel="next">
 <link href="./bifurcation_equations.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -121,6 +121,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
   </div>
 </li>
@@ -204,9 +209,9 @@ ul.task-list li input[type="checkbox"] {
 \end{aligned}
 \tag{5.3}\]</span></span> for all <span class="math inline">\(\xi_1, \ldots, \xi_m \in \reals\)</span> and <span class="math inline">\(i = 1, \ldots, m\)</span>.</p>
 <p>Eq.&nbsp;(<a href="#eq-20230116205638"><span>5.2</span></a>) holds for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Plugging <span class="math inline">\(\xi_i = \order[1]{\xi_i}\)</span> and using Eq.&nbsp;(<a href="#eq-20230116205753"><span>5.1</span></a>) delivers the first bifurcation equation <span id="eq-20230125062336"><span class="math display">\[
-E_{ijk} \, \order[1]{\xi_j} \, \order[1]{\xi_k} + \order[1]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi_j} = 0.
+\tfrac{1}{2} E_{ijk} \, \order[1]{\xi_j} \, \order[1]{\xi_k} + \order[1]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi_j} = 0.
 \tag{5.4}\]</span></span></p>
-<p>Similarly, Eq.&nbsp;(<a href="#eq-20230117071620"><span>5.3</span></a>) is simplified as follows (see proof in <a href="technical_proofs.html#sec-20230124212008"><span>Section&nbsp;B.1</span></a>) <span id="eq-20230124205642"><span class="math display">\[
+<p>Similarly, Eq.&nbsp;(<a href="#eq-20230117071620"><span>5.3</span></a>) is simplified as follows (see proof in <a href="technical_proofs.html#sec-20230124212008"><span>Section&nbsp;A.1</span></a>) <span id="eq-20230124205642"><span class="math display">\[
 \begin{aligned}[b]
 \tfrac{1}{3} E_{ijkl} \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l
 + \order[1]{\lambda} \, \bigl( \dot{E}_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \ddot{E}_{ij} \bigr) \, \order[1]{\xi}_j &amp;\\
@@ -264,7 +269,7 @@ w'(0) = 0
 w''(0) = \order[1]{\xi_i} \, \order[1]{\xi_j} \, w_{ij}  + 2 \order[1]{\lambda} \, \order[1]{\xi_i} \, w_{i\lambda}
 \]</span></p>
 <p>We deduce from the above the Taylor expansion of the bifurcated branch as <span class="math inline">\(\eta \to 0\)</span> <span class="math display">\[
-u(\eta) = u^\ast[\lambda(\eta)] + \order[1]{\xi_i} \, v_i + \tfrac{1}{2} \bigl( \order[2]{\xi_i} \, v_i
+u(\eta) = u^\ast[\lambda(\eta)] + \eta \, \order[1]{\xi_i} \, v_i + \tfrac{1}{2} \eta^2 \, \bigl( \order[2]{\xi_i} \, v_i
 + \order[1]{\xi_i} \, \order[1]{\xi_j} \, w_{ij}  + 2\order[1]{\lambda} \, \order[1]{\xi_i} \, w_{i\lambda} \bigr) + o(\eta^2).
 \]</span></p>
 
@@ -412,8 +417,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./energy.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

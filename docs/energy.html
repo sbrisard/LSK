@@ -467,6 +467,50 @@ Note
 &amp;+ 6 \bigl[ \bigl( \order[1]{\lambda} \bigr)^2 \, \ddot{E}_{ij} + \order[2]{\lambda} \, \dot{E}_{ij} \bigr] \, \order[1]{\xi}_i \, \order[1]{\xi}_j \bigr\}.
 \end{aligned}
 \]</span></p>
+<p>To close this chapter, we evaluate the Hessian of the energy along the bifurcated branch.</p>
+<div class="cell" data-execution_count="75">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>E_uu <span class="op">=</span> (<span class="bu">eval</span>(data[<span class="st">"E_uu"</span>]).subs({Symbol(<span class="st">"\lambda"</span>): λ, Symbol(<span class="st">"u"</span>): u})  <span class="op">+</span> O(η<span class="op">**</span><span class="dv">3</span>)).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="76">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>E_uu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="76">
+<p><span class="math inline">\(\displaystyle \dot{\E}_3 \eta^{2} \xi_i^{(1)}v_i {\order[1]{\lambda}} + \dot{\E}_2 \eta {\order[1]{\lambda}} + \frac{\dot{\E}_2 \eta^{2} {\order[2]{\lambda}}}{2} + \frac{\ddot{\E}_2 \eta^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\E_{4} \eta^{2} \left(\xi_i^{(1)}v_i\right)^{2}}{2} + \E_{3} \eta \xi_i^{(1)}v_i + \E_{3} \eta^{2} \xi_m^{(1)}w_{m\lambda} {\order[1]{\lambda}} + \frac{\E_{3} \eta^{2} \xi_k^{(1)}\xi_l^{(1)}w_{kl}}{2} + \frac{\E_{3} \eta^{2} \xi_j^{(2)}v_j}{2} + \E_{2} + O\left(\eta^{3}\right)\)</span></p>
+</div>
+</div>
+<div class="cell" data-execution_count="78">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\E_{,uu}[u \circ \lambda(\eta), \lambda(\eta)]"</span>, E_uu)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><span class="math inline">\(\displaystyle \E_{,uu}[u \circ \lambda(\eta), \lambda(\eta)]=\dot{\E}_3 \eta^{2} \xi_i^{(1)}v_i {\order[1]{\lambda}} + \dot{\E}_2 \eta {\order[1]{\lambda}} + \frac{\dot{\E}_2 \eta^{2} {\order[2]{\lambda}}}{2} + \frac{\ddot{\E}_2 \eta^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\E_{4} \eta^{2} \left(\xi_i^{(1)}v_i\right)^{2}}{2} + \E_{3} \eta \xi_i^{(1)}v_i + \E_{3} \eta^{2} \xi_m^{(1)}w_{m\lambda} {\order[1]{\lambda}} + \frac{\E_{3} \eta^{2} \xi_k^{(1)}\xi_l^{(1)}w_{kl}}{2} + \frac{\E_{3} \eta^{2} \xi_j^{(2)}v_j}{2} + \E_{2} + O\left(\eta^{3}\right)\)</span></p>
+</div>
+</div>
+<p>The above expression must be understood as follows</p>
+<p><span class="math display">\[
+\begin{aligned}[b]
+\E_{,uu}[u \circ \lambda(\eta), \lambda(\eta); \bullet, \bullet] ={}
+&amp; \E_2(\bullet, \bullet) + \eta \, \bigl[ \order[1]{\xi}_i \, \E_3(v_i, \bullet, \bullet) + \order[1]{\lambda} \, \dot{\E}_2(\bullet, \bullet) \bigr]\\
+&amp;+ \tfrac{1}{2}\eta^2 \, \bigl[ \order[1]{\xi}_i \, \order[1]{\xi}_j \, \E_4(v_i, v_j, \bullet, \bullet)
++ \order[2]{\xi}_i \, \E_3(v_i, \bullet, \bullet) \\
+&amp;+ \order[1]{\xi}_i \, \order[1]{\xi}_j \, \E_3(w_{ij}, \bullet, \bullet)
++ 2\order[1]{\lambda} \, \order[1]{\xi}_i \, \E_3(w_{i\lambda}, \bullet, \bullet)\\
+&amp;+ 2\order[1]{\lambda} \, \order[1]{\xi}_i \, \dot{\E}_3(v_i, \bullet, \bullet)
++ (\order[1]{\lambda})^2 \, \ddot{\E}_2(\bullet, \bullet) + \order[2]{\lambda} \, \dot{\E}_2(\bullet, \bullet)\bigr],
+\end{aligned}
+\]</span></p>
+<p>or, equivalently</p>
+<p><span class="math display">\[
+\begin{aligned}[b]
+\E_{,uu}[u \circ \lambda(\eta), \lambda(\eta); \bullet, \bullet] ={}
+&amp; \E_2(\bullet, \bullet) + \eta \, \bigl[ \E_3(\order[1]{u}, \bullet, \bullet) + \order[1]{\lambda} \, \dot{\E}_2(\bullet, \bullet) \bigr]\\
+&amp;+ \tfrac{1}{2}\eta^2 \, \bigl[ \E_4(\order[1]{u}, \order[1]{u}, \bullet, \bullet)
++ \E_3(\order[2]{u}, \bullet, \bullet) \\
+&amp;+ 2\order[1]{\lambda} \, \dot{\E}_3(\order[1]{u}, \bullet, \bullet)
++ (\order[1]{\lambda})^2 \, \ddot{\E}_2(\bullet, \bullet) + \order[2]{\lambda} \, \dot{\E}_2(\bullet, \bullet)\bigr],
+\end{aligned}
+\]</span></p>
+<p>where <span class="math inline">\(\order[1]{u}\)</span> and <span class="math inline">\(\order[2]{u}\)</span> have been defined in <a href="parametrization.html"><span>Chapter&nbsp;5</span></a>, see Eq (<a href="parametrization.html#eq-20230411141319"><span>5.11</span></a>).</p>
 
 
 

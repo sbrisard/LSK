@@ -13,6 +13,7 @@ book:
     - bifurcation_equations.ipynb
     - parametrization.qmd
     - energy.ipynb
+    - eigenmodes.qmd
     - references.qmd
   appendices:
     - technical_proofs.qmd

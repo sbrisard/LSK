@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./setting-up_the_computational_stage.html" rel="next">
+<link href="./main_results.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -114,32 +114,38 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./main_results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Perfect system: outline of the main results</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./parametrization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./energy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -148,23 +154,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">References</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./technical_proofs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Technical proofs</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -177,6 +166,8 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#sec-20230208081323" id="toc-sec-20230208081323" class="nav-link active" data-scroll-target="#sec-20230208081323"><span class="header-section-number">2.1</span> Mathematical setting</a></li>
   <li><a href="#sec-20230107173921" id="toc-sec-20230107173921" class="nav-link" data-scroll-target="#sec-20230107173921"><span class="header-section-number">2.2</span> Kernel of the hessian of the energy</a></li>
+  <li><a href="#two-canonical-variational-problems" id="toc-two-canonical-variational-problems" class="nav-link" data-scroll-target="#two-canonical-variational-problems"><span class="header-section-number">2.3</span> Two canonical variational problems</a></li>
+  <li><a href="#sec-20230528173310" id="toc-sec-20230528173310" class="nav-link" data-scroll-target="#sec-20230528173310"><span class="header-section-number">2.4</span> Additional symbols</a></li>
   </ul>
 </nav>
     </div>
@@ -254,21 +245,51 @@ v \in V \quad \iff \quad \E_2(v, \hat{u}) = 0 \quad \text{for all} \quad \hat{u}
 <p>To close this section, we define the complementary subspace <span class="math inline">\(W\)</span>, orthogonal to <span class="math inline">\(V\)</span> for the scalar product <span class="math inline">\(\langle \bullet, \bullet \rangle\)</span> <span class="math display">\[
 U = V \overset{\perp}{\otimes} W \quad \text{and} \quad \langle \hat{v}, \hat{w} \rangle = 0 \quad \text{for all} \quad \hat{v} \in V \quad \text{and} \quad \hat{w} \in W.
 \]</span></p>
+</section>
+<section id="two-canonical-variational-problems" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="two-canonical-variational-problems"><span class="header-section-number">2.3</span> Two canonical variational problems</h2>
+<p>The bilinear form <span class="math inline">\(\E_2\)</span> is elliptic over <span class="math inline">\(W\)</span>. Therefore, variational problems of the type: find <span class="math inline">\(w \in W\)</span> such that <span class="math display">\[
+\E_2(w, \hat{w})+\ell(\hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W
+\]</span> are well-posed for any linear form <span class="math inline">\(\ell\)</span> over <span class="math inline">\(W\)</span>. In particular, for <span class="math inline">\(\ell=0\)</span>, the unique solution to the variational problem <span class="math display">\[
+\E_2(w, \hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W
+\]</span> is <span class="math inline">\(w = 0\)</span>. For <span class="math inline">\(\ell(\bullet) = \E_3(v_i, v_j, \bullet)\)</span> and <span class="math inline">\(\ell(\bullet) = \dot{\E}_2(v_i, \bullet),\)</span> <span class="math inline">\(w_{ij} \in W\)</span> and <span class="math inline">\(w_{i\lambda} \in W\)</span> are defined as the unique solutions in <span class="math inline">\(W\)</span> of the following variational problems <span id="eq-20230107180410"><span class="math display">\[
+\E_2(w_{ij}, \hat{w}) + \E_3(v_i, v_j, \hat{w}) = 0
+\tag{2.4}\]</span></span> and <span id="eq-20230107180501"><span class="math display">\[
+\E_2(w_{i\lambda}, \hat{w}) + \dot{\E}_2(v_i, \hat{w}) = 0,
+\tag{2.5}\]</span></span> for all <span class="math inline">\(\hat{w} \in W\)</span>. These variational problems (and their solutions) will pop-up recurrently in what follows.</p>
+</section>
+<section id="sec-20230528173310" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="sec-20230528173310"><span class="header-section-number">2.4</span> Additional symbols</h2>
+<p>We will make use of the following symbols <span id="eq-20230125062505"><span class="math display">\[
+\dot{E}_{ij} = \dot{\E}_2(v_i, v_j),
+\tag{2.6}\]</span></span> <span id="eq-20230124211207"><span class="math display">\[
+\ddot{E}_{ij} = \ddot{\E}_2(v_i, v_j) + \dot{\E}_2(v_i, w_{j\lambda}) + \dot{\E}_2(v_j, w_{i\lambda}),
+\tag{2.7}\]</span></span> <span id="eq-20230125062510"><span class="math display">\[
+E_{ijk} = \E_3(v_i, v_j, v_k),
+\tag{2.8}\]</span></span> <span id="eq-20230124210649"><span class="math display">\[
+\dot{E}_{ijk} = \dot{\E}_3(v_i, v_j, v_k) + \dot{\E}_2(v_i, w_{jk}) + \dot{\E}_2(v_j, w_{ik}) + \dot{\E}_2(v_k, w_{ij}),
+\tag{2.9}\]</span></span> <span id="eq-20230124210049"><span class="math display">\[
+\begin{aligned}[b]
+E_{ijkl} ={}&amp; \E_4(v_i, v_j, v_k, v_l) + \E_3(v_i, v_j, w_{kl})\\
+&amp;+ \E_3(v_i, v_k, w_{jl}) + \E_3(v_i, v_l, w_{jk}).
+\end{aligned}
+\tag{2.10}\]</span></span></p>
+<p>These symbols define second, third and fourth-order, fully symmetric, tensors over <span class="math inline">\(V\)</span>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Consistency of the above definitions
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The bilinear form <span class="math inline">\(\E_2\)</span> is elliptic over <span class="math inline">\(W\)</span>. Therefore, variational problems of the type: find <span class="math inline">\(w \in W\)</span> such that <span class="math display">\[
-\E_2(w, \hat{w})+\ell(\hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W
-\]</span> are well-posed for any linear form <span class="math inline">\(\ell\)</span> over <span class="math inline">\(W\)</span>. In particular, for <span class="math inline">\(\ell=0\)</span>, the unique solution to the variational problem <span class="math display">\[
-\E_2(w, \hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W
-\]</span> is <span class="math inline">\(w = 0\)</span>.</p>
+<p>Since <span class="math inline">\(\E_2(v, \bullet) = 0\)</span> for all <span class="math inline">\(v \in V\)</span>, definitions (<a href="#eq-20230125062505"><span>2.6</span></a>) and (<a href="#eq-20230125062510"><span>2.8</span></a>) of <span class="math inline">\(\dot{E}_{ij}\)</span> and <span class="math inline">\(E_{ijk}\)</span> can also be written <span class="math display">\[
+\dot{E}_{ij} = \dot{\E}_2(v_i, v_j) + \E_2(v_i, w_{j\lambda}) + \E_2(v_j, w_{i\lambda})
+\]</span> and <span class="math display">\[
+E_{ijk} = \E_3(v_i, v_j, v_k)  + \E_2(v_i, w_{jk}) + \E_2(v_j, w_{ik}) + \E_2(v_k, w_{ij}),
+\]</span> wich shows the consistency with definitions (<a href="#eq-20230124211207"><span>2.7</span></a>) and (<a href="#eq-20230124210649"><span>2.9</span></a>) of <span class="math inline">\(\ddot{E}_{ij}\)</span> and <span class="math inline">\(\dot{E}_{ijk}\)</span>.</p>
 </div>
 </div>
 
@@ -516,8 +537,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./setting-up_the_computational_stage.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./main_results.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Perfect system: outline of the main results</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

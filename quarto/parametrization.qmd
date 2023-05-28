@@ -60,41 +60,8 @@ $$
 \end{aligned}
 $$ {#eq-20230124205642}
 
-In Eqs. (@eq-20230125062336) and (@eq-20230124205642), the following quantities have been introduced
+The quantities $\dot{E}_{ij}$, $\ddot{E}_{ij}$, $E_{ijk}$, $\dot{E}_{ijk}$ and $E_{ijkl}$ appearing in Eqs. (@eq-20230125062336) and (@eq-20230124205642) have been defined in @sec-20230402152824 (see @sec-20230528173310).
 
-$$
-\dot{E}_{ij} = \dot{\E}_2(v_i, v_j),
-$$ {#eq-20230125062505}
-$$
-E_{ijk} = \E_3(v_i, v_j, v_k),
-$$ {#eq-20230125062510}
-$$
-\ddot{E}_{ij} = \ddot{\E}_2(v_i, v_j) + \dot{\E}_2(v_i, w_{j\lambda}) + \dot{\E}_2(v_j, w_{i\lambda}),
-$$ {#eq-20230124211207}
-$$
-\dot{E}_{ijk} = \dot{\E}_3(v_i, v_j, v_k) + \dot{\E}_2(v_i, w_{jk}) + \dot{\E}_2(v_j, w_{ik}) + \dot{\E}_2(v_k, w_{ij}),
-$$ {#eq-20230124210649}
-$$
-\begin{aligned}[b]
-E_{ijkl} ={}& \E_4(v_i, v_j, v_k, v_l) + \E_3(v_i, v_j, w_{kl})\\
-&+ \E_3(v_i, v_k, w_{jl}) + \E_3(v_i, v_l, w_{jk}).
-\end{aligned}
-$$ {#eq-20230124210049}
-
-::: {.callout-note}
-## Consistency of the above definitions
-
-Since $\E_2(v, \bullet) = 0$ for all $v \in V$, definitions (@eq-20230125062505) and (@eq-20230125062510) of $\dot{E}_{ij}$ and
-$E_{ijk}$ can also be written
-$$
-\dot{E}_{ij} = \dot{\E}_2(v_i, v_j) + \E_2(v_i, w_{j\lambda}) + \E_2(v_j, w_{i\lambda})
-$$
-and
-$$
-E_{ijk} = \E_3(v_i, v_j, v_k)  + \E_2(v_i, w_{jk}) + \E_2(v_j, w_{ik}) + \E_2(v_k, w_{ij}),
-$$
-wich shows the consistency with definitions (@eq-20230124211207) and (@eq-20230124210649) of $\ddot{E}_{ij}$ and $\dot{E}_{ijk}$.
-:::
 
 ## Taylor expansion of the bifurcated branch
 

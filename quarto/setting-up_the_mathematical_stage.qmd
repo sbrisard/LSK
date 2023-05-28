@@ -83,7 +83,8 @@ $$
 U = V \overset{\perp}{\otimes} W \quad \text{and} \quad \langle \hat{v}, \hat{w} \rangle = 0 \quad \text{for all} \quad \hat{v} \in V \quad \text{and} \quad \hat{w} \in W.
 $$
 
-::: {.callout-note}
+## Two canonical variational problems
+
 The bilinear form $\E_2$ is elliptic over $W$. Therefore, variational problems of the type: find $w \in W$ such that
 $$
 \E_2(w, \hat{w})+\ell(\hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W
@@ -93,5 +94,52 @@ problem
 $$
 \E_2(w, \hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W
 $$
-is $w = 0$.
+is $w = 0$. For $\ell(\bullet) = \E_3(v_i, v_j, \bullet)$ and $\ell(\bullet) = \dot{\E}_2(v_i, \bullet),$ $w_{ij} \in W$
+and $w_{i\lambda} \in W$ are defined as the unique solutions in $W$ of the following variational problems
+$$
+\E_2(w_{ij}, \hat{w}) + \E_3(v_i, v_j, \hat{w}) = 0
+$$ {#eq-20230107180410}
+and
+$$
+\E_2(w_{i\lambda}, \hat{w}) + \dot{\E}_2(v_i, \hat{w}) = 0,
+$$ {#eq-20230107180501}
+for all $\hat{w} \in W$. These variational problems (and their solutions) will pop-up recurrently in what follows.
+
+## Additional symbols {#sec-20230528173310}
+
+We will make use of the following symbols
+$$
+\dot{E}_{ij} = \dot{\E}_2(v_i, v_j),
+$$ {#eq-20230125062505}
+$$
+\ddot{E}_{ij} = \ddot{\E}_2(v_i, v_j) + \dot{\E}_2(v_i, w_{j\lambda}) + \dot{\E}_2(v_j, w_{i\lambda}),
+$$ {#eq-20230124211207}
+$$
+E_{ijk} = \E_3(v_i, v_j, v_k),
+$$ {#eq-20230125062510}
+$$
+\dot{E}_{ijk} = \dot{\E}_3(v_i, v_j, v_k) + \dot{\E}_2(v_i, w_{jk}) + \dot{\E}_2(v_j, w_{ik}) + \dot{\E}_2(v_k, w_{ij}),
+$$ {#eq-20230124210649}
+$$
+\begin{aligned}[b]
+E_{ijkl} ={}& \E_4(v_i, v_j, v_k, v_l) + \E_3(v_i, v_j, w_{kl})\\
+&+ \E_3(v_i, v_k, w_{jl}) + \E_3(v_i, v_l, w_{jk}).
+\end{aligned}
+$$ {#eq-20230124210049}
+
+These symbols define second, third and fourth-order, fully symmetric, tensors over $V$.
+
+::: {.callout-note}
+## Consistency of the above definitions
+
+Since $\E_2(v, \bullet) = 0$ for all $v \in V$, definitions (@eq-20230125062505) and (@eq-20230125062510) of $\dot{E}_{ij}$ and
+$E_{ijk}$ can also be written
+$$
+\dot{E}_{ij} = \dot{\E}_2(v_i, v_j) + \E_2(v_i, w_{j\lambda}) + \E_2(v_j, w_{i\lambda})
+$$
+and
+$$
+E_{ijk} = \E_3(v_i, v_j, v_k)  + \E_2(v_i, w_{jk}) + \E_2(v_j, w_{ik}) + \E_2(v_k, w_{ij}),
+$$
+wich shows the consistency with definitions (@eq-20230124211207) and (@eq-20230124210649) of $\ddot{E}_{ij}$ and $\dot{E}_{ijk}$.
 :::

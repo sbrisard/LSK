@@ -9,12 +9,12 @@ book:
   chapters:
     - index.qmd
     - setting-up_the_mathematical_stage.qmd
+    - main_results.qmd
     - setting-up_the_computational_stage.ipynb
     - bifurcation_equations.ipynb
     - parametrization.qmd
     - energy.ipynb
     - eigenmodes.ipynb
-    - summary.qmd
     - references.qmd
   appendices:
     - technical_proofs.qmd

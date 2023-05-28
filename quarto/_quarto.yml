@@ -16,8 +16,6 @@ book:
     - energy.ipynb
     - eigenmodes.ipynb
     - references.qmd
-  appendices:
-    - technical_proofs.qmd
 
 bibliography: LSK-notes.bib
 

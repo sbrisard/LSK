@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 8&nbsp; Eigenmodes of the hessian of the energy</title>
+<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 9&nbsp; Eigenmodes of the hessian of the energy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./eigenmodes.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./eigenmodes.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -166,20 +166,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./bifurcation_equations-new.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./parametrization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./energy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -198,9 +204,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#variational-problem-of-order-0" id="toc-variational-problem-of-order-0" class="nav-link active" data-scroll-target="#variational-problem-of-order-0"><span class="header-section-number">8.1</span> Variational problem of order 0</a></li>
-  <li><a href="#variational-problem-of-order-1" id="toc-variational-problem-of-order-1" class="nav-link" data-scroll-target="#variational-problem-of-order-1"><span class="header-section-number">8.2</span> Variational problem of order 1</a></li>
-  <li><a href="#variational-problem-of-order-2" id="toc-variational-problem-of-order-2" class="nav-link" data-scroll-target="#variational-problem-of-order-2"><span class="header-section-number">8.3</span> Variational problem of order 2</a></li>
+  <li><a href="#variational-problem-of-order-0" id="toc-variational-problem-of-order-0" class="nav-link active" data-scroll-target="#variational-problem-of-order-0"><span class="header-section-number">9.1</span> Variational problem of order 0</a></li>
+  <li><a href="#variational-problem-of-order-1" id="toc-variational-problem-of-order-1" class="nav-link" data-scroll-target="#variational-problem-of-order-1"><span class="header-section-number">9.2</span> Variational problem of order 1</a></li>
+  <li><a href="#variational-problem-of-order-2" id="toc-variational-problem-of-order-2" class="nav-link" data-scroll-target="#variational-problem-of-order-2"><span class="header-section-number">9.3</span> Variational problem of order 2</a></li>
   </ul>
 </nav>
     </div>
@@ -209,7 +215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-20230528190001" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></h1>
+<h1 class="title"><span id="sec-20230528190001" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></h1>
 </div>
 
 
@@ -269,8 +275,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>In view of stability analysis, we consider in this chapter the hessian of the energy along the bifurcated branch. We derive an asymptotic expansion of its eigenmodes. The eigenvalues <span class="math inline">\(\alpha \in \reals\)</span> and eigenvectors <span class="math inline">\(x \in U\)</span> of the hessian are such that <span id="eq-20230517062340"><span class="math display">\[
 \E_{, u u} [u(\eta), \lambda(\eta); x, \hat{u}] = \alpha \, \langle x, \hat{u} \rangle \quad \text{for all} \quad \hat{u} \in U,
-\tag{8.1}\]</span></span> where <span class="math inline">\(\eta \mapsto \lambda(\eta)\)</span> and <span class="math inline">\(\eta \mapsto u(\eta)\)</span> define the bifurcated branch (<span class="math inline">\(\eta\)</span>: parameter, yet unspecified). We focus in this chapter on potentially unstable eigenmodes, for which the eigenvalue <span class="math inline">\(\alpha\)</span> might be negative in the vicinity of <span class="math inline">\(\eta = 0\)</span>.</p>
-<p>In <a href="parametrization.html"><span>Chapter&nbsp;6</span></a> and in <a href="energy.html"><span>Chapter&nbsp;7</span></a>, the following asymptotic expansions of <span class="math inline">\(\lambda(\eta)\)</span>, <span class="math inline">\(u(\eta)\)</span> and <span class="math inline">\(\E_{,uu}[u(\eta), \lambda(\eta); \bullet, \bullet]\)</span> were derived</p>
+\tag{9.1}\]</span></span> where <span class="math inline">\(\eta \mapsto \lambda(\eta)\)</span> and <span class="math inline">\(\eta \mapsto u(\eta)\)</span> define the bifurcated branch (<span class="math inline">\(\eta\)</span>: parameter, yet unspecified). We focus in this chapter on potentially unstable eigenmodes, for which the eigenvalue <span class="math inline">\(\alpha\)</span> might be negative in the vicinity of <span class="math inline">\(\eta = 0\)</span>.</p>
+<p>In <a href="parametrization.html"><span>Chapter&nbsp;7</span></a> and in <a href="energy.html"><span>Chapter&nbsp;8</span></a>, the following asymptotic expansions of <span class="math inline">\(\lambda(\eta)\)</span>, <span class="math inline">\(u(\eta)\)</span> and <span class="math inline">\(\E_{,uu}[u(\eta), \lambda(\eta); \bullet, \bullet]\)</span> were derived</p>
 <div class="cell" data-execution_count="2">
 <details>
 <summary>Code</summary>
@@ -299,9 +305,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 \]</span> and <span class="math display">\[
 x = \order[0]x + \eta \, \order[1]x + \tfrac{1}{2} \eta^2 \, \order[2]x + o(\eta^2).
 \]</span></p>
-<p>Plugging these expansions into Eq. (<a href="#eq-20230517062340"><span>8.1</span></a>) delivers 3 variational problems (of order 0, 1 and 2 in <span class="math inline">\(\eta\)</span>). These variational problems are studied below successively.</p>
-<section id="variational-problem-of-order-0" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="variational-problem-of-order-0"><span class="header-section-number">8.1</span> Variational problem of order 0</h2>
+<p>Plugging these expansions into Eq. (<a href="#eq-20230517062340"><span>9.1</span></a>) delivers 3 variational problems (of order 0, 1 and 2 in <span class="math inline">\(\eta\)</span>). These variational problems are studied below successively.</p>
+<section id="variational-problem-of-order-0" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="variational-problem-of-order-0"><span class="header-section-number">9.1</span> Variational problem of order 0</h2>
 <p>The lowest-order problem reads: find <span class="math inline">\(\order[0]x \in U\)</span> and <span class="math inline">\(\order[0]\alpha\in\reals\)</span> such that, for all <span class="math inline">\(\hat{u} \in U\)</span> <span class="math display">\[
 \E_2(\order[0]x, \hat{u}) = \order[0]\alpha \langle \order[0]x, \hat{u} \rangle.
 \]</span></p>
@@ -321,8 +327,8 @@ x = \order[0]x + \eta \, \order[1]x + \tfrac{1}{2} \eta^2 \, \order[2]x + o(\eta
 </div>
 </div>
 </section>
-<section id="variational-problem-of-order-1" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="variational-problem-of-order-1"><span class="header-section-number">8.2</span> Variational problem of order 1</h2>
+<section id="variational-problem-of-order-1" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="variational-problem-of-order-1"><span class="header-section-number">9.2</span> Variational problem of order 1</h2>
 <p>The first-order term <span class="math inline">\(\order[1]x\)</span> is decomposed as the sum of its projections onto <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span></p>
 <div class="cell" data-execution_count="4">
 <details>
@@ -363,11 +369,11 @@ x = \order[0]x + \eta \, \order[1]x + \tfrac{1}{2} \eta^2 \, \order[2]x + o(\eta
 + \order[0]{\chi}_j \, \order[1]{\xi}_k \, \E_3(v_j, v_k, \hat{u})
 + \order[1]{\lambda} \, \order[0]{\chi}_j \, \dot{\E}_2(v_j, \hat{u})
 = \order[1]{\alpha} \, \order[0]{\chi}_j \, \langle v_j, \hat{u} \rangle,
-\tag{8.2}\]</span></span></p>
-<p>Eq. (<a href="#eq-20230523134144"><span>8.2</span></a>) is first tested with <span class="math inline">\(\hat{u} = v_i \in V\)</span>. Observing that <span class="math inline">\(\langle v_i, v_j \rangle = \delta_{ij}\)</span> since <span class="math inline">\((v_i)\)</span> is orthonormal, we get <span class="math display">\[
+\tag{9.2}\]</span></span></p>
+<p>Eq. (<a href="#eq-20230523134144"><span>9.2</span></a>) is first tested with <span class="math inline">\(\hat{u} = v_i \in V\)</span>. Observing that <span class="math inline">\(\langle v_i, v_j \rangle = \delta_{ij}\)</span> since <span class="math inline">\((v_i)\)</span> is orthonormal, we get <span class="math display">\[
 \bigl[ \E_3(v_i, v_j, v_k) \, \order[1]{\xi_k} + \order[1]\lambda \, \dot{\E}_2(v_i, v_j)\bigr] \, \order[0]{\chi_j} = \order[1]\alpha \, \order[0]{\chi_i},
 \]</span> which shows that <span class="math inline">\((\order[1]\alpha, \order[0]{\chi_i})\)</span> is an eigenpair of the symmetric tensor <span class="math inline">\((E_{ijk} \order[1]{\xi_k} + \order[1]\lambda \, \dot{E}_{ij})\)</span> – see Eq.&nbsp;(<a href="main_results.html#eq-20230524065341"><span>3.6</span></a>).</p>
-<p>The test function is now picked in <span class="math inline">\(W = V^\perp\)</span> and Eq. (<a href="#eq-20230523134144"><span>8.2</span></a>) results in the following variational problem: find <span class="math inline">\(\order[1]y \in W\)</span> such that, for all <span class="math inline">\(\hat{w} \in W\)</span>, <span class="math display">\[
+<p>The test function is now picked in <span class="math inline">\(W = V^\perp\)</span> and Eq. (<a href="#eq-20230523134144"><span>9.2</span></a>) results in the following variational problem: find <span class="math inline">\(\order[1]y \in W\)</span> such that, for all <span class="math inline">\(\hat{w} \in W\)</span>, <span class="math display">\[
 \E_2(\order[1]y, \hat{w}) + \E_3(v_i, v_j, \hat{w}) \, \order[0]{\chi_i} \, \order[1]{\xi_j} + \order[1]\lambda \, \dot{\E}_2(v_i, \hat{w}) \, \order[0]{\chi_i} = 0,
 \]</span> (observe that <span class="math inline">\(\langle v_j, \hat{w} \rangle = 0\)</span> since <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are orthogonal subspaces). The solution to the above problem is expressed as a linear combination of the <span class="math inline">\(w_{ij}\)</span> and <span class="math inline">\(w_{i\lambda}\)</span> –defined by the variational problems (<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.4</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.5</span></a>), respectively–, delivering</p>
 <div class="cell" data-execution_count="7">
@@ -385,8 +391,8 @@ x = \order[0]x + \eta \, \order[1]x + \tfrac{1}{2} \eta^2 \, \order[2]x + o(\eta
 </div>
 </div>
 </section>
-<section id="variational-problem-of-order-2" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="variational-problem-of-order-2"><span class="header-section-number">8.3</span> Variational problem of order 2</h2>
+<section id="variational-problem-of-order-2" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="variational-problem-of-order-2"><span class="header-section-number">9.3</span> Variational problem of order 2</h2>
 <p>The second-order term <span class="math inline">\(\order[2]x\)</span> is also decomposed as the sum of its projections onto <span class="math inline">\(V\)</span> and <span class="math inline">\(W = V^\perp\)</span></p>
 <div class="cell" data-execution_count="8">
 <details>
@@ -421,7 +427,7 @@ x = \order[0]x + \eta \, \order[1]x + \tfrac{1}{2} \eta^2 \, \order[2]x + o(\eta
 <li>Cancellation of all terms involving <span class="math inline">\(\E_2\)</span>, since all multilinear forms involved in the left-hand side are evaluated at <span class="math inline">\(v_i\)</span> and <span class="math inline">\(\E_2(v_i, \bullet) = 0\)</span>.</li>
 <li>Renaming of some indices <span class="math display">\[\order[1]{\lambda} \, \order[0]{\chi}_j \, \order[1]{\xi}_l \, \dot{\E}_2(v_i, w_{jl}) \rightarrow \order[1]{\lambda} \, \order[0]{\chi}_j \, \order[1]{\xi}_k \, \dot{\E}_2(v_i, w_{jk})\]</span></li>
 <li>Symmetrization of some terms <span class="math display">\[\order[1]{\xi}_k \, \order[1]{\xi}_l \, v_k \, w_{jl} \rightarrow \tfrac{1}{2} \order[1]{\xi}_k \, \order[1]{\xi}_l \, \bigl(v_k \, w_{jl} + v_l \, w_{jk} \bigr)\]</span></li>
-<li>Introduction of the quantities <span class="math inline">\(E_{ij}\)</span>, <span class="math inline">\(\dot{E}_{ij}\)</span>, <span class="math inline">\(\ddot{E}_{ij}\)</span>, <span class="math inline">\(E_{ijk}\)</span>, <span class="math inline">\(\dot{E}_{ijk}\)</span>, <span class="math inline">\(E_{ijkl}\)</span> defined in <a href="parametrization.html"><span>Chapter&nbsp;6</span></a>.</li>
+<li>Introduction of the quantities <span class="math inline">\(E_{ij}\)</span>, <span class="math inline">\(\dot{E}_{ij}\)</span>, <span class="math inline">\(\ddot{E}_{ij}\)</span>, <span class="math inline">\(E_{ijk}\)</span>, <span class="math inline">\(\dot{E}_{ijk}\)</span>, <span class="math inline">\(E_{ijkl}\)</span> defined in <a href="parametrization.html"><span>Chapter&nbsp;7</span></a>.</li>
 <li>Use of equations (<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.4</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.5</span></a>) that define <span class="math inline">\(w_{ij}\)</span> and <span class="math inline">\(w_{i\lambda}\)</span> <span class="math display">\[\E_3(v_i, v_j, w_{k\lambda}) \rightarrow -\E_2(w_{ij}, w_{k\lambda}) \quad \text{and} \quad \dot{\E}_2(v_i, w_{j\lambda}) \rightarrow -\E_2(w_{i\lambda}, w_{j\lambda})\]</span></li>
 </ol>
 <p>and in the right-hand side 1. <span class="math inline">\((v_i)\)</span> is orthonormal <span class="math display">\[\langle v_i, v_j \rangle \rightarrow \delta_{ij}\]</span> 2. <span class="math inline">\(v_i \in V\)</span> and <span class="math inline">\(w_{j\lambda}, w_{jl} \in W = V^\perp\)</span> are orthogonal <span class="math display">\[\langle v_i, w_{j\lambda} \rangle \rightarrow 0 \quad \text{and} \quad \langle v_i, w_{jl} \rangle \rightarrow 0\]</span></p>
@@ -706,7 +712,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./energy.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

@@ -166,20 +166,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./bifurcation_equations-new.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./parametrization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./energy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -200,6 +206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#sec-20230103084732" id="toc-sec-20230103084732" class="nav-link active" data-scroll-target="#sec-20230103084732"><span class="header-section-number">4.1</span> Importing <code>Sympy</code></a></li>
   <li><a href="#sec-20230208081549" id="toc-sec-20230208081549" class="nav-link" data-scroll-target="#sec-20230208081549"><span class="header-section-number">4.2</span> Elimination of the mixed derivatives of the energy</a></li>
+  <li><a href="#implementation-in-the-lsk-module-of-the-above-results" id="toc-implementation-in-the-lsk-module-of-the-above-results" class="nav-link" data-scroll-target="#implementation-in-the-lsk-module-of-the-above-results"><span class="header-section-number">4.3</span> Implementation in the <code>lsk</code> module of the above results</a></li>
   </ul>
 </nav>
     </div>
@@ -459,31 +466,148 @@ Important
 <p><span class="math inline">\(\displaystyle \E(u, \lambda)=- \frac{\E_{2} \dddot{u}_0 \lambda^{3} u}{6} - \frac{\E_{2} \ddot{u}_0 \lambda^{2} u}{2} - \E_{2} \dot{u}_0 \lambda u + \frac{\E_{2} u^{2}}{2} + \frac{\E_{3} \ddot{u}_0 \dot{u}_0 \lambda^{3} u}{2} - \frac{\E_{3} \ddot{u}_0 \lambda^{2} u^{2}}{4} + \frac{\E_{3} \dot{u}_0^{2} \lambda^{2} u}{2} - \frac{\E_{3} \dot{u}_0 \lambda u^{2}}{2} + \frac{\E_{3} u^{3}}{6} - \frac{\E_{4} \dot{u}_0^{3} \lambda^{3} u}{6} + \frac{\E_{4} \dot{u}_0^{2} \lambda^{2} u^{2}}{4} - \frac{\E_{4} \dot{u}_0 \lambda u^{3}}{6} + \frac{\E_{4} u^{4}}{24} + \frac{\E_{\lambda\lambda\lambda\lambda} \lambda^{4}}{24} + \frac{\E_{\lambda\lambda\lambda} \lambda^{3}}{6} + \frac{\E_{\lambda\lambda} \lambda^{2}}{2} + \E_{\lambda} \lambda - \frac{\ddot{\E}_2 \dot{u}_0 \lambda^{3} u}{2} + \frac{\ddot{\E}_2 \lambda^{2} u^{2}}{4} - \frac{\ddot{u}_0 \dot{\E}_2 \lambda^{3} u}{2} - \dot{\E}_2 \dot{u}_0 \lambda^{2} u + \frac{\dot{\E}_2 \lambda u^{2}}{2} + \frac{\dot{\E}_3 \dot{u}_0^{2} \lambda^{3} u}{2} - \frac{\dot{\E}_3 \dot{u}_0 \lambda^{2} u^{2}}{2} + \frac{\dot{\E}_3 \lambda u^{3}}{6}\)</span></p>
 </div>
 </div>
-<p>From which we deduce the expression of the Hessian of the energy.</p>
+<p>From which we deduce the expression of the residual <span class="math inline">\(\E_{,u}\)</span> and the hessian of the energy <span class="math inline">\(\E_{,uu}\)</span>.</p>
 <div class="cell" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>E_uu <span class="op">=</span> E.diff(u, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>E_u <span class="op">=</span> E.diff(u)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>E_uu <span class="op">=</span> E.diff(u, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="22">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\E_{,uu}(u, \lambda)"</span>, E_uu)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\E_{,u}(u, \lambda)"</span>, E_u)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\E_{,uu}(u, \lambda)"</span>, E_uu)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output cell-output-display">
+<p><span class="math inline">\(\displaystyle \E_{,u}(u, \lambda)=- \frac{\E_{2} \dddot{u}_0 \lambda^{3}}{6} - \frac{\E_{2} \ddot{u}_0 \lambda^{2}}{2} - \E_{2} \dot{u}_0 \lambda + \E_{2} u + \frac{\E_{3} \ddot{u}_0 \dot{u}_0 \lambda^{3}}{2} - \frac{\E_{3} \ddot{u}_0 \lambda^{2} u}{2} + \frac{\E_{3} \dot{u}_0^{2} \lambda^{2}}{2} - \E_{3} \dot{u}_0 \lambda u + \frac{\E_{3} u^{2}}{2} - \frac{\E_{4} \dot{u}_0^{3} \lambda^{3}}{6} + \frac{\E_{4} \dot{u}_0^{2} \lambda^{2} u}{2} - \frac{\E_{4} \dot{u}_0 \lambda u^{2}}{2} + \frac{\E_{4} u^{3}}{6} - \frac{\ddot{\E}_2 \dot{u}_0 \lambda^{3}}{2} + \frac{\ddot{\E}_2 \lambda^{2} u}{2} - \frac{\ddot{u}_0 \dot{\E}_2 \lambda^{3}}{2} - \dot{\E}_2 \dot{u}_0 \lambda^{2} + \dot{\E}_2 \lambda u + \frac{\dot{\E}_3 \dot{u}_0^{2} \lambda^{3}}{2} - \dot{\E}_3 \dot{u}_0 \lambda^{2} u + \frac{\dot{\E}_3 \lambda u^{2}}{2}\)</span></p>
+</div>
 <div class="cell-output cell-output-display">
 <p><span class="math inline">\(\displaystyle \E_{,uu}(u, \lambda)=\E_{2} - \frac{\E_{3} \ddot{u}_0 \lambda^{2}}{2} - \E_{3} \dot{u}_0 \lambda + \E_{3} u + \frac{\E_{4} \dot{u}_0^{2} \lambda^{2}}{2} - \E_{4} \dot{u}_0 \lambda u + \frac{\E_{4} u^{2}}{2} + \frac{\ddot{\E}_2 \lambda^{2}}{2} + \dot{\E}_2 \lambda - \dot{\E}_3 \dot{u}_0 \lambda^{2} + \dot{\E}_3 \lambda u\)</span></p>
 </div>
 </div>
-<p>Some of the previous symbolic results are now saved for further use in the subsequent notebooks.</p>
+<p>Some of the previous symbolic results are now saved for testing in the next section.</p>
 <div class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"E"</span> : srepr(E),</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"E_uu"</span> : srepr(E_uu),</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"u_star"</span>: srepr(u_star)</span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"setting-up_the_computational_stage.out.json"</span>, <span class="st">"w"</span>) <span class="im">as</span> f:</span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>    json.dump(data, f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"E_u"</span> : srepr(E_u),</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"E_uu"</span> : srepr(E_uu),</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"u_star"</span>: srepr(u_star),</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"E_uλ"</span>: srepr(mixed[dE[<span class="dv">1</span>, <span class="dv">1</span>]]),</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"E_uλλ"</span>: srepr(mixed[dE[<span class="dv">1</span>, <span class="dv">2</span>]]),</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"E_uλλλ"</span>: srepr(mixed[dE[<span class="dv">1</span>, <span class="dv">3</span>]]),</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"E_uuλ"</span>: srepr(mixed[dE[<span class="dv">2</span>, <span class="dv">1</span>]]),</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"E_uuλλ"</span>: srepr(mixed[dE[<span class="dv">2</span>, <span class="dv">2</span>]]),</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"E_uuuλ"</span>: srepr(mixed[dE[<span class="dv">3</span>, <span class="dv">1</span>]])</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"setting-up_the_computational_stage.out.json"</span>, <span class="st">"w"</span>) <span class="im">as</span> f:</span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>    json.dump(data, f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="implementation-in-the-lsk-module-of-the-above-results" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="implementation-in-the-lsk-module-of-the-above-results"><span class="header-section-number">4.3</span> Implementation in the <code>lsk</code> module of the above results</h2>
+<p>All the above results are reimplemented in the <code>lsk</code> module for further use in the subsequent derivations. The whole module is listed below.</p>
+<p>All the relevant symbols are first defined: <code>E2</code>, <code>E3</code>, <code>E4</code>, <code>E2_dot</code>, <code>E3_dot</code>, <code>E2_ddot</code>, <code>E_λ</code>, <code>E_λλ</code>, <code>E_λλλ</code>, <code>E_λλλλ</code>, <code>u0_dot</code>, <code>u0_ddot</code>, <code>u0_dddot</code> and <code>u0_ddddot</code>.</p>
+<p>Then, the mixed derivatives <code>E_uλ</code>, <code>E_uλλ</code>, <code>E_uλλλ</code>, <code>E_uuλ</code>, <code>E_uuλλ</code> and <code>E_uuuλ</code> are defined as expressions of the previous symbols, according to the results derived above.</p>
+<p>In the derivations to come, we will need to manipulate indexed expression. This is a bit awkward with SymPy (see <a href="https://docs.sympy.org/latest/modules/tensor/indexed.html">Indexed objects</a>). In particular, it is recommended to use unique indices as much as possible (see warning at the bottom of the <a href="https://docs.sympy.org/latest/modules/tensor/index_methods.html#module-sympy.tensor.index_methods">Methods</a> section).</p>
+<p>To ensure that unique indices are indeed used, we will use functions to create expressions on the fly. It will be assumed that the functions <code>__λ()</code> and <code>__u()</code> have been defined, that return expressions of <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(u\)</span> (bifurcated branch) respectively, with unique indices. As we do not have to handle indexed expressions, yet, the most basic implementation of these two functions will suffice for the time being. These functions will be overriden in due time.</p>
+<p>The functions <code>__E()</code>, <code>__E_u()</code> and <code>__E_uu()</code> then return the expressions of the energy and its first and second derivative with respect to <span class="math inline">\(u\)</span>, with unique indices.</p>
+<p>These symbols and functions can then be tested against the expressions derived above (see the asserts at the end of the module).</p>
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>psource lsk</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-green-fg">import</span> IPython<span class="ansi-blue-fg">.</span>display
+<span class="ansi-green-fg">import</span> json
+<span class="ansi-green-fg">import</span> sympy
+<span class="ansi-green-fg">from</span> sympy <span class="ansi-green-fg">import</span> Add<span class="ansi-blue-fg">,</span> expand<span class="ansi-blue-fg">,</span> Integer<span class="ansi-blue-fg">,</span> Mul<span class="ansi-blue-fg">,</span> Pow<span class="ansi-blue-fg">,</span> Rational<span class="ansi-blue-fg">,</span> Symbol
+<span class="ansi-green-fg">def</span> latex<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+    <span class="ansi-green-fg">return</span> x <span class="ansi-green-fg">if</span> str<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> x <span class="ansi-green-fg">else</span> sympy<span class="ansi-blue-fg">.</span>latex<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">def</span> display_latex_str<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+    display<span class="ansi-blue-fg">(</span>IPython<span class="ansi-blue-fg">.</span>display<span class="ansi-blue-fg">.</span>Math<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">def</span> display_latex_dict<span class="ansi-blue-fg">(</span>d<span class="ansi-blue-fg">,</span> num_cols<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+    s <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">"\\begin{align}"</span>
+    col <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">1</span>
+    <span class="ansi-green-fg">for</span> k<span class="ansi-blue-fg">,</span> v <span class="ansi-green-fg">in</span> d<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+        s <span class="ansi-blue-fg">+=</span> latex<span class="ansi-blue-fg">(</span>k<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> <span class="ansi-blue-fg">"&amp;="</span> <span class="ansi-blue-fg">+</span> latex<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">)</span>
+        s <span class="ansi-blue-fg">+=</span> <span class="ansi-blue-fg">r"\\"</span> <span class="ansi-green-fg">if</span> col <span class="ansi-blue-fg">%</span> num_cols <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">0</span> <span class="ansi-green-fg">else</span> <span class="ansi-blue-fg">r"&amp;"</span>
+        col <span class="ansi-blue-fg">+=</span> <span class="ansi-cyan-fg">1</span>
+    s <span class="ansi-blue-fg">+=</span> <span class="ansi-blue-fg">"\\end{align}"</span>
+    display_latex_str<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">def</span> display_latex_equation<span class="ansi-blue-fg">(</span>lhs<span class="ansi-blue-fg">,</span> rhs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+    display_latex_str<span class="ansi-blue-fg">(</span>latex<span class="ansi-blue-fg">(</span>lhs<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> <span class="ansi-blue-fg">"="</span> <span class="ansi-blue-fg">+</span> latex<span class="ansi-blue-fg">(</span>rhs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+E2 <span class="ansi-blue-fg">=</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"\E_2"</span><span class="ansi-blue-fg">)</span>
+E3 <span class="ansi-blue-fg">=</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"\E_3"</span><span class="ansi-blue-fg">)</span>
+E4 <span class="ansi-blue-fg">=</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"\E_4"</span><span class="ansi-blue-fg">)</span>
+E2_dot <span class="ansi-blue-fg">=</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"\dot{\E}_2"</span><span class="ansi-blue-fg">)</span>
+E3_dot <span class="ansi-blue-fg">=</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"\dot{\E}_3"</span><span class="ansi-blue-fg">)</span>
+E2_ddot <span class="ansi-blue-fg">=</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"\ddot{\E}_2"</span><span class="ansi-blue-fg">)</span>
+E_λ <span class="ansi-blue-fg">=</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"\E_{\lambda}"</span><span class="ansi-blue-fg">)</span>
+E_λλ <span class="ansi-blue-fg">=</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"\E_{\lambda\lambda}"</span><span class="ansi-blue-fg">)</span>
+E_λλλ <span class="ansi-blue-fg">=</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"\E_{\lambda\lambda\lambda}"</span><span class="ansi-blue-fg">)</span>
+E_λλλλ <span class="ansi-blue-fg">=</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"\E_{\lambda\lambda\lambda\lambda}"</span><span class="ansi-blue-fg">)</span>
+u0_dot <span class="ansi-blue-fg">=</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"\dot{u}_0"</span><span class="ansi-blue-fg">)</span>
+u0_ddot <span class="ansi-blue-fg">=</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"\ddot{u}_0"</span><span class="ansi-blue-fg">)</span>
+u0_dddot <span class="ansi-blue-fg">=</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"\dddot{u}_0"</span><span class="ansi-blue-fg">)</span>
+u0_ddddot <span class="ansi-blue-fg">=</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"\ddddot{u}_0"</span><span class="ansi-blue-fg">)</span>
+E_uλ <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">-</span>E2 <span class="ansi-blue-fg">*</span> u0_dot
+E_uλλ <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">-</span>E2 <span class="ansi-blue-fg">*</span> u0_ddot <span class="ansi-blue-fg">-</span> <span class="ansi-cyan-fg">2</span> <span class="ansi-blue-fg">*</span> E2_dot <span class="ansi-blue-fg">*</span> u0_dot <span class="ansi-blue-fg">+</span> E3 <span class="ansi-blue-fg">*</span> u0_dot<span class="ansi-blue-fg">**</span><span class="ansi-cyan-fg">2</span>
+E_uλλλ <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span>E2 <span class="ansi-blue-fg">*</span> u0_dddot <span class="ansi-blue-fg">-</span> <span class="ansi-cyan-fg">3</span> <span class="ansi-blue-fg">*</span> E2_dot <span class="ansi-blue-fg">*</span> u0_ddot <span class="ansi-blue-fg">-</span> <span class="ansi-cyan-fg">3</span> <span class="ansi-blue-fg">*</span> E2_ddot <span class="ansi-blue-fg">*</span> u0_dot
+          <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">3</span> <span class="ansi-blue-fg">*</span> E3 <span class="ansi-blue-fg">*</span> u0_dot <span class="ansi-blue-fg">*</span> u0_ddot <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">3</span> <span class="ansi-blue-fg">*</span> E3_dot <span class="ansi-blue-fg">*</span> u0_dot<span class="ansi-blue-fg">**</span><span class="ansi-cyan-fg">2</span>
+          <span class="ansi-blue-fg">-</span> E4 <span class="ansi-blue-fg">*</span> u0_dot<span class="ansi-blue-fg">**</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span>
+E_uuλ <span class="ansi-blue-fg">=</span> E2_dot <span class="ansi-blue-fg">-</span> E3 <span class="ansi-blue-fg">*</span> u0_dot
+E_uuλλ <span class="ansi-blue-fg">=</span> E4 <span class="ansi-blue-fg">*</span> u0_dot<span class="ansi-blue-fg">**</span><span class="ansi-cyan-fg">2</span> <span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">2</span> <span class="ansi-blue-fg">*</span> E3_dot <span class="ansi-blue-fg">*</span> u0_dot <span class="ansi-blue-fg">-</span> E3 <span class="ansi-blue-fg">*</span> u0_ddot <span class="ansi-blue-fg">+</span> E2_ddot
+E_uuuλ <span class="ansi-blue-fg">=</span> E3_dot <span class="ansi-blue-fg">-</span> E4 <span class="ansi-blue-fg">*</span> u0_dot
+<span class="ansi-green-fg">def</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+    <span class="ansi-green-fg">return</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"u"</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">def</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+    <span class="ansi-green-fg">return</span> Symbol<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r"\lambda"</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">def</span> __E<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+    <span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">(</span>__λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_λ
+            <span class="ansi-blue-fg">+</span> <span class="ansi-blue-fg">(</span>E2 <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">2</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_uλ <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_λλ<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">/</span> <span class="ansi-cyan-fg">2</span>
+            <span class="ansi-blue-fg">+</span> <span class="ansi-blue-fg">(</span>E3 <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">3</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_uuλ <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">3</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_uλλ <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_λλλ<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">/</span> <span class="ansi-cyan-fg">6</span>
+            <span class="ansi-blue-fg">+</span> <span class="ansi-blue-fg">(</span>E4 <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">4</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_uuuλ <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">6</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_uuλλ <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">4</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_uλλλ <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_λλλλ<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">/</span> <span class="ansi-cyan-fg">24</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">def</span> __E_u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+    <span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">(</span>E2 <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+            <span class="ansi-blue-fg">+</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_uλ
+            <span class="ansi-blue-fg">+</span> <span class="ansi-blue-fg">(</span>E3 <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">2</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_uuλ <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_uλλ<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">/</span> <span class="ansi-cyan-fg">2</span>
+            <span class="ansi-blue-fg">+</span> <span class="ansi-blue-fg">(</span>E4 <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">3</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_uuuλ <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">3</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_uuλλ <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_uλλλ<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">/</span> <span class="ansi-cyan-fg">6</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">def</span> __E_uu<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+    <span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">(</span>E2
+            <span class="ansi-blue-fg">+</span> E3 <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+            <span class="ansi-blue-fg">+</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_uuλ
+            <span class="ansi-blue-fg">+</span> <span class="ansi-blue-fg">(</span>E4 <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">2</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_uuuλ <span class="ansi-blue-fg">*</span> __u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+               <span class="ansi-blue-fg">+</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> __λ<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> E_uuλλ<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">/</span> <span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">with</span> open<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"setting-up_the_computational_stage.out.json"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"r"</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> f<span class="ansi-blue-fg">:</span>
+    data <span class="ansi-blue-fg">=</span> json<span class="ansi-blue-fg">.</span>load<span class="ansi-blue-fg">(</span>f<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">assert</span> E_uλ <span class="ansi-blue-fg">==</span> eval<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"E_uλ"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">assert</span> E_uλλ <span class="ansi-blue-fg">==</span> eval<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"E_uλλ"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">assert</span> E_uλλλ <span class="ansi-blue-fg">==</span> eval<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"E_uλλλ"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">assert</span> E_uuλ <span class="ansi-blue-fg">==</span> eval<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"E_uuλ"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">assert</span> E_uuλλ <span class="ansi-blue-fg">==</span> eval<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"E_uuλλ"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">assert</span> E_uuuλ <span class="ansi-blue-fg">==</span> eval<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"E_uuuλ"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">assert</span> expand<span class="ansi-blue-fg">(</span>__E<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-</span> eval<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"E"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">0</span>
+<span class="ansi-green-fg">assert</span> expand<span class="ansi-blue-fg">(</span>__E_u<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-</span> eval<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"E_u"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">0</span>
+<span class="ansi-green-fg">assert</span> expand<span class="ansi-blue-fg">(</span>__E_uu<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-</span> eval<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"E_uu"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">0</span>
+</pre>
+</div>
+</div>
 </div>
 
 

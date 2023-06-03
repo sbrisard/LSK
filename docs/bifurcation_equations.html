@@ -83,7 +83,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./parametrization.html" rel="next">
+<link href="./bifurcation_equations-new.html" rel="next">
 <link href="./setting-up_the_computational_stage.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -185,20 +185,26 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./bifurcation_equations-new.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./parametrization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./energy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -253,19 +259,20 @@ div.csl-indent {
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>λ, u, v, u_hat, v_hat, w_hat, E2 <span class="op">=</span> symbols(<span class="vs">r"\lambda u v \hat</span><span class="sc">{u}</span><span class="vs"> \hat</span><span class="sc">{v}</span><span class="vs"> \hat</span><span class="sc">{w}</span><span class="vs"> \E_2"</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"setting-up_the_computational_stage.out.json"</span>, <span class="st">"r"</span>) <span class="im">as</span> f:</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> json.load(f)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>u_star <span class="op">=</span> <span class="bu">eval</span>(data[<span class="st">"u_star"</span>])</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> <span class="bu">eval</span>(data[<span class="st">"E"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>λ, u, v, u_hat, v_hat, w_hat, E2 <span class="op">=</span> symbols(<span class="vs">r"\lambda u v \hat</span><span class="sc">{u}</span><span class="vs"> \hat</span><span class="sc">{v}</span><span class="vs"> \hat</span><span class="sc">{w}</span><span class="vs"> \E_2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"setting-up_the_computational_stage.out.json"</span>, <span class="st">"r"</span>) <span class="im">as</span> f:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> json.load(f)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>u_star <span class="op">=</span> <span class="bu">eval</span>(data[<span class="st">"u_star"</span>])</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> <span class="bu">eval</span>(data[<span class="st">"E"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="3">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"u^\star(\lambda)"</span>, u_star)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\E(u, \lambda)"</span>, E)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"u^\star(\lambda)"</span>, u_star)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\E(u, \lambda)"</span>, E)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <p><span class="math inline">\(\displaystyle u^\star(\lambda)=\frac{\ddddot{u}_0 \lambda^{4}}{24} + \frac{\dddot{u}_0 \lambda^{3}}{6} + \frac{\ddot{u}_0 \lambda^{2}}{2} + \dot{u}_0 \lambda\)</span></p>
@@ -273,19 +280,6 @@ div.csl-indent {
 <div class="cell-output cell-output-display">
 <p><span class="math inline">\(\displaystyle \E(u, \lambda)=- \frac{\E_{2} \dddot{u}_0 \lambda^{3} u}{6} - \frac{\E_{2} \ddot{u}_0 \lambda^{2} u}{2} - \E_{2} \dot{u}_0 \lambda u + \frac{\E_{2} u^{2}}{2} + \frac{\E_{3} \ddot{u}_0 \dot{u}_0 \lambda^{3} u}{2} - \frac{\E_{3} \ddot{u}_0 \lambda^{2} u^{2}}{4} + \frac{\E_{3} \dot{u}_0^{2} \lambda^{2} u}{2} - \frac{\E_{3} \dot{u}_0 \lambda u^{2}}{2} + \frac{\E_{3} u^{3}}{6} - \frac{\E_{4} \dot{u}_0^{3} \lambda^{3} u}{6} + \frac{\E_{4} \dot{u}_0^{2} \lambda^{2} u^{2}}{4} - \frac{\E_{4} \dot{u}_0 \lambda u^{3}}{6} + \frac{\E_{4} u^{4}}{24} + \frac{\E_{\lambda\lambda\lambda\lambda} \lambda^{4}}{24} + \frac{\E_{\lambda\lambda\lambda} \lambda^{3}}{6} + \frac{\E_{\lambda\lambda} \lambda^{2}}{2} + \E_{\lambda} \lambda - \frac{\ddot{\E}_2 \dot{u}_0 \lambda^{3} u}{2} + \frac{\ddot{\E}_2 \lambda^{2} u^{2}}{4} - \frac{\ddot{u}_0 \dot{\E}_2 \lambda^{3} u}{2} - \dot{\E}_2 \dot{u}_0 \lambda^{2} u + \frac{\dot{\E}_2 \lambda u^{2}}{2} + \frac{\dot{\E}_3 \dot{u}_0^{2} \lambda^{3} u}{2} - \frac{\dot{\E}_3 \dot{u}_0 \lambda^{2} u^{2}}{2} + \frac{\dot{\E}_3 \lambda u^{3}}{6}\)</span></p>
 </div>
-</div>
-<p>It will be assumed in the following that <span class="math inline">\(v, \hat{v} \in V\)</span>, therefore terms of the form <span class="math inline">\(\E_2(\bullet, v)\)</span> and <span class="math inline">\(\E_2(\bullet, \hat{v})\)</span> should vanish. The following function performs this simplification.</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simplify_E2(expr):</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    expr <span class="op">=</span> expr.expand()</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    coeff_E2 <span class="op">=</span> expr.coeff(E2).expand()</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    coeff_E2_v <span class="op">=</span> coeff_E2.coeff(v)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    coeff_E2_v_hat <span class="op">=</span> (coeff_E2 <span class="op">-</span> coeff_E2_v <span class="op">*</span> v).expand().coeff(v_hat)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (expr <span class="op">-</span> (coeff_E2_v <span class="op">*</span> E2 <span class="op">*</span> v <span class="op">+</span> coeff_E2_v_hat <span class="op">*</span> E2 <span class="op">*</span> v_hat)).expand()</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> simplify_E2(E2 <span class="op">*</span> v) <span class="op">==</span> <span class="dv">0</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> simplify_E2(E2 <span class="op">*</span> v_hat) <span class="op">==</span> <span class="dv">0</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> simplify_E2(<span class="dv">3</span> <span class="op">*</span> v <span class="op">+</span> <span class="dv">4</span> <span class="op">*</span> v_hat <span class="op">+</span> <span class="dv">5</span> <span class="op">*</span> v <span class="op">*</span> v_hat <span class="op">+</span> <span class="dv">6</span> <span class="op">*</span> E2 <span class="op">*</span> v <span class="op">+</span> <span class="dv">7</span> <span class="op">*</span> E2 <span class="op">*</span> v_hat <span class="op">+</span> <span class="dv">8</span> <span class="op">*</span> E2 <span class="op">*</span> v <span class="op">*</span> v_hat) <span class="op">==</span> <span class="dv">3</span> <span class="op">*</span> v <span class="op">+</span> <span class="dv">4</span> <span class="op">*</span> v_hat <span class="op">+</span> <span class="dv">5</span> <span class="op">*</span> v <span class="op">*</span> v_hat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="outline-of-the-strategy" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="outline-of-the-strategy"><span class="header-section-number">5.1</span> Outline of the strategy</h2>
@@ -316,14 +310,14 @@ u = u^\ast(\lambda) + \xi_i \, v_i + w, \quad \text{with} \quad w \in W.
 \tag{5.3}\]</span></span></p>
 <p>The method proceeds in three steps</p>
 <ol type="1">
-<li>Eq. (<a href="#eq-20230107164346"><span>5.3</span></a>) is first expressed for <span class="math inline">\(\hat{u} \in W\)</span> which leads to a definition of <span class="math inline">\(w\)</span> as an implicit function of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> and <span class="math inline">\(\lambda\)</span> (see <a href="#sec-20230102030010"><span>Section&nbsp;5.2</span></a>),</li>
-<li>Eq. (<a href="#eq-20230107164346"><span>5.3</span></a>) is then expressed for <span class="math inline">\(\hat{u} \in V\)</span> which leads to a definition of <span class="math inline">\(\lambda\)</span> as an implicit function of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> (see <a href="#sec-20230102030125"><span>Section&nbsp;5.3</span></a>),</li>
-<li>finally, a parametrization <span class="math inline">\(\eta\)</span> of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> is introduced and the Taylor expansion of <span class="math inline">\(u\)</span> and <span class="math inline">\(\lambda\)</span> with respect to <span class="math inline">\(\eta\)</span> is derived (see <a href="parametrization.html"><span>Chapter&nbsp;6</span></a>).</li>
+<li>Eq. (<a href="bifurcation_equations-new.html#eq-20230107164346"><span>6.3</span></a>) is first expressed for <span class="math inline">\(\hat{u} \in W\)</span> which leads to a definition of <span class="math inline">\(w\)</span> as an implicit function of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> and <span class="math inline">\(\lambda\)</span> (see <a href="bifurcation_equations-new.html#sec-20230102030010"><span>Section&nbsp;6.2</span></a>),</li>
+<li>Eq. (<a href="bifurcation_equations-new.html#eq-20230107164346"><span>6.3</span></a>) is then expressed for <span class="math inline">\(\hat{u} \in V\)</span> which leads to a definition of <span class="math inline">\(\lambda\)</span> as an implicit function of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> (see <a href="bifurcation_equations-new.html#sec-20230102030125"><span>Section&nbsp;6.3</span></a>),</li>
+<li>finally, a parametrization <span class="math inline">\(\eta\)</span> of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> is introduced and the Taylor expansion of <span class="math inline">\(u\)</span> and <span class="math inline">\(\lambda\)</span> with respect to <span class="math inline">\(\eta\)</span> is derived (see <a href="parametrization.html"><span>Chapter&nbsp;7</span></a>).</li>
 </ol>
 </section>
 <section id="sec-20230102030010" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="sec-20230102030010"><span class="header-section-number">5.2</span> Elimination of <span class="math inline">\(w\)</span></h2>
-<p>We first test Eq. (<a href="#eq-20230102025737"><span>5.1</span></a>) with <span class="math inline">\(\hat{w} \in W\)</span> <span id="eq-20220825143616"><span class="math display">\[
+<p>We first test Eq. (<a href="bifurcation_equations-new.html#eq-20230102025737"><span>6.1</span></a>) with <span class="math inline">\(\hat{w} \in W\)</span> <span id="eq-20220825143616"><span class="math display">\[
 \E_{,u}[u^\ast(\lambda) + \xi_i \, v_i + w, \lambda; \hat{w}] = 0, \quad \text{for all} \quad \hat{w} \in W.
 \tag{5.4}\]</span></span></p>
 <p>This defines <span class="math inline">\(w\)</span> as an implicit function of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> and <span class="math inline">\(\lambda\)</span>. The following asymptotic expansion about <span class="math inline">\(\xi_1 = \cdots = \xi_m = 0\)</span> and <span class="math inline">\(\lambda = \lambda_0\)</span> is postulated <span id="eq-20230107172048"><span class="math display">\[
@@ -360,7 +354,7 @@ Important
 <div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>crit <span class="op">=</span> {ξ: <span class="dv">0</span>, λ: <span class="dv">0</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Eq. (<a href="#eq-20230107172048"><span>5.5</span></a>) is plugged into Eq. (<a href="#eq-20220825143616"><span>5.4</span></a>), which then delivers an asymptotic expansion of the stationarity equation. We will nullify the terms of order up to 2 in <span class="math inline">\(\xi_i\)</span> and <span class="math inline">\(\lambda\)</span>.</p>
+<p>Eq. (<a href="bifurcation_equations-new.html#eq-20230107172048"><span>6.5</span></a>) is plugged into Eq. (<a href="bifurcation_equations-new.html#eq-20220825143616"><span>6.4</span></a>), which then delivers an asymptotic expansion of the stationarity equation. We will nullify the terms of order up to 2 in <span class="math inline">\(\xi_i\)</span> and <span class="math inline">\(\lambda\)</span>.</p>
 <div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>res_w <span class="op">=</span> res.subs({u_hat: w_hat, u: u_star <span class="op">+</span> ξ <span class="op">*</span> v <span class="op">+</span> w}).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -420,7 +414,7 @@ Important
 </section>
 <section id="sec-20230102030125" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="sec-20230102030125"><span class="header-section-number">5.3</span> Elimination of <span class="math inline">\(\lambda\)</span></h2>
-<p>We now test Eq. (<a href="#eq-20230102025737"><span>5.1</span></a>) with <span class="math inline">\(\hat{v} \in V\)</span></p>
+<p>We now test Eq. (<a href="bifurcation_equations-new.html#eq-20230102025737"><span>6.1</span></a>) with <span class="math inline">\(\hat{v} \in V\)</span></p>
 <p><span id="eq-20230110092313"><span class="math display">\[
 \E_{,u}[u^\ast(\lambda) + \xi_i \, v_i + w(\xi_1, \ldots, \xi_m, \lambda), \lambda; \hat{v}] = 0, \quad \text{for all} \quad \hat{v} \in W.
 \tag{5.6}\]</span></span></p>
@@ -446,7 +440,7 @@ Important
 </div>
 </div>
 </div>
-<p>We first introduce the asymptotic expansion of <span class="math inline">\((\xi_1, \ldots, \xi_m, \lambda) \mapsto w(\xi_1, \ldots, \xi_m, \lambda)\)</span>, <span class="math inline">\((\xi_1, \ldots, \xi_m) \mapsto \lambda(\xi_1, \ldots, \xi_m)\)</span> and finally <span class="math inline">\((\xi_1, \ldots, \xi_m) \mapsto u(\xi_1, \ldots, \xi_m)\)</span> see Eqs. (<a href="#eq-20230107172048"><span>5.5</span></a>), (<a href="#eq-20230110091031"><span>5.7</span></a>) and (<a href="#eq-20220902174235"><span>5.2</span></a>).</p>
+<p>We first introduce the asymptotic expansion of <span class="math inline">\((\xi_1, \ldots, \xi_m, \lambda) \mapsto w(\xi_1, \ldots, \xi_m, \lambda)\)</span>, <span class="math inline">\((\xi_1, \ldots, \xi_m) \mapsto \lambda(\xi_1, \ldots, \xi_m)\)</span> and finally <span class="math inline">\((\xi_1, \ldots, \xi_m) \mapsto u(\xi_1, \ldots, \xi_m)\)</span> see Eqs. (<a href="bifurcation_equations-new.html#eq-20230107172048"><span>6.5</span></a>), (<a href="bifurcation_equations-new.html#eq-20230110091031"><span>6.7</span></a>) and (<a href="bifurcation_equations-new.html#eq-20220902174235"><span>6.2</span></a>).</p>
 <div class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>w_bif <span class="op">=</span> (t <span class="op">*</span> λ <span class="op">*</span> Symbol(<span class="vs">r"\bigl(\xi_k\,w_{k\lambda}\bigr)"</span>) </span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>         <span class="op">+</span> t <span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> Symbol(<span class="vs">r"\bigl(\xi_i\,\xi_j\,w_</span><span class="sc">{ij}</span><span class="vs">\bigr)"</span>))</span>
@@ -473,7 +467,7 @@ Important
 <p><span class="math inline">\(\displaystyle u(\xi_1, \ldots, \xi_m)=\frac{\bigl(\xi_i\,\xi_j\,w_{ij}\bigr) t^{2}}{2} + \bigl(\xi_k\,w_{k\lambda}\bigr) \lambda t + \bigl(\xi_{l}\,v_{l}\bigr) t + \frac{\ddddot{u}_0 \lambda^{4}}{24} + \frac{\dddot{u}_0 \lambda^{3}}{6} + \frac{\ddot{u}_0 \lambda^{2}}{2} + \dot{u}_0 \lambda\)</span></p>
 </div>
 </div>
-<p>The above expansions are plugged in the general expression of <span class="math inline">\(\E_{,u}(u, \lambda; \bullet)\)</span> and tested with <span class="math inline">\(\hat{v} \in V\)</span>, see Eq. (<a href="#eq-20230110092313"><span>5.6</span></a>).</p>
+<p>The above expansions are plugged in the general expression of <span class="math inline">\(\E_{,u}(u, \lambda; \bullet)\)</span> and tested with <span class="math inline">\(\hat{v} \in V\)</span>, see Eq. (<a href="bifurcation_equations-new.html#eq-20230110092313"><span>6.6</span></a>).</p>
 <div class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>res_v <span class="op">=</span> res.subs(u_hat, v_hat).subs(u, u_bif).subs(λ, λ_bif).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -510,7 +504,7 @@ Note
 <p><span class="math inline">\(\displaystyle \frac{\E_{3} \bigl(\xi_i\,\xi_j\,w_{ij}\bigr) \bigl(\xi_{l}\,v_{l}\bigr) \hat{v}}{2} + \E_{3} \bigl(\xi_k\,w_{k\lambda}\bigr) \bigl(\xi_{l}\,v_{l}\bigr) \bigl(\xi_{p}\,\lambda_{p}\bigr) \hat{v} + \frac{\E_{4} \bigl(\xi_{l}\,v_{l}\bigr)^{3} \hat{v}}{6} + \frac{\bigl(\xi_i\,\xi_j\,w_{ij}\bigr) \bigl(\xi_{p}\,\lambda_{p}\bigr) \dot{\E}_2 \hat{v}}{2} + \bigl(\xi_k\,w_{k\lambda}\bigr) \bigl(\xi_{p}\,\lambda_{p}\bigr)^{2} \dot{\E}_2 \hat{v} + \frac{\bigl(\xi_m\,\xi_n\,\lambda_{mn}\bigr) \bigl(\xi_{l}\,v_{l}\bigr) \dot{\E}_2 \hat{v}}{2} + \frac{\bigl(\xi_{l}\,v_{l}\bigr)^{2} \bigl(\xi_{p}\,\lambda_{p}\bigr) \dot{\E}_3 \hat{v}}{2} + \frac{\bigl(\xi_{l}\,v_{l}\bigr) \bigl(\xi_{p}\,\lambda_{p}\bigr)^{2} \ddot{\E}_2 \hat{v}}{2}=0\)</span></p>
 </div>
 </div>
-<p>The above bifurcation equations should be understood as Eqs. (<a href="#eq-20230115101130"><span>5.8</span></a>) and (<a href="#eq-20230115101147"><span>5.9</span></a>) below. Note that these equations are in fact <em>asymptotic expansions</em>. As such, they should hold for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> sufficiently small. Since both equations are homogeneous in <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>, it is equivalent to require these to hold for all <span class="math inline">\(\xi_1, \ldots, \xi_m \in \reals\)</span>.</p>
+<p>The above bifurcation equations should be understood as Eqs. (<a href="bifurcation_equations-new.html#eq-20230115101130"><span>6.8</span></a>) and (<a href="bifurcation_equations-new.html#eq-20230115101147"><span>6.9</span></a>) below. Note that these equations are in fact <em>asymptotic expansions</em>. As such, they should hold for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> sufficiently small. Since both equations are homogeneous in <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>, it is equivalent to require these to hold for all <span class="math inline">\(\xi_1, \ldots, \xi_m \in \reals\)</span>.</p>
 </section>
 <section id="summary" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.4</span> Summary</h2>
@@ -791,8 +785,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./parametrization.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./bifurcation_equations-new.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

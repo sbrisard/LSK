@@ -59,7 +59,7 @@ def create_λ():
     return Symbol(r"\lambda")
 
 
-def __E():
+def create_E():
     return (create_λ() * E_λ
             + (E2 * create_u() * create_u()
                + 2 * create_λ() * E_uλ * create_u()
@@ -75,7 +75,7 @@ def __E():
                + create_λ() * create_λ() * create_λ() * create_λ() * E_λλλλ) / 24)
 
 
-def __E_u():
+def create_E_u():
     return (E2 * create_u()
             + create_λ() * E_uλ
             + (E3 * create_u() * create_u()
@@ -87,7 +87,7 @@ def __E_u():
                + create_λ() * create_λ() * create_λ() * E_uλλλ) / 6)
 
 
-def __E_uu():
+def create_E_uu():
     return (E2
             + E3 * create_u()
             + create_λ() * E_uuλ
@@ -105,6 +105,6 @@ assert E_uuλ == eval(data["E_uuλ"])
 assert E_uuλλ == eval(data["E_uuλλ"])
 assert E_uuuλ == eval(data["E_uuuλ"])
 
-assert expand(__E() - eval(data["E"])) == 0
-assert expand(__E_u() - eval(data["E_u"])) == 0
-assert expand(__E_uu() - eval(data["E_uu"])) == 0
+assert expand(create_E() - eval(data["E"])) == 0
+assert expand(create_E_u() - eval(data["E_u"])) == 0
+assert expand(create_E_uu() - eval(data["E_uu"])) == 0

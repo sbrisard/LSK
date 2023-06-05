@@ -55,45 +55,45 @@ def create_u():
     return Symbol(r"u")
 
 
-def __λ():
+def create_λ():
     return Symbol(r"\lambda")
 
 
 def __E():
-    return (__λ() * E_λ
+    return (create_λ() * E_λ
             + (E2 * create_u() * create_u()
-               + 2 * __λ() * E_uλ * create_u()
-               + __λ() * __λ() * E_λλ) / 2
+               + 2 * create_λ() * E_uλ * create_u()
+               + create_λ() * create_λ() * E_λλ) / 2
             + (E3 * create_u() * create_u() * create_u()
-               + 3 * __λ() * E_uuλ * create_u() * create_u()
-               + 3 * __λ() * __λ() * E_uλλ * create_u()
-               + __λ() * __λ() * __λ() * E_λλλ) / 6
+               + 3 * create_λ() * E_uuλ * create_u() * create_u()
+               + 3 * create_λ() * create_λ() * E_uλλ * create_u()
+               + create_λ() * create_λ() * create_λ() * E_λλλ) / 6
             + (E4 * create_u() * create_u() * create_u() * create_u()
-               + 4 * __λ() * E_uuuλ * create_u() * create_u() * create_u()
-               + 6 * __λ() * __λ() * E_uuλλ * create_u() * create_u()
-               + 4 * __λ() * __λ() * __λ() * E_uλλλ * create_u()
-               + __λ() * __λ() * __λ() * __λ() * E_λλλλ) / 24)
+               + 4 * create_λ() * E_uuuλ * create_u() * create_u() * create_u()
+               + 6 * create_λ() * create_λ() * E_uuλλ * create_u() * create_u()
+               + 4 * create_λ() * create_λ() * create_λ() * E_uλλλ * create_u()
+               + create_λ() * create_λ() * create_λ() * create_λ() * E_λλλλ) / 24)
 
 
 def __E_u():
     return (E2 * create_u()
-            + __λ() * E_uλ
+            + create_λ() * E_uλ
             + (E3 * create_u() * create_u()
-               + 2 * __λ() * E_uuλ * create_u()
-               + __λ() * __λ() * E_uλλ) / 2
+               + 2 * create_λ() * E_uuλ * create_u()
+               + create_λ() * create_λ() * E_uλλ) / 2
             + (E4 * create_u() * create_u() * create_u()
-               + 3 * __λ() * E_uuuλ * create_u() * create_u()
-               + 3 * __λ() * __λ() * E_uuλλ * create_u()
-               + __λ() * __λ() * __λ() * E_uλλλ) / 6)
+               + 3 * create_λ() * E_uuuλ * create_u() * create_u()
+               + 3 * create_λ() * create_λ() * E_uuλλ * create_u()
+               + create_λ() * create_λ() * create_λ() * E_uλλλ) / 6)
 
 
 def __E_uu():
     return (E2
             + E3 * create_u()
-            + __λ() * E_uuλ
+            + create_λ() * E_uuλ
             + (E4 * create_u() * create_u()
-               + 2 * __λ() * E_uuuλ * create_u()
-               + __λ() * __λ() * E_uuλλ) / 2)
+               + 2 * create_λ() * E_uuuλ * create_u()
+               + create_λ() * create_λ() * E_uuλλ) / 2)
 
 with open("setting-up_the_computational_stage.out.json", "r") as f:
     data = json.load(f)

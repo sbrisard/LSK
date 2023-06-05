@@ -5,7 +5,7 @@ import sympy
 from sympy import Add, expand, Integer, Mul, Pow, Rational, Symbol
 
 
-def latex(x):
+def __latex(x):
     return x if str(x) == x else sympy.latex(x)
 
 
@@ -17,7 +17,7 @@ def display_latex_dict(d, num_cols=2):
     s = "\\begin{align}"
     col = 1
     for k, v in d.items():
-        s += latex(k) + "&=" + latex(v)
+        s += __latex(k) + "&=" + __latex(v)
         s += r"\\" if col % num_cols == 0 else r"&"
         col += 1
     s += "\\end{align}"
@@ -25,7 +25,7 @@ def display_latex_dict(d, num_cols=2):
 
 
 def display_latex_equation(lhs, rhs):
-    display_latex_str(latex(lhs) + "=" + latex(rhs))
+    display_latex_str(__latex(lhs) + "=" + __latex(rhs))
 
 E2 = Symbol(r"\E_2")
 E3 = Symbol(r"\E_3")

@@ -95,6 +95,14 @@ def create_E_uu():
                + 2 * create_λ() * E_uuuλ * create_u()
                + create_λ() * create_λ() * E_uuλλ) / 2)
 
+
+def create_u_star():
+    return (create_λ() * u0_dot
+            + create_λ() * create_λ() * u0_ddot / 2
+            + create_λ() * create_λ() * create_λ() * u0_dddot / 6
+            + create_λ() * create_λ() * create_λ() * create_λ() * u0_ddddot / 24)
+
+
 with open("setting-up_the_computational_stage.out.json", "r") as f:
     data = json.load(f)
 
@@ -108,3 +116,5 @@ assert E_uuuλ == eval(data["E_uuuλ"])
 assert expand(create_E() - eval(data["E"])) == 0
 assert expand(create_E_u() - eval(data["E_u"])) == 0
 assert expand(create_E_uu() - eval(data["E_uu"])) == 0
+
+assert expand(create_u_star() - eval(data["u_star"])) == 0

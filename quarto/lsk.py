@@ -51,56 +51,56 @@ E_uuλ = E2_dot - E3 * u0_dot
 E_uuλλ = E4 * u0_dot**2 -2 * E3_dot * u0_dot - E3 * u0_ddot + E2_ddot
 E_uuuλ = E3_dot - E4 * u0_dot
 
-def create_u():
+def default_u_fun():
     return Symbol(r"u")
 
 
-def create_λ():
+def default_λ_fun():
     return Symbol(r"\lambda")
 
 
-def create_E():
-    return (create_λ() * E_λ
-            + (E2 * create_u() * create_u()
-               + 2 * create_λ() * E_uλ * create_u()
-               + create_λ() * create_λ() * E_λλ) / 2
-            + (E3 * create_u() * create_u() * create_u()
-               + 3 * create_λ() * E_uuλ * create_u() * create_u()
-               + 3 * create_λ() * create_λ() * E_uλλ * create_u()
-               + create_λ() * create_λ() * create_λ() * E_λλλ) / 6
-            + (E4 * create_u() * create_u() * create_u() * create_u()
-               + 4 * create_λ() * E_uuuλ * create_u() * create_u() * create_u()
-               + 6 * create_λ() * create_λ() * E_uuλλ * create_u() * create_u()
-               + 4 * create_λ() * create_λ() * create_λ() * E_uλλλ * create_u()
-               + create_λ() * create_λ() * create_λ() * create_λ() * E_λλλλ) / 24)
+def create_E(u_fun=default_u_fun, λ_fun=default_λ_fun):
+    return (λ_fun() * E_λ
+            + (E2 * u_fun() * u_fun()
+               + 2 * λ_fun() * E_uλ * u_fun()
+               + λ_fun() * λ_fun() * E_λλ) / 2
+            + (E3 * u_fun() * u_fun() * u_fun()
+               + 3 * λ_fun() * E_uuλ * u_fun() * u_fun()
+               + 3 * λ_fun() * λ_fun() * E_uλλ * u_fun()
+               + λ_fun() * λ_fun() * λ_fun() * E_λλλ) / 6
+            + (E4 * u_fun() * u_fun() * u_fun() * u_fun()
+               + 4 * λ_fun() * E_uuuλ * u_fun() * u_fun() * u_fun()
+               + 6 * λ_fun() * λ_fun() * E_uuλλ * u_fun() * u_fun()
+               + 4 * λ_fun() * λ_fun() * λ_fun() * E_uλλλ * u_fun()
+               + λ_fun() * λ_fun() * λ_fun() * λ_fun() * E_λλλλ) / 24)
 
 
-def create_E_u():
-    return (E2 * create_u()
-            + create_λ() * E_uλ
-            + (E3 * create_u() * create_u()
-               + 2 * create_λ() * E_uuλ * create_u()
-               + create_λ() * create_λ() * E_uλλ) / 2
-            + (E4 * create_u() * create_u() * create_u()
-               + 3 * create_λ() * E_uuuλ * create_u() * create_u()
-               + 3 * create_λ() * create_λ() * E_uuλλ * create_u()
-               + create_λ() * create_λ() * create_λ() * E_uλλλ) / 6)
+def create_E_u(u_fun=default_u_fun, λ_fun=default_λ_fun):
+    return (E2 * u_fun()
+            + λ_fun() * E_uλ
+            + (E3 * u_fun() * u_fun()
+               + 2 * λ_fun() * E_uuλ * u_fun()
+               + λ_fun() * λ_fun() * E_uλλ) / 2
+            + (E4 * u_fun() * u_fun() * u_fun()
+               + 3 * λ_fun() * E_uuuλ * u_fun() * u_fun()
+               + 3 * λ_fun() * λ_fun() * E_uuλλ * u_fun()
+               + λ_fun() * λ_fun() * λ_fun() * E_uλλλ) / 6)
 
 
-def create_E_uu():
+def create_E_uu(u_fun=default_u_fun, λ_fun=default_λ_fun):
     return (E2
-            + E3 * create_u()
-            + create_λ() * E_uuλ
-            + (E4 * create_u() * create_u()
-               + 2 * create_λ() * E_uuuλ * create_u()
-               + create_λ() * create_λ() * E_uuλλ) / 2)
+            + E3 * u_fun()
+            + λ_fun() * E_uuλ
+            + (E4 * u_fun() * u_fun()
+               + 2 * λ_fun() * E_uuuλ * u_fun()
+               + λ_fun() * λ_fun() * E_uuλλ) / 2)
 
 
-def create_u_star():
-    return (create_λ() * u0_dot
-            + create_λ() * create_λ() * u0_ddot / 2
-            + create_λ() * create_λ() * create_λ() * u0_dddot / 6
-            + create_λ() * create_λ() * create_λ() * create_λ() * u0_ddddot / 24)
+def create_u_star(λ_fun=default_λ_fun):
+    return (λ_fun() * u0_dot
+            + λ_fun() * λ_fun() * u0_ddot / 2
+            + λ_fun() * λ_fun() * λ_fun() * u0_dddot / 6
+            + λ_fun() * λ_fun() * λ_fun() * λ_fun() * u0_ddddot / 24)
 
 
 with open("setting-up_the_computational_stage.out.json", "r") as f:

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.2.280">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 7&nbsp; Parametrization of the bifurcated branch</title>
+<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 6&nbsp; Parametrization of the bifurcated branch</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
 </style>
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./energy.html" rel="next">
-<link href="./bifurcation_equations-new.html" rel="prev">
+<link href="./bifurcation_equations.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,7 +61,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -70,16 +69,11 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./parametrization.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
       </button>
     </div>
   </nav>
@@ -87,91 +81,75 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Notes on the Lyapunov–Schmidt–Koiter asymptotic method</a> 
     </div>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
+      <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-        </div>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome!</span></span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome!</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setting-up_the_mathematical_stage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></span></a>
+  <a href="./setting-up_the_mathematical_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./main_results.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Perfect system: outline of the main results</span></span></a>
+  <a href="./main_results.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Perfect system: outline of the main results</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></span></a>
+  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span></a>
+  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bifurcation_equations-new.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span></a>
+  <a href="./parametrization.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./parametrization.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span></a>
+  <a href="./energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./energy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span></a>
+  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#simplification-of-the-bifurcation-equations" id="toc-simplification-of-the-bifurcation-equations" class="nav-link active" data-scroll-target="#simplification-of-the-bifurcation-equations"><span class="header-section-number">7.1</span> Simplification of the bifurcation equations</a></li>
-  <li><a href="#taylor-expansion-of-the-bifurcated-branch" id="toc-taylor-expansion-of-the-bifurcated-branch" class="nav-link" data-scroll-target="#taylor-expansion-of-the-bifurcated-branch"><span class="header-section-number">7.2</span> Taylor expansion of the bifurcated branch</a></li>
+  <li><a href="#simplification-of-the-bifurcation-equations" id="toc-simplification-of-the-bifurcation-equations" class="nav-link active" data-scroll-target="#simplification-of-the-bifurcation-equations"><span class="toc-section-number">6.1</span>  Simplification of the bifurcation equations</a></li>
+  <li><a href="#taylor-expansion-of-the-bifurcated-branch" id="toc-taylor-expansion-of-the-bifurcated-branch" class="nav-link" data-scroll-target="#taylor-expansion-of-the-bifurcated-branch"><span class="toc-section-number">6.2</span>  Taylor expansion of the bifurcated branch</a></li>
   </ul>
 </nav>
     </div>
@@ -180,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-20230102030224" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span></h1>
+<h1 class="title"><span id="sec-20230102030224" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Parametrization of the bifurcated branch</span></span></h1>
 </div>
 
 
@@ -204,16 +182,16 @@ ul.task-list li input[type="checkbox"] {
 <p>The bifurcated branch is a curve <span class="math inline">\((u, \lambda) \in \reals ^ {m + 1}\)</span>, which is parametrized by <span class="math inline">\(\eta\)</span>: <span class="math inline">\([u(\eta), \lambda(\eta)]\)</span>, with <span class="math inline">\(u(0) = u_0\)</span> and <span class="math inline">\(\lambda(0) = \lambda_0\)</span>; primed quantities denoting derivatives with respect to <span class="math inline">\(\eta\)</span>, we introduce <span class="math display">\[
 \order[1]{\xi_i} = \xi_i'(0), \quad \order[2]{\xi_i} = \xi_i''(0), \quad \ldots, \quad \order[1]{\lambda} = \lambda'(0), \quad \ldots
 \]</span></p>
-<p>In <a href="bifurcation_equations-new.html#sec-20230102030125"><span>Section&nbsp;6.3</span></a>, <span class="math inline">\(\lambda\)</span> was defined as a function of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Therefore, from the chain rule <span class="math display">\[
+<p>In <a href="bifurcation_equations.html#sec-20230102030125"><span>Section&nbsp;5.3</span></a>, <span class="math inline">\(\lambda\)</span> was defined as a function of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Therefore, from the chain rule <span class="math display">\[
 \lambda'(\eta) = \frac{\partial\lambda}{\partial\xi_i} \, \xi_i'(\eta) \quad \text{and} \quad \lambda''(\eta)  = \frac{\partial^2\lambda}{\partial\xi_i \, \partial\xi_j} \, \xi_i'(\eta) \, \xi_j'(\eta) + \frac{\partial\lambda}{\partial\xi_i} \, \xi_i''(\eta)
 \]</span> and, at <span class="math inline">\(\eta = 0\)</span> <span id="eq-20230116205753"><span class="math display">\[
 \order[1]{\lambda} = \lambda_i \, \order[1]{\xi_i} \quad \text{and} \quad \order[2]{\lambda} = \lambda_{ij} \, \order[1]{\xi_i} \, \order[1]{\xi_j} + \lambda_i \, \order[2]{\xi_i}.
-\tag{7.1}\]</span></span></p>
-<section id="simplification-of-the-bifurcation-equations" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="simplification-of-the-bifurcation-equations"><span class="header-section-number">7.1</span> Simplification of the bifurcation equations</h2>
-<p>The bifurcation equations (<a href="bifurcation_equations-new.html#eq-20230115101130"><span>6.8</span></a>) and (<a href="bifurcation_equations-new.html#eq-20230115101147"><span>6.9</span></a>) have been derived in <a href="bifurcation_equations-new.html"><span>Chapter&nbsp;6</span></a>. Testing these equations with <span class="math inline">\(\hat{v} = v_i\)</span> delivers <span id="eq-20230116205638"><span class="math display">\[
+\tag{6.1}\]</span></span></p>
+<section id="simplification-of-the-bifurcation-equations" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="simplification-of-the-bifurcation-equations"><span class="header-section-number">6.1</span> Simplification of the bifurcation equations</h2>
+<p>The bifurcation equations (<a href="bifurcation_equations.html#eq-20230115101130"><span>5.8</span></a>) and (<a href="bifurcation_equations.html#eq-20230115101147"><span>5.9</span></a>) have been derived in <a href="bifurcation_equations.html"><span>Chapter&nbsp;5</span></a>. Testing these equations with <span class="math inline">\(\hat{v} = v_i\)</span> delivers <span id="eq-20230116205638"><span class="math display">\[
 \xi_j \, \xi_k \, \bigl[ \tfrac{1}{2} \, \E_3(v_i, v_j, v_k) + \lambda_k \, \dot{\E}_2(v_i, v_j) \bigr] = 0
-\tag{7.2}\]</span></span> and <span id="eq-20230117071620"><span class="math display">\[
+\tag{6.2}\]</span></span> and <span id="eq-20230117071620"><span class="math display">\[
 \begin{aligned}[b]
 \xi_j \, \xi_k \, \xi_l \, \bigl[
 \tfrac{1}{2} \E_3(v_i, v_j, w_{kl})
@@ -225,14 +203,14 @@ ul.task-list li input[type="checkbox"] {
 + \tfrac{1}{2} \lambda_l \, \dot{\E}_3(v_i, v_j, v_k)
 + \tfrac{1}{2} \lambda_k \, \lambda_l \, \ddot{\E}_2(v_i, v_j) \bigr] &amp;= 0.
 \end{aligned}
-\tag{7.3}\]</span></span> for all <span class="math inline">\(\xi_1, \ldots, \xi_m \in \reals\)</span> and <span class="math inline">\(i = 1, \ldots, m\)</span>.</p>
-<p>Eq.&nbsp;(<a href="#eq-20230116205638"><span>7.2</span></a>) holds for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Plugging <span class="math inline">\(\xi_i = \order[1]{\xi_i}\)</span> and using Eq.&nbsp;(<a href="#eq-20230116205753"><span>7.1</span></a>) delivers the <strong>first bifurcation equation (<a href="main_results.html#eq-20230125062336"><span>3.3</span></a>)</strong>.</p>
-<p>Similarly, Eq.&nbsp;(<a href="#eq-20230117071620"><span>7.3</span></a>) is simplified below to the <strong>second bifurcation equation (<a href="main_results.html#eq-20230124205642"><span>3.4</span></a>)</strong>. To do so, we first prove a preliminary identity. For fixed <span class="math inline">\(i = 1, \ldots, m\)</span>, Eq.&nbsp;(<a href="#eq-20230116205638"><span>7.2</span></a>) is of the form <span class="math inline">\(L_{jk} \, \xi_j \, \xi_k = 0\)</span> for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Derivation with respect to <span class="math inline">\(\xi_l\)</span> leads to <span class="math display">\[
+\tag{6.3}\]</span></span> for all <span class="math inline">\(\xi_1, \ldots, \xi_m \in \reals\)</span> and <span class="math inline">\(i = 1, \ldots, m\)</span>.</p>
+<p>Eq.&nbsp;(<a href="#eq-20230116205638"><span>6.2</span></a>) holds for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Plugging <span class="math inline">\(\xi_i = \order[1]{\xi_i}\)</span> and using Eq.&nbsp;(<a href="#eq-20230116205753"><span>6.1</span></a>) delivers the <strong>first bifurcation equation (<a href="main_results.html#eq-20230125062336"><span>3.3</span></a>)</strong>.</p>
+<p>Similarly, Eq.&nbsp;(<a href="#eq-20230117071620"><span>6.3</span></a>) is simplified below to the <strong>second bifurcation equation (<a href="main_results.html#eq-20230124205642"><span>3.4</span></a>)</strong>. To do so, we first prove a preliminary identity. For fixed <span class="math inline">\(i = 1, \ldots, m\)</span>, Eq.&nbsp;(<a href="#eq-20230116205638"><span>6.2</span></a>) is of the form <span class="math inline">\(L_{jk} \, \xi_j \, \xi_k = 0\)</span> for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Derivation with respect to <span class="math inline">\(\xi_l\)</span> leads to <span class="math display">\[
 0 = L_{jk} \, \delta_{jl} \, \xi_k + L_{jk} \, \xi_j \, \delta_{kl} = L_{lk} \, \xi_k + L_{jl} \, \xi_j = \bigl(L_{kl} +L_{lk} \bigr) \, \xi_l,
-\]</span> for all <span class="math inline">\(\xi_1, \ldots, \xi_m \in \reals\)</span>. The above identity leads to: <span class="math inline">\(L_{kl} + L_{lk} = 0\)</span>. Application to Eq.&nbsp;(<a href="#eq-20230116205638"><span>7.2</span></a>) leads to <span id="eq-20230120210008"><span class="math display">\[
+\]</span> for all <span class="math inline">\(\xi_1, \ldots, \xi_m \in \reals\)</span>. The above identity leads to: <span class="math inline">\(L_{kl} + L_{lk} = 0\)</span>. Application to Eq.&nbsp;(<a href="#eq-20230116205638"><span>6.2</span></a>) leads to <span id="eq-20230120210008"><span class="math display">\[
 E_{ijk} + \lambda_k \, \dot{E}_{ij} + \lambda_j \, \dot{E}_{ik} = 0,
-\tag{7.4}\]</span></span></p>
-<p>Going back to Eq.&nbsp;(<a href="#eq-20230117071620"><span>7.3</span></a>), wich holds for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Plugging <span class="math inline">\(\xi_i = \order[1]{\xi_i}\)</span> and using Eq.&nbsp;(<a href="#eq-20230116205753"><span>7.1</span></a>) delivers <span id="eq-20230124210722"><span class="math display">\[
+\tag{6.4}\]</span></span></p>
+<p>Going back to Eq.&nbsp;(<a href="#eq-20230117071620"><span>6.3</span></a>), wich holds for all <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span>. Plugging <span class="math inline">\(\xi_i = \order[1]{\xi_i}\)</span> and using Eq.&nbsp;(<a href="#eq-20230116205753"><span>6.1</span></a>) delivers <span id="eq-20230124210722"><span class="math display">\[
 \begin{aligned}[b]
 \tfrac{1}{3} \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \bigl[ \E_4(v_i, v_j, v_k, v_l)
 + 3\E_3(v_i, v_j, w_{kl}) \bigr] &amp;\\
@@ -242,7 +220,7 @@ E_{ijk} + \lambda_k \, \dot{E}_{ij} + \lambda_j \, \dot{E}_{ik} = 0,
 + \ddot{\E}_2(v_i, v_j) \bigr]
 + \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \lambda_{kl} \, \dot{\E}_2(v_i, v_j) &amp;= 0.
 \end{aligned}
-\tag{7.5}\]</span></span></p>
+\tag{6.5}\]</span></span></p>
 <p>Owing to the contraction with <span class="math inline">\(\order[1]{\xi}_j\)</span>, <span class="math inline">\(\order[1]{\xi}_k\)</span> and <span class="math inline">\(\order[1]{\xi}_l\)</span>, the first term can be symmetrized with respect to <span class="math inline">\(j\)</span>, <span class="math inline">\(k\)</span> and <span class="math inline">\(l\)</span> <span class="math display">\[
 \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \bigl[ \E_4(v_i, v_j, v_k, v_l) + 3\E_3(v_i, v_j, w_{kl}) \bigr]
 = E_{ijkl} \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l,
@@ -253,12 +231,12 @@ E_{ijk} + \lambda_k \, \dot{E}_{ij} + \lambda_j \, \dot{E}_{ik} = 0,
 &amp;= -\order[1]{\xi}_j \, \order[1]{\xi}_k \, \bigl[ \E_2(w_{ij}, w_{k\lambda}) + \E_2(w_{ik}, w_{j\lambda}) \bigr]\\
 &amp;= \order[1]{\xi}_j \, \order[1]{\xi}_k \, \bigl[ \dot{\E}_2(v_k, w_{ij}) + \dot{\E}_2(v_j, w_{ik}) \bigr],
 \end{aligned}
-\]</span> where we have been testing Eq.&nbsp;(<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.4</span></a>) with <span class="math inline">\(\hat{w} = w_{k\lambda}\)</span> and <span class="math inline">\(\hat{w} = w_{j\lambda}\)</span> and Eq.&nbsp;(<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.5</span></a>) with <span class="math inline">\(\hat{w} = w_{ij}\)</span> and <span class="math inline">\(\hat{w} = w_{ik}\)</span>, successively. Introducing <span class="math inline">\(\dot{E}_{ijk}\)</span> defined by Eq.&nbsp;(<a href="setting-up_the_mathematical_stage.html#eq-20230124210649"><span>2.9</span></a>), the second term of Eq.&nbsp;(<a href="#eq-20230124210722"><span>7.5</span></a>) reduces to <span class="math display">\[
+\]</span> where we have been testing Eq.&nbsp;(<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.4</span></a>) with <span class="math inline">\(\hat{w} = w_{k\lambda}\)</span> and <span class="math inline">\(\hat{w} = w_{j\lambda}\)</span> and Eq.&nbsp;(<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.5</span></a>) with <span class="math inline">\(\hat{w} = w_{ij}\)</span> and <span class="math inline">\(\hat{w} = w_{ik}\)</span>, successively. Introducing <span class="math inline">\(\dot{E}_{ijk}\)</span> defined by Eq.&nbsp;(<a href="setting-up_the_mathematical_stage.html#eq-20230124210649"><span>2.9</span></a>), the second term of Eq.&nbsp;(<a href="#eq-20230124210722"><span>6.5</span></a>) reduces to <span class="math display">\[
 \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\lambda} \, \bigl[
 \dot{\E}_3(v_i, v_j, v_k) + 2\E_3(v_i, v_j, w_{k\lambda}) + \dot{\E}_2(v_i, w_{jk})
 \bigr] = \order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_j \, \order[1]{\xi}_k.
 \]</span></p>
-<p>The third term of Eq.&nbsp;(<a href="#eq-20230124210722"><span>7.5</span></a>) is simplified by testing Eq. (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.5</span></a>), with <span class="math inline">\(\hat{w} = w_{j\lambda}\)</span> and <span class="math inline">\(\hat{w} = w_{i\lambda}\)</span>, successively <span class="math display">\[
+<p>The third term of Eq.&nbsp;(<a href="#eq-20230124210722"><span>6.5</span></a>) is simplified by testing Eq. (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.5</span></a>), with <span class="math inline">\(\hat{w} = w_{j\lambda}\)</span> and <span class="math inline">\(\hat{w} = w_{i\lambda}\)</span>, successively <span class="math display">\[
 \begin{aligned}[b]
 \ddot{\E}_2(v_i, v_j) + 2\dot{\E}_2(v_i, w_{j\lambda})
 &amp;= \ddot{\E}_2(v_i, v_j) + \dot{\E}_2(v_i, w_{j\lambda}) -\E_2(w_{i\lambda}, w_{j\lambda})\\
@@ -273,7 +251,7 @@ E_{ijk} + \lambda_k \, \dot{E}_{ij} + \lambda_j \, \dot{E}_{ik} = 0,
 + \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \lambda_{kl} \, \dot{E}_{ij} &amp;= 0.
 \end{aligned}
 \]</span></p>
-<p>Upon susbtitution of <span class="math inline">\(\order[1]{\xi}_k \, \order[1]{\xi}_l \, \lambda_{kl}\)</span> with <span class="math inline">\(\order[2]{\lambda} - \lambda_k \, \order[2]{\xi_k}\)</span> [see Eq. (<a href="#eq-20230116205753"><span>7.1</span></a>)] <span class="math display">\[
+<p>Upon susbtitution of <span class="math inline">\(\order[1]{\xi}_k \, \order[1]{\xi}_l \, \lambda_{kl}\)</span> with <span class="math inline">\(\order[2]{\lambda} - \lambda_k \, \order[2]{\xi_k}\)</span> [see Eq. (<a href="#eq-20230116205753"><span>6.1</span></a>)] <span class="math display">\[
 \begin{aligned}[b]
 \tfrac{1}{3} E_{ijkl} \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l
 + \order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_j \, \order[1]{\xi}_k
@@ -281,7 +259,7 @@ E_{ijk} + \lambda_k \, \dot{E}_{ij} + \lambda_j \, \dot{E}_{ik} = 0,
 + \order[2]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi}_j - \order[1]{\xi}_j \, \order[2]{\xi}_k \, \lambda_k \, \dot{E}_{ij} &amp;= 0.
 \end{aligned}
 \]</span></p>
-<p>Eq.&nbsp;(<a href="#eq-20230120210008"><span>7.4</span></a>) is used to eliminate <span class="math inline">\(\lambda_k \, \dot{E}_{ij}\)</span> <span class="math display">\[
+<p>Eq.&nbsp;(<a href="#eq-20230120210008"><span>6.4</span></a>) is used to eliminate <span class="math inline">\(\lambda_k \, \dot{E}_{ij}\)</span> <span class="math display">\[
 \begin{aligned}[b]
 \tfrac{1}{3} E_{ijkl} \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l
 + \order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_j \, \order[1]{\xi}_k
@@ -291,9 +269,9 @@ E_{ijk} + \lambda_k \, \dot{E}_{ij} + \lambda_j \, \dot{E}_{ik} = 0,
 \end{aligned}
 \]</span> and Eq.&nbsp;(<a href="main_results.html#eq-20230124205642"><span>3.4</span></a>) is retrieved.</p>
 </section>
-<section id="taylor-expansion-of-the-bifurcated-branch" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="taylor-expansion-of-the-bifurcated-branch"><span class="header-section-number">7.2</span> Taylor expansion of the bifurcated branch</h2>
-<p>We now turn to <span class="math inline">\(w\)</span>, which was defined in <a href="bifurcation_equations-new.html#sec-20230102030010"><span>Section&nbsp;6.2</span></a> as an implicit function of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> and <span class="math inline">\(\lambda\)</span>. It is now defined as a function of the arc parameter <span class="math inline">\(\eta\)</span> as follows: <span class="math inline">\(w(n) = w[\xi_1(\eta), \ldots, \xi_m(\eta), \lambda(\eta)]\)</span>. From the chain rule <span class="math display">\[
+<section id="taylor-expansion-of-the-bifurcated-branch" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="taylor-expansion-of-the-bifurcated-branch"><span class="header-section-number">6.2</span> Taylor expansion of the bifurcated branch</h2>
+<p>We now turn to <span class="math inline">\(w\)</span>, which was defined in <a href="bifurcation_equations.html#sec-20230102030010"><span>Section&nbsp;5.2</span></a> as an implicit function of <span class="math inline">\(\xi_1, \ldots, \xi_m\)</span> and <span class="math inline">\(\lambda\)</span>. It is now defined as a function of the arc parameter <span class="math inline">\(\eta\)</span> as follows: <span class="math inline">\(w(n) = w[\xi_1(\eta), \ldots, \xi_m(\eta), \lambda(\eta)]\)</span>. From the chain rule <span class="math display">\[
 w'(\eta) = \frac{\partial w}{\partial \xi_i} \, \xi_i' + \frac{\partial w}{\partial \lambda} \, \lambda'
 \]</span> and <span class="math display">\[
 w''(\eta) = \frac{\partial^2 w}{\partial \xi_i \, \partial \xi_j} \, \xi_i' \, \xi_j'
@@ -340,23 +318,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
+    target: function(trigger) {
+      return trigger.previousElementSibling;
     }
   });
   clipboard.on('success', function(e) {
@@ -421,92 +385,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -548,13 +426,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./bifurcation_equations-new.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span>
+      <a href="./bifurcation_equations.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./energy.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

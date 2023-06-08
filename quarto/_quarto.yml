@@ -12,7 +12,6 @@ book:
     - main_results.qmd
     - setting-up_the_computational_stage.ipynb
     - bifurcation_equations.ipynb
-    - parametrization.qmd
     - energy.ipynb
     - eigenmodes.ipynb
     - references.qmd

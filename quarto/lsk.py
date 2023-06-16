@@ -52,11 +52,16 @@ l = Idx("l")
 
 λ_ = IndexedBase(r"\lambda")
 ξ_ = IndexedBase(r"\xi")
+ξ1_ = IndexedBase(r"{\order[1]{\xi}}")
+ξ2_ = IndexedBase(r"{\order[2]{\xi}}")
 v_ = IndexedBase("v")
 w_ = IndexedBase("w")
 E_ = IndexedBase("E")
 E_dot_ = IndexedBase("\dot{E}")
 E_ddot_ = IndexedBase("\ddot{E}")
+
+λ1 = Symbol(r"{\order[1]{\lambda}}")
+λ2 = Symbol(r"{\order[2]{\lambda}}")
 
 rules = dict()
 _λ = Idx(r"\lambda")
@@ -127,6 +132,21 @@ rules["λ_ij = λ_ji"] = {
     λ_[l, i]: λ_[i, l],
     λ_[l, j]: λ_[j, l],
     λ_[l, k]: λ_[k, l]
+}
+
+rules["E₃(v_i, v_j, w_kλ)"] = {
+    E3 * v_[i] * v_[j] * w_[k, _λ]: E2_dot * w_[i, j] * v_[k],
+    E3 * v_[i] * v_[k] * w_[j, _λ]: E2_dot * w_[i, k] * v_[j],
+    E3 * v_[i] * v_[k] * w_[l, _λ]: E2_dot * w_[i, k] * v_[l],
+    E3 * v_[i] * v_[l] * w_[k, _λ]: E2_dot * w_[i, l] * v_[k],
+    E3 * v_[i] * v_[j] * w_[l, _λ]: E2_dot * w_[i, j] * v_[l],
+    E3 * v_[i] * v_[l] * w_[j, _λ]: E2_dot * w_[i, l] * v_[j],
+}
+
+rules[r"\dot{E}₂(v_i, w_jλ)"] = {
+    E2_dot * v_[i] * w_[j, _λ]: (E_ddot_[i, j] - E2_ddot * v_[i] * v_[j]) / 2,
+    E2_dot * v_[i] * w_[k, _λ]: (E_ddot_[i, k] - E2_ddot * v_[i] * v_[k]) / 2,
+    E2_dot * v_[i] * w_[l, _λ]: (E_ddot_[i, l] - E2_ddot * v_[i] * v_[l]) / 2,
 }
 
 E_uλ = -E2 * u0_dot

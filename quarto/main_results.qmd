@@ -6,7 +6,7 @@ It is shown in @sec-20230102153124 that, besides the fundamental branch $u^\ast(
 equilibrium branches may pass through the critical point $(u_0, \lambda_0)$. The bifurcated branch is a curve $(u,
 \lambda) \in \reals ^ {m + 1}$. Introducing the (yet unspecified) parameter $\eta$, we introduce the following
 parametric representation of the bifurcated branch: $\eta \mapsto [u(\eta), \lambda(\eta)]$, with $u(0) = u_0$ and
-$\lambda(0) = \lambda_0$. The following asymptotic expansion of $\eta \mapsto \lambda(\eta)$ and $\eta \mapsto u(\eta)$ are derived in @sec-20230102153124 and @sec-20230102030224
+$\lambda(0) = \lambda_0$. The following asymptotic expansion of $\eta \mapsto \lambda(\eta)$ and $\eta \mapsto u(\eta)$ are derived in @sec-20230102153124
 $$
 \lambda(\eta) = \order[0]{\lambda} + \eta \, \order[1]{\lambda} + \tfrac{1}{2}\eta^2 \, \order[2]{\lambda} \quad \text{and} \quad u(\eta) = u^\ast[\lambda(\eta)] + \eta \, \order[1]{u} + \tfrac{1}{2} \eta^2 \, \order[2]{u} + o(\eta^2),
 $$ {#eq-20230528174310}

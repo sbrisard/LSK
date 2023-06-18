@@ -1,3 +1,5 @@
+import itertools
+
 import IPython.display
 import json
 import sympy
@@ -62,6 +64,9 @@ E_ddot_ = IndexedBase("\ddot{E}")
 
 λ1 = Symbol(r"{\order[1]{\lambda}}")
 λ2 = Symbol(r"{\order[2]{\lambda}}")
+λ3 = Symbol(r"{\order[3]{\lambda}}")
+λ4 = Symbol(r"{\order[4]{\lambda}}")
+η = Symbol(r"\eta")
 
 rules = dict()
 _λ = Idx(r"\lambda")
@@ -157,6 +162,13 @@ E_uλλλ = (-E2 * u0_dddot - 3 * E2_dot * u0_ddot - 3 * E2_ddot * u0_dot
 E_uuλ = E2_dot - E3 * u0_dot
 E_uuλλ = E4 * u0_dot**2 -2 * E3_dot * u0_dot - E3 * u0_ddot + E2_ddot
 E_uuuλ = E3_dot - E4 * u0_dot
+
+__index_number = itertools.count()
+
+
+def new_index():
+    return Idx(r"i_{" + str(next(__index_number)) + "}")
+
 
 def default_u_fun():
     return Symbol(r"u")

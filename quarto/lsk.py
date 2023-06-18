@@ -154,6 +154,16 @@ rules[r"\dot{E}₂(v_i, w_jλ)"] = {
     E2_dot * v_[i] * w_[l, _λ]: (E_ddot_[i, l] - E2_ddot * v_[i] * v_[l]) / 2,
 }
 
+rules["BifEq1"] = {
+    E_[i, j, k] * ξ1_[j] * ξ1_[k]: -2 * λ1 * E_dot_[i, j] * ξ1_[j]
+}
+
+rules["BifEq2"] = {
+    E_[i, j, k, l] * ξ1_[j] * ξ1_[k] * ξ1_[l]: -3 * (λ1 * (E_dot_[i, j, k] * ξ1_[k] + λ1 * E_ddot_[i, j]) * ξ1_[j]
+                                                     + (E_[i, j, k] * ξ1_[k] + λ1 * E_dot_[i, j]) * ξ2_[j]
+                                                     + λ2 * E_dot_[i, j] * ξ1_[j])
+}
+
 E_uλ = -E2 * u0_dot
 E_uλλ = -E2 * u0_ddot - 2 * E2_dot * u0_dot + E3 * u0_dot**2
 E_uλλλ = (-E2 * u0_dddot - 3 * E2_dot * u0_ddot - 3 * E2_ddot * u0_dot

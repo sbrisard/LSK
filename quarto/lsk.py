@@ -154,6 +154,36 @@ rules[r"\dot{E}₂(v_i, w_jλ)"] = {
     E2_dot * v_[i] * w_[l, _λ]: (E_ddot_[i, l] - E2_ddot * v_[i] * v_[l]) / 2,
 }
 
+rules[r"E₂(w_ij, w_kl)"] = {
+    E2 * w_[i, j] * w_[k, l]: - E3 * v_[i] * v_[j] * w_[k, l],
+    E2 * w_[i, k] * w_[j, l]: - E3 * v_[i] * v_[k] * w_[j, l],
+    E2 * w_[i, l] * w_[j, k]: - E3 * v_[i] * v_[l] * w_[j, k],
+}
+
+rules[r"E₂(w_ij, w_kλ)"] = {
+    E2 * w_[i, j] * w_[k, _λ]: E2_dot * w_[i, j] * v_[k],
+    E2 * w_[i, j] * w_[l, _λ]: E2_dot * w_[i, j] * v_[l],
+    E2 * w_[i, k] * w_[l, _λ]: E2_dot * w_[i, k] * v_[l],
+    E2 * w_[i, k] * w_[j, _λ]: E2_dot * w_[i, k] * v_[j],
+    E2 * w_[i, l] * w_[j, _λ]: E2_dot * w_[i, l] * v_[j],
+    E2 * w_[i, l] * w_[k, _λ]: E2_dot * w_[i, l] * v_[k],
+    E2 * w_[j, k] * w_[l, _λ]: E2_dot * w_[j, k] * v_[l],
+    E2 * w_[j, k] * w_[i, _λ]: E2_dot * w_[j, k] * v_[i],
+    E2 * w_[j, l] * w_[i, _λ]: E2_dot * w_[j, l] * v_[i],
+    E2 * w_[j, l] * w_[k, _λ]: E2_dot * w_[j, l] * v_[k],
+    E2 * w_[k, l] * w_[i, _λ]: E2_dot * w_[k, l] * v_[i],
+    E2 * w_[k, l] * w_[j, _λ]: E2_dot * w_[k, l] * v_[j],
+}
+
+rules[r"E₂(w_iλ, w_jλ)"] = {
+    E2 * w_[i, _λ] * w_[j, _λ]: -E2_dot * v_[i] * w_[j, _λ],
+    E2 * w_[i, _λ] * w_[k, _λ]: -E2_dot * v_[i] * w_[k, _λ],
+    E2 * w_[i, _λ] * w_[l, _λ]: -E2_dot * v_[i] * w_[l, _λ],
+    E2 * w_[j, _λ] * w_[k, _λ]: -E2_dot * v_[j] * w_[k, _λ],
+    E2 * w_[j, _λ] * w_[l, _λ]: -E2_dot * v_[j] * w_[l, _λ],
+    E2 * w_[k, _λ] * w_[l, _λ]: -E2_dot * v_[k] * w_[l, _λ],
+}
+
 rules["BifEq1"] = {
     E_[i, j, k] * ξ1_[j] * ξ1_[k]: -2 * λ1 * E_dot_[i, j] * ξ1_[j]
 }

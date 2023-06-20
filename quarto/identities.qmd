@@ -1,0 +1,98 @@
+# Some useful identities
+
+This document uses $\LaTeX\newcommand{\D}{\mathrm{d}}\newcommand{\E}{\mathcal{E}}\newcommand{\order}[2][1]{#2^{(#1)}}\newcommand{\reals}{\mathbb{R}}$ custom macros.
+
+Let $v = \xi_i \, v_i \in V$
+$$
+\begin{aligned}
+\E_3(\order[1]{u}, \order[1]{u}, v)
+&= \xi_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \E_3(v_i, v_j, v_k)
+=  E_{ijk} \, \xi_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k\\
+&= -2\order[1]{\lambda} \, \dot{E}_{ij} \, \xi_i \, \order[1]{\xi}_j
+= -2\order[1]{\lambda} \, \dot{\E}_2(\order[1]{u}, v),
+\end{aligned}
+$$
+where we have used the definitions (@eq-20230125062505) and (@eq-20230125062510) of $\dot{E}_{ij}$ and $E_{ijk}$ and the first bifurcation equation (@eq-20230125062336).
+
+
+The proofs below use frequently definitions (@eq-20230107180410) and (@eq-20230107180501) of $w_{ij}$ and $w_{i\lambda}$, definitions (@eq-20230125062505), (@eq-20230124211207), (@eq-20230125062510), (@eq-20230124210649) and (@eq-20230124210049) of $\dot{E}_{ij}$, $\ddot{E}_{ij}$, $E_{ijk}$, $\dot{E}_{ijk}$ and $E_{ijkl}$. Finally, expressions (@eq-20230411141319) of $\order[1]{u}$ and $\order[2]{u}$ are used.
+
+$$
+\E_2(w_{ij}, w_{kl}) = -\E_3(v_i, v_j, w_{kl})
+$$
+
+$$
+\begin{aligned}
+\order[1]{\xi}_i \, \order[1]{\xi}_j \, \E_2(w_{i\lambda}, w_{j\lambda})
+&= -\order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{\E}_2(v_i, w_{j\lambda})
+= -\order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{\E}_2(v_j, w_{i\lambda})\\
+&= -\tfrac{1}{2} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \bigl[ \dot{\E}_2(v_i, w_{j\lambda}) + \dot{\E}_2(v_j, w_{i\lambda}) \bigr]\\
+&= \tfrac{1}{2} \bigl[ \ddot{\E}_2(\order[1]{u}, \order[1]{u}) - \ddot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \bigr].
+\end{aligned}
+$$
+
+
+$$
+\begin{aligned}
+\order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \E_2(w_{ij}, w_{k\lambda})
+&= - \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \dot{\E}_2(w_{ij}, v_k)\\
+&= -\tfrac{1}{3} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \bigl[ \dot{\E}_2(v_i, w_{jk}) + \dot{\E}_2(v_j, w_{ik}) + \dot{\E}_2(v_k, w_{ij}) \bigr]\\
+&= \tfrac{1}{3} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \bigl[ \dot{\E}_3(v_i, v_j, v_k) - \dot{E}_{ijk} \bigr]\\
+&= \tfrac{1}{3} \bigl[ \dot{\E}_3(\order[1]{u}, \order[1]{u}, \order[1]{u}) - \dot{E}_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \bigr].
+\end{aligned}
+$$
+
+$$
+\begin{aligned}[b]
+\E_3(v_i, v_j, w_{k\lambda})
+={}& - \E_2(w_{ij}, w_{k\lambda})\\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}[b]
+\order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \E_3(v_i, v_j, w_{kl})
+={}& \tfrac{1}{3}\order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \bigl[ \E_3(v_i, v_j, w_{kl})\\
+&+ \E_3(v_i, v_k, w_{jl}) + \E_3(v_i, v_l, w_{jk}) \bigr]\\
+={}& \tfrac{1}{3}\order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \bigl[ E_{ijkl} - \E_4(v_i, v_j, v_k, v_l) \bigr]\\
+={}& \tfrac{1}{3} \bigl[ E_{ijkl} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l - \E_4(\order[1]{u}, \order[1]{u}, \order[1]{u}, \order[1]{u}) \bigr]
+\end{aligned}
+$$ {#eq-20230620071133}
+
+$$
+\begin{aligned}[b]
+\E_2(\order[2]{u}_W, \order[2]{u}_W)
+={}& \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \E_2(w_{ij}, w_{kl})
++ 4 \, \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \E_2(w_{ij}, w_{k\lambda})\\
+&+ 4 \bigl( \order[1]{\lambda} \bigr)^2 \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \E_2(w_{i\lambda}, w_{j\lambda})\\
+={}& \tfrac{1}{3} \E_4(\order[1]{u}, \order[1]{u}, \order[1]{u}, \order[1]{u})
++ \tfrac{4}{3} \order[1]{\lambda} \, \dot{\E}_3(\order[1]{u}, \order[1]{u}, \order[1]{u})\\
+&+ 2 \bigl( \order[1]{\lambda} \bigr)^2 \, \ddot{\E}_2(\order[1]{u}, \order[1]{u})
+- \tfrac{1}{3} E_{ijkl} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l\\
+&- \tfrac{4}{3} \order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k
+ - 2 \bigl( \order[1]{\lambda} \bigr)^2 \, \ddot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j
+\end{aligned}
+$$ {#eq-20230619212620}
+
+
+$$
+\begin{aligned}[b]
+\E_3(\order[1]{u}, \order[1]{u}, \order[2]{u}_W)
+={}& \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \E_3(v_i, v_j, w_{kl}) + 2\order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \E_3(v_i, v_j, w_{k\lambda})\\
+={}& \tfrac{1}{3} \bigl[ E_{ijkl} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l - \E_4(\order[1]{u}, \order[1]{u}, \order[1]{u}, \order[1]{u})\bigr]\\
+& + \tfrac{2}{3} \order[1]{\lambda} \, \bigl[ \dot{E}_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k - \dot{\E}_3(\order[1]{u}, \order[1]{u}, \order[1]{u}) \bigr]
+\end{aligned}
+$$
+
+$$
+\begin{aligned}[b]
+\dot{\E}_2(\order[1]{u}, \order[2]{u}_W)
+={}& \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \dot{\E}_2(v_i, w_{jk}) + 2\order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{\E}_2(v_i, w_{j\lambda})\\
+={}& \tfrac{1}{3} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \bigl[ \dot{\E}_2(v_i, w_{jk}) + \dot{\E}_2(v_j, w_{ik}) + \dot{\E}_2(v_k, w_{ij})\bigr]\\
+& + \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \bigl[ \dot{\E}_2(v_i, w_{j\lambda}) + \dot{\E}_2(v_j, w_{i\lambda}) \bigr]\\
+={}& \tfrac{1}{3} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \bigl[ \dot{E}_{ijk} - \dot{\E}_3(v_i, v_j, v_k) \bigr]\\
+&+ \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \bigl[\ddot{E}_{ij} - \ddot{\E}_2(v_i, v_j) \bigr]\\
+={}& \tfrac{1}{3} \bigl[ \dot{E}_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k - \dot{\E}_3(\order[1]{u}, \order[1]{u}, \order[1]{u}) \bigr]\\
+&+ \order[1]{\lambda} \, \bigl[\ddot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j - \ddot{\E}_2(\order[1]{u}, \order[1]{u}) \bigr]
+\end{aligned}
+$$

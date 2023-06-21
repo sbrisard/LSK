@@ -6,31 +6,7 @@ It is shown in @sec-20230102153124 that, besides the fundamental branch $u^\ast(
 equilibrium branches may pass through the critical point $(u_0, \lambda_0)$. The bifurcated branch is a curve $(u,
 \lambda) \in \reals ^ {m + 1}$. Introducing the (yet unspecified) parameter $\eta$, we introduce the following
 parametric representation of the bifurcated branch: $\eta \mapsto [u(\eta), \lambda(\eta)]$, with $u(0) = u_0$ and
-$\lambda(0) = \lambda_0$. The following asymptotic expansion of $\eta \mapsto \lambda(\eta)$ and $\eta \mapsto u(\eta)$ are derived in @sec-20230102153124
-$$
-\lambda(\eta) = \order[0]{\lambda} + \eta \, \order[1]{\lambda} + \tfrac{1}{2}\eta^2 \, \order[2]{\lambda} \quad \text{and} \quad u(\eta) = u^\ast[\lambda(\eta)] + \eta \, \order[1]{u} + \tfrac{1}{2} \eta^2 \, \order[2]{u} + o(\eta^2),
-$$ {#eq-20230528174310}
-with
-$$
-\order[1]{u} = \order[1]{\xi_i} \, v_i
-\quad \text{and} \quad
-\order[2]{u} = \order[2]{\xi_i} \, v_i + \order[1]{\xi_i} \, \order[1]{\xi_j} \, w_{ij}  + 2\order[1]{\lambda} \, \order[1]{\xi_i} \, w_{i\lambda}.
-$$ {#eq-20230411141319}
-
-The coefficients $\order[1]{\lambda}$, $\order[2]{\lambda}$, $\order[1]{\xi}_i$ and $\order[2]{\xi}_i$ solve the following **bifurcation equations**
-$$
-\tfrac{1}{2} E_{ijk} \, \order[1]{\xi_j} \, \order[1]{\xi_k} + \order[1]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi_j} = 0
-$$ {#eq-20230125062336}
-and
-$$
-\begin{aligned}[b]
-\tfrac{1}{3} E_{ijkl} \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l
-+ \order[1]{\lambda} \, \bigl( \dot{E}_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \ddot{E}_{ij} \bigr) \, \order[1]{\xi}_j &\\
-+ \bigl( E_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \dot{E}_{ij} \bigr) \order[2]{\xi}_j
-+ \order[2]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi}_j & = 0,
-\end{aligned}
-$$ {#eq-20230124205642}
-where $\dot{E}_{ij}$, $\ddot{E}_{ij}$, $E_{ijk}$, $\dot{E}_{ijk}$ and $E_{ijkl}$ have been defined in @sec-20230402152824 (see @sec-20230528173310).
+$\lambda(0) = \lambda_0$.
 
 Along the bifurcated branch, the energy can also be expanded (see @sec-20230523130742)
 $$

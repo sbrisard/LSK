@@ -83,7 +83,7 @@ $$
 U = V \overset{\perp}{\otimes} W \quad \text{and} \quad \langle \hat{v}, \hat{w} \rangle = 0 \quad \text{for all} \quad \hat{v} \in V \quad \text{and} \quad \hat{w} \in W.
 $$
 
-## Two canonical variational problems
+## Two canonical variational problems {#sec-20230620135251}
 
 The bilinear form $\E_2$ is elliptic over $W$. Therefore, variational problems of the type: find $w \in W$ such that
 $$

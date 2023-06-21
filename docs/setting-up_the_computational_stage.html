@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 4&nbsp; Setting-up the computational stage</title>
+<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 5&nbsp; Setting-up the computational stage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,8 +93,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./bifurcation_equations.html" rel="next">
-<link href="./main_results.html" rel="prev">
+<link href="./bifurcation_equations-simplified.html" rel="next">
+<link href="./identities.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -134,7 +134,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -174,22 +174,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
+  <a href="./identities.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Some useful identities</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
+  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></a>
+  <a href="./bifurcation_equations-simplified.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
+  <a href="./energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -206,9 +211,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-20230103084732" id="toc-sec-20230103084732" class="nav-link active" data-scroll-target="#sec-20230103084732"><span class="toc-section-number">4.1</span>  Importing <code>Sympy</code></a></li>
-  <li><a href="#sec-20230208081549" id="toc-sec-20230208081549" class="nav-link" data-scroll-target="#sec-20230208081549"><span class="toc-section-number">4.2</span>  Elimination of the mixed derivatives of the energy</a></li>
-  <li><a href="#implementation-in-the-lsk-module-of-the-above-results" id="toc-implementation-in-the-lsk-module-of-the-above-results" class="nav-link" data-scroll-target="#implementation-in-the-lsk-module-of-the-above-results"><span class="toc-section-number">4.3</span>  Implementation in the <code>lsk</code> module of the above results</a></li>
+  <li><a href="#sec-20230103084732" id="toc-sec-20230103084732" class="nav-link active" data-scroll-target="#sec-20230103084732"><span class="toc-section-number">5.1</span>  Importing <code>Sympy</code></a></li>
+  <li><a href="#sec-20230208081549" id="toc-sec-20230208081549" class="nav-link" data-scroll-target="#sec-20230208081549"><span class="toc-section-number">5.2</span>  Elimination of the mixed derivatives of the energy</a></li>
+  <li><a href="#implementation-in-the-lsk-module-of-the-above-results" id="toc-implementation-in-the-lsk-module-of-the-above-results" class="nav-link" data-scroll-target="#implementation-in-the-lsk-module-of-the-above-results"><span class="toc-section-number">5.3</span>  Implementation in the <code>lsk</code> module of the above results</a></li>
   </ul>
 </nav>
     </div>
@@ -217,7 +222,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-20230402140105" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></span></h1>
+<h1 class="title"><span id="sec-20230402140105" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></span></h1>
 </div>
 
 
@@ -233,9 +238,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <p>This notebook uses <span class="math inline">\(\LaTeX\newcommand{\D}{\mathrm{d}}\newcommand{\E}{\mathcal{E}}\)</span> custom macros.</p>
-<p>This chapter lays the ground for all symbolic calculations that are to follow. The <a href="https://www.sympy.org">SymPy</a> library is imported and initialized in <a href="#sec-20230103084732"><span>Section&nbsp;4.1</span></a>. Then, the energy of the system is rewritten in a more convenient form in <a href="#sec-20230208081549"><span>Section&nbsp;4.2</span></a>.</p>
-<section id="sec-20230103084732" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="sec-20230103084732"><span class="header-section-number">4.1</span> Importing <code>Sympy</code></h2>
+<p>This chapter lays the ground for all symbolic calculations that are to follow. The <a href="https://www.sympy.org">SymPy</a> library is imported and initialized in <a href="#sec-20230103084732"><span>Section&nbsp;5.1</span></a>. Then, the energy of the system is rewritten in a more convenient form in <a href="#sec-20230208081549"><span>Section&nbsp;5.2</span></a>.</p>
+<section id="sec-20230103084732" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="sec-20230103084732"><span class="header-section-number">5.1</span> Importing <code>Sympy</code></h2>
 <p>We will use the <a href="https://www.python.org">Python</a> library <a href="https://www.sympy.org">SymPy</a> for symbolic mathematics and rely also on the <a href="https://ipython.org/">IPython</a> library (in particular, <a href="https://ipython.readthedocs.io/en/stable/api/generated/IPython.display.html#IPython.display.Math">IPython.display.Math</a>) for pretty <span class="math inline">\(\LaTeX\)</span> output. Some useful functions are defined in the <code>lsk.py</code> module, which will be systematically imported.</p>
 <p>Without loss of generality, it will be assumed in all symbolic calculations that <span class="math inline">\(\lambda_0 = 0\)</span> and <span class="math inline">\(u_0 = 0\)</span>. The general case <span class="math inline">\(\lambda_0 \neq 0\)</span> and <span class="math inline">\(u_0 \neq 0\)</span> is readily recovered through the substitution <span class="math inline">\(\lambda \leftrightarrow \lambda - \lambda_0\)</span> and <span class="math inline">\(u \leftrightarrow u - u_0\)</span>.</p>
 <p>The following developments involve the energy <span class="math inline">\((u, \lambda) \mapsto \E(u, \lambda)\)</span> and its differentials at the critical point <span class="math inline">\((u_0, \lambda_0)\)</span>, as well as the fundamental path <span class="math inline">\(\lambda \mapsto u^\ast(\lambda)\)</span> and its derivatives at <span class="math inline">\(\lambda = \lambda_0\)</span>. It will therefore be convenient to express <span class="math inline">\(\E\)</span> and <span class="math inline">\(u^\star\)</span> as Taylor expansions with respect to <span class="math inline">\(u\)</span> and <span class="math inline">\(\lambda\)</span>.</p>
@@ -378,8 +383,8 @@ Important
 </div>
 </div>
 </section>
-<section id="sec-20230208081549" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="sec-20230208081549"><span class="header-section-number">4.2</span> Elimination of the mixed derivatives of the energy</h2>
+<section id="sec-20230208081549" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="sec-20230208081549"><span class="header-section-number">5.2</span> Elimination of the mixed derivatives of the energy</h2>
 <p>Since the fundamental path <span class="math inline">\(\lambda \mapsto u^\ast(\lambda)\)</span> is an equilibrium path, the various differentials of the energy at the critical point are not linearly independent. To express the relationships between these forms, we define <span class="math inline">\(\mathcal R^\ast(\lambda; \bullet)\)</span> as the jacobian of the energy along the fundamental path <span class="math inline">\(u^\ast(\lambda)\)</span> <span class="math display">\[
 \mathcal R^\ast(\lambda; \bullet) = \E_{,u}[u^\ast(\lambda), \lambda; \bullet].
 \]</span></p>
@@ -507,8 +512,8 @@ Important
 <span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>    json.dump(data, f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="implementation-in-the-lsk-module-of-the-above-results" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="implementation-in-the-lsk-module-of-the-above-results"><span class="header-section-number">4.3</span> Implementation in the <code>lsk</code> module of the above results</h2>
+<section id="implementation-in-the-lsk-module-of-the-above-results" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="implementation-in-the-lsk-module-of-the-above-results"><span class="header-section-number">5.3</span> Implementation in the <code>lsk</code> module of the above results</h2>
 <p>All the above results are reimplemented in the <code>lsk</code> module for further use in the subsequent derivations. The whole module is listed below.</p>
 <p>All the relevant symbols are first defined: <code>E2</code>, <code>E3</code>, <code>E4</code>, <code>E2_dot</code>, <code>E3_dot</code>, <code>E2_ddot</code>, <code>E_λ</code>, <code>E_λλ</code>, <code>E_λλλ</code>, <code>E_λλλλ</code>, <code>u0_dot</code>, <code>u0_ddot</code>, <code>u0_dddot</code> and <code>u0_ddddot</code>.</p>
 <p>We also define the symbols: <code>λ_</code>, <code>ξ_</code>, <code>v_</code>, <code>w_</code>, <code>E_</code>, <code>E_dot_</code> and <code>E_ddot_</code> that are all instances of the class <code>IndexedBase</code>. In other words, they can be indexed with symbolic indices</p>
@@ -923,13 +928,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./main_results.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Perfect system: outline of the main results</span></span>
+      <a href="./identities.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Some useful identities</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./bifurcation_equations.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./bifurcation_equations-simplified.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

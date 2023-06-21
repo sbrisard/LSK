@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 6&nbsp; Asymptotic expansion of the energy</title>
+<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 7&nbsp; Asymptotic expansion of the energy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,7 +94,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./eigenmodes.html" rel="next">
-<link href="./bifurcation_equations.html" rel="prev">
+<link href="./bifurcation_equations-simplified.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -134,7 +134,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -174,22 +174,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
+  <a href="./identities.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Some useful identities</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
+  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./energy.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></a>
+  <a href="./bifurcation_equations-simplified.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
+  <a href="./energy.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -206,7 +211,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#asymptotic-expansion-of-the-hessian-of-the-energy" id="toc-asymptotic-expansion-of-the-hessian-of-the-energy" class="nav-link active" data-scroll-target="#asymptotic-expansion-of-the-hessian-of-the-energy"><span class="toc-section-number">6.1</span>  Asymptotic expansion of the hessian of the energy</a></li>
+  <li><a href="#asymptotic-expansion-of-the-hessian-of-the-energy" id="toc-asymptotic-expansion-of-the-hessian-of-the-energy" class="nav-link active" data-scroll-target="#asymptotic-expansion-of-the-hessian-of-the-energy"><span class="toc-section-number">7.1</span>  Asymptotic expansion of the hessian of the energy</a></li>
   </ul>
 </nav>
     </div>
@@ -215,7 +220,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-20230523130742" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span></h1>
+<h1 class="title"><span id="sec-20230523130742" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy</span></span></h1>
 </div>
 
 
@@ -231,33 +236,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <p>This notebook uses <span class="math inline">\(\LaTeX\newcommand{\D}{\mathrm{d}}\newcommand{\E}{\mathcal{E}}\newcommand{\order}[2][1]{#2^{(#1)}}\newcommand{\reals}{\mathbb{R}}\)</span> custom macros.</p>
-<p>In this chapter, we derive the asymptotic expansion (<a href="main_results.html#eq-20230528190539"><span>3.5</span></a>) of the energy along the bifurcated branch. More precisely, the following quantity is expanded at the critical point</p>
+<p>In this chapter, we derive the asymptotic expansion (<a href="main_results.html#eq-20230528190539"><span>3.1</span></a>) of the energy along the bifurcated branch. More precisely, the following quantity is expanded at the critical point</p>
 <p><span class="math display">\[
 \Delta\E(\eta) = \E[u(\eta), \lambda(\eta)] - \E[u^\ast \circ \lambda(\eta), \lambda(\eta)],
 \]</span></p>
 <p>where <span class="math inline">\(\eta\)</span> is an arbitrary parametrization of the bifurcated branch (<span class="math inline">\(\eta = 0\)</span> at the critical point).</p>
-<p>The asymptotic expansion of the energy results from plugging the asymptotic expansions (<a href="main_results.html#eq-20230528174310"><span>3.1</span></a>) and (<a href="main_results.html#eq-20230411141319"><span>3.2</span></a>) of <span class="math inline">\(\lambda(\eta)\)</span> and <span class="math inline">\(u(\eta)\)</span> into the general expression of the energy that was derived in <a href="setting-up_the_computational_stage.html"><span>Chapter&nbsp;4</span></a>.</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> lsk</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"setting-up_the_computational_stage.out.json"</span>, <span class="st">"r"</span>) <span class="im">as</span> f:</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> json.load(f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The asymptotic expansion of the energy results from plugging the asymptotic expansions (<a href="bifurcation_equations-simplified.html#eq-20230528174310"><span>6.1</span></a>) and (<a href="bifurcation_equations-simplified.html#eq-20230411141319"><span>6.2</span></a>) of <span class="math inline">\(\lambda(\eta)\)</span> and <span class="math inline">\(u(\eta)\)</span> into the general expression of the energy that was derived in <a href="setting-up_the_computational_stage.html"><span>Chapter&nbsp;5</span></a>.</p>
+<div class="cell" data-tags="[]" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lsk <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We first define the asymptotic expansion of <span class="math inline">\(\lambda\)</span> w.r.t. the (unspecified) parameter <span class="math inline">\(\eta\)</span>.</p>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>η, λ<span class="dv">1</span>, λ<span class="dv">2</span>, λ<span class="dv">3</span>, λ<span class="dv">4</span> <span class="op">=</span> symbols(<span class="vs">r"\eta {\order[1]{\lambda</span><span class="sc">}}</span><span class="vs"> {\order[2]{\lambda</span><span class="sc">}}</span><span class="vs"> {\order[3]{\lambda</span><span class="sc">}}</span><span class="vs"> {\order[4]{\lambda</span><span class="sc">}}</span><span class="vs">"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>λ <span class="op">=</span> λ<span class="dv">1</span> <span class="op">*</span> η <span class="op">+</span> λ<span class="dv">2</span> <span class="op">*</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">+</span> λ<span class="dv">3</span> <span class="op">*</span> η<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> <span class="dv">6</span> <span class="op">+</span> λ<span class="dv">4</span> <span class="op">*</span> η<span class="op">**</span><span class="dv">4</span> <span class="op">/</span> <span class="dv">24</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-tags="[]" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_λ():</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> λ<span class="dv">1</span> <span class="op">*</span> η <span class="op">+</span> λ<span class="dv">2</span> <span class="op">*</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">+</span> λ<span class="dv">3</span> <span class="op">*</span> η<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> <span class="dv">6</span> <span class="op">+</span> λ<span class="dv">4</span> <span class="op">*</span> η<span class="op">**</span><span class="dv">4</span> <span class="op">/</span> <span class="dv">24</span> <span class="op">+</span> O(η<span class="op">**</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="3">
+<div class="cell" data-tags="[]" data-execution_count="3">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\lambda(\eta)"</span>, λ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>display_latex_equation(<span class="vs">r"\lambda(\eta)"</span>, create_λ())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \lambda(\eta)=\frac{\eta^{4} {\order[4]{\lambda}}}{24} + \frac{\eta^{3} {\order[3]{\lambda}}}{6} + \frac{\eta^{2} {\order[2]{\lambda}}}{2} + \eta {\order[1]{\lambda}}\)</span></p>
+<p><span class="math inline">\(\displaystyle \lambda(\eta)=\eta {\order[1]{\lambda}} + \frac{\eta^{2} {\order[2]{\lambda}}}{2} + \frac{\eta^{3} {\order[3]{\lambda}}}{6} + \frac{\eta^{4} {\order[4]{\lambda}}}{24} + O\left(\eta^{5}\right)\)</span></p>
 </div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
@@ -274,208 +274,121 @@ Note
 <p>For the sake of consistency, expansions of <span class="math inline">\(\lambda\)</span>, <span class="math inline">\(u^\ast\)</span> and <span class="math inline">\(u\)</span> will be postulated up to fourth-order: it will be finally checked that the fourth-order expansion of <span class="math inline">\(\Delta\E\)</span> refers only to: <span class="math inline">\(\order[1]{\lambda}\)</span>, <span class="math inline">\(\order[2]{\lambda}\)</span>, <span class="math inline">\(w_{i\lambda}\)</span> and <span class="math inline">\(w_{ij}\)</span> (which are all known quantities).</p>
 </div>
 </div>
-<p>The fundamental branch <span class="math inline">\(u^\ast(\lambda)\)</span> was previously defined as an asymptotic expansion w.r.t. <span class="math inline">\(\lambda\)</span>.</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>u_star_of_λ <span class="op">=</span> <span class="bu">eval</span>(data[<span class="st">"u_star"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The fundamental branch <span class="math inline">\(u^\ast(\lambda)\)</span> was previously defined as an asymptotic expansion w.r.t. <span class="math inline">\(\lambda\)</span>. We can now define it as a function of <span class="math inline">\(\eta\)</span>, keeping only fourth-order terms.</p>
+<div class="cell" data-tags="[]" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_u_star_2():</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> create_u_star(λ_fun<span class="op">=</span>create_λ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="5">
+<div class="cell" data-tags="[]" data-execution_count="20">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"u^\ast(\lambda)"</span>, u_star_of_λ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>display_latex_equation(<span class="vs">r"u^\ast(\eta)"</span>, create_u_star_2().expand())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle u^\ast(\lambda)=\frac{\ddddot{u}_0 \lambda^{4}}{24} + \frac{\dddot{u}_0 \lambda^{3}}{6} + \frac{\ddot{u}_0 \lambda^{2}}{2} + \dot{u}_0 \lambda\)</span></p>
+<p><span class="math inline">\(\displaystyle u^\ast(\eta)=\dot{u}_0 \eta {\order[1]{\lambda}} + \frac{\dot{u}_0 \eta^{2} {\order[2]{\lambda}}}{2} + \frac{\dot{u}_0 \eta^{3} {\order[3]{\lambda}}}{6} + \frac{\dot{u}_0 \eta^{4} {\order[4]{\lambda}}}{24} + \frac{\ddot{u}_0 \eta^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\ddot{u}_0 \eta^{3} {\order[1]{\lambda}} {\order[2]{\lambda}}}{2} + \frac{\ddot{u}_0 \eta^{4} {\order[2]{\lambda}}^{2}}{8} + \frac{\ddot{u}_0 \eta^{4} {\order[1]{\lambda}} {\order[3]{\lambda}}}{6} + \frac{\dddot{u}_0 \eta^{3} {\order[1]{\lambda}}^{3}}{6} + \frac{\dddot{u}_0 \eta^{4} {\order[1]{\lambda}}^{2} {\order[2]{\lambda}}}{4} + \frac{\ddddot{u}_0 \eta^{4} {\order[1]{\lambda}}^{4}}{24} + O\left(\eta^{5}\right)\)</span></p>
 </div>
 </div>
-<p>We now define the fundamental branch as an asymptotic expansion w.r.t. <span class="math inline">\(\eta\)</span>, keeping only fourth-order terms.</p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>u_star <span class="op">=</span> u_star_of_λ.subs(Symbol(<span class="st">"\lambda"</span>), λ <span class="op">+</span> O(η<span class="op">**</span><span class="dv">5</span>)).expand().removeO()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Similarly, we define the asymptotic expansion of <span class="math inline">\(u\)</span>, see Eqs. (<a href="bifurcation_equations-simplified.html#eq-20230528174310"><span>6.1</span></a>) and (<a href="bifurcation_equations-simplified.html#eq-20230411141319"><span>6.2</span></a>); note that the quantities <span class="math inline">\(\order[3]{\tilde{u}}\)</span> and <span class="math inline">\(\order[4]{\tilde{u}}\)</span> are unknown (and will in fact disappear from the derivation).</p>
+<div class="cell" data-tags="[]" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>u1 <span class="op">=</span> Symbol(<span class="vs">r"{\order[1]</span><span class="sc">{u}</span><span class="vs">}"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>u2_V <span class="op">=</span> Symbol(<span class="vs">r"{\order[2]</span><span class="sc">{u}</span><span class="vs">_V}"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>u2_W <span class="op">=</span> Symbol(<span class="vs">r"{\order[2]</span><span class="sc">{u}</span><span class="vs">_W}"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>u3 <span class="op">=</span> Symbol(<span class="vs">r"{\order[3]</span><span class="sc">{u}</span><span class="vs">}"</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>u4 <span class="op">=</span> Symbol(<span class="vs">r"{\order[4]</span><span class="sc">{u}</span><span class="vs">}"</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_u():</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (create_u_star_2() <span class="op">+</span> η <span class="op">*</span> u1 <span class="op">+</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> (u2_V <span class="op">+</span> u2_W) <span class="op">+</span> η<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> <span class="dv">6</span> <span class="op">*</span> u3 <span class="op">+</span> η<span class="op">**</span><span class="dv">4</span> <span class="op">/</span> <span class="dv">24</span> <span class="op">*</span> u4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="7">
+<div class="cell" data-tags="[]" data-execution_count="22">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"u^\ast(\eta)"</span>, u_star)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>display_latex_equation(<span class="vs">r"u(\eta)"</span>, create_u().expand())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle u^\ast(\eta)=\frac{\ddddot{u}_0 \eta^{4} {\order[1]{\lambda}}^{4}}{24} + \frac{\dddot{u}_0 \eta^{4} {\order[1]{\lambda}}^{2} {\order[2]{\lambda}}}{4} + \frac{\dddot{u}_0 \eta^{3} {\order[1]{\lambda}}^{3}}{6} + \frac{\ddot{u}_0 \eta^{4} {\order[1]{\lambda}} {\order[3]{\lambda}}}{6} + \frac{\ddot{u}_0 \eta^{4} {\order[2]{\lambda}}^{2}}{8} + \frac{\ddot{u}_0 \eta^{3} {\order[1]{\lambda}} {\order[2]{\lambda}}}{2} + \frac{\ddot{u}_0 \eta^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\dot{u}_0 \eta^{4} {\order[4]{\lambda}}}{24} + \frac{\dot{u}_0 \eta^{3} {\order[3]{\lambda}}}{6} + \frac{\dot{u}_0 \eta^{2} {\order[2]{\lambda}}}{2} + \dot{u}_0 \eta {\order[1]{\lambda}}\)</span></p>
+<p><span class="math inline">\(\displaystyle u(\eta)=\eta {\order[1]{u}} + \frac{\eta^{2} {\order[2]{u}_W}}{2} + \frac{\eta^{2} {\order[2]{u}_V}}{2} + \frac{\eta^{3} {\order[3]{u}}}{6} + \frac{\eta^{4} {\order[4]{u}}}{24} + \dot{u}_0 \eta {\order[1]{\lambda}} + \frac{\dot{u}_0 \eta^{2} {\order[2]{\lambda}}}{2} + \frac{\dot{u}_0 \eta^{3} {\order[3]{\lambda}}}{6} + \frac{\dot{u}_0 \eta^{4} {\order[4]{\lambda}}}{24} + \frac{\ddot{u}_0 \eta^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\ddot{u}_0 \eta^{3} {\order[1]{\lambda}} {\order[2]{\lambda}}}{2} + \frac{\ddot{u}_0 \eta^{4} {\order[2]{\lambda}}^{2}}{8} + \frac{\ddot{u}_0 \eta^{4} {\order[1]{\lambda}} {\order[3]{\lambda}}}{6} + \frac{\dddot{u}_0 \eta^{3} {\order[1]{\lambda}}^{3}}{6} + \frac{\dddot{u}_0 \eta^{4} {\order[1]{\lambda}}^{2} {\order[2]{\lambda}}}{4} + \frac{\ddddot{u}_0 \eta^{4} {\order[1]{\lambda}}^{4}}{24} + O\left(\eta^{5}\right)\)</span></p>
 </div>
 </div>
-<p>Similarly, we define the asymptotic expansion of <span class="math inline">\(u\)</span>, see Eqs. (<a href="main_results.html#eq-20230528174310"><span>3.1</span></a>) and (<a href="main_results.html#eq-20230411141319"><span>3.2</span></a>); note that the quantities <span class="math inline">\(\order[3]{\tilde{u}}\)</span> and <span class="math inline">\(\order[4]{\tilde{u}}\)</span> are unknown (and will in fact disappear from the derivation).</p>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> (u_star</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>     <span class="op">+</span> η <span class="op">*</span> Symbol(<span class="vs">r"\xi_i^{(1)}v_i"</span>) </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>     <span class="op">+</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> (Symbol(<span class="vs">r"\xi_j^{(2)}v_j"</span>)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> Symbol(<span class="vs">r"\xi_k^{(1)}\xi_l^{(1)}w_</span><span class="sc">{kl}</span><span class="vs">"</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> λ<span class="dv">1</span> <span class="op">*</span> Symbol(<span class="vs">r"\xi_m^{(1)}w_{m\lambda}"</span>))</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>     <span class="op">+</span> η<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> <span class="dv">6</span> <span class="op">*</span> Symbol(<span class="vs">r"{\order[3]{\tilde</span><span class="sc">{u}}}</span><span class="vs">"</span>)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>     <span class="op">+</span> η<span class="op">**</span><span class="dv">4</span> <span class="op">/</span> <span class="dv">24</span> <span class="op">*</span> Symbol(<span class="vs">r"{\order[4]{\tilde</span><span class="sc">{u}}}</span><span class="vs">"</span>)).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We then use these expansions to evaluate the energy along the <strong>fundamental</strong> and <strong>bifurcated</strong> branches, as well as the difference <span class="math inline">\(\Delta\E\)</span> of these two quantities. The resulting expressions are too long to be displayed. We first apply some elementary simplifications.</p>
+<div class="cell" data-tags="[]" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>E_fund <span class="op">=</span> create_E(λ_fun<span class="op">=</span>create_λ, u_fun<span class="op">=</span>create_u_star_2).expand()</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>E_bif <span class="op">=</span> create_E(λ_fun<span class="op">=</span>create_λ, u_fun<span class="op">=</span>create_u).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="9">
+<div class="cell" data-tags="[]" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ΔE <span class="op">=</span> expand(E_bif <span class="op">-</span> E_fund).subs({</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    E2 <span class="op">*</span> u1 : <span class="dv">0</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    E2 <span class="op">*</span> u2_V : <span class="dv">0</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> ΔE.coeff(η, <span class="dv">0</span>) <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> ΔE.coeff(η, <span class="dv">1</span>) <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> ΔE.coeff(η, <span class="dv">2</span>) <span class="op">==</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Require first bifurcation equation</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    E3 <span class="op">*</span> u1 <span class="op">*</span> u1 <span class="op">*</span> u1 : <span class="op">-</span><span class="dv">2</span> <span class="op">*</span> λ<span class="dv">1</span> <span class="op">*</span> E2_dot <span class="op">*</span> u1 <span class="op">*</span> u1,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    E3 <span class="op">*</span> u1 <span class="op">*</span> u1 <span class="op">*</span> u2_V : <span class="op">-</span><span class="dv">2</span> <span class="op">*</span> λ<span class="dv">1</span> <span class="op">*</span> E2_dot <span class="op">*</span> u1 <span class="op">*</span> u2_V,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Do not require bifurcation equations</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    E2 <span class="op">*</span> u2_W <span class="op">*</span> u2_W : ((E4 <span class="op">*</span> u1 <span class="op">*</span> u1 <span class="op">*</span> u1 <span class="op">*</span> u1</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>                         <span class="op">-</span> E_[i, j, k, l] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[i] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l]) <span class="op">/</span> <span class="dv">3</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>                        <span class="op">+</span> <span class="dv">4</span> <span class="op">*</span> λ<span class="dv">1</span> <span class="op">/</span> <span class="dv">3</span> <span class="op">*</span> (E3_dot <span class="op">*</span> u1 <span class="op">*</span> u1 <span class="op">*</span> u1</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>                                        <span class="op">-</span> E_dot_[i, j, k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[i] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k])</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>                        <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> λ<span class="dv">1</span><span class="op">**</span><span class="dv">2</span> <span class="op">*</span> (E2_ddot <span class="op">*</span> u1 <span class="op">*</span> u1</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>                                       <span class="op">-</span> E_ddot_[i, j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[i] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[j])),</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    E2_dot <span class="op">*</span> u1 <span class="op">*</span> u2_W : ((E_dot_[i, j, k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[i] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] </span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>                           <span class="op">-</span> E3_dot <span class="op">*</span> u1 <span class="op">*</span> u1 <span class="op">*</span> u1) <span class="op">/</span> <span class="dv">3</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>                          <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> (E_ddot_[i, j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[i] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[j]</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>                                  <span class="op">-</span> E2_ddot <span class="op">*</span> u1 <span class="op">*</span> u1)),</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    E3 <span class="op">*</span> u1 <span class="op">*</span> u1 <span class="op">*</span> u2_W  : ((E_[i, j, k, l] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[i] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l]</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>                             <span class="op">-</span> E4 <span class="op">*</span> u1 <span class="op">*</span> u1 <span class="op">*</span> u1 <span class="op">*</span> u1) <span class="op">/</span> <span class="dv">3</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>                            <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> λ<span class="dv">1</span> <span class="op">/</span> <span class="dv">3</span> <span class="op">*</span> (E_dot_[i, j, k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[i] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] </span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>                                            <span class="op">-</span> E3_dot <span class="op">*</span> u1 <span class="op">*</span> u1 <span class="op">*</span> u1)),</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="27">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"u(\eta)"</span>, u)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>display_latex_equation(<span class="vs">r"\Delta\E"</span>, ΔE.subs(d).expand())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle u(\eta)=\frac{\ddddot{u}_0 \eta^{4} {\order[1]{\lambda}}^{4}}{24} + \frac{\dddot{u}_0 \eta^{4} {\order[1]{\lambda}}^{2} {\order[2]{\lambda}}}{4} + \frac{\dddot{u}_0 \eta^{3} {\order[1]{\lambda}}^{3}}{6} + \frac{\ddot{u}_0 \eta^{4} {\order[1]{\lambda}} {\order[3]{\lambda}}}{6} + \frac{\ddot{u}_0 \eta^{4} {\order[2]{\lambda}}^{2}}{8} + \frac{\ddot{u}_0 \eta^{3} {\order[1]{\lambda}} {\order[2]{\lambda}}}{2} + \frac{\ddot{u}_0 \eta^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\dot{u}_0 \eta^{4} {\order[4]{\lambda}}}{24} + \frac{\dot{u}_0 \eta^{3} {\order[3]{\lambda}}}{6} + \frac{\dot{u}_0 \eta^{2} {\order[2]{\lambda}}}{2} + \dot{u}_0 \eta {\order[1]{\lambda}} + \frac{\eta^{4} {\order[4]{\tilde{u}}}}{24} + \frac{\eta^{3} {\order[3]{\tilde{u}}}}{6} + \frac{\eta^{2} \xi_j^{(2)}v_j}{2} + \frac{\eta^{2} \xi_k^{(1)}\xi_l^{(1)}w_{kl}}{2} + \eta^{2} \xi_m^{(1)}w_{m\lambda} {\order[1]{\lambda}} + \eta \xi_i^{(1)}v_i\)</span></p>
+<p><span class="math inline">\(\displaystyle \Delta\E=\frac{\eta^{4} {E}_{i,j,k,l} {{\order[1]{\xi}}}_{i} {{\order[1]{\xi}}}_{j} {{\order[1]{\xi}}}_{k} {{\order[1]{\xi}}}_{l}}{24} + \frac{\eta^{4} {\order[1]{\lambda}} {\dot{E}}_{i,j,k} {{\order[1]{\xi}}}_{i} {{\order[1]{\xi}}}_{j} {{\order[1]{\xi}}}_{k}}{6} + \frac{\eta^{4} {\order[1]{\lambda}}^{2} {\ddot{E}}_{i,j} {{\order[1]{\xi}}}_{i} {{\order[1]{\xi}}}_{j}}{4} + \frac{\dot{\E}_2 \eta^{3} {\order[1]{\lambda}} {\order[1]{u}}^{2}}{6} + \frac{\dot{\E}_2 \eta^{4} {\order[1]{u}}^{2} {\order[2]{\lambda}}}{4} + O\left(\eta^{5}\right)\)</span></p>
 </div>
 </div>
-<p>We then use these expansions to evaluate the energy along the fundamental and bifurcated branches. The general expression of the energy (see <a href="setting-up_the_computational_stage.html"><span>Chapter&nbsp;4</span></a>) is first retrieved</p>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>E_ <span class="op">=</span> <span class="bu">eval</span>(data[<span class="st">"E"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="11">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\E(u ,\lambda)"</span>, E_)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \E(u ,\lambda)=- \frac{\E_{2} \dddot{u}_0 \lambda^{3} u}{6} - \frac{\E_{2} \ddot{u}_0 \lambda^{2} u}{2} - \E_{2} \dot{u}_0 \lambda u + \frac{\E_{2} u^{2}}{2} + \frac{\E_{3} \ddot{u}_0 \dot{u}_0 \lambda^{3} u}{2} - \frac{\E_{3} \ddot{u}_0 \lambda^{2} u^{2}}{4} + \frac{\E_{3} \dot{u}_0^{2} \lambda^{2} u}{2} - \frac{\E_{3} \dot{u}_0 \lambda u^{2}}{2} + \frac{\E_{3} u^{3}}{6} - \frac{\E_{4} \dot{u}_0^{3} \lambda^{3} u}{6} + \frac{\E_{4} \dot{u}_0^{2} \lambda^{2} u^{2}}{4} - \frac{\E_{4} \dot{u}_0 \lambda u^{3}}{6} + \frac{\E_{4} u^{4}}{24} + \frac{\E_{\lambda\lambda\lambda\lambda} \lambda^{4}}{24} + \frac{\E_{\lambda\lambda\lambda} \lambda^{3}}{6} + \frac{\E_{\lambda\lambda} \lambda^{2}}{2} + \E_{\lambda} \lambda - \frac{\ddot{\E}_2 \dot{u}_0 \lambda^{3} u}{2} + \frac{\ddot{\E}_2 \lambda^{2} u^{2}}{4} - \frac{\ddot{u}_0 \dot{\E}_2 \lambda^{3} u}{2} - \dot{\E}_2 \dot{u}_0 \lambda^{2} u + \frac{\dot{\E}_2 \lambda u^{2}}{2} + \frac{\dot{\E}_3 \dot{u}_0^{2} \lambda^{3} u}{2} - \frac{\dot{\E}_3 \dot{u}_0 \lambda^{2} u^{2}}{2} + \frac{\dot{\E}_3 \lambda u^{3}}{6}\)</span></p>
-</div>
-</div>
-<p>The energy is evaluated along the <strong>fundamental</strong> branch</p>
-<div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>E_star <span class="op">=</span> (E_.subs({Symbol(<span class="st">"\lambda"</span>): λ,</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>                   Symbol(<span class="st">"u"</span>): u_star}).expand() <span class="op">+</span> O(η<span class="op">**</span><span class="dv">5</span>)).removeO()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="13">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\E[u^\ast \circ \lambda(\eta), \lambda(\eta)]"</span>, E_star)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \E[u^\ast \circ \lambda(\eta), \lambda(\eta)]=- \frac{\E_{2} \dddot{u}_0 \dot{u}_0 \eta^{4} {\order[1]{\lambda}}^{4}}{6} - \frac{\E_{2} \ddot{u}_0^{2} \eta^{4} {\order[1]{\lambda}}^{4}}{8} - \frac{3 \E_{2} \ddot{u}_0 \dot{u}_0 \eta^{4} {\order[1]{\lambda}}^{2} {\order[2]{\lambda}}}{4} - \frac{\E_{2} \ddot{u}_0 \dot{u}_0 \eta^{3} {\order[1]{\lambda}}^{3}}{2} - \frac{\E_{2} \dot{u}_0^{2} \eta^{4} {\order[1]{\lambda}} {\order[3]{\lambda}}}{6} - \frac{\E_{2} \dot{u}_0^{2} \eta^{4} {\order[2]{\lambda}}^{2}}{8} - \frac{\E_{2} \dot{u}_0^{2} \eta^{3} {\order[1]{\lambda}} {\order[2]{\lambda}}}{2} - \frac{\E_{2} \dot{u}_0^{2} \eta^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\E_{3} \ddot{u}_0 \dot{u}_0^{2} \eta^{4} {\order[1]{\lambda}}^{4}}{4} + \frac{\E_{3} \dot{u}_0^{3} \eta^{4} {\order[1]{\lambda}}^{2} {\order[2]{\lambda}}}{4} + \frac{\E_{3} \dot{u}_0^{3} \eta^{3} {\order[1]{\lambda}}^{3}}{6} - \frac{\E_{4} \dot{u}_0^{4} \eta^{4} {\order[1]{\lambda}}^{4}}{24} + \frac{\E_{\lambda\lambda\lambda\lambda} \eta^{4} {\order[1]{\lambda}}^{4}}{24} + \frac{\E_{\lambda\lambda\lambda} \eta^{4} {\order[1]{\lambda}}^{2} {\order[2]{\lambda}}}{4} + \frac{\E_{\lambda\lambda\lambda} \eta^{3} {\order[1]{\lambda}}^{3}}{6} + \frac{\E_{\lambda\lambda} \eta^{4} {\order[1]{\lambda}} {\order[3]{\lambda}}}{6} + \frac{\E_{\lambda\lambda} \eta^{4} {\order[2]{\lambda}}^{2}}{8} + \frac{\E_{\lambda\lambda} \eta^{3} {\order[1]{\lambda}} {\order[2]{\lambda}}}{2} + \frac{\E_{\lambda\lambda} \eta^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\E_{\lambda} \eta^{4} {\order[4]{\lambda}}}{24} + \frac{\E_{\lambda} \eta^{3} {\order[3]{\lambda}}}{6} + \frac{\E_{\lambda} \eta^{2} {\order[2]{\lambda}}}{2} + \E_{\lambda} \eta {\order[1]{\lambda}} - \frac{\ddot{\E}_2 \dot{u}_0^{2} \eta^{4} {\order[1]{\lambda}}^{4}}{4} - \frac{\ddot{u}_0 \dot{\E}_2 \dot{u}_0 \eta^{4} {\order[1]{\lambda}}^{4}}{2} - \frac{3 \dot{\E}_2 \dot{u}_0^{2} \eta^{4} {\order[1]{\lambda}}^{2} {\order[2]{\lambda}}}{4} - \frac{\dot{\E}_2 \dot{u}_0^{2} \eta^{3} {\order[1]{\lambda}}^{3}}{2} + \frac{\dot{\E}_3 \dot{u}_0^{3} \eta^{4} {\order[1]{\lambda}}^{4}}{6}\)</span></p>
-</div>
-</div>
-<p>Similarly, the energy is evaluated along the <strong>bifurcated</strong> branch</p>
-<div class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> (E_.subs({Symbol(<span class="st">"\lambda"</span>): λ,</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>              Symbol(<span class="st">"u"</span>): u}).expand() <span class="op">+</span> O(η<span class="op">**</span><span class="dv">5</span>)).removeO()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="15">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\E[u(\eta), \lambda(\eta)]"</span>, E)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \E[u(\eta), \lambda(\eta)]=- \frac{\E_{2} \dddot{u}_0 \dot{u}_0 \eta^{4} {\order[1]{\lambda}}^{4}}{6} - \frac{\E_{2} \ddot{u}_0^{2} \eta^{4} {\order[1]{\lambda}}^{4}}{8} - \frac{3 \E_{2} \ddot{u}_0 \dot{u}_0 \eta^{4} {\order[1]{\lambda}}^{2} {\order[2]{\lambda}}}{4} - \frac{\E_{2} \ddot{u}_0 \dot{u}_0 \eta^{3} {\order[1]{\lambda}}^{3}}{2} - \frac{\E_{2} \dot{u}_0^{2} \eta^{4} {\order[1]{\lambda}} {\order[3]{\lambda}}}{6} - \frac{\E_{2} \dot{u}_0^{2} \eta^{4} {\order[2]{\lambda}}^{2}}{8} - \frac{\E_{2} \dot{u}_0^{2} \eta^{3} {\order[1]{\lambda}} {\order[2]{\lambda}}}{2} - \frac{\E_{2} \dot{u}_0^{2} \eta^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\E_{2} \eta^{4} \xi_i^{(1)}v_i {\order[3]{\tilde{u}}}}{6} + \frac{\E_{2} \eta^{4} \left(\xi_j^{(2)}v_j\right)^{2}}{8} + \frac{\E_{2} \eta^{4} \xi_j^{(2)}v_j \xi_k^{(1)}\xi_l^{(1)}w_{kl}}{4} + \frac{\E_{2} \eta^{4} \xi_j^{(2)}v_j \xi_m^{(1)}w_{m\lambda} {\order[1]{\lambda}}}{2} + \frac{\E_{2} \eta^{4} \left(\xi_k^{(1)}\xi_l^{(1)}w_{kl}\right)^{2}}{8} + \frac{\E_{2} \eta^{4} \xi_k^{(1)}\xi_l^{(1)}w_{kl} \xi_m^{(1)}w_{m\lambda} {\order[1]{\lambda}}}{2} + \frac{\E_{2} \eta^{4} \left(\xi_m^{(1)}w_{m\lambda}\right)^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\E_{2} \eta^{3} \xi_i^{(1)}v_i \xi_j^{(2)}v_j}{2} + \frac{\E_{2} \eta^{3} \xi_i^{(1)}v_i \xi_k^{(1)}\xi_l^{(1)}w_{kl}}{2} + \E_{2} \eta^{3} \xi_i^{(1)}v_i \xi_m^{(1)}w_{m\lambda} {\order[1]{\lambda}} + \frac{\E_{2} \eta^{2} \left(\xi_i^{(1)}v_i\right)^{2}}{2} + \frac{\E_{3} \ddot{u}_0 \dot{u}_0^{2} \eta^{4} {\order[1]{\lambda}}^{4}}{4} + \frac{\E_{3} \dot{u}_0^{3} \eta^{4} {\order[1]{\lambda}}^{2} {\order[2]{\lambda}}}{4} + \frac{\E_{3} \dot{u}_0^{3} \eta^{3} {\order[1]{\lambda}}^{3}}{6} + \frac{\E_{3} \eta^{4} \left(\xi_i^{(1)}v_i\right)^{2} \xi_j^{(2)}v_j}{4} + \frac{\E_{3} \eta^{4} \left(\xi_i^{(1)}v_i\right)^{2} \xi_k^{(1)}\xi_l^{(1)}w_{kl}}{4} + \frac{\E_{3} \eta^{4} \left(\xi_i^{(1)}v_i\right)^{2} \xi_m^{(1)}w_{m\lambda} {\order[1]{\lambda}}}{2} + \frac{\E_{3} \eta^{3} \left(\xi_i^{(1)}v_i\right)^{3}}{6} - \frac{\E_{4} \dot{u}_0^{4} \eta^{4} {\order[1]{\lambda}}^{4}}{24} + \frac{\E_{4} \eta^{4} \left(\xi_i^{(1)}v_i\right)^{4}}{24} + \frac{\E_{\lambda\lambda\lambda\lambda} \eta^{4} {\order[1]{\lambda}}^{4}}{24} + \frac{\E_{\lambda\lambda\lambda} \eta^{4} {\order[1]{\lambda}}^{2} {\order[2]{\lambda}}}{4} + \frac{\E_{\lambda\lambda\lambda} \eta^{3} {\order[1]{\lambda}}^{3}}{6} + \frac{\E_{\lambda\lambda} \eta^{4} {\order[1]{\lambda}} {\order[3]{\lambda}}}{6} + \frac{\E_{\lambda\lambda} \eta^{4} {\order[2]{\lambda}}^{2}}{8} + \frac{\E_{\lambda\lambda} \eta^{3} {\order[1]{\lambda}} {\order[2]{\lambda}}}{2} + \frac{\E_{\lambda\lambda} \eta^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\E_{\lambda} \eta^{4} {\order[4]{\lambda}}}{24} + \frac{\E_{\lambda} \eta^{3} {\order[3]{\lambda}}}{6} + \frac{\E_{\lambda} \eta^{2} {\order[2]{\lambda}}}{2} + \E_{\lambda} \eta {\order[1]{\lambda}} - \frac{\ddot{\E}_2 \dot{u}_0^{2} \eta^{4} {\order[1]{\lambda}}^{4}}{4} + \frac{\ddot{\E}_2 \eta^{4} \left(\xi_i^{(1)}v_i\right)^{2} {\order[1]{\lambda}}^{2}}{4} - \frac{\ddot{u}_0 \dot{\E}_2 \dot{u}_0 \eta^{4} {\order[1]{\lambda}}^{4}}{2} - \frac{3 \dot{\E}_2 \dot{u}_0^{2} \eta^{4} {\order[1]{\lambda}}^{2} {\order[2]{\lambda}}}{4} - \frac{\dot{\E}_2 \dot{u}_0^{2} \eta^{3} {\order[1]{\lambda}}^{3}}{2} + \frac{\dot{\E}_2 \eta^{4} \left(\xi_i^{(1)}v_i\right)^{2} {\order[2]{\lambda}}}{4} + \frac{\dot{\E}_2 \eta^{4} \xi_i^{(1)}v_i \xi_j^{(2)}v_j {\order[1]{\lambda}}}{2} + \frac{\dot{\E}_2 \eta^{4} \xi_i^{(1)}v_i \xi_k^{(1)}\xi_l^{(1)}w_{kl} {\order[1]{\lambda}}}{2} + \dot{\E}_2 \eta^{4} \xi_i^{(1)}v_i \xi_m^{(1)}w_{m\lambda} {\order[1]{\lambda}}^{2} + \frac{\dot{\E}_2 \eta^{3} \left(\xi_i^{(1)}v_i\right)^{2} {\order[1]{\lambda}}}{2} + \frac{\dot{\E}_3 \dot{u}_0^{3} \eta^{4} {\order[1]{\lambda}}^{4}}{6} + \frac{\dot{\E}_3 \eta^{4} \left(\xi_i^{(1)}v_i\right)^{3} {\order[1]{\lambda}}}{6}\)</span></p>
-</div>
-</div>
-<p>The difference is now evaluated.</p>
-<div class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>ΔE <span class="op">=</span> E <span class="op">-</span> E_star</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The terms of order 0 and 1 in <span class="math inline">\(\eta\)</span> are identically null:</p>
-<div class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> ΔE.coeff(η, <span class="dv">0</span>) <span class="op">==</span> <span class="dv">0</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> ΔE.coeff(η, <span class="dv">1</span>) <span class="op">==</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The second-order term reads</p>
-<div class="cell" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>ΔE2 <span class="op">=</span> ΔE.coeff(η, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="19">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\order[2]{\Delta\E}"</span>, ΔE2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \order[2]{\Delta\E}=\frac{\E_{2} \left(\xi_i^{(1)}v_i\right)^{2}}{2}\)</span></p>
-</div>
-</div>
-<p>The above expression should be understood as <span class="math inline">\(\frac{1}{2} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \E_2(v_i, v_j)\)</span>, which vanishes since <span class="math inline">\(v_i\)</span> and <span class="math inline">\(v_j\)</span> belong to the kernel of <span class="math inline">\(\E_2\)</span>. We now turn to the third-order term</p>
-<div class="cell" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>ΔE3 <span class="op">=</span> ΔE.coeff(η, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="21">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\order[3]{\Delta\E}"</span>, ΔE3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \order[3]{\Delta\E}=\frac{\E_{2} \xi_i^{(1)}v_i \xi_j^{(2)}v_j}{2} + \frac{\E_{2} \xi_i^{(1)}v_i \xi_k^{(1)}\xi_l^{(1)}w_{kl}}{2} + \E_{2} \xi_i^{(1)}v_i \xi_m^{(1)}w_{m\lambda} {\order[1]{\lambda}} + \frac{\E_{3} \left(\xi_i^{(1)}v_i\right)^{3}}{6} + \frac{\dot{\E}_2 \left(\xi_i^{(1)}v_i\right)^{2} {\order[1]{\lambda}}}{2}\)</span></p>
-</div>
-</div>
-<p>Observing that <span class="math inline">\(\E_2(v_i, \bullet) = 0\)</span> and using Eqs. (<a href="setting-up_the_mathematical_stage.html#eq-20230125062505"><span>2.6</span></a>), (<a href="setting-up_the_mathematical_stage.html#eq-20230125062510"><span>2.8</span></a>) and (<a href="main_results.html#eq-20230125062336"><span>3.3</span></a>), the above expression reduces to</p>
-<p><span class="math display">\[
-\begin{aligned}[b]
-\order[3]{\Delta\E}
-&amp;= \tfrac{1}{6} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \E_3(v_i, v_j, v_k) + \tfrac{1}{2} \, \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{\E}_2(v_i, v_j)\\
-&amp;= \tfrac{1}{6} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, E_{ijk} + \tfrac{1}{2} \, \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{E}_{ij}\\
-&amp;= \tfrac{1}{6} \, \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{E}_{ij}.
-\end{aligned}
-\]</span></p>
-<p>Finally, the fourth-order term is simplified.</p>
-<div class="cell" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>ΔE4 <span class="op">=</span> ΔE.coeff(η, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="23">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\order[4]{\Delta\E}"</span>, ΔE4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \order[4]{\Delta\E}=\frac{\E_{2} \xi_i^{(1)}v_i {\order[3]{\tilde{u}}}}{6} + \frac{\E_{2} \left(\xi_j^{(2)}v_j\right)^{2}}{8} + \frac{\E_{2} \xi_j^{(2)}v_j \xi_k^{(1)}\xi_l^{(1)}w_{kl}}{4} + \frac{\E_{2} \xi_j^{(2)}v_j \xi_m^{(1)}w_{m\lambda} {\order[1]{\lambda}}}{2} + \frac{\E_{2} \left(\xi_k^{(1)}\xi_l^{(1)}w_{kl}\right)^{2}}{8} + \frac{\E_{2} \xi_k^{(1)}\xi_l^{(1)}w_{kl} \xi_m^{(1)}w_{m\lambda} {\order[1]{\lambda}}}{2} + \frac{\E_{2} \left(\xi_m^{(1)}w_{m\lambda}\right)^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\E_{3} \left(\xi_i^{(1)}v_i\right)^{2} \xi_j^{(2)}v_j}{4} + \frac{\E_{3} \left(\xi_i^{(1)}v_i\right)^{2} \xi_k^{(1)}\xi_l^{(1)}w_{kl}}{4} + \frac{\E_{3} \left(\xi_i^{(1)}v_i\right)^{2} \xi_m^{(1)}w_{m\lambda} {\order[1]{\lambda}}}{2} + \frac{\E_{4} \left(\xi_i^{(1)}v_i\right)^{4}}{24} + \frac{\ddot{\E}_2 \left(\xi_i^{(1)}v_i\right)^{2} {\order[1]{\lambda}}^{2}}{4} + \frac{\dot{\E}_2 \left(\xi_i^{(1)}v_i\right)^{2} {\order[2]{\lambda}}}{4} + \frac{\dot{\E}_2 \xi_i^{(1)}v_i \xi_j^{(2)}v_j {\order[1]{\lambda}}}{2} + \frac{\dot{\E}_2 \xi_i^{(1)}v_i \xi_k^{(1)}\xi_l^{(1)}w_{kl} {\order[1]{\lambda}}}{2} + \dot{\E}_2 \xi_i^{(1)}v_i \xi_m^{(1)}w_{m\lambda} {\order[1]{\lambda}}^{2} + \frac{\dot{\E}_3 \left(\xi_i^{(1)}v_i\right)^{3} {\order[1]{\lambda}}}{6}\)</span></p>
-</div>
-</div>
-<p>Upon simplification of <span class="math inline">\(\E_2(v_i, \bullet) = 0\)</span>, the above expression should be understood as follows</p>
-<p><span class="math display">\[
-\begin{aligned}[b]
-\order[4]{\Delta\E} ={}&amp; \tfrac{1}{8} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \E_2(w_{ij}, w_{kl})
-+ \tfrac{1}{2} \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k  \, \E_2(w_{ij}, w_{k\lambda})\\
-&amp;+ \tfrac{1}{2} \bigl( \order[1]{\lambda} \bigr)^2 \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \E_2(w_{i\lambda}, w_{j\lambda})
-+ \tfrac{1}{4} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[2]{\xi}_k \, \E_3(v_i, v_j, v_k)\\
-&amp;+ \tfrac{1}{4} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \E_3(v_i, v_j, w_{kl})
-+ \tfrac{1}{2} \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k  \, \E_3(v_i, v_j, w_{k\lambda})\\
-&amp;+ \tfrac{1}{24} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \E_4(v_i, v_j, v_k, v_l)
-+ \tfrac{1}{4} \bigl( \order[1]{\lambda} \bigr)^2 \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \ddot{\E}_2(v_i, v_j)\\
-&amp;+ \tfrac{1}{4} \order[2]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{\E}_2(v_i, v_j)
-+ \tfrac{1}{2} \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[2]{\xi}_j \, \dot{\E}_2(v_i, v_j)\\
-&amp;+ \tfrac{1}{2} \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k  \, \dot{E}_2(v_i, w_{jk})
-+ \bigl( \order[1]{\lambda} \bigr)^2 \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{\E}_2(v_i, w_{j\lambda})\\
-&amp;+ \tfrac{1}{6} \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \dot{\E}_3(v_i, v_j, v_k),
-\end{aligned}
-\]</span></p>
-<p>and, upon reordering</p>
-<p><span class="math display">\[
-\begin{aligned}
-\order[4]{\Delta\E} ={} &amp; \tfrac{1}{24} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \bigl\{ \E_4(v_i, v_j, v_k, v_l) + 3\E_3(v_i, v_j, w_{kl}) + 3\bigl[\E_2(w_{ij}, w_{kl}) + \E_3(v_i, v_j, w_{kl}) \bigr] \bigr\}\\
-&amp;+ \tfrac{1}{6} \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k  \, \bigl\{ \dot{\E}_3(v_i, v_j, v_k) + 3\dot{\E}_2(v_i, w_{jk}) + 3 \bigl[ \E_2(w_{ij}, w_{k\lambda}) + \E_3(v_i, v_j, w_{k\lambda}) \bigr] \bigr\}\\
-&amp;+ \tfrac{1}{4} \bigl( \order[1]{\lambda} \bigr)^2 \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \bigl\{ \ddot{\E}_2(v_i, v_j) + 2\dot{\E}_2(v_i, w_{j\lambda}) + 2\bigl[ \E_2(w_{i\lambda}, w_{j\lambda}) + \dot{\E}_2(v_i, w_{j\lambda}) \bigr] \bigr\}\\
-&amp;+ \tfrac{1}{4} \order[1]{\xi}_i \, \order[2]{\xi}_j \, \bigl[ \E_3(v_i, v_j, v_k) \, \order[1]{\xi}_k + 2\order[1]{\lambda} \, \dot{\E}_2(v_i, v_j) \bigl]\\
-&amp;+ \tfrac{1}{4} \order[2]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{\E}_2(v_i, v_j).
-\end{aligned}
-\]</span></p>
-<p>Testing Eq. (<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.4</span></a>) with <span class="math inline">\(w_{kl}\)</span> and <span class="math inline">\(w_{k\lambda}\)</span>, successively and Eq. (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.5</span></a>) with <span class="math inline">\(w_{j\lambda}\)</span> and further using the first bifurcation equation (<a href="main_results.html#eq-20230125062336"><span>3.3</span></a>)</p>
-<p><span class="math display">\[
-\begin{aligned}
-\order[4]{\Delta\E} ={} &amp; \tfrac{1}{24} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \bigl[ \E_4(v_i, v_j, v_k, v_l) + 3\E_3(v_i, v_j, w_{kl}) \bigr]\\
-&amp;+ \tfrac{1}{6} \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k  \, \bigl[ \dot{\E}_3(v_i, v_j, v_k) + 3\dot{\E}_2(v_i, w_{jk}) \bigr]\\
-&amp;+ \tfrac{1}{4} \bigl( \order[1]{\lambda} \bigr)^2 \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \bigl[\ddot{\E}_2(v_i, v_j) + 2\dot{\E}_2(v_i, w_{j\lambda}) \bigr]\\
-&amp;+ \tfrac{1}{4} \order[2]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{\E}_2(v_i, v_j).
-\end{aligned}
-\]</span></p>
-<p>Now, recognizing the definitions (<a href="setting-up_the_mathematical_stage.html#eq-20230125062505"><span>2.6</span></a>), (<a href="setting-up_the_mathematical_stage.html#eq-20230124211207"><span>2.7</span></a>), (<a href="setting-up_the_mathematical_stage.html#eq-20230124210649"><span>2.9</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230124210049"><span>2.10</span></a>) finally delivers</p>
+<p>wich can be reordered as follows <span class="math display">\[
+\Delta\E = \tfrac{1}{6} \eta^3 \, \Delta\order[3]{\E} + \tfrac{1}{24} \eta^4 \, \Delta\order[4]{\E},
+\]</span> with <span class="math display">\[
+\Delta\order[3]{\E}
+= \order[1]{\lambda} \, \dot{\E}_2(\order[1]{u}, \order[1]{u})
+= \order[1]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j
+\]</span> and</p>
 <p><span id="eq-20230402101651"><span class="math display">\[
 \begin{aligned}[b]
-\order[4]{\Delta\E} ={} &amp; \tfrac{1}{24} \bigl\{ E_{ijkl} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l + 4\order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k\\
-&amp;+ 6 \bigl[ \bigl( \order[1]{\lambda} \bigr)^2 \, \ddot{E}_{ij} + \order[2]{\lambda} \, \dot{E}_{ij} \bigr] \, \order[1]{\xi}_i \, \order[1]{\xi}_j \bigr\}.
+\order[4]{\Delta\E} ={} &amp; E_{ijkl} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l + 4\order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k\\
+&amp;+ 6 \bigl[ \bigl( \order[1]{\lambda} \bigr)^2 \, \ddot{E}_{ij} + \order[2]{\lambda} \, \dot{E}_{ij} \bigr] \, \order[1]{\xi}_i \, \order[1]{\xi}_j.
 \end{aligned}
-\tag{6.1}\]</span></span></p>
-<p>and the asymptotic expansion (<a href="main_results.html#eq-20230528190539"><span>3.5</span></a>) is retrieved.</p>
-<section id="asymptotic-expansion-of-the-hessian-of-the-energy" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="asymptotic-expansion-of-the-hessian-of-the-energy"><span class="header-section-number">6.1</span> Asymptotic expansion of the hessian of the energy</h2>
+\tag{7.1}\]</span></span></p>
+<p>and the asymptotic expansion (<a href="main_results.html#eq-20230528190539"><span>3.1</span></a>) is retrieved.</p>
+<section id="asymptotic-expansion-of-the-hessian-of-the-energy" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="asymptotic-expansion-of-the-hessian-of-the-energy"><span class="header-section-number">7.1</span> Asymptotic expansion of the hessian of the energy</h2>
 <p>We use the same code to derive an asymptotic expansion of the hessian <span class="math inline">\(\E_{,uu}\)</span> of the energy along the bifurcated branch.</p>
-<div class="cell" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>E_uu <span class="op">=</span> (<span class="bu">eval</span>(data[<span class="st">"E_uu"</span>]).subs({Symbol(<span class="st">"\lambda"</span>): λ, Symbol(<span class="st">"u"</span>): u})  <span class="op">+</span> O(η<span class="op">**</span><span class="dv">3</span>)).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-tags="[]" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>E_uu <span class="op">=</span> create_E_uu(λ_fun<span class="op">=</span>create_λ, u_fun<span class="op">=</span>create_u).expand() <span class="op">+</span> O(η<span class="op">**</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="25">
+<div class="cell" data-tags="[]" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>E_uu.subs(d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="32">
+<p><span class="math inline">\(\displaystyle \dot{\E}_3 \eta^{2} {\order[1]{\lambda}} {\order[1]{u}} + \dot{\E}_2 \eta {\order[1]{\lambda}} + \frac{\dot{\E}_2 \eta^{2} {\order[2]{\lambda}}}{2} + \frac{\ddot{\E}_2 \eta^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\E_{4} \eta^{2} {\order[1]{u}}^{2}}{2} + \E_{3} \eta {\order[1]{u}} + \frac{\E_{3} \eta^{2} {\order[2]{u}_W}}{2} + \frac{\E_{3} \eta^{2} {\order[2]{u}_V}}{2} + \E_{2} + O\left(\eta^{3}\right)\)</span></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>E_uu <span class="op">=</span> (<span class="bu">eval</span>(data[<span class="st">"E_uu"</span>]).subs({Symbol(<span class="st">"\lambda"</span>): λ, Symbol(<span class="st">"u"</span>): u})  <span class="op">+</span> O(η<span class="op">**</span><span class="dv">3</span>)).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\E_{,uu}[u(\eta), \lambda(\eta)]"</span>, E_uu)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\E_{,uu}[u(\eta), \lambda(\eta)]"</span>, E_uu)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \E_{,uu}[u(\eta), \lambda(\eta)]=\dot{\E}_3 \eta^{2} \xi_i^{(1)}v_i {\order[1]{\lambda}} + \dot{\E}_2 \eta {\order[1]{\lambda}} + \frac{\dot{\E}_2 \eta^{2} {\order[2]{\lambda}}}{2} + \frac{\ddot{\E}_2 \eta^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\E_{4} \eta^{2} \left(\xi_i^{(1)}v_i\right)^{2}}{2} + \E_{3} \eta \xi_i^{(1)}v_i + \E_{3} \eta^{2} \xi_m^{(1)}w_{m\lambda} {\order[1]{\lambda}} + \frac{\E_{3} \eta^{2} \xi_k^{(1)}\xi_l^{(1)}w_{kl}}{2} + \frac{\E_{3} \eta^{2} \xi_j^{(2)}v_j}{2} + \E_{2} + O\left(\eta^{3}\right)\)</span></p>
-</div>
 </div>
 <p>The above expression must be understood as follows</p>
 <p><span class="math display">\[
@@ -500,8 +413,8 @@ Note
 &amp;+ 2\order[1]{\lambda} \, \dot{\E}_3(\order[1]{u}, \bullet, \bullet)
 + (\order[1]{\lambda})^2 \, \ddot{\E}_2(\bullet, \bullet) + \order[2]{\lambda} \, \dot{\E}_2(\bullet, \bullet)\bigr],
 \end{aligned}
-\tag{6.2}\]</span></span></p>
-<p>where <span class="math inline">\(\order[1]{u}\)</span> and <span class="math inline">\(\order[2]{u}\)</span> are given by Eq. (<a href="main_results.html#eq-20230411141319"><span>3.2</span></a>).</p>
+\tag{7.2}\]</span></span></p>
+<p>where <span class="math inline">\(\order[1]{u}\)</span> and <span class="math inline">\(\order[2]{u}\)</span> are given by Eq. (<a href="bifurcation_equations-simplified.html#eq-20230411141319"><span>6.2</span></a>).</p>
 
 
 </section>
@@ -642,13 +555,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./bifurcation_equations.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span>
+      <a href="./bifurcation_equations-simplified.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./eigenmodes.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

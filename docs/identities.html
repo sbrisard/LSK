@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 3&nbsp; Perfect system: outline of the main results</title>
+<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 4&nbsp; Some useful identities</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./identities.html" rel="next">
-<link href="./setting-up_the_mathematical_stage.html" rel="prev">
+<link href="./setting-up_the_computational_stage.html" rel="next">
+<link href="./main_results.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Perfect system: outline of the main results</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Some useful identities</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -106,12 +106,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./main_results.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Perfect system: outline of the main results</span></a>
+  <a href="./main_results.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Perfect system: outline of the main results</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./identities.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Some useful identities</span></a>
+  <a href="./identities.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Some useful identities</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -151,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Perfect system: outline of the main results</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Some useful identities</span></h1>
 </div>
 
 
@@ -167,32 +167,86 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>This document uses <span class="math inline">\(\LaTeX\newcommand{\D}{\mathrm{d}}\newcommand{\E}{\mathcal{E}}\newcommand{\order}[2][1]{#2^{(#1)}}\newcommand{\reals}{\mathbb{R}}\)</span> custom macros.</p>
-<p>It is shown in <a href="bifurcation_equations-simplified.html"><span>Chapter&nbsp;6</span></a> that, besides the fundamental branch <span class="math inline">\(u^\ast(\lambda)\)</span>, other (bifurcated) equilibrium branches may pass through the critical point <span class="math inline">\((u_0, \lambda_0)\)</span>. The bifurcated branch is a curve <span class="math inline">\((u, \lambda) \in \reals ^ {m + 1}\)</span>. Introducing the (yet unspecified) parameter <span class="math inline">\(\eta\)</span>, we introduce the following parametric representation of the bifurcated branch: <span class="math inline">\(\eta \mapsto [u(\eta), \lambda(\eta)]\)</span>, with <span class="math inline">\(u(0) = u_0\)</span> and <span class="math inline">\(\lambda(0) = \lambda_0\)</span>.</p>
-<p>Along the bifurcated branch, the energy can also be expanded (see <a href="energy.html"><span>Chapter&nbsp;7</span></a>) <span id="eq-20230528190539"><span class="math display">\[
-\begin{aligned}[b]
-\E[u(\eta), \lambda(\eta)] ={}&amp; \E[u^\ast \circ \lambda(\eta), \lambda(\eta)]
-+ \tfrac{1}{6} \eta^3 \, \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{E}_{ij}\\
-&amp;+ \tfrac{1}{24} \eta^4 \, \bigl\{ E_{ijkl} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l + 4\order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k\\
-&amp;+ 6 \bigl[ \bigl( \order[1]{\lambda} \bigr)^2 \, \ddot{E}_{ij} + \order[2]{\lambda} \, \dot{E}_{ij} \bigr] \, \order[1]{\xi}_i \, \order[1]{\xi}_j \bigr\}.
-\end{aligned}
-\tag{3.1}\]</span></span></p>
-<p>Finally, the eigenvalues <span class="math inline">\(\alpha\)</span> and eigenvectors <span class="math inline">\(x\)</span> of the hessian are expanded to second order in <span class="math inline">\(\eta\)</span> in <a href="eigenmodes.html"><span>Chapter&nbsp;8</span></a> <span class="math display">\[
-\alpha = \order[0]{\alpha} + \eta \, \order[1]{\alpha} + \tfrac{1}{2}\eta^2 \, \order[2]{\alpha} + o(\eta^2)
-\quad \text{and} \quad
-x = \order[0]{x} + \eta \, \order[1]{x} + \tfrac{1}{2}\eta^2 \, \order[2]{x} + o(\eta^2).
-\]</span></p>
-<p>The potentially unstable eigenmodes are necessarily such that <span class="math inline">\(\order[0]{\alpha} = 0\)</span>. In that case, <span class="math display">\[
-\order[0]{x} = \order[0]{\chi}_j \, v_j
-\quad \text{and} \quad
-\order[1]{x} = \order[1]{\chi}_j \, v_j + \order[1]{\lambda} \, \order[0]{\chi}_j \, w_{j\lambda} + \order[0]{\chi}_j \, \order[1]{\xi}_k \, w_{jk}
-\]</span> where the coefficients <span class="math inline">\(\order[1]{\alpha}\)</span>, <span class="math inline">\(\order[2]{\alpha}\)</span>, <span class="math inline">\(\order[0]{\chi}_i\)</span> and <span class="math inline">\(\order[1]{\chi}_i\)</span> solve the following equations <span id="eq-20230524065341"><span class="math display">\[
-\bigl( E_{ijk} \, \order[1]{\xi_k} + \order[1]\lambda \, \dot{E}_{ij} \bigr) \, \order[0]{\chi_j} = \order[1]\alpha \, \order[0]{\chi_i},
-\tag{3.2}\]</span></span> and <span id="eq-20230524065110"><span class="math display">\[
+<p>Let <span class="math inline">\(v = \xi_i \, v_i \in V\)</span> <span class="math display">\[
 \begin{aligned}
-\bigl[ E_{ijkl} \, \order[1]{\xi}_k \, \order[1]{\xi}_l + \order[1]{\lambda} \, \bigl( 2\dot{E}_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \ddot{E}_{ij} \bigr)+ E_{ijk} \, \order[2]{\xi}_k + \order[2]{\lambda} \, \dot{E}_{ij} \bigr] \order[0]{\chi}_j &amp;\\
-+ 2\bigl( E_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \dot{E}_{ij} \bigr) \, \order[1]{\chi}_j &amp;= 2 \order[1]{\alpha} \, \order[1]{\chi}_i + \order[2]{\alpha} \, \order[0]{\chi}_i.
+\E_3(\order[1]{u}, \order[1]{u}, v)
+&amp;= \xi_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \E_3(v_i, v_j, v_k)
+=  E_{ijk} \, \xi_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k\\
+&amp;= -2\order[1]{\lambda} \, \dot{E}_{ij} \, \xi_i \, \order[1]{\xi}_j
+= -2\order[1]{\lambda} \, \dot{\E}_2(\order[1]{u}, v),
 \end{aligned}
-\tag{3.3}\]</span></span></p>
+\]</span> where we have used the definitions (<a href="setting-up_the_mathematical_stage.html#eq-20230125062505"><span>2.6</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230125062510"><span>2.8</span></a>) of <span class="math inline">\(\dot{E}_{ij}\)</span> and <span class="math inline">\(E_{ijk}\)</span> and the first bifurcation equation (<a href="bifurcation_equations-simplified.html#eq-20230125062336"><span>6.3</span></a>).</p>
+<p>The proofs below use frequently definitions (<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.4</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.5</span></a>) of <span class="math inline">\(w_{ij}\)</span> and <span class="math inline">\(w_{i\lambda}\)</span>, definitions (<a href="setting-up_the_mathematical_stage.html#eq-20230125062505"><span>2.6</span></a>), (<a href="setting-up_the_mathematical_stage.html#eq-20230124211207"><span>2.7</span></a>), (<a href="setting-up_the_mathematical_stage.html#eq-20230125062510"><span>2.8</span></a>), (<a href="setting-up_the_mathematical_stage.html#eq-20230124210649"><span>2.9</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230124210049"><span>2.10</span></a>) of <span class="math inline">\(\dot{E}_{ij}\)</span>, <span class="math inline">\(\ddot{E}_{ij}\)</span>, <span class="math inline">\(E_{ijk}\)</span>, <span class="math inline">\(\dot{E}_{ijk}\)</span> and <span class="math inline">\(E_{ijkl}\)</span>. Finally, expressions (<a href="bifurcation_equations-simplified.html#eq-20230411141319"><span>6.2</span></a>) of <span class="math inline">\(\order[1]{u}\)</span> and <span class="math inline">\(\order[2]{u}\)</span> are used.</p>
+<p><span class="math display">\[
+\E_2(w_{ij}, w_{kl}) = -\E_3(v_i, v_j, w_{kl})
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\order[1]{\xi}_i \, \order[1]{\xi}_j \, \E_2(w_{i\lambda}, w_{j\lambda})
+&amp;= -\order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{\E}_2(v_i, w_{j\lambda})
+= -\order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{\E}_2(v_j, w_{i\lambda})\\
+&amp;= -\tfrac{1}{2} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \bigl[ \dot{\E}_2(v_i, w_{j\lambda}) + \dot{\E}_2(v_j, w_{i\lambda}) \bigr]\\
+&amp;= \tfrac{1}{2} \bigl[ \ddot{\E}_2(\order[1]{u}, \order[1]{u}) - \ddot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \bigr].
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \E_2(w_{ij}, w_{k\lambda})
+&amp;= - \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \dot{\E}_2(w_{ij}, v_k)\\
+&amp;= -\tfrac{1}{3} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \bigl[ \dot{\E}_2(v_i, w_{jk}) + \dot{\E}_2(v_j, w_{ik}) + \dot{\E}_2(v_k, w_{ij}) \bigr]\\
+&amp;= \tfrac{1}{3} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \bigl[ \dot{\E}_3(v_i, v_j, v_k) - \dot{E}_{ijk} \bigr]\\
+&amp;= \tfrac{1}{3} \bigl[ \dot{\E}_3(\order[1]{u}, \order[1]{u}, \order[1]{u}) - \dot{E}_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \bigr].
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}[b]
+\E_3(v_i, v_j, w_{k\lambda})
+={}&amp; - \E_2(w_{ij}, w_{k\lambda})\\
+\end{aligned}
+\]</span></p>
+<p><span id="eq-20230620071133"><span class="math display">\[
+\begin{aligned}[b]
+\order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \E_3(v_i, v_j, w_{kl})
+={}&amp; \tfrac{1}{3}\order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \bigl[ \E_3(v_i, v_j, w_{kl})\\
+&amp;+ \E_3(v_i, v_k, w_{jl}) + \E_3(v_i, v_l, w_{jk}) \bigr]\\
+={}&amp; \tfrac{1}{3}\order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \bigl[ E_{ijkl} - \E_4(v_i, v_j, v_k, v_l) \bigr]\\
+={}&amp; \tfrac{1}{3} \bigl[ E_{ijkl} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l - \E_4(\order[1]{u}, \order[1]{u}, \order[1]{u}, \order[1]{u}) \bigr]
+\end{aligned}
+\tag{4.1}\]</span></span></p>
+<p><span id="eq-20230619212620"><span class="math display">\[
+\begin{aligned}[b]
+\E_2(\order[2]{u}_W, \order[2]{u}_W)
+={}&amp; \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \E_2(w_{ij}, w_{kl})
++ 4 \, \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \E_2(w_{ij}, w_{k\lambda})\\
+&amp;+ 4 \bigl( \order[1]{\lambda} \bigr)^2 \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \E_2(w_{i\lambda}, w_{j\lambda})\\
+={}&amp; \tfrac{1}{3} \E_4(\order[1]{u}, \order[1]{u}, \order[1]{u}, \order[1]{u})
++ \tfrac{4}{3} \order[1]{\lambda} \, \dot{\E}_3(\order[1]{u}, \order[1]{u}, \order[1]{u})\\
+&amp;+ 2 \bigl( \order[1]{\lambda} \bigr)^2 \, \ddot{\E}_2(\order[1]{u}, \order[1]{u})
+- \tfrac{1}{3} E_{ijkl} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l\\
+&amp;- \tfrac{4}{3} \order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k
+- 2 \bigl( \order[1]{\lambda} \bigr)^2 \, \ddot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j
+\end{aligned}
+\tag{4.2}\]</span></span></p>
+<p><span class="math display">\[
+\begin{aligned}[b]
+\E_3(\order[1]{u}, \order[1]{u}, \order[2]{u}_W)
+={}&amp; \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \E_3(v_i, v_j, w_{kl}) + 2\order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \E_3(v_i, v_j, w_{k\lambda})\\
+={}&amp; \tfrac{1}{3} \bigl[ E_{ijkl} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l - \E_4(\order[1]{u}, \order[1]{u}, \order[1]{u}, \order[1]{u})\bigr]\\
+&amp; + \tfrac{2}{3} \order[1]{\lambda} \, \bigl[ \dot{E}_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k - \dot{\E}_3(\order[1]{u}, \order[1]{u}, \order[1]{u}) \bigr]
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}[b]
+\dot{\E}_2(\order[1]{u}, \order[2]{u}_W)
+={}&amp; \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \dot{\E}_2(v_i, w_{jk}) + 2\order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{\E}_2(v_i, w_{j\lambda})\\
+={}&amp; \tfrac{1}{3} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \bigl[ \dot{\E}_2(v_i, w_{jk}) + \dot{\E}_2(v_j, w_{ik}) + \dot{\E}_2(v_k, w_{ij})\bigr]\\
+&amp; + \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \bigl[ \dot{\E}_2(v_i, w_{j\lambda}) + \dot{\E}_2(v_j, w_{i\lambda}) \bigr]\\
+={}&amp; \tfrac{1}{3} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \bigl[ \dot{E}_{ijk} - \dot{\E}_3(v_i, v_j, v_k) \bigr]\\
+&amp;+ \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \bigl[\ddot{E}_{ij} - \ddot{\E}_2(v_i, v_j) \bigr]\\
+={}&amp; \tfrac{1}{3} \bigl[ \dot{E}_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k - \dot{\E}_3(\order[1]{u}, \order[1]{u}, \order[1]{u}) \bigr]\\
+&amp;+ \order[1]{\lambda} \, \bigl[\ddot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j - \ddot{\E}_2(\order[1]{u}, \order[1]{u}) \bigr]
+\end{aligned}
+\]</span></p>
 
 
 
@@ -332,13 +386,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./setting-up_the_mathematical_stage.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></span>
+      <a href="./main_results.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Perfect system: outline of the main results</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./identities.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Some useful identities</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./setting-up_the_computational_stage.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -12,7 +12,7 @@ book:
     - main_results.qmd
     - identities.qmd
     - setting-up_the_computational_stage.ipynb
-    - bifurcation_equations-simplified.ipynb
+    - bifurcation_equations.ipynb
     - energy.ipynb
     - eigenmodes.ipynb
     - references.qmd

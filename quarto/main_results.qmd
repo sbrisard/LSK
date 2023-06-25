@@ -9,14 +9,6 @@ parametric representation of the bifurcated branch: $\eta \mapsto [u(\eta), \lam
 $\lambda(0) = \lambda_0$.
 
 Along the bifurcated branch, the energy can also be expanded (see @sec-20230523130742)
-$$
-\begin{aligned}[b]
-\E[u(\eta), \lambda(\eta)] ={}& \E[u^\ast \circ \lambda(\eta), \lambda(\eta)]
-+ \tfrac{1}{6} \eta^3 \, \order[1]{\lambda} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \dot{E}_{ij}\\
-&+ \tfrac{1}{24} \eta^4 \, \bigl\{ E_{ijkl} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l + 4\order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k\\
-&+ 6 \bigl[ \bigl( \order[1]{\lambda} \bigr)^2 \, \ddot{E}_{ij} + \order[2]{\lambda} \, \dot{E}_{ij} \bigr] \, \order[1]{\xi}_i \, \order[1]{\xi}_j \bigr\}.
-\end{aligned}
-$$ {#eq-20230528190539}
 
 Finally, the eigenvalues $\alpha$ and eigenvectors $x$ of the hessian are expanded to second order in $\eta$ in @sec-20230528190001
 $$

@@ -65,6 +65,8 @@ E_ddot_ = IndexedBase("\ddot{E}")
 
 u1 = Symbol(r"{\order[1]{u}}")
 u2 = Symbol(r"{\order[2]{u}}")
+u2_V = Symbol(r"{\order[2]{u}_V}")
+u2_W = Symbol(r"{\order[2]{u}_W}")
 u3 = Symbol(r"{\order[3]{u}}")
 u4 = Symbol(r"{\order[4]{u}}")
 

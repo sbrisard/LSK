@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.2.280">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,10 +17,9 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -47,13 +46,43 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
+    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -95,7 +124,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -104,16 +132,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./eigenmodes.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
       </button>
     </div>
   </nav>
@@ -121,80 +144,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Notes on the Lyapunov–Schmidt–Koiter asymptotic method</a> 
     </div>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
+      <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-        </div>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome!</span></span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome!</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setting-up_the_mathematical_stage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></span></a>
+  <a href="./setting-up_the_mathematical_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./identities.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Some useful identities</span></span></a>
+  <a href="./identities.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Some useful identities</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></span></a>
+  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span></a>
+  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./energy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></span></a>
+  <a href="./energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></a>
+  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#variational-problem-of-order-0" id="toc-variational-problem-of-order-0" class="nav-link active" data-scroll-target="#variational-problem-of-order-0"><span class="header-section-number">7.1</span> Variational problem of order 0</a></li>
-  <li><a href="#variational-problem-of-order-1" id="toc-variational-problem-of-order-1" class="nav-link" data-scroll-target="#variational-problem-of-order-1"><span class="header-section-number">7.2</span> Variational problem of order 1</a></li>
-  <li><a href="#variational-problem-of-order-2" id="toc-variational-problem-of-order-2" class="nav-link" data-scroll-target="#variational-problem-of-order-2"><span class="header-section-number">7.3</span> Variational problem of order 2</a></li>
+  <li><a href="#the-eigenvalue-problem" id="toc-the-eigenvalue-problem" class="nav-link active" data-scroll-target="#the-eigenvalue-problem"><span class="toc-section-number">7.1</span>  The eigenvalue problem</a></li>
+  <li><a href="#the-variational-problem-of-order-0" id="toc-the-variational-problem-of-order-0" class="nav-link" data-scroll-target="#the-variational-problem-of-order-0"><span class="toc-section-number">7.2</span>  The variational problem of order 0</a></li>
+  <li><a href="#the-variational-problem-of-order-1" id="toc-the-variational-problem-of-order-1" class="nav-link" data-scroll-target="#the-variational-problem-of-order-1"><span class="toc-section-number">7.3</span>  The variational problem of order 1</a></li>
+  <li><a href="#the-variational-problem-of-order-2" id="toc-the-variational-problem-of-order-2" class="nav-link" data-scroll-target="#the-variational-problem-of-order-2"><span class="toc-section-number">7.4</span>  The variational problem of order 2</a></li>
   </ul>
 </nav>
     </div>
@@ -203,7 +218,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-20230528190001" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></h1>
+<h1 class="title"><span id="sec-20230528190001" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></h1>
 </div>
 
 
@@ -219,26 +234,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <p>This notebook uses <span class="math inline">\(\LaTeX\newcommand{\D}{\mathrm{d}}\newcommand{\E}{\mathcal{E}}\newcommand{\order}[2][1]{#2^{(#1)}}\newcommand{\reals}{\mathbb{R}}\)</span> custom macros.</p>
-<p>In this chapter, the eigenvalues <span class="math inline">\(\alpha\)</span> and eigenvectors <span class="math inline">\(x\)</span> of the hessian are expanded to second order in <span class="math inline">\(\eta\)</span></p>
+<p>In view of stability analysis, the eigenvalues <span class="math inline">\(\alpha\)</span> and eigenvectors <span class="math inline">\(x\)</span> of the hessian of the energy are expanded in this chapter to second order in <span class="math inline">\(\eta\)</span></p>
+<div class="cell" data-tags="[]" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lsk2 <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>x0_V, x0_W <span class="op">=</span> symbols(<span class="vs">r"{\order[0]</span><span class="sc">{x}</span><span class="vs">_V} {\order[0]</span><span class="sc">{x}</span><span class="vs">_W}"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>x1_V, x1_W <span class="op">=</span> symbols(<span class="vs">r"{\order[1]</span><span class="sc">{x}</span><span class="vs">_V} {\order[1]</span><span class="sc">{x}</span><span class="vs">_W}"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>x2_V, x2_W <span class="op">=</span> symbols(<span class="vs">r"{\order[2]</span><span class="sc">{x}</span><span class="vs">_V} {\order[2]</span><span class="sc">{x}</span><span class="vs">_W}"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>α<span class="dv">0</span>, α<span class="dv">1</span>, α<span class="dv">2</span> <span class="op">=</span> symbols(<span class="vs">r"{\order[0]{\alpha</span><span class="sc">}}</span><span class="vs"> {\order[1]{\alpha</span><span class="sc">}}</span><span class="vs"> {\order[2]{\alpha</span><span class="sc">}}</span><span class="vs">"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>χ<span class="dv">0</span> <span class="op">=</span> IndexedBase(<span class="vs">r"\order[0]{\chi}"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>χ<span class="dv">1</span> <span class="op">=</span> IndexedBase(<span class="vs">r"\order[1]{\chi}"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> (x0_V <span class="op">+</span> x0_W) <span class="op">+</span> η <span class="op">*</span> (x1_V <span class="op">+</span> x1_W) <span class="op">+</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> (x2_V <span class="op">+</span> x2_W) <span class="op">+</span> O(η<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>α <span class="op">=</span> α<span class="dv">0</span> <span class="op">+</span> η <span class="op">*</span> α<span class="dv">1</span> <span class="op">+</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> α<span class="dv">2</span> <span class="op">+</span> O(η<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>display_latex_dict({<span class="st">"x"</span>: x, <span class="vs">r"\alpha"</span>: α}, num_cols<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><span class="math inline">\(\displaystyle \begin{align}x&amp;={\order[0]{x}_W} + {\order[0]{x}_V} + \eta \left({\order[1]{x}_V} + {\order[1]{x}_W}\right) + \frac{\eta^{2} \left({\order[2]{x}_V} + {\order[2]{x}_W}\right)}{2} + O\left(\eta^{3}\right)\\\alpha&amp;={\order[0]{\alpha}} + \eta {\order[1]{\alpha}} + \frac{\eta^{2} {\order[2]{\alpha}}}{2} + O\left(\eta^{3}\right)\\\end{align}\)</span></p>
+</div>
+</div>
+<p>Note that the eigenvector <span class="math inline">\(x\)</span> is projected onto <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> : <span class="math inline">\(\order[k]{x}_V \in V\)</span> and <span class="math inline">\(\order[k]{x}_W \in W\)</span>. It will be convenient to expand the <span class="math inline">\(V\)</span>-component in the <span class="math inline">\((v_1, \ldots, v_m)\)</span> basis</p>
 <p><span class="math display">\[
-\alpha = \order[0]{\alpha} + \eta \, \order[1]{\alpha} + \tfrac{1}{2}\eta^2 \, \order[2]{\alpha} + o(\eta^2)
+\order[k]{x}_V = \order[k]{\chi}_i \, v_i.
 \]</span></p>
-<p>and</p>
-<p><span class="math display">\[
-x = \order[0]{x} + \eta \, \order[1]{x} + \tfrac{1}{2}\eta^2 \, \order[2]{x} + o(\eta^2).
-\]</span></p>
-<p>It will be shown that the potentially unstable eigenmodes are necessarily such that <span class="math inline">\(\order[0]{\alpha} = 0\)</span>. In that case,</p>
-<p><span class="math display">\[
-\order[0]{x} = \order[0]{\chi}_j \, v_j
-\]</span></p>
-<p>and</p>
-<p><span class="math display">\[
-\order[1]{x} = \order[1]{\chi}_j \, v_j + \order[1]{\lambda} \, \order[0]{\chi}_j \, w_{j\lambda} + \order[0]{\chi}_j \, \order[1]{\xi}_k \, w_{jk}
-\]</span></p>
-<p>where the coefficients <span class="math inline">\(\order[1]{\alpha}\)</span>, <span class="math inline">\(\order[2]{\alpha}\)</span>, <span class="math inline">\(\order[0]{\chi}_i\)</span> and <span class="math inline">\(\order[1]{\chi}_i\)</span> solve the following equations</p>
+<p>We immediately have the following simplification rules</p>
+<div class="cell" data-tags="[]" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rules <span class="op">=</span> {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    E2 <span class="op">*</span> v_[i]: <span class="dv">0</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    E2 <span class="op">*</span> x0_V: <span class="dv">0</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    E2 <span class="op">*</span> x1_V: <span class="dv">0</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    E2 <span class="op">*</span> x2_V: <span class="dv">0</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We focus in this chapter on potentially unstable eigenmodes, for which the eigenvalue <span class="math inline">\(\alpha\)</span> might be negative in the vicinity of <span class="math inline">\(\eta = 0\)</span>. It will be shown that these eigenmodes are necessarily such that <span class="math inline">\(\order[0]{\alpha} = 0\)</span>. In that case, <span class="math inline">\(\order[0]{x}_W = 0\)</span> and</p>
+<p><span id="eq-20230626163655"><span class="math display">\[
+\order[1]{x}_W = \order[1]{\lambda} \, \order[0]{\chi}_j \, w_{j} + \order[0]{\chi}_j \, \order[1]{\xi}_k \, w_{jk}.
+\tag{7.1}\]</span></span></p>
+<p>The coefficients <span class="math inline">\(\order[1]{\alpha}\)</span>, <span class="math inline">\(\order[2]{\alpha}\)</span>, <span class="math inline">\(\order[0]{\chi}_i\)</span> and <span class="math inline">\(\order[1]{\chi}_i\)</span> solve the following equations</p>
 <p><span id="eq-20230524065341"><span class="math display">\[
 \bigl( E_{ijk} \, \order[1]{\xi_k} + \order[1]\lambda \, \dot{E}_{ij} \bigr) \, \order[0]{\chi_j} = \order[1]\alpha \, \order[0]{\chi_i},
-\tag{7.1}\]</span></span></p>
+\tag{7.2}\]</span></span></p>
 <p>and</p>
 <p><span id="eq-20230524065110"><span class="math display">\[
 \begin{aligned}
@@ -246,247 +287,260 @@ x = \order[0]{x} + \eta \, \order[1]{x} + \tfrac{1}{2}\eta^2 \, \order[2]{x} + o
 + \order[2]{\lambda} \, \dot{E}_{ij} \bigr] \order[0]{\chi}_j
 + 2\bigl( E_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \dot{E}_{ij} \bigr) \, \order[1]{\chi}_j &amp;= 2 \order[1]{\alpha} \, \order[1]{\chi}_i + \order[2]{\alpha} \, \order[0]{\chi}_i.
 \end{aligned}
-\tag{7.2}\]</span></span></p>
-<div class="cell" data-execution_count="1">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> lsk</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> symbol(label, index<span class="op">=</span><span class="va">None</span>, order<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> index <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        label <span class="op">=</span> <span class="st">"{"</span> <span class="op">+</span> label <span class="op">+</span> <span class="st">"_{"</span> <span class="op">+</span> <span class="bu">str</span>(index) <span class="op">+</span> <span class="st">"</span><span class="sc">}}</span><span class="st">"</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        label <span class="op">=</span> <span class="st">"{"</span> <span class="op">+</span> label <span class="op">+</span> <span class="st">"}"</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> order <span class="kw">is</span> <span class="va">None</span>:</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Symbol(label)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Symbol(<span class="vs">r"{\order["</span> <span class="op">+</span> <span class="bu">str</span>(order) <span class="op">+</span> <span class="st">"]"</span> <span class="op">+</span> label <span class="op">+</span> <span class="st">"}"</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>η, u_hat <span class="op">=</span> symbols(<span class="vs">r"\eta \hat</span><span class="sc">{u}</span><span class="vs">"</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>E2, E2_dot, E2_ddot <span class="op">=</span> symbols(<span class="vs">r"\E_2 \dot{\E}_2 \ddot{\E}_2"</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>E3, E3_dot <span class="op">=</span> symbols(<span class="vs">r"\E_3 \dot{\E}_3"</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>E4 <span class="op">=</span> Symbol(<span class="vs">r"\E_4"</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>E_dot_ij, E_ddot_ij <span class="op">=</span> symbols(<span class="vs">r"\dot</span><span class="sc">{E}</span><span class="vs">_</span><span class="sc">{ij}</span><span class="vs"> \ddot</span><span class="sc">{E}</span><span class="vs">_</span><span class="sc">{ij}</span><span class="vs">"</span>)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>E_ijk, E_dot_ijk <span class="op">=</span> symbols(<span class="st">"E_</span><span class="sc">{ijk}</span><span class="st"> \dot</span><span class="sc">{E}</span><span class="st">_</span><span class="sc">{ijk}</span><span class="st">"</span>)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>E_ijkl <span class="op">=</span> Symbol(<span class="st">"E_</span><span class="sc">{ijkl}</span><span class="st">"</span>)</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>λ<span class="dv">1</span>, λ<span class="dv">2</span> <span class="op">=</span> [symbol(<span class="vs">r"\lambda"</span>, order<span class="op">=</span>k) <span class="cf">for</span> k <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>]]</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>α<span class="dv">1</span>, α<span class="dv">2</span> <span class="op">=</span> [symbol(<span class="vs">r"\alpha"</span>, order<span class="op">=</span>k) <span class="cf">for</span> k <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>]]</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>y1, y2 <span class="op">=</span> [symbol(<span class="st">"y"</span>, order<span class="op">=</span>k) <span class="cf">for</span> k <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>]]</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>indices <span class="op">=</span> [<span class="st">"i"</span>, <span class="st">"j"</span>, <span class="st">"k"</span>, <span class="st">"l"</span>]</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>v_i, v_j, v_k, v_l <span class="op">=</span> [symbol(<span class="st">"v"</span>, i) <span class="cf">for</span> i <span class="kw">in</span> indices]</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>ξ<span class="dv">1</span><span class="er">_i</span>, ξ<span class="dv">1</span><span class="er">_j</span>, ξ<span class="dv">1</span><span class="er">_k</span>, ξ<span class="dv">1</span><span class="er">_l</span> <span class="op">=</span> [symbol(<span class="vs">r"\xi"</span>, index<span class="op">=</span>i, order<span class="op">=</span><span class="dv">1</span>) <span class="cf">for</span> i <span class="kw">in</span> indices]</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>ξ<span class="dv">2</span><span class="er">_i</span>, ξ<span class="dv">2</span><span class="er">_j</span>, ξ<span class="dv">2</span><span class="er">_k</span>, ξ<span class="dv">2</span><span class="er">_l</span> <span class="op">=</span> [symbol(<span class="vs">r"\xi"</span>, index<span class="op">=</span>i, order<span class="op">=</span><span class="dv">2</span>) <span class="cf">for</span> i <span class="kw">in</span> indices]</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>χ<span class="dv">0</span><span class="er">_i</span>, χ<span class="dv">0</span><span class="er">_j</span>, χ<span class="dv">0</span><span class="er">_k</span>, χ<span class="dv">0</span><span class="er">_l</span> <span class="op">=</span> [symbol(<span class="vs">r"\chi"</span>, index<span class="op">=</span>i, order<span class="op">=</span><span class="dv">0</span>) <span class="cf">for</span> i <span class="kw">in</span> indices]</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>χ<span class="dv">1</span><span class="er">_i</span>, χ<span class="dv">1</span><span class="er">_j</span>, χ<span class="dv">1</span><span class="er">_k</span>, χ<span class="dv">1</span><span class="er">_l</span> <span class="op">=</span> [symbol(<span class="vs">r"\chi"</span>, index<span class="op">=</span>i, order<span class="op">=</span><span class="dv">1</span>) <span class="cf">for</span> i <span class="kw">in</span> indices]</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>χ<span class="dv">2</span><span class="er">_i</span>, χ<span class="dv">2</span><span class="er">_j</span>, χ<span class="dv">2</span><span class="er">_k</span>, χ<span class="dv">2</span><span class="er">_l</span> <span class="op">=</span> [symbol(<span class="vs">r"\chi"</span>, index<span class="op">=</span>i, order<span class="op">=</span><span class="dv">2</span>) <span class="cf">for</span> i <span class="kw">in</span> indices]</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>w_iλ, w_jλ, w_kλ, w_lλ <span class="op">=</span> [symbol(<span class="st">"w"</span>, index<span class="op">=</span>iλ) <span class="cf">for</span> iλ <span class="kw">in</span> [<span class="vs">r"i\lambda"</span>, <span class="vs">r"j\lambda"</span>, <span class="vs">r"k\lambda"</span>, <span class="vs">r"l\lambda"</span>]]</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>w_ij, w_ik, w_il, w_jk, w_jl, w_kl <span class="op">=</span> [symbol(<span class="st">"w"</span>, ij) <span class="cf">for</span> ij <span class="kw">in</span> [<span class="st">"ij"</span>, <span class="st">"ik"</span>, <span class="st">"il"</span>, <span class="st">"jk"</span>, <span class="st">"jl"</span>, <span class="st">"kl"</span>]] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>In view of stability analysis, we consider in this chapter the hessian of the energy along the bifurcated branch. We derive an asymptotic expansion of its eigenmodes. The eigenvalues <span class="math inline">\(\alpha \in \reals\)</span> and eigenvectors <span class="math inline">\(x \in U\)</span> of the hessian are such that <span id="eq-20230517062340"><span class="math display">\[
+\tag{7.3}\]</span></span></p>
+<section id="the-eigenvalue-problem" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="the-eigenvalue-problem"><span class="header-section-number">7.1</span> The eigenvalue problem</h2>
+<p>The eigenvalues <span class="math inline">\(\alpha \in \reals\)</span> and eigenvectors <span class="math inline">\(x \in U\)</span> of the hessian are such that</p>
+<p><span id="eq-20230517062340"><span class="math display">\[
 \E_{, u u} [u(\eta), \lambda(\eta); x, \hat{u}] = \alpha \, \langle x, \hat{u} \rangle \quad \text{for all} \quad \hat{u} \in U,
-\tag{7.3}\]</span></span> where <span class="math inline">\(\eta \mapsto \lambda(\eta)\)</span> and <span class="math inline">\(\eta \mapsto u(\eta)\)</span> define the bifurcated branch (<span class="math inline">\(\eta\)</span>: parameter, yet unspecified). We focus in this chapter on potentially unstable eigenmodes, for which the eigenvalue <span class="math inline">\(\alpha\)</span> might be negative in the vicinity of <span class="math inline">\(\eta = 0\)</span>.</p>
-<p>In <a href="bifurcation_equations.html"><span>Chapter&nbsp;5</span></a> and in <a href="energy.html"><span>Chapter&nbsp;6</span></a>, the following asymptotic expansions of <span class="math inline">\(\lambda(\eta)\)</span>, <span class="math inline">\(u(\eta)\)</span> and <span class="math inline">\(\E_{,uu}[u(\eta), \lambda(\eta); \bullet, \bullet]\)</span> were derived</p>
-<div class="cell" data-execution_count="2">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>u1 <span class="op">=</span> ξ<span class="dv">1</span><span class="er">_k</span> <span class="op">*</span> v_k</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>u1_ <span class="op">=</span> ξ<span class="dv">1</span><span class="er">_l</span> <span class="op">*</span> v_l <span class="co"># Will be necessary below to avoid index clashes in E4 * u1 * u1</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>u2 <span class="op">=</span> ξ<span class="dv">2</span><span class="er">_k</span> <span class="op">*</span> v_k <span class="op">+</span> ξ<span class="dv">1</span><span class="er">_k</span> <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_l</span> <span class="op">*</span> w_kl <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> λ<span class="dv">1</span> <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_k</span> <span class="op">*</span> w_kλ</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>λ <span class="op">=</span> η <span class="op">*</span> λ<span class="dv">1</span> <span class="op">+</span> η <span class="op">**</span> <span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> λ<span class="dv">2</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> η <span class="op">*</span> u1 <span class="op">+</span> η <span class="op">**</span> <span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> u2</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>E_uu0 <span class="op">=</span> E2</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>E_uu1 <span class="op">=</span> E3 <span class="op">*</span> u1 <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> E2_dot</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>E_uu2 <span class="op">=</span> (E4 <span class="op">*</span> u1 <span class="op">*</span> u1_ <span class="op">+</span> E3 <span class="op">*</span> u2 <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> λ<span class="dv">1</span> <span class="op">*</span> E3_dot <span class="op">*</span> u1 <span class="op">+</span> λ<span class="dv">1</span> <span class="op">**</span> <span class="dv">2</span> <span class="op">*</span> E2_ddot <span class="op">+</span> λ<span class="dv">2</span> <span class="op">*</span> E2_dot)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>E_uu <span class="op">=</span> E_uu0 <span class="op">+</span> η <span class="op">*</span> E_uu1 <span class="op">+</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> E_uu2</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_dict({<span class="vs">r"\lambda"</span>: λ,</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                        <span class="vs">r"\order[1]</span><span class="sc">{u}</span><span class="vs">"</span>: u1,</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                        <span class="vs">r"\order[2]</span><span class="sc">{u}</span><span class="vs">"</span>: u2,</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                        <span class="vs">r"\E_{,uu}"</span>: E_uu.expand()}, num_cols<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \begin{align}\lambda&amp;=\frac{\eta^{2} {\order[2]{\lambda}}}{2} + \eta {\order[1]{\lambda}}\\\order[1]{u}&amp;={\order[1]{\xi_{k}}} {v_{k}}\\\order[2]{u}&amp;=2 {\order[1]{\lambda}} {\order[1]{\xi_{k}}} {w_{k\lambda}} + {\order[1]{\xi_{k}}} {\order[1]{\xi_{l}}} {w_{kl}} + {\order[2]{\xi_{k}}} {v_{k}}\\\E_{,uu}&amp;=\E_{2} + \E_{3} \eta^{2} {\order[1]{\lambda}} {\order[1]{\xi_{k}}} {w_{k\lambda}} + \frac{\E_{3} \eta^{2} {\order[1]{\xi_{k}}} {\order[1]{\xi_{l}}} {w_{kl}}}{2} + \frac{\E_{3} \eta^{2} {\order[2]{\xi_{k}}} {v_{k}}}{2} + \E_{3} \eta {\order[1]{\xi_{k}}} {v_{k}} + \frac{\E_{4} \eta^{2} {\order[1]{\xi_{k}}} {\order[1]{\xi_{l}}} {v_{k}} {v_{l}}}{2} + \frac{\ddot{\E}_2 \eta^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\dot{\E}_2 \eta^{2} {\order[2]{\lambda}}}{2} + \dot{\E}_2 \eta {\order[1]{\lambda}} + \dot{\E}_3 \eta^{2} {\order[1]{\lambda}} {\order[1]{\xi_{k}}} {v_{k}}\\\end{align}\)</span></p>
-</div>
-</div>
-<p>The eigenvalues and eigenvectors are expanded to second order in <span class="math inline">\(\eta\)</span> <span class="math display">\[
-\alpha = \order[0]\alpha + \eta \, \order[1]\alpha + \tfrac{1}{2} \eta^2 \, \order[2]\alpha + o(\eta^2)
-\]</span> and <span class="math display">\[
-x = \order[0]x + \eta \, \order[1]x + \tfrac{1}{2} \eta^2 \, \order[2]x + o(\eta^2).
-\]</span></p>
-<p>Plugging these expansions into Eq. (<a href="#eq-20230517062340"><span>7.3</span></a>) delivers 3 variational problems (of order 0, 1 and 2 in <span class="math inline">\(\eta\)</span>). These variational problems are studied below successively.</p>
-<section id="variational-problem-of-order-0" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="variational-problem-of-order-0"><span class="header-section-number">7.1</span> Variational problem of order 0</h2>
-<p>The lowest-order problem reads: find <span class="math inline">\(\order[0]x \in U\)</span> and <span class="math inline">\(\order[0]\alpha\in\reals\)</span> such that, for all <span class="math inline">\(\hat{u} \in U\)</span> <span class="math display">\[
-\E_2(\order[0]x, \hat{u}) = \order[0]\alpha \langle \order[0]x, \hat{u} \rangle.
-\]</span></p>
-<p>The above equation shows that <span class="math inline">\((\order[0]\alpha, \order[0]x)\)</span> is an eigenpair of <span class="math inline">\(\E_2\)</span>. Since <span class="math inline">\(\E_2\)</span> is positive, <span class="math inline">\(\order[0]\alpha \geq 0\)</span>. If <span class="math inline">\(\order[0]\alpha &gt; 0\)</span>, then <span class="math inline">\(\alpha &gt; 0\)</span> in the neighborhood of <span class="math inline">\(\lambda_0\)</span>, and the eigenmode is stable. Potentially unstable modes are therefore such that <span class="math inline">\(\order[0]\alpha=0\)</span>. In other words, the lowest-order <span class="math inline">\(\order[0]x\)</span> belongs to <span class="math inline">\(V\)</span> and can be expressed as a linear combination of the <span class="math inline">\(v_i\)</span></p>
-<div class="cell" data-execution_count="3">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>α<span class="dv">0</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> χ<span class="dv">0</span><span class="er">_j</span> <span class="op">*</span> v_j</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_dict({</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r"\order[0]{\alpha}"</span>: α<span class="dv">0</span>,</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r"\order[0]x"</span>: x0})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \begin{align}\order[0]{\alpha}&amp;=0&amp;\order[0]x&amp;={\order[0]{\chi_{j}}} {v_{j}}\\\end{align}\)</span></p>
-</div>
-</div>
-</section>
-<section id="variational-problem-of-order-1" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="variational-problem-of-order-1"><span class="header-section-number">7.2</span> Variational problem of order 1</h2>
-<p>The first-order term <span class="math inline">\(\order[1]x\)</span> is decomposed as the sum of its projections onto <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span></p>
-<div class="cell" data-execution_count="4">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> χ<span class="dv">1</span><span class="er">_j</span> <span class="op">*</span> v_j <span class="op">+</span> y1</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\order[1]x"</span>, x1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \order[1]x={\order[1]{\chi_{j}}} {v_{j}} + {\order[1]{y}}\)</span></p>
-</div>
-</div>
-<p>where <span class="math inline">\(\order[1]y \in W\)</span>. We then plug the resulting asymptotic expansions of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(x\)</span> into the asymptotic expansions of <span class="math inline">\(\E_{,uu}(x, \hat{u})\)</span> and <span class="math inline">\(\alpha \, \langle x, \hat{u} \rangle\)</span> and extract the first-order terms.</p>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>α <span class="op">=</span> α<span class="dv">0</span> <span class="op">+</span> η <span class="op">*</span> α<span class="dv">1</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> x0 <span class="op">+</span> η <span class="op">*</span> x1</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>lhs <span class="op">=</span> expand(E_uu <span class="op">*</span> x <span class="op">*</span> u_hat).coeff(η, <span class="dv">1</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>rhs <span class="op">=</span> expand(α <span class="op">*</span> x <span class="op">*</span> u_hat).coeff(η, <span class="dv">1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The problem reads: find <span class="math inline">\(\order[1]x \in U\)</span> and <span class="math inline">\(\order[1]\alpha\in\reals\)</span> such that, for all <span class="math inline">\(\hat{u} \in U\)</span></p>
-<div class="cell" data-execution_count="6">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(lhs, rhs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \E_{2} \hat{u} {\order[1]{\chi_{j}}} {v_{j}} + \E_{2} \hat{u} {\order[1]{y}} + \E_{3} \hat{u} {\order[0]{\chi_{j}}} {\order[1]{\xi_{k}}} {v_{j}} {v_{k}} + \dot{\E}_2 \hat{u} {\order[0]{\chi_{j}}} {\order[1]{\lambda}} {v_{j}}=\hat{u} {\order[0]{\chi_{j}}} {\order[1]{\alpha}} {v_{j}}\)</span></p>
-</div>
-</div>
-<p>The above equation must be understood as <span class="math display">\[
-\order[1]{\chi}_i \, \E_2(v_i, \hat{u})
-+ \E_2(\order[1]{y}, \hat{u})
-+ \order[0]{\chi}_j \, \order[1]{\xi}_k \, \E_3(v_j, v_k, \hat{u})
-+ \order[1]{\lambda} \, \order[0]{\chi}_j \, \dot{\E}_2(v_j, \hat{u})
-= \order[1]{\alpha} \, \order[0]{\chi}_j \, \langle v_j, \hat{u} \rangle,
-\]</span> and, since the first term cancels <span id="eq-20230523134144"><span class="math display">\[
-\E_2(\order[1]{y}, \hat{u})
-+ \order[0]{\chi}_j \, \order[1]{\xi}_k \, \E_3(v_j, v_k, \hat{u})
-+ \order[1]{\lambda} \, \order[0]{\chi}_j \, \dot{\E}_2(v_j, \hat{u})
-= \order[1]{\alpha} \, \order[0]{\chi}_j \, \langle v_j, \hat{u} \rangle,
 \tag{7.4}\]</span></span></p>
-<p>Eq. (<a href="#eq-20230523134144"><span>7.4</span></a>) is first tested with <span class="math inline">\(\hat{u} = v_i \in V\)</span>. Observing that <span class="math inline">\(\langle v_i, v_j \rangle = \delta_{ij}\)</span> since <span class="math inline">\((v_i)\)</span> is orthonormal, we get <span class="math display">\[
-\bigl[ \E_3(v_i, v_j, v_k) \, \order[1]{\xi_k} + \order[1]\lambda \, \dot{\E}_2(v_i, v_j)\bigr] \, \order[0]{\chi_j} = \order[1]\alpha \, \order[0]{\chi_i},
-\]</span> which shows that <span class="math inline">\((\order[1]\alpha, \order[0]{\chi_i})\)</span> is an eigenpair of the symmetric tensor <span class="math inline">\((E_{ijk} \order[1]{\xi_k} + \order[1]\lambda \, \dot{E}_{ij})\)</span> – see Eq.&nbsp;(<a href="#eq-20230524065341"><span>7.1</span></a>).</p>
-<p>The test function is now picked in <span class="math inline">\(W = V^\perp\)</span> and Eq. (<a href="#eq-20230523134144"><span>7.4</span></a>) results in the following variational problem: find <span class="math inline">\(\order[1]y \in W\)</span> such that, for all <span class="math inline">\(\hat{w} \in W\)</span>, <span class="math display">\[
-\E_2(\order[1]y, \hat{w}) + \E_3(v_i, v_j, \hat{w}) \, \order[0]{\chi_i} \, \order[1]{\xi_j} + \order[1]\lambda \, \dot{\E}_2(v_i, \hat{w}) \, \order[0]{\chi_i} = 0,
-\]</span> (observe that <span class="math inline">\(\langle v_j, \hat{w} \rangle = 0\)</span> since <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are orthogonal subspaces). The solution to the above problem is expressed as a linear combination of the <span class="math inline">\(w_{ij}\)</span> and <span class="math inline">\(w_{i\lambda}\)</span> –defined by the variational problems (<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.4</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.5</span></a>), respectively–, delivering</p>
-<div class="cell" data-execution_count="7">
+<p>where <span class="math inline">\(\eta \mapsto \lambda(\eta)\)</span> and <span class="math inline">\(\eta \mapsto u(\eta)\)</span> define the bifurcated branch.</p>
+<p>In <a href="bifurcation_equations.html"><span>Chapter&nbsp;5</span></a> and in <a href="energy.html"><span>Chapter&nbsp;6</span></a>, the following asymptotic expansions of <span class="math inline">\(\lambda(\eta)\)</span>, <span class="math inline">\(u(\eta)\)</span> and <span class="math inline">\(\E_{,uu}[u(\eta), \lambda(\eta); \bullet, \bullet]\)</span> were derived</p>
+<div class="cell" data-tags="[]" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>H0 <span class="op">=</span> E2</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>H1 <span class="op">=</span> E3 <span class="op">*</span> u1 <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> E2_dot</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>H2 <span class="op">=</span> (E4 <span class="op">*</span> u1 <span class="op">*</span> u1  <span class="op">+</span> E3 <span class="op">*</span> (u2_V <span class="op">+</span> u2_W) </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> λ<span class="dv">1</span> <span class="op">*</span> E3_dot <span class="op">*</span> u1 <span class="op">+</span> λ<span class="dv">1</span><span class="op">**</span><span class="dv">2</span> <span class="op">*</span> E2_ddot <span class="op">+</span> λ<span class="dv">2</span> <span class="op">*</span> E2_dot)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>H <span class="op">=</span> expand(H0 <span class="op">+</span> η <span class="op">*</span> H1 <span class="op">+</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> H2 <span class="op">+</span> O(η<span class="op">**</span><span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="23">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> χ<span class="dv">0</span><span class="er">_j</span> <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_l</span> <span class="op">*</span> w_jl <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> χ<span class="dv">0</span><span class="er">_j</span> <span class="op">*</span> w_jλ</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> χ<span class="dv">1</span><span class="er">_j</span> <span class="op">*</span> v_j <span class="op">+</span> y1</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_dict({</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r"\order[1]y"</span>: y1,</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r"\order[1]x"</span>: x1})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>display_latex_dict({</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r"\E_</span><span class="sc">{uu}</span><span class="vs">[u(\eta), λ(\eta)]"</span>: H</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \begin{align}\order[1]y&amp;={\order[0]{\chi_{j}}} {\order[1]{\lambda}} {w_{j\lambda}} + {\order[0]{\chi_{j}}} {\order[1]{\xi_{l}}} {w_{jl}}&amp;\order[1]x&amp;={\order[0]{\chi_{j}}} {\order[1]{\lambda}} {w_{j\lambda}} + {\order[0]{\chi_{j}}} {\order[1]{\xi_{l}}} {w_{jl}} + {\order[1]{\chi_{j}}} {v_{j}}\\\end{align}\)</span></p>
+<p><span class="math inline">\(\displaystyle \begin{align}\E_{uu}[u(\eta), λ(\eta)]&amp;=\dot{\E}_3 \eta^{2} {\order[1]{\lambda}} {\order[1]{u}} + \dot{\E}_2 \eta {\order[1]{\lambda}} + \frac{\dot{\E}_2 \eta^{2} {\order[2]{\lambda}}}{2} + \frac{\ddot{\E}_2 \eta^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\E_{4} \eta^{2} {\order[1]{u}}^{2}}{2} + \E_{3} \eta {\order[1]{u}} + \frac{\E_{3} \eta^{2} {\order[2]{u}_W}}{2} + \frac{\E_{3} \eta^{2} {\order[2]{u}_V}}{2} + \E_{2} + O\left(\eta^{3}\right)&amp;\end{align}\)</span></p>
 </div>
+</div>
+<p>We define the left-hand side and right-hand side of the variational problem that defines the eigenpairs <span class="math inline">\((\alpha, x)\)</span> at all orders.</p>
+<div class="cell" data-tags="[]" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>lhs <span class="op">=</span> (H <span class="op">*</span> x <span class="op">*</span> u_hat).subs(rules).expand()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>rhs <span class="op">=</span> (α <span class="op">*</span> x <span class="op">*</span> u_hat).subs(rules).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The terms of order 0, 1 and 2 in <span class="math inline">\(\eta\)</span> are identified below.</p>
+</section>
+<section id="the-variational-problem-of-order-0" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="the-variational-problem-of-order-0"><span class="header-section-number">7.2</span> The variational problem of order 0</h2>
+<div class="cell" data-tags="[]" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>lhs0 <span class="op">=</span> lhs.coeff(η, <span class="dv">0</span>).subs(rules)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>rhs0 <span class="op">=</span> rhs.coeff(η, <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The lowest-order problem reads: find <span class="math inline">\(\order[0]{x}_V \in V\)</span>, <span class="math inline">\(\order[0]{x}_W \in W\)</span> and <span class="math inline">\(\order[0]\alpha\in\reals\)</span> such that, for all <span class="math inline">\(\hat{u} \in U\)</span></p>
+<div class="cell" data-tags="[]" data-execution_count="7">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>display_latex_equation(lhs0, rhs0)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><span class="math inline">\(\displaystyle \E_{2} \hat{u} {\order[0]{x}_W}=\hat{u} {\order[0]{\alpha}} {\order[0]{x}_V} + \hat{u} {\order[0]{\alpha}} {\order[0]{x}_W}\)</span></p>
+</div>
+</div>
+<p>to be understood as</p>
+<p><span class="math display">\[
+\E_2(\order[0]x_W, \hat{u})
+= \order[0]\alpha \langle \order[0]x_V, \hat{u} \rangle
++ \order[0]\alpha \langle \order[0]x_W, \hat{u} \rangle.
+\]</span></p>
+<p>This variational equation is tested with an element <span class="math inline">\(\hat{w} \in W\)</span>. Then, <span class="math inline">\(\langle \order[0]{x}_W, \hat{w} \rangle\)</span> vanished and we are left with finding <span class="math inline">\(\order[0]{x}_W \in W\)</span> such that, for all <span class="math inline">\(\hat{w} \in W\)</span>,</p>
+<p><span class="math display">\[
+\E_2(\order[0]x_W, \hat{w})
+= \order[0]\alpha \langle \order[0]x_W, \hat{w} \rangle.
+\]</span></p>
+<p>If <span class="math inline">\(\order[0]{x}_W \neq 0\)</span>, then <span class="math inline">\(\order[0]{\alpha}\)</span> is an eigenvalue of <span class="math inline">\(\E_2\)</span> over <span class="math inline">\(W\)</span>. Therefore, <span class="math inline">\(\order[0]{\alpha} &gt; 0\)</span> and <span class="math inline">\(\alpha &gt; 0\)</span> in the vicinity of the critical point <span class="math inline">\(\lambda = \lambda_0\)</span>: the resulting eigenmode is <em>stable</em>. So, in order to find potentially unstable modes, we need to consider that <span class="math inline">\(\order[0]{x}_W = 0\)</span> and <span class="math inline">\(\order[0]{\alpha} = 0\)</span>.</p>
+<div class="cell" data-tags="[]" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>rules[α<span class="dv">0</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>rules[x0_W] <span class="op">=</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="variational-problem-of-order-2" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="variational-problem-of-order-2"><span class="header-section-number">7.3</span> Variational problem of order 2</h2>
-<p>The second-order term <span class="math inline">\(\order[2]x\)</span> is also decomposed as the sum of its projections onto <span class="math inline">\(V\)</span> and <span class="math inline">\(W = V^\perp\)</span></p>
-<div class="cell" data-execution_count="8">
+<section id="the-variational-problem-of-order-1" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="the-variational-problem-of-order-1"><span class="header-section-number">7.3</span> The variational problem of order 1</h2>
+<div class="cell" data-tags="[]" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>lhs1 <span class="op">=</span> lhs.coeff(η, <span class="dv">1</span>).subs(rules)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>rhs1 <span class="op">=</span> rhs.coeff(η, <span class="dv">1</span>).subs(rules)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The problem reads: find <span class="math inline">\(\order[O]x_V \in V\)</span>, <span class="math inline">\(\order[1]x_W \in W\)</span> and <span class="math inline">\(\order[1]\alpha\in\reals\)</span> such that, for all <span class="math inline">\(\hat{u} \in U\)</span></p>
+<div class="cell" data-tags="[]" data-execution_count="10">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> χ<span class="dv">2</span><span class="er">_j</span> <span class="op">*</span> v_j <span class="op">+</span> y2</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(<span class="vs">r"\order[2]x"</span>, x2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>display_latex_equation(lhs1, rhs1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \order[2]x={\order[2]{\chi_{j}}} {v_{j}} + {\order[2]{y}}\)</span></p>
+<p><span class="math inline">\(\displaystyle \E_{2} \hat{u} {\order[1]{x}_W} + \E_{3} \hat{u} {\order[0]{x}_V} {\order[1]{u}} + \dot{\E}_2 \hat{u} {\order[0]{x}_V} {\order[1]{\lambda}}=\hat{u} {\order[0]{x}_V} {\order[1]{\alpha}}\)</span></p>
 </div>
 </div>
-<p>where <span class="math inline">\(\order[2]y \in W\)</span>. We then plug the resulting asymptotic expansions of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(x\)</span> into the asymptotic expansions of <span class="math inline">\(\E_{,uu}(x, v_i)\)</span> and <span class="math inline">\(\alpha \, \langle x, v_i \rangle\)</span> and extract the second-order terms. Note that the <strong>test-function <span class="math inline">\(v_i\)</span> belongs to <span class="math inline">\(V\)</span></strong>. The resulting variational problem reads: find <span class="math inline">\(\order[1]\alpha, \order[1]{\chi}_1, \ldots, \order[1]{\chi}_m \in \reals\)</span> and <span class="math inline">\(\order[1]y \in W\)</span> such that, for all <span class="math inline">\(\hat{v} \in V\)</span></p>
-<div class="cell" data-execution_count="9">
+<p>Testing first with <span class="math inline">\(\hat{u} = v_i\)</span> delivers the following variational problem: find <span class="math inline">\(\order[0]{x}_V \in V\)</span> such that, for all <span class="math inline">\(i=1, \ldots, m\)</span></p>
+<div class="cell" data-tags="[]" data-execution_count="11">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>α <span class="op">=</span> α<span class="dv">0</span> <span class="op">+</span> η <span class="op">*</span> α<span class="dv">1</span> <span class="op">+</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> α<span class="dv">2</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> x0 <span class="op">+</span> η <span class="op">*</span> x1 <span class="op">+</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> x2</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># The substitution below makes the expression nicer</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>lhs_raw <span class="op">=</span> expand(E_uu <span class="op">*</span> x <span class="op">*</span> v_i).coeff(η, <span class="dv">2</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>rhs_raw <span class="op">=</span> expand(α <span class="op">*</span> x <span class="op">*</span> v_i).coeff(η, <span class="dv">2</span>) </span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(lhs_raw, rhs_raw)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    u_hat: v_[i],</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    x0_V : χ<span class="dv">0</span>[j] <span class="op">*</span> v_[j],</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    u1 : ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> v_[k]</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>lhs1a <span class="op">=</span> lhs1.subs(d).subs(rules)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>rhs1a <span class="op">=</span> rhs1.subs(d).subs(rules).subs(χ<span class="dv">0</span>[j] <span class="op">*</span> v_[j] <span class="op">*</span> v_[i], χ<span class="dv">0</span>[i])</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>display_latex_equation(lhs1a, rhs1a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle \frac{\E_{2} {\order[2]{\chi_{j}}} {v_{i}} {v_{j}}}{2} + \frac{\E_{2} {\order[2]{y}} {v_{i}}}{2} + \E_{3} {\order[0]{\chi_{j}}} {\order[1]{\lambda}} {\order[1]{\xi_{k}}} {v_{i}} {v_{j}} {w_{k\lambda}} + \E_{3} {\order[0]{\chi_{j}}} {\order[1]{\lambda}} {\order[1]{\xi_{k}}} {v_{i}} {v_{k}} {w_{j\lambda}} + \frac{\E_{3} {\order[0]{\chi_{j}}} {\order[1]{\xi_{k}}} {\order[1]{\xi_{l}}} {v_{i}} {v_{j}} {w_{kl}}}{2} + \E_{3} {\order[0]{\chi_{j}}} {\order[1]{\xi_{k}}} {\order[1]{\xi_{l}}} {v_{i}} {v_{k}} {w_{jl}} + \frac{\E_{3} {\order[0]{\chi_{j}}} {\order[2]{\xi_{k}}} {v_{i}} {v_{j}} {v_{k}}}{2} + \E_{3} {\order[1]{\chi_{j}}} {\order[1]{\xi_{k}}} {v_{i}} {v_{j}} {v_{k}} + \frac{\E_{4} {\order[0]{\chi_{j}}} {\order[1]{\xi_{k}}} {\order[1]{\xi_{l}}} {v_{i}} {v_{j}} {v_{k}} {v_{l}}}{2} + \frac{\ddot{\E}_2 {\order[0]{\chi_{j}}} {\order[1]{\lambda}}^{2} {v_{i}} {v_{j}}}{2} + \dot{\E}_2 {\order[0]{\chi_{j}}} {\order[1]{\lambda}}^{2} {v_{i}} {w_{j\lambda}} + \dot{\E}_2 {\order[0]{\chi_{j}}} {\order[1]{\lambda}} {\order[1]{\xi_{l}}} {v_{i}} {w_{jl}} + \frac{\dot{\E}_2 {\order[0]{\chi_{j}}} {\order[2]{\lambda}} {v_{i}} {v_{j}}}{2} + \dot{\E}_2 {\order[1]{\chi_{j}}} {\order[1]{\lambda}} {v_{i}} {v_{j}} + \dot{\E}_3 {\order[0]{\chi_{j}}} {\order[1]{\lambda}} {\order[1]{\xi_{k}}} {v_{i}} {v_{j}} {v_{k}}={\order[0]{\chi_{j}}} {\order[1]{\alpha}} {\order[1]{\lambda}} {v_{i}} {w_{j\lambda}} + {\order[0]{\chi_{j}}} {\order[1]{\alpha}} {\order[1]{\xi_{l}}} {v_{i}} {w_{jl}} + \frac{{\order[0]{\chi_{j}}} {\order[2]{\alpha}} {v_{i}} {v_{j}}}{2} + {\order[1]{\alpha}} {\order[1]{\chi_{j}}} {v_{i}} {v_{j}}\)</span></p>
+<p><span class="math inline">\(\displaystyle \E_{3} {\order[0]{\chi}}_{j} {v}_{i} {v}_{j} {v}_{k} {{\order[1]{\xi}}}_{k} + \dot{\E}_2 {\order[1]{\lambda}} {\order[0]{\chi}}_{j} {v}_{i} {v}_{j}={\order[1]{\alpha}} {\order[0]{\chi}}_{i}\)</span></p>
 </div>
 </div>
-<p>We then perform the following substitutions in the left-hand side</p>
-<ol type="1">
-<li>Cancellation of all terms involving <span class="math inline">\(\E_2\)</span>, since all multilinear forms involved in the left-hand side are evaluated at <span class="math inline">\(v_i\)</span> and <span class="math inline">\(\E_2(v_i, \bullet) = 0\)</span>.</li>
-<li>Renaming of some indices <span class="math display">\[\order[1]{\lambda} \, \order[0]{\chi}_j \, \order[1]{\xi}_l \, \dot{\E}_2(v_i, w_{jl}) \rightarrow \order[1]{\lambda} \, \order[0]{\chi}_j \, \order[1]{\xi}_k \, \dot{\E}_2(v_i, w_{jk})\]</span></li>
-<li>Symmetrization of some terms <span class="math display">\[\order[1]{\xi}_k \, \order[1]{\xi}_l \, v_k \, w_{jl} \rightarrow \tfrac{1}{2} \order[1]{\xi}_k \, \order[1]{\xi}_l \, \bigl(v_k \, w_{jl} + v_l \, w_{jk} \bigr)\]</span></li>
-<li>Introduction of the quantities <span class="math inline">\(E_{ij}\)</span>, <span class="math inline">\(\dot{E}_{ij}\)</span>, <span class="math inline">\(\ddot{E}_{ij}\)</span>, <span class="math inline">\(E_{ijk}\)</span>, <span class="math inline">\(\dot{E}_{ijk}\)</span>, <span class="math inline">\(E_{ijkl}\)</span> defined in <a href="setting-up_the_mathematical_stage.html#sec-20230528173310"><span>Section&nbsp;2.4</span></a>.</li>
-<li>Use of equations (<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.4</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.5</span></a>) that define <span class="math inline">\(w_{ij}\)</span> and <span class="math inline">\(w_{i\lambda}\)</span> <span class="math display">\[\E_3(v_i, v_j, w_{k\lambda}) \rightarrow -\E_2(w_{ij}, w_{k\lambda}) \quad \text{and} \quad \dot{\E}_2(v_i, w_{j\lambda}) \rightarrow -\E_2(w_{i\lambda}, w_{j\lambda})\]</span></li>
-</ol>
-<p>and in the right-hand side 1. <span class="math inline">\((v_i)\)</span> is orthonormal <span class="math display">\[\langle v_i, v_j \rangle \rightarrow \delta_{ij}\]</span> 2. <span class="math inline">\(v_i \in V\)</span> and <span class="math inline">\(w_{j\lambda}, w_{jl} \in W = V^\perp\)</span> are orthogonal <span class="math display">\[\langle v_i, w_{j\lambda} \rangle \rightarrow 0 \quad \text{and} \quad \langle v_i, w_{jl} \rangle \rightarrow 0\]</span></p>
-<p>The variational problem of order 2 then reduces to</p>
-<div class="cell" data-execution_count="10">
+<p>and Eq. (<a href="#eq-20230524065341"><span>7.2</span></a>) is retrieved.</p>
+<p>The test function is now picked in <span class="math inline">\(W = V^\perp\)</span> and we get the following variational problem: find <span class="math inline">\(\order[1]{x}_W \in W\)</span> such that, for all <span class="math inline">\(\hat{w} \in W\)</span>,</p>
+<div class="cell" data-tags="[]" data-execution_count="12">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>lhs <span class="op">=</span> (<span class="dv">2</span> <span class="op">*</span> lhs_raw).subs({</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Item 1</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    E2: <span class="dv">0</span>,</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Item 2</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    λ<span class="dv">1</span> <span class="op">*</span> χ<span class="dv">0</span><span class="er">_j</span> <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_l</span> <span class="op">*</span> E2_dot <span class="op">*</span> v_i <span class="op">*</span> w_jl: λ<span class="dv">1</span> <span class="op">*</span> χ<span class="dv">0</span><span class="er">_j</span> <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_k</span> <span class="op">*</span> E2_dot <span class="op">*</span> v_i <span class="op">*</span> w_jk,</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Item 3</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    χ<span class="dv">0</span><span class="er">_j</span> <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_k</span> <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_l</span> <span class="op">*</span> E3 <span class="op">*</span> v_i <span class="op">*</span> v_k <span class="op">*</span> w_jl : χ<span class="dv">0</span><span class="er">_j</span> <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_k</span> <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_l</span> <span class="op">*</span> E3 <span class="op">*</span> v_i <span class="op">*</span> (v_k <span class="op">*</span> w_jl <span class="op">+</span> v_l <span class="op">*</span> w_jk) <span class="op">/</span> <span class="dv">2</span>,</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Item 4</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    E2_dot <span class="op">*</span> v_i <span class="op">*</span> v_j: E_dot_ij,</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    E2_ddot <span class="op">*</span> v_i <span class="op">*</span> v_j : E_ddot_ij <span class="op">-</span> E2_dot <span class="op">*</span> v_i <span class="op">*</span> w_jλ <span class="op">-</span> E2_dot <span class="op">*</span> v_j <span class="op">*</span> w_iλ,</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    E3 <span class="op">*</span> v_i <span class="op">*</span> v_j <span class="op">*</span> v_k: E_ijk,</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    E3_dot <span class="op">*</span> v_i <span class="op">*</span> v_j <span class="op">*</span> v_k : E_dot_ijk <span class="op">-</span> E2_dot <span class="op">*</span> v_i <span class="op">*</span> w_jk <span class="op">-</span> E2_dot <span class="op">*</span> v_j <span class="op">*</span> w_ik <span class="op">-</span> E2_dot <span class="op">*</span> v_k <span class="op">*</span> w_ij,</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    E4 <span class="op">*</span> v_i <span class="op">*</span> v_j <span class="op">*</span> v_k <span class="op">*</span> v_l: E_ijkl <span class="op">-</span> E3 <span class="op">*</span> v_i <span class="op">*</span> v_j <span class="op">*</span> w_kl <span class="op">-</span> E3 <span class="op">*</span> v_i <span class="op">*</span> v_k <span class="op">*</span> w_jl <span class="op">-</span> E3 <span class="op">*</span> v_i <span class="op">*</span> v_l <span class="op">*</span> w_jk,</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Item 5</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    E3 <span class="op">*</span> v_i <span class="op">*</span> v_j <span class="op">*</span> w_kλ: <span class="op">-</span>E2 <span class="op">*</span> w_ij <span class="op">*</span> w_kλ,</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    E3 <span class="op">*</span> v_i <span class="op">*</span> v_k <span class="op">*</span> w_jλ: <span class="op">-</span>E2 <span class="op">*</span> w_ik <span class="op">*</span> w_jλ,</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    E2_dot <span class="op">*</span> v_i <span class="op">*</span> w_jλ: <span class="op">-</span>E2 <span class="op">*</span> w_iλ <span class="op">*</span> w_jλ,</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    E2_dot <span class="op">*</span> v_j <span class="op">*</span> w_iλ: <span class="op">-</span>E2 <span class="op">*</span> w_iλ <span class="op">*</span> w_jλ,</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    E2_dot <span class="op">*</span> v_j <span class="op">*</span> w_ik: <span class="op">-</span>E2 <span class="op">*</span> w_jλ <span class="op">*</span> w_ik,</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    E2_dot <span class="op">*</span> v_k <span class="op">*</span> w_ij: <span class="op">-</span>E2 <span class="op">*</span> w_kλ <span class="op">*</span> w_ij</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>}).expand()</span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>rhs <span class="op">=</span> (<span class="dv">2</span> <span class="op">*</span> rhs_raw).subs({</span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    v_i <span class="op">*</span> w_jλ: <span class="dv">0</span>,</span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    v_i <span class="op">*</span> w_jl: <span class="dv">0</span>,</span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    v_i <span class="op">*</span> v_j <span class="op">*</span> χ<span class="dv">0</span><span class="er">_j</span>: χ<span class="dv">0</span><span class="er">_i</span>,</span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    v_i <span class="op">*</span> v_j <span class="op">*</span> χ<span class="dv">1</span><span class="er">_j</span>: χ<span class="dv">1</span><span class="er">_i</span></span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>lsk.display_latex_equation(lhs, rhs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    u_hat: w_hat,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    x0_V : χ<span class="dv">0</span>[i] <span class="op">*</span> v_[i],</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    u1 : ξ<span class="dv">1</span><span class="er">_</span>[j] <span class="op">*</span> v_[j]</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>lhs1b <span class="op">=</span> lhs1.subs(d).subs(rules)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>rhs1b <span class="op">=</span> rhs1.subs(d).subs(rules).subs(v_[i] <span class="op">*</span> w_hat, <span class="dv">0</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>display_latex_equation(lhs1b, rhs1b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><span class="math inline">\(\displaystyle E_{ijkl} {\order[0]{\chi_{j}}} {\order[1]{\xi_{k}}} {\order[1]{\xi_{l}}} + E_{ijk} {\order[0]{\chi_{j}}} {\order[2]{\xi_{k}}} + 2 E_{ijk} {\order[1]{\chi_{j}}} {\order[1]{\xi_{k}}} + \ddot{E}_{ij} {\order[0]{\chi_{j}}} {\order[1]{\lambda}}^{2} + 2 \dot{E}_{ijk} {\order[0]{\chi_{j}}} {\order[1]{\lambda}} {\order[1]{\xi_{k}}} + \dot{E}_{ij} {\order[0]{\chi_{j}}} {\order[2]{\lambda}} + 2 \dot{E}_{ij} {\order[1]{\chi_{j}}} {\order[1]{\lambda}}={\order[0]{\chi_{i}}} {\order[2]{\alpha}} + 2 {\order[1]{\alpha}} {\order[1]{\chi_{i}}}\)</span></p>
+<p><span class="math inline">\(\displaystyle \E_{2} \hat{w} {\order[1]{x}_W} + \E_{3} \hat{w} {\order[0]{\chi}}_{i} {v}_{i} {v}_{j} {{\order[1]{\xi}}}_{j} + \dot{\E}_2 \hat{w} {\order[1]{\lambda}} {\order[0]{\chi}}_{i} {v}_{i}=0\)</span></p>
 </div>
 </div>
-<p>which upon reordering delivers Eq. (<a href="#eq-20230524065110"><span>7.2</span></a>).</p>
+<p>(observe that, in the RHS, <span class="math inline">\(\langle v_i, \hat{w} \rangle = 0\)</span> since <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are orthogonal subspaces). The solution to the above problem is expressed as a linear combination of the <span class="math inline">\(w_{ij}\)</span> and <span class="math inline">\(w_i\)</span> –defined by the variational problems (<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.4</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.5</span></a>), respectively–, delivering Eq. (<a href="#eq-20230626163655"><span>7.1</span></a>).</p>
+<div class="cell" data-tags="[]" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>rules[x1_W] <span class="op">=</span> χ<span class="dv">0</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l] <span class="op">*</span> w_[k, l] <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> χ<span class="dv">0</span>[k] <span class="op">*</span> w_[k]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="the-variational-problem-of-order-2" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="the-variational-problem-of-order-2"><span class="header-section-number">7.4</span> The variational problem of order 2</h2>
+<p>The terms of second order are tested against elements of <span class="math inline">\(V\)</span> only.</p>
+<div class="cell" data-tags="[]" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> expand(<span class="dv">2</span> <span class="op">*</span> lhs.coeff(η, <span class="dv">2</span>).subs(u_hat, v_[i]).subs(rules))</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>rhs2 <span class="op">=</span> expand(<span class="dv">2</span> <span class="op">*</span> rhs.coeff(η, <span class="dv">2</span>).subs(u_hat, v_[i]).subs(rules))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Simplification of these expressions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use some orthogonality conditions in the right-hand side.</p>
+<div class="cell" data-tags="[]" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>rhs2 <span class="op">=</span> rhs2.subs({</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    x0_V <span class="op">*</span> v_[i]: χ<span class="dv">0</span>[i],</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    x1_V <span class="op">*</span> v_[i]: χ<span class="dv">1</span>[i],</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    v_[i] <span class="op">*</span> w_[k]: <span class="dv">0</span>,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    v_[i] <span class="op">*</span> w_[k, l]: <span class="dv">0</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Plug expansions <span class="math display">\[
+\order[1]{u} = \order[1]{\xi}_i \, v_i,
+\quad
+\order[2]{u}_V = \order[2]{\xi}_i \, v_i,
+\quad
+\order[0]{x}_V = \order[0]{\chi}_i \, v_i,
+\quad \text{and} \quad
+\order[1]{x}_V = \order[1]{\chi}_i \, v_i.
+\]</span></p>
+<div class="cell" data-tags="[]" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>d[E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> x0_V] <span class="op">=</span> χ<span class="dv">0</span>[j] <span class="op">*</span> E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> v_[j]</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>d[E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> x1_V] <span class="op">=</span> χ<span class="dv">1</span>[j] <span class="op">*</span> E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> v_[j]</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>d[E2_ddot <span class="op">*</span> x0_V <span class="op">*</span> v_[i]] <span class="op">=</span> χ<span class="dv">0</span>[j] <span class="op">*</span> E2_ddot <span class="op">*</span> v_[i] <span class="op">*</span> v_[j]</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>d[E3 <span class="op">*</span> v_[i] <span class="op">*</span> x1_V <span class="op">*</span> u1] <span class="op">=</span> χ<span class="dv">1</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> E3 <span class="op">*</span> v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> v_[k]</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>d[E3 <span class="op">*</span> v_[i] <span class="op">*</span> x0_V <span class="op">*</span> u2_V] <span class="op">=</span> χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">2</span><span class="er">_</span>[k] <span class="op">*</span> E3 <span class="op">*</span> v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> v_[k]</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>d[E3_dot <span class="op">*</span> v_[i] <span class="op">*</span> x0_V <span class="op">*</span> u1] <span class="op">=</span> χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> E3_dot <span class="op">*</span> v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> v_[k]</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>d[E4 <span class="op">*</span> v_[i] <span class="op">*</span> x0_V <span class="op">*</span> u1 <span class="op">*</span> u1] <span class="op">=</span> χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l] <span class="op">*</span> E4 <span class="op">*</span> v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> v_[k] <span class="op">*</span> v_[l]</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> lhs2.subs(d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Rename some indices.</p>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> lhs2.subs({</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    χ<span class="dv">0</span>[k] <span class="op">*</span> E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> w_[k]: χ<span class="dv">0</span>[j] <span class="op">*</span> E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> w_[j],</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    χ<span class="dv">0</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l] <span class="op">*</span> w_[k, l]: χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> w_[j, k]</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>})  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><span class="math display">\[
+\begin{aligned}
+\E_3(\order[0]{x}_V, \order[2]{u}_W, v_i)
+={} &amp; \order[0]{\chi}_j \, \order[1]{\xi}_k \, \bigl[
+\order[1]{\xi}_l \, \E_3(v_i, v_j, w_{kl})
++ 2\order[1]{\lambda} \, \E_3(v_i, v_j, w_k) \bigr]\\
+={} &amp; \order[0]{\chi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \E_3(v_i, v_j, w_{kl})
++ 2\order[1]{\lambda} \, \order[0]{\chi}_j \, \order[1]{\xi}_k \, \dot{\E}_2(v_k, w_{ij})
+\end{aligned}
+\]</span></p>
+<div class="cell" data-tags="[]" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> lhs2.subs(E3 <span class="op">*</span> v_[i] <span class="op">*</span> x0_V <span class="op">*</span> u2_W,</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>                 (χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l] <span class="op">*</span> E3 <span class="op">*</span> v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> w_[k,l]</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>                  <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> λ<span class="dv">1</span> <span class="op">*</span> χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> E2_dot <span class="op">*</span> v_[k] <span class="op">*</span> w_[i, j])).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><span class="math display">\[
+\order[0]{\chi}_k \, \E_3(v_i, \order[1]{u}, w_k)
+= \order[0]{\chi}_j \, \order[1]{\xi}_k \, \E_3(v_i, v_k, w_j)
+= \order[0]{\chi}_j \, \order[1]{\xi}_k \, \dot{\E}_2(v_j, w_{ik})
+\]</span></p>
+<div class="cell" data-tags="[]" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> lhs2.subs(χ<span class="dv">0</span>[k] <span class="op">*</span> E3 <span class="op">*</span> v_[i] <span class="op">*</span> u1 <span class="op">*</span> w_[k],</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>                 χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> E2_dot <span class="op">*</span> v_[j] <span class="op">*</span> w_[i, k]).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><span class="math display">\[
+\begin{aligned}
+\order[0]{\chi}_j \, \order[1]{\xi}_k \, \E_3(v_i, w_{j, k}, \order[1]{u})
+= {} &amp; \order[0]{\chi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \E_3(v_i, v_l, w_{j, k})\\
+&amp;= \tfrac{1}{2} \order[0]{\chi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l \, \bigl[ \E_3(v_i, v_k, w_{j, l}) + \E_3(v_i, v_l, w_{j, k}) \bigr]
+\end{aligned}
+\]</span></p>
+<div class="cell" data-tags="[]" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> lhs2.subs(χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> E3 <span class="op">*</span> v_[i] <span class="op">*</span> w_[j, k] <span class="op">*</span> u1,</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>                 χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l] <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> (E3 <span class="op">*</span> v_[i] <span class="op">*</span> v_[k] <span class="op">*</span> w_[j, l]</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>                                                <span class="op">+</span> E3 <span class="op">*</span> v_[i] <span class="op">*</span> v_[l] <span class="op">*</span> w_[j, k])).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> lhs2.subs({</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> v_[j]: E_dot_[i, j],</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    E2_ddot <span class="op">*</span> v_[i] <span class="op">*</span> v_[j]: (E_ddot_[i, j] <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> w_[j]),</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    E3 <span class="op">*</span> v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> v_[k]: E_[i, j, k],</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    E3_dot <span class="op">*</span> v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> v_[k]: (E_dot_[i, j, k]</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>                                     <span class="op">-</span> E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> w_[j, k]</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>                                     <span class="op">-</span> E2_dot <span class="op">*</span> v_[j] <span class="op">*</span> w_[i, k]</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>                                     <span class="op">-</span> E2_dot <span class="op">*</span> v_[k] <span class="op">*</span> w_[i, j]),</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    E4 <span class="op">*</span>v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> v_[k] <span class="op">*</span> v_[l]: (E_[i, j, k, l] </span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>                                        <span class="op">-</span> E3 <span class="op">*</span> v_[i] <span class="op">*</span> (v_[j] <span class="op">*</span> w_[k, l]</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>                                                        <span class="op">+</span> v_[k] <span class="op">*</span> w_[j, l]</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>                                                        <span class="op">+</span> v_[l] <span class="op">*</span> w_[j, k]))</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>}).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<p>And Eq. (<a href="#eq-20230524065110"><span>7.3</span></a>) is finally retrieved.</p>
+<div class="cell" data-tags="[]" data-execution_count="22">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>expected <span class="op">=</span> ((E_[i, j, k, l] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l]</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>            <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> (<span class="dv">2</span> <span class="op">*</span> E_dot_[i, j, k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> E_ddot_[i, j])</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>            <span class="op">+</span> E_[i, j, k] <span class="op">*</span> ξ<span class="dv">2</span><span class="er">_</span>[k]</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>            <span class="op">+</span> λ<span class="dv">2</span> <span class="op">*</span> E_dot_[i, j]) <span class="op">*</span> χ<span class="dv">0</span>[j]</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>            <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> (E_[i, j, k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> E_dot_[i, j]) <span class="op">*</span> χ<span class="dv">1</span>[j])</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> expand(lhs2 <span class="op">-</span> expected) <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>expected <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> α<span class="dv">1</span> <span class="op">*</span> χ<span class="dv">1</span>[i] <span class="op">+</span> α<span class="dv">2</span> <span class="op">*</span> χ<span class="dv">0</span>[i]</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> expand(rhs2 <span class="op">-</span> expected) <span class="op">==</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 
 
 </section>
@@ -519,23 +573,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
+    target: function(trigger) {
+      return trigger.previousElementSibling;
     }
   });
   clipboard.on('success', function(e) {
@@ -600,92 +640,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

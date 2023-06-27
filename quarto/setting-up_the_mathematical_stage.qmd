@@ -94,15 +94,15 @@ problem
 $$
 \E_2(w, \hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W
 $$
-is $w = 0$. For $\ell(\bullet) = \E_3(v_i, v_j, \bullet)$ and $\ell(\bullet) = \dot{\E}_2(v_i, \bullet),$ $w_{ij} \in W$
-and $w_{i\lambda} \in W$ are defined as the unique solutions in $W$ of the following variational problems
+is $w = 0$. For  $\ell(\bullet) = \dot{\E}_2(v_i, \bullet)$ and $\ell(\bullet) = \E_3(v_i, v_j, \bullet)$, $w_i \in W$
+and $w_{ij} \in W$ are defined as the unique solutions in $W$ of the following variational problems
 $$
-\E_2(w_{ij}, \hat{w}) + \E_3(v_i, v_j, \hat{w}) = 0
-$$ {#eq-20230107180410}
+\E_2(w_{i}, \hat{w}) + \dot{\E}_2(v_i, \hat{w}) = 0
+$$ {#eq-20230107180501}
 and
 $$
-\E_2(w_{i\lambda}, \hat{w}) + \dot{\E}_2(v_i, \hat{w}) = 0,
-$$ {#eq-20230107180501}
+\E_2(w_{ij}, \hat{w}) + \E_3(v_i, v_j, \hat{w}) = 0,
+$$ {#eq-20230107180410}
 for all $\hat{w} \in W$. These variational problems (and their solutions) will pop-up recurrently in what follows.
 
 ## Additional symbols {#sec-20230528173310}
@@ -112,7 +112,7 @@ $$
 \dot{E}_{ij} = \dot{\E}_2(v_i, v_j),
 $$ {#eq-20230125062505}
 $$
-\ddot{E}_{ij} = \ddot{\E}_2(v_i, v_j) + \dot{\E}_2(v_i, w_{j\lambda}) + \dot{\E}_2(v_j, w_{i\lambda}),
+\ddot{E}_{ij} = \ddot{\E}_2(v_i, v_j) + \dot{\E}_2(v_i, w_{j}) + \dot{\E}_2(v_j, w_{i}),
 $$ {#eq-20230124211207}
 $$
 E_{ijk} = \E_3(v_i, v_j, v_k),
@@ -135,7 +135,7 @@ These symbols define second, third and fourth-order, fully symmetric, tensors ov
 Since $\E_2(v, \bullet) = 0$ for all $v \in V$, definitions (@eq-20230125062505) and (@eq-20230125062510) of $\dot{E}_{ij}$ and
 $E_{ijk}$ can also be written
 $$
-\dot{E}_{ij} = \dot{\E}_2(v_i, v_j) + \E_2(v_i, w_{j\lambda}) + \E_2(v_j, w_{i\lambda})
+\dot{E}_{ij} = \dot{\E}_2(v_i, v_j) + \E_2(v_i, w_{j}) + \E_2(v_j, w_{i})
 $$
 and
 $$

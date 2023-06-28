@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 6&nbsp; Asymptotic expansion of the energy and its hessian</title>
+<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 5&nbsp; Asymptotic expansion of the energy and its hessian</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,7 +134,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -169,27 +169,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./identities.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Some useful identities</span></a>
+  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
+  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
+  <a href="./energy.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./energy.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></a>
+  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
+  <a href="./symbols.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The <code>lsk.symbols</code> module</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -206,8 +206,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-20230624093831" id="toc-sec-20230624093831" class="nav-link active" data-scroll-target="#sec-20230624093831"><span class="toc-section-number">6.1</span>  Asymptotic expansion of the energy</a></li>
-  <li><a href="#sec-20230624093943" id="toc-sec-20230624093943" class="nav-link" data-scroll-target="#sec-20230624093943"><span class="toc-section-number">6.2</span>  Asymptotic expansion of the hessian of the energy</a></li>
+  <li><a href="#sec-20230624093831" id="toc-sec-20230624093831" class="nav-link active" data-scroll-target="#sec-20230624093831"><span class="toc-section-number">5.1</span>  Asymptotic expansion of the energy</a></li>
+  <li><a href="#sec-20230624093943" id="toc-sec-20230624093943" class="nav-link" data-scroll-target="#sec-20230624093943"><span class="toc-section-number">5.2</span>  Asymptotic expansion of the hessian of the energy</a></li>
   </ul>
 </nav>
     </div>
@@ -216,7 +216,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-20230523130742" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></span></h1>
+<h1 class="title"><span id="sec-20230523130742" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></span></h1>
 </div>
 
 
@@ -232,7 +232,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <p>This notebook uses <span class="math inline">\(\LaTeX\newcommand{\D}{\mathrm{d}}\newcommand{\E}{\mathcal{E}}\newcommand{\order}[2][1]{#2^{(#1)}}\newcommand{\reals}{\mathbb{R}}\)</span> custom macros.</p>
-<p>The present chapter is organized as follows. In <a href="#sec-20230624093831"><span>Section&nbsp;6.1</span></a>, we derive the following asymptotic expansion of the energy along the bifurcated branch</p>
+<p>The present chapter is organized as follows. In <a href="#sec-20230624093831"><span>Section&nbsp;5.1</span></a>, we derive the following asymptotic expansion of the energy along the bifurcated branch</p>
 <p><span id="eq-20230528190539"><span class="math display">\[
 \begin{aligned}[b]
 \E[u(\eta), \lambda(\eta)] ={}&amp; \E[u^\ast \circ \lambda(\eta), \lambda(\eta)]
@@ -240,8 +240,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 &amp;+ \tfrac{1}{24} \eta^4 \, \bigl\{ E_{ijkl} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l + 4\order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k\\
 &amp;+ 6 \bigl[ \bigl( \order[1]{\lambda} \bigr)^2 \, \ddot{E}_{ij} + \order[2]{\lambda} \, \dot{E}_{ij} \bigr] \, \order[1]{\xi}_i \, \order[1]{\xi}_j \bigr\} + o(\eta^4).
 \end{aligned}
-\tag{6.1}\]</span></span></p>
-<p>Then, in <a href="#sec-20230624093943"><span>Section&nbsp;6.2</span></a>, we derive the asymptotic expansion of the hessian of the energy along the bifurcated branch</p>
+\tag{5.1}\]</span></span></p>
+<p>Then, in <a href="#sec-20230624093943"><span>Section&nbsp;5.2</span></a>, we derive the asymptotic expansion of the hessian of the energy along the bifurcated branch</p>
 <p><span id="eq-20230517061452"><span class="math display">\[
 \begin{aligned}[b]
 \E_{,uu}[u(\eta), \lambda(\eta); \bullet, \bullet] ={}
@@ -251,12 +251,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 &amp;+ 2\order[1]{\lambda} \, \dot{\E}_3(\order[1]{u}, \bullet, \bullet)
 + (\order[1]{\lambda})^2 \, \ddot{\E}_2(\bullet, \bullet) + \order[2]{\lambda} \, \dot{\E}_2(\bullet, \bullet)\bigr].
 \end{aligned}
-\tag{6.2}\]</span></span></p>
+\tag{5.2}\]</span></span></p>
 <div class="cell" data-tags="[]" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lsk2 <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>As in <a href="bifurcation_equations.html"><span>Chapter&nbsp;5</span></a>, <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(u^\star\)</span> are defined as asymptotic expansions of the powers of <span class="math inline">\(\eta\)</span>.</p>
+<p>As in <a href="bifurcation_equations.html"><span>Chapter&nbsp;4</span></a>, <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(u^\star\)</span> are defined as asymptotic expansions of the powers of <span class="math inline">\(\eta\)</span>.</p>
 <div class="cell" data-tags="[]" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>λ <span class="op">=</span> η <span class="op">*</span> λ<span class="dv">1</span> <span class="op">+</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> λ<span class="dv">2</span> <span class="op">+</span> η<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> <span class="dv">6</span> <span class="op">*</span> λ<span class="dv">3</span> <span class="op">+</span> η<span class="op">**</span><span class="dv">4</span> <span class="op">/</span> <span class="dv">24</span> <span class="op">*</span> λ<span class="dv">4</span> <span class="op">+</span> O(η<span class="op">**</span><span class="dv">5</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>u_star <span class="op">=</span> create_u_star(λ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -282,7 +282,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 \quad \text{and} \quad
 \order[2]{u}_W \in W.
 \]</span></p>
-<p>It was in fact shown in <a href="bifurcation_equations.html"><span>Chapter&nbsp;5</span></a> that</p>
+<p>It was in fact shown in <a href="bifurcation_equations.html"><span>Chapter&nbsp;4</span></a> that</p>
 <p><span class="math display">\[
 \order[2]{u}_W
 = \order[1]{\xi}_i \, \order[1]{\xi}_j \, w_{ij}
@@ -304,14 +304,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math inline">\(\displaystyle u(\eta)=\eta {\order[1]{u}} + \frac{\eta^{2} {\order[2]{u}_W}}{2} + \frac{\eta^{2} {\order[2]{u}_V}}{2} + \frac{\eta^{3} {\order[3]{u}}}{6} + \frac{\eta^{4} {\order[4]{u}}}{24} + \dot{u}_0 \eta {\order[1]{\lambda}} + \frac{\dot{u}_0 \eta^{2} {\order[2]{\lambda}}}{2} + \frac{\dot{u}_0 \eta^{3} {\order[3]{\lambda}}}{6} + \frac{\dot{u}_0 \eta^{4} {\order[4]{\lambda}}}{24} + \frac{\ddot{u}_0 \eta^{2} {\order[1]{\lambda}}^{2}}{2} + \frac{\ddot{u}_0 \eta^{3} {\order[1]{\lambda}} {\order[2]{\lambda}}}{2} + \frac{\ddot{u}_0 \eta^{4} {\order[2]{\lambda}}^{2}}{8} + \frac{\ddot{u}_0 \eta^{4} {\order[1]{\lambda}} {\order[3]{\lambda}}}{6} + \frac{\dddot{u}_0 \eta^{3} {\order[1]{\lambda}}^{3}}{6} + \frac{\dddot{u}_0 \eta^{4} {\order[1]{\lambda}}^{2} {\order[2]{\lambda}}}{4} + \frac{\ddddot{u}_0 \eta^{4} {\order[1]{\lambda}}^{4}}{24} + O\left(\eta^{5}\right)\)</span></p>
 </div>
 </div>
-<section id="sec-20230624093831" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="sec-20230624093831"><span class="header-section-number">6.1</span> Asymptotic expansion of the energy</h2>
+<section id="sec-20230624093831" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="sec-20230624093831"><span class="header-section-number">5.1</span> Asymptotic expansion of the energy</h2>
 <p>We expand the following quantity at the critical point</p>
 <p><span class="math display">\[
 \Delta\E(\eta) = \E[u(\eta), \lambda(\eta)] - \E[u^\ast \circ \lambda(\eta), \lambda(\eta)],
 \]</span></p>
-<p>where <span class="math inline">\(\eta\)</span> is the parametrization of the bifurcated branch introduced in <a href="bifurcation_equations.html"><span>Chapter&nbsp;5</span></a> (<span class="math inline">\(\eta = 0\)</span> at the critical point).</p>
-<p>The asymptotic expansion of <span class="math inline">\(\Delta\E\)</span> results from plugging the expansions of <span class="math inline">\(\lambda(\eta)\)</span> and <span class="math inline">\(u(\eta)\)</span> defined above into the general expression of the energy that was derived in <a href="setting-up_the_computational_stage.html"><span>Chapter&nbsp;4</span></a>.</p>
+<p>where <span class="math inline">\(\eta\)</span> is the parametrization of the bifurcated branch introduced in <a href="bifurcation_equations.html"><span>Chapter&nbsp;4</span></a> (<span class="math inline">\(\eta = 0\)</span> at the critical point).</p>
+<p>The asymptotic expansion of <span class="math inline">\(\Delta\E\)</span> results from plugging the expansions of <span class="math inline">\(\lambda(\eta)\)</span> and <span class="math inline">\(u(\eta)\)</span> defined above into the general expression of the energy that was derived in <a href="setting-up_the_computational_stage.html"><span>Chapter&nbsp;3</span></a>.</p>
 <p>We then use these expansions to evaluate the energy along the <strong>fundamental</strong> and <strong>bifurcated</strong> branches, as well as the difference <span class="math inline">\(\Delta\E\)</span> of these two quantities. The resulting expressions are too long to be displayed. We first apply some elementary simplifications.</p>
 <div class="cell" data-tags="[]" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>E_star <span class="op">=</span> create_E(u_star, λ).expand()</span>
@@ -332,7 +332,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span id="eq-20230624180403"><span class="math display">\[
 \E_3(\order[1]{u}, \order[1]{u}, v)
 = -2\order[1]{\lambda} \, \dot{\E}_2(\order[1]{u}, v).
-\tag{6.3}\]</span></span></p>
+\tag{5.3}\]</span></span></p>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -354,7 +354,7 @@ Proof
 = -2\order[1]{\lambda} \, \dot{\E}_2(\order[1]{u}, v),
 \end{aligned}
 \]</span></p>
-<p>where we have used the definitions (<a href="setting-up_the_mathematical_stage.html#eq-20230125062505"><span>2.6</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230125062510"><span>2.8</span></a>) of <span class="math inline">\(\dot{E}_{ij}\)</span> and <span class="math inline">\(E_{ijk}\)</span> and the first bifurcation equation (<a href="bifurcation_equations.html#eq-20230125062336"><span>5.4</span></a>).</p>
+<p>where we have used the definitions (<a href="setting-up_the_mathematical_stage.html#eq-20230125062505"><span>2.6</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230125062510"><span>2.8</span></a>) of <span class="math inline">\(\dot{E}_{ij}\)</span> and <span class="math inline">\(E_{ijk}\)</span> and the first bifurcation equation (<a href="bifurcation_equations.html#eq-20230125062336"><span>4.4</span></a>).</p>
 </div>
 </div>
 </div>
@@ -368,7 +368,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Note that the first bifurcation equation was used to prove Eq. (<a href="#eq-20230624180403"><span>6.3</span></a>).</p>
+<p>Note that the first bifurcation equation was used to prove Eq. (<a href="#eq-20230624180403"><span>5.3</span></a>).</p>
 </div>
 </div>
 <div class="cell" data-execution_count="9">
@@ -379,7 +379,7 @@ Note
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>ΔE <span class="op">=</span> ΔE.subs(d).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The subsequent simplifications rely heavily on definitions (<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.4</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.5</span></a>) of <span class="math inline">\(w_{ij}\)</span> and <span class="math inline">\(w_{i}\)</span>, definitions (<a href="setting-up_the_mathematical_stage.html#eq-20230125062505"><span>2.6</span></a>), (<a href="setting-up_the_mathematical_stage.html#eq-20230124211207"><span>2.7</span></a>), (<a href="setting-up_the_mathematical_stage.html#eq-20230125062510"><span>2.8</span></a>), (<a href="setting-up_the_mathematical_stage.html#eq-20230124210649"><span>2.9</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230124210049"><span>2.10</span></a>) of <span class="math inline">\(\dot{E}_{ij}\)</span>, <span class="math inline">\(\ddot{E}_{ij}\)</span>, <span class="math inline">\(E_{ijk}\)</span>, <span class="math inline">\(\dot{E}_{ijk}\)</span> and <span class="math inline">\(E_{ijkl}\)</span>. Finally, expressions (<a href="bifurcation_equations.html#eq-20230411141319"><span>5.3</span></a>) of <span class="math inline">\(\order[1]{u}\)</span> and <span class="math inline">\(\order[2]{u}\)</span> are used.</p>
+<p>The subsequent simplifications rely heavily on definitions (<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.5</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.4</span></a>) of <span class="math inline">\(w_{ij}\)</span> and <span class="math inline">\(w_{i}\)</span>, definitions (<a href="setting-up_the_mathematical_stage.html#eq-20230125062505"><span>2.6</span></a>), (<a href="setting-up_the_mathematical_stage.html#eq-20230124211207"><span>2.7</span></a>), (<a href="setting-up_the_mathematical_stage.html#eq-20230125062510"><span>2.8</span></a>), (<a href="setting-up_the_mathematical_stage.html#eq-20230124210649"><span>2.9</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230124210049"><span>2.10</span></a>) of <span class="math inline">\(\dot{E}_{ij}\)</span>, <span class="math inline">\(\ddot{E}_{ij}\)</span>, <span class="math inline">\(E_{ijk}\)</span>, <span class="math inline">\(\dot{E}_{ijk}\)</span> and <span class="math inline">\(E_{ijkl}\)</span>. Finally, expressions (<a href="bifurcation_equations.html#eq-20230411141319"><span>4.3</span></a>) of <span class="math inline">\(\order[1]{u}\)</span> and <span class="math inline">\(\order[2]{u}\)</span> are used.</p>
 <p><span id="eq-20230619212620"><span class="math display">\[
 \begin{aligned}[b]
 \E_2(\order[2]{u}_W, \order[2]{u}_W)
@@ -393,7 +393,7 @@ Note
 &amp;+ 2 \bigl( \order[1]{\lambda} \bigr)^2 \, \bigl[ \ddot{\E}_2(\order[1]{u}, \order[1]{u})
 - \ddot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \bigr]
 \end{aligned}
-\tag{6.4}\]</span></span></p>
+\tag{5.4}\]</span></span></p>
 <div class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>expr <span class="op">=</span> ((E4 <span class="op">*</span> u1 <span class="op">*</span> u1 <span class="op">*</span> u1 <span class="op">*</span> u1</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>         <span class="op">-</span> E_[i, j, k, l] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[i] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l]) <span class="op">/</span> <span class="dv">3</span></span>
@@ -475,8 +475,8 @@ Proof
 \order[4]{\Delta\E} ={} &amp; E_{ijkl} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k \, \order[1]{\xi}_l + 4\order[1]{\lambda} \, \dot{E}_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k\\
 &amp;+ 6 \bigl[ \bigl( \order[1]{\lambda} \bigr)^2 \, \ddot{E}_{ij} + \order[2]{\lambda} \, \dot{E}_{ij} \bigr] \, \order[1]{\xi}_i \, \order[1]{\xi}_j.
 \end{aligned}
-\tag{6.5}\]</span></span></p>
-<p>and the asymptotic expansion (<a href="#eq-20230528190539"><span>6.1</span></a>) is retrieved.</p>
+\tag{5.5}\]</span></span></p>
+<p>and the asymptotic expansion (<a href="#eq-20230528190539"><span>5.1</span></a>) is retrieved.</p>
 <div class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ΔE3 <span class="op">=</span> expand(<span class="dv">6</span> <span class="op">*</span> ΔE.coeff(η, <span class="dv">3</span>))</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>ΔE4 <span class="op">=</span> expand(<span class="dv">24</span> <span class="op">*</span> ΔE.coeff(η, <span class="dv">4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -504,8 +504,8 @@ Proof
 </div>
 </div>
 </section>
-<section id="sec-20230624093943" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="sec-20230624093943"><span class="header-section-number">6.2</span> Asymptotic expansion of the hessian of the energy</h2>
+<section id="sec-20230624093943" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="sec-20230624093943"><span class="header-section-number">5.2</span> Asymptotic expansion of the hessian of the energy</h2>
 <p>We now turn to the hessian of the energy, which is expanded to second order in <span class="math inline">\(\eta\)</span></p>
 <p><span class="math display">\[
 \E_{, uu}[u(\eta), \lambda(\eta)]
@@ -547,7 +547,7 @@ Proof
 <span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> H2 <span class="op">==</span> expected</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>Using Eq. (<a href="bifurcation_equations.html#eq-20230411141319"><span>5.3</span></a>), the above expressions can be expanded as follows</p>
+<p>Using Eq. (<a href="bifurcation_equations.html#eq-20230411141319"><span>4.3</span></a>), the above expressions can be expanded as follows</p>
 <p><span class="math display">\[
 \order[0]{\mathcal{H}} = \E_2,
 \quad
@@ -565,7 +565,7 @@ Proof
 + (\order[1]{\lambda})^2 \, \ddot{\E}_2(\bullet, \bullet) + \order[2]{\lambda} \, \dot{\E}_2(\bullet, \bullet),
 \end{aligned}
 \]</span></p>
-<p>and Eq. (<a href="#eq-20230517061452"><span>6.2</span></a>) is retrieved.</p>
+<p>and Eq. (<a href="#eq-20230517061452"><span>5.2</span></a>) is retrieved.</p>
 
 
 </section>
@@ -707,12 +707,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./bifurcation_equations.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./eigenmodes.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

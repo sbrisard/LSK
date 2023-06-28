@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 5&nbsp; Bifurcation equations</title>
+<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 4&nbsp; Bifurcation equations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,7 +134,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -169,27 +169,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./identities.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Some useful identities</span></a>
+  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
+  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
+  <a href="./energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></a>
+  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
+  <a href="./symbols.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The <code>lsk.symbols</code> module</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -206,10 +206,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="toc-section-number">5.1</span>  Introduction</a></li>
-  <li><a href="#the-variational-problem-of-order-1" id="toc-the-variational-problem-of-order-1" class="nav-link" data-scroll-target="#the-variational-problem-of-order-1"><span class="toc-section-number">5.2</span>  The variational problem of order 1</a></li>
-  <li><a href="#the-variational-problem-of-order-2" id="toc-the-variational-problem-of-order-2" class="nav-link" data-scroll-target="#the-variational-problem-of-order-2"><span class="toc-section-number">5.3</span>  The variational problem of order 2</a></li>
-  <li><a href="#the-variational-problem-of-order-3" id="toc-the-variational-problem-of-order-3" class="nav-link" data-scroll-target="#the-variational-problem-of-order-3"><span class="toc-section-number">5.4</span>  The variational problem of order 3</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="toc-section-number">4.1</span>  Introduction</a></li>
+  <li><a href="#the-variational-problem-of-order-1" id="toc-the-variational-problem-of-order-1" class="nav-link" data-scroll-target="#the-variational-problem-of-order-1"><span class="toc-section-number">4.2</span>  The variational problem of order 1</a></li>
+  <li><a href="#the-variational-problem-of-order-2" id="toc-the-variational-problem-of-order-2" class="nav-link" data-scroll-target="#the-variational-problem-of-order-2"><span class="toc-section-number">4.3</span>  The variational problem of order 2</a></li>
+  <li><a href="#the-variational-problem-of-order-3" id="toc-the-variational-problem-of-order-3" class="nav-link" data-scroll-target="#the-variational-problem-of-order-3"><span class="toc-section-number">4.4</span>  The variational problem of order 3</a></li>
   </ul>
 </nav>
     </div>
@@ -218,7 +218,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-20230102153124" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span></h1>
+<h1 class="title"><span id="sec-20230102153124" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span></h1>
 </div>
 
 
@@ -234,25 +234,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <p>This notebook uses <span class="math inline">\(\LaTeX\newcommand{\D}{\mathrm{d}}\newcommand{\E}{\mathcal{E}}\newcommand{\order}[2][1]{#2^{(#1)}}\newcommand{\reals}{\mathbb{R}}\)</span> custom macros.</p>
-<section id="introduction" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">5.1</span> Introduction</h2>
+<section id="introduction" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">4.1</span> Introduction</h2>
 <p>In this chapter, the bifurcation analysis of the perfect system is performed symbolically. It is assumed that through the critical point passes a second equilibrium curve <span class="math inline">\(\lambda \mapsto u(\lambda)\)</span>, besides the fundamental branch <span class="math inline">\(\lambda \mapsto u^\star(\lambda)\)</span>. We seek an asymptotic expansion of <span class="math inline">\(u(\lambda)\)</span> for <span class="math inline">\(\lambda \to \lambda_0\)</span> (critical load). It will be convenient to introduce an auxiliary parametrization <span class="math inline">\(\eta\)</span> such that the bifurcated branch is defined as the set of points <span class="math inline">\((u(\eta), \lambda(\eta))\)</span>. The functions <span class="math inline">\(\eta \mapsto \lambda(\eta)\)</span> and <span class="math inline">\(\eta \mapsto u(\eta)\)</span> are expanded as follows</p>
 <p><span id="eq-20230623193826"><span class="math display">\[
 \lambda(\eta) = \order[0]{\lambda} + \eta \, \order[1]{\lambda} + \tfrac{1}{2}\eta^2 \, \order[2]{\lambda} + \ldots
-\tag{5.1}\]</span></span></p>
+\tag{4.1}\]</span></span></p>
 <p>and</p>
 <p><span id="eq-20230528174310"><span class="math display">\[
 u(\eta) = u^\ast[\lambda(\eta)] + \eta \, \order[1]{u} + \tfrac{1}{2} \eta^2 \, \order[2]{u} + \ldots
-\tag{5.2}\]</span></span></p>
+\tag{4.2}\]</span></span></p>
 <p>It will be shown below that <span id="eq-20230411141319"><span class="math display">\[
 \order[1]{u} = \order[1]{\xi_i} \, v_i
 \quad \text{and} \quad
 \order[2]{u} = \order[2]{\xi_i} \, v_i + \order[1]{\xi_i} \, \order[1]{\xi_j} \, w_{ij}  + 2\order[1]{\lambda} \, \order[1]{\xi_i} \, w_{i\lambda},
-\tag{5.3}\]</span></span></p>
+\tag{4.3}\]</span></span></p>
 <p>where the coefficients <span class="math inline">\(\order[1]{\lambda}\)</span>, <span class="math inline">\(\order[2]{\lambda}\)</span>, <span class="math inline">\(\order[1]{\xi}_i\)</span> and <span class="math inline">\(\order[2]{\xi}_i\)</span> solve the <strong>first bifurcation equation</strong></p>
 <p><span id="eq-20230125062336"><span class="math display">\[
 \tfrac{1}{2} E_{ijk} \, \order[1]{\xi_j} \, \order[1]{\xi_k} + \order[1]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi_j} = 0
-\tag{5.4}\]</span></span></p>
+\tag{4.4}\]</span></span></p>
 <p>and the <strong>second bifurcation equation</strong></p>
 <p><span id="eq-20230124205642"><span class="math display">\[
 \begin{aligned}[b]
@@ -261,9 +261,9 @@ u(\eta) = u^\ast[\lambda(\eta)] + \eta \, \order[1]{u} + \tfrac{1}{2} \eta^2 \, 
 + \bigl( E_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \dot{E}_{ij} \bigr) \order[2]{\xi}_j
 + \order[2]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi}_j &amp; = 0.
 \end{aligned}
-\tag{5.5}\]</span></span></p>
+\tag{4.5}\]</span></span></p>
 <p>The tensors <span class="math inline">\(\dot{E}_{ij}\)</span>, <span class="math inline">\(\ddot{E}_{ij}\)</span>, <span class="math inline">\(E_{ijk}\)</span>, <span class="math inline">\(\dot{E}_{ijk}\)</span> and <span class="math inline">\(E_{ijkl}\)</span> have been defined in <a href="setting-up_the_mathematical_stage.html"><span>Chapter&nbsp;2</span></a> (see <a href="setting-up_the_mathematical_stage.html#sec-20230528173310"><span>Section&nbsp;2.4</span></a>).</p>
-<p>The starting point is the symbolic expression of the residual <span class="math inline">\((u, \lambda) \mapsto \E_{,u}(u, \lambda)\)</span> that was derived in <a href="setting-up_the_computational_stage.html#sec-20230208081549"><span>Section&nbsp;4.2</span></a>. We plug the postulated expansions (<a href="#eq-20230623193826"><span>5.1</span></a>) and (<a href="#eq-20230528174310"><span>5.2</span></a>) into the equilibrium equation</p>
+<p>The starting point is the symbolic expression of the residual <span class="math inline">\((u, \lambda) \mapsto \E_{,u}(u, \lambda)\)</span> that was derived in <span class="quarto-unresolved-ref">?sec-20230208081549</span>. We plug the postulated expansions (<a href="#eq-20230623193826"><span>4.1</span></a>) and (<a href="#eq-20230528174310"><span>4.2</span></a>) into the equilibrium equation</p>
 <p><span class="math display">\[
 \E_{, u}[u(\eta), \lambda(\eta); \hat{u}] = 0 \quad \text{for all} \quad \hat{u} \in U.
 \]</span></p>
@@ -272,7 +272,7 @@ u(\eta) = u^\ast[\lambda(\eta)] + \eta \, \order[1]{u} + \tfrac{1}{2} \eta^2 \, 
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lsk2 <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The asymptotic expansion of <span class="math inline">\(\lambda\)</span> according to Eq. (<a href="#eq-20230623193826"><span>5.1</span></a>) is first postulated and plugged into the expression of <span class="math inline">\(u^\star\)</span>. The resulting symbolic expressions are combined to define the asymptotic expansion of <span class="math inline">\(u\)</span> according to Eq. (<a href="#eq-20230528174310"><span>5.2</span></a>).</p>
+<p>The asymptotic expansion of <span class="math inline">\(\lambda\)</span> according to Eq. (<a href="#eq-20230623193826"><span>4.1</span></a>) is first postulated and plugged into the expression of <span class="math inline">\(u^\star\)</span>. The resulting symbolic expressions are combined to define the asymptotic expansion of <span class="math inline">\(u\)</span> according to Eq. (<a href="#eq-20230528174310"><span>4.2</span></a>).</p>
 <div class="cell" data-tags="[]" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>λ <span class="op">=</span> η <span class="op">*</span> λ<span class="dv">1</span> <span class="op">+</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> λ<span class="dv">2</span> <span class="op">+</span> η<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> <span class="dv">6</span> <span class="op">*</span> λ<span class="dv">3</span> <span class="op">+</span> η<span class="op">**</span><span class="dv">4</span> <span class="op">/</span> <span class="dv">24</span> <span class="op">*</span> λ<span class="dv">4</span> <span class="op">+</span> O(η<span class="op">**</span><span class="dv">5</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>u_star <span class="op">=</span> create_u_star(λ)</span>
@@ -321,8 +321,8 @@ u(\eta) = u^\ast[\lambda(\eta)] + \eta \, \order[1]{u} + \tfrac{1}{2} \eta^2 \, 
 </details>
 </div>
 </section>
-<section id="the-variational-problem-of-order-1" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="the-variational-problem-of-order-1"><span class="header-section-number">5.2</span> The variational problem of order 1</h2>
+<section id="the-variational-problem-of-order-1" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="the-variational-problem-of-order-1"><span class="header-section-number">4.2</span> The variational problem of order 1</h2>
 <p>This problem reads</p>
 <p><span class="math display">\[
 \E_2(\order[1]{u}, \hat{u}) = 0 \quad \text{for all} \quad \hat{u} \in U.
@@ -336,11 +336,11 @@ u(\eta) = u^\ast[\lambda(\eta)] + \eta \, \order[1]{u} + \tfrac{1}{2} \eta^2 \, 
 <p>Therefore <span class="math inline">\(\order[1]{u} \in V\)</span> and we introduce the following decomposition</p>
 <p><span id="eq-20230620132240"><span class="math display">\[
 \order[1]{u} = \order[1]{\xi}_i \, v_i,
-\tag{5.6}\]</span></span></p>
+\tag{4.6}\]</span></span></p>
 <p>where <span class="math inline">\(\order[1]{\xi}_1, \ldots, \order[1]{\xi}_m\)</span> are yet unknown scalars.</p>
 </section>
-<section id="the-variational-problem-of-order-2" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="the-variational-problem-of-order-2"><span class="header-section-number">5.3</span> The variational problem of order 2</h2>
+<section id="the-variational-problem-of-order-2" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="the-variational-problem-of-order-2"><span class="header-section-number">4.3</span> The variational problem of order 2</h2>
 <div class="cell" data-tags="[]" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>E_u2 <span class="op">=</span> E_u.coeff(η, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -367,12 +367,12 @@ u(\eta) = u^\ast[\lambda(\eta)] + \eta \, \order[1]{u} + \tfrac{1}{2} \eta^2 \, 
 <p><span class="math inline">\(\displaystyle \frac{\E_{3} \hat{v} {\order[1]{u}}^{2}}{2} + \dot{\E}_2 \hat{v} {\order[1]{\lambda}} {\order[1]{u}}=0\)</span></p>
 </div>
 </div>
-<p>for all <span class="math inline">\(\hat{v} \in V\)</span>. The above equation fully defines <span class="math inline">\(\order[1]{u}\)</span>. Indeed, plugging the decomposition (<a href="#eq-20230620132240"><span>5.6</span></a>) delivers the equivalent equations</p>
+<p>for all <span class="math inline">\(\hat{v} \in V\)</span>. The above equation fully defines <span class="math inline">\(\order[1]{u}\)</span>. Indeed, plugging the decomposition (<a href="#eq-20230620132240"><span>4.6</span></a>) delivers the equivalent equations</p>
 <p><span class="math display">\[
 \tfrac{1}{2} E_{ijk} \, \order[1]{\xi}_j \, \order[1]{\xi}_k + \order[1]{\lambda} \, \dot{E}_{ij} \, \order[1]{\xi}_j = 0,
 \]</span></p>
-<p>where we have introduced <span class="math inline">\(\dot{E}_{ij}\)</span> and <span class="math inline">\(E_{ijk}\)</span>, defined by Eqs. (<a href="setting-up_the_mathematical_stage.html#eq-20230125062505"><span>2.6</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230125062510"><span>2.8</span></a>), respectively. We finally retrieve the first bifurcation equation (<a href="#eq-20230125062336"><span>5.4</span></a>).</p>
-<p>We now test the same equation with <span class="math inline">\(\hat{w} \in W\)</span>, plugging the expansion (<a href="#eq-20230620132240"><span>5.6</span></a>) of <span class="math inline">\(\order[1]{u}\)</span></p>
+<p>where we have introduced <span class="math inline">\(\dot{E}_{ij}\)</span> and <span class="math inline">\(E_{ijk}\)</span>, defined by Eqs. (<a href="setting-up_the_mathematical_stage.html#eq-20230125062505"><span>2.6</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230125062510"><span>2.8</span></a>), respectively. We finally retrieve the first bifurcation equation (<a href="#eq-20230125062336"><span>4.4</span></a>).</p>
+<p>We now test the same equation with <span class="math inline">\(\hat{w} \in W\)</span>, plugging the expansion (<a href="#eq-20230620132240"><span>4.6</span></a>) of <span class="math inline">\(\order[1]{u}\)</span></p>
 <p><span class="math display">\[
 \tfrac{1}{2} \E_2(\order[2]{u}, \hat{w})
 +\tfrac{1}{2} \order[1]{\xi}_i \, \order[1]{\xi}_j \, \E_3(v_i, v_j, \hat{w})
@@ -395,10 +395,10 @@ u(\eta) = u^\ast[\lambda(\eta)] + \eta \, \order[1]{u} + \tfrac{1}{2} \eta^2 \, 
 <p><span class="math display">\[
 \order[2]{u}_W = \order[1]{\xi_i} \, \order[1]{\xi_j} \, w_{ij}  + 2\order[1]{\lambda} \, \order[1]{\xi_i} \, w_{i\lambda},
 \]</span></p>
-<p>which proves the decomposition (<a href="#eq-20230411141319"><span>5.3</span></a>) of <span class="math inline">\(\order[2]{u}\)</span>.</p>
+<p>which proves the decomposition (<a href="#eq-20230411141319"><span>4.3</span></a>) of <span class="math inline">\(\order[2]{u}\)</span>.</p>
 </section>
-<section id="the-variational-problem-of-order-3" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="the-variational-problem-of-order-3"><span class="header-section-number">5.4</span> The variational problem of order 3</h2>
+<section id="the-variational-problem-of-order-3" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="the-variational-problem-of-order-3"><span class="header-section-number">4.4</span> The variational problem of order 3</h2>
 <p>We now turn to the third-order term of the residual <span class="math inline">\(\E_{,u}\)</span>. It involves <span class="math inline">\(\order[3]{u}\)</span>, that gets eliminated when testing with <span class="math inline">\(v_i \in V\)</span>.</p>
 <div class="cell" data-tags="[]" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> E_u.coeff(η, <span class="dv">3</span>).subs(u_hat, v_[i]).subs(E2 <span class="op">*</span> v_[i], <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -434,7 +434,7 @@ u(\eta) = u^\ast[\lambda(\eta)] + \eta \, \order[1]{u} + \tfrac{1}{2} \eta^2 \, 
 <p><span class="math inline">\(\displaystyle \frac{\E_{3} {\order[1]{u}} {\order[2]{u}} {v}_{Idx\left(i\right)}}{2} + \frac{\E_{4} {\order[1]{u}}^{3} {v}_{Idx\left(i\right)}}{6} - \frac{\dot{\E}_2 {\order[1]{\lambda}}^{2} {\order[1]{u}} {w}_{Idx\left(i\right)}}{2} - \frac{\dot{\E}_2 {\order[1]{\lambda}}^{2} {v}_{Idx\left(i\right)} {w}_{Idx\left(j\right)} {{\order[1]{\xi}}}_{Idx\left(j\right)}}{2} - \dot{\E}_2 {\order[1]{\lambda}} {\order[1]{u}} {w}_{Idx\left(i\right),Idx\left(j\right)} {{\order[1]{\xi}}}_{Idx\left(j\right)} + \frac{\dot{\E}_2 {\order[1]{\lambda}} {\order[2]{u}} {v}_{Idx\left(i\right)}}{2} - \frac{\dot{\E}_2 {\order[1]{\lambda}} {v}_{Idx\left(i\right)} {w}_{Idx\left(j\right),Idx\left(k\right)} {{\order[1]{\xi}}}_{Idx\left(j\right)} {{\order[1]{\xi}}}_{Idx\left(k\right)}}{2} + \frac{{\order[1]{\lambda}}^{2} {\ddot{E}}_{Idx\left(i\right),Idx\left(j\right)} {{\order[1]{\xi}}}_{Idx\left(j\right)}}{2} + \frac{{\order[1]{\lambda}} {\dot{E}}_{Idx\left(i\right),Idx\left(j\right),Idx\left(k\right)} {{\order[1]{\xi}}}_{Idx\left(j\right)} {{\order[1]{\xi}}}_{Idx\left(k\right)}}{2} + \frac{{\order[2]{\lambda}} {\dot{E}}_{Idx\left(i\right),Idx\left(j\right)} {{\order[1]{\xi}}}_{Idx\left(j\right)}}{2}=0\)</span></p>
 </div>
 </div>
-<p>In the remainder of this section, we simplify this equation. To do so, we rely heavily on Eqs. (<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.4</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.5</span></a>) as well as the definitions of <a href="setting-up_the_mathematical_stage.html#sec-20230528173310"><span>Section&nbsp;2.4</span></a>. We first apply the following simplification</p>
+<p>In the remainder of this section, we simplify this equation. To do so, we rely heavily on Eqs. (<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.5</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.4</span></a>) as well as the definitions of <a href="setting-up_the_mathematical_stage.html#sec-20230528173310"><span>Section&nbsp;2.4</span></a>. We first apply the following simplification</p>
 <p><span class="math display">\[
 \dot{\E}_2(\order[2]{u}, v_i)
 = \dot{E}_{ij} \, \order[2]{\xi}_j
@@ -566,7 +566,7 @@ _{kl})
 <p><span class="math inline">\(\displaystyle \frac{{\order[1]{\lambda}}^{2} {\ddot{E}}_{Idx\left(i\right),Idx\left(j\right)} {{\order[1]{\xi}}}_{Idx\left(j\right)}}{2} + \frac{{\order[1]{\lambda}} {\dot{E}}_{Idx\left(i\right),Idx\left(j\right),Idx\left(k\right)} {{\order[1]{\xi}}}_{Idx\left(j\right)} {{\order[1]{\xi}}}_{Idx\left(k\right)}}{2} + \frac{{\order[1]{\lambda}} {\dot{E}}_{Idx\left(i\right),Idx\left(j\right)} {{\order[2]{\xi}}}_{Idx\left(j\right)}}{2} + \frac{{\order[2]{\lambda}} {\dot{E}}_{Idx\left(i\right),Idx\left(j\right)} {{\order[1]{\xi}}}_{Idx\left(j\right)}}{2} + \frac{{E}_{Idx\left(i\right),Idx\left(j\right),Idx\left(k\right),Idx\left(l\right)} {{\order[1]{\xi}}}_{Idx\left(j\right)} {{\order[1]{\xi}}}_{Idx\left(k\right)} {{\order[1]{\xi}}}_{Idx\left(l\right)}}{6} + \frac{{E}_{Idx\left(i\right),Idx\left(j\right),Idx\left(k\right)} {{\order[1]{\xi}}}_{Idx\left(k\right)} {{\order[2]{\xi}}}_{Idx\left(j\right)}}{2}=0\)</span></p>
 </div>
 </div>
-<p>And the second bifurcation equation (<a href="#eq-20230124205642"><span>5.5</span></a>) is retrieved.</p>
+<p>And the second bifurcation equation (<a href="#eq-20230124205642"><span>4.5</span></a>) is retrieved.</p>
 <div class="cell" data-execution_count="43">
 <details>
 <summary>Code</summary>
@@ -719,12 +719,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./setting-up_the_computational_stage.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./energy.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

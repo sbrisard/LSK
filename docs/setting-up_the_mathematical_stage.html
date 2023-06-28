@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./identities.html" rel="next">
+<link href="./setting-up_the_computational_stage.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -106,27 +106,27 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./identities.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Some useful identities</span></a>
+  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
+  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
+  <a href="./energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></a>
+  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
+  <a href="./symbols.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The <code>lsk.symbols</code> module</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -231,10 +231,10 @@ U = V \overset{\perp}{\otimes} W \quad \text{and} \quad \langle \hat{v}, \hat{w}
 \E_2(w, \hat{w})+\ell(\hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W
 \]</span> are well-posed for any linear form <span class="math inline">\(\ell\)</span> over <span class="math inline">\(W\)</span>. In particular, for <span class="math inline">\(\ell=0\)</span>, the unique solution to the variational problem <span class="math display">\[
 \E_2(w, \hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W
-\]</span> is <span class="math inline">\(w = 0\)</span>. For <span class="math inline">\(\ell(\bullet) = \E_3(v_i, v_j, \bullet)\)</span> and <span class="math inline">\(\ell(\bullet) = \dot{\E}_2(v_i, \bullet),\)</span> <span class="math inline">\(w_{ij} \in W\)</span> and <span class="math inline">\(w_{i\lambda} \in W\)</span> are defined as the unique solutions in <span class="math inline">\(W\)</span> of the following variational problems <span id="eq-20230107180410"><span class="math display">\[
-\E_2(w_{ij}, \hat{w}) + \E_3(v_i, v_j, \hat{w}) = 0
-\tag{2.4}\]</span></span> and <span id="eq-20230107180501"><span class="math display">\[
-\E_2(w_{i\lambda}, \hat{w}) + \dot{\E}_2(v_i, \hat{w}) = 0,
+\]</span> is <span class="math inline">\(w = 0\)</span>. For <span class="math inline">\(\ell(\bullet) = \dot{\E}_2(v_i, \bullet)\)</span> and <span class="math inline">\(\ell(\bullet) = \E_3(v_i, v_j, \bullet)\)</span>, <span class="math inline">\(w_i \in W\)</span> and <span class="math inline">\(w_{ij} \in W\)</span> are defined as the unique solutions in <span class="math inline">\(W\)</span> of the following variational problems <span id="eq-20230107180501"><span class="math display">\[
+\E_2(w_{i}, \hat{w}) + \dot{\E}_2(v_i, \hat{w}) = 0
+\tag{2.4}\]</span></span> and <span id="eq-20230107180410"><span class="math display">\[
+\E_2(w_{ij}, \hat{w}) + \E_3(v_i, v_j, \hat{w}) = 0,
 \tag{2.5}\]</span></span> for all <span class="math inline">\(\hat{w} \in W\)</span>. These variational problems (and their solutions) will pop-up recurrently in what follows.</p>
 </section>
 <section id="sec-20230528173310" class="level2" data-number="2.4">
@@ -242,7 +242,7 @@ U = V \overset{\perp}{\otimes} W \quad \text{and} \quad \langle \hat{v}, \hat{w}
 <p>We will make use of the following symbols <span id="eq-20230125062505"><span class="math display">\[
 \dot{E}_{ij} = \dot{\E}_2(v_i, v_j),
 \tag{2.6}\]</span></span> <span id="eq-20230124211207"><span class="math display">\[
-\ddot{E}_{ij} = \ddot{\E}_2(v_i, v_j) + \dot{\E}_2(v_i, w_{j\lambda}) + \dot{\E}_2(v_j, w_{i\lambda}),
+\ddot{E}_{ij} = \ddot{\E}_2(v_i, v_j) + \dot{\E}_2(v_i, w_{j}) + \dot{\E}_2(v_j, w_{i}),
 \tag{2.7}\]</span></span> <span id="eq-20230125062510"><span class="math display">\[
 E_{ijk} = \E_3(v_i, v_j, v_k),
 \tag{2.8}\]</span></span> <span id="eq-20230124210649"><span class="math display">\[
@@ -265,7 +265,7 @@ Consistency of the above definitions
 </div>
 <div class="callout-body-container callout-body">
 <p>Since <span class="math inline">\(\E_2(v, \bullet) = 0\)</span> for all <span class="math inline">\(v \in V\)</span>, definitions (<a href="#eq-20230125062505"><span>2.6</span></a>) and (<a href="#eq-20230125062510"><span>2.8</span></a>) of <span class="math inline">\(\dot{E}_{ij}\)</span> and <span class="math inline">\(E_{ijk}\)</span> can also be written <span class="math display">\[
-\dot{E}_{ij} = \dot{\E}_2(v_i, v_j) + \E_2(v_i, w_{j\lambda}) + \E_2(v_j, w_{i\lambda})
+\dot{E}_{ij} = \dot{\E}_2(v_i, v_j) + \E_2(v_i, w_{j}) + \E_2(v_j, w_{i})
 \]</span> and <span class="math display">\[
 E_{ijk} = \E_3(v_i, v_j, v_k)  + \E_2(v_i, w_{jk}) + \E_2(v_j, w_{ik}) + \E_2(v_k, w_{ij}),
 \]</span> wich shows the consistency with definitions (<a href="#eq-20230124211207"><span>2.7</span></a>) and (<a href="#eq-20230124210649"><span>2.9</span></a>) of <span class="math inline">\(\ddot{E}_{ij}\)</span> and <span class="math inline">\(\dot{E}_{ijk}\)</span>.</p>
@@ -416,8 +416,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./identities.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Some useful identities</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./setting-up_the_computational_stage.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

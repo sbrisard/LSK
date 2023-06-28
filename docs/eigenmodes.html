@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 7&nbsp; Eigenmodes of the hessian of the energy</title>
+<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 6&nbsp; Eigenmodes of the hessian of the energy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,7 +93,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./symbols.html" rel="next">
 <link href="./energy.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -134,7 +134,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -169,27 +169,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./identities.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Some useful identities</span></a>
+  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
+  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
+  <a href="./energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></a>
+  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
+  <a href="./symbols.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The <code>lsk.symbols</code> module</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -206,10 +206,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-eigenvalue-problem" id="toc-the-eigenvalue-problem" class="nav-link active" data-scroll-target="#the-eigenvalue-problem"><span class="toc-section-number">7.1</span>  The eigenvalue problem</a></li>
-  <li><a href="#the-variational-problem-of-order-0" id="toc-the-variational-problem-of-order-0" class="nav-link" data-scroll-target="#the-variational-problem-of-order-0"><span class="toc-section-number">7.2</span>  The variational problem of order 0</a></li>
-  <li><a href="#the-variational-problem-of-order-1" id="toc-the-variational-problem-of-order-1" class="nav-link" data-scroll-target="#the-variational-problem-of-order-1"><span class="toc-section-number">7.3</span>  The variational problem of order 1</a></li>
-  <li><a href="#the-variational-problem-of-order-2" id="toc-the-variational-problem-of-order-2" class="nav-link" data-scroll-target="#the-variational-problem-of-order-2"><span class="toc-section-number">7.4</span>  The variational problem of order 2</a></li>
+  <li><a href="#the-eigenvalue-problem" id="toc-the-eigenvalue-problem" class="nav-link active" data-scroll-target="#the-eigenvalue-problem"><span class="toc-section-number">6.1</span>  The eigenvalue problem</a></li>
+  <li><a href="#the-variational-problem-of-order-0" id="toc-the-variational-problem-of-order-0" class="nav-link" data-scroll-target="#the-variational-problem-of-order-0"><span class="toc-section-number">6.2</span>  The variational problem of order 0</a></li>
+  <li><a href="#the-variational-problem-of-order-1" id="toc-the-variational-problem-of-order-1" class="nav-link" data-scroll-target="#the-variational-problem-of-order-1"><span class="toc-section-number">6.3</span>  The variational problem of order 1</a></li>
+  <li><a href="#the-variational-problem-of-order-2" id="toc-the-variational-problem-of-order-2" class="nav-link" data-scroll-target="#the-variational-problem-of-order-2"><span class="toc-section-number">6.4</span>  The variational problem of order 2</a></li>
   </ul>
 </nav>
     </div>
@@ -218,7 +218,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-20230528190001" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></h1>
+<h1 class="title"><span id="sec-20230528190001" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></h1>
 </div>
 
 
@@ -275,11 +275,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>We focus in this chapter on potentially unstable eigenmodes, for which the eigenvalue <span class="math inline">\(\alpha\)</span> might be negative in the vicinity of <span class="math inline">\(\eta = 0\)</span>. It will be shown that these eigenmodes are necessarily such that <span class="math inline">\(\order[0]{\alpha} = 0\)</span>. In that case, <span class="math inline">\(\order[0]{x}_W = 0\)</span> and</p>
 <p><span id="eq-20230626163655"><span class="math display">\[
 \order[1]{x}_W = \order[1]{\lambda} \, \order[0]{\chi}_j \, w_{j} + \order[0]{\chi}_j \, \order[1]{\xi}_k \, w_{jk}.
-\tag{7.1}\]</span></span></p>
+\tag{6.1}\]</span></span></p>
 <p>The coefficients <span class="math inline">\(\order[1]{\alpha}\)</span>, <span class="math inline">\(\order[2]{\alpha}\)</span>, <span class="math inline">\(\order[0]{\chi}_i\)</span> and <span class="math inline">\(\order[1]{\chi}_i\)</span> solve the following equations</p>
 <p><span id="eq-20230524065341"><span class="math display">\[
 \bigl( E_{ijk} \, \order[1]{\xi_k} + \order[1]\lambda \, \dot{E}_{ij} \bigr) \, \order[0]{\chi_j} = \order[1]\alpha \, \order[0]{\chi_i},
-\tag{7.2}\]</span></span></p>
+\tag{6.2}\]</span></span></p>
 <p>and</p>
 <p><span id="eq-20230524065110"><span class="math display">\[
 \begin{aligned}
@@ -287,15 +287,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 + \order[2]{\lambda} \, \dot{E}_{ij} \bigr] \order[0]{\chi}_j
 + 2\bigl( E_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \dot{E}_{ij} \bigr) \, \order[1]{\chi}_j &amp;= 2 \order[1]{\alpha} \, \order[1]{\chi}_i + \order[2]{\alpha} \, \order[0]{\chi}_i.
 \end{aligned}
-\tag{7.3}\]</span></span></p>
-<section id="the-eigenvalue-problem" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="the-eigenvalue-problem"><span class="header-section-number">7.1</span> The eigenvalue problem</h2>
+\tag{6.3}\]</span></span></p>
+<section id="the-eigenvalue-problem" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="the-eigenvalue-problem"><span class="header-section-number">6.1</span> The eigenvalue problem</h2>
 <p>The eigenvalues <span class="math inline">\(\alpha \in \reals\)</span> and eigenvectors <span class="math inline">\(x \in U\)</span> of the hessian are such that</p>
 <p><span id="eq-20230517062340"><span class="math display">\[
 \E_{, u u} [u(\eta), \lambda(\eta); x, \hat{u}] = \alpha \, \langle x, \hat{u} \rangle \quad \text{for all} \quad \hat{u} \in U,
-\tag{7.4}\]</span></span></p>
+\tag{6.4}\]</span></span></p>
 <p>where <span class="math inline">\(\eta \mapsto \lambda(\eta)\)</span> and <span class="math inline">\(\eta \mapsto u(\eta)\)</span> define the bifurcated branch.</p>
-<p>In <a href="bifurcation_equations.html"><span>Chapter&nbsp;5</span></a> and in <a href="energy.html"><span>Chapter&nbsp;6</span></a>, the following asymptotic expansions of <span class="math inline">\(\lambda(\eta)\)</span>, <span class="math inline">\(u(\eta)\)</span> and <span class="math inline">\(\E_{,uu}[u(\eta), \lambda(\eta); \bullet, \bullet]\)</span> were derived</p>
+<p>In <a href="bifurcation_equations.html"><span>Chapter&nbsp;4</span></a> and in <a href="energy.html"><span>Chapter&nbsp;5</span></a>, the following asymptotic expansions of <span class="math inline">\(\lambda(\eta)\)</span>, <span class="math inline">\(u(\eta)\)</span> and <span class="math inline">\(\E_{,uu}[u(\eta), \lambda(\eta); \bullet, \bullet]\)</span> were derived</p>
 <div class="cell" data-tags="[]" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>H0 <span class="op">=</span> E2</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>H1 <span class="op">=</span> E3 <span class="op">*</span> u1 <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> E2_dot</span>
@@ -322,8 +322,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>The terms of order 0, 1 and 2 in <span class="math inline">\(\eta\)</span> are identified below.</p>
 </section>
-<section id="the-variational-problem-of-order-0" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="the-variational-problem-of-order-0"><span class="header-section-number">7.2</span> The variational problem of order 0</h2>
+<section id="the-variational-problem-of-order-0" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="the-variational-problem-of-order-0"><span class="header-section-number">6.2</span> The variational problem of order 0</h2>
 <div class="cell" data-tags="[]" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>lhs0 <span class="op">=</span> lhs.coeff(η, <span class="dv">0</span>).subs(rules)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>rhs0 <span class="op">=</span> rhs.coeff(η, <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -355,8 +355,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>rules[x0_W] <span class="op">=</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="the-variational-problem-of-order-1" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="the-variational-problem-of-order-1"><span class="header-section-number">7.3</span> The variational problem of order 1</h2>
+<section id="the-variational-problem-of-order-1" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="the-variational-problem-of-order-1"><span class="header-section-number">6.3</span> The variational problem of order 1</h2>
 <div class="cell" data-tags="[]" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>lhs1 <span class="op">=</span> lhs.coeff(η, <span class="dv">1</span>).subs(rules)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>rhs1 <span class="op">=</span> rhs.coeff(η, <span class="dv">1</span>).subs(rules)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -389,7 +389,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math inline">\(\displaystyle \E_{3} {\order[0]{\chi}}_{j} {v}_{i} {v}_{j} {v}_{k} {{\order[1]{\xi}}}_{k} + \dot{\E}_2 {\order[1]{\lambda}} {\order[0]{\chi}}_{j} {v}_{i} {v}_{j}={\order[1]{\alpha}} {\order[0]{\chi}}_{i}\)</span></p>
 </div>
 </div>
-<p>and Eq. (<a href="#eq-20230524065341"><span>7.2</span></a>) is retrieved.</p>
+<p>and Eq. (<a href="#eq-20230524065341"><span>6.2</span></a>) is retrieved.</p>
 <p>The test function is now picked in <span class="math inline">\(W = V^\perp\)</span> and we get the following variational problem: find <span class="math inline">\(\order[1]{x}_W \in W\)</span> such that, for all <span class="math inline">\(\hat{w} \in W\)</span>,</p>
 <div class="cell" data-tags="[]" data-execution_count="12">
 <details>
@@ -408,13 +408,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math inline">\(\displaystyle \E_{2} \hat{w} {\order[1]{x}_W} + \E_{3} \hat{w} {\order[0]{\chi}}_{i} {v}_{i} {v}_{j} {{\order[1]{\xi}}}_{j} + \dot{\E}_2 \hat{w} {\order[1]{\lambda}} {\order[0]{\chi}}_{i} {v}_{i}=0\)</span></p>
 </div>
 </div>
-<p>(observe that, in the RHS, <span class="math inline">\(\langle v_i, \hat{w} \rangle = 0\)</span> since <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are orthogonal subspaces). The solution to the above problem is expressed as a linear combination of the <span class="math inline">\(w_{ij}\)</span> and <span class="math inline">\(w_i\)</span> –defined by the variational problems (<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.4</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.5</span></a>), respectively–, delivering Eq. (<a href="#eq-20230626163655"><span>7.1</span></a>).</p>
+<p>(observe that, in the RHS, <span class="math inline">\(\langle v_i, \hat{w} \rangle = 0\)</span> since <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are orthogonal subspaces). The solution to the above problem is expressed as a linear combination of the <span class="math inline">\(w_{ij}\)</span> and <span class="math inline">\(w_i\)</span> –defined by the variational problems (<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.5</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.4</span></a>), respectively–, delivering Eq. (<a href="#eq-20230626163655"><span>6.1</span></a>).</p>
 <div class="cell" data-tags="[]" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>rules[x1_W] <span class="op">=</span> χ<span class="dv">0</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l] <span class="op">*</span> w_[k, l] <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> χ<span class="dv">0</span>[k] <span class="op">*</span> w_[k]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="the-variational-problem-of-order-2" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="the-variational-problem-of-order-2"><span class="header-section-number">7.4</span> The variational problem of order 2</h2>
+<section id="the-variational-problem-of-order-2" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="the-variational-problem-of-order-2"><span class="header-section-number">6.4</span> The variational problem of order 2</h2>
 <p>The terms of second order are tested against elements of <span class="math inline">\(V\)</span> only.</p>
 <div class="cell" data-tags="[]" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> expand(<span class="dv">2</span> <span class="op">*</span> lhs.coeff(η, <span class="dv">2</span>).subs(u_hat, v_[i]).subs(rules))</span>
@@ -524,7 +524,7 @@ Simplification of these expressions
 </div>
 </div>
 </div>
-<p>And Eq. (<a href="#eq-20230524065110"><span>7.3</span></a>) is finally retrieved.</p>
+<p>And Eq. (<a href="#eq-20230524065110"><span>6.3</span></a>) is finally retrieved.</p>
 <div class="cell" data-tags="[]" data-execution_count="22">
 <details>
 <summary>Code</summary>
@@ -682,12 +682,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./energy.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./symbols.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The <code>lsk.symbols</code> module</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

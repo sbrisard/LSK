@@ -1,0 +1,58 @@
+# Asymmetric bifurcation
+
+This chapter uses $\LaTeX\newcommand{\D}{\mathrm{d}}\newcommand{\E}{\mathcal{E}}\newcommand{\order}[2][1]{#2^{(#1)}}\newcommand{\reals}{\mathbb{R}}$ custom macros.
+
+In this chapter, we consider a bifurcated branch for which $\order[1]{\lambda} \neq 0$. The bifurcation equation (@eq-20230125062336) shows that necessarily, $E_{ijk}$ is not identically nul. This equation has at most $(2^m - 1)$ pairs of real solutions $(\order[1]{\lambda}, \order[1]{u})$ et $(-\order[1]{\lambda}, -\order[1]{u})$; furthermore, multiplication by $\order[1]{\xi_i}$ shows that
+
+$$
+\order[1]\lambda = -\frac{E_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k}{2 \dot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j}.
+$$ {#eq-20220801085236}
+
+::: {.callout-note}
+I can't prove that the bifurcation equation (@eq-20230125062336) has at most $(2^m - 1)$ pairs of real solutions.
+:::
+
+Along the bifurcated branch, we have $\lambda = \lambda_0 + \eta \, \order[1]\lambda + o(\eta)$, and $\eta$ can be eliminated. In other words, $\eta=\lambda$ ($\order[1]\lambda = 1$ and $\order[2]\lambda = \order[3]\lambda = \cdots = 0$) can be selected as a parameter. It is therefore possible to express the bifurcated branch as a function of $\lambda$: $u(\lambda)$. For example, combining Eqs. (@eq-20220524133816) and (@eq-20230517061452), we find that
+
+$$
+\begin{aligned}[b]
+\E_{, uu}[u(\eta), \lambda(\eta); \order[1]u, \order[1]u]
+&= \eta \, \bigl[\E_3(\order[1]u, \order[1]u, \order[1]u)  + \order[1]\lambda \, \dot{\E}_2(\order[1]u, \order[1]u)\bigr] + o(\eta)\\
+&= - \eta \, \order[1]\lambda \, \dot{\E}_2(\order[1]u, \order[1]u) + o(\eta),
+\end{aligned}
+$$
+or
+$$
+\E_{, uu}[u(\lambda), \lambda; \order[1]u, \order[1]u] = -\bigl( \lambda - \lambda_0 \bigr) \, \dot{\E}_2(\order[1]u, \order[1]u) + o(\lambda - \lambda_0).
+$$ {#eq-20220819160235}
+
+For $\lambda < \lambda_0$, the above quantity is *negative* (since $\dot{\E}_2$ is negative definite). In other words: **for asymmetric bifurcations, below the critical load, the bifurcated branch is unstable.**
+
+To investigate the stability above the critical load, we need to analyse the sign of the eigenvalues $\alpha$ of the Hessian. At first order, $\alpha = \eta \, \order[1]\alpha + o(\eta)$, where $\order[1]\alpha$ is an eigenvalue of $(E_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \dot{E}_{ij})$ (see @sec-20230528190001). Let $\alpha_{\min}$ and $\alpha_{\max}$ be the minimum and maximum eigenvalues of this second-order tensor. Three cases must be discussed
+
+1. If $\alpha_{\min} \, \alpha_{\max} > 0$, then $(E_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \dot{E}_{ij})$ is positive or negative definite: all eigenvalues have the same sign, $\epsilon \in \{-1, +1\}$. Then the sign of the eigenvalues $\alpha$ of the Hessian is $\epsilon \, \eta$ and there is a stability switch at the critical load. Since the bifurcated branch is unstable *below* the critical load, this means that it is *stable* above the critical load.
+2. If $\alpha_{\min} \, \alpha_{\max} < 0$, then the extremal eigenvalues of the Hessian are $\eta \, \alpha_{\min}$ and $\eta \, \alpha_{\max}$, the product of which is $\eta^2 \, \alpha_{\min} \, \alpha_{\max} < 0$. The bifurcated branch is *unstable* for all values of $\lambda$.
+3. If $\alpha_{\min} \, \alpha_{\max} = 0$, the analysis is inconclusive.
+
+To close this section, it is observed that the dominant term of the expansion (@eq-20230528190539) of the potential energy along the bifurcated branch is of the third order in $\eta$
+$$
+\E[u(\eta), \lambda(\eta)] = \E[u^\star \circ \lambda(\eta), \lambda(\eta)\} + \tfrac{1}{6} \order[1]{\lambda} \, \eta^3 \, \dot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j + o(\eta^3).
+$$
+
+Eliminating $\lambda$ and plugging expression (@eq-20220801085236) of $\order[1]\lambda$ delivers the expression of the potential energy, where $\lambda$ is the parameter
+$$
+\begin{aligned}[b]
+\E[u(\lambda), \lambda] &= \E[u^{\star}(\lambda), \lambda] + \frac{\bigl( \lambda - \lambda_0 \bigr)^3}{6\bigl( \order[1]{\lambda} \bigr)^2} \, \dot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j + o(\lambda^3)\\
+&= \E[u^{\star}(\lambda), \lambda] + \frac{2 \bigl( \dot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \bigr)^3}{3 \bigl( E_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \order[1]{\xi}_k \bigr)^2} \, \bigl(\lambda - \lambda_0\bigr)^3 + o(\lambda^3).
+\end{aligned}
+$$
+
+Recalling that $\dot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j < 0$, it is found that, above the critical load, the potential energy is *smaller* along the bifurcated branch than along the fundamental branch.
+
+::: {.callout-note}
+As expected, the above expression does not depend on the scaling of $\order[1]u$ (of the $\order[1]{\xi_i}$).
+:::
+
+::: {.callout-note}
+It has been shown in @sec-xxx that, when $E_{ijk}$ is not identically null, the bifurcation point is *unstable*.
+:::

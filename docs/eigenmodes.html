@@ -238,22 +238,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell" data-tags="[]" data-execution_count="1">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lsk2 <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>x0_V, x0_W <span class="op">=</span> symbols(<span class="vs">r"{\order[0]</span><span class="sc">{x}</span><span class="vs">_V} {\order[0]</span><span class="sc">{x}</span><span class="vs">_W}"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>x1_V, x1_W <span class="op">=</span> symbols(<span class="vs">r"{\order[1]</span><span class="sc">{x}</span><span class="vs">_V} {\order[1]</span><span class="sc">{x}</span><span class="vs">_W}"</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>x2_V, x2_W <span class="op">=</span> symbols(<span class="vs">r"{\order[2]</span><span class="sc">{x}</span><span class="vs">_V} {\order[2]</span><span class="sc">{x}</span><span class="vs">_W}"</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>α<span class="dv">0</span>, α<span class="dv">1</span>, α<span class="dv">2</span> <span class="op">=</span> symbols(<span class="vs">r"{\order[0]{\alpha</span><span class="sc">}}</span><span class="vs"> {\order[1]{\alpha</span><span class="sc">}}</span><span class="vs"> {\order[2]{\alpha</span><span class="sc">}}</span><span class="vs">"</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>χ<span class="dv">0</span> <span class="op">=</span> IndexedBase(<span class="vs">r"\order[0]{\chi}"</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>χ<span class="dv">1</span> <span class="op">=</span> IndexedBase(<span class="vs">r"\order[1]{\chi}"</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> (x0_V <span class="op">+</span> x0_W) <span class="op">+</span> η <span class="op">*</span> (x1_V <span class="op">+</span> x1_W) <span class="op">+</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> (x2_V <span class="op">+</span> x2_W) <span class="op">+</span> O(η<span class="op">**</span><span class="dv">3</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>α <span class="op">=</span> α<span class="dv">0</span> <span class="op">+</span> η <span class="op">*</span> α<span class="dv">1</span> <span class="op">+</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> α<span class="dv">2</span> <span class="op">+</span> O(η<span class="op">**</span><span class="dv">3</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>display_latex_dict({<span class="st">"x"</span>: x, <span class="vs">r"\alpha"</span>: α}, num_cols<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lsk.display <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lsk.symbols <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lsk.energy <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>x0_V, x0_W <span class="op">=</span> symbols(<span class="vs">r"{\order[0]</span><span class="sc">{x}</span><span class="vs">_V} {\order[0]</span><span class="sc">{x}</span><span class="vs">_W}"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>x1_V, x1_W <span class="op">=</span> symbols(<span class="vs">r"{\order[1]</span><span class="sc">{x}</span><span class="vs">_V} {\order[1]</span><span class="sc">{x}</span><span class="vs">_W}"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>x2_V, x2_W <span class="op">=</span> symbols(<span class="vs">r"{\order[2]</span><span class="sc">{x}</span><span class="vs">_V} {\order[2]</span><span class="sc">{x}</span><span class="vs">_W}"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>α<span class="dv">0</span>, α<span class="dv">1</span>, α<span class="dv">2</span> <span class="op">=</span> symbols(<span class="vs">r"{\order[0]{\alpha</span><span class="sc">}}</span><span class="vs"> {\order[1]{\alpha</span><span class="sc">}}</span><span class="vs"> {\order[2]{\alpha</span><span class="sc">}}</span><span class="vs">"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>χ<span class="dv">0</span> <span class="op">=</span> IndexedBase(<span class="vs">r"\order[0]{\chi}"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>χ<span class="dv">1</span> <span class="op">=</span> IndexedBase(<span class="vs">r"\order[1]{\chi}"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> (x0_V <span class="op">+</span> x0_W) <span class="op">+</span> η <span class="op">*</span> (x1_V <span class="op">+</span> x1_W) <span class="op">+</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> (x2_V <span class="op">+</span> x2_W) <span class="op">+</span> O(η<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>α <span class="op">=</span> α<span class="dv">0</span> <span class="op">+</span> η <span class="op">*</span> α<span class="dv">1</span> <span class="op">+</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> α<span class="dv">2</span> <span class="op">+</span> O(η<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>display_latex_dict({<span class="st">"x"</span>: x, <span class="vs">r"\alpha"</span>: α}, num_cols<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <p><span class="math inline">\(\displaystyle \begin{align}x&amp;={\order[0]{x}_W} + {\order[0]{x}_V} + \eta \left({\order[1]{x}_V} + {\order[1]{x}_W}\right) + \frac{\eta^{2} \left({\order[2]{x}_V} + {\order[2]{x}_W}\right)}{2} + O\left(\eta^{3}\right)\\\alpha&amp;={\order[0]{\alpha}} + \eta {\order[1]{\alpha}} + \frac{\eta^{2} {\order[2]{\alpha}}}{2} + O\left(\eta^{3}\right)\\\end{align}\)</span></p>
@@ -266,7 +267,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>We immediately have the following simplification rules</p>
 <div class="cell" data-tags="[]" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rules <span class="op">=</span> {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    E2 <span class="op">*</span> v_[i]: <span class="dv">0</span>,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    E2 <span class="op">*</span> v[i]: <span class="dv">0</span>,</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    E2 <span class="op">*</span> x0_V: <span class="dv">0</span>,</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    E2 <span class="op">*</span> x1_V: <span class="dv">0</span>,</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    E2 <span class="op">*</span> x2_V: <span class="dv">0</span></span>
@@ -304,7 +305,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>H <span class="op">=</span> expand(H0 <span class="op">+</span> η <span class="op">*</span> H1 <span class="op">+</span> η<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> H2 <span class="op">+</span> O(η<span class="op">**</span><span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-tags="[]" data-execution_count="23">
+<div class="cell" data-tags="[]" data-execution_count="4">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>display_latex_dict({</span>
@@ -376,12 +377,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    u_hat: v_[i],</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    x0_V : χ<span class="dv">0</span>[j] <span class="op">*</span> v_[j],</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    u1 : ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> v_[k]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    u_hat: v[i],</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    x0_V : χ<span class="dv">0</span>[j] <span class="op">*</span> v[j],</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    u1 : ξ<span class="dv">1</span>[k] <span class="op">*</span> v[k]</span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>lhs1a <span class="op">=</span> lhs1.subs(d).subs(rules)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>rhs1a <span class="op">=</span> rhs1.subs(d).subs(rules).subs(χ<span class="dv">0</span>[j] <span class="op">*</span> v_[j] <span class="op">*</span> v_[i], χ<span class="dv">0</span>[i])</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>rhs1a <span class="op">=</span> rhs1.subs(d).subs(rules).subs(χ<span class="dv">0</span>[j] <span class="op">*</span> v[j] <span class="op">*</span> v[i], χ<span class="dv">0</span>[i])</span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>display_latex_equation(lhs1a, rhs1a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -396,11 +397,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    u_hat: w_hat,</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    x0_V : χ<span class="dv">0</span>[i] <span class="op">*</span> v_[i],</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    u1 : ξ<span class="dv">1</span><span class="er">_</span>[j] <span class="op">*</span> v_[j]</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    x0_V : χ<span class="dv">0</span>[i] <span class="op">*</span> v[i],</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    u1 : ξ<span class="dv">1</span>[j] <span class="op">*</span> v[j]</span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>lhs1b <span class="op">=</span> lhs1.subs(d).subs(rules)</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>rhs1b <span class="op">=</span> rhs1.subs(d).subs(rules).subs(v_[i] <span class="op">*</span> w_hat, <span class="dv">0</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>rhs1b <span class="op">=</span> rhs1.subs(d).subs(rules).subs(v[i] <span class="op">*</span> w_hat, <span class="dv">0</span>)</span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>display_latex_equation(lhs1b, rhs1b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -410,15 +411,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>(observe that, in the RHS, <span class="math inline">\(\langle v_i, \hat{w} \rangle = 0\)</span> since <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are orthogonal subspaces). The solution to the above problem is expressed as a linear combination of the <span class="math inline">\(w_{ij}\)</span> and <span class="math inline">\(w_i\)</span> –defined by the variational problems (<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.5</span></a>) and (<a href="setting-up_the_mathematical_stage.html#eq-20230107180501"><span>2.4</span></a>), respectively–, delivering Eq. (<a href="#eq-20230626163655"><span>6.1</span></a>).</p>
 <div class="cell" data-tags="[]" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>rules[x1_W] <span class="op">=</span> χ<span class="dv">0</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l] <span class="op">*</span> w_[k, l] <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> χ<span class="dv">0</span>[k] <span class="op">*</span> w_[k]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>rules[x1_W] <span class="op">=</span> χ<span class="dv">0</span>[k] <span class="op">*</span> ξ<span class="dv">1</span>[l] <span class="op">*</span> w[k, l] <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> χ<span class="dv">0</span>[k] <span class="op">*</span> w[k]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="the-variational-problem-of-order-2" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="the-variational-problem-of-order-2"><span class="header-section-number">6.4</span> The variational problem of order 2</h2>
 <p>The terms of second order are tested against elements of <span class="math inline">\(V\)</span> only.</p>
 <div class="cell" data-tags="[]" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> expand(<span class="dv">2</span> <span class="op">*</span> lhs.coeff(η, <span class="dv">2</span>).subs(u_hat, v_[i]).subs(rules))</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>rhs2 <span class="op">=</span> expand(<span class="dv">2</span> <span class="op">*</span> rhs.coeff(η, <span class="dv">2</span>).subs(u_hat, v_[i]).subs(rules))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> expand(<span class="dv">2</span> <span class="op">*</span> lhs.coeff(η, <span class="dv">2</span>).subs(u_hat, v[i]).subs(rules))</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>rhs2 <span class="op">=</span> expand(<span class="dv">2</span> <span class="op">*</span> rhs.coeff(η, <span class="dv">2</span>).subs(u_hat, v[i]).subs(rules))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -435,10 +436,10 @@ Simplification of these expressions
 <p>Use some orthogonality conditions in the right-hand side.</p>
 <div class="cell" data-tags="[]" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>rhs2 <span class="op">=</span> rhs2.subs({</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    x0_V <span class="op">*</span> v_[i]: χ<span class="dv">0</span>[i],</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    x1_V <span class="op">*</span> v_[i]: χ<span class="dv">1</span>[i],</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    v_[i] <span class="op">*</span> w_[k]: <span class="dv">0</span>,</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    v_[i] <span class="op">*</span> w_[k, l]: <span class="dv">0</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    x0_V <span class="op">*</span> v[i]: χ<span class="dv">0</span>[i],</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    x1_V <span class="op">*</span> v[i]: χ<span class="dv">1</span>[i],</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    v[i] <span class="op">*</span> w[k]: <span class="dv">0</span>,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    v[i] <span class="op">*</span> w[k, l]: <span class="dv">0</span></span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Plug expansions <span class="math display">\[
@@ -453,21 +454,21 @@ Simplification of these expressions
 <div class="cell" data-tags="[]" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="bu">dict</span>()</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>d[E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> x0_V] <span class="op">=</span> χ<span class="dv">0</span>[j] <span class="op">*</span> E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> v_[j]</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>d[E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> x1_V] <span class="op">=</span> χ<span class="dv">1</span>[j] <span class="op">*</span> E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> v_[j]</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>d[E2_ddot <span class="op">*</span> x0_V <span class="op">*</span> v_[i]] <span class="op">=</span> χ<span class="dv">0</span>[j] <span class="op">*</span> E2_ddot <span class="op">*</span> v_[i] <span class="op">*</span> v_[j]</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>d[E3 <span class="op">*</span> v_[i] <span class="op">*</span> x1_V <span class="op">*</span> u1] <span class="op">=</span> χ<span class="dv">1</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> E3 <span class="op">*</span> v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> v_[k]</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>d[E3 <span class="op">*</span> v_[i] <span class="op">*</span> x0_V <span class="op">*</span> u2_V] <span class="op">=</span> χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">2</span><span class="er">_</span>[k] <span class="op">*</span> E3 <span class="op">*</span> v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> v_[k]</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>d[E3_dot <span class="op">*</span> v_[i] <span class="op">*</span> x0_V <span class="op">*</span> u1] <span class="op">=</span> χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> E3_dot <span class="op">*</span> v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> v_[k]</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>d[E4 <span class="op">*</span> v_[i] <span class="op">*</span> x0_V <span class="op">*</span> u1 <span class="op">*</span> u1] <span class="op">=</span> χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l] <span class="op">*</span> E4 <span class="op">*</span> v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> v_[k] <span class="op">*</span> v_[l]</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>d[E2_dot <span class="op">*</span> v[i] <span class="op">*</span> x0_V] <span class="op">=</span> χ<span class="dv">0</span>[j] <span class="op">*</span> E2_dot <span class="op">*</span> v[i] <span class="op">*</span> v[j]</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>d[E2_dot <span class="op">*</span> v[i] <span class="op">*</span> x1_V] <span class="op">=</span> χ<span class="dv">1</span>[j] <span class="op">*</span> E2_dot <span class="op">*</span> v[i] <span class="op">*</span> v[j]</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>d[E2_ddot <span class="op">*</span> x0_V <span class="op">*</span> v[i]] <span class="op">=</span> χ<span class="dv">0</span>[j] <span class="op">*</span> E2_ddot <span class="op">*</span> v[i] <span class="op">*</span> v[j]</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>d[E3 <span class="op">*</span> v[i] <span class="op">*</span> x1_V <span class="op">*</span> u1] <span class="op">=</span> χ<span class="dv">1</span>[j] <span class="op">*</span> ξ<span class="dv">1</span>[k] <span class="op">*</span> E3 <span class="op">*</span> v[i] <span class="op">*</span> v[j] <span class="op">*</span> v[k]</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>d[E3 <span class="op">*</span> v[i] <span class="op">*</span> x0_V <span class="op">*</span> u2_V] <span class="op">=</span> χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">2</span>[k] <span class="op">*</span> E3 <span class="op">*</span> v[i] <span class="op">*</span> v[j] <span class="op">*</span> v[k]</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>d[E3_dot <span class="op">*</span> v[i] <span class="op">*</span> x0_V <span class="op">*</span> u1] <span class="op">=</span> χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span>[k] <span class="op">*</span> E3_dot <span class="op">*</span> v[i] <span class="op">*</span> v[j] <span class="op">*</span> v[k]</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>d[E4 <span class="op">*</span> v[i] <span class="op">*</span> x0_V <span class="op">*</span> u1 <span class="op">*</span> u1] <span class="op">=</span> χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span>[k] <span class="op">*</span> ξ<span class="dv">1</span>[l] <span class="op">*</span> E4 <span class="op">*</span> v[i] <span class="op">*</span> v[j] <span class="op">*</span> v[k] <span class="op">*</span> v[l]</span>
 <span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> lhs2.subs(d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Rename some indices.</p>
 <div class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> lhs2.subs({</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    χ<span class="dv">0</span>[k] <span class="op">*</span> E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> w_[k]: χ<span class="dv">0</span>[j] <span class="op">*</span> E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> w_[j],</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    χ<span class="dv">0</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l] <span class="op">*</span> w_[k, l]: χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> w_[j, k]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    χ<span class="dv">0</span>[k] <span class="op">*</span> E2_dot <span class="op">*</span> v[i] <span class="op">*</span> w[k]: χ<span class="dv">0</span>[j] <span class="op">*</span> E2_dot <span class="op">*</span> v[i] <span class="op">*</span> w[j],</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    χ<span class="dv">0</span>[k] <span class="op">*</span> ξ<span class="dv">1</span>[l] <span class="op">*</span> w[k, l]: χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span>[k] <span class="op">*</span> w[j, k]</span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>})  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><span class="math display">\[
@@ -481,9 +482,9 @@ Simplification of these expressions
 \end{aligned}
 \]</span></p>
 <div class="cell" data-tags="[]" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> lhs2.subs(E3 <span class="op">*</span> v_[i] <span class="op">*</span> x0_V <span class="op">*</span> u2_W,</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>                 (χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l] <span class="op">*</span> E3 <span class="op">*</span> v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> w_[k,l]</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>                  <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> λ<span class="dv">1</span> <span class="op">*</span> χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> E2_dot <span class="op">*</span> v_[k] <span class="op">*</span> w_[i, j])).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> lhs2.subs(E3 <span class="op">*</span> v[i] <span class="op">*</span> x0_V <span class="op">*</span> u2_W,</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>                 (χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span>[k] <span class="op">*</span> ξ<span class="dv">1</span>[l] <span class="op">*</span> E3 <span class="op">*</span> v[i] <span class="op">*</span> v[j] <span class="op">*</span> w[k,l]</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>                  <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> λ<span class="dv">1</span> <span class="op">*</span> χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span>[k] <span class="op">*</span> E2_dot <span class="op">*</span> v[k] <span class="op">*</span> w[i, j])).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><span class="math display">\[
 \order[0]{\chi}_k \, \E_3(v_i, \order[1]{u}, w_k)
@@ -491,8 +492,8 @@ Simplification of these expressions
 = \order[0]{\chi}_j \, \order[1]{\xi}_k \, \dot{\E}_2(v_j, w_{ik})
 \]</span></p>
 <div class="cell" data-tags="[]" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> lhs2.subs(χ<span class="dv">0</span>[k] <span class="op">*</span> E3 <span class="op">*</span> v_[i] <span class="op">*</span> u1 <span class="op">*</span> w_[k],</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>                 χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> E2_dot <span class="op">*</span> v_[j] <span class="op">*</span> w_[i, k]).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> lhs2.subs(χ<span class="dv">0</span>[k] <span class="op">*</span> E3 <span class="op">*</span> v[i] <span class="op">*</span> u1 <span class="op">*</span> w[k],</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>                 χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span>[k] <span class="op">*</span> E2_dot <span class="op">*</span> v[j] <span class="op">*</span> w[i, k]).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><span class="math display">\[
 \begin{aligned}
@@ -502,23 +503,23 @@ Simplification of these expressions
 \end{aligned}
 \]</span></p>
 <div class="cell" data-tags="[]" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> lhs2.subs(χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> E3 <span class="op">*</span> v_[i] <span class="op">*</span> w_[j, k] <span class="op">*</span> u1,</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>                 χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l] <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> (E3 <span class="op">*</span> v_[i] <span class="op">*</span> v_[k] <span class="op">*</span> w_[j, l]</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>                                                <span class="op">+</span> E3 <span class="op">*</span> v_[i] <span class="op">*</span> v_[l] <span class="op">*</span> w_[j, k])).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> lhs2.subs(χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span>[k] <span class="op">*</span> E3 <span class="op">*</span> v[i] <span class="op">*</span> w[j, k] <span class="op">*</span> u1,</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>                 χ<span class="dv">0</span>[j] <span class="op">*</span> ξ<span class="dv">1</span>[k] <span class="op">*</span> ξ<span class="dv">1</span>[l] <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> (E3 <span class="op">*</span> v[i] <span class="op">*</span> v[k] <span class="op">*</span> w[j, l]</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>                                                <span class="op">+</span> E3 <span class="op">*</span> v[i] <span class="op">*</span> v[l] <span class="op">*</span> w[j, k])).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-tags="[]" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>lhs2 <span class="op">=</span> lhs2.subs({</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> v_[j]: E_dot_[i, j],</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    E2_ddot <span class="op">*</span> v_[i] <span class="op">*</span> v_[j]: (E_ddot_[i, j] <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> w_[j]),</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    E3 <span class="op">*</span> v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> v_[k]: E_[i, j, k],</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    E3_dot <span class="op">*</span> v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> v_[k]: (E_dot_[i, j, k]</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>                                     <span class="op">-</span> E2_dot <span class="op">*</span> v_[i] <span class="op">*</span> w_[j, k]</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>                                     <span class="op">-</span> E2_dot <span class="op">*</span> v_[j] <span class="op">*</span> w_[i, k]</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>                                     <span class="op">-</span> E2_dot <span class="op">*</span> v_[k] <span class="op">*</span> w_[i, j]),</span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    E4 <span class="op">*</span>v_[i] <span class="op">*</span> v_[j] <span class="op">*</span> v_[k] <span class="op">*</span> v_[l]: (E_[i, j, k, l] </span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>                                        <span class="op">-</span> E3 <span class="op">*</span> v_[i] <span class="op">*</span> (v_[j] <span class="op">*</span> w_[k, l]</span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>                                                        <span class="op">+</span> v_[k] <span class="op">*</span> w_[j, l]</span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>                                                        <span class="op">+</span> v_[l] <span class="op">*</span> w_[j, k]))</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    E2_dot <span class="op">*</span> v[i] <span class="op">*</span> v[j]: E_dot[i, j],</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    E2_ddot <span class="op">*</span> v[i] <span class="op">*</span> v[j]: (E_ddot[i, j] <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> E2_dot <span class="op">*</span> v[i] <span class="op">*</span> w[j]),</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    E3 <span class="op">*</span> v[i] <span class="op">*</span> v[j] <span class="op">*</span> v[k]: E[i, j, k],</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    E3_dot <span class="op">*</span> v[i] <span class="op">*</span> v[j] <span class="op">*</span> v[k]: (E_dot[i, j, k]</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>                                     <span class="op">-</span> E2_dot <span class="op">*</span> v[i] <span class="op">*</span> w[j, k]</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>                                     <span class="op">-</span> E2_dot <span class="op">*</span> v[j] <span class="op">*</span> w[i, k]</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>                                     <span class="op">-</span> E2_dot <span class="op">*</span> v[k] <span class="op">*</span> w[i, j]),</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    E4 <span class="op">*</span>v[i] <span class="op">*</span> v[j] <span class="op">*</span> v[k] <span class="op">*</span> v[l]: (E[i, j, k, l] </span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>                                        <span class="op">-</span> E3 <span class="op">*</span> v[i] <span class="op">*</span> (v[j] <span class="op">*</span> w[k, l]</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>                                                        <span class="op">+</span> v[k] <span class="op">*</span> w[j, l]</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>                                                        <span class="op">+</span> v[l] <span class="op">*</span> w[j, k]))</span>
 <span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>}).expand()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
@@ -528,11 +529,11 @@ Simplification of these expressions
 <div class="cell" data-tags="[]" data-execution_count="22">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>expected <span class="op">=</span> ((E_[i, j, k, l] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[l]</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>            <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> (<span class="dv">2</span> <span class="op">*</span> E_dot_[i, j, k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> E_ddot_[i, j])</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>            <span class="op">+</span> E_[i, j, k] <span class="op">*</span> ξ<span class="dv">2</span><span class="er">_</span>[k]</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>            <span class="op">+</span> λ<span class="dv">2</span> <span class="op">*</span> E_dot_[i, j]) <span class="op">*</span> χ<span class="dv">0</span>[j]</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>            <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> (E_[i, j, k] <span class="op">*</span> ξ<span class="dv">1</span><span class="er">_</span>[k] <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> E_dot_[i, j]) <span class="op">*</span> χ<span class="dv">1</span>[j])</span>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>expected <span class="op">=</span> ((E[i, j, k, l] <span class="op">*</span> ξ<span class="dv">1</span>[k] <span class="op">*</span> ξ<span class="dv">1</span>[l]</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>            <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> (<span class="dv">2</span> <span class="op">*</span> E_dot[i, j, k] <span class="op">*</span> ξ<span class="dv">1</span>[k] <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> E_ddot[i, j])</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>            <span class="op">+</span> E[i, j, k] <span class="op">*</span> ξ<span class="dv">2</span>[k]</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>            <span class="op">+</span> λ<span class="dv">2</span> <span class="op">*</span> E_dot[i, j]) <span class="op">*</span> χ<span class="dv">0</span>[j]</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>            <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> (E[i, j, k] <span class="op">*</span> ξ<span class="dv">1</span>[k] <span class="op">+</span> λ<span class="dv">1</span> <span class="op">*</span> E_dot[i, j]) <span class="op">*</span> χ<span class="dv">1</span>[j])</span>
 <span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> expand(lhs2 <span class="op">-</span> expected) <span class="op">==</span> <span class="dv">0</span></span>
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>

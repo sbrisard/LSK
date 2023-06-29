@@ -4,9 +4,9 @@ In this chapter, we define the problem mathematically. Symbols and notation are 
 
 ## Mathematical setting {#sec-20230208081323}
 
-The space of admissible states of the system under consideration is denoted $U$. It has the structure of a real vector space. The energy of the system is $\E(u, \lambda)$, where $\lambda$ denotes a loading parameter. It is assumed that the fundamental branch of the equilibrium diagram, $u^\ast(\lambda)$ is known. Then the energy is stationary with respect to the state $u$ along the whole branch. In other words, for all $\hat{u} \in U$
+The space of admissible states of the system under consideration is denoted $U$. It has the structure of a real vector space. The energy of the system is $\E(u, \lambda)$, where $\lambda$ denotes a loading parameter. It is assumed that the fundamental branch of the equilibrium diagram, $u^\star(\lambda)$ is known. Then the energy is stationary with respect to the state $u$ along the whole branch. In other words, for all $\hat{u} \in U$
 $$
-\E_{,u}[u^{\ast}(\lambda), \lambda; \hat{u}]=0,
+\E_{,u}[u^{\star}(\lambda), \lambda; \hat{u}]=0,
 $$ {#eq-20221227184138}
 where $\E_{,u}(u, \lambda; \hat{u})$ denotes the (real) value of the differential of the energy $\E$ with respect to the state $u$, evaluated at $(u, \lambda)$, for the test function $\hat{u}$. Similarly, evaluation of the second-, third-, etc., order differential of the energy will be denoted $\E_{,uu}(u, \lambda; \hat{u}, \hat{v})$, $\E_{,uuu}(u, \lambda; \hat{u}, \hat{v}, \hat{w})$, etc. It is assumed that a finite value $\lambda_0 > 0$ of $\lambda$ can be found (critical load), such that
 
@@ -20,7 +20,7 @@ The goal of these notes is to analyze *all* equilibrium paths that pass through 
 
 We introduce the following notations
 $$
-u_0 = u^\ast(\lambda_0), \quad \dot{u}_0 = \frac{\D u^\ast}{\D \lambda} \biggr \rvert_{\lambda=\lambda_0}, \quad \ddot{u}_0 = \frac{\D^2 u^\ast}{\D \lambda^2} \biggr \rvert_{\lambda=\lambda_0}, \quad \dddot{u}_0 = \ldots, \quad \ddddot{u}_0 = \ldots
+u_0 = u^\star(\lambda_0), \quad \dot{u}_0 = \frac{\D u^\star}{\D \lambda} \biggr \rvert_{\lambda=\lambda_0}, \quad \ddot{u}_0 = \frac{\D^2 u^\star}{\D \lambda^2} \biggr \rvert_{\lambda=\lambda_0}, \quad \dddot{u}_0 = \ldots, \quad \ddddot{u}_0 = \ldots
 $$
 and
 $$
@@ -29,12 +29,12 @@ $$
 
 Note that $\E_2$, $\E_3$ and $\E_4$ thus defined are bi-, tri- and quadrilinear forms, respectively. The following derivatives are also introduced
 $$
-\dot{\E}_2(\hat{u}, \hat{v}) = \frac{\D}{\D\lambda} \E_{,uu}[ u^\ast(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0}
+\dot{\E}_2(\hat{u}, \hat{v}) = \frac{\D}{\D\lambda} \E_{,uu}[ u^\star(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0}
 = \E_{,uuu}(u_0, \lambda_0; \dot{u}_0, \hat{u}, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; \hat{u}, \hat{v})
 $${#eq-20221227184821}
 $$
 \begin{aligned}[b]
-\ddot{\E}_2(\hat{u}, \hat{v}) = \frac{\D^2}{\D\lambda^2} \E_{,uu}[ u^\ast(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0}
+\ddot{\E}_2(\hat{u}, \hat{v}) = \frac{\D^2}{\D\lambda^2} \E_{,uu}[ u^\star(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0}
 ={} & \E_{,uuuu}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{u}, \hat{v}) + 2\E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{u}, \hat{v})\\
 & + \E_{,uu\lambda\lambda}( u_0, \lambda_0; \hat{u}, \hat{v}) + \E_{,uuu}(u_0, \lambda_0, \ddot{u}_0),
 \end{aligned}

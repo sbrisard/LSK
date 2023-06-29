@@ -2,8 +2,6 @@
 
 In this chapter, we define the problem mathematically. Symbols and notation are introduced in @sec-20230208081323, as well as the fundamental assumptions that we make. Then, the *kernel* of the hessian of the energy is introduced in @sec-20230107173921 as a subspace of the space of admissible states.
 
-This chapter uses $\LaTeX\newcommand{\D}{\mathrm{d}}\newcommand{\E}{\mathcal{E}}\newcommand{\reals}{\mathbb{R}}$ custom macros.
-
 ## Mathematical setting {#sec-20230208081323}
 
 The space of admissible states of the system under consideration is denoted $U$. It has the structure of a real vector space. The energy of the system is $\E(u, \lambda)$, where $\lambda$ denotes a loading parameter. It is assumed that the fundamental branch of the equilibrium diagram, $u^\ast(\lambda)$ is known. Then the energy is stationary with respect to the state $u$ along the whole branch. In other words, for all $\hat{u} \in U$

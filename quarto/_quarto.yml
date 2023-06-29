@@ -24,8 +24,10 @@ format:
   html:
     theme: cosmo
     html-math-method: mathjax
+    include-before-body: _macros.md
   pdf:
     documentclass: scrreprt
+    include-in-header: _macros.tex
 
 crossref:
   eq-prefix: ""

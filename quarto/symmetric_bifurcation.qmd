@@ -1,7 +1,5 @@
 # A particular case of symmetric bifurcation
 
-This chapter uses $\LaTeX\newcommand{\D}{\mathrm{d}}\newcommand{\E}{\mathcal{E}}\newcommand{\order}[2][1]{#2^{(#1)}}\newcommand{\reals}{\mathbb{R}}$ custom macros.
-
 In this chapter, we consider the case $E_{ijk}=0$ for all $i, j, k = 1, \ldots, m$. Then, from Eq. (@eq-20230125062336), $\order[1]\lambda = 0$ on *all* bifurcated branches. It is assumed that, on the bifurcated branch under consideration, the next term of the expansion of $\lambda$ is non-zero: $\order[2]\lambda \neq 0$. The bifurcation is *symmetric*, and the bifurcation equation (eq-20230124205642) reduces to
 $$
 \tfrac{1}{3} E_{ijkl} \, \order[1]{\xi_j} \, \order[1]{\xi_k} \, \order[1]{\xi_l}

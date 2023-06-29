@@ -1,7 +1,5 @@
 # Asymmetric bifurcation
 
-This chapter uses $\LaTeX\newcommand{\D}{\mathrm{d}}\newcommand{\E}{\mathcal{E}}\newcommand{\order}[2][1]{#2^{(#1)}}\newcommand{\reals}{\mathbb{R}}$ custom macros.
-
 In this chapter, we consider a bifurcated branch for which $\order[1]{\lambda} \neq 0$. The bifurcation equation (@eq-20230125062336) shows that necessarily, $E_{ijk}$ is not identically nul. This equation has at most $(2^m - 1)$ pairs of real solutions $(\order[1]{\lambda}, \order[1]{u})$ et $(-\order[1]{\lambda}, -\order[1]{u})$; furthermore, multiplication by $\order[1]{\xi_i}$ shows that
 
 $$

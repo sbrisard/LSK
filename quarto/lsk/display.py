@@ -10,13 +10,13 @@ def display_latex_str(s):
 
 
 def display_latex_dict(d, num_cols=2):
-    s = "\\begin{align}"
+    s = "\\begin{aligned}"
     col = 1
     for k, v in d.items():
         s += __latex(k) + "&=" + __latex(v)
         s += r"\\" if col % num_cols == 0 else r"&"
         col += 1
-    s += "\\end{align}"
+    s += "\\end{aligned}"
     display_latex_str(s)
 
 

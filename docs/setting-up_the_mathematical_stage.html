@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -69,11 +70,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./setting-up_the_mathematical_stage.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -81,91 +87,108 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Notes on the Lyapunov–Schmidt–Koiter asymptotic method</a> 
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome!</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome!</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setting-up_the_mathematical_stage.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></a>
+  <a href="./setting-up_the_mathematical_stage.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
+  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
+  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></a>
+  <a href="./energy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
+  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./asymmetric_bifurcation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Asymmetric bifurcation</span></a>
+  <a href="./asymmetric_bifurcation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Asymmetric bifurcation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./symmetric_bifurcation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">A particular case of symmetric bifurcation</span></a>
+  <a href="./symmetric_bifurcation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">A particular case of symmetric bifurcation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./symbols.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">The <code>lsk.symbols</code> module</span></a>
+  <a href="./symbols.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">The <code>lsk.symbols</code> module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-20230208081323" id="toc-sec-20230208081323" class="nav-link active" data-scroll-target="#sec-20230208081323"><span class="toc-section-number">2.1</span>  Mathematical setting</a></li>
-  <li><a href="#sec-20230107173921" id="toc-sec-20230107173921" class="nav-link" data-scroll-target="#sec-20230107173921"><span class="toc-section-number">2.2</span>  Kernel of the hessian of the energy</a></li>
-  <li><a href="#sec-20230620135251" id="toc-sec-20230620135251" class="nav-link" data-scroll-target="#sec-20230620135251"><span class="toc-section-number">2.3</span>  Two canonical variational problems</a></li>
-  <li><a href="#sec-20230528173310" id="toc-sec-20230528173310" class="nav-link" data-scroll-target="#sec-20230528173310"><span class="toc-section-number">2.4</span>  Additional symbols</a></li>
+  <li><a href="#sec-20230208081323" id="toc-sec-20230208081323" class="nav-link active" data-scroll-target="#sec-20230208081323"><span class="header-section-number">2.1</span> Mathematical setting</a></li>
+  <li><a href="#sec-20230107173921" id="toc-sec-20230107173921" class="nav-link" data-scroll-target="#sec-20230107173921"><span class="header-section-number">2.2</span> Kernel of the hessian of the energy</a></li>
+  <li><a href="#sec-20230620135251" id="toc-sec-20230620135251" class="nav-link" data-scroll-target="#sec-20230620135251"><span class="header-section-number">2.3</span> Two canonical variational problems</a></li>
+  <li><a href="#sec-20230528173310" id="toc-sec-20230528173310" class="nav-link" data-scroll-target="#sec-20230528173310"><span class="header-section-number">2.4</span> Additional symbols</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+$$
+\newcommand{\D}{\mathrm{d}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\order}[2][1]{#2^{(#1)}}
+\newcommand{\reals}{\mathbb{R}}
+$$
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-20230402152824" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></span></h1>
+<h1 class="title"><span id="sec-20230402152824" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></span></h1>
 </div>
 
 
@@ -181,11 +204,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>In this chapter, we define the problem mathematically. Symbols and notation are introduced in <a href="#sec-20230208081323"><span>Section&nbsp;2.1</span></a>, as well as the fundamental assumptions that we make. Then, the <em>kernel</em> of the hessian of the energy is introduced in <a href="#sec-20230107173921"><span>Section&nbsp;2.2</span></a> as a subspace of the space of admissible states.</p>
-<p>This chapter uses <span class="math inline">\(\LaTeX\newcommand{\D}{\mathrm{d}}\newcommand{\E}{\mathcal{E}}\newcommand{\reals}{\mathbb{R}}\)</span> custom macros.</p>
 <section id="sec-20230208081323" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="sec-20230208081323"><span class="header-section-number">2.1</span> Mathematical setting</h2>
-<p>The space of admissible states of the system under consideration is denoted <span class="math inline">\(U\)</span>. It has the structure of a real vector space. The energy of the system is <span class="math inline">\(\E(u, \lambda)\)</span>, where <span class="math inline">\(\lambda\)</span> denotes a loading parameter. It is assumed that the fundamental branch of the equilibrium diagram, <span class="math inline">\(u^\ast(\lambda)\)</span> is known. Then the energy is stationary with respect to the state <span class="math inline">\(u\)</span> along the whole branch. In other words, for all <span class="math inline">\(\hat{u} \in U\)</span> <span id="eq-20221227184138"><span class="math display">\[
-\E_{,u}[u^{\ast}(\lambda), \lambda; \hat{u}]=0,
+<p>The space of admissible states of the system under consideration is denoted <span class="math inline">\(U\)</span>. It has the structure of a real vector space. The energy of the system is <span class="math inline">\(\E(u, \lambda)\)</span>, where <span class="math inline">\(\lambda\)</span> denotes a loading parameter. It is assumed that the fundamental branch of the equilibrium diagram, <span class="math inline">\(u^\star(\lambda)\)</span> is known. Then the energy is stationary with respect to the state <span class="math inline">\(u\)</span> along the whole branch. In other words, for all <span class="math inline">\(\hat{u} \in U\)</span> <span id="eq-20221227184138"><span class="math display">\[
+\E_{,u}[u^{\star}(\lambda), \lambda; \hat{u}]=0,
 \tag{2.1}\]</span></span> where <span class="math inline">\(\E_{,u}(u, \lambda; \hat{u})\)</span> denotes the (real) value of the differential of the energy <span class="math inline">\(\E\)</span> with respect to the state <span class="math inline">\(u\)</span>, evaluated at <span class="math inline">\((u, \lambda)\)</span>, for the test function <span class="math inline">\(\hat{u}\)</span>. Similarly, evaluation of the second-, third-, etc., order differential of the energy will be denoted <span class="math inline">\(\E_{,uu}(u, \lambda; \hat{u}, \hat{v})\)</span>, <span class="math inline">\(\E_{,uuu}(u, \lambda; \hat{u}, \hat{v}, \hat{w})\)</span>, etc. It is assumed that a finite value <span class="math inline">\(\lambda_0 &gt; 0\)</span> of <span class="math inline">\(\lambda\)</span> can be found (critical load), such that</p>
 <ol type="1">
 <li><span class="math inline">\(\E_{,uu}[u(\lambda), \lambda] &gt; 0\)</span> for all <span class="math inline">\(0 &lt; \lambda &lt; \lambda_0\)</span>,</li>
@@ -195,16 +217,16 @@ ul.task-list li input[type="checkbox"] {
 <p>The load <span class="math inline">\(\lambda_0\)</span> will be referred to as the <em>critical load</em>; similarly, the state <span class="math inline">\(u_0\)</span> of the system at the critical load will be referred to as the <em>critical state</em>; finally, the pair <span class="math inline">\((u_0, \lambda_0)\)</span> is the <em>critical point</em> of the system. Assumption 1 implies that equilibria along the fundamental branch are <em>stable below the critical load</em>. Conversely, it results from assumption 3 that equilibrium points on the fundamental branch are <em>unstable above the critical load</em>. Stability at the critical load is yet undetermined.</p>
 <p>The goal of these notes is to analyze <em>all</em> equilibrium paths that pass through the critical point <span class="math inline">\((u_0, \lambda_0)\)</span>.</p>
 <p>We introduce the following notations <span class="math display">\[
-u_0 = u^\ast(\lambda_0), \quad \dot{u}_0 = \frac{\D u^\ast}{\D \lambda} \biggr \rvert_{\lambda=\lambda_0}, \quad \ddot{u}_0 = \frac{\D^2 u^\ast}{\D \lambda^2} \biggr \rvert_{\lambda=\lambda_0}, \quad \dddot{u}_0 = \ldots, \quad \ddddot{u}_0 = \ldots
+u_0 = u^\star(\lambda_0), \quad \dot{u}_0 = \frac{\D u^\star}{\D \lambda} \biggr \rvert_{\lambda=\lambda_0}, \quad \ddot{u}_0 = \frac{\D^2 u^\star}{\D \lambda^2} \biggr \rvert_{\lambda=\lambda_0}, \quad \dddot{u}_0 = \ldots, \quad \ddddot{u}_0 = \ldots
 \]</span> and <span class="math display">\[
 \E_2 = \E_{,uu}(u_0, \lambda_0), \quad \E_3 = \E_{,uuu}(u_0, \lambda_0), \quad \E_4 = \E_{,uuuu}(u_0, \lambda_0).
 \]</span></p>
 <p>Note that <span class="math inline">\(\E_2\)</span>, <span class="math inline">\(\E_3\)</span> and <span class="math inline">\(\E_4\)</span> thus defined are bi-, tri- and quadrilinear forms, respectively. The following derivatives are also introduced <span id="eq-20221227184821"><span class="math display">\[
-\dot{\E}_2(\hat{u}, \hat{v}) = \frac{\D}{\D\lambda} \E_{,uu}[ u^\ast(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0}
+\dot{\E}_2(\hat{u}, \hat{v}) = \frac{\D}{\D\lambda} \E_{,uu}[ u^\star(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0}
 = \E_{,uuu}(u_0, \lambda_0; \dot{u}_0, \hat{u}, \hat{v}) + \E_{,uu\lambda}(u_0, \lambda_0; \hat{u}, \hat{v})
 \tag{2.2}\]</span></span> <span class="math display">\[
 \begin{aligned}[b]
-\ddot{\E}_2(\hat{u}, \hat{v}) = \frac{\D^2}{\D\lambda^2} \E_{,uu}[ u^\ast(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0}
+\ddot{\E}_2(\hat{u}, \hat{v}) = \frac{\D^2}{\D\lambda^2} \E_{,uu}[ u^\star(\lambda), \lambda; \hat{u}, \hat{v}] \biggr \rvert_{\lambda = \lambda_0}
 ={} &amp; \E_{,uuuu}(u_0, \lambda_0; \dot{u}_0, \dot{u}_0, \hat{u}, \hat{v}) + 2\E_{,uuu\lambda}(u_0, \lambda_0; \dot{u}_0, \hat{u}, \hat{v})\\
 &amp; + \E_{,uu\lambda\lambda}( u_0, \lambda_0; \hat{u}, \hat{v}) + \E_{,uuu}(u_0, \lambda_0, \ddot{u}_0),
 \end{aligned}
@@ -264,12 +286,12 @@ E_{ijkl} ={}&amp; \E_4(v_i, v_j, v_k, v_l) + \E_3(v_i, v_j, w_{kl})\\
 \end{aligned}
 \tag{2.10}\]</span></span></p>
 <p>These symbols define second, third and fourth-order, fully symmetric, tensors over <span class="math inline">\(V\)</span>.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Consistency of the above definitions
 </div>
 </div>
@@ -313,9 +335,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -380,6 +416,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

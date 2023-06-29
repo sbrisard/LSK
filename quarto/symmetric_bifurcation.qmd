@@ -41,10 +41,10 @@ To conclude this section, it is observed that, when $\order[1]\lambda = 0$, the 
 $$
 \begin{aligned}[b]
 \E[u(\eta), \lambda(\eta)]
-={}& \E\{u^{\ast}[\lambda(\eta)], \lambda(\eta)\} + \tfrac{1}{24} \eta^4 \, \bigl(
+={}& \E[u^{\star} \circ \lambda(\eta), \lambda(\eta)] + \tfrac{1}{24} \eta^4 \, \bigl(
 E_{ijkl} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \, \order[1]{\xi_k} \, \order[1]{\xi_l}\\
 &+ 6 \order[2]\lambda \, \dot{E}_{ij} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \bigr) + o(\eta^4)\\
-={}& \E\{u^{\ast}[\lambda(\eta)], \lambda(\eta)\}
+={}& \E[u^{\star} \circ \lambda(\eta), \lambda(\eta)]
 - \tfrac{1}{24} \eta^4 E_{ijkl} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \, \order[1]{\xi_k} \, \order[1]{\xi_l} + o(\eta^4).
 \end{aligned}
 $$ {#eq-20220801094437}
@@ -58,7 +58,7 @@ $$
 and expression (@eq-20220801094437) reads
 $$
 \E[u(\eta), \lambda(\eta)]
-= \E\{u^{\ast}[\lambda(\eta)], \lambda(\eta)\}
+= \E[u^{\star} \circ \lambda(\eta), \lambda(\eta)]
 - \frac{3 \bigl( \dot{E}_{ij} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \bigr)^2}{2 E_{ijkl} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \, \order[1]{\xi_k} \, \order[1]{\xi_l} } \bigl( \lambda - \lambda_0 \bigr)^2  + o(\lambda^2).
 $$
 

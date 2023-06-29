@@ -189,7 +189,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./symbols.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The <code>lsk.symbols</code> module</span></a>
+  <a href="./asymmetric_bifurcation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Asymmetric bifurcation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./symmetric_bifurcation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">A particular case of symmetric bifurcation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./symbols.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">The <code>lsk.symbols</code> module</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -244,7 +254,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This chapter lays the ground for all symbolic calculations that are to follow. The <a href="https://www.sympy.org">SymPy</a> library is imported and initialized in <a href="#sec-20230103084732"><span>Section&nbsp;3.1</span></a>. Then, the energy of the system is rewritten with a minimum set of parameters.</p>
 <section id="sec-20230103084732" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="sec-20230103084732"><span class="header-section-number">3.1</span> Importing all necessary modules</h2>
-<p>We will use the <a href="https://www.python.org">Python</a> library <a href="https://www.sympy.org">SymPy</a> for symbolic mathematics and rely also on the <a href="https://ipython.org/">IPython</a> library (in particular, <a href="https://ipython.readthedocs.io/en/stable/api/generated/IPython.display.html#IPython.display.Math">IPython.display.Math</a>) for pretty <span class="math inline">\(\LaTeX\)</span> output. Some useful functions are defined in the <code>lsk.display</code> module, which will be systematically imported. Also, all relevant symbols are defined in the <code>lsk.symbols</code> module (see <a href="symbols.html"><span>Chapter&nbsp;7</span></a>).</p>
+<p>We will use the <a href="https://www.python.org">Python</a> library <a href="https://www.sympy.org">SymPy</a> for symbolic mathematics and rely also on the <a href="https://ipython.org/">IPython</a> library (in particular, <a href="https://ipython.readthedocs.io/en/stable/api/generated/IPython.display.html#IPython.display.Math">IPython.display.Math</a>) for pretty <span class="math inline">\(\LaTeX\)</span> output. Some useful functions are defined in the <code>lsk.display</code> module, which will be systematically imported. Also, all relevant symbols are defined in the <code>lsk.symbols</code> module (see <a href="symbols.html"><span>Chapter&nbsp;9</span></a>).</p>
 <p>Without loss of generality, it will be assumed in all symbolic calculations that <span class="math inline">\(\lambda_0 = 0\)</span> and <span class="math inline">\(u_0 = 0\)</span>. The general case <span class="math inline">\(\lambda_0 \neq 0\)</span> and <span class="math inline">\(u_0 \neq 0\)</span> is readily recovered through the substitution <span class="math inline">\(\lambda \leftrightarrow \lambda - \lambda_0\)</span> and <span class="math inline">\(u \leftrightarrow u - u_0\)</span>.</p>
 <p>The following developments involve the energy <span class="math inline">\((u, \lambda) \mapsto \E(u, \lambda)\)</span> and its differentials at the critical point <span class="math inline">\((u_0, \lambda_0)\)</span>, as well as the fundamental path <span class="math inline">\(\lambda \mapsto u^\ast(\lambda)\)</span> and its derivatives at <span class="math inline">\(\lambda = \lambda_0\)</span>. It will therefore be convenient to express <span class="math inline">\(\E\)</span> and <span class="math inline">\(u^\star\)</span> as Taylor expansions with respect to <span class="math inline">\(u\)</span> and <span class="math inline">\(\lambda\)</span>.</p>
 <div class="cell" data-tags="[]" data-execution_count="1">

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - References</title>
+<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 8&nbsp; A particular case of symmetric bifurcation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./symbols.html" rel="prev">
+<link href="./symbols.html" rel="next">
+<link href="./asymmetric_bifurcation.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -79,6 +61,7 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -88,7 +71,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">References</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">A particular case of symmetric bifurcation</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -148,7 +131,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./symmetric_bifurcation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">A particular case of symmetric bifurcation</span></a>
+  <a href="./symmetric_bifurcation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">A particular case of symmetric bifurcation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -158,7 +141,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">References</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
   </div>
 </li>
     </ul>
@@ -173,7 +156,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">References</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">A particular case of symmetric bifurcation</span></h1>
 </div>
 
 
@@ -188,35 +171,69 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-koit2009" class="csl-entry" role="doc-biblioentry">
-Koiter, W. T., and A. M. A. van der Heijden. 2009. <em>W.<span>T</span>.
-<span>Koiter</span>’s Elastic Stability of Solids and Structures</em>.
-<span>Cambridge ; New York</span>: <span>Cambridge University
-Press</span>.
+<p>This chapter uses <span class="math inline">\(\LaTeX\newcommand{\D}{\mathrm{d}}\newcommand{\E}{\mathcal{E}}\newcommand{\order}[2][1]{#2^{(#1)}}\newcommand{\reals}{\mathbb{R}}\)</span> custom macros.</p>
+<p>In this chapter, we consider the case <span class="math inline">\(E_{ijk}=0\)</span> for all <span class="math inline">\(i, j, k = 1, \ldots, m\)</span>. Then, from Eq.&nbsp;(<a href="bifurcation_equations.html#eq-20230125062336"><span>4.4</span></a>), <span class="math inline">\(\order[1]\lambda = 0\)</span> on <em>all</em> bifurcated branches. It is assumed that, on the bifurcated branch under consideration, the next term of the expansion of <span class="math inline">\(\lambda\)</span> is non-zero: <span class="math inline">\(\order[2]\lambda \neq 0\)</span>. The bifurcation is <em>symmetric</em>, and the bifurcation equation&nbsp;(eq-20230124205642) reduces to <span id="eq-20220801092222"><span class="math display">\[
+\tfrac{1}{3} E_{ijkl} \, \order[1]{\xi_j} \, \order[1]{\xi_k} \, \order[1]{\xi_l}
++ \order[2]\lambda \, \dot{E}_{ij} \, \order[1]{\xi_j} = 0,
+\tag{8.1}\]</span></span> which has at most <span class="math inline">\((3^m - 1) / 2\)</span> pairs of real solutions <span class="math inline">\((\order[2]\lambda, \order[1]u)\)</span> and <span class="math inline">\((- \order[2]\lambda, - \order[1]u)\)</span>.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div id="ref-koit1945" class="csl-entry" role="doc-biblioentry">
-Koiter, Warner Tjardus. 1945. <span>“The <span>Stability</span> of
-<span>Elastic Equilibrium</span>.”</span> PhD thesis,
-<span>Delft</span>: Technische Hooge School Delft.
-</div>
-<div id="ref-nguy2000" class="csl-entry" role="doc-biblioentry">
-Nguyen, Quoc-Son. 2000. <em><span>Stabilité et mécanique non
-linéaire</span></em>. <span>Paris</span>: <span>Hermès Science
-Publications</span>.
-</div>
-<div id="ref-poti1987" class="csl-entry" role="doc-biblioentry">
-Potier-Ferry, Michel. 1987. <span>“Foundations of Elastic Postbuckling
-Theory.”</span> In <em>Buckling and <span>Post-Buckling</span></em>,
-1–82. Lecture <span>Notes</span> in <span>Physics</span>.
-<span>Springer, Berlin, Heidelberg</span>. <a href="https://doi.org/10.1007/BFb0009197">https://doi.org/10.1007/BFb0009197</a>.
-</div>
-<div id="ref-tria2017" class="csl-entry" role="doc-biblioentry">
-Triantafyllidis, Nicolas. 2017. <span>“Stability of Solids: From
-Structures to Materials.”</span> Lecture Notes. <span>Palaiseau,
-France</span>: <span>École polytechnique</span>.
+<div class="callout-caption-container flex-fill">
+Note
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<p>I can’t prove that the bifurcation equation (<a href="#eq-20220801092222"><span>8.1</span></a>) has at most <span class="math inline">\((3^m - 1) / 2\)</span> pairs of real solutions.</p>
+</div>
+</div>
+<p>Upon multiplication by <span class="math inline">\(\order[1]{\xi_i}\)</span>, the above equation delivers the following expression of <span class="math inline">\(\order[2]\lambda\)</span> <span id="eq-20220801093236"><span class="math display">\[
+\order[2]\lambda = -\frac{E_{ijkl} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \, \order[1]{\xi_k} \, \order[1]{\xi_l}}{3 \dot{E}_{ij} \, \order[1]{\xi_i} \, \order[1]{\xi_j}}.
+\tag{8.2}\]</span></span></p>
+<p>Since <span class="math inline">\(\dot{E}_{ij} \, \order[1]{\xi_i} \, \order[1]{\xi_j} &lt; 0\)</span>, <span class="math inline">\(\order[2]\lambda\)</span> has the same sign as <span class="math inline">\(E_{ijkl} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \, \order[1]{\xi_k} \, \order[1]{\xi_l}\)</span>. In other words, if <span class="math inline">\(E_{ijkl} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \, \order[1]{\xi_k} \, \order[1]{\xi_l} &gt; 0\)</span>, (resp. <span class="math inline">\(&lt;0\)</span>) then the bifurcated branch exists <em>above</em> (resp. <em>below</em>) the critical load <span class="math inline">\(\lambda_0\)</span> only.</p>
+<p>Turning now to the eigenpairs of the Hessian of the energy along the bifurcated branch, Eq.&nbsp;(<a href="eigenmodes.html#eq-20230524065341"><span>6.2</span></a>) shows that <span class="math inline">\(\order[1]\alpha = 0\)</span>. Then <span class="math inline">\(\alpha = \order[2]\alpha \eta^2 / 2 + o(\eta^2)\)</span> and, from Eq.&nbsp;(<a href="eigenmodes.html#eq-20230524065110"><span>6.3</span></a>) <span class="math display">\[
+\bigl( E_{ijkl} \, \order[1]{\xi_k} \, \order[1]{\xi_l} + \order[2]\lambda \, \dot{E}_{ij} \bigr) \, \order[0]{\chi_j} = \order[2]\alpha \, \order[0]{\chi_i}.
+\]</span></p>
+<p>If <span class="math inline">\((E_{ijkl} \, \order[1]{\xi_k} \, \order[1]{\xi_l} + \order[2]\lambda \, \dot{E}_{ij} )\)</span> is positive definite, then the bifurcated branch is stable (note that, in that case, the bifurcated branch exists above the critical load only). If one of the eigenvalues of this tensor is <span class="math inline">\(&lt;0\)</span>, then the bifurcated branch is unstable. The stability is undecided when all eigenvalues are <span class="math inline">\(\geq 0\)</span>.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that, from Eq.&nbsp;(<a href="#eq-20220801092222"><span>8.1</span></a>), <span class="math display">\[
+E_{ijkl} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \, \order[1]{\xi_k} \, \order[1]{\xi_l}
++ \order[2]\lambda \, \dot{E}_{ij} \, \order[1]{\xi_i} \, \order[1]{\xi_j}
+= \tfrac{2}{3} E_{ijkl} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \, \order[1]{\xi_k} \, \order[1]{\xi_l}.
+\]</span></p>
+</div>
+</div>
+<p>To conclude this section, it is observed that, when <span class="math inline">\(\order[1]\lambda = 0\)</span>, the dominant term of the potential energy along the bifurcated branch is of the fourth order, see Eq&nbsp;(<a href="energy.html#eq-20230528190539"><span>5.1</span></a>). Combining with Eq.&nbsp;(<a href="#eq-20220801093236"><span>8.2</span></a>), <span id="eq-20220801094437"><span class="math display">\[
+\begin{aligned}[b]
+\E[u(\eta), \lambda(\eta)]
+={}&amp; \E\{u^{\ast}[\lambda(\eta)], \lambda(\eta)\} + \tfrac{1}{24} \eta^4 \, \bigl(
+E_{ijkl} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \, \order[1]{\xi_k} \, \order[1]{\xi_l}\\
+&amp;+ 6 \order[2]\lambda \, \dot{E}_{ij} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \bigr) + o(\eta^4)\\
+={}&amp; \E\{u^{\ast}[\lambda(\eta)], \lambda(\eta)\}
+- \tfrac{1}{24} \eta^4 E_{ijkl} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \, \order[1]{\xi_k} \, \order[1]{\xi_l} + o(\eta^4).
+\end{aligned}
+\tag{8.3}\]</span></span></p>
+<p>The expansion <span class="math inline">\(\lambda = \lambda_0 + \order[2]\lambda \, \eta^2 / 2 + o(\eta^2)\)</span> can be inverted as follows <span class="math display">\[
+\eta^4
+= \frac{4 \bigl(\lambda - \lambda_0\bigr)^2}{\bigl( \order[2]\lambda \bigr)^2} + o(\lambda^2)
+= \frac{36 \bigl( \dot{E}_{ij} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \bigr)^2}{\bigl( E_{ijkl} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \, \order[1]{\xi_k} \, \order[1]{\xi_l} \bigr)^2} \bigl( \lambda - \lambda_0 \bigr)^2
+\]</span> and expression&nbsp;(<a href="#eq-20220801094437"><span>8.3</span></a>) reads <span class="math display">\[
+\E[u(\eta), \lambda(\eta)]
+= \E\{u^{\ast}[\lambda(\eta)], \lambda(\eta)\}
+- \frac{3 \bigl( \dot{E}_{ij} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \bigr)^2}{2 E_{ijkl} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \, \order[1]{\xi_k} \, \order[1]{\xi_l} } \bigl( \lambda - \lambda_0 \bigr)^2  + o(\lambda^2).
+\]</span></p>
+<p>Again, the above expression does not depend on the scaling of <span class="math inline">\(\order[1]u\)</span> (of the <span class="math inline">\(\order[1]{\xi_i}\)</span>). Note that, if <span class="math inline">\(E_{ijkl} \, \order[1]{\xi_i} \, \order[1]{\xi_j} \, \order[1]{\xi_k} \, \order[1]{\xi_l} &gt; 0\)</span>, then only loads that are greater than the critical load can be reached on the bifurcated branch, where the energy is lower than the fundamental branch.</p>
 
 
 
@@ -356,11 +373,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./symbols.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">The <code>lsk.symbols</code> module</span></span>
+      <a href="./asymmetric_bifurcation.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Asymmetric bifurcation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./symbols.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">The <code>lsk.symbols</code> module</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

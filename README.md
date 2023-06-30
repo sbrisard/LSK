@@ -1,4 +1,4 @@
-# Notes on the Lyapunov–Schmidt–Koiter asymptotic method
+# The Lyapunov–Schmidt–Koiter asymptotic method using SymPy
 
 This repository hosts the sources of my notes on *The Lyapunov–Schmidt–Koiter asymptotic method using SymPy* for the analysis of the stability and bifurcation(s) of a conservative system. These notes are based on several references: the initial PhD thesis of Koiter (1945) as well as some graphical illustrations from his lecture notes (Koiter and Heidjen, 2009). I enjoyed the concise presentation of NGuyen (2000) as well as the lecture notes of Triantafyllidis (2007). Finally, the chapter by Potier-Ferry (1987) helped me clear some issues. I used the direct approach presented in Appendix A of the paper by Chakrabarti et al. (2018) to derive the bifurcation equations.
 

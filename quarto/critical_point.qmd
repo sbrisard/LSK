@@ -1,4 +1,4 @@
-# Stability of the critical point
+# Stability of the critical point {#sec-20230630103238}
 
 In this chapter, we discuss the stability of the critical point $(u_0, \lambda_0)$. To this end, we evaluate the potential energy in a neighboring state $u_0 + u$, where $u \in U$ is “small”. We have, to the fourth order
 $$
@@ -59,7 +59,7 @@ Note that Eq. (@eq-20211109145356) implies $\E_4(\lambda_0; v, v, v, v) \geq 0$
 $$
 E_{ijk} \, \xi_i \, \xi_j \, \xi_k = 0 \quad \text{and} \quad E_{ijkl} \, \xi_i \, \xi_j \, \xi_k \, \xi_l \geq 0
 \quad \text{for all} \quad \xi_m, \ldots, \xi_m \in \reals.
-$$
+$$ {#eq-20230630110345}
 
 ::: {.callout-warning}
 It is claimed in @koit2009 that the above condition is also *sufficient* to ensure stability at the critical point. I can't prove this result, though.

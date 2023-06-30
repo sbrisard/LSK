@@ -16,6 +16,7 @@ book:
     - eigenmodes.ipynb
     - asymmetric_bifurcation.qmd
     - symmetric_bifurcation.qmd
+    - single_mode.qmd
     - symbols.ipynb
     - references.qmd
 

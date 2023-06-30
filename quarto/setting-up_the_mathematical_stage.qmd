@@ -11,8 +11,7 @@ $$ {#eq-20221227184138}
 where $\E_{,u}(u, \lambda; \hat{u})$ denotes the (real) value of the differential of the energy $\E$ with respect to the state $u$, evaluated at $(u, \lambda)$, for the test function $\hat{u}$. Similarly, evaluation of the second-, third-, etc., order differential of the energy will be denoted $\E_{,uu}(u, \lambda; \hat{u}, \hat{v})$, $\E_{,uuu}(u, \lambda; \hat{u}, \hat{v}, \hat{w})$, etc. It is assumed that a finite value $\lambda_0 > 0$ of $\lambda$ can be found (critical load), such that
 
 1. $\E_{,uu}[u(\lambda), \lambda] > 0$ for all $0 < \lambda < \lambda_0$,
-2. $\E_{,uu}(u_0, \lambda_0) \geq 0$ but $\E_{,uu}(u_0, \lambda_0) \ngtr 0$,
-3. $\E_{,uu}[u(\lambda), \lambda] < 0$ for $\lambda > \lambda_0$, close enough to $\lambda_0$.
+2. $\E_{,uu}(u_0, \lambda_0) \geq 0$ but $\E_{,uu}(u_0, \lambda_0) \ngtr 0$.
 
 The load $\lambda_0$ will be referred to as the *critical load*; similarly, the state $u_0$ of the system at the critical load will be referred to as the *critical state*; finally, the pair $(u_0, \lambda_0)$ is the *critical point* of the system. Assumption 1 implies that equilibria along the fundamental branch are *stable below the critical load*. Conversely, it results from assumption 3 that equilibrium points on the fundamental branch are *unstable above the critical load*. Stability at the critical load is yet undetermined.
 
@@ -80,6 +79,24 @@ To close this section, we define the complementary subspace $W$, orthogonal to $
 $$
 U = V \overset{\perp}{\otimes} W \quad \text{and} \quad \langle \hat{v}, \hat{w} \rangle = 0 \quad \text{for all} \quad \hat{v} \in V \quad \text{and} \quad \hat{w} \in W.
 $$
+
+::: {.callout-note}
+## On the sign of $\dot{E}_2$
+
+It results from definition (@eq-20221227184821) that, for all $\hat{v} \in V$
+$$
+\begin{aligned}[b]
+\E_{,uu}[ u^\star(\lambda), \lambda; \hat{v}, \hat{v}]
+&= \E_2(\hat{v}, \hat{v})
++ \bigl( \lambda - \lambda_0 \bigr) \, \dot{\E}_2(\hat{u}, \hat{u})
++ o(\lambda - \lambda_0)\\
+&= \bigl( \lambda - \lambda_0 \bigr) \, \dot{\E}_2(\hat{v}, \hat{v})
++ o(\lambda - \lambda_0)
+\end{aligned}
+$$
+
+For $\lambda < \lambda_0$, it has been assumed that the hessian is positive definite along the fundamental branch. From the above equation, it therefore results that $\dot{\E}_2(\hat{v}, \hat{v}) < 0$. In other words, $\dot{\E}_2$ is a **negative definite form over $V$**.
+:::
 
 ## Two canonical variational problems {#sec-20230620135251}
 

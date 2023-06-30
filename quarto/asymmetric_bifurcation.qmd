@@ -6,7 +6,7 @@ $$
 \order[1]\lambda = -\frac{E_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k}{2 \dot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j}.
 $$ {#eq-20220801085236}
 
-::: {.callout-note}
+::: {.callout-warning}
 I can't prove that the bifurcation equation (@eq-20230125062336) has at most $(2^m - 1)$ pairs of real solutions.
 :::
 
@@ -52,5 +52,5 @@ As expected, the above expression does not depend on the scaling of $\order[1]u$
 :::
 
 ::: {.callout-note}
-It has been shown in @sec-xxx that, when $E_{ijk}$ is not identically null, the bifurcation point is *unstable*.
+It has been shown in @sec-20230630103238 that, when $E_{ijk}$ is not identically null, the critical point is *unstable*.
 :::

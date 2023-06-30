@@ -1,16 +1,16 @@
 # Welcome!
 
-These are my notes on the LSK method for the analysis of the stability and bifurcation(s) of a conservative
-system. These notes are based on several references: the initial PhD thesis of @koit1945 as well as some graphical
-illustrations from his lecture notes [@koit2009]. I enjoyed the concise presentation of @nguy2000 as well as the lecture
-notes of @tria2017. Finally, the chapter by @poti1987 helped me clear some issues.
+These are my notes on the LSK method for the analysis of the stability and bifurcation(s) of a conservative system. These notes are based on several references: the initial PhD thesis of @koit1945 as well as some graphical illustrations from his lecture notes [@koit2009]. I enjoyed the concise presentation of @nguy2000 as well as the lecture notes of @tria2017. Finally, the chapter by @poti1987 helped me clear some issues. I used the direct approach presented in Appendix A of the paper by @chak2018 to derive the bifurcation equations. $\phantom{x}$
 
-These notes by Sébastien Brisard are licensed under a Creative Commons Attribution 4.0 International License. To view a
-copy of this license, visit [http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/).
+When the system under consideration exhibits multiple simultaneous buckling modes, some derivations become a bit tedious. I therefore used the [SymPy](https://www.sympy.org/) computer algebra system as much as possible. This required a few “tricks”, and I believe that [SymPy](https://www.sympy.org/) is now fully part of this work, as reflected by the new title.
 
-I hope the reader will find these notes useful, even though there are still a few points which I do not fully understand
-(they are clearly indicated in the text).
+I hope the reader will find these notes useful, even though there are still a few points which I do not fully understand (they are clearly indicated in the text). Should you want to report an error or suggest improvements, please do so by creating an issue on the [Github repository](https://github.com/sbrisard/LSK/issues).
 
-<!-- Local Variables: -->
-<!-- fill-column: 120 -->
-<!-- End: -->
+These notes are available in two forms
+
+- as an online website at [https://sbrisard.github.io/LSK/](https://sbrisard.github.io/LSK/)
+- as a PDF document at ....
+
+The [Quarto](https://quarto.org/) sources of these notes are available on the Github repo [https://github.com/sbrisard/LSK](https://github.com/sbrisard/LSK). In particular, all [SymPy](https://www.sympy.org/) simulations are available as [Jupyter](https://jupyter.org/) notebooks.
+
+These notes by Sébastien Brisard are licensed under a Creative Commons Attribution 4.0 International License. To view a copy of this license, visit [http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/).

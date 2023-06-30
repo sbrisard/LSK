@@ -27,6 +27,11 @@ format:
     include-before-body: _macros.md
   pdf:
     documentclass: scrreprt
+    classoption: DIV=12
+    papersize: a4
+    mainfont: TeX Gyre Pagella
+    mathfont: Asana Math
+    monofont: Noto Sans Mono
     include-in-header: _macros.tex
 
 crossref:

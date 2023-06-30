@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Lyapunov–Schmidt–Koiter asymptotic method using SymPy - 8&nbsp; Asymmetric bifurcation</title>
+<title>The Lyapunov–Schmidt–Koiter asymptotic method using SymPy - 10&nbsp; The case of a single mode</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./symmetric_bifurcation.html" rel="next">
-<link href="./eigenmodes.html" rel="prev">
+<link href="./symbols.html" rel="next">
+<link href="./symmetric_bifurcation.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Asymmetric bifurcation</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The case of a single mode</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -131,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./asymmetric_bifurcation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Asymmetric bifurcation</span></a>
+  <a href="./asymmetric_bifurcation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Asymmetric bifurcation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./single_mode.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The case of a single mode</span></a>
+  <a href="./single_mode.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The case of a single mode</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -159,7 +159,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#asymmetric-bifurcation" id="toc-asymmetric-bifurcation" class="nav-link active" data-scroll-target="#asymmetric-bifurcation"><span class="toc-section-number">10.1</span>  Asymmetric bifurcation</a></li>
+  <li><a href="#symmetric-bifurcation" id="toc-symmetric-bifurcation" class="nav-link" data-scroll-target="#symmetric-bifurcation"><span class="toc-section-number">10.2</span>  Symmetric bifurcation</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -172,7 +179,7 @@ $$
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Asymmetric bifurcation</span></h1>
+<h1 class="title"><span id="sec-20230630104037" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The case of a single mode</span></span></h1>
 </div>
 
 
@@ -187,10 +194,25 @@ $$
 
 </header>
 
-<p>In this chapter, we consider a bifurcated branch for which <span class="math inline">\(\order[1]{\lambda} \neq 0\)</span>. The bifurcation equation&nbsp;(<a href="bifurcation_equations.html#eq-20230125062336"><span>5.4</span></a>) shows that necessarily, <span class="math inline">\(E_{ijk}\)</span> is not identically nul. This equation has at most <span class="math inline">\((2^m - 1)\)</span> pairs of real solutions <span class="math inline">\((\order[1]{\lambda}, \order[1]{u})\)</span> et <span class="math inline">\((-\order[1]{\lambda}, -\order[1]{u})\)</span>; furthermore, multiplication by <span class="math inline">\(\order[1]{\xi_i}\)</span> shows that</p>
-<p><span id="eq-20220801085236"><span class="math display">\[
-\order[1]\lambda = -\frac{E_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \, \order[1]{\xi}_k}{2 \dot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j}.
-\tag{8.1}\]</span></span></p>
+<p>In this chapter, we discuss the case <span class="math inline">\(m = 1\)</span>; all tensors considered previously (<span class="math inline">\(\dot{E}_{ij}\)</span>, <span class="math inline">\(E_{ijk}\)</span>, <span class="math inline">\(E_{ijkl}\)</span>, etc) then reduce to simple scalars. To avoid ambiguity, indices are kept: <span class="math inline">\(\dot{E}_{11}\)</span>, <span class="math inline">\(E_{111}\)</span>, <span class="math inline">\(E_{1111}\)</span>. Since <span class="math inline">\(\dot{\E}_2\)</span> is negative definite over <span class="math inline">\(V\)</span> (see note in <a href="setting-up_the_mathematical_stage.html#sec-20230107173921"><span>Section&nbsp;2.2</span></a>), we have <span class="math inline">\(\dot{E}_{11} &lt; 0\)</span>.</p>
+<p>It is first observed that the following conditions are <em>necessary</em> to ensure stability of the critical point <span class="math display">\[
+E_{111} = 0 \quad \text{and} \quad E_{1111} \geq 0,
+\]</span> which shows that <em>asymmetric</em> critical points are always <em>unstable</em>.</p>
+<section id="asymmetric-bifurcation" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="asymmetric-bifurcation"><span class="header-section-number">10.1</span> Asymmetric bifurcation</h2>
+<p>We first consider the case <span class="math inline">\(E_{111} \neq 0\)</span>. Owing to the discussion above, the bifurcation point is unstable. It follows from Eq.&nbsp;(<a href="asymmetric_bifurcation.html#eq-20220801085236"><span>8.1</span></a>) that <span class="math display">\[
+\order[1]{\lambda} = - \frac{E_{111} \, \order[1]{\xi}_1}{\dot{E}_{11}}.
+\]</span></p>
+<p>Then, Eq.&nbsp;(<a href="asymmetric_bifurcation.html#eq-20220819160235"><span>8.2</span></a>) delivers, with <span class="math inline">\(\order[1]{u} = \order[1]{\xi}_1 \, v_1\)</span> <span class="math display">\[
+\bigl( \order[1]{\xi}_1 \bigr)^2 \E_{, uu}[u(\lambda), \lambda; v_1, v_1] = -\bigl( \lambda - \lambda_0 \bigr) \, \bigl( \order[1]{\xi}_1 \bigr)^2 \, \dot{\E}_2(v_1, v_1) + o(\lambda - \lambda_0)
+\]</span> or <span class="math display">\[
+\E_{, uu}[u(\lambda), \lambda; v_1, v_1] = -\bigl( \lambda - \lambda_0 \bigr) \, \dot{E}_{11} + o(\lambda - \lambda_0).
+\]</span></p>
+<p>Since <span class="math inline">\(\dot{E}_{11} &lt; 0\)</span> we conclude that asymmetric bifurcations branches are <em>unstable</em> for <span class="math inline">\(\lambda \leq \lambda_0\)</span> and <em>stable</em> for <span class="math inline">\(\lambda &gt; \lambda_0\)</span> (stability switch).</p>
+</section>
+<section id="symmetric-bifurcation" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="symmetric-bifurcation"><span class="header-section-number">10.2</span> Symmetric bifurcation</h2>
+<p>We now consider the case <span class="math inline">\(E_{111}=0\)</span>. From the general discussion of <a href="critical_point.html"><span>Chapter&nbsp;3</span></a>, the critical point is <em>stable</em> if <span class="math inline">\(E_{1111} &gt; 0\)</span> and <em>unstable</em> if <span class="math inline">\(E_{1111} &lt; 0\)</span>.</p>
 <div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -201,64 +223,24 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>I can’t prove that the bifurcation equation&nbsp;(<a href="bifurcation_equations.html#eq-20230125062336"><span>5.4</span></a>) has at most <span class="math inline">\((2^m - 1)\)</span> pairs of real solutions.</p>
+<p>Is this really true? Even for <span class="math inline">\(m = 1\)</span> the proof that conditions (<a href="critical_point.html#eq-20230630110345"><span>3.4</span></a>) are <em>sufficient</em> to ensure stability does not seem so obvious to me.</p>
 </div>
 </div>
-<p>Along the bifurcated branch, we have <span class="math inline">\(\lambda = \lambda_0 + \eta \, \order[1]\lambda + o(\eta)\)</span>, and <span class="math inline">\(\eta\)</span> can be eliminated. In other words, <span class="math inline">\(\eta=\lambda\)</span> (<span class="math inline">\(\order[1]\lambda = 1\)</span> and <span class="math inline">\(\order[2]\lambda = \order[3]\lambda = \cdots = 0\)</span>) can be selected as a parameter. It is therefore possible to express the bifurcated branch as a function of <span class="math inline">\(\lambda\)</span>: <span class="math inline">\(u(\lambda)\)</span>. For example, combining Eqs.&nbsp;(<a href="bifurcation_equations.html#eq-20220524133816"><span>5.7</span></a>) and (<a href="energy.html#eq-20230517061452"><span>6.2</span></a>), we find that</p>
-<p><span class="math display">\[
+<p>The bifurcation equation&nbsp;(<a href="symmetric_bifurcation.html#eq-20220801092222"><span>9.1</span></a>) reduces to <span class="math display">\[
+\tfrac{1}{3}E_{1111} \, \bigl( \order[1]{\xi_1} \bigr)^2 + \order[2]\lambda \dot{E}_{11} = 0,
+\]</span> which in particular shows that <span class="math inline">\(\order[2]{\lambda}\)</span> has the same sign as <span class="math inline">\(E_{1111}\)</span>. Since the expansion of <span class="math inline">\(\lambda\)</span> reads: <span class="math inline">\(\lambda = \lambda_0 + \order[2]\lambda \eta^2 / 2 + o(\eta^2)\)</span>, the bifurcation branch exists only for loads <em>above</em> the critical load (<span class="math inline">\(\lambda \geq \lambda_0\)</span>) if <span class="math inline">\(E_{1111} &gt; 0\)</span> and only for loads <em>below</em> the critical load (<span class="math inline">\(\lambda \leq \lambda_0\)</span>) if <span class="math inline">\(E_{1111} &lt; 0\)</span>.</p>
+<p>From Eq.&nbsp;(<a href="energy.html#eq-20230517061452"><span>6.2</span></a>), the hessian of the energy along the bifurcated branch reads <span class="math display">\[
 \begin{aligned}[b]
-\E_{, uu}[u(\eta), \lambda(\eta); \order[1]u, \order[1]u]
-&amp;= \eta \, \bigl[\E_3(\order[1]u, \order[1]u, \order[1]u)  + \order[1]\lambda \, \dot{\E}_2(\order[1]u, \order[1]u)\bigr] + o(\eta)\\
-&amp;= - \eta \, \order[1]\lambda \, \dot{\E}_2(\order[1]u, \order[1]u) + o(\eta),
+\E_{, uu}[u(\eta), \lambda(\eta); v_1, v_1]
+={}&amp; \tfrac{1}{2} \eta^2 \, \bigl[ \bigl( \order[1]{\xi}_1 \bigr) ^2 \, E_{1111}
++ \order[2]{\lambda} \, \dot{E}_{11} \bigr] + o(\eta^2)\\
+={}&amp; - \eta^2 \, \order[2]{\lambda} \, \dot{E}_{11} + o(\eta^2),
 \end{aligned}
-\]</span> or <span id="eq-20220819160235"><span class="math display">\[
-\E_{, uu}[u(\lambda), \lambda; \order[1]u, \order[1]u] = -\bigl( \lambda - \lambda_0 \bigr) \, \dot{\E}_2(\order[1]u, \order[1]u) + o(\lambda - \lambda_0).
-\tag{8.2}\]</span></span></p>
-<p>For <span class="math inline">\(\lambda &lt; \lambda_0\)</span>, the above quantity is <em>negative</em> (since <span class="math inline">\(\dot{\E}_2\)</span> is negative definite). In other words: <strong>for asymmetric bifurcations, below the critical load, the bifurcated branch is unstable.</strong></p>
-<p>To investigate the stability above the critical load, we need to analyse the sign of the eigenvalues <span class="math inline">\(\alpha\)</span> of the Hessian. At first order, <span class="math inline">\(\alpha = \eta \, \order[1]\alpha + o(\eta)\)</span>, where <span class="math inline">\(\order[1]\alpha\)</span> is an eigenvalue of <span class="math inline">\((E_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \dot{E}_{ij})\)</span> (see <a href="eigenmodes.html"><span>Chapter&nbsp;7</span></a>). Let <span class="math inline">\(\alpha_{\min}\)</span> and <span class="math inline">\(\alpha_{\max}\)</span> be the minimum and maximum eigenvalues of this second-order tensor. Three cases must be discussed</p>
-<ol type="1">
-<li>If <span class="math inline">\(\alpha_{\min} \, \alpha_{\max} &gt; 0\)</span>, then <span class="math inline">\((E_{ijk} \, \order[1]{\xi}_k + \order[1]{\lambda} \, \dot{E}_{ij})\)</span> is positive or negative definite: all eigenvalues have the same sign, <span class="math inline">\(\epsilon \in \{-1, +1\}\)</span>. Then the sign of the eigenvalues <span class="math inline">\(\alpha\)</span> of the Hessian is <span class="math inline">\(\epsilon \, \eta\)</span> and there is a stability switch at the critical load. Since the bifurcated branch is unstable <em>below</em> the critical load, this means that it is <em>stable</em> above the critical load.</li>
-<li>If <span class="math inline">\(\alpha_{\min} \, \alpha_{\max} &lt; 0\)</span>, then the extremal eigenvalues of the Hessian are <span class="math inline">\(\eta \, \alpha_{\min}\)</span> and <span class="math inline">\(\eta \, \alpha_{\max}\)</span>, the product of which is <span class="math inline">\(\eta^2 \, \alpha_{\min} \, \alpha_{\max} &lt; 0\)</span>. The bifurcated branch is <em>unstable</em> for all values of <span class="math inline">\(\lambda\)</span>.</li>
-<li>If <span class="math inline">\(\alpha_{\min} \, \alpha_{\max} = 0\)</span>, the analysis is inconclusive.</li>
-</ol>
-<p>To close this section, it is observed that the dominant term of the expansion&nbsp;(<a href="energy.html#eq-20230528190539"><span>6.1</span></a>) of the potential energy along the bifurcated branch is of the third order in <span class="math inline">\(\eta\)</span> <span class="math display">\[
-\E[u(\eta), \lambda(\eta)] = \E[u^\star \circ \lambda(\eta), \lambda(\eta)\} + \tfrac{1}{6} \order[1]{\lambda} \, \eta^3 \, \dot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j + o(\eta^3).
-\]</span></p>
-<p>Eliminating <span class="math inline">\(\lambda\)</span> and plugging expression&nbsp;(<a href="#eq-20220801085236"><span>8.1</span></a>) of <span class="math inline">\(\order[1]\lambda\)</span> delivers the expression of the potential energy, where <span class="math inline">\(\lambda\)</span> is the parameter <span class="math display">\[
-\begin{aligned}[b]
-\E[u(\lambda), \lambda] &amp;= \E[u^{\star}(\lambda), \lambda] + \frac{\bigl( \lambda - \lambda_0 \bigr)^3}{6\bigl( \order[1]{\lambda} \bigr)^2} \, \dot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j + o(\lambda^3)\\
-&amp;= \E[u^{\star}(\lambda), \lambda] + \frac{2 \bigl( \dot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \bigr)^3}{3 \bigl( E_{ijk} \, \order[1]{\xi}_i \, \order[1]{\xi}_j \order[1]{\xi}_k \bigr)^2} \, \bigl(\lambda - \lambda_0\bigr)^3 + o(\lambda^3).
-\end{aligned}
-\]</span></p>
-<p>Recalling that <span class="math inline">\(\dot{E}_{ij} \, \order[1]{\xi}_i \, \order[1]{\xi}_j &lt; 0\)</span>, it is found that, above the critical load, the potential energy is <em>smaller</em> along the bifurcated branch than along the fundamental branch.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>As expected, the above expression does not depend on the scaling of <span class="math inline">\(\order[1]u\)</span> (of the <span class="math inline">\(\order[1]{\xi_i}\)</span>).</p>
-</div>
-</div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>It has been shown in <a href="critical_point.html"><span>Chapter&nbsp;3</span></a> that, when <span class="math inline">\(E_{ijk}\)</span> is not identically null, the critical point is <em>unstable</em>.</p>
-</div>
-</div>
+\]</span> which has the sign of <span class="math inline">\(\order[2]{\lambda}\)</span>. Therefore the Hessian is positive (resp. negative) definite if <span class="math inline">\(E_{1111} &gt; 0\)</span> (resp <span class="math inline">\(&lt; 0\)</span>).</p>
+<p>To sum up, if <span class="math inline">\(E_{1111} &gt; 0\)</span>, then the bifurcation branch (including the critical point) is <em>stable</em> and exists only for loads greater than the critical load. Conversely, if <span class="math inline">\(E_{1111} &lt; 0\)</span>, then the bifurcation branch (including the critical point) is <em>unstable</em> and exists only for loads lower than the critical load.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -396,13 +378,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./eigenmodes.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></span>
+      <a href="./symmetric_bifurcation.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">A particular case of symmetric bifurcation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./symmetric_bifurcation.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">A particular case of symmetric bifurcation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./symbols.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The <code>lsk.symbols</code> module</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

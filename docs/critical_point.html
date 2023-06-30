@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Notes on the Lyapunov–Schmidt–Koiter asymptotic method - 3&nbsp; Stability of the critical point</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./setting-up_the_computational_stage.html" rel="next">
+<link href="./setting-up_the_mathematical_stage.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Stability of the critical point</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Notes on the Lyapunov–Schmidt–Koiter asymptotic method</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./setting-up_the_mathematical_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./critical_point.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Stability of the critical point</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./setting-up_the_computational_stage.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bifurcation_equations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bifurcation equations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./energy.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Asymptotic expansion of the energy and its hessian</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./eigenmodes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eigenmodes of the hessian of the energy</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./asymmetric_bifurcation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Asymmetric bifurcation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./symmetric_bifurcation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">A particular case of symmetric bifurcation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./symbols.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The <code>lsk.symbols</code> module</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+$$
+\newcommand{\D}{\mathrm{d}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\order}[2][1]{#2^{(#1)}}
+\newcommand{\reals}{\mathbb{R}}
+$$
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Stability of the critical point</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>In this chapter, we discuss the stability of the critical point <span class="math inline">\((u_0, \lambda_0)\)</span>. To this end, we evaluate the potential energy in a neighboring state <span class="math inline">\(u_0 + u\)</span>, where <span class="math inline">\(u \in U\)</span> is “small”. We have, to the fourth order <span class="math display">\[
+\begin{aligned}[b]
+\E(u_0 + u, \lambda_0) - \E(u_0, \lambda_0)
+={} &amp;\tfrac{1}{2} \E_2(u, u) + \tfrac{1}{6} \E_3(u, u, u)\\
+&amp;+ \tfrac{1}{24} \E_4(u, u, u, u) + o(\langle u , u \rangle^2),
+\end{aligned}
+\]</span> where the linear term has been omitted, <span class="math inline">\(u_0\)</span> being a critical point of the energy. We now expand <span class="math inline">\(u\)</span> as <span class="math inline">\(u = \xi \, v + \eta \, w\)</span>, with <span class="math inline">\(\xi, \eta \in \reals\)</span> and <span class="math inline">\(v \in V\)</span> and <span class="math inline">\(w \in W\)</span> are fixed, orthogonal directions. Since <span class="math inline">\(v \in V\)</span>, we have <span class="math inline">\(\E_2(\lambda_0; v, \bullet) = 0\)</span>. Owing to the multi-linearity and symmetry of the successive differential of <span class="math inline">\(\E\)</span>, the above expression expands as follows <span class="math display">\[
+\begin{aligned}[b]
+\E(u_0 + u, \lambda_0) - \E(u_0, \lambda_0) ={}
+&amp; \tfrac{1}{2} \eta^2 \, \E_2(w, w) + \tfrac{1}{6} \xi^3 \, \E_3(v, v, v)\\
+&amp; + \tfrac{1}{2} \xi^2 \, \eta \, \E_3(v, v, w) + \tfrac{1}{2} \xi \, \eta^2 \, \E_3(v, w, w)\\
+&amp; + \tfrac{1}{6} \eta^3 \, \E_3(w, w, w) + \tfrac{1}{24} \xi^4 \, \E_4(v, v, v, v)\\
+&amp; + \tfrac{1}{6} \xi^3 \, \eta \, \E_4(v, v, v, w) + \tfrac{1}{4} \xi^2 \, \eta^2 \, \E_4(v, v, w, w)\\
+&amp; + \tfrac{1}{6} \xi \, \eta^3 \, \E_4(v, w, w, w) + \tfrac{1}{24} \eta^4 \, \E_4(w, w, w, w)\\
+&amp; + o\bigl[\bigl(\xi^2 + \eta^2\bigr)^2\bigr].
+\end{aligned}
+\]</span></p>
+<p>For the equilibrium to be stable, the above expression must be <span class="math inline">\(\geq 0\)</span> for all <span class="math inline">\(\xi\)</span> et <span class="math inline">\(\eta\)</span> small enough. Taking first <span class="math inline">\(\eta = 0\)</span>, we get the following necessary conditions <span id="eq-20211108164416"><span class="math display">\[
+\E_3(v, v, v) = 0 \quad \text{and} \quad \E_4(v, v, v, v) \geq 0 \quad \text{for all} \quad v \in V.
+\tag{3.1}\]</span></span></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that the first of these two conditions is equivalent to <span class="math inline">\(E_{ijk}=0\)</span>, for all <span class="math inline">\(i, j, k = 1, \ldots m\)</span>.</p>
+</div>
+</div>
+<p>In other words, if there exists <span class="math inline">\(v \in V\)</span> such that <span class="math inline">\(\E_3(v, v, v) \neq 0\)</span> or <span class="math inline">\(\E_4(v, v, v, v) &lt; 0\)</span>, then the equilibrium is <em>unstable</em> at the critical point. The above conditions are not sufficient. Indeed, assuming conditions&nbsp;(<a href="#eq-20211108164416"><span>3.1</span></a>) to hold, we now take <span class="math inline">\(\eta = \xi^2\)</span> <span class="math display">\[
+\E(u_0 + u, \lambda_0) - \E(u_0, \lambda_0) = \tfrac{1}{2} \xi^4 \bigl[ \E_2(w, w) + \E_3(v, v, w) + \tfrac{1}{12} \E_4(v, v, v, v) \bigr] + o(\xi^4)
+\]</span> and we get the further necessary condition <span id="eq-20211109145356"><span class="math display">\[
+\E_2(w, w) + \E_3(v, v, w) + \tfrac{1}{12} \E_4(v, v, v, v) \geq 0 \quad \text{for all} \quad v \in V \quad \text{and} \quad w \in W.
+\tag{3.2}\]</span></span></p>
+<p>The direction <span class="math inline">\(v \in V\)</span> being fixed, the above expression is minimal when <span class="math inline">\(w\)</span> satisfies the following variational problem <span id="eq-20211109145224"><span class="math display">\[
+2\E_2(w, \hat{w}) + \E_3(v, v, \hat{w}) = 0 \quad \text{for all} \quad \hat{w} \in W.
+\tag{3.3}\]</span></span></p>
+<p>Expanding <span class="math inline">\(v \in V\)</span> in the <span class="math inline">\((v_i)\)</span> basis as follows: <span class="math inline">\(v = \xi_i \, v_i\)</span>, it is observed that the solution to the above variational problem is <span class="math inline">\(w = \tfrac{1}{2} \xi_i \, \xi_j \, w_{ij}\)</span>, where <span class="math inline">\(w_{ij}\)</span> is the solution to the elementary variational problem&nbsp;(<a href="setting-up_the_mathematical_stage.html#eq-20230107180410"><span>2.5</span></a>) . For this value of <span class="math inline">\(w\)</span>, condition&nbsp;(<a href="#eq-20211109145356"><span>3.2</span></a>) reads <span class="math display">\[
+\bigl[\E_4(v_i, v_j, v_k, v_l) - 3\E_2(w_{ij}, w_{kl})\bigr] \, \xi_i \, \xi_j \, \xi_k \, \xi_l \geq 0
+\quad \text{for all} \quad \xi_1, \ldots, \xi_m \in \reals,
+\]</span> which, in view of definition&nbsp;(<a href="setting-up_the_mathematical_stage.html#eq-20230124210049"><span>2.10</span></a>) of <span class="math inline">\(E_{ijkl}\)</span>, is equivalent to <span class="math display">\[
+E_{ijkl} \, \xi_i \, \xi_j \, \xi_k \, \xi_l \geq 0 \quad \text{for all} \quad \xi_m, \ldots, \xi_m \in \reals.
+\]</span></p>
+<p>Note that Eq.&nbsp;(<a href="#eq-20211109145356"><span>3.2</span></a>) implies <span class="math inline">\(\E_4(\lambda_0; v, v, v, v) \geq 0\)</span>, which becomes a redundant necessary condition. Indeed, plugging <span class="math inline">\(w= \xi_i \xi_j w_{ij}\)</span> into Eq.&nbsp;(<a href="#eq-20211109145356"><span>3.2</span></a>) cancels the first two terms. To sum up, we have the following <em>necessary</em> conditions for stability <span class="math display">\[
+E_{ijk} \, \xi_i \, \xi_j \, \xi_k = 0 \quad \text{and} \quad E_{ijkl} \, \xi_i \, \xi_j \, \xi_k \, \xi_l \geq 0
+\quad \text{for all} \quad \xi_m, \ldots, \xi_m \in \reals.
+\]</span></p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It is claimed in <span class="citation" data-cites="koit2009">Koiter and Heijden (<a href="references.html#ref-koit2009" role="doc-biblioref">2009</a>)</span> that the above condition is also <em>sufficient</em> to ensure stability at the critical point. I can’t prove this result, though.</p>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-koit2009" class="csl-entry" role="doc-biblioentry">
+Koiter, W. T., and A. M. A. van der Heijden. 2009. <em>W.<span>T</span>. <span>Koiter</span>’s Elastic Stability of Solids and Structures</em>. <span>Cambridge ; New York</span>: <span>Cambridge University Press</span>.
+</div>
+</div>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./setting-up_the_mathematical_stage.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up the mathematical stage</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./setting-up_the_computational_stage.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting-up the computational stage</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
